@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "claude-practices": {
+      "source": {
+        "source": "github",
+        "repo": "vvgordeev/claude-practices"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "riplio-workflow@claude-practices": true
+  }
+}

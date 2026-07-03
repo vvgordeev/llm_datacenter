@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff pytest
+      - run: ruff check .
+      - run: pytest tests/unit
+
+  # Интеграционные тесты ходят в сеть и внешние API (Gemini) — запускаются вручную:
+  # pytest tests/integration (нужен GEMINI_API_KEY в окружении).
