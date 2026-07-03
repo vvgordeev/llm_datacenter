@@ -1,0 +1,34 @@
+{
+  "days": [
+    {
+      "date": "2026-07-03",
+      "news_count": 4,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "[ДЕМО] Anthropic выпускает Workflow API: декларативные мультиагентные пайплайны",
+        "en": "[DEMO] Anthropic ships Workflow API: declarative multi-agent pipelines"
+      },
+      "demo": true
+    },
+    {
+      "date": "2026-07-02",
+      "news_count": 4,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "[ДЕМО] Anthropic анонсирует «новый примитив оркестрации» — детали завтра",
+        "en": "[DEMO] Anthropic teases a \"new orchestration primitive\" — details tomorrow"
+      },
+      "demo": true
+    },
+    {
+      "date": "2026-07-01",
+      "news_count": 4,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "[ДЕМО] OpenAI объявляет DevDay: фокус на долгоживущих агентах",
+        "en": "[DEMO] OpenAI announces DevDay: focus on long-lived agents"
+      },
+      "demo": true
+    }
+  ]
+}

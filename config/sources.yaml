@@ -1,0 +1,76 @@
+# Источники ежедневной сводки. Правится руками — пайплайн /digest читает этот файл.
+# enabled: false — модель/источник пропускается при сборе (карточки с её тегом остаются в архиве).
+
+models:
+  - name: "Claude / Anthropic"
+    tag: anthropic
+    enabled: true
+    blog: https://www.anthropic.com/news
+  - name: "GPT / OpenAI"
+    tag: openai
+    enabled: true
+    blog: https://openai.com/news/
+  - name: "Gemini / Google DeepMind"
+    tag: google
+    enabled: true
+    blog: https://blog.google/technology/google-deepmind/
+  - name: "Llama / Meta AI"
+    tag: meta
+    enabled: true
+    blog: https://ai.meta.com/blog/
+  - name: "Grok / xAI"
+    tag: xai
+    enabled: true
+    blog: https://x.ai/news
+  - name: "Mistral"
+    tag: mistral
+    enabled: true
+    blog: https://mistral.ai/news
+  - name: "DeepSeek"
+    tag: deepseek
+    enabled: true
+    blog: https://api-docs.deepseek.com/news
+  - name: "Qwen / Alibaba"
+    tag: qwen
+    enabled: false
+    blog: https://qwenlm.github.io/blog/
+
+# Где искать реакции сообщества на анонсы.
+community:
+  - name: Hacker News
+    url: https://news.ycombinator.com
+  - name: r/LocalLLaMA
+    url: https://www.reddit.com/r/LocalLLaMA/
+  - name: r/ClaudeAI
+    url: https://www.reddit.com/r/ClaudeAI/
+  - name: X (Twitter)
+    url: https://x.com
+    note: плохо индексируется — цитаты по мере доступности через поиск
+
+# Эксперты/блогеры для секции конспектов (статьи и видео).
+experts:
+  - name: Simon Willison
+    url: https://simonwillison.net
+    type: article
+  - name: Andrej Karpathy
+    url: https://www.youtube.com/@AndrejKarpathy
+    type: video
+  - name: Latent Space
+    url: https://www.latent.space
+    type: article
+  - name: AI Explained
+    url: https://www.youtube.com/@aiexplained-official
+    type: video
+  - name: Matt Wolfe
+    url: https://www.youtube.com/@mreflow
+    type: video
+  - name: Ethan Mollick (One Useful Thing)
+    url: https://www.oneusefulthing.org
+    type: article
+
+limits:
+  max_news_items: 12        # карточек новостей в дневной сводке
+  max_articles_per_day: 3   # конспектов статей
+  max_videos_per_day: 3     # конспектов видео (лимит Gemini free tier)
+  max_frames_per_video: 6   # кадров на видео
+  lookback_hours: 36        # окно сбора (перекрытие с прошлым днём гасится дедупом)

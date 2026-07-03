@@ -1,0 +1,140 @@
+{
+  "date": "2026-07-01",
+  "generated_at": "2026-07-01T05:00:00Z",
+  "demo": true,
+  "news": [
+    {
+      "id": "2026-07-01-openai-devday",
+      "cluster_id": "openai-devday-2026",
+      "models": ["openai"],
+      "title": {
+        "ru": "[ДЕМО] OpenAI объявляет DevDay: фокус на долгоживущих агентах",
+        "en": "[DEMO] OpenAI announces DevDay: focus on long-lived agents"
+      },
+      "summary": {
+        "ru": "Демонстрационная карточка. Пример: анонс конференции с обещанием «нового взгляда на агентов, которые не завершаются».",
+        "en": "Demo card. Example: conference announcement promising \"a new take on agents that don't terminate.\""
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Сам анонс подходов не меняет, но задаёт направление квартала для всей экосистемы.",
+        "en": "The announcement itself changes nothing, but sets the quarter's direction for the ecosystem."
+      },
+      "source_url": "https://openai.com/news/",
+      "opinions": [
+        {
+          "author": "X",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Ставки на persistent-агентов и новую систему памяти.",
+            "en": "Bets are on persistent agents and a new memory system."
+          },
+          "url": "https://x.com"
+        }
+      ],
+      "use_cases": []
+    },
+    {
+      "id": "2026-07-01-google-code-assist",
+      "cluster_id": "google-code-assist-refresh",
+      "models": ["google"],
+      "title": {
+        "ru": "[ДЕМО] Gemini Code Assist: агентный режим в JetBrains и code review в CI",
+        "en": "[DEMO] Gemini Code Assist: agent mode in JetBrains and CI code review"
+      },
+      "summary": {
+        "ru": "Демонстрационная карточка. Пример: расширение агентного режима на JetBrains IDE и автоматическое ревью PR в CI-пайплайне.",
+        "en": "Demo card. Example: agent mode extended to JetBrains IDEs plus automatic PR review in CI."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Догоняющее расширение уже сложившегося подхода «агент в IDE» на новую аудиторию.",
+        "en": "A catch-up expansion of the established \"agent in IDE\" approach to a new audience."
+      },
+      "source_url": "https://blog.google/technology/google-deepmind/",
+      "opinions": [
+        {
+          "author": "Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "«Функционально — паритет с конкурентами годичной давности».",
+            "en": "\"Feature-wise, parity with competitors from a year ago.\""
+          },
+          "url": "https://news.ycombinator.com"
+        }
+      ],
+      "use_cases": []
+    },
+    {
+      "id": "2026-07-01-anthropic-claude-code-teams",
+      "cluster_id": "anthropic-claude-code-teams",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "[ДЕМО] Claude Code: общие командные скиллы и онбординг-гайды",
+        "en": "[DEMO] Claude Code: shared team skills and onboarding guides"
+      },
+      "summary": {
+        "ru": "Демонстрационная карточка. Пример: командные наборы скиллов, синхронизируемые через plugin marketplace, и генерация онбординг-гайдов по репозиторию.",
+        "en": "Demo card. Example: team skill sets synced via a plugin marketplace, plus repo onboarding guide generation."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Переводит практики работы с агентами с личного уровня на командный — новый слой инженерной культуры.",
+        "en": "Moves agent practices from personal to team level — a new layer of engineering culture."
+      },
+      "source_url": "https://www.anthropic.com/news",
+      "opinions": [
+        {
+          "author": "r/ClaudeAI",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Общие скиллы — то, чего не хватало, чтобы перестать пересылать друг другу промпты в чатах».",
+            "en": "\"Shared skills are what we needed to stop pasting prompts to each other in chats.\""
+          },
+          "url": "https://www.reddit.com/r/ClaudeAI/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Единые конвенции код-ревью и деплоя для всей команды через один плагин.",
+            "en": "Uniform code-review and deploy conventions for the whole team via one plugin."
+          },
+          "url": "https://www.reddit.com/r/ClaudeAI/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-01-qwen-release",
+      "cluster_id": "qwen-mid-release",
+      "models": ["qwen"],
+      "title": {
+        "ru": "[ДЕМО] Qwen: обновление среднего размера с сильным кодингом",
+        "en": "[DEMO] Qwen: a mid-size refresh with strong coding"
+      },
+      "summary": {
+        "ru": "Демонстрационная карточка. Пример: открытый релиз средней модели, догоняющей закрытые по кодингу при 10-кратно меньшей цене инференса.",
+        "en": "Demo card. Example: an open mid-size release approaching closed models on coding at 10x cheaper inference."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Инкрементальный релиз в устоявшемся тренде «открытые догоняют»; подходы не меняет.",
+        "en": "Incremental release in the established \"open models catch up\" trend; changes no practices."
+      },
+      "source_url": "https://qwenlm.github.io/blog/",
+      "opinions": [
+        {
+          "author": "r/LocalLLaMA",
+          "stance": "positive",
+          "quote": {
+            "ru": "Сообщество отмечает качество квантизаций «из коробки».",
+            "en": "The community highlights out-of-the-box quantization quality."
+          },
+          "url": "https://www.reddit.com/r/LocalLLaMA/"
+        }
+      ],
+      "use_cases": []
+    }
+  ],
+  "expert_content": []
+}

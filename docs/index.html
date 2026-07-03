@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM Datacenter</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛰️</text></svg>">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>LLM <span class="accent">Datacenter</span></h1>
+      <span class="brand-sub" data-i18n="tagline"></span>
+    </div>
+    <div class="controls">
+      <nav class="view-switch" role="tablist" aria-label="period">
+        <button class="view-btn" data-view="day" data-i18n="view_day" role="tab"></button>
+        <button class="view-btn" data-view="week" data-i18n="view_week" role="tab"></button>
+        <button class="view-btn" data-view="month" data-i18n="view_month" role="tab"></button>
+      </nav>
+      <select id="date-select" class="date-select" aria-label="date"></select>
+      <button id="lang-toggle" class="chip-btn" aria-label="language">RU</button>
+      <button id="theme-toggle" class="chip-btn" aria-label="theme">◐</button>
+    </div>
+  </header>
+
+  <div id="demo-banner" class="demo-banner" hidden>
+    <span data-i18n="demo_banner"></span>
+  </div>
+
+  <main>
+    <section class="kpi-row" id="kpi-row" aria-label="summary"></section>
+
+    <section class="filters" id="model-filters" aria-label="model filters"></section>
+
+    <section id="news-section">
+      <h2 class="section-title" data-i18n="news_title"></h2>
+      <div id="news-list" class="news-list"></div>
+    </section>
+
+    <section id="expert-section">
+      <h2 class="section-title" data-i18n="experts_title"></h2>
+      <div id="expert-list" class="expert-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span data-i18n="footer_note"></span>
+    <a href="https://github.com" id="repo-link" data-i18n="footer_repo"></a>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

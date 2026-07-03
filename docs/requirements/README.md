@@ -28,4 +28,4 @@
 
 | Версия | Файл | Статус |
 |---|---|---|
-| 1.0 | v1.0-baseline.md | draft |
+| 1.0 | v1.0-baseline.md | accepted |

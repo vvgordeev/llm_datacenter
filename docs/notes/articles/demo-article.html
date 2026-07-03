@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Скиллы вместо промптов — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <div class="demo-banner">
+    <span data-lang="ru">⚠ Демо-страница: пример формата конспекта статьи. Содержимое вымышленное.</span>
+    <span data-lang="en">⚠ Demo page: an example of the article digest format. Content is fictional.</span>
+  </div>
+
+  <main class="note">
+    <p class="note-kicker" >
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-03</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-03</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Скиллы вместо промптов: как переиспользовать экспертизу агентов</span>
+      <span data-lang="en">Skills over prompts: how to make agent expertise reusable</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
+    <ol class="theses">
+      <li>
+        <span data-lang="ru"><b>Длинные системные промпты не масштабируются.</b> Они дублируются между проектами, устаревают и не версионируются — знание «как мы работаем» живёт в чатах.</span>
+        <span data-lang="en"><b>Long system prompts don't scale.</b> They get duplicated across projects, go stale and aren't versioned — the "how we work" knowledge lives in chats.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Скилл = инструкция + скрипты + референсы.</b> Упакованная единица экспертизы, которая подключается к агенту по требованию и версионируется как код.</span>
+        <span data-lang="en"><b>A skill = instructions + scripts + references.</b> A packaged unit of expertise, attached to an agent on demand and versioned like code.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Прогрессивное раскрытие</b> — агент читает короткое описание, а полные материалы загружает только когда скилл реально нужен: контекст не раздувается.</span>
+        <span data-lang="en"><b>Progressive disclosure</b> — the agent reads a short description and loads full materials only when the skill is actually needed: the context doesn't bloat.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Командный уровень:</b> общие скиллы через marketplace превращают личные приёмы в стандарты команды.</span>
+        <span data-lang="en"><b>Team level:</b> shared skills via a marketplace turn personal tricks into team standards.</span>
+      </li>
+    </ol>
+
+    <h2><span data-lang="ru">Схема</span><span data-lang="en">Diagram</span></h2>
+    <figure class="scheme">
+      <svg viewBox="0 0 640 220" role="img" aria-label="prompt vs skill">
+        <style>
+          .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 8; }
+          .lbl { font: 13px system-ui, sans-serif; fill: currentColor; }
+          .sub { font: 11px system-ui, sans-serif; fill: currentColor; opacity: .6; }
+          .arr { stroke: currentColor; stroke-width: 1.5; marker-end: url(#ah); }
+        </style>
+        <defs>
+          <marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor"/>
+          </marker>
+        </defs>
+        <rect class="box" x="16" y="30" width="180" height="60" rx="8"/>
+        <text class="lbl" x="106" y="55" text-anchor="middle">Prompt (раньше)</text>
+        <text class="sub" x="106" y="75" text-anchor="middle">копипаста, без версий</text>
+        <line class="arr" x1="106" y1="90" x2="106" y2="126"/>
+        <rect class="box" x="16" y="130" width="180" height="60" rx="8"/>
+        <text class="lbl" x="106" y="155" text-anchor="middle">Skill (теперь)</text>
+        <text class="sub" x="106" y="175" text-anchor="middle">инструкция+скрипты+референсы</text>
+        <line class="arr" x1="196" y1="160" x2="300" y2="160"/>
+        <rect class="box" x="300" y="130" width="150" height="60" rx="8"/>
+        <text class="lbl" x="375" y="155" text-anchor="middle">Marketplace</text>
+        <text class="sub" x="375" y="175" text-anchor="middle">версии, дистрибуция</text>
+        <line class="arr" x1="450" y1="160" x2="540" y2="160"/>
+        <rect class="box" x="540" y="130" width="84" height="60" rx="8"/>
+        <text class="lbl" x="582" y="165" text-anchor="middle">Агент</text>
+      </svg>
+      <figcaption>
+        <span data-lang="ru">Экспертиза переезжает из одноразовых промптов в версионируемые скиллы, распространяемые через marketplace.</span>
+        <span data-lang="en">Expertise moves from throwaway prompts to versioned skills distributed via a marketplace.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Это демо-пример пояснения: в реальном конспекте здесь — вывод о влиянии материала на подходы к использованию LLM со ссылками на связанные новости сводки.</span>
+      <span data-lang="en">This is a demo explanation: a real digest would conclude with the material's impact on LLM practices, linking to related digest news.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -24,11 +24,11 @@ pytest tests/integration             # сетевые/интеграционны
 
 | Задача касается | Читай |
 |---|---|
-| <область> | `docs/features/<file>.md` |
+| дашборд, UI, срезы, i18n, темы, конспект-страницы | `docs/features/dashboard.md` |
+| сбор сводки, скрипты, скилл /digest, расписание | `docs/features/pipeline.md` + `.claude/skills/digest/SKILL.md` |
+| источники и лимиты сбора | `config/sources.yaml` |
 | «почему так сделано» | `docs/decisions.md` |
 | планы развития | `docs/roadmap.md` |
-
-<!-- Заполни строками по мере появления областей в docs/features/*. -->
 
 ## Правила работы
 

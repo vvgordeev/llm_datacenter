@@ -1,0 +1,22 @@
+# Пайплайн сбора сводки
+
+Ежедневный сбор — скилл `/digest` (`.claude/skills/digest/SKILL.md`): источники из `config/sources.yaml`, дедуп через `data/state.json`, обогащение, ранжирование по рубрике impact_score, конспекты, билд, коммит. Там же — JSON-схема дневного файла и рубрика оценки.
+
+## Скрипты (scripts/)
+
+| Скрипт | Что делает |
+|---|---|
+| `build_site.py` | Пересобирает `data/index.json` из `data/daily/*.json` и копирует всё в `docs/data/`. Падает, если `date` внутри файла не совпадает с именем файла. |
+| `gemini_video.py` | Конспект YouTube-видео через Gemini API (URL передаётся напрямую, видео не скачивается). Выход: JSON с двуязычными тезисами и таймкодами, у моментов-демонстраций `demonstration: true`. Требует `GEMINI_API_KEY`. Stdlib-only. |
+| `extract_frames.py` | Кадры jpg по таймкодам: yt-dlp даёт прямой URL потока (≤720p), ffmpeg вырезает по кадру. `--from-summary` берёт моменты-демонстрации из вывода gemini_video.py. Без yt-dlp/ffmpeg — код возврата 3 (fallback: конспект без кадров). |
+| `common.py` | Чистые функции: parse/format таймкодов, slugify, youtube_id. Покрыт unit-тестами. |
+
+## Запуск по расписанию
+
+Облачная routine Claude Code, cron `0 5 * * *` UTC (= 8:00 GMT+3): клонирует репо → `/digest` → push. Настройка — через `/schedule`; секрет `GEMINI_API_KEY` задаётся в окружении routine. Ручной пересбор — `/digest` локально.
+
+## Состояние и данные
+
+- `data/daily/<date>.json` — дневная сводка, append-only после публикации (инвариант 1).
+- `data/state.json` — дедуп: виденные URL и сюжеты (rolling 60 дней). Не копируется на сайт.
+- `docs/data/` — билд-артефакт, руками не править: перезаписывается build_site.py.

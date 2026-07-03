@@ -1,0 +1,223 @@
+/* LLM Datacenter — футуристичная тема. Все цвета через роли (CSS variables),
+   значения света/темноты подобраны отдельно (не автоинверсия). */
+
+:root[data-theme="light"] {
+  --page: #f4f5f7;
+  --surface: #fcfcfb;
+  --surface-2: #ffffff;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --hairline: #e1e0d9;
+  --border: rgba(11, 11, 11, 0.10);
+  --accent: #256abf;          /* seq step 500 — читаем на светлом */
+  --accent-soft: rgba(37, 106, 191, 0.10);
+  --glow: rgba(37, 106, 191, 0.18);
+  /* sequential blue ramp (light): meter от малого к большому */
+  --seq-1: #9ec5f4; --seq-2: #5598e7; --seq-3: #256abf; --seq-4: #104281;
+  --stance-pos: #006300;
+  --stance-neg: #b33636;
+  --demo-bg: #fff3d6;
+  --demo-ink: #6b4e00;
+}
+
+:root[data-theme="dark"] {
+  --page: #0d0d0f;
+  --surface: #17171c;
+  --surface-2: #1d1d24;
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --muted: #898781;
+  --hairline: #2c2c2a;
+  --border: rgba(255, 255, 255, 0.10);
+  --accent: #3987e5;          /* seq step 400 — валиден на тёмном */
+  --accent-soft: rgba(57, 135, 229, 0.14);
+  --glow: rgba(57, 135, 229, 0.35);
+  /* sequential blue ramp (dark): светлее = больше, читаем на тёмном */
+  --seq-1: #1c5cab; --seq-2: #2a78d6; --seq-3: #6da7ec; --seq-4: #b7d3f6;
+  --stance-pos: #0ca30c;
+  --stance-neg: #e66767;
+  --demo-bg: #3a2e08;
+  --demo-ink: #ffd970;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page);
+  color: var(--ink);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* фоновая сетка — футуристичный слой, не мешает контенту */
+.bg-grid {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(var(--hairline) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, black 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, black 20%, transparent 75%);
+}
+
+main, .topbar, .footer, .demo-banner { position: relative; z-index: 1; }
+
+.topbar {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  align-items: center; justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--hairline);
+  backdrop-filter: blur(8px);
+}
+
+.brand { display: flex; align-items: baseline; gap: 10px; }
+.brand h1 { font-size: 20px; margin: 0; letter-spacing: 0.04em; text-transform: uppercase; }
+.brand .accent { color: var(--accent); }
+.brand-mark {
+  width: 10px; height: 10px; border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--glow);
+  align-self: center;
+}
+.brand-sub { color: var(--muted); font-size: 12px; }
+
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+.view-switch {
+  display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+}
+.view-btn {
+  background: transparent; color: var(--ink-2); border: none;
+  padding: 6px 14px; cursor: pointer; font: inherit; font-size: 13px;
+}
+.view-btn.active {
+  background: var(--accent-soft); color: var(--accent); font-weight: 600;
+}
+
+.date-select, .chip-btn {
+  background: var(--surface); color: var(--ink);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 6px 10px; font: inherit; font-size: 13px; cursor: pointer;
+}
+.chip-btn:hover, .view-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.demo-banner {
+  margin: 12px 24px 0; padding: 8px 14px;
+  background: var(--demo-bg); color: var(--demo-ink);
+  border-radius: 8px; font-size: 13px;
+}
+
+main { max-width: 1080px; margin: 0 auto; padding: 20px 24px 60px; }
+
+/* KPI row — плитки-статы */
+.kpi-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px; margin-bottom: 20px;
+}
+.kpi {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px;
+}
+.kpi .kpi-value { font-size: 32px; font-weight: 700; line-height: 1.1; }
+.kpi .kpi-label { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+/* фильтры по моделям */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.model-chip {
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--surface); color: var(--ink-2);
+  padding: 4px 12px; font-size: 13px; cursor: pointer; font: inherit;
+}
+.model-chip.active {
+  background: var(--accent-soft); border-color: var(--accent); color: var(--accent);
+}
+
+.section-title {
+  font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin: 28px 0 12px;
+}
+
+/* карточки новостей */
+.news-list { display: flex; flex-direction: column; gap: 12px; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 16px 18px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.card:hover { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 4px 24px var(--glow); }
+
+.card-head { display: flex; gap: 14px; align-items: flex-start; }
+.impact {
+  flex: 0 0 auto; width: 64px; text-align: center;
+}
+.impact-num { font-size: 26px; font-weight: 800; line-height: 1; }
+.impact-tier { font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+.impact-meter {
+  display: flex; gap: 2px; margin-top: 6px; height: 5px;
+}
+.impact-meter i {
+  flex: 1; border-radius: 2px; background: var(--hairline);
+}
+/* заполнение сегментов — последовательная шкала одного оттенка */
+.impact-meter i.f1 { background: var(--seq-1); }
+.impact-meter i.f2 { background: var(--seq-2); }
+.impact-meter i.f3 { background: var(--seq-3); }
+.impact-meter i.f4 { background: var(--seq-4); }
+
+.card-title { font-size: 16px; font-weight: 650; margin: 0; }
+.card-title a { color: inherit; text-decoration: none; }
+.card-title a:hover { color: var(--accent); }
+.card-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; align-items: center; }
+.tag {
+  font-size: 11px; padding: 2px 8px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+}
+.date-tag { color: var(--muted); font-size: 11px; }
+.card-summary { color: var(--ink-2); font-size: 14px; margin: 10px 0 0; }
+.impact-reason { color: var(--muted); font-size: 12.5px; margin-top: 6px; font-style: italic; }
+
+.card-details { margin-top: 12px; border-top: 1px solid var(--hairline); padding-top: 12px; }
+.details-toggle {
+  background: none; border: none; color: var(--accent);
+  font: inherit; font-size: 13px; cursor: pointer; padding: 0; margin-top: 10px;
+}
+
+.opinion { display: flex; gap: 8px; margin: 8px 0; font-size: 13.5px; }
+.stance-dot { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; background: var(--muted); }
+.stance-dot.positive { background: var(--stance-pos); }
+.stance-dot.skeptical { background: var(--stance-neg); }
+.opinion .author { font-weight: 600; }
+.opinion a, .use-case a { color: var(--accent); text-decoration: none; }
+.opinion a:hover, .use-case a:hover { text-decoration: underline; }
+.sub-heading { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 12px 0 4px; }
+.use-case { font-size: 13.5px; margin: 6px 0; color: var(--ink-2); }
+
+/* эксперты */
+.expert-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.expert-card { display: flex; flex-direction: column; gap: 8px; }
+.expert-type {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
+}
+.expert-links { display: flex; gap: 14px; margin-top: auto; padding-top: 8px; }
+.expert-links a { color: var(--accent); font-size: 13px; text-decoration: none; }
+.expert-links a:hover { text-decoration: underline; }
+
+.empty-note { color: var(--muted); font-size: 14px; padding: 24px 0; }
+
+.footer {
+  border-top: 1px solid var(--hairline);
+  padding: 16px 24px; color: var(--muted); font-size: 12px;
+  display: flex; gap: 16px; flex-wrap: wrap;
+}
+.footer a { color: var(--accent); text-decoration: none; }
+
+@media (max-width: 640px) {
+  .card-head { flex-direction: column; }
+  .impact { display: flex; gap: 10px; align-items: baseline; width: auto; }
+  .impact-meter { width: 90px; }
+}

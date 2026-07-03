@@ -1,0 +1,220 @@
+{
+  "date": "2026-07-03",
+  "generated_at": "2026-07-03T05:00:00Z",
+  "demo": true,
+  "news": [
+    {
+      "id": "2026-07-03-anthropic-workflow-api",
+      "cluster_id": "anthropic-workflow-api",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "[ДЕМО] Anthropic выпускает Workflow API: декларативные мультиагентные пайплайны",
+        "en": "[DEMO] Anthropic ships Workflow API: declarative multi-agent pipelines"
+      },
+      "summary": {
+        "ru": "Демонстрационная карточка. Пример: официальный анонс API, позволяющего описывать оркестрацию субагентов декларативным скриптом — фан-аут, верификация, синтез — вместо ручного цикла вызовов.",
+        "en": "Demo card. Example: official announcement of an API for describing sub-agent orchestration as a declarative script — fan-out, verification, synthesis — instead of a hand-rolled call loop."
+      },
+      "impact_score": 9,
+      "impact_reason": {
+        "ru": "Меняет базовый паттерн построения агентных систем: оркестрация переезжает из кода приложения в платформу.",
+        "en": "Changes the core pattern of building agent systems: orchestration moves from app code into the platform."
+      },
+      "source_url": "https://www.anthropic.com/news",
+      "opinions": [
+        {
+          "author": "Hacker News (топ-тред)",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Это убирает 80% нашего оркестрационного кода» — типичная реакция разработчиков в обсуждении.",
+            "en": "\"This deletes 80% of our orchestration code\" — a typical developer reaction in the thread."
+          },
+          "url": "https://news.ycombinator.com"
+        },
+        {
+          "author": "r/LocalLLaMA",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Скепсис: привязка к вендору — декларативные пайплайны сложно перенести на другие модели.",
+            "en": "Skepticism: vendor lock-in — declarative pipelines are hard to port to other models."
+          },
+          "url": "https://www.reddit.com/r/LocalLLaMA/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Код-ревью веером: N ревьюеров по измерениям + адверсариальная верификация находок одним скриптом.",
+            "en": "Fan-out code review: N dimension reviewers + adversarial verification of findings in one script."
+          },
+          "url": "https://news.ycombinator.com"
+        },
+        {
+          "text": {
+            "ru": "Миграции кодовой базы: discovery → трансформация каждого файла → проверка, без ручного цикла.",
+            "en": "Codebase migrations: discovery → per-file transform → verify, without a manual loop."
+          },
+          "url": "https://www.reddit.com/r/ClaudeAI/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-03-openai-continuous-agents",
+      "cluster_id": "openai-continuous-agents",
+      "models": ["openai"],
+      "title": {
+        "ru": "[ДЕМО] OpenAI: режим Continuous Agents — агенты, живущие неделями",
+        "en": "[DEMO] OpenAI: Continuous Agents mode — agents that live for weeks"
+      },
+      "summary": {
+        "ru": "Демонстрационная карточка. Пример: анонс режима, в котором агент сохраняет состояние и цели между сессиями и самостоятельно возобновляет работу по расписанию или событию.",
+        "en": "Demo card. Example: announcement of a mode where an agent keeps state and goals across sessions and resumes work on schedule or on events."
+      },
+      "impact_score": 8,
+      "impact_reason": {
+        "ru": "Сдвигает применение LLM от «сессия-задача» к постоянным фоновым сотрудникам — новый класс продуктов.",
+        "en": "Shifts LLM usage from session-per-task to persistent background workers — a new product class."
+      },
+      "source_url": "https://openai.com/news/",
+      "opinions": [
+        {
+          "author": "X (эксперт-обзор)",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Persistent-агенты — это то, чем должны были быть ассистенты с самого начала».",
+            "en": "\"Persistent agents are what assistants should have been from day one.\""
+          },
+          "url": "https://x.com"
+        },
+        {
+          "author": "Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Опасения по стоимости: недельный агент с большим контекстом — это заметный счёт за токены.",
+            "en": "Cost concerns: a week-long agent with a large context means a serious token bill."
+          },
+          "url": "https://news.ycombinator.com"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Дежурный SRE-агент: следит за алертами, сам открывает инциденты и предлагает фиксы.",
+            "en": "On-call SRE agent: watches alerts, opens incidents, proposes fixes on its own."
+          },
+          "url": "https://news.ycombinator.com"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-03-google-20m-context",
+      "cluster_id": "google-20m-context",
+      "models": ["google"],
+      "title": {
+        "ru": "[ДЕМО] Gemini: контекст 20M токенов и «библиотечный» режим RAG",
+        "en": "[DEMO] Gemini: 20M-token context and a \"library\" RAG mode"
+      },
+      "summary": {
+        "ru": "Демонстрационная карточка. Пример: расширение контекста до 20M токенов с иерархическим индексом — модель сама решает, какие части «библиотеки» читать полностью.",
+        "en": "Demo card. Example: context expanded to 20M tokens with a hierarchical index — the model decides which parts of the \"library\" to read in full."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Для многих задач стирает границу между RAG и «просто положить всё в контекст»; меняет дизайн retrieval-пайплайнов.",
+        "en": "For many tasks it erases the line between RAG and \"just put everything in context\"; changes retrieval pipeline design."
+      },
+      "source_url": "https://blog.google/technology/google-deepmind/",
+      "opinions": [
+        {
+          "author": "r/LocalLLaMA",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Вопрос не в размере окна, а в качестве внимания на дальних дистанциях — ждём независимых бенчмарков.",
+            "en": "The question isn't window size but attention quality at long range — waiting for independent benchmarks."
+          },
+          "url": "https://www.reddit.com/r/LocalLLaMA/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Анализ всей кодовой базы монорепозитория без векторного индекса.",
+            "en": "Whole-monorepo code analysis without a vector index."
+          },
+          "url": "https://news.ycombinator.com"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-03-mistral-local-runtime",
+      "cluster_id": "mistral-local-runtime",
+      "models": ["mistral"],
+      "title": {
+        "ru": "[ДЕМО] Mistral: открытый локальный рантайм для агентов на ноутбуке",
+        "en": "[DEMO] Mistral: open local runtime for on-laptop agents"
+      },
+      "summary": {
+        "ru": "Демонстрационная карточка. Пример: open-source рантайм, запускающий небольшие агентные модели локально с доступом к файлам и терминалу, без облака.",
+        "en": "Demo card. Example: an open-source runtime running small agent models locally with file and terminal access, no cloud."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметно для приватных/офлайн-сценариев, но не меняет мейнстрим-подходы: локальные модели пока уступают в агентных задачах.",
+        "en": "Notable for private/offline scenarios, but doesn't change mainstream practice: local models still trail on agentic tasks."
+      },
+      "source_url": "https://mistral.ai/news",
+      "opinions": [
+        {
+          "author": "r/LocalLLaMA",
+          "stance": "positive",
+          "quote": {
+            "ru": "Сообщество локальных моделей встретило с энтузиазмом: «наконец-то агент без утечки данных в облако».",
+            "en": "The local-model community is enthusiastic: \"finally an agent with zero data leaving the machine.\""
+          },
+          "url": "https://www.reddit.com/r/LocalLLaMA/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Автоматизация работы с документами в контурах с запретом на облачные API.",
+            "en": "Document workflow automation in environments where cloud APIs are banned."
+          },
+          "url": "https://www.reddit.com/r/LocalLLaMA/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-03-willison-skills",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "[ДЕМО] Скиллы вместо промптов: как переиспользовать экспертизу агентов",
+        "en": "[DEMO] Skills over prompts: how to make agent expertise reusable"
+      },
+      "url": "https://simonwillison.net",
+      "summary": {
+        "ru": "Демо-пример конспекта статьи: почему упакованные «скиллы» (инструкция + скрипты + референсы) вытесняют длинные системные промпты.",
+        "en": "Demo article digest: why packaged \"skills\" (instructions + scripts + references) are replacing long system prompts."
+      },
+      "note_page": "notes/articles/demo-article.html"
+    },
+    {
+      "id": "2026-07-03-aiexplained-agents",
+      "type": "video",
+      "author": "AI Explained",
+      "title": {
+        "ru": "[ДЕМО] Разбор: что реально меняют долгоживущие агенты",
+        "en": "[DEMO] Breakdown: what long-lived agents actually change"
+      },
+      "url": "https://www.youtube.com/@aiexplained-official",
+      "summary": {
+        "ru": "Демо-пример конспекта видео: тезисы, таймкоды и кадры демонстраций (в реальной сводке — извлекаются через Gemini + ffmpeg).",
+        "en": "Demo video digest: theses, timestamps and demo frames (in a real digest — extracted via Gemini + ffmpeg)."
+      },
+      "note_page": "notes/videos/demo-video.html"
+    }
+  ]
+}

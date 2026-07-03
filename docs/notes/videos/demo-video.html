@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: долгоживущие агенты — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <div class="demo-banner">
+    <span data-lang="ru">⚠ Демо-страница: пример формата конспекта видео. Содержимое вымышленное; в реальной сводке тезисы и таймкоды извлекает Gemini, кадры — yt-dlp/ffmpeg.</span>
+    <span data-lang="en">⚠ Demo page: an example of the video digest format. Content is fictional; in a real digest Gemini extracts theses and timestamps, yt-dlp/ffmpeg pulls the frames.</span>
+  </div>
+
+  <main class="note">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · AI Explained · 2026-07-03 · 24 мин</span>
+      <span data-lang="en">Video digest · AI Explained · 2026-07-03 · 24 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Разбор: что реально меняют долгоживущие агенты</span>
+      <span data-lang="en">Breakdown: what long-lived agents actually change</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/@aiexplained-official" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
+    <ol class="theses">
+      <li>
+        <span data-lang="ru">Главный сдвиг — не в качестве модели, а в <b>жизненном цикле</b>: агент перестаёт быть «функцией» и становится «процессом».</span>
+        <span data-lang="en">The key shift is not model quality but <b>lifecycle</b>: the agent stops being a "function" and becomes a "process."</span>
+      </li>
+      <li>
+        <span data-lang="ru">Экономика решает: постоянный агент имеет смысл только с кэшированием контекста и дешёвыми фоновыми токенами.</span>
+        <span data-lang="en">Economics decide: a persistent agent only makes sense with context caching and cheap background tokens.</span>
+      </li>
+      <li>
+        <span data-lang="ru">Новый узкий момент — <b>наблюдаемость</b>: недельному агенту нужны логи, чекпоинты и «кардиограмма» действий.</span>
+        <span data-lang="en">The new bottleneck is <b>observability</b>: a week-long agent needs logs, checkpoints and an action "heartbeat."</span>
+      </li>
+    </ol>
+
+    <h2><span data-lang="ru">Таймкоды</span><span data-lang="en">Timestamps</span></h2>
+    <table class="timestamps">
+      <tbody>
+        <tr>
+          <td><a href="https://www.youtube.com/watch?v=demo&t=0" target="_blank" rel="noopener">00:00</a></td>
+          <td><span data-lang="ru">Постановка: почему «сессионные» агенты упёрлись в потолок</span>
+              <span data-lang="en">Setup: why session-based agents hit a ceiling</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.youtube.com/watch?v=demo&t=312" target="_blank" rel="noopener">05:12</a></td>
+          <td><span data-lang="ru">Демонстрация: агент возобновляет работу после перезапуска ★</span>
+              <span data-lang="en">Demo: the agent resumes work after a restart ★</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.youtube.com/watch?v=demo&t=754" target="_blank" rel="noopener">12:34</a></td>
+          <td><span data-lang="ru">Схема архитектуры памяти: рабочий контекст vs долговременное хранилище ★</span>
+              <span data-lang="en">Memory architecture diagram: working context vs long-term store ★</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.youtube.com/watch?v=demo&t=1105" target="_blank" rel="noopener">18:25</a></td>
+          <td><span data-lang="ru">Расчёт стоимости недельного агента</span>
+              <span data-lang="en">Cost breakdown of a week-long agent</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note-hint">
+      <span data-lang="ru">★ — моменты с демонстрациями; кадры ниже.</span>
+      <span data-lang="en">★ — demonstration moments; frames below.</span>
+    </p>
+
+    <h2><span data-lang="ru">Кадры демонстраций</span><span data-lang="en">Demo frames</span></h2>
+    <div class="frames">
+      <figure>
+        <div class="frame-placeholder">05:12</div>
+        <figcaption>
+          <span data-lang="ru">[ДЕМО] Здесь — кадр: терминал с возобновлением агента (в реальной сводке — jpg из видео).</span>
+          <span data-lang="en">[DEMO] A frame goes here: terminal with the agent resuming (a real digest embeds a jpg from the video).</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="frame-placeholder">12:34</div>
+        <figcaption>
+          <span data-lang="ru">[ДЕМО] Здесь — кадр: схема архитектуры памяти с пояснением.</span>
+          <span data-lang="en">[DEMO] A frame goes here: the memory architecture diagram with an explanation.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
