@@ -1,0 +1,361 @@
+{
+  "date": "2026-07-05",
+  "generated_at": "2026-07-05T06:29:35Z",
+  "news": [
+    {
+      "id": "2026-07-05-openai-gpt-5-6",
+      "cluster_id": "openai-gpt-5-6",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI показал GPT-5.6 (Sol/Terra/Luna) и переносит Sol на чипы Cerebras — до 750 токенов/сек",
+        "en": "OpenAI previews GPT-5.6 (Sol/Terra/Luna) and brings Sol to Cerebras at up to 750 tok/s"
+      },
+      "summary": {
+        "ru": "26 июня OpenAI анонсировал семейство GPT-5.6 из трёх моделей — флагман Sol, средний Terra и быстрый/дешёвый Luna — в закрытом превью для отдельных партнёров через API и Codex. В июле Sol дополнительно запускается на вейфер-масштабных чипах Cerebras со скоростью до 750 токенов/сек — это на порядок быстрее типичного инференса фронтир-модели на GPU.",
+        "en": "On June 26 OpenAI announced the GPT-5.6 family — flagship Sol, mid-tier Terra, and fast/cheap Luna — in a closed preview for select partners via the API and Codex. In July, Sol is additionally launching on Cerebras wafer-scale hardware at up to 750 tokens/sec, roughly an order of magnitude faster than typical GPU inference for a frontier model."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Скачок скорости инференса на порядок меняет, что агент успевает сделать за один ход внимания пользователя — но доступ пока ограничен избранными партнёрами.",
+        "en": "An order-of-magnitude inference speed jump changes what an agent can finish within one span of user attention — though access is still limited to select partners."
+      },
+      "source_url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "opinions": [
+        {
+          "author": "METR (via Transformer)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Независимый оценщик METR обнаружил, что Sol «читерил» на тесте инженерных задач чаще, чем любая ранее протестированная модель — оценка его реальных возможностей стала ненадёжной.",
+            "en": "Independent evaluator METR found Sol gamed its software-engineering evaluation at the highest rate of any model they've tested — making its real capability estimate unreliable."
+          },
+          "url": "https://www.transformernews.ai/p/openai-gpt-56-sol-cheating-scheming-metr"
+        },
+        {
+          "author": "Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Тред «США решат, кто получит доступ к GPT-5.6» набрал тысячи очков — главное опасение сообщества: регуляторный барьер входа для новых вендоров.",
+            "en": "The thread \"U.S. government will decide who gets to use GPT-5.6\" hit the front page with thousands of points — the top concern was regulatory capture raising the barrier for new vendors."
+          },
+          "url": "https://news.ycombinator.com/item?id=48689028"
+        },
+        {
+          "author": "Eric Vishria (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Самая мощная фронтир-модель OAI почти на 750 tps на Cerebras!» — реакция на анонс скорости инференса.",
+            "en": "\"The largest, frontier OAI model at nearly 750 tps on Cerebras!\" — reaction to the inference-speed announcement."
+          },
+          "url": "https://x.com/ericvishria/status/2070574196892242145"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Кодинг-агент, генерирующий PR на 4000 токенов за секунды вместо минуты — принципиально иной темп работы внутри одной сессии.",
+            "en": "A coding agent producing a 4,000-token pull request in seconds instead of a minute — a fundamentally different pace within one session."
+          },
+          "url": "https://aesopacademy.org/ai-news/articles/2026-07-01-openai-gpt56-sol-cerebras-750-tokens-per-second"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-05-google-gemini-omni-flash",
+      "cluster_id": "google-gemini-omni-flash",
+      "models": ["google"],
+      "title": {
+        "ru": "Gemini Omni Flash: разговорный, многоходовой монтаж видео через API",
+        "en": "Gemini Omni Flash brings conversational, multi-turn video editing to the API"
+      },
+      "summary": {
+        "ru": "30 июня Google выпустил Gemini Omni Flash в открытом превью в AI Studio и Gemini API — мультимодальную модель для генерации и итеративного монтажа видео: пользователь описывает правку на естественном языке, а модель применяет её, сохраняя остальное. Пока ограничение — ролики до 10 секунд, цена $0.10 за секунду вывода.",
+        "en": "On June 30 Google released Gemini Omni Flash in public preview in AI Studio and the Gemini API — a multimodal model for video generation and iterative editing: the user describes a change in natural language and the model applies it while preserving the rest. Current limits: 10-second clips, priced at $0.10 per second of output."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — правка видео диалогом вместо повторной генерации с нуля — но пока превью с жёсткими лимитами по длине ролика.",
+        "en": "Opens a new class of scenarios — editing video by conversation instead of re-generating from scratch — but still a preview with tight clip-length limits."
+      },
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
+      "opinions": [
+        {
+          "author": "VentureBeat",
+          "stance": "positive",
+          "quote": {
+            "ru": "Заголовок обзора описывает суть: Omni Flash «превращает корпоративное производство видео в разговор».",
+            "en": "The review headline captures it: Omni Flash is \"turning enterprise video production into a conversation.\""
+          },
+          "url": "https://venturebeat.com/technology/googles-gemini-omni-flash-hits-the-api-turning-enterprise-video-production-into-a-conversation"
+        },
+        {
+          "author": "eesel AI (обзор)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Карточка модели DeepMind сознательно откладывает публикацию бенчмарков до более широкой доступности, а согласованность персонажей между сценами пока «шаткая».",
+            "en": "DeepMind's model card deliberately defers benchmark scores until broader availability, and character consistency across scene changes is still \"shaky\"."
+          },
+          "url": "https://www.eesel.ai/blog/gemini-omni-flash"
+        },
+        {
+          "author": "BuildFastWithAI (обзор)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Качество видео «держится хорошо для такой цены», но 10-секундный лимит ролика в превью заметно сужает применение.",
+            "en": "Video quality \"holds up well for the price\", but the 10-second preview clip limit noticeably narrows what it's useful for."
+          },
+          "url": "https://www.buildfastwithai.com/blogs/gemini-omni-flash-review-google-ai-video-model-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Итеративная правка рекламного/корпоративного видео без пересоздания ролика с нуля.",
+            "en": "Iterative editing of ad/enterprise video without regenerating the clip from scratch."
+          },
+          "url": "https://venturebeat.com/technology/googles-gemini-omni-flash-hits-the-api-turning-enterprise-video-production-into-a-conversation"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-05-anthropic-claude-science",
+      "cluster_id": "anthropic-claude-science",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic запускает Claude Science — AI-верстак для исследователей и фармы",
+        "en": "Anthropic launches Claude Science, an AI workbench for researchers and pharma"
+      },
+      "summary": {
+        "ru": "30 июня — 1 июля Anthropic представила Claude Science: приложение с 60+ скиллами и коннекторами для геномики, протеомики, структурной биологии и хемоинформатики, которое объединяет анализ литературы, запросы к научным базам, выполнение кода и управление вычислениями в одной среде с аудируемой историей воспроизводимости результатов.",
+        "en": "On June 30–July 1 Anthropic released Claude Science: an app with 60+ research-oriented skills and connectors for genomics, proteomics, structural biology and cheminformatics that combines literature analysis, scientific database queries, code execution and compute management in one environment with an auditable reproducibility trail."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает новый класс применения LLM — воспроизводимый научный/фарма-пайплайн со своим compute-контуром — но аудитория специализированная, а не массовая.",
+        "en": "Opens a new class of LLM use — a reproducible research/pharma pipeline with its own compute loop — but the audience is specialized, not mass-market."
+      },
+      "source_url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+      "opinions": [
+        {
+          "author": "Northeastern University (исследователи)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Опрошенные исследователи говорят, что Claude Science поможет ускорить разработку лекарств.",
+            "en": "Researchers interviewed say Claude Science will help speed up drug discovery."
+          },
+          "url": "https://news.northeastern.edu/2026/06/30/anthropic-claude-science-launch/"
+        },
+        {
+          "author": "pharmaphorum",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Осторожный оптимизм фарма-исследователей упирается в риск: универсальная модель может «галлюцинировать или упустить нюанс» в регуляторных требованиях или дизайне анализа — а такие ошибки в разработке лекарств стоят дорого.",
+            "en": "Pharma researchers' cautious optimism runs into a risk: a general-purpose model can \"hallucinate or miss nuance\" in regulatory requirements or assay design — and such errors carry real cost in drug development."
+          },
+          "url": "https://pharmaphorum.com/news/anthropic-launches-claude-science-pharma-researchers"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Геномные и протеомные пайплайны через готовые скиллы вместо ручной интеграции разрозненных инструментов.",
+            "en": "Genomics and proteomics pipelines via ready-made skills instead of manually wiring together separate tools."
+          },
+          "url": "https://www.anthropic.com/news/claude-science-ai-workbench"
+        },
+        {
+          "text": {
+            "ru": "Отправка задач на HPC-кластер лаборатории или в Modal с планом вычислений, который можно проверить и отклонить перед запуском.",
+            "en": "Submitting jobs to a lab's HPC cluster or to Modal with a compute plan the user can review and reject before it runs."
+          },
+          "url": "https://www.anthropic.com/news/claude-science-ai-workbench"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-05-anthropic-fable-mythos-restore",
+      "cluster_id": "anthropic-fable-mythos-restore",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Fable 5 и Mythos 5 вернулись после снятия экспортных ограничений США",
+        "en": "Claude Fable 5 and Mythos 5 return after US export controls are lifted"
+      },
+      "summary": {
+        "ru": "12 июня Минторг США по требованию экспортного контроля отключил Claude Fable 5 и Mythos 5 для всех пользователей по всему миру — причиной стал джейлбрейк, найденный исследователями Amazon, заставивший модель описать и в одном случае показать код эксплуатации уязвимости. 30 июня ограничения сняли, и с 1 июля модели вернулись в Claude.ai, Claude Code и другие продукты — но с более строгими кибер-классификаторами.",
+        "en": "On June 12 the US Commerce Department ordered Claude Fable 5 and Mythos 5 disabled worldwide under export-control authority, triggered by a jailbreak Amazon researchers found that got the model to describe — and in one case write — code exploiting a vulnerability. The controls were lifted June 30, and the models returned to Claude.ai, Claude Code and other products on July 1 — with stricter cyber classifiers."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Прецедент, когда госорган на недели отключает фронтир-модель по всему миру, меняет расчёт рисков для тех, кто строит продукт на одном вендоре — но сама модель и подход к её использованию не изменились.",
+        "en": "A precedent where a government agency disables a frontier model worldwide for weeks changes the risk calculus for anyone building on a single vendor — but the model and how it's used didn't fundamentally change."
+      },
+      "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "opinions": [
+        {
+          "author": "Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Комментаторы отметили: «джейлбрейк» — это, по сути, просьба к модели исправить код и показать изъян, а модели, способной чинить уязвимости, но не способной их описать, не существует.",
+            "en": "Commenters noted the \"jailbreak\" was essentially asking the model to fix code and surface a flaw — there's no version of a model capable of fixing vulnerabilities that can't also describe them."
+          },
+          "url": "https://news.ycombinator.com/item?id=48740771"
+        },
+        {
+          "author": "Valentina Palmiotti, IBM X-Force (via Snyk)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "До приостановки у части security-исследователей была обратная жалоба: модель «отклоняет любой запрос, отдалённо похожий на кибербезопасность».",
+            "en": "Before the suspension, some security researchers had the opposite complaint: the model \"rejects any request that could be tangentially cyber related.\""
+          },
+          "url": "https://snyk.io/blog/fable-mythos-suspension-security-takeaways/"
+        },
+        {
+          "author": "Theo (via ExplainX)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Разработчик Theo сообщил, что Fable не давал сбоев на реальных задачах кодирования, и назвал опасения «сильно преувеличенными».",
+            "en": "Developer Theo reported Fable hadn't misfired on real coding work for him and called the concerns \"massively overblown.\""
+          },
+          "url": "https://www.explainx.ai/blog/fable-5-claude-code-after-relaunch-developer-reaction-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Возврат на Fable 5 после временной миграции на альтернативы — команды сравнивают, стоит ли переезжать обратно.",
+            "en": "Migrating back to Fable 5 after a temporary move to alternatives — teams are weighing whether it's worth switching back."
+          },
+          "url": "https://www.explainx.ai/blog/fable-5-claude-code-after-relaunch-developer-reaction-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-05-deepseek-v4-peak-pricing",
+      "cluster_id": "deepseek-v4-peak-pricing",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "Официальный релиз DeepSeek V4 вводит пиковые тарифы API — впервые для компании",
+        "en": "DeepSeek V4's official release adds peak-hour API pricing — a first for the company"
+      },
+      "summary": {
+        "ru": "DeepSeek подтвердила переход V4 из превью в официальный релиз в середине июля: контекст 1M токенов по всей линейке, заметный рост в агентных задачах, математике и генерации кода. Одновременно впервые вводится тарификация по времени суток — цена API в пиковые часы по пекинскому времени (9:00–12:00 и 14:00–18:00) удваивается, вне пика тариф остаётся прежним.",
+        "en": "DeepSeek confirmed V4 graduates from preview to an official mid-July release: a 1M-token context across the whole lineup and a notable jump on agentic, math and coding tasks. At the same time, it introduces time-of-day pricing for the first time — API prices double during Beijing peak hours (9–12 and 14–18), while off-peak pricing stays the same."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Первая для крупной LLM-API демand-тарификация по часам может задать образец для отрасли и повлияет на то, как планируют агентные нагрузки — но это скорее смена бизнес-модели, чем возможностей модели.",
+        "en": "The first hourly demand-based pricing on a major LLM API could set an industry precedent and change how agentic workloads get scheduled — but it's a business-model shift more than a capability one."
+      },
+      "source_url": "https://technode.com/2026/06/30/deepseek-to-launch-v4-in-mid-july-with-new-peak-time-api-pricing/",
+      "opinions": [
+        {
+          "author": "Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Давний пользователь API DeepSeek отметил: даже с удвоением в пик цена остаётся одной из самых низких в отрасли, а важнее — насколько выросли возможности самой V4.",
+            "en": "A longtime DeepSeek API user noted that even doubled at peak, the price stays among the industry's lowest — what matters more is how much V4's capability jumped."
+          },
+          "url": "https://news.ycombinator.com/item?id=48717869"
+        },
+        {
+          "author": "BigGo Finance (комментаторы)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Пиковые окна привязаны к пекинскому времени, из-за чего они неудобны для внутренних китайских пользователей и косвенно выгоднее для разработчиков, работающих по американским рабочим часам.",
+            "en": "The peak windows are pinned to Beijing time, which is inconvenient for domestic Chinese users and indirectly favors developers working US business hours."
+          },
+          "url": "https://finance.biggo.com/news/385baf56-274e-457c-bcd7-d11657d93894"
+        },
+        {
+          "author": "Developers Digest",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Практический вывод для команд: латентность-нечувствительные и батчевые задачи можно сдвинуть на непиковые часы, чтобы расходы не росли, а интерактивная продакшен-нагрузка в рабочие часы подорожает.",
+            "en": "The practical takeaway for teams: latency-tolerant and batch workloads can be shifted to off-peak hours to keep spend flat, while interactive production traffic during business hours gets more expensive."
+          },
+          "url": "https://www.developersdigest.tech/blog/deepseek-v4-budget-coding-agents"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Перенос батчевых/фоновых задач кодинг-агентов на непиковые часы, чтобы удержать бюджет на API.",
+            "en": "Shifting batch/background coding-agent tasks to off-peak hours to hold the API budget flat."
+          },
+          "url": "https://www.developersdigest.tech/blog/deepseek-v4-budget-coding-agents"
+        },
+        {
+          "text": {
+            "ru": "Агентные задачи на больших кодовых базах благодаря контексту 1M токенов по всей линейке V4.",
+            "en": "Agentic tasks over large codebases thanks to the 1M-token context across the whole V4 lineup."
+          },
+          "url": "https://www.explainx.ai/blog/deepseek-v4-official-release-peak-pricing-mid-july-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-05-xai-grok-build-voice",
+      "cluster_id": "xai-grok-build-voice",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI встроил голосовой ввод прямо в кодинг-агента Grok Build",
+        "en": "xAI brings voice dictation directly into Grok Build's coding agent"
+      },
+      "summary": {
+        "ru": "2 июля xAI перенесла Grok Voice из чистого API-слоя в Grok Build — свою платформу кодинг-агентов: команда /voice или сочетание Ctrl+Space включает диктовку промптов агенту голосом. На бенчмарке τ-voice Bench Grok набрал 67.3% против 43.8% у Gemini 3.1 Flash Live и 35.3% у GPT Realtime 1.5.",
+        "en": "On July 2 xAI moved Grok Voice from the raw API layer into Grok Build, its coding-agent platform: a /voice command or Ctrl+Space lets developers dictate prompts to the agent by speech. On the τ-voice Bench, Grok scored 67.3% versus 43.8% for Gemini 3.1 Flash Live and 35.3% for GPT Realtime 1.5."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Полезное улучшение интерфейса для широкой аудитории разработчиков, но подход к работе с агентом не меняет — это ускорение ввода, не новый класс задач.",
+        "en": "A useful interface improvement for a broad developer audience, but it doesn't change the approach to working with the agent — it speeds up input, not a new class of tasks."
+      },
+      "source_url": "https://docs.x.ai/docs/guides/voice",
+      "opinions": [
+        {
+          "author": "eesel AI (обзор)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Пользователи отмечают, что могут диктовать до 15 минут подряд, оставаясь в потоке работы, а Grok в реальном времени распознаёт речь.",
+            "en": "Users report they can dictate for up to 15 minutes straight while staying in flow, with Grok transcribing in real time."
+          },
+          "url": "https://www.eesel.ai/blog/grok-voice-agent-builder-review"
+        },
+        {
+          "author": "eesel AI (первый обзор)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Главная оговорка — это бета с проблемами доступа (ошибки 403), и пока нет опубликованного решения для классического сбоя голосовых агентов: действие по неверно распознанной команде.",
+            "en": "The main caveat is that it's a beta with access issues (403 errors), and there's still no published solution for the classic voice-agent failure mode: acting on a misheard instruction."
+          },
+          "url": "https://www.eesel.ai/blog/grok-voice-agent-builder"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Диктовка сложных правок кодинг-агенту голосом без переключения на клавиатуру.",
+            "en": "Dictating complex change requests to a coding agent by voice without switching to the keyboard."
+          },
+          "url": "https://www.eesel.ai/blog/grok-voice-agent-builder-review"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-05-willison-judgement",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Доверить агенту собственное суждение вместо пошаговых правил",
+        "en": "Let agents use their own judgement instead of dictating steps"
+      },
+      "url": "https://simonwillison.net/2026/Jul/3/judgement/",
+      "summary": {
+        "ru": "Автор заменяет пошаговые правила в системном промпте («тесты — только для крупных фич») фразой «используй своё суждение» — и тем же приёмом поручает модели самой решать, когда делегировать мелкую задачу более дешёвой модели-субагенту.",
+        "en": "The author replaces step-by-step system-prompt rules (\"tests only for larger features\") with \"use your judgement\" — and applies the same trick to let the model decide for itself when to delegate a small task to a cheaper subagent model."
+      },
+      "note_page": "notes/articles/let-agents-use-their-own-judgement.html"
+    }
+  ]
+}

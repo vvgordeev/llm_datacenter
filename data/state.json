@@ -1,0 +1,54 @@
+{
+  "seen_urls": {
+    "https://openai.com/index/previewing-gpt-5-6-sol/": "2026-07-05",
+    "https://www.transformernews.ai/p/openai-gpt-56-sol-cheating-scheming-metr": "2026-07-05",
+    "https://news.ycombinator.com/item?id=48689028": "2026-07-05",
+    "https://x.com/ericvishria/status/2070574196892242145": "2026-07-05",
+    "https://aesopacademy.org/ai-news/articles/2026-07-01-openai-gpt56-sol-cerebras-750-tokens-per-second": "2026-07-05",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/": "2026-07-05",
+    "https://venturebeat.com/technology/googles-gemini-omni-flash-hits-the-api-turning-enterprise-video-production-into-a-conversation": "2026-07-05",
+    "https://www.eesel.ai/blog/gemini-omni-flash": "2026-07-05",
+    "https://www.buildfastwithai.com/blogs/gemini-omni-flash-review-google-ai-video-model-2026": "2026-07-05",
+    "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-05",
+    "https://news.northeastern.edu/2026/06/30/anthropic-claude-science-launch/": "2026-07-05",
+    "https://pharmaphorum.com/news/anthropic-launches-claude-science-pharma-researchers": "2026-07-05",
+    "https://www.anthropic.com/news/claude-fable-5-mythos-5": "2026-07-05",
+    "https://news.ycombinator.com/item?id=48740771": "2026-07-05",
+    "https://snyk.io/blog/fable-mythos-suspension-security-takeaways/": "2026-07-05",
+    "https://www.explainx.ai/blog/fable-5-claude-code-after-relaunch-developer-reaction-2026": "2026-07-05",
+    "https://technode.com/2026/06/30/deepseek-to-launch-v4-in-mid-july-with-new-peak-time-api-pricing/": "2026-07-05",
+    "https://news.ycombinator.com/item?id=48717869": "2026-07-05",
+    "https://finance.biggo.com/news/385baf56-274e-457c-bcd7-d11657d93894": "2026-07-05",
+    "https://www.developersdigest.tech/blog/deepseek-v4-budget-coding-agents": "2026-07-05",
+    "https://www.explainx.ai/blog/deepseek-v4-official-release-peak-pricing-mid-july-2026": "2026-07-05",
+    "https://docs.x.ai/docs/guides/voice": "2026-07-05",
+    "https://www.eesel.ai/blog/grok-voice-agent-builder-review": "2026-07-05",
+    "https://www.eesel.ai/blog/grok-voice-agent-builder": "2026-07-05"
+  },
+  "clusters": {
+    "openai-gpt-5-6": {
+      "last_date": "2026-07-05",
+      "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna) and brings Sol to Cerebras at up to 750 tok/s"
+    },
+    "google-gemini-omni-flash": {
+      "last_date": "2026-07-05",
+      "summary": "Gemini Omni Flash brings conversational, multi-turn video editing to the API"
+    },
+    "anthropic-claude-science": {
+      "last_date": "2026-07-05",
+      "summary": "Anthropic launches Claude Science, an AI workbench for researchers and pharma"
+    },
+    "anthropic-fable-mythos-restore": {
+      "last_date": "2026-07-05",
+      "summary": "Claude Fable 5 and Mythos 5 return after US export controls are lifted"
+    },
+    "deepseek-v4-peak-pricing": {
+      "last_date": "2026-07-05",
+      "summary": "DeepSeek V4's official release adds peak-hour API pricing — a first for the company"
+    },
+    "xai-grok-build-voice": {
+      "last_date": "2026-07-05",
+      "summary": "xAI brings voice dictation directly into Grok Build's coding agent"
+    }
+  }
+}
