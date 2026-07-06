@@ -1,0 +1,93 @@
+{
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T05:18:44Z",
+  "news": [
+    {
+      "id": "2026-07-06-mistral-leanstral-1-5",
+      "cluster_id": "mistral-leanstral",
+      "models": ["mistral"],
+      "title": {
+        "ru": "Mistral выпустил Leanstral 1.5 — open-source модель для формальной верификации, находящую баги в реальном коде",
+        "en": "Mistral releases Leanstral 1.5, an open-source formal-verification model that finds real bugs in code"
+      },
+      "summary": {
+        "ru": "3 июля Mistral AI выпустила Leanstral 1.5 — MoE-модель (119B параметров, ~6B активных) под лицензией Apache 2.0, специализированную на доказательствах в Lean 4: она насыщает бенчмарк miniF2F и решает 587 из 672 задач PutnamBench. Помимо олимпиадной математики, модель применили в пайплайне, который транслирует Rust-код в Lean через Aeneas и выводит формальные свойства корректности — на 57 open-source репозиториях это выявило 47 нарушенных свойств, 11 из которых оказались реальными багами, 5 ранее никто не находил.",
+        "en": "On July 3 Mistral AI released Leanstral 1.5, an Apache-2.0 mixture-of-experts model (119B total, ~6B active parameters) specialized in Lean 4 proof engineering: it saturates the miniF2F benchmark and solves 587 of 672 PutnamBench problems. Beyond competition math, the model was used in a pipeline that translates Rust code to Lean via Aeneas and infers formal correctness properties — across 57 open-source repositories this surfaced 47 violated properties, 11 of them real bugs, 5 previously unknown."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Открывает узкий, но реальный новый сценарий — автоматический поиск багов через формальную верификацию, а не эвристический ревью кода — но аудитория ограничена инженерами по формальным методам и safety-critical кодом.",
+        "en": "Opens a narrow but real new scenario — automated bug-hunting via formal verification rather than heuristic code review — but the audience is limited to formal-methods engineers and safety-critical code."
+      },
+      "source_url": "https://mistral.ai/news/leanstral-1-5/",
+      "opinions": [
+        {
+          "author": "Mert Ünsal, Mistral AI (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Исследователь Mistral показал пайплайн, где Aeneas переводит Rust-код в Lean, а Leanstral выводит свойства корректности и находит реальные баги — включая случаи, которых не было в багтрекере проекта.",
+            "en": "The Mistral researcher demoed a pipeline where Aeneas translates Rust code to Lean and Leanstral infers correctness properties, catching real bugs — including some that weren't already in the project's issue tracker."
+          },
+          "url": "https://x.com/mertunsal2020/status/2073046288208412960"
+        },
+        {
+          "author": "Mia (@MiaAI_lab, X)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "«Это почти звучит слишком хорошо, чтобы быть правдой» — реакция на список заявленных возможностей модели: доказывать теоремы и чинить произвольный код проекта.",
+            "en": "\"This almost seems too good to be true\" — reacting to the list of claimed capabilities: proving theorems and fixing arbitrary project code."
+          },
+          "url": "https://x.com/MiaAI_lab/status/2073152632969908409"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Автоматический поиск багов: перевод Rust-библиотеки в Lean и проверка выведенных свойств нашли ошибку знака при zigzag-декодировании в datrs/varinteger — переполнение на `u64::MAX`, вызывающее падение в debug-сборке и молчаливую порчу данных в release.",
+            "en": "Automated bug-hunting: translating a Rust library to Lean and checking the inferred properties caught a sign-handling bug in datrs/varinteger's zigzag decoding — an overflow on `u64::MAX` that crashes debug builds and silently corrupts data in release."
+          },
+          "url": "https://the-decoder.com/mistrals-open-source-leanstral-1-5-aces-formal-math-benchmarks-and-catches-real-bugs-in-code/"
+        },
+        {
+          "text": {
+            "ru": "Формальное доказательство асимптотической сложности: Leanstral доказал O(log n) для реальной реализации AVL-дерева — проверка утверждений о сложности алгоритма в продакшен-коде, а не только в задачах соревнований.",
+            "en": "Formal complexity proofs: Leanstral proved O(log n) time complexity for a real AVL-tree implementation — verifying algorithmic complexity claims in production code, not just competition problems."
+          },
+          "url": "https://www.marktechpost.com/2026/07/03/mistral-ai-releases-leanstral-1-5-an-apache-2-0-lean-4-code-agent-model-solving-587-of-672-putnambench-problems/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-06-willison-understand-to-participate",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Понимать, чтобы участвовать: как не растерять контроль над кодом агента",
+        "en": "Understand to participate: staying in control as coding agents scale up"
+      },
+      "url": "https://simonwillison.net/2026/Jul/2/understand-to-participate/",
+      "summary": {
+        "ru": "По мотивам доклада Джеффри Литта на конференции AI Engineer: чем крупнее и сложнее правки, которые делают кодинг-агенты, тем труднее человеку оставаться реальным участником процесса, а не просто одобряющим кнопку.",
+        "en": "Drawing on a talk by Geoffrey Litt at the AI Engineer conference: as coding agents produce larger, more sophisticated changes, it gets harder for a human to remain a genuine participant in the process rather than just an approval button."
+      },
+      "note_page": "notes/articles/understand-to-participate.html"
+    },
+    {
+      "id": "2026-07-06-mollick-twilight-of-chatbots",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "Закат чат-ботов: от диалога с ИИ к управлению агентами",
+        "en": "The twilight of the chatbots: from talking to AI to managing it"
+      },
+      "url": "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots",
+      "summary": {
+        "ru": "Моллик описывает сдвиг центра тяжести в использовании ИИ от чат-ботов (пошаговый диалог) к агентам — долгоживущим системам с доступом к инструментам и окружению, которые действуют и самокорректируются с меньшим участием человека.",
+        "en": "Mollick describes AI's center of gravity shifting from chatbots (turn-by-turn dialogue) to agents — long-running systems with tool and environment access that act and self-correct with less continuous human involvement."
+      },
+      "note_page": "notes/articles/the-twilight-of-the-chatbots.html"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Понимать, чтобы участвовать — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-02</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Понимать, чтобы участвовать: как не растерять контроль над кодом агента</span>
+      <span data-lang="en">Understand to participate: staying in control as coding agents scale up</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/2/understand-to-participate/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
+    <ol class="theses">
+      <li>
+        <span data-lang="ru"><b>Правки агентов растут в размере и сложности.</b> Чем крупнее и продуманнее diff, который выдаёт кодинг-агент, тем труднее человеку успевать быть реальным участником процесса, а не просто нажимать «принять».</span>
+        <span data-lang="en"><b>Agent-generated diffs keep getting bigger and more sophisticated.</b> The larger and more elaborate the change a coding agent produces, the harder it is for a human to keep up as a genuine participant rather than just clicking "accept".</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Главный риск — «когнитивный долг».</b> Принимая правку за правкой без поддержания рабочей модели того, что код на самом деле делает, разработчик постепенно теряет понимание собственной кодовой базы.</span>
+        <span data-lang="en"><b>The core risk is "cognitive debt".</b> Accepting change after change without maintaining a working mental model of what the code actually does, a developer gradually loses their grip on their own codebase.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Источник — доклад Джеффри Литта на AI Engineer.</b> Уиллисон пересказывает выступление, где та же проблема сформулирована для совместной работы человека с быстро эволюционирующим агентным кодом.</span>
+        <span data-lang="en"><b>Sourced from Geoffrey Litt's AI Engineer talk.</b> Willison relays a presentation that frames the same problem for humans collaborating with fast-moving, agent-authored code.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Решение — осознанная вовлечённость.</b> Читать и понимать правки достаточно глубоко, чтобы участвовать в решениях, а не просто утверждать вывод модели.</span>
+        <span data-lang="en"><b>The fix is deliberate engagement.</b> Reading and understanding diffs deeply enough to take part in decisions, instead of just rubber-stamping the model's output.</span>
+      </li>
+    </ol>
+
+    <h2><span data-lang="ru">Схема</span><span data-lang="en">Diagram</span></h2>
+    <figure class="scheme">
+      <svg viewBox="0 0 640 220" role="img" aria-label="cognitive debt vs active participation">
+        <style>
+          .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 8; }
+          .lbl { font: 13px system-ui, sans-serif; fill: currentColor; }
+          .sub { font: 11px system-ui, sans-serif; fill: currentColor; opacity: .6; }
+          .arr { stroke: currentColor; stroke-width: 1.5; marker-end: url(#ah3); }
+        </style>
+        <defs>
+          <marker id="ah3" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor"/>
+          </marker>
+        </defs>
+        <rect class="box" x="16" y="30" width="220" height="60" rx="8"/>
+        <text class="lbl" x="126" y="55" text-anchor="middle">Diff 1 → Diff 2 → Diff 3</text>
+        <text class="sub" x="126" y="75" text-anchor="middle">только «принять»</text>
+        <line class="arr" x1="126" y1="90" x2="126" y2="126"/>
+        <rect class="box" x="16" y="130" width="220" height="60" rx="8"/>
+        <text class="lbl" x="126" y="155" text-anchor="middle">Когнитивный долг</text>
+        <text class="sub" x="126" y="175" text-anchor="middle">понимание отстаёт от кода</text>
+        <line class="arr" x1="236" y1="160" x2="340" y2="160"/>
+        <rect class="box" x="340" y="130" width="150" height="60" rx="8"/>
+        <text class="lbl" x="415" y="155" text-anchor="middle">Разрыв растёт</text>
+        <text class="sub" x="415" y="175" text-anchor="middle">решения принимает не человек</text>
+        <line class="arr" x1="126" y1="30" x2="450" y2="30"/>
+        <rect class="box" x="450" y="10" width="170" height="50" rx="8"/>
+        <text class="lbl" x="535" y="40" text-anchor="middle">Читать и понимать</text>
+      </svg>
+      <figcaption>
+        <span data-lang="ru">Без осознанной вовлечённости разрыв между «что делает код» и «что понимает человек» растёт с каждой правкой агента.</span>
+        <span data-lang="en">Without deliberate engagement, the gap between "what the code does" and "what the human understands" widens with every agent change.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Это симметрично технике из прошлых конспектов сводки: там речь шла о том, чтобы доверить агенту собственное суждение о процессе, здесь — о том, чтобы человек не потерял своё суждение о содержании. По мере роста автономности агентов (кодинг, наука, голосовой ввод — темы недавних новостей) удержание этого баланса становится отдельным навыком, а не побочным эффектом более быстрых моделей.</span>
+      <span data-lang="en">This mirrors an earlier digest note from the other direction: that one was about trusting the agent's own judgement on process; this one is about the human not losing their own judgement about substance. As agent autonomy grows across coding, science and voice interfaces — recent digest themes — holding that balance becomes a skill in its own right, not a side effect of faster models.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-06",
+      "news_count": 1,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Mistral выпустил Leanstral 1.5 — open-source модель для формальной верификации, находящую баги в реальном коде",
+        "en": "Mistral releases Leanstral 1.5, an open-source formal-verification model that finds real bugs in code"
+      }
+    },
+    {
       "date": "2026-07-05",
       "news_count": 6,
       "expert_count": 1,

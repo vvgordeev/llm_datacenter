@@ -23,7 +23,14 @@
     "https://www.explainx.ai/blog/deepseek-v4-official-release-peak-pricing-mid-july-2026": "2026-07-05",
     "https://docs.x.ai/docs/guides/voice": "2026-07-05",
     "https://www.eesel.ai/blog/grok-voice-agent-builder-review": "2026-07-05",
-    "https://www.eesel.ai/blog/grok-voice-agent-builder": "2026-07-05"
+    "https://www.eesel.ai/blog/grok-voice-agent-builder": "2026-07-05",
+    "https://mistral.ai/news/leanstral-1-5/": "2026-07-06",
+    "https://x.com/mertunsal2020/status/2073046288208412960": "2026-07-06",
+    "https://x.com/MiaAI_lab/status/2073152632969908409": "2026-07-06",
+    "https://the-decoder.com/mistrals-open-source-leanstral-1-5-aces-formal-math-benchmarks-and-catches-real-bugs-in-code/": "2026-07-06",
+    "https://www.marktechpost.com/2026/07/03/mistral-ai-releases-leanstral-1-5-an-apache-2-0-lean-4-code-agent-model-solving-587-of-672-putnambench-problems/": "2026-07-06",
+    "https://simonwillison.net/2026/Jul/2/understand-to-participate/": "2026-07-06",
+    "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots": "2026-07-06"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -49,6 +56,10 @@
     "xai-grok-build-voice": {
       "last_date": "2026-07-05",
       "summary": "xAI brings voice dictation directly into Grok Build's coding agent"
+    },
+    "mistral-leanstral": {
+      "last_date": "2026-07-06",
+      "summary": "Mistral releases Leanstral 1.5, an open-source Lean 4 formal-verification model that finds real bugs in code"
     }
   }
 }
