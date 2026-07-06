@@ -1,7 +1,8 @@
 """Извлечение кадров из YouTube-видео по таймкодам (для конспектов видео).
 
 Берёт прямой URL потока через yt-dlp (видео не скачивается целиком) и вырезает
-по одному jpg на таймкод через ffmpeg. Требует yt-dlp и ffmpeg в PATH.
+по одному jpg на таймкод через ffmpeg. Инструменты берутся из PATH, а при их
+отсутствии — из pip-пакетов yt-dlp и imageio-ffmpeg (несёт бинарник ffmpeg).
 
 Запуск: python scripts/extract_frames.py <youtube_url> --timestamps 05:12,12:34 --out-dir docs/media/frames/my-video
 Или таймкоды из конспекта gemini_video.py: --from-summary summary.json (берёт demonstration: true)
@@ -30,10 +31,33 @@ def demo_timestamps(summary: dict, limit: int) -> list[int]:
     return out[:limit]
 
 
+def ffmpeg_exe() -> str | None:
+    """ffmpeg из PATH, иначе бинарник pip-пакета imageio-ffmpeg, иначе None."""
+    exe = shutil.which("ffmpeg")
+    if exe:
+        return exe
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except (ImportError, RuntimeError):
+        return None
+
+
+def ytdlp_cmd() -> list[str] | None:
+    """Команда запуска yt-dlp: бинарник из PATH или python -m yt_dlp, иначе None."""
+    if shutil.which("yt-dlp"):
+        return ["yt-dlp"]
+    try:
+        import yt_dlp  # noqa: F401
+        return [sys.executable, "-m", "yt_dlp"]
+    except ImportError:
+        return None
+
+
 def stream_url(youtube_url: str) -> str:
     """Прямой URL видеопотока (<=720p достаточно для кадров со схемами)."""
     res = subprocess.run(
-        ["yt-dlp", "-f", "best[height<=720]/bestvideo[height<=720]", "-g", youtube_url],
+        [*ytdlp_cmd(), "-f", "best[height<=720]/bestvideo[height<=720]", "-g", youtube_url],
         capture_output=True, text=True, timeout=120,
     )
     if res.returncode != 0:
@@ -43,7 +67,7 @@ def stream_url(youtube_url: str) -> str:
 
 def grab_frame(stream: str, seconds: int, out_path: Path) -> None:
     res = subprocess.run(
-        ["ffmpeg", "-y", "-loglevel", "error", "-ss", str(seconds), "-i", stream,
+        [ffmpeg_exe(), "-y", "-loglevel", "error", "-ss", str(seconds), "-i", stream,
          "-frames:v", "1", "-q:v", "4", str(out_path)],
         capture_output=True, text=True, timeout=180,
     )
@@ -60,11 +84,12 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=6, help="максимум кадров")
     args = ap.parse_args()
 
-    for tool in ("yt-dlp", "ffmpeg"):
-        if not shutil.which(tool):
-            print(f"{tool} не найден в PATH — кадры пропущены (fallback: конспект без кадров)",
-                  file=sys.stderr)
-            return 3
+    missing = [name for name, found in
+               (("yt-dlp", ytdlp_cmd()), ("ffmpeg", ffmpeg_exe())) if not found]
+    if missing:
+        print(f"{', '.join(missing)} недоступны (PATH и pip) — кадры пропущены; "
+              f"установка: python -m pip install yt-dlp imageio-ffmpeg", file=sys.stderr)
+        return 3
 
     if args.from_summary:
         summary = json.loads(args.from_summary.read_text(encoding="utf-8"))
