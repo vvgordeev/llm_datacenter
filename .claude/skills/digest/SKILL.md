@@ -51,6 +51,7 @@ description: Собрать ежедневную сводку новостей L
 - Отбери до `limits.max_articles_per_day` статей и `limits.max_videos_per_day` видео, опубликованных недавно и вызвавших резонанс, о ПОДХОДАХ к использованию LLM (не новости-пересказы).
 - **Статья:** WebFetch полного текста → страница `docs/notes/articles/<slug>.html`: ключевые тезисы (нумерованный список), схемы — восстанови как inline-SVG с пояснением (образец: `docs/notes/articles/demo-article.html`; используй `../note.css`, `../note.js`, двуязычные `<span data-lang="ru|en">`).
 - **Видео:** `python scripts/gemini_video.py <url> --out /tmp/summary.json` → страница `docs/notes/videos/<slug>.html` с тезисами и таймкодами-ссылками (`https://youtube.com/watch?v=ID&t=<sec>`); кадры: `python scripts/extract_frames.py <url> --from-summary /tmp/summary.json --out-dir docs/media/frames/<slug>` → `<img>` вместо плейсхолдеров. Если GEMINI_API_KEY или yt-dlp/ffmpeg недоступны — конспект по субтитрам/описанию без кадров, пометь это на странице.
+- **Если YouTube блокирован сетью окружения** (WebFetch/yt-dlp не достают youtube.com — так в облачной routine): НЕ отбрасывай видео. Gemini API получает ролик на стороне серверов Google — `gemini_video.py` работает и за блокировкой. Верификация автора/содержания — по самому конспекту от Gemini (он видит видео) плюс косвенно: ссылка на видео со страницы/поста автора, найденного WebSearch. Кадры в этом случае пропусти, на странице конспекта поставь пометку «кадры недоступны в окружении сбора».
 - Slug — `scripts/common.py: slugify(en-заголовок)`.
 
 ## Шаг 5. Запись данных
