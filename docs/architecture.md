@@ -35,7 +35,7 @@
 - `news[]`: `id`, `cluster_id` (сюжет для склейки follow-up'ов в срезах), `models[]` (теги компаний/моделей из sources.yaml), `title{ru,en}`, `summary{ru,en}`, `impact_score` (1–10), `impact_reason{ru,en}`, `source_url`, `opinions[]` (`author`, `stance` positive|skeptical|neutral, `quote{ru,en}`, `url`), `use_cases[]` (`text{ru,en}`, `url`)
 - `expert_content[]`: `id`, `type` article|video, `author`, `title{ru,en}`, `url`, `summary{ru,en}`, `note_page` (путь в docs/notes/), для видео: `timestamps[]`, `frames[]`
 
-`data/index.json`: список дней с метаданными (дата, число новостей, топ-заголовок). `data/state.json`: виденные URL + cluster_id → скользящее окно 60 дней.
+`data/index.json`: список дней с метаданными (дата, число новостей, топ-заголовок). `data/state.json`: **опубликованные** URL (только source_url новостей и конспекты — не вспомогательные ссылки) + cluster_id → скользящее окно 60 дней. `data/run_log/<date>.json`: отчёт о сборе за прогон (статусы источников, счётчики, статус видео-пайплайна) — для диагностики, на сайт не копируется.
 
 ## Сквозные паттерны
 

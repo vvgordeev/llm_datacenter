@@ -67,6 +67,24 @@ experts:
   - name: Ethan Mollick (One Useful Thing)
     url: https://www.oneusefulthing.org
     type: article
+  - name: Nate Herk | AI Automation
+    url: https://www.youtube.com/@nateherk
+    type: video
+  - name: Matt Pocock
+    url: https://www.youtube.com/@mattpocockuk
+    type: video
+
+# Агрегаторы-дайджесты — источники ОБНАРУЖЕНИЯ событий (в сводке ссылаемся на первоисточники).
+aggregators:
+  - name: AI News (smol.ai)
+    url: https://news.smol.ai
+  - name: TLDR AI
+    url: https://tldr.tech/ai
+  - name: Simon Willison linkblog
+    url: https://simonwillison.net
+  - name: Hacker News API
+    url: https://hn.algolia.com/api/v1/search_by_date?tags=story&query=LLM
+    note: JSON API, работает из облачной песочницы; фильтровать по created_at_i за сутки
 
 limits:
   max_news_items: 12        # карточек новостей в дневной сводке
