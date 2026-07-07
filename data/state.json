@@ -30,12 +30,14 @@
     "https://the-decoder.com/mistrals-open-source-leanstral-1-5-aces-formal-math-benchmarks-and-catches-real-bugs-in-code/": "2026-07-06",
     "https://www.marktechpost.com/2026/07/03/mistral-ai-releases-leanstral-1-5-an-apache-2-0-lean-4-code-agent-model-solving-587-of-672-putnambench-problems/": "2026-07-06",
     "https://simonwillison.net/2026/Jul/2/understand-to-participate/": "2026-07-06",
-    "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots": "2026-07-06"
+    "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots": "2026-07-06",
+    "https://news.ycombinator.com/item?id=48799614": "2026-07-07",
+    "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/": "2026-07-07"
   },
   "clusters": {
     "openai-gpt-5-6": {
-      "last_date": "2026-07-05",
-      "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna) and brings Sol to Cerebras at up to 750 tok/s"
+      "last_date": "2026-07-07",
+      "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna), brings Sol to Cerebras, then teases a cooperating-subagents Sol Ultra tier for Codex"
     },
     "google-gemini-omni-flash": {
       "last_date": "2026-07-05",

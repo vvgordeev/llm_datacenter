@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-07",
+      "news_count": 1,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "OpenAI тизерит GPT-5.6 Sol Ultra для Codex — режим с кооперирующимися субагентами",
+        "en": "OpenAI teases GPT-5.6 Sol Ultra for Codex — a cooperating-subagents mode"
+      }
+    },
+    {
       "date": "2026-07-06",
       "news_count": 1,
       "expert_count": 2,

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Карта пробелов открытого ИИ — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-03</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-03</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Карта пробелов открытого ИИ: где стеку не хватает открытых компонентов</span>
+      <span data-lang="en">Open Source AI Gap Map: where the open-source AI stack is thin</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
+    <ol class="theses">
+      <li>
+        <span data-lang="ru"><b>Current AI выпустила Gap Map v0.1.</b> Некоммерческая организация Current AI (основана на AI Action Summit в Париже, при поддержке $400M капитала) обследовала 24 626 проектов и детально каталогизировала 421 из них: 266 инструментов и библиотек, 85 моделей, 50 датасетов, 20 hardware-проектов — от 228 организаций.</span>
+        <span data-lang="en"><b>Current AI released Gap Map v0.1.</b> The non-profit Current AI (founded at the AI Action Summit in Paris, backed by $400M in committed capital) surveyed 24,626 projects and catalogued 421 of them in depth: 266 tools and libraries, 85 models, 50 datasets, 20 hardware projects — from 228 organizations.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Три независимые оси оценки.</b> Каждый продукт получает баллы по Openness (0–5 по признанным рамкам открытости), Adoption (реальное использование, а не звёзды на GitHub) и Capability (бенчмарки сообщества или охват функций, если бенчмарков нет).</span>
+        <span data-lang="en"><b>Three independent grading axes.</b> Every product is scored on Openness (0–5 against recognized openness frameworks), Adoption (real usage, not GitHub stars) and Capability (community benchmarks, or feature coverage where none exist).</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>14 категорий, 3 слоя стека.</b> Карта раскладывает экосистему на модельные компоненты, продукт/UX и инфраструктуру — общая система координат, вокруг которой сообщество может согласовать, где открытый ИИ силён, а где зияют пробелы.</span>
+        <span data-lang="en"><b>14 categories, 3 stack layers.</b> The map organizes the ecosystem into model components, product/UX and infrastructure — a shared coordinate system the community can use to agree on where open AI is strong and where the gaps are.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Данные открыты и живые, не разовый снимок.</b> Весь набор — 1184 YAML-файла плюс ноутбуки, схемы и скрипты сбора — выложен под MIT в github.com/currentai-org/os-ai-map, рассчитан на пополнение сообществом.</span>
+        <span data-lang="en"><b>The data is open and living, not a one-off snapshot.</b> The full dataset — 1,184 YAML files plus the notebooks, schemas and scripts used to gather them — is released under MIT at github.com/currentai-org/os-ai-map, meant to be extended by the community.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Уиллисон отмечает и реакцию как показатель качества.</b> По его словам, тред на Hacker News вышел «отличным — полным обоснованного скептицизма и добросовестных ответов от Fernando» (одного из авторов карты) — то есть проект выдержал придирчивую проверку, а не спрятался от неё.</span>
+        <span data-lang="en"><b>Willison flags the reaction itself as a signal of quality.</b> He calls the Hacker News thread "excellent — full of well-founded skepticism and good-faith replies from Fernando" (one of the map's authors) — the project held up under scrutiny instead of dodging it.</span>
+      </li>
+    </ol>
+
+    <h2><span data-lang="ru">Схема</span><span data-lang="en">Diagram</span></h2>
+    <figure class="scheme">
+      <svg viewBox="0 0 640 240" role="img" aria-label="three layers of the open-source AI stack, graded on three axes">
+        <style>
+          .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 8; }
+          .lbl { font: 13px system-ui, sans-serif; fill: currentColor; }
+          .sub { font: 11px system-ui, sans-serif; fill: currentColor; opacity: .6; }
+          .axis { font: 11px system-ui, sans-serif; fill: currentColor; opacity: .75; }
+        </style>
+        <rect class="box" x="20" y="16" width="600" height="56" rx="8"/>
+        <text class="lbl" x="320" y="38" text-anchor="middle">Продукт / UX</text>
+        <text class="sub" x="320" y="58" text-anchor="middle">пользовательские приложения и интерфейсы</text>
+
+        <rect class="box" x="20" y="88" width="600" height="56" rx="8"/>
+        <text class="lbl" x="320" y="110" text-anchor="middle">Модельные компоненты</text>
+        <text class="sub" x="320" y="130" text-anchor="middle">85 моделей, 50 датасетов</text>
+
+        <rect class="box" x="20" y="160" width="600" height="56" rx="8"/>
+        <text class="lbl" x="320" y="182" text-anchor="middle">Инфраструктура</text>
+        <text class="sub" x="320" y="202" text-anchor="middle">266 инструментов и библиотек, 20 hardware-проектов</text>
+
+        <text class="axis" x="20" y="230">Каждый блок оценён по 3 осям: Openness · Adoption · Capability</text>
+      </svg>
+      <figcaption>
+        <span data-lang="ru">421 продукт от 228 организаций разложены по трём слоям стека — карта показывает, где открытый ИИ уже зрелый, а где не хватает игроков.</span>
+        <span data-lang="en">421 products from 228 organizations, laid out across three stack layers — the map shows where open AI is already mature and where builders are still needed.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Открытые веса в последних выпусках сводки (Leanstral 1.5 от Mistral, поведение открытых моделей вроде DeepSeek) обычно оцениваются по отдельности — эта карта впервые даёт общую систему координат для всей экосистемы сразу: не «чья модель лучше», а «какого компонента стека объективно не хватает». Для тех, кто выбирает, куда вложить время или ресурсы в открытый ИИ, это более полезный ориентир, чем разрозненные релиз-ноуты.</span>
+      <span data-lang="en">Recent digest items about open weights (Mistral's Leanstral 1.5, DeepSeek's open releases) get judged one at a time — this map instead gives the whole ecosystem a shared coordinate system: not "whose model is better" but "which stack layer is objectively under-built." For anyone deciding where to put time or resources into open-source AI, that's a more useful signal than scattered release notes.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

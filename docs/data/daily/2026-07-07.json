@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T05:14:58Z",
+  "news": [
+    {
+      "id": "2026-07-07-openai-gpt-5-6-sol-ultra-teaser",
+      "cluster_id": "openai-gpt-5-6",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI тизерит GPT-5.6 Sol Ultra для Codex — режим с кооперирующимися субагентами",
+        "en": "OpenAI teases GPT-5.6 Sol Ultra for Codex — a cooperating-subagents mode"
+      },
+      "summary": {
+        "ru": "Руководитель инженерии Codex в OpenAI Тибо Соттьо публично подтвердил, что готовится top-tier вариант GPT-5.6 — Sol Ultra, который появится в Codex в дополнение к уже анонсированным Sol, Terra и Luna. По неподтверждённым данным, в отличие от независимых параллельных агентов режима Pro, Ultra использует кооперирующихся субагентов, обменивающихся информацией в процессе выполнения задачи. Дата релиза, цена и официальная методология тестов пока не раскрыты.",
+        "en": "OpenAI Codex engineering lead Thibault Sottiaux publicly confirmed a top-tier GPT-5.6 variant — Sol Ultra — is coming to Codex alongside the already-announced Sol, Terra and Luna. Unlike Pro mode's independent parallel agents, Ultra reportedly runs cooperating subagents that exchange information mid-task. Release date, pricing and an official test methodology have not been disclosed."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Пока это тизер сотрудника, а не официальный релиз: подход с кооперирующимися субагентами внутри одной задачи потенциально меняет паттерн агентного выполнения, но заявленный бенчмарк (Terminal-Bench 2.1, 91.9%) не опубликован и не подтверждён OpenAI официально.",
+        "en": "Still an employee teaser, not an official release: cooperating subagents within a single task could shift the agentic-execution pattern, but the claimed benchmark (Terminal-Bench 2.1, 91.9%) is unpublished and unconfirmed by OpenAI."
+      },
+      "source_url": "https://news.ycombinator.com/item?id=48799614",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "По содержанию комментариев в треде: заявленный режим Ultra похож на приём из Claude Code с флагом максимального эффорта — по сути алиас на настройку max effort в Codex плюс одна строка в промпте, предписывающая проактивно использовать субагентов, а не принципиально новый backend-механизм.",
+            "en": "Per the thread's comments: the claimed Ultra mode resembles Claude Code's max-effort trick — essentially an alias for Codex's max-effort setting plus a one-line prompt addition to proactively use subagents, not a fundamentally new backend mechanism."
+          },
+          "url": "https://news.ycombinator.com/item?id=48799614"
+        }
+      ],
+      "use_cases": []
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-07-willison-open-source-ai-gap-map",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Карта пробелов открытого ИИ: где стеку не хватает открытых компонентов",
+        "en": "Open Source AI Gap Map: where the open-source AI stack is thin"
+      },
+      "url": "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/",
+      "summary": {
+        "ru": "Некоммерческая Current AI выпустила Gap Map v0.1: обследовала 24 626 проектов и детально каталогизировала 421 (модели, датасеты, инструменты, hardware) от 228 организаций, оценив каждый по осям Openness/Adoption/Capability — общая система координат для всей экосистемы открытого ИИ, а не разрозненные релиз-ноуты.",
+        "en": "Non-profit Current AI released Gap Map v0.1: it surveyed 24,626 projects and catalogued 421 in depth (models, datasets, tools, hardware) from 228 organizations, scoring each on Openness/Adoption/Capability — a shared coordinate system for the whole open-source AI ecosystem instead of scattered release notes."
+      },
+      "note_page": "notes/articles/open-source-ai-gap-map.html"
+    }
+  ]
+}
