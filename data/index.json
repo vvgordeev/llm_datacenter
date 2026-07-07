@@ -2,11 +2,11 @@
   "days": [
     {
       "date": "2026-07-07",
-      "news_count": 1,
-      "expert_count": 1,
+      "news_count": 4,
+      "expert_count": 4,
       "top_title": {
-        "ru": "OpenAI тизерит GPT-5.6 Sol Ultra для Codex — режим с кооперирующимися субагентами",
-        "en": "OpenAI teases GPT-5.6 Sol Ultra for Codex — a cooperating-subagents mode"
+        "ru": "Tencent открывает Hy3: агентная MoE 295B (21B активных) под Apache 2.0",
+        "en": "Tencent open-sources Hy3: a 295B MoE (21B active) agent model under Apache 2.0"
       }
     },
     {

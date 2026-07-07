@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: Как заставить Opus думать как Fable — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk | AI Automation · 2026-07-07 · 10 мин</span>
+      <span data-lang="en">Video digest · Nate Herk | AI Automation · 2026-07-07 · 10 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как заставить Opus думать как Fable (5 простых шагов)</span>
+      <span data-lang="en">How I Make Opus Think Like Fable (5 easy steps)</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по субтитрам; кадры извлечены по таймкодам, отобранным вручную из транскрипта.</span>
+      <span data-lang="en">Digest built from subtitles; frames extracted at timestamps hand-picked from the transcript.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
+    <ol class="theses">
+      <li>
+        <span data-lang="ru"><b>«Модель — не ров».</b> Эксперт со слабой моделью обыграет новичка с сильной: решают инструкции, системы и петли вокруг модели, а не сырой интеллект. В тестах автора динамический workflow «Fable-оркестратор + Sonnet-воркеры» давал результат уровня «всё на Fable» — значительно дешевле.</span>
+        <span data-lang="en"><b>"The model isn't the moat."</b> An expert with a weaker model beats a beginner with a stronger one: instructions, systems and loops around the model decide, not raw intelligence. In the author's tests, a "Fable orchestrator + Sonnet workers" dynamic workflow matched all-Fable results — much cheaper.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Извлеки метод в скилл.</b> Попроси Fable упаковать собственную дисциплину в устанавливаемый скилл («fable mode») из пяти гейтов: Scope → Evidence → Attack → Verify → Report. Такой скилл «поднимает» Opus 4.8, GPT-5.5 и даже открытые модели.</span>
+        <span data-lang="en"><b>Extract the method into a skill.</b> Ask Fable to package its own discipline as an installable skill ("fable mode") of five gates: Scope → Evidence → Attack → Verify → Report. The skill "elevates" Opus 4.8, GPT-5.5 and even open models.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Роутинг моделей — ключевой навык ближайших лет:</b> таблица моделей по цене/интеллекту/вкусу, и оркестратор сам выбирает исполнителя под задачу. Тест: Opus-оркестратор с Haiku-скаутами — та же точность, втрое дешевле ($1.47 → $0.56).</span>
+        <span data-lang="en"><b>Model routing is the key skill of the coming years:</b> a cost/intelligence/taste table of models, with the orchestrator picking the executor per task. Test: an Opus orchestrator with Haiku scouts — same accuracy, 3x cheaper ($1.47 → $0.56).</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Уровень усилий важен не меньше выбора модели:</b> Fable 5 на low ≈ Opus 4.8 на high; а max-режимы порой «перезадумываются» и выдают результат хуже, дольше и дороже.</span>
+        <span data-lang="en"><b>Effort level matters as much as model choice:</b> Fable 5 on low ≈ Opus 4.8 on high; max modes sometimes overthink and produce worse, slower, pricier results.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Фон — уход Fable из подписок:</b> «мы не владеем моделями; владеем процессами, системами и методологиями» — и, при желании, локальными моделями и железом.</span>
+        <span data-lang="en"><b>The backdrop — Fable leaving subscriptions:</b> "we don't own the models; we own our processes, systems and methodologies" — plus, optionally, local models and hardware.</span>
+      </li>
+    </ol>
+
+    <h2><span data-lang="ru">Таймкоды</span><span data-lang="en">Timestamps</span></h2>
+    <table class="timestamps">
+      <tbody>
+        <tr><td><a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk&t=0" target="_blank" rel="noopener">00:00</a></td>
+          <td><span data-lang="ru">«Модель — не ров»: пример новичок-с-Fable против эксперта-с-Sonnet</span>
+              <span data-lang="en">"The model isn't the moat": beginner-with-Fable vs expert-with-Sonnet</span></td></tr>
+        <tr><td><a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk&t=146" target="_blank" rel="noopener">02:26</a></td>
+          <td><span data-lang="ru">Выводы из утёкшего системного промпта Fable 5 (верификация, эффорт)</span>
+              <span data-lang="en">Takeaways from the leaked Fable 5 system prompt (verification, effort)</span></td></tr>
+        <tr><td><a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk&t=197" target="_blank" rel="noopener">03:17</a></td>
+          <td><span data-lang="ru">Уровни усилий: график score/cost — Fable low ≈ Opus high</span>
+              <span data-lang="en">Effort levels: the score/cost chart — Fable low ≈ Opus high</span></td></tr>
+        <tr><td><a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk&t=297" target="_blank" rel="noopener">04:57</a></td>
+          <td><span data-lang="ru">Извлечение метода: анализ удачных сессий → скилл</span>
+              <span data-lang="en">Extracting the method: analyze great sessions → a skill</span></td></tr>
+        <tr><td><a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk&t=322" target="_blank" rel="noopener">05:22</a></td>
+          <td><span data-lang="ru">Скилл «fable mode»: пять гейтов на экране ★</span>
+              <span data-lang="en">The "fable mode" skill: five gates on screen ★</span></td></tr>
+        <tr><td><a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk&t=497" target="_blank" rel="noopener">08:17</a></td>
+          <td><span data-lang="ru">Таблица роутинга моделей: Cost / Intelligence / Taste ★</span>
+              <span data-lang="en">The model routing table: Cost / Intelligence / Taste ★</span></td></tr>
+        <tr><td><a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk&t=546" target="_blank" rel="noopener">09:06</a></td>
+          <td><span data-lang="ru">Тест оркестраторов: Haiku-скауты — та же точность, 62% дешевле ★</span>
+              <span data-lang="en">Orchestrator test: Haiku scouts — same accuracy, 62% cheaper ★</span></td></tr>
+        <tr><td><a href="https://www.youtube.com/watch?v=XTBWVVcF3Pk&t=568" target="_blank" rel="noopener">09:28</a></td>
+          <td><span data-lang="ru">Вывод: владеем процессами, а не моделями</span>
+              <span data-lang="en">Conclusion: we own processes, not models</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note-hint">
+      <span data-lang="ru">★ — моменты с демонстрациями; кадры ниже.</span>
+      <span data-lang="en">★ — demonstration moments; frames below.</span>
+    </p>
+
+    <h2><span data-lang="ru">Кадры демонстраций</span><span data-lang="en">Demo frames</span></h2>
+    <div class="frames">
+      <figure>
+        <img src="../../media/frames/make-opus-think-like-fable/000322.jpg" alt="Five gates scheme: Scope, Evidence, Attack, Verify, Report">
+        <figcaption>
+          <span data-lang="ru">05:22 — схема пяти гейтов «fable mode» и промпт для генерации скилла.</span>
+          <span data-lang="en">05:22 — the five-gate "fable mode" scheme and the skill-generation prompt.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="../../media/frames/make-opus-think-like-fable/000497.jpg" alt="Model routing table: cost, intelligence, taste">
+        <figcaption>
+          <span data-lang="ru">08:17 — таблица роутинга: Fable/Opus/Sonnet/Haiku по цене, интеллекту и «вкусу» + чеклист-тест делегирования.</span>
+          <span data-lang="en">08:17 — the routing table: Fable/Opus/Sonnet/Haiku by cost, intelligence and taste + the delegation checklist test.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="../../media/frames/make-opus-think-like-fable/000546.jpg" alt="Cost receipts: $1.47 to $0.56 with Haiku scouts">
+        <figcaption>
+          <span data-lang="ru">09:06 — «чеки» теста: $1.47 → $0.56 при делегировании Haiku-скаутам, точность та же.</span>
+          <span data-lang="en">09:06 — the test "receipts": $1.47 → $0.56 when delegating to Haiku scouts, same accuracy.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

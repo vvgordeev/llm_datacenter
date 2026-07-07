@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: sqlite-utils 4.0, написанный в основном Claude Fable — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-05</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-05</span>
+    </p>
+    <h1>
+      <span data-lang="ru">sqlite-utils 4.0, написанный в основном Claude Fable: опыт agentic-инженерии</span>
+      <span data-lang="en">sqlite-utils 4.0, mostly written by Claude Fable: an agentic engineering write-up</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
+    <ol class="theses">
+      <li>
+        <span data-lang="ru"><b>Один промпт запустил релиз.</b> Работа началась с «Final review before shipping a stable 4.0 release», отправленного через Claude Code с телефона. Fable нашла 5 критических проблем, включая баг с потерей данных в <code>delete_where()</code>.</span>
+        <span data-lang="en"><b>One prompt kicked off the release.</b> Work started with "Final review before shipping a stable 4.0 release" sent from a phone via Claude Code. Fable found 5 critical issues, including a data-loss bug in <code>delete_where()</code>.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Масштаб и цена:</b> 37 промптов, 34 коммита, +1321/−190 строк в 30 файлах; итоговый бюджет $149.25 (основная сессия $141.02, остальное — дешёвые специализированные агенты).</span>
+        <span data-lang="en"><b>Scale and cost:</b> 37 prompts, 34 commits, +1321/−190 lines across 30 files; total budget $149.25 ($141.02 for the main session, the rest on cheaper specialized agents).</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Человек — в центре, но не за клавиатурой:</b> направление задаётся промптами, финальное ревью — в GitHub; автор был на параде 4 июля, «изредка подкидывая Fable следующий шаг с телефона».</span>
+        <span data-lang="en"><b>The human stays central, but not at the keyboard:</b> direction via prompts, final review in GitHub; the author attended a July 4th parade, "occasionally prompting Fable's next step from my phone."</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Кросс-модельное ревью работает:</b> GPT-5.5 нашла 2 критические проблемы, которые пропустила Fable. Разные модели — разные слепые зоны.</span>
+        <span data-lang="en"><b>Cross-model review works:</b> GPT-5.5 caught 2 critical issues Fable had missed. Different models have different blind spots.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Практические выводы:</b> начинать ревью с правок документации — быстрейший способ понять суть изменений; и «стоило последовать собственному совету и активнее делегировать субагентам на дешёвых моделях».</span>
+        <span data-lang="en"><b>Practical takeaways:</b> review documentation edits first — the fastest way to grasp a change; and "I really should have followed my own advice and leaned more heavily into subagents with cheaper models."</span>
+      </li>
+    </ol>
+
+    <h2><span data-lang="ru">Схема процесса</span><span data-lang="en">Process diagram</span></h2>
+    <figure class="scheme">
+      <svg viewBox="0 0 660 150" role="img" aria-label="agentic release process">
+        <style>
+          .box { fill: none; stroke: currentColor; stroke-width: 1.5; }
+          .lbl { font: 12.5px system-ui, sans-serif; fill: currentColor; }
+          .sub { font: 10.5px system-ui, sans-serif; fill: currentColor; opacity: .6; }
+          .arr { stroke: currentColor; stroke-width: 1.5; marker-end: url(#ah2); }
+        </style>
+        <defs>
+          <marker id="ah2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor"/>
+          </marker>
+        </defs>
+        <rect class="box" x="8" y="45" width="118" height="56" rx="8"/>
+        <text class="lbl" x="67" y="68" text-anchor="middle">Промпт</text>
+        <text class="sub" x="67" y="86" text-anchor="middle">с телефона, 37 шт.</text>
+        <line class="arr" x1="126" y1="73" x2="166" y2="73"/>
+        <rect class="box" x="166" y="45" width="130" height="56" rx="8"/>
+        <text class="lbl" x="231" y="68" text-anchor="middle">Fable · Claude Code</text>
+        <text class="sub" x="231" y="86" text-anchor="middle">34 коммита, 30 файлов</text>
+        <line class="arr" x1="296" y1="73" x2="336" y2="73"/>
+        <rect class="box" x="336" y="45" width="120" height="56" rx="8"/>
+        <text class="lbl" x="396" y="68" text-anchor="middle">Ревью GPT-5.5</text>
+        <text class="sub" x="396" y="86" text-anchor="middle">+2 критических бага</text>
+        <line class="arr" x1="456" y1="73" x2="496" y2="73"/>
+        <rect class="box" x="496" y="45" width="156" height="56" rx="8"/>
+        <text class="lbl" x="574" y="68" text-anchor="middle">Человек: GitHub-ревью</text>
+        <text class="sub" x="574" y="86" text-anchor="middle">→ релиз 4.0 · $149.25</text>
+      </svg>
+      <figcaption>
+        <span data-lang="ru">Конвейер релиза: человек задаёт направление и принимает результат, модели пишут код и ревьюят друг друга.</span>
+        <span data-lang="en">The release pipeline: the human sets direction and accepts the result; models write code and review each other.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Это один из самых детальных публичных отчётов о полноценном релизе зрелой open-source библиотеки, выполненном агентом: с бюджетом, статистикой коммитов и честными выводами. Паттерны — кросс-модельное ревью, «документация сначала», делегирование дешёвым субагентам — переносимы на любой агентный стек.</span>
+      <span data-lang="en">One of the most detailed public write-ups of a mature open-source library release performed by an agent: with budget, commit stats and honest takeaways. The patterns — cross-model review, docs-first review, delegating to cheaper subagents — transfer to any agentic stack.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

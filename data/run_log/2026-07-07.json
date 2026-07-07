@@ -1,0 +1,94 @@
+{
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T10:45:00Z",
+  "note": "Пересбор выполнен локально (Claude Code на машине пользователя), не облачной routine: облачная сессия дважды завершилась без результата — причина выясняется.",
+  "sources": [
+    {
+      "source": "anthropic blog",
+      "status": "ok",
+      "candidates": 1,
+      "note": "кейс Alberta — отклонён (мало продуктового содержания)"
+    },
+    {
+      "source": "openai blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "HTTP 403 на WebFetch; компенсировано WebSearch (найдены realtime-2.1)"
+    },
+    {
+      "source": "google deepmind blog",
+      "status": "ok",
+      "candidates": 0,
+      "note": "нет анонсов в окне"
+    },
+    {
+      "source": "meta blog",
+      "status": "empty",
+      "candidates": 0,
+      "note": "проверено через WebSearch, прямой fetch не выполнялся"
+    },
+    {
+      "source": "xai blog",
+      "status": "empty",
+      "candidates": 0,
+      "note": "через WebSearch; Grok 4.5 в private beta — слух, не включён"
+    },
+    {
+      "source": "mistral blog",
+      "status": "ok",
+      "candidates": 0,
+      "note": "последний анонс Leanstral 1.5 от 2 июля (уже опубликован)"
+    },
+    {
+      "source": "deepseek",
+      "status": "empty",
+      "candidates": 0,
+      "note": "V4 ожидается в середине июля — без новых фактов"
+    },
+    {
+      "source": "aggregator: smol.ai",
+      "status": "ok",
+      "candidates": 3,
+      "note": "Hy3, AutomationBench-AA, память агентов"
+    },
+    {
+      "source": "aggregator: tldr.tech/ai",
+      "status": "empty",
+      "candidates": 0,
+      "note": "главная без архива выпуска"
+    },
+    {
+      "source": "aggregator: simonwillison.net",
+      "status": "ok",
+      "candidates": 3,
+      "note": "Hy3, sqlite-utils, Better Models Worse Tools"
+    },
+    {
+      "source": "hacker news api",
+      "status": "ok",
+      "candidates": 4,
+      "note": "GLM margin collapse (426), OfficeCLI (183) и др."
+    },
+    {
+      "source": "youtube (эксперты)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "локально через yt-dlp; в облаке домен блокирован"
+    }
+  ],
+  "totals": {
+    "candidates": 13,
+    "published_news": 3,
+    "published_expert": 3,
+    "rejected": {
+      "alberta case study": "мало продуктового содержания",
+      "AutomationBench-AA": "не удалось подтвердить первоисточник и цифры (расходятся у smol.ai и zapier)",
+      "OfficeCLI": "инструмент заметный, но за рамками фокуса дня; кандидат на завтра",
+      "Grok 4.5 private beta": "слух без первоисточника"
+    }
+  },
+  "video_pipeline": {
+    "gemini": "skipped: нет GEMINI_API_KEY локально — конспекты по субтитрам (yt-dlp)",
+    "frames": "ok: yt-dlp + imageio-ffmpeg (pip), таймкоды отобраны вручную по транскрипту"
+  }
+}

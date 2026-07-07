@@ -1,11 +1,152 @@
 {
   "date": "2026-07-07",
-  "generated_at": "2026-07-07T05:14:58Z",
+  "generated_at": "2026-07-07T10:45:00Z",
   "news": [
+    {
+      "id": "2026-07-07-tencent-hy3-open-weights",
+      "cluster_id": "tencent-hy3",
+      "models": [
+        "tencent"
+      ],
+      "title": {
+        "ru": "Tencent открывает Hy3: агентная MoE 295B (21B активных) под Apache 2.0",
+        "en": "Tencent open-sources Hy3: a 295B MoE (21B active) agent model under Apache 2.0"
+      },
+      "summary": {
+        "ru": "6 июля Tencent Hunyuan выложила открытые веса Hy3 — sparse-MoE на 295B параметров с 21B активных, контекстом 256K и упором на стабильность tool-calling и форматирования вывода для агентов. Лицензия Apache 2.0, две недели бесплатного API на OpenRouter; Nous Research и Kilo Code подключили модель в первые часы.",
+        "en": "On July 6 Tencent Hunyuan released open weights for Hy3 — a 295B sparse MoE with 21B active parameters, 256K context, and a focus on tool-calling and output-formatting stability for agents. Apache 2.0 license, a two-week free API window on OpenRouter; Nous Research and Kilo Code onboarded it within hours."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открытая модель агентного класса под пермиссивной лицензией давит на цены и меняет выбор self-hosted стека, но сам подход «открытые догоняют» уже устоялся.",
+        "en": "A permissively-licensed agent-grade open model pressures pricing and shifts self-hosted stack choices, though the \"open models catch up\" pattern itself is established."
+      },
+      "source_url": "https://www.tencent.com/en-us/articles/2202386.html",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "positive",
+          "quote": {
+            "ru": "Отметил релиз в линкблоге: модель бесплатна на OpenRouter до 21 июля — порог входа для экспериментов нулевой.",
+            "en": "Flagged the release on his linkblog: free on OpenRouter until July 21 — zero barrier to experimentation."
+          },
+          "url": "https://simonwillison.net/"
+        },
+        {
+          "author": "VentureBeat",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Apache-лицензированная Hy3 бросает вызов GLM-5.2 при вдвое меньшем размере — и выигрывает везде, кроме кодинга».",
+            "en": "\"Tencent's Apache-licensed Hy3 takes on GLM-5.2 at half the size — and wins everywhere except coding.\""
+          },
+          "url": "https://venturebeat.com/technology/tencents-apache-licensed-hy3-takes-on-glm-5-2-at-half-the-size-and-wins-everywhere-except-coding"
+        },
+        {
+          "author": "Tech Jacks Solutions",
+          "stance": "neutral",
+          "quote": {
+            "ru": "295B — маркетинговый заголовок: латентность и цену за токен определяют 21B активных параметров; free-API-окно — классический приём приучения разработчиков к нулевой цене.",
+            "en": "295B is a marketing headline: 21B active parameters shape latency and per-token cost; the free-API window is the classic zero-marginal-cost habituation play."
+          },
+          "url": "https://techjacksolutions.com/ai-brief/hy3-preview-open-source-moe-2026-landscape/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Кодинг-агенты в компаниях, которым недоступны экспортно-контролируемые API из США: пермиссивная лицензия вместо серой зоны.",
+            "en": "Coding agents at companies that cannot touch US export-controlled APIs: a permissive license instead of a grey zone."
+          },
+          "url": "https://techjacksolutions.com/ai-brief/tencent-open-sources-hy3-preview-295b-moe-model-with-21b-act/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-07-openai-gpt-realtime-2-1",
+      "cluster_id": "openai-realtime-2-1",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "OpenAI выпускает gpt-realtime-2.1 и -mini: голосовые агенты быстрее минимум на 25%",
+        "en": "OpenAI ships gpt-realtime-2.1 and -mini: voice agents get at least 25% faster"
+      },
+      "summary": {
+        "ru": "6 июля OpenAI выкатила две realtime-модели для голосовых и мультимодальных агентов: gpt-realtime-2.1 (лучшее realtime-рассуждение и tool-use) и дистиллированную -mini ($20 против $64 за 1M аудио-токенов вывода). Улучшены распознавание буквенно-цифровых последовательностей, обработка пауз, шума и перебиваний; p95-латентность снижена минимум на 25%.",
+        "en": "On July 6 OpenAI shipped two Realtime models for voice and multimodal agents: gpt-realtime-2.1 (strongest realtime reasoning and tool use) and a distilled -mini ($20 vs $64 per 1M audio output tokens). Better alphanumeric recognition, silence/noise and interruption handling; p95 latency down at least 25%."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметное удешевление и ускорение продакшн-голосовых агентов; подходов не меняет, но снижает порог для голосовых сценариев в проде.",
+        "en": "A real cost and latency win for production voice agents; changes no paradigms but lowers the bar for shipping voice scenarios."
+      },
+      "source_url": "https://community.openai.com/t/new-realtime-models-on-the-api-gpt-realtime-2-1-and-gpt-realtime-2-1-mini/1385896",
+      "opinions": [
+        {
+          "author": "MarkTechPost",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Обзор фокусируется на -mini: дистиллированное realtime-рассуждение за треть цены — главная новость для тех, кто считает юнит-экономику голосовых ботов.",
+            "en": "The review centers on -mini: distilled realtime reasoning at a third of the price is the headline for anyone doing voice-bot unit economics."
+          },
+          "url": "https://www.marktechpost.com/2026/07/06/openai-gpt-realtime-2-1-mini-reasoning-realtime-api/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Голосовые саппорт-агенты с живым перебиванием: сниженная латентность и устойчивость к шуму — прямое улучшение UX без переделки пайплайна.",
+            "en": "Voice support agents with live barge-in: lower latency and noise robustness improve UX with no pipeline rework."
+          },
+          "url": "https://www.heyloha.ai/en/blog/openai-gpt-realtime-2"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-07-glm-5-2-margin-collapse",
+      "cluster_id": "glm-5-2-economics",
+      "models": [],
+      "title": {
+        "ru": "«GLM 5.2 и грядущий коллапс маржи ИИ» — эссе о том, как открытые модели ломают экономику закрытых",
+        "en": "\"GLM 5.2 and the coming AI margin collapse\" — an essay on open models breaking closed-lab economics"
+      },
+      "summary": {
+        "ru": "Мартин Алдерсон называет GLM 5.2 первой открытой моделью — подлинным конкурентом Opus и GPT: в его использовании разница в качестве почти незаметна, при цене ~$4.40/MTok — меньше 20% цены Opus. Тезис: при ценах ~$25/MTok закрытые провайдеры держат ~90% валовой маржи на инференсе, а переключение между провайдерами — это смена URL и ключа. Один из самых обсуждаемых материалов суток на Hacker News (426 очков).",
+        "en": "Martin Alderson calls GLM 5.2 the first open-weight model that's a genuine Opus/GPT competitor: in his usage the quality gap is barely noticeable at ~$4.40/MTok — under 20% of Opus pricing. His thesis: at ~$25/MTok closed providers run ~90% gross margins on inference, while switching providers is a URL and API-key change. One of the day's most-discussed stories on Hacker News (426 points)."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Не функция, а экономика: если маржа на инференсе схлопнется, изменится то, какие агентные архитектуры и подписки жизнеспособны — сигнал силён (426 очков HN за сутки).",
+        "en": "Not a feature but economics: if inference margins collapse, which agent architectures and subscriptions are viable changes — and the signal is strong (426 HN points in a day)."
+      },
+      "source_url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
+      "opinions": [
+        {
+          "author": "Hacker News (тред)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "426 очков и активный спор в комментариях о том, честно ли сравнивать цену инференса без учёта затрат на обучение и данные.",
+            "en": "426 points and a lively comment fight over whether comparing inference pricing without training and data costs is fair."
+          },
+          "url": "https://news.ycombinator.com/item?id=48809877"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Практический вывод автора: совместимость API снижает стоимость переключения — маршрутизация массовых агентных нагрузок на дешёвые открытые модели с сохранением закрытых для сложных шагов.",
+            "en": "The author's practical takeaway: API compatibility makes switching cheap — route bulk agent workloads to cheap open models, keep closed ones for the hard steps."
+          },
+          "url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/"
+        }
+      ]
+    },
     {
       "id": "2026-07-07-openai-gpt-5-6-sol-ultra-teaser",
       "cluster_id": "openai-gpt-5-6",
-      "models": ["openai"],
+      "models": [
+        "openai"
+      ],
       "title": {
         "ru": "OpenAI тизерит GPT-5.6 Sol Ultra для Codex — режим с кооперирующимися субагентами",
         "en": "OpenAI teases GPT-5.6 Sol Ultra for Codex — a cooperating-subagents mode"
@@ -49,6 +190,51 @@
         "en": "Non-profit Current AI released Gap Map v0.1: it surveyed 24,626 projects and catalogued 421 in depth (models, datasets, tools, hardware) from 228 organizations, scoring each on Openness/Adoption/Capability — a shared coordinate system for the whole open-source AI ecosystem instead of scattered release notes."
       },
       "note_page": "notes/articles/open-source-ai-gap-map.html"
+    },
+    {
+      "id": "2026-07-07-willison-sqlite-utils-fable",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "sqlite-utils 4.0, написанный в основном Claude Fable: опыт agentic-инженерии",
+        "en": "sqlite-utils 4.0, mostly written by Claude Fable: an agentic engineering write-up"
+      },
+      "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/",
+      "summary": {
+        "ru": "Детальный отчёт о релизе зрелой open-source библиотеки силами агента: 37 промптов, 34 коммита, бюджет $149.25, кросс-ревью GPT-5.5 и честные выводы о том, где человек остаётся незаменим.",
+        "en": "A detailed write-up of a mature OSS library release done by an agent: 37 prompts, 34 commits, a $149.25 budget, GPT-5.5 cross-review, and honest takeaways on where the human stays essential."
+      },
+      "note_page": "notes/articles/sqlite-utils-4-mostly-written-by-claude-fable.html"
+    },
+    {
+      "id": "2026-07-07-aiexplained-fable-vs-sol",
+      "type": "video",
+      "author": "AI Explained",
+      "title": {
+        "ru": "Fable 5 против GPT-5.6 Sol: первые результаты",
+        "en": "Fable 5 vs GPT-5.6 Sol: The Early Results"
+      },
+      "url": "https://www.youtube.com/watch?v=y24lF1q4SFY",
+      "summary": {
+        "ru": "Разбор системных карт: прямых сравнений нет, но «обратное решение» через общие бенчмарки показывает — Sol чуть слабее Fable/Mythos, зато вдвое дешевле и экономнее по токенам.",
+        "en": "A system-card breakdown: no head-to-head numbers exist, but back-solving via shared benchmarks shows Sol slightly behind Fable/Mythos while half the price and far more token-frugal."
+      },
+      "note_page": "notes/videos/fable-5-vs-gpt-5-6-sol-early-results.html"
+    },
+    {
+      "id": "2026-07-07-nateherk-opus-like-fable",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Как заставить Opus думать как Fable (5 простых шагов)",
+        "en": "How I Make Opus Think Like Fable (5 easy steps)"
+      },
+      "url": "https://www.youtube.com/watch?v=XTBWVVcF3Pk",
+      "summary": {
+        "ru": "Практика «извлечения метода»: упаковать дисциплину дорогой модели в скилл из пяти гейтов и раздать её дешёвым моделям + таблица роутинга по цене/интеллекту/вкусу (тест: втрое дешевле без потери качества).",
+        "en": "\"Method extraction\" in practice: package an expensive model's discipline into a five-gate skill for cheaper models + a cost/intelligence/taste routing table (test: 3x cheaper, same quality)."
+      },
+      "note_page": "notes/videos/make-opus-think-like-fable.html"
     }
   ]
 }
