@@ -17,12 +17,19 @@
     "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/": "2026-07-07",
     "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/": "2026-07-07",
     "https://www.youtube.com/watch?v=y24lF1q4SFY": "2026-07-07",
-    "https://www.youtube.com/watch?v=XTBWVVcF3Pk": "2026-07-07"
+    "https://www.youtube.com/watch?v=XTBWVVcF3Pk": "2026-07-07",
+    "https://claude.com/blog/cowork-web-mobile": "2026-07-08",
+    "https://www.axios.com/2026/07/08/openai-gpt-trump-ban-lifted": "2026-07-08",
+    "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/": "2026-07-08"
   },
   "clusters": {
     "openai-gpt-5-6": {
-      "last_date": "2026-07-07",
-      "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna), brings Sol to Cerebras, then teases a cooperating-subagents Sol Ultra tier for Codex"
+      "last_date": "2026-07-08",
+      "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna), brings Sol to Cerebras, teases Sol Ultra for Codex, then gets US Commerce Dept approval to lift access restrictions and go wide"
+    },
+    "anthropic-cowork-mobile": {
+      "last_date": "2026-07-08",
+      "summary": "Claude Cowork expands from desktop to web and mobile with cloud-first sessions; usage data shows most sessions aren't software development"
     },
     "google-gemini-omni-flash": {
       "last_date": "2026-07-05",

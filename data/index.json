@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-08",
+      "news_count": 2,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "Claude Cowork выходит в веб и на мобильные устройства — задачи продолжаются с закрытым ноутбуком",
+        "en": "Claude Cowork expands to web and mobile — tasks keep running with your laptop closed"
+      }
+    },
+    {
       "date": "2026-07-07",
       "news_count": 4,
       "expert_count": 4,

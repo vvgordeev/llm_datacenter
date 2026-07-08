@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T05:13:32Z",
+  "note": "Облачная routine. Критическая деградация окружения: WebFetch (прокси) вернул 403 Forbidden на ВСЕ внешние хосты без исключений (anthropic.com, openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, news.smol.ai, tldr.tech, simonwillison.net, hn.algolia.com — включая прямой curl через $HTTPS_PROXY). Проверка /__agentproxy/status подтвердила: gateway отвечает 403 на CONNECT — организационная политика egress, не транзиентный сбой. Весь сбор новостей и обогащение выполнены через WebSearch (fallback, предусмотренный SKILL.md для блокировки YouTube/сети) без единого прямого WebFetch за весь прогон.",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 1, "note": "WebFetch 403; компенсировано WebSearch — найден Claude Cowork web/mobile (07-07, включён)"},
+    {"source": "openai blog", "status": "blocked", "candidates": 1, "note": "WebFetch 403; компенсировано WebSearch — найдено снятие ограничений на GPT-5.6 (Axios, 07-08, включено)"},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch нашёл только слух о задержке Gemini 3.5 Pro без официального заявления Google (спикер отказался комментировать) — отклонено как неподтверждённое"},
+    {"source": "meta blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не нашёл анонсов в окне — Llama сменена на закрытый Muse Spark ещё в апреле"},
+    {"source": "xai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch нашёл только некофирмированные слухи о скором релизе Grok 4.5 (приватная бета) — отклонено"},
+    {"source": "mistral blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — Leanstral 1.5 уже опубликован ранее, новая open-weight модель анонсирована без даты/URL — отклонено как преждевременное"},
+    {"source": "deepseek blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; официальный релиз V4 запланирован на середину июля, ещё не наступил — отклонено как будущее событие"},
+    {"source": "qwen blog", "status": "skipped", "candidates": 0, "note": "enabled: false в sources.yaml"},
+    {"source": "aggregator: smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не нашёл выпуска за 07-07/07-08"},
+    {"source": "aggregator: tldr.tech/ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch дал только фрагменты без прямых ссылок на первоисточники"},
+    {"source": "aggregator: simonwillison.net linkblog", "status": "blocked", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл статью 'Better Models: Worse Tools' (07-04, включена в экспертный контент)"},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "прокси вернул 403 на CONNECT к hn.algolia.com напрямую (не только WebFetch) — API недоступен в этом прогоне; частично компенсировано WebSearch по HN"},
+    {"source": "community: Reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch не дал специфичных тредов по свежим новостям дня"},
+    {"source": "community: X", "status": "ok", "candidates": 2, "note": "через WebSearch — использованы как источники мнений (MacRumors форум, TechCrunch)"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "Better Models: Worse Tools — включена"},
+    {"source": "experts: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "найденное свежее видео о его workflow не подтверждено как публикация с его собственного канала (стиль заголовка нехарактерен) — отклонено, не выдумывать источник"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл конкретного поста за окно"},
+    {"source": "experts: AI Explained", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл конкретного нового видео за окно"},
+    {"source": "experts: Matt Wolfe", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл конкретного нового видео за окно"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний найденный пост ('The twilight of the chatbots') уже опубликован в сводке за 07-06"},
+    {"source": "experts: Nate Herk", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл конкретного нового видео за окно"},
+    {"source": "experts: Matt Pocock", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл конкретного нового видео за окно"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 3,
+    "rejected": {
+      "неподтверждённый слух (нет официального источника)": 1,
+      "будущее событие, ещё не наступило": 2,
+      "уже опубликовано ранее": 2,
+      "не удалось верифицировать авторство контента": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not_run: не найдено ни одного видео-кандидата от отслеживаемых экспертов, verified как их собственная публикация за окно сбора",
+    "frames": "skipped: видео не выбрано"
+  }
+}

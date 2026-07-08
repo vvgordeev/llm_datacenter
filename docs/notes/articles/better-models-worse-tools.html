@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Модели лучше, инструменты хуже — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-04</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-04</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Модели лучше, инструменты хуже: почему новые Claude всё чаще ломают схему tool-вызова</span>
+      <span data-lang="en">Better Models, Worse Tools: why newer Claudes increasingly break the tool-call schema</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/4/better-models-worse-tools/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
+    <ol class="theses">
+      <li>
+        <span data-lang="ru"><b>Наблюдение Армина Ронахера:</b> в стороннем харнессе Pi новые модели Claude (Opus 4.8, Sonnet 5) чаще вызывают edit-инструмент с лишними, выдуманными полями в массиве <code>edits[]</code> — сам edit обычно верный, но аргументы не совпадают со схемой.</span>
+        <span data-lang="en"><b>Armin Ronacher's observation:</b> in the third-party Pi harness, newer Claude models (Opus 4.8, Sonnet 5) more often call the edit tool with extra, invented fields in the <code>edits[]</code> array — the edit itself is usually correct, but the arguments don't match the schema.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Инструмент отклоняет вызов и просит повторить.</b> Модель тратит ход на то, чтобы понять, что её вызов не принят, и переформулировать его в правильном формате.</span>
+        <span data-lang="en"><b>The tool rejects the call and asks to retry.</b> The model burns a turn figuring out its call was rejected and reformatting it correctly.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Парадокс: хуже именно у новых моделей.</b> Ни одна из старых моделей семейства так не делает — регрессия появляется вместе с ростом качества модели, а не вопреки ему.</span>
+        <span data-lang="en"><b>Paradox: it's worse in the newer models specifically.</b> None of the older models in the family show this — the regression arrives alongside the quality improvement, not despite it.</span>
+      </li>
+      <li>
+        <span data-lang="ru"><b>Гипотеза Ронахера:</b> новые модели сильнее дообучены (вероятно, через RL) под канонический edit-инструмент, встроенный в Claude Code. Когда сторонний харнесс предлагает инструмент с тем же смыслом, но другой схемой, более «уверенная» модель сопротивляется сильнее, а не подстраивается легче.</span>
+        <span data-lang="en"><b>Ronacher's hypothesis:</b> newer models are more heavily trained (likely via RL) toward Claude Code's canonical edit tool. When a different harness offers a tool with the same intent but a different schema, the more confident model fights it harder instead of adapting more easily.</span>
+      </li>
+    </ol>
+
+    <h2><span data-lang="ru">Схема</span><span data-lang="en">Diagram</span></h2>
+    <figure class="scheme">
+      <svg viewBox="0 0 640 220" role="img" aria-label="model confidence vs tool schema drift">
+        <style>
+          .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 8; }
+          .lbl { font: 13px system-ui, sans-serif; fill: currentColor; }
+          .sub { font: 11px system-ui, sans-serif; fill: currentColor; opacity: .6; }
+          .arr { stroke: currentColor; stroke-width: 1.5; marker-end: url(#ah2); }
+        </style>
+        <defs>
+          <marker id="ah2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor"/>
+          </marker>
+        </defs>
+        <rect class="box" x="16" y="24" width="280" height="60" rx="8"/>
+        <text class="lbl" x="156" y="49" text-anchor="middle">Claude Code: edit-инструмент</text>
+        <text class="sub" x="156" y="69" text-anchor="middle">канонический формат, на нём модель RL-обучена</text>
+        <line class="arr" x1="156" y1="84" x2="156" y2="120"/>
+        <rect class="box" x="16" y="124" width="280" height="60" rx="8"/>
+        <text class="lbl" x="156" y="149" text-anchor="middle">Модель усваивает "сильный prior"</text>
+        <text class="sub" x="156" y="169" text-anchor="middle">чем новее модель — тем сильнее prior</text>
+        <line class="arr" x1="296" y1="154" x2="360" y2="154"/>
+        <rect class="box" x="360" y="94" width="264" height="60" rx="8"/>
+        <text class="lbl" x="492" y="119" text-anchor="middle">Другой харнесс (Pi), другая схема</text>
+        <text class="sub" x="492" y="139" text-anchor="middle">тот же смысл, другие поля edits[]</text>
+        <line class="arr" x1="492" y1="154" x2="492" y2="184"/>
+        <rect class="box" x="360" y="188" width="264" height="28" rx="8"/>
+        <text class="lbl" x="492" y="207" text-anchor="middle">Модель "сопротивляется" сильнее → reject</text>
+      </svg>
+      <figcaption>
+        <span data-lang="ru">Чем сильнее модель приучена к одной канонической форме инструмента, тем труднее ей подстроиться под другую схему с тем же смыслом.</span>
+        <span data-lang="en">The more strongly a model is trained onto one canonical tool shape, the harder it fights adapting to a different schema with the same intent.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Для разработчиков агентных харнессов вне Claude Code (включая кастомные обвязки над Anthropic API) это предупреждение: рост качества модели по общим бенчмаркам не гарантирует, что она станет удобнее работать с вашей схемой инструментов — может быть наоборот. Это прямое следствие того, как модели вроде Claude Opus 4.8 и Sonnet 5 обучают через RL на конкретных агентных задачах (см. также обновления Claude Developer Platform и рост тарифов на агентную работу в сводках этой недели): оптимизация под один харнесс создаёт скрытую стоимость переноса на другой.</span>
+      <span data-lang="en">For developers building agent harnesses outside Claude Code (including custom wrappers over the Anthropic API), this is a warning: better scores on general benchmarks don't guarantee a model becomes easier to use with your own tool schema — it can go the other way. It's a direct consequence of how models like Claude Opus 4.8 and Sonnet 5 get RL-trained on specific agentic tasks (see also this week's Claude Developer Platform and agentic-tooling updates in the digest): optimizing for one harness creates a hidden cost when porting to another.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

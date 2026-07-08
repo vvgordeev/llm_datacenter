@@ -1,0 +1,167 @@
+{
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T05:13:32Z",
+  "news": [
+    {
+      "id": "2026-07-08-anthropic-cowork-web-mobile",
+      "cluster_id": "anthropic-cowork-mobile",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Cowork выходит в веб и на мобильные устройства — задачи продолжаются с закрытым ноутбуком",
+        "en": "Claude Cowork expands to web and mobile — tasks keep running with your laptop closed"
+      },
+      "summary": {
+        "ru": "Anthropic расширила Cowork (агент для автономных многошаговых задач) с десктопа на веб и мобильные приложения: задачу можно поставить с компьютера, следить за статусом с телефона и забрать результат позже — сессии теперь по умолчанию выполняются в облаке и продолжаются даже при выключенных устройствах. Beta доступна подписчикам Max, тарифы шире — «в ближайшие недели». Anthropic также опубликовала данные использования: свыше 90% сессий Cowork не связаны с разработкой ПО — лидируют бизнес-процессы (33,4%) и создание контента (16,4%).",
+        "en": "Anthropic extended Cowork (its autonomous multi-step task agent) from desktop to web and mobile apps: start a task on a computer, check status from a phone, and pick up the result later — sessions now run in the cloud by default and continue even with every device off. Beta is live for Max subscribers, with wider plans coming \"in the following weeks.\" Anthropic also shared usage data: over 90% of Cowork sessions aren't software development — business-process work (33.4%) and content creation (16.4%) lead instead."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Меняет повседневный паттерн делегирования агенту (задача живёт независимо от устройства) и подтверждён данными, что аудитория Cowork в основном не разработчики — но это доступ/платформа, а не новая способность модели.",
+        "en": "Changes the everyday pattern of delegating to an agent (a task now outlives any single device) and is backed by data showing Cowork's audience is mostly non-developers — but it's an access/platform change, not a new model capability."
+      },
+      "source_url": "https://claude.com/blog/cowork-web-mobile",
+      "opinions": [
+        {
+          "author": "Android Authority",
+          "stance": "positive",
+          "quote": {
+            "ru": "Подача статьи: Cowork на вебе и мобильных — практичное расширение, которое делает агента удобным для тех, кто работает с разных устройств в течение дня, а не только тех, кто сидит за одним компьютером.",
+            "en": "The article frames the web/mobile expansion as a practical upgrade that makes the agent genuinely usable for people who work across multiple devices through the day, not just at one desk."
+          },
+          "url": "https://www.androidauthority.com/claude-cowork-mobile-and-web-rollout-3685016/"
+        },
+        {
+          "author": "TechCrunch",
+          "stance": "neutral",
+          "quote": {
+            "ru": "TechCrunch описывает шаг как часть «войны кодинг-агентов», перетекающей в остальной офис: и Anthropic (Cowork), и OpenAI (Codex) теперь борются за некодерскую рабочую нагрузку, а не только за разработчиков.",
+            "en": "TechCrunch frames the move as the \"coding agent wars\" spilling into the rest of the office: both Anthropic (Cowork) and OpenAI (Codex) are now competing for non-coding workloads, not just developers."
+          },
+          "url": "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/"
+        },
+        {
+          "author": "участники форума MacRumors",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "В обсуждении на форуме MacRumors звучат опасения о стоимости и привыкании: один из комментаторов сравнил потенциал ИИ-подписок стать «дорогой зависимостью, хуже азартных игр».",
+            "en": "Commenters on the MacRumors forum raised cost and dependency concerns, with one comparing the potential of AI subscriptions to become \"an expensive addiction, worse than gambling.\""
+          },
+          "url": "https://forums.macrumors.com/threads/claude-cowork-expands-to-iphone-and-the-web.2485082/"
+        },
+        {
+          "author": "SiliconANGLE (Duncan Riley)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Издание напоминает про исследование фирмы Armadin (март 2026): полноценный побег из песочницы Cowork на Windows через DLL-sideloading против claude.exe — Anthropic сочла риск неактуальным, так как эксплуатация требует выполнения кода на хосте. Расширение Cowork на новые платформы увеличивает поверхность атаки, где это остаётся релевантным.",
+            "en": "The outlet recalls Armadin's March 2026 research: a full sandbox escape in Cowork on Windows via DLL sideloading against claude.exe — Anthropic disputed the risk since exploitation requires host code execution. Expanding Cowork to more platforms widens the attack surface where that dispute still matters."
+          },
+          "url": "https://siliconangle.com/2026/07/01/armadin-details-full-sandbox-escape-claude-cowork-anthropic-disputes-risk/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Сверка расходов за квартал и подготовка служебной записки по отклонениям — Cowork собирает данные и пишет черновик.",
+            "en": "Reconciling the quarter's spend and drafting the variance memo — Cowork pulls the numbers and writes the draft."
+          },
+          "url": "https://claude.com/blog/cowork-web-mobile"
+        },
+        {
+          "text": {
+            "ru": "Запланированная задача «подготовка к встрече с клиентом в 6 утра в понедельник»: агент разбирает почту и записи встреч и оставляет черновик письма к утру.",
+            "en": "A scheduled \"Monday client-prep at 6am\" task: the agent works through email threads and call transcripts and leaves a follow-up email drafted by morning."
+          },
+          "url": "https://claude.com/blog/cowork-web-mobile"
+        },
+        {
+          "text": {
+            "ru": "91,3% сессий Cowork — не разработка ПО: наибольшие доли у бизнес-процессов (33,4%) и создания контента (16,4%), сама разработка — только 8,7%.",
+            "en": "91.3% of Cowork sessions aren't software development: the largest shares are business-process work (33.4%) and content creation (16.4%), with development itself at just 8.7%."
+          },
+          "url": "https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-08-openai-gpt-5-6-restrictions-lifted",
+      "cluster_id": "openai-gpt-5-6",
+      "models": ["openai"],
+      "title": {
+        "ru": "США сняли ограничения на GPT-5.6: OpenAI готовит широкий релиз Sol/Terra/Luna на этой неделе",
+        "en": "US lifts restrictions on GPT-5.6: OpenAI plans a broad Sol/Terra/Luna rollout this week"
+      },
+      "summary": {
+        "ru": "Минторг США одобрил широкий запуск GPT-5.6 после дополнительного тестирования в Center for AI Standards and Innovation — ранее администрация Трампа требовала поэтапного доступа только для утверждённых государством организаций из-за опасений по кибербезопасности флагманской модели Sol. OpenAI ожидает открыть Sol, Terra и Luna более широкой аудитории уже на этой неделе — это продолжение истории превью GPT-5.6, стартовавшего 26 июня.",
+        "en": "The US Commerce Department approved a broad launch of GPT-5.6 after additional testing by the Center for AI Standards and Innovation — the Trump administration had previously required a staggered rollout limited to government-approved entities over cybersecurity concerns about the flagship Sol model. OpenAI expects to open Sol, Terra and Luna to a wider audience this week, continuing the GPT-5.6 preview story that began June 26."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Определяет, дойдёт ли по-настоящему мощная модель (Sol) до широкой аудитории API/ChatGPT или останется ограничена узким кругом партнёров — важная веха релиза с прецедентом гос. контроля доступа к frontier-модели, но не новая способность модели самой по себе.",
+        "en": "Determines whether a genuinely powerful model (Sol) reaches the broad API/ChatGPT audience or stays limited to a narrow partner circle — a meaningful release milestone that sets a precedent for government-gated access to a frontier model, though not a new model capability by itself."
+      },
+      "source_url": "https://www.axios.com/2026/07/08/openai-gpt-trump-ban-lifted",
+      "opinions": [
+        {
+          "author": "Sam Altman (via TechCrunch)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "«Мы ясно дали понять правительству США, что это не наша предпочтительная долгосрочная модель, и будем работать с ним и с индустрией над более устойчивым подходом к будущим релизам».",
+            "en": "\"We've made clear to the U.S. government that this is not our preferred long term model, and will work with them and others in industry to achieve a more sustainable approach for future releases.\""
+          },
+          "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/"
+        },
+        {
+          "author": "AI Safety Newsletter (safe.ai)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Выпуск сравнивает снятие ограничений с GPT-5.6 и возврат Fable 5 на рынок в одном ключе — как сигнал, что политика гос. контроля доступа к мощным моделям смягчается быстрее, чем успевает сформироваться понимание рисков.",
+            "en": "The newsletter frames the GPT-5.6 unblock alongside Fable 5's return in the same light — a signal that government gating of powerful-model access is loosening faster than the risk picture is being worked out."
+          },
+          "url": "https://newsletter.safe.ai/p/aisn-76-fable-5-restrictions-lifted"
+        },
+        {
+          "author": "The Deep View",
+          "stance": "positive",
+          "quote": {
+            "ru": "Издание подаёт снятие ограничений как момент, когда GPT-5.6 «обгоняет» модели класса Mythos от Anthropic по агентным бенчмаркам — конкурентное преимущество, которое теперь можно донести до широкой аудитории.",
+            "en": "The outlet frames the unblock as the moment GPT-5.6 \"edges past\" Anthropic's Mythos-class models on agentic benchmarks — a competitive edge that can now reach a broad audience."
+          },
+          "url": "https://www.thedeepview.com/newsletter/how-openai-s-gpt-5-6-just-edged-past-mythos"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Поиск и исправление уязвимостей в коде: по словам OpenAI, Sol сильнее помогает защищаться (искать и чинить баги), чем проводить полноценные кибератаки.",
+            "en": "Finding and fixing code vulnerabilities: OpenAI says Sol is better at helping defenders find and fix bugs than at reliably carrying out full cyberattacks."
+          },
+          "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+        },
+        {
+          "text": {
+            "ru": "Инференс на чипах Cerebras: Sol запускается на Cerebras WSE-3 на скорости до 750 токенов/сек — на порядок быстрее типичных развёртываний на Nvidia H100, пока для ограниченного круга клиентов.",
+            "en": "Cerebras inference: Sol runs on Cerebras WSE-3 chips at up to 750 tokens/second — roughly an order of magnitude faster than typical Nvidia H100 deployments, initially for a limited set of customers."
+          },
+          "url": "https://valueaddvc.com/pulse/cerebras-openai-gpt-5-6-sol-750-tokens-2026"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-08-willison-better-models-worse-tools",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Модели лучше, инструменты хуже: почему новые Claude всё чаще ломают схему tool-вызова",
+        "en": "Better Models, Worse Tools: why newer Claudes increasingly break the tool-call schema"
+      },
+      "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/",
+      "summary": {
+        "ru": "Саймон Уиллисон разбирает наблюдение Армина Ронахера: новые модели Claude (Opus 4.8, Sonnet 5) чаще старших версий вызывают edit-инструмент в стороннем харнессе Pi с лишними, выдуманными полями в массиве edits[] — сам edit обычно правильный, но аргументы не совпадают со схемой, и Pi отклоняет вызов. Парадокс в том, что именно более новые, более «заточенные под Claude Code» модели хуже переносятся на другую схему инструмента — вероятно, потому что RL-обучение сильнее приучило их к канонической форме edit-инструмента Claude Code, и при её отсутствии модель «сопротивляется» сильнее, а не слабее.",
+        "en": "Simon Willison relays Armin Ronacher's finding: newer Claude models (Opus 4.8, Sonnet 5) call the edit tool in the third-party Pi harness with extra, invented fields in the edits[] array more often than older models — the edit itself is usually correct, but the arguments don't match the schema, so Pi rejects the call. The paradox: it's the newer, more Claude-Code-tuned models that transfer worse to a different tool schema — likely because RL training has locked them harder onto Claude Code's canonical edit-tool shape, so without it the model resists more, not less."
+      },
+      "note_page": "notes/articles/better-models-worse-tools.html"
+    }
+  ]
+}
