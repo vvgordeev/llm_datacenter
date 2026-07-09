@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T05:30:00Z",
+  "note": "Облачная routine. Та же деградация окружения, что и 2026-07-08: WebFetch и прямой curl через $HTTPS_PROXY получают 403 Forbidden на ВСЕ проверенные внешние хосты (anthropic.com, openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, hn.algolia.com) — /__agentproxy/status подтверждает это как политику egress-прокси (connect_rejected), а не транзиентный сбой. yt-dlp тоже не может достать youtube.com через тот же прокси (403 на CONNECT) — кадры видео недоступны. Gemini API (generativelanguage.googleapis.com) при этом работает: видео-конспект получен через gemini_video.py без скачивания. Весь сбор новостей и обогащение сделаны через WebSearch (fallback из SKILL.md) — WebFetch использован только для диагностики (тоже 403) и ни разу не дал контент за весь прогон.",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — всё найденное (Cowork mobile/web, Claude for Government beta, Claude Sonnet 5 default) уже опубликовано 2026-07-07/08 или слишком нишевое (гос. FedRAMP-бета) для карточки дня"},
+    {"source": "openai blog", "status": "blocked", "candidates": 3, "note": "WebFetch 403; WebSearch нашёл GPT-Live (новое, включено) и публичный запуск GPT-5.6 Sol/Terra/Luna 9 июля (продолжение кластера openai-gpt-5-6, включено); ChatGPT UX-мелочи (шопинг, inline-картинки, scheduled tasks) отклонены как не про подходы к LLM"},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch нашёл только слух о переносе Gemini 3.5 Pro на 17 июля — представитель Google отказался от комментария, официального заявления нет; отклонено как неподтверждённое (см. правило «не бери слухи без первоисточника»)"},
+    {"source": "meta blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не нашёл ничего свежее апрельского Muse Spark — уже не первая новость"},
+    {"source": "xai blog", "status": "blocked", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл Grok 4.5 (запуск 8 июля, официальный x.ai/news, включено)"},
+    {"source": "mistral blog", "status": "blocked", "candidates": 2, "note": "WebFetch 403; WebSearch нашёл Robostral Navigate (робототехника, включено) и Mistral OCR 4 — последний отклонён: релиз от 23 июня, слишком старый для карточки дня"},
+    {"source": "deepseek blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; официальный V4 всё ещё запланирован на середину июля, новых фактов за окно нет — отклонено как будущее событие"},
+    {"source": "qwen blog", "status": "skipped", "candidates": 0, "note": "enabled: false в sources.yaml"},
+    {"source": "aggregator: smol.ai (AI News)", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch дал только общий обзор без новых по сравнению с уже найденным через прямые запросы по моделям"},
+    {"source": "aggregator: tldr.tech/ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не дал конкретного выпуска за 07-09 с прямыми ссылками"},
+    {"source": "aggregator: simonwillison.net linkblog", "status": "ok", "candidates": 2, "note": "WebFetch 403, но WebSearch дал точные посты и даты; 'Introducing GPT-Live' (07-08, включена в экспертный контент), sqlite-utils 4.0 (не про LLM-подходы, отклонено)"},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 3, "note": "прокси вернул 403 на CONNECT к hn.algolia.com напрямую и через WebFetch; частично компенсировано WebSearch — треды по GPT-Live, Grok 4.5, Robostral Navigate использованы как источники мнений"},
+    {"source": "community: Reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл специфичных тредов по сегодняшним новостям, только общее описание сообщества"},
+    {"source": "community: X", "status": "ok", "candidates": 1, "note": "через WebSearch — пост Artificial Analysis с независимым бенчмарком Grok 4.5, использован как мнение"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "Introducing GPT-Live — включена в экспертный контент"},
+    {"source": "experts: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "найдены только его реакции на демо Fable 5 от стороннего автора (Peter Gostev), не собственная публикация — отклонено"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "нашёл только AI News дайджест за 4-6 июля (новостной пересказ, не про подходы) и старую статью swyx от января — обе не подходят"},
+    {"source": "experts: AI Explained", "status": "empty", "candidates": 0, "note": "WebSearch не подтвердил конкретное новое видео с официального канала за окно"},
+    {"source": "experts: Matt Wolfe", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл конкретного нового видео, только общее описание канала и FutureTools"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний найденный пост ('The Twilight of the Chatbots') уже опубликован в сводке за 07-06"},
+    {"source": "experts: Nate Herk", "status": "ok", "candidates": 1, "note": "'Stanford's Method Turns Claude Into a PHD Level Research Team' (STORM) — включено в экспертный контент"},
+    {"source": "experts: Matt Pocock", "status": "empty", "candidates": 0, "note": "последнее найденное видео — от середины июня, не свежее для окна сбора"}
+  ],
+  "totals": {
+    "candidates": 13,
+    "published": 4,
+    "rejected": {
+      "неподтверждённый слух (нет официального источника)": 1,
+      "будущее событие, ещё не наступило": 1,
+      "уже опубликовано ранее": 2,
+      "слишком старое для окна сбора": 1,
+      "не про подходы к LLM / нишевая гос. новость": 3,
+      "не удалось верифицировать авторство контента": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok: gemini_video.py отработал через generativelanguage.googleapis.com (этот хост не заблокирован прокси, в отличие от youtube.com и остальных внешних сайтов)",
+    "frames": "skipped: youtube.com блокирован политикой egress-прокси для yt-dlp (403 на CONNECT, подтверждено прямым запуском) — кадры не извлечены, помечено на странице конспекта видео"
+  }
+}
