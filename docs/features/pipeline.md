@@ -15,7 +15,7 @@
 
 Облачная routine Claude Code, cron `0 5 * * *` UTC (= 8:00 GMT+3): клонирует репо → `/digest` → push. Настройка — через `/schedule`; секрет `GEMINI_API_KEY` задаётся в окружении routine. Ручной пересбор — `/digest` локально.
 
-Ограничение облачной песочницы: **youtube.com блокирован прокси** (и WebFetch, и yt-dlp) → кадры из видео в облаке не извлекаются. Конспекты видео при этом работают: Gemini API получает ролик на стороне Google, песочница ему не мешает. Кадры можно добавить локальным прогоном (нужны `pip install yt-dlp imageio-ffmpeg` и `GEMINI_API_KEY`).
+Ограничение облачной песочницы (по данным `data/run_log/2026-07-09.json`): egress-прокси блокирует **большинство прямых fetch** — блоги вендоров (Anthropic, OpenAI, DeepMind, Meta, xAI, Mistral, DeepSeek), агрегаторы (smol.ai, tldr.tech), hn.algolia.com и youtube.com (все — 403). Доступны: WebSearch (основной канал discovery в облаке) и Gemini API (`generativelanguage.googleapis.com`) — конспекты видео работают, Gemini получает ролик на стороне Google. Кадры из видео и полные прямые fetch доступны только в локальных прогонах (`pip install yt-dlp imageio-ffmpeg` + `GEMINI_API_KEY`).
 
 ## Состояние и данные
 
