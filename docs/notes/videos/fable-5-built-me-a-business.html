@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Fable 5 построила бизнес одним промптом — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk | AI Automation · 2026-07-08 · 12 мин</span>
+      <span data-lang="en">Video digest · Nate Herk | AI Automation · 2026-07-08 · 12 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Fable 5 построила мне бизнес одним промптом: анатомия автономного прогона</span>
+      <span data-lang="en">Fable 5 just built me a business with one prompt: anatomy of an autonomous run</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=R0qF17BVl9w" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Херк дал Claude Fable 5 один-единственный /goal-промпт — и получил на выходе целую компанию: продукт Counterbrief (сервис оспаривания чарджбеков для Shopify-магазинов), лендинг, два лонч-видео, бизнес-план, исследование рынка и бренд-гайдлайны <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=0">[00:00]</a>. Ролик ценен не результатом (лендинг, по признанию автора, «ничего выдающегося»), а <b>анатомией промпта и оркестрации</b> — это самый наглядный публичный пример того, как строить длинные автономные прогоны.</span>
+      <span data-lang="en">Nate Herk gave Claude Fable 5 a single /goal prompt — and got a whole company back: the Counterbrief product (a chargeback-dispute service for Shopify stores), a landing page, two launch videos, a business plan, market research and brand guidelines <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=0">[00:00]</a>. The video's value isn't the output (the landing page is "nothing extraordinary," the author admits) but the <b>anatomy of the prompt and the orchestration</b> — the clearest public example yet of structuring long autonomous runs.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/fable-5-built-me-a-business/000070.jpg" alt="Counterbrief product dashboard">
+      <figcaption>
+        <span data-lang="ru">01:10 — работающий продукт: дашборд Counterbrief с диспутами, win-rate и вердиктами «fight/fold». Fable сама кликала по нему при записи демо-видео.</span>
+        <span data-lang="en">01:10 — the working product: the Counterbrief dashboard with disputes, win rate and fight/fold verdicts. Fable clicked through it itself while recording the demo video.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Метод: мастер-промпт как устав автономии</span><span data-lang="en">The method: a master prompt as an autonomy charter</span></h2>
+    <p>
+      <span data-lang="ru">Сам /goal-промпт короткий: «прочитай этот файл и исполни всё под чертой как цель» — так обходится лимит в 4000 символов <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=217">[03:37]</a>. Вся суть — в файле-уставе из пяти блоков. <b>Миссия</b>: «начни с пустого интернета, найди реальную больную проблему, на которую люди жалуются прямо сейчас, и построй вокруг неё бизнес; это тест того, как далеко ты уйдёшь сама — я не буду отвечать на вопросы посреди прогона». <b>Ограждения</b>: никаких новых трат (но всё, что есть в .env, — можно: так в дело пошли ключи HeyGen и ElevenLabs для «видео от основателя» с аватаром и клоном голоса), ничего не публиковать, <b>ничего не выдумывать</b> — каждый факт со ссылкой на реально скачанный URL, и «никогда не спрашивай меня» <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=265">[04:25]</a>. Плюс <b>фазы</b>, <b>определение готовности</b> («незнакомец должен открыть HTML-отчёт и понять бизнес, посмотреть видео, запустить сайт») и главный абзац — «что значит оркестрируй».</span>
+      <span data-lang="en">The /goal prompt itself is short: "read this file and execute everything below the divider as your goal" — sidestepping the 4,000-character limit <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=217">[03:37]</a>. The substance lives in a five-block charter file. <b>Mission</b>: "start with nothing but the open internet, find a real painful problem people are complaining about right now, and design a business around it; this is a test of how far you can go on your own — I will not answer questions mid-run." <b>Guardrails</b>: no new spending (but anything in .env is fair game — which is how HeyGen and ElevenLabs keys became the avatar-and-voice-clone "founder video"), publish nothing, <b>invent nothing</b> — every fact must trace to an actually-fetched URL, and "never ask me anything" <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=265">[04:25]</a>. Plus <b>phases</b>, a <b>definition of done</b> ("a stranger should open the recap HTML and understand the business, watch the video, run the site") and the key paragraph — "what orchestrate means."</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/fable-5-built-me-a-business/000280.jpg" alt="Master prompt guardrails and orchestrate definition">
+      <figcaption>
+        <span data-lang="ru">04:40 — ограждения мастер-промпта и абзац «что значит оркестрируй»: фан-аут исследователей, турниры с судейскими панелями, скептики-опровергатели, критик полноты — «паттерны выше — это пол, а не потолок».</span>
+        <span data-lang="en">04:40 — the master prompt's guardrails and the "what orchestrate means" paragraph: researcher fan-outs, tournaments with judge panels, refuting skeptics, a completeness critic — "the patterns above are a floor, not a ceiling."</span>
+      </figcaption>
+    </figure>
+
+    <p>
+      <span data-lang="ru">Абзац про оркестрацию автор считает самым важным в файле: «используй мультиагентные workflow агрессивно — фан-аут параллельных исследователей по разным источникам и углам; турниры, где независимые агенты питчат конкурирующие бизнес-идеи, а судейские панели их оценивают; адверсариально проверяй каждое важное утверждение скептиками, чья единственная работа — опровергнуть; прогоняй критика полноты перед закрытием каждой фазы» <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=289">[04:49]</a>. Экономика прогона держится на связке из его прошлого ролика («как заставить Opus думать как Fable», конспект есть в сводке за 7 июля): <b>Fable — только оркестратор</b>, который планирует, делегирует и принимает работу, а все сотни субагентов — Opus и Sonnet. Сама Fable потратила около 500 тысяч токенов — примерно 15% недельного лимита <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=317">[05:17]</a>.</span>
+      <span data-lang="en">The orchestration paragraph is, per the author, the file's hardest-working part: "use multi-agent workflows aggressively — fan out parallel researchers across different sources and angles; run tournaments where independent agents pitch competing business ideas and judge panels score them; adversarially verify every important claim with skeptic agents whose only job is to refute it; run a completeness critic before you call any phase done" <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=289">[04:49]</a>. The run's economics rest on the trick from his previous video ("How I make Opus think like Fable," digested in our July 7 issue): <b>Fable acts only as the orchestrator</b> — planning, delegating, accepting work — while all the hundreds of subagents are Opus and Sonnet. Fable itself burned about 500K tokens, roughly 15% of a weekly budget <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=317">[05:17]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Девять фаз: от боли до red team</span><span data-lang="en">Nine phases: from pain hunt to red team</span></h2>
+    <p>
+      <span data-lang="ru">Итоговый HTML-отчёт раскрывает ход прогона <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=438">[07:18]</a>. Охота за болью: 10 исследователей прочесали Reddit, HN и G2, собрали 35 проблем, слили их в 18 кандидатов — и 18 независимых верификаторов перепроверили каждую ключевую цитату повторным скачиванием. Турнир: пять судейских персон оценили кандидатов по боли, срочности, достижимости аудитории, готовности платить и слабости конкурентов; четвёрка лидеров получила по адвокату и скептику, три свежих судьи проголосовали — победили чарджбеки, 3:0 <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=467">[07:47]</a>. Дальше — дизайн бизнеса по прайсингам конкурентов и правилам Visa, бренд (логотип: шесть генераций и цикл критики), сборка продукта и лендинга, два лонч-видео. Финал — <b>red team</b>: шесть скептиков атаковали план 38 атаками; вердикт «жизнеспособно с правками», ноль фатальных, и каждая правка была применена к плану и сайту <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=521">[08:41]</a>.</span>
+      <span data-lang="en">The recap HTML lays the run bare <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=438">[07:18]</a>. Pain hunt: 10 researchers swept Reddit, HN and G2, gathered 35 raw problems, merged them into 18 candidates — and 18 independent verifiers re-fetched every key quote. Tournament: five judge personas scored candidates on pain, urgency, reachability, willingness to pay and incumbent weakness; the top four each got an advocate and a skeptic, three fresh judges voted — chargeback evidence won 3:0 <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=467">[07:47]</a>. Then business design against competitor pricing and Visa's own rules, brand (the logo went through six generations and a critique loop), the product and landing build, two launch videos. The finale — a <b>red team</b>: six skeptic agents hit the plan with 38 attacks; verdict "viable with fixes," zero kills, and every fix was applied to the plan and the site <a class="ts" href="https://www.youtube.com/watch?v=R0qF17BVl9w&t=521">[08:41]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/fable-5-built-me-a-business/000450.jpg" alt="Counterbrief recap: from open internet to launch package in nine phases">
+      <figcaption>
+        <span data-lang="ru">07:30 — итоговый пакет: лендинг Counterbrief и отчёт «от открытого интернета до лонч-пакета за девять фаз».</span>
+        <span data-lang="en">07:30 — the final package: the Counterbrief landing page and the "from open internet to launch package, in nine phases" recap.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Что из этого забрать</span><span data-lang="en">What to take away</span></h2>
+    <p>
+      <span data-lang="ru">Перед нами фактически шаблон «устава автономии» для любого длинного прогона: миссия + ограждения + определение оркестрации + определение готовности + запрет вопросов. Особенно переносимы две вещи: правило «ничего не выдумывать — каждый факт со ссылкой на реально скачанный источник» (это же правило держит наш собственный дайджест) и разделение ролей «дорогой оркестратор / дешёвые исполнители», которое делает такие эксперименты доступными не только на максимальных тарифах.</span>
+      <span data-lang="en">This is effectively an "autonomy charter" template for any long run: mission + guardrails + a definition of orchestration + a definition of done + a no-questions rule. Two parts transfer especially well: the "invent nothing — every fact traces to an actually-fetched source" rule (the same rule that keeps our own digest honest) and the "expensive orchestrator / cheap workers" role split that makes such experiments affordable beyond top-tier plans.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по субтитрам; кадры извлечены по таймкодам, отобранным из транскрипта.</span>
+      <span data-lang="en">Digest built from subtitles; frames extracted at timestamps picked from the transcript.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

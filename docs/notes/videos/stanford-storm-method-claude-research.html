@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Конспект видео: Метод Стэнфорда STORM в Claude — LLM Datacenter</title>
+  <title>Конспект: метод Stanford STORM как скилл Claude — LLM Datacenter</title>
   <link rel="stylesheet" href="../../assets/style.css">
   <link rel="stylesheet" href="../note.css">
 </head>
@@ -18,74 +18,72 @@
     </div>
   </header>
 
-  <main class="note">
+  <main class="note note-body">
     <p class="note-kicker">
-      <span data-lang="ru">Конспект видео · Nate Herk | AI Automation · 2026-07-07 · 12 мин</span>
-      <span data-lang="en">Video digest · Nate Herk | AI Automation · 2026-07-07 · 12 min</span>
+      <span data-lang="ru">Конспект видео · Nate Herk | AI Automation · 2026-07-09 · 12 мин</span>
+      <span data-lang="en">Video digest · Nate Herk | AI Automation · 2026-07-09 · 12 min</span>
     </p>
     <h1>
-      <span data-lang="ru">Метод Стэнфорда превращает Claude в исследовательскую команду уровня PhD</span>
-      <span data-lang="en">Stanford's Method Turns Claude Into a PHD Level Research Team</span>
+      <span data-lang="ru">Метод Stanford STORM как скилл Claude: исследование пятью перспективами с верификацией</span>
+      <span data-lang="en">Stanford's STORM method as a Claude skill: five-perspective research with verification</span>
     </h1>
     <p class="note-source">
       <a href="https://www.youtube.com/watch?v=Tj3018n5MVg" target="_blank" rel="noopener">
         <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
       </a>
     </p>
-    <p class="note-hint">
-      <span data-lang="ru">Конспект построен по видео через Gemini API (анализ на стороне Google, без скачивания). Кадры демонстраций недоступны: в этом окружении сбора сетевой доступ к youtube.com для yt-dlp заблокирован политикой egress-прокси.</span>
-      <span data-lang="en">Digest built from the video via the Gemini API (analyzed server-side by Google, no download needed). Demonstration frames are unavailable: in this collection environment, network access to youtube.com for yt-dlp is blocked by the egress proxy policy.</span>
+
+    <p>
+      <span data-lang="ru">STORM — исследовательский метод Стэнфорда, который в рецензируемом тестировании давал статьи на 25% организованнее ближайшего конкурента <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=0">[00:00]</a>. Нейт Херк упаковал его принципы в скилл Claude и показывает результат: самодостаточный HTML-брифинг, собранный пятью «взглядами» и прошедший проверку фактов — внизу отчёта видно, какие источники подтверждены, какие исправлены, а какие понижены в надёжности <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=22">[00:22]</a>.</span>
+      <span data-lang="en">STORM is a Stanford research method that, in peer-reviewed testing, produced articles 25% better organized than the next best approach <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=0">[00:00]</a>. Nate Herk packaged its principles into a Claude skill and shows the result: a self-contained HTML briefing assembled by five "lenses" and fact-checked — the report's footer shows which sources were confirmed, corrected, or demoted <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=22">[00:22]</a>.</span>
     </p>
 
-    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
-    <ol class="theses">
-      <li>
-        <span data-lang="ru"><b>Несколько экспертных точек зрения вместо одного прохода.</b> Метод Stanford STORM запускает исследование параллельно с разных позиций, вскрывая скрытые аспекты и противоречия — и заметно превосходит по качеству и полноте обычный запрос к LLM.</span>
-        <span data-lang="en"><b>Multiple expert perspectives instead of one pass.</b> The Stanford STORM method runs research in parallel from different viewpoints, surfacing hidden aspects and contradictions — and significantly outperforms a single ordinary LLM prompt on quality and completeness.</span>
-      </li>
-      <li>
-        <span data-lang="ru"><b>Четыре автоматизированные фазы.</b> Параллельный анализ от экспертов → картирование противоречий между их выводами → синтез → состязательное рецензирование. Результат — структурированный HTML-отчёт с ранжированной надёжностью источников и прозрачной верификацией.</span>
-        <span data-lang="en"><b>Four automated phases.</b> Parallel expert analysis → mapping contradictions between their findings → synthesis → adversarial peer review. The result is a structured HTML report with ranked source reliability and transparent verification.</span>
-      </li>
-      <li>
-        <span data-lang="ru"><b>Сравнение со встроенным Deep Research у Claude.</b> По словам автора, реализация STORM как отдельного устанавливаемого скилла даёт более высокое качество доказательств, разнообразие источников и лучший контроль рисков — часто дешевле и быстрее, чем штатная функция.</span>
-        <span data-lang="en"><b>Compared to Claude's built-in Deep Research.</b> The author argues that implementing STORM as a separate, installable skill delivers higher evidence quality, more source diversity, and better risk control — often cheaper and faster than the native feature.</span>
-      </li>
-      <li>
-        <span data-lang="ru"><b>Идея — «занять недостающую экспертизу».</b> STORM собирает виртуальный совет агентов с разными областями знаний, которые сотрудничают и спорят друг с другом, чтобы устранить слепые зоны одного-единственного взгляда на тему.</span>
-        <span data-lang="en"><b>The idea: "borrow expertise you don't have."</b> STORM assembles a virtual council of agents with different areas of expertise that collaborate and argue with each other to eliminate the blind spots of any single point of view.</span>
-      </li>
-    </ol>
+    <figure class="inline-frame">
+      <img src="../../media/frames/stanford-storm-method-claude-research/000015.jpg" alt="Verified STORM HTML briefing">
+      <figcaption>
+        <span data-lang="ru">00:15 — итоговый брифинг: плашка V2 (VERIFIED), синтез пяти взглядов, у каждого утверждения — оценка достоверности 1–10.</span>
+        <span data-lang="en">00:15 — the final briefing: a V2 (VERIFIED) badge, five-lens synthesis, every claim scored 1–10 for reliability.</span>
+      </figcaption>
+    </figure>
 
-    <h2><span data-lang="ru">Таймкоды</span><span data-lang="en">Timestamps</span></h2>
-    <table class="timestamps">
-      <tbody>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=0" target="_blank" rel="noopener">00:00</a></td>
-          <td><span data-lang="ru">Введение в метод Stanford STORM</span>
-              <span data-lang="en">Introduction to the Stanford STORM method</span></td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=42" target="_blank" rel="noopener">00:42</a></td>
-          <td><span data-lang="ru">Принцип STORM: несколько перспектив для исследования</span>
-              <span data-lang="en">STORM's principle: multiple perspectives for research</span></td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=86" target="_blank" rel="noopener">01:26</a></td>
-          <td><span data-lang="ru">Сравнение STORM с функцией Deep Research у Claude</span>
-              <span data-lang="en">STORM vs. Claude's Deep Research feature</span></td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=270" target="_blank" rel="noopener">04:30</a></td>
-          <td><span data-lang="ru">Четыре фазы метода STORM</span>
-              <span data-lang="en">The four phases of the STORM method</span></td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=446" target="_blank" rel="noopener">07:26</a></td>
-          <td><span data-lang="ru">Живая демонстрация запуска навыка STORM в Claude</span>
-              <span data-lang="en">Live demo: running the STORM skill in Claude</span></td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=514" target="_blank" rel="noopener">08:34</a></td>
-          <td><span data-lang="ru">Различия между субагентами и командами агентов</span>
-              <span data-lang="en">Sub-agents vs. agent teams</span></td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=615" target="_blank" rel="noopener">10:15</a></td>
-          <td><span data-lang="ru">Итоговый отчёт STORM: «Голосовые ИИ-агенты: что реально, что хайп»</span>
-              <span data-lang="en">Final STORM report: "Voice AI Agents: What's Real, What's Hype"</span></td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=696" target="_blank" rel="noopener">11:36</a></td>
-          <td><span data-lang="ru">Ключевой вывод: заимствование экспертизы</span>
-              <span data-lang="en">Key takeaway: borrowing expertise</span></td></tr>
-      </tbody>
-    </table>
+    <h2><span data-lang="ru">В чём метод</span><span data-lang="en">The method itself</span></h2>
+    <p>
+      <span data-lang="ru">Идея STORM: один промпт — это один угол зрения, и у него неизбежны слепые зоны. Вместо этого тема исследуется <b>пятью ролевыми агентами</b> — практик, академик, скептик, экономист и историк — и «каждый угол находит дыру, которую пропустили остальные» <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=50">[00:50]</a>. Дальше конвейер: (1) пять перспектив исследуют тему параллельно; (2) строится <b>карта противоречий</b> — где взгляды расходятся и чьи доказательства сильнее <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=297">[04:57]</a>; (3) синтез в единый отчёт; (4) <b>адверсариальное пир-ревью собственных выводов и сверка каждой цитаты с первоисточником</b>. Изначально это были четыре промпта, которые автор запускал цепочкой вручную, — а затем попросил Claude упаковать всё в скилл с шаблоном отчёта: теперь достаточно фразы «storm research по теме X» <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=320">[05:20]</a>.</span>
+      <span data-lang="en">STORM's premise: one prompt is one angle, and it inevitably has blind spots. Instead the topic is researched by <b>five role-played agents</b> — a practitioner, an academic, a skeptic, an economist, and a historian — and "each angle finds a hole the other angles miss" <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=50">[00:50]</a>. The pipeline: (1) five lenses research in parallel; (2) a <b>contradiction map</b> — where the lenses disagree and whose evidence is stronger <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=297">[04:57]</a>; (3) synthesis into a single report; (4) <b>adversarial peer review of its own conclusions plus verification of every citation against its primary source</b>. It started as four manually chained prompts — then the author asked Claude to package the whole thing into a skill with a report template: now the phrase "storm research on topic X" is enough <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=320">[05:20]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/stanford-storm-method-claude-research/000335.jpg" alt="storm-research SKILL.md in VS Code">
+      <figcaption>
+        <span data-lang="ru">05:35 — SKILL.md скилла: «пять экспертных линз → карта противоречий → синтез → адверсариальное ревью → верификация цитат». Рядом — report-template.html для единообразия отчётов.</span>
+        <span data-lang="en">05:35 — the skill's SKILL.md: "five expert lenses → contradiction map → synthesis → adversarial review → citation verification." Next to it, report-template.html keeps outputs consistent.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Сравнение со встроенным deep research</span><span data-lang="en">Versus built-in deep research</span></h2>
+    <p>
+      <span data-lang="ru">Автор прогнал один и тот же вопрос через нативный deep research Claude (динамический workflow, в его случае — 103 агента) и через STORM-скилл (~12 агентов). Deep research вернул «сырой» markdown с двумя подтверждёнными источниками и попал под рейт-лимиты <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=100">[01:40]</a>; STORM — верифицированный брифинг с 60-секундным резюме, выводами с оценкой надёжности (какая линза поддержала, какая оспорила) и явным списком допущений, включая «недостающую шестую линзу» — взгляд клиента, который ни одна из пяти ролей не закрывала <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=169">[02:49]</a>. Слепое сравнение через Codex (другую модель) отдало победу STORM по всем шести критериям — при этом прогон был быстрее и дешевле <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=220">[03:40]</a>.</span>
+      <span data-lang="en">The author ran the same question through Claude's native deep research (a dynamic workflow — 103 agents in his run) and through the STORM skill (~12 agents). Deep research returned a raw markdown dump with two confirmed sources and hit rate limits <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=100">[01:40]</a>; STORM produced a verified briefing with a 60-second summary, findings ranked by reliability (which lens supported, which challenged) and an explicit assumptions list — including the "missing sixth lens": the customer's seat, which none of the five roles covered <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=169">[02:49]</a>. A blind comparison via Codex (a different model) scored STORM ahead on all six criteria — while running faster and cheaper <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=220">[03:40]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/stanford-storm-method-claude-research/000625.jpg" alt="Verification tally: 19/19 citations checked">
+      <figcaption>
+        <span data-lang="ru">10:25 — финал живого прогона: 19 из 19 цитат сверены с первоисточниками — одна сфабрикованная удалена, 6 исправлены, 6 понижены в надёжности.</span>
+        <span data-lang="en">10:25 — the live run's finale: 19 of 19 citations checked against primary sources — one fabricated claim removed, 6 corrected, 6 demoted.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Практика и ограничения</span><span data-lang="en">Practice and limits</span></h2>
+    <p>
+      <span data-lang="ru">Скилл работает и без слэш-команды — достаточно упомянуть его в запросе; при размытой теме он сам задаст уточняющие вопросы <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=438">[07:18]</a>. Роли выполняются субагентами (у автора — на Opus 4.8, но подойдут Sonnet/Haiku), и автор подчёркивает разницу: субагенты общаются только с главной сессией, а «команды агентов» умеют спорить друг с другом до консенсуса — это мощнее, но заметно дороже <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=515">[08:35]</a>. Главный совет — не в конкретном скилле: линзы стоит подгонять под себя (автору напрашивается «новичок в ИИ» и «контент-мейкер»), а общий принцип — «если нет своей экспертизы, одолжи её: создай маленьких экспертов-агентов, которые закроют твои слепые зоны» <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=684">[11:24]</a>.</span>
+      <span data-lang="en">The skill triggers without a slash command — mentioning it in a request is enough; with a vague topic it asks clarifying questions first <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=438">[07:18]</a>. The roles run as subagents (Opus 4.8 in the author's runs, but Sonnet/Haiku work too), and he stresses the distinction: subagents only talk to the main session, while "agent teams" can argue with each other to consensus — more powerful, but noticeably pricier <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=515">[08:35]</a>. The main advice isn't about this particular skill: tailor the lenses to yourself (the author is tempted by an "AI beginner" and a "content creator"), and the general principle — "if you lack subject-matter expertise, borrow it: spawn small expert agents to kill your blind spots" <a class="ts" href="https://www.youtube.com/watch?v=Tj3018n5MVg&t=684">[11:24]</a>.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по субтитрам; кадры извлечены по таймкодам, отобранным из транскрипта.</span>
+      <span data-lang="en">Digest built from subtitles; frames extracted at timestamps picked from the transcript.</span>
+    </p>
   </main>
 
   <script src="../note.js"></script>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Как Bun переписали на Rust агентами — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Jarred Sumner (Bun) · 2026-07-08</span>
+      <span data-lang="en">Article digest · Jarred Sumner (Bun) · 2026-07-08</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Rewriting Bun in Rust: миллион строк за 11 дней силами агентов</span>
+      <span data-lang="en">Rewriting Bun in Rust: a million lines in 11 days, by agents</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://bun.com/blog/bun-in-rust" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Создатель JavaScript-рантайма Bun Джарред Самнер описал, как один инженер с Claude Code перенёс 535 тысяч строк кода с Zig на Rust за 11 дней: 1448 файлов, 6502 коммита, итоговый диф больше миллиона строк и примерно <b>$165 000 в API-токенах</b> (5.9 млрд некешированных входных, 690 млн выходных). Это, вероятно, самый детальный публичный разбор крупной агентной миграции на сегодня — с методом, цифрами и честным списком того, что шло не так.</span>
+      <span data-lang="en">Bun creator Jarred Sumner describes how one engineer with Claude Code ported 535K lines from Zig to Rust in 11 days: 1,448 files, 6,502 commits, a final diff of over a million lines and roughly <b>$165,000 in API tokens</b> (5.9B uncached input, 690M output). It is probably the most detailed public account of a large agentic migration to date — with the method, the numbers, and an honest list of what went wrong.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: тестовый набор как «оракул соответствия»</span><span data-lang="en">The method: the test suite as a conformance oracle</span></h2>
+    <p>
+      <span data-lang="ru">Ключевое условие, сделавшее проект возможным: тесты Bun написаны на TypeScript и не зависят от языка реализации — значит, они годятся как <b>conformance suite</b>, внешний судья правильности. Правило «ноль тестов пропущено или удалено» превращает размытую задачу «перепиши на Rust» в измеримую: 60 624 теста и 1.39 млн assert'ов должны пройти. Подготовка заняла считанные часы: Самнер обсудил с Claude паттерны миграции и зафиксировал их в <code>PORTING.md</code> (какие конструкции Zig во что превращать), а отдельный workflow прошёл по всем структурам, проследил владение памятью и сгенерировал <code>LIFETIMES.tsv</code> с предложенными аннотациями времён жизни — оба документа затем прошли адверсариальное ревью.</span>
+      <span data-lang="en">The key enabler: Bun's tests are written in TypeScript and don't depend on the implementation language — so they work as a <b>conformance suite</b>, an external oracle of correctness. The rule "zero tests skipped or deleted" turns the fuzzy task "rewrite it in Rust" into a measurable one: 60,624 tests and 1.39M assertions must pass. Preparation took hours, not weeks: Sumner discussed migration patterns with Claude and captured them in <code>PORTING.md</code> (which Zig constructs map to what), while a separate workflow walked every struct, traced memory ownership and generated <code>LIFETIMES.tsv</code> with proposed lifetime annotations — both documents then went through adversarial review.</span>
+    </p>
+
+    <h2><span data-lang="ru">Конвейер агентов: реализатор → два оппонента → фиксер</span><span data-lang="en">The agent pipeline: implementer → two adversaries → fixer</span></h2>
+    <p>
+      <span data-lang="ru">Каждый файл шёл по конвейеру из четырёх ролей: <b>реализатор</b> (видит исходный Zig, план и своё рассуждение) → <b>два независимых адверсариальных ревьюера</b> (видят только диф, задача — найти ошибки) → <b>фиксер</b> (применяет замечания). На пике одновременно работали ~64 агента в четырёх git-worktree, выдавая до 1300 строк в минуту — и каждая строка проходила через двух оппонентов до коммита. Ревьюеры ловили именно то, что страшно в таких портах: use-after-free при закрытии pipe (<code>Box::leak</code> вместо преждевременного drop), неверную нормализацию отрицательных <code>timespec</code> (<code>floor</code> vs <code>trunc</code>), потерю ленивости вычислений (<code>unwrap_or</code> vs <code>unwrap_or_else</code>).</span>
+      <span data-lang="en">Every file went through a four-role pipeline: an <b>implementer</b> (sees the original Zig, the plan, and its own reasoning) → <b>two independent adversarial reviewers</b> (see only the diff, tasked to find bugs) → a <b>fixer</b> (applies the feedback). At peak, ~64 agents ran concurrently across four git worktrees, producing up to 1,300 lines per minute — and every line passed two adversaries before commit. The reviewers caught exactly what's scary in such ports: a use-after-free on pipe close (<code>Box::leak</code> instead of a premature drop), wrong normalization of negative <code>timespec</code> (<code>floor</code> vs <code>trunc</code>), and lost laziness (<code>unwrap_or</code> vs <code>unwrap_or_else</code>).</span>
+    </p>
+
+    <figure class="scheme">
+      <svg viewBox="0 0 660 130" role="img" aria-label="agent conveyor">
+        <style>
+          .box { fill: none; stroke: currentColor; stroke-width: 1.5; }
+          .lbl { font: 12px system-ui, sans-serif; fill: currentColor; }
+          .sub { font: 10px system-ui, sans-serif; fill: currentColor; opacity: .6; }
+          .arr { stroke: currentColor; stroke-width: 1.5; marker-end: url(#ah4); }
+        </style>
+        <defs>
+          <marker id="ah4" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor"/>
+          </marker>
+        </defs>
+        <rect class="box" x="8" y="35" width="120" height="52" rx="8"/>
+        <text class="lbl" x="68" y="57" text-anchor="middle">Реализатор</text>
+        <text class="sub" x="68" y="74" text-anchor="middle">Zig + PORTING.md</text>
+        <line class="arr" x1="128" y1="61" x2="168" y2="61"/>
+        <rect class="box" x="168" y="8" width="140" height="42" rx="8"/>
+        <text class="lbl" x="238" y="27" text-anchor="middle">Оппонент №1</text>
+        <text class="sub" x="238" y="42" text-anchor="middle">видит только diff</text>
+        <rect class="box" x="168" y="72" width="140" height="42" rx="8"/>
+        <text class="lbl" x="238" y="91" text-anchor="middle">Оппонент №2</text>
+        <text class="sub" x="238" y="106" text-anchor="middle">видит только diff</text>
+        <line class="arr" x1="308" y1="29" x2="360" y2="55"/>
+        <line class="arr" x1="308" y1="93" x2="360" y2="67"/>
+        <rect class="box" x="360" y="35" width="110" height="52" rx="8"/>
+        <text class="lbl" x="415" y="57" text-anchor="middle">Фиксер</text>
+        <text class="sub" x="415" y="74" text-anchor="middle">правки → коммит</text>
+        <line class="arr" x1="470" y1="61" x2="520" y2="61"/>
+        <rect class="box" x="520" y="35" width="132" height="52" rx="8"/>
+        <text class="lbl" x="586" y="57" text-anchor="middle">Conformance suite</text>
+        <text class="sub" x="586" y="74" text-anchor="middle">60 624 теста — судья</text>
+      </svg>
+      <figcaption>
+        <span data-lang="ru">Конвейер на файл; на пике — 64 таких конвейера параллельно в 4 worktree, до 1300 строк/мин.</span>
+        <span data-lang="en">The per-file pipeline; at peak, 64 of these ran in parallel across 4 worktrees at up to 1,300 lines/min.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Что пошло не так — и чем закончилось</span><span data-lang="en">What went wrong — and how it ended</span></h2>
+    <p>
+      <span data-lang="ru">Список факапов не менее ценен, чем метод: агенты устраивали хаос с <code>git stash</code>/<code>git reset</code>, мешая друг другу; начинали «заглушать» функции вместо реального решения; забытый <code>grep</code> замораживал систему, а диск дважды переполнялся. Ответом стали жёсткие правила: запрет git-операций без коммита, запрет «медленных команд», изоляция рабочих деревьев. Семантические ловушки Zig→Rust (ленивость <code>debug_assert!</code>, bounds checks в release, нечётные срезы UTF-16, <code>comptime</code>-форматирование) отлавливались тем же адверсариальным ревью. Итог: 99.8% тестов на Linux x64 через 6 дней, все 6 платформ зелёные к 14-му дню проекта, 19 регрессий (исправлены), бинарник на 20% меньше, производительность +2–5%. Вывод Самнера: «один инженер сегодня может сделать намного больше, чем год назад».</span>
+      <span data-lang="en">The failure list is as valuable as the method: agents wreaked havoc with <code>git stash</code>/<code>git reset</code>, stepping on each other; started stubbing functions instead of solving problems; a forgotten <code>grep</code> froze the machine, and the disk filled up twice. The answer was hard rules: no git operations without committing, a ban on "slow commands," isolated worktrees. Zig→Rust semantic traps (lazy <code>debug_assert!</code>, release-build bounds checks, odd UTF-16 slices, <code>comptime</code> format strings) were caught by the same adversarial review. The outcome: 99.8% of tests passing on Linux x64 in 6 days, all six platforms green by day 11, 19 regressions (all fixed), a 20% smaller binary, +2–5% performance. Sumner's takeaway: "one engineer can do far more today than a year ago."</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Рецепт переносим: если у системы есть независимый от реализации набор тестов, он превращается в оракул, против которого агенты могут мигрировать код почти автономно — а «реализатор + два оппонента + фиксер» страхует от плазибельно-неверного кода. Это меняет экономику больших миграций (legacy-стеки, смена языков, обновления фреймворков): $165K и 11 дней против человеко-лет ручного порта.</span>
+      <span data-lang="en">The recipe transfers: if a system has an implementation-independent test suite, it becomes an oracle against which agents can migrate code near-autonomously — and "implementer + two adversaries + fixer" insures against plausible-but-wrong code. That changes the economics of large migrations (legacy stacks, language switches, framework upgrades): $165K and 11 days versus person-years of manual porting.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

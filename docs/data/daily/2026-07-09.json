@@ -1,11 +1,13 @@
 {
   "date": "2026-07-09",
-  "generated_at": "2026-07-09T05:30:00Z",
+  "generated_at": "2026-07-09T12:30:00Z",
   "news": [
     {
       "id": "2026-07-09-openai-gpt-live",
       "cluster_id": "openai-gpt-live",
-      "models": ["openai"],
+      "models": [
+        "openai"
+      ],
       "title": {
         "ru": "OpenAI выпускает GPT-Live: полнодуплексный голос, слушающий во время речи",
         "en": "OpenAI ships GPT-Live: full-duplex voice that listens while it talks"
@@ -69,7 +71,9 @@
     {
       "id": "2026-07-09-xai-grok-4-5",
       "cluster_id": "xai-grok-4-5",
-      "models": ["xai"],
+      "models": [
+        "xai"
+      ],
       "title": {
         "ru": "xAI выпускает Grok 4.5, обученную вместе с Cursor, — кратно дешевле Opus 4.8 по токенам",
         "en": "xAI launches Grok 4.5, trained alongside Cursor, at a fraction of Opus 4.8's token cost"
@@ -133,7 +137,9 @@
     {
       "id": "2026-07-09-openai-gpt-5-6-public-launch",
       "cluster_id": "openai-gpt-5-6",
-      "models": ["openai"],
+      "models": [
+        "openai"
+      ],
       "title": {
         "ru": "GPT-5.6 Sol, Terra и Luna становятся публично доступны после одобрения Минторга США",
         "en": "GPT-5.6 Sol, Terra and Luna go publicly live after US Commerce Dept sign-off"
@@ -188,7 +194,9 @@
     {
       "id": "2026-07-09-mistral-robostral-navigate",
       "cluster_id": "mistral-robostral-navigate",
-      "models": ["mistral"],
+      "models": [
+        "mistral"
+      ],
       "title": {
         "ru": "Mistral выходит в робототехнику: Robostral Navigate ориентируется по одной камере без LiDAR",
         "en": "Mistral enters robotics with Robostral Navigate — single-camera navigation, no LiDAR needed"
@@ -280,6 +288,51 @@
         "en": "A breakdown of the Stanford STORM method: parallel analysis from multiple expert viewpoints, contradiction mapping, synthesis, and adversarial peer review — packaged into an installable Claude skill that the author compares to the native Deep Research feature on source quality and risk control."
       },
       "note_page": "notes/videos/stanford-storm-method-claude-research.html"
+    },
+    {
+      "id": "2026-07-09-pocock-skills-v1-1",
+      "type": "video",
+      "author": "Matt Pocock",
+      "title": {
+        "ru": "Скиллы v1.1: /wayfinder, /research, /implement — полный цикл разработки с агентом",
+        "en": "Skills v1.1: /wayfinder, /research, /implement — a full agent development cycle"
+      },
+      "url": "https://www.youtube.com/watch?v=A8mokin_YOs",
+      "summary": {
+        "ru": "Метод целиком: гриллинг (вопросы по одному, факты vs решения) → спека → тикеты размером в сессию → implement с TDD → ревью по «запахам» Фаулера; новинка Wayfinder строит карту решений в GitHub issues для идей, не влезающих в одну сессию.",
+        "en": "The whole method: grilling (one question at a time, facts vs decisions) → spec → session-sized tickets → TDD implement → review via Fowler smells; the new Wayfinder charts a decision map in GitHub issues for ideas too big for one session."
+      },
+      "note_page": "notes/videos/skills-v1-1-wayfinder.html"
+    },
+    {
+      "id": "2026-07-09-bun-rewritten-in-rust",
+      "type": "article",
+      "author": "Jarred Sumner (Bun)",
+      "title": {
+        "ru": "Rewriting Bun in Rust: миллион строк за 11 дней силами агентов",
+        "en": "Rewriting Bun in Rust: a million lines in 11 days, by agents"
+      },
+      "url": "https://bun.com/blog/bun-in-rust",
+      "summary": {
+        "ru": "Самый детальный публичный отчёт о крупной агентной миграции: тестовый набор как «оракул соответствия», конвейер «реализатор → два адверсариальных ревьюера → фиксер», 64 параллельных агента, $165K токенов — и честный список факапов.",
+        "en": "The most detailed public account of a large agentic migration: the test suite as a conformance oracle, an implementer → two adversarial reviewers → fixer pipeline, 64 parallel agents, $165K in tokens — and an honest failure list."
+      },
+      "note_page": "notes/articles/rewriting-bun-in-rust.html"
+    },
+    {
+      "id": "2026-07-09-nateherk-one-prompt-business",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Fable 5 построила мне бизнес одним промптом: анатомия автономного прогона",
+        "en": "Fable 5 just built me a business with one prompt: anatomy of an autonomous run"
+      },
+      "url": "https://www.youtube.com/watch?v=R0qF17BVl9w",
+      "summary": {
+        "ru": "«Устав автономии» для длинных прогонов: миссия, ограждения (ничего не выдумывать, никогда не спрашивать), определение оркестрации (фан-ауты, турниры, скептики, критик полноты) и экономика «Fable-оркестратор + дешёвые исполнители» (~500K токенов Fable на целую компанию).",
+        "en": "An \"autonomy charter\" for long runs: mission, guardrails (invent nothing, never ask), a definition of orchestration (fan-outs, tournaments, skeptics, a completeness critic) and the \"Fable orchestrator + cheap workers\" economics (~500K Fable tokens for a whole company)."
+      },
+      "note_page": "notes/videos/fable-5-built-me-a-business.html"
     }
   ]
 }

@@ -28,4 +28,5 @@
 
 | Версия | Файл | Статус |
 |---|---|---|
-| 1.0 | v1.0-baseline.md | accepted |
+| 1.0 | v1.0-baseline.md | implemented |
+| 1.1 | v1.1-digest-format.md | accepted |

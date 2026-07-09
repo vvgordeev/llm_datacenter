@@ -14,6 +14,18 @@
 .theses li { margin: 12px 0; color: var(--ink-2); }
 .theses b { color: var(--ink); }
 
+/* нарративный формат (v1.1): связный текст, таймкоды и кадры в потоке */
+.note-body p { font-size: 15px; line-height: 1.7; color: var(--ink-2); margin: 14px 0; }
+.note-body p b, .note-body p strong { color: var(--ink); }
+.note-body a.ts {
+  color: var(--accent); text-decoration: none; font-variant-numeric: tabular-nums;
+  font-size: 13px; white-space: nowrap;
+}
+.note-body a.ts:hover { text-decoration: underline; }
+.inline-frame { margin: 20px 0; }
+.inline-frame img { width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+.inline-frame figcaption { font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+
 .scheme {
   margin: 0; padding: 20px;
   background: var(--surface); border: 1px solid var(--border); border-radius: 14px;

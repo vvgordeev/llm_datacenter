@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: скиллы v1.1 Матта Покока — Wayfinder и полный цикл разработки — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Matt Pocock · 2026-07-08 · 15 мин</span>
+      <span data-lang="en">Video digest · Matt Pocock · 2026-07-08 · 15 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Скиллы v1.1: /wayfinder, /research, /implement — полный цикл разработки с агентом</span>
+      <span data-lang="en">Skills v1.1: /wayfinder, /research, /implement — a full agent development cycle</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=A8mokin_YOs" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Матт Покок (создатель Total TypeScript, теперь один из самых методичных авторов по агентной разработке) выпустил v1.1 своего открытого репозитория скиллов. Релиз превращает набор разрозненных приёмов в <b>полный жизненный цикл разработки с агентом</b>, и его стоит разобрать как целостный метод — от размытой идеи до закоммиченного кода <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=0">[00:00]</a>.</span>
+      <span data-lang="en">Matt Pocock (creator of Total TypeScript, now one of the most methodical voices on agentic development) shipped v1.1 of his open skills repo. The release turns a set of scattered techniques into a <b>complete agent-driven development lifecycle</b>, worth unpacking as one method — from a fuzzy idea to committed code <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=0">[00:00]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: пять шагов вместо plan mode</span><span data-lang="en">The method: five steps instead of plan mode</span></h2>
+    <p>
+      <span data-lang="ru">Основной поток такой: вместо плана агент сначала <b>«гриллит» вас</b> — задаёт вопросы по одному, собирая глоссарий и архитектурные решения в документы (/grill-with-docs). Из этих документов рождается <b>спецификация</b> (/to-spec — переименован из /to-prd: «мы создавали не PRD, а спеку» <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=63">[01:03]</a>), спека нарезается на <b>тикеты</b> размером в одну агентную сессию (/to-tickets), каждый тикет выполняется скиллом <b>/implement</b> — «TDD на заранее согласованных швах, тайпчек регулярно, полный прогон тестов один раз в конце» <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=298">[04:58]</a> — и завершается ревью и коммитом <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=267">[04:27]</a>.</span>
+      <span data-lang="en">The main flow: instead of plan mode, the agent first <b>"grills" you</b> — asking questions one at a time while capturing a glossary and architecture decisions into docs (/grill-with-docs). Those docs become a <b>spec</b> (/to-spec — renamed from /to-prd: "what we were creating wasn't a PRD, it was a spec" <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=63">[01:03]</a>), the spec is sliced into <b>tickets</b> sized to one agent session each (/to-tickets), every ticket is executed by <b>/implement</b> — "TDD at pre-agreed seams, type checks regularly, one full test sweep at the end" <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=298">[04:58]</a> — and finished with review and a commit <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=267">[04:27]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/skills-v1-1-wayfinder/000285.jpg" alt="The flow: grill-with-docs, to-spec, to-tickets, implement, code-review">
+      <figcaption>
+        <span data-lang="ru">04:45 — весь цикл на одном слайде: grill-with-docs → to-spec → to-tickets → implement → code-review.</span>
+        <span data-lang="en">04:45 — the whole cycle on one slide: grill-with-docs → to-spec → to-tickets → implement → code-review.</span>
+      </figcaption>
+    </figure>
+
+    <p>
+      <span data-lang="ru">Гриллинг в v1.1 стал надёжнее за счёт трёх точечных правок: объяснено, почему вопросы задаются строго по одному; добавлен «шлюз подтверждения» («не приступай к реализации, пока я не подтвержу общее понимание» — модели повадились перескакивать из вопросов прямо в код); и введено различие <b>фактов и решений</b>: факты агент добывает сам из кодовой базы, решения принимает только человек — без этого разграничения агент, особенно Fable, иногда «гриллил сам себя» <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=151">[02:31]</a>.</span>
+      <span data-lang="en">Grilling got more reliable in v1.1 via three surgical fixes: the skill now explains why questions come strictly one at a time; a confirmation gate was added ("do not enact the plan until I confirm shared understanding" — models had a habit of jumping from questions straight into code); and a distinction between <b>facts and decisions</b>: facts the agent digs out of the codebase itself, decisions belong to the human — without that split the agent, Fable especially, would occasionally "grill itself" <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=151">[02:31]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Код-ревью по «запахам» Фаулера</span><span data-lang="en">Code review via Fowler's smells</span></h2>
+    <p>
+      <span data-lang="ru">Скилл /code-review работает двумя параллельными субагентами-осями: первая проверяет соответствие кодстандартам репозитория (Покок советует держать их отдельным файлом, не в agents.md), вторая — соответствие исходной спеке <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=356">[05:56]</a>. Новинка v1.1 — список «запахов кода» из классического «Рефакторинга» Мартина Фаулера: mysterious name, duplicated code, feature envy, data clumps, message chains… Книга настолько глубоко в обучающих данных, что достаточно назвать запах одной строкой — и агент начинает сам находить и называть их в дифе: «нашёл message chains — уберу». Автор тестировал пару недель: «возмутительно полезно» при цене ~10 строк в скилле <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=418">[06:58]</a>.</span>
+      <span data-lang="en">The /code-review skill runs two parallel subagent axes: one checks the repo's documented coding standards (Pocock keeps them in a separate file, not agents.md), the other checks conformance to the originating spec <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=356">[05:56]</a>. New in v1.1 is a list of code smells from Martin Fowler's classic "Refactoring": mysterious name, duplicated code, feature envy, data clumps, message chains… The book sits so deep in the training data that naming a smell in one line is enough — the agent starts spotting and naming them in the diff: "found message chains, removing them." After two weeks of testing: "outrageously useful" at the cost of ~10 lines in the skill <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=418">[06:58]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/skills-v1-1-wayfinder/000430.jpg" alt="Fowler smells in code-review SKILL.md">
+      <figcaption>
+        <span data-lang="ru">07:10 — запахи Фаулера в SKILL.md ревью: каждый описан парой «что это → как чинить».</span>
+        <span data-lang="en">07:10 — Fowler smells in the review SKILL.md: each described as "what it is → how to fix."</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Wayfinder: карта для идей, не влезающих в одну сессию</span><span data-lang="en">Wayfinder: a map for ideas too big for one session</span></h2>
+    <p>
+      <span data-lang="ru">Главная новинка — <b>/wayfinder</b>, замена гриллингу для случаев, когда «идея пришла размытой и слишком большой для одной агентной сессии: путь к цели ещё не виден» <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=477">[07:57]</a>. Скилл строит <b>общую карту в трекере</b> (GitHub issues): главный issue — карта, под-issues — решения, которые предстоит принять, с блокирующими связями между ними. Каждый под-issue скроен под размер одной сессии и типизирован: <i>research</i> (агент уходит «в фон» и возвращается с фактами), <i>grilling</i> (нужен диалог с человеком), <i>prototype</i> (дешёвый черновик UI или логики — «поднять точность обсуждения конкретным артефактом», обязателен для фронтенда) и <i>task</i> (скучная ручная работа вроде доступов) <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=572">[09:32]</a>. Закрывая тикеты один за другим, вы наполняете карту решениями — а когда туман рассеялся, карта обычным путём превращается в спеку. Бонус: всё живёт в GitHub, а значит — переживает сессии и доступно команде <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=661">[11:01]</a>.</span>
+      <span data-lang="en">The headline feature is <b>/wayfinder</b>, replacing grilling when "a loose idea has arrived, too big for one agent session and wrapped in fog: the way to the destination isn't visible yet" <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=477">[07:57]</a>. The skill charts a <b>shared map in the tracker</b> (GitHub issues): a parent issue is the map, sub-issues are the decisions still to be made, with blocking relationships between them. Each sub-issue is scoped to one session and typed: <i>research</i> (an AFK background task returning facts), <i>grilling</i> (needs a human dialogue), <i>prototype</i> (a cheap rough artifact of UI or logic — "raise the fidelity of the discussion," essential for frontend work), and <i>task</i> (boring manual work like provisioning) <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=572">[09:32]</a>. Closing tickets one by one fills the map with decisions — and once the fog clears, the map becomes a spec the usual way. Bonus: it all lives in GitHub, so it survives sessions and is shareable with a team <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=661">[11:01]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/skills-v1-1-wayfinder/000555.jpg" alt="Wayfinder map as GitHub issue with sub-issues">
+      <figcaption>
+        <span data-lang="ru">09:15 — живая Wayfinder-карта: issue-карта спайка про AI SDK и под-issues-решения с блокирующими связями.</span>
+        <span data-lang="en">09:15 — a live Wayfinder map: the AI SDK spike's map issue and decision sub-issues with blocking relationships.</span>
+      </figcaption>
+    </figure>
+
+    <p>
+      <span data-lang="ru">В поддержку добавлены компактные /research (фоновый агент исследует вопрос по первоисточникам и складывает заметку в принятое в репозитории место) и /prototype (выбор: прототип логики или UI) <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=689">[11:29]</a>. Общий вывод: ценность репозитория Покока не в конкретных файлах, а в декомпозиции работы с агентом на воспроизводимые этапы, каждый из которых умещается в «зону ума» одной сессии — тот же принцип, что двигает наш собственный пайплайн.</span>
+      <span data-lang="en">Supporting them are the compact /research (a background agent investigates a question against primary sources and saves a note where the repo keeps such notes) and /prototype (choose: logic or UI prototype) <a class="ts" href="https://www.youtube.com/watch?v=A8mokin_YOs&t=689">[11:29]</a>. The broader takeaway: the value of Pocock's repo isn't the specific files but the decomposition of agent work into reproducible stages, each fitting the "smart zone" of a single session — the same principle behind our own pipeline.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по субтитрам; кадры извлечены по таймкодам, отобранным из транскрипта.</span>
+      <span data-lang="en">Digest built from subtitles; frames extracted at timestamps picked from the transcript.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

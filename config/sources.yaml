@@ -88,7 +88,8 @@ aggregators:
 
 limits:
   max_news_items: 12        # карточек новостей в дневной сводке
-  max_articles_per_day: 3   # конспектов статей
-  max_videos_per_day: 3     # конспектов видео (лимит Gemini free tier)
+  min_expert_total: 5       # минимум статей+видео суммарно (v1.1)
+  max_articles_per_day: 4   # конспектов статей
+  max_videos_per_day: 4     # конспектов видео (лимит Gemini free tier)
   max_frames_per_video: 6   # кадров на видео
   lookback_hours: 36        # окно сбора (перекрытие с прошлым днём гасится дедупом)

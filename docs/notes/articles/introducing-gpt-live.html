@@ -18,7 +18,7 @@
     </div>
   </header>
 
-  <main class="note">
+  <main class="note note-body">
     <p class="note-kicker">
       <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-08</span>
       <span data-lang="en">Article digest · Simon Willison · 2026-07-08</span>
@@ -33,31 +33,21 @@
       </a>
     </p>
 
-    <h2><span data-lang="ru">Ключевые тезисы</span><span data-lang="en">Key theses</span></h2>
-    <ol class="theses">
-      <li>
-        <span data-lang="ru"><b>Первое реальное обновление голосового режима ChatGPT.</b> Уиллисон несколько недель пользовался превью-доступом в приложении для iPhone и называет GPT-Live «очень впечатляющим» — старый голосовой режим не менялся содержательно с запуска.</span>
-        <span data-lang="en"><b>The first real upgrade to ChatGPT voice mode.</b> Willison had preview access in the iPhone app for a few weeks and calls GPT-Live "very impressive" — the old voice mode hadn't meaningfully changed since launch.</span>
-      </li>
-      <li>
-        <span data-lang="ru"><b>Старая модель «застряла» в 2024-м.</b> Прежний голосовой режим работал на модели эпохи GPT-4o со срезом знаний примерно середины 2024 года — из-за этого Уиллисон почти перестал использовать голос как партнёра для обсуждения идей: модель была слишком слабой и устаревшей.</span>
-        <span data-lang="en"><b>The old model was stuck in 2024.</b> The previous voice mode ran on a GPT-4o-era model with a knowledge cutoff around mid-2024 — that staleness made it a weak brainstorming partner, so Willison had mostly stopped using voice mode at all.</span>
-      </li>
-      <li>
-        <span data-lang="ru"><b>Архитектура: быстрая голосовая модель + делегирование в фоне.</b> GPT-Live ведёт живой диалог сама, но незаметно передаёт вопросы, требующие поиска, глубокого рассуждения или кода, модели GPT-5.5 в фоне — и вплетает готовый ответ в разговор, не прерывая его.</span>
-        <span data-lang="en"><b>Architecture: a fast voice model plus background delegation.</b> GPT-Live handles the live conversation itself, but quietly hands off questions that need search, deeper reasoning, or code to GPT-5.5 in the background — then folds the finished answer back into the conversation without breaking its flow.</span>
-      </li>
-      <li>
-        <span data-lang="ru"><b>Backend будет обновляться отдельно от голоса.</b> OpenAI обещает и дальше подставлять за GPT-Live новые frontier-модели по мере выхода — то есть «мозг» будет умнеть без изменения самого голосового интерфейса.</span>
-        <span data-lang="en"><b>The backend will keep upgrading independently of the voice.</b> OpenAI says it will keep swapping newer frontier models in behind GPT-Live as they ship — the "brain" gets smarter without changing the voice interface itself.</span>
-      </li>
-    </ol>
+    <p>
+      <span data-lang="ru">Саймон Уиллисон несколько недель пользовался превью GPT-Live в iPhone-приложении ChatGPT и называет это первым содержательным обновлением голосового режима с момента его запуска. До сих пор голос работал на модели эпохи GPT-4o со срезом знаний середины 2024 года — и именно эта устарелость, по его признанию, убила привычку «обсуждать идеи вслух»: собеседник был слишком слабым. GPT-Live возвращает голосу смысл — теперь это, по его словам, «очень впечатляюще».</span>
+      <span data-lang="en">Simon Willison spent a few weeks with the GPT-Live preview in the ChatGPT iPhone app and calls it the first meaningful upgrade to voice mode since it launched. Until now, voice ran on a GPT-4o-era model with a mid-2024 knowledge cutoff — and that staleness, he admits, killed his habit of thinking out loud with it: the conversation partner was simply too weak. GPT-Live makes voice worth using again — in his words, "very impressive."</span>
+    </p>
 
-    <h2><span data-lang="ru">Схема</span><span data-lang="en">Diagram</span></h2>
+    <h2><span data-lang="ru">Как это устроено: делегирование за кулисами</span><span data-lang="en">How it works: backstage delegation</span></h2>
+    <p>
+      <span data-lang="ru">Главная идея GPT-Live — архитектурная, и она шире голосового режима. Живой диалог ведёт быстрая специализированная голосовая модель: она отвечает мгновенно, переносит перебивания и держит естественный темп речи. Но как только в разговоре возникает вопрос, требующий поиска, глубокого рассуждения или кода, она <b>молча делегирует его GPT-5.5 в фоне</b> — а когда ответ готов, вплетает его обратно в беседу, не прерывая её. Пользователь не видит шва: для него это один собеседник, который «на лету стал умнее». OpenAI обещает и дальше подставлять за интерфейсом новые frontier-модели по мере их выхода — «мозг» будет обновляться без изменения самого голоса и без релизов приложения.</span>
+      <span data-lang="en">The core idea of GPT-Live is architectural, and it reaches beyond voice. A fast, specialized voice model runs the live conversation: it answers instantly, survives interruptions, and keeps a natural speech rhythm. But the moment the conversation needs search, deeper reasoning, or code, it <b>quietly delegates to GPT-5.5 in the background</b> — and when the answer is ready, folds it back into the dialogue without breaking flow. The user never sees the seam: it feels like one conversation partner who just got smarter mid-sentence. OpenAI says it will keep swapping newer frontier models in behind the interface as they ship — the "brain" upgrades without touching the voice itself or requiring app releases.</span>
+    </p>
+
     <figure class="scheme">
-      <svg viewBox="0 0 640 200" role="img" aria-label="GPT-Live delegation architecture">
+      <svg viewBox="0 0 640 150" role="img" aria-label="GPT-Live architecture">
         <style>
-          .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 8; }
+          .box { fill: none; stroke: currentColor; stroke-width: 1.5; }
           .lbl { font: 13px system-ui, sans-serif; fill: currentColor; }
           .sub { font: 11px system-ui, sans-serif; fill: currentColor; opacity: .6; }
           .arr { stroke: currentColor; stroke-width: 1.5; marker-end: url(#ah3); }
@@ -67,26 +57,27 @@
             <path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor"/>
           </marker>
         </defs>
-        <rect class="box" x="16" y="70" width="200" height="60" rx="8"/>
-        <text class="lbl" x="116" y="95" text-anchor="middle">Пользователь ↔ GPT-Live</text>
-        <text class="sub" x="116" y="115" text-anchor="middle">живой диалог не прерывается</text>
-        <line class="arr" x1="216" y1="100" x2="300" y2="100"/>
-        <rect class="box" x="300" y="70" width="200" height="60" rx="8"/>
-        <text class="lbl" x="400" y="95" text-anchor="middle">GPT-5.5 в фоне</text>
-        <text class="sub" x="400" y="115" text-anchor="middle">поиск, рассуждение, код</text>
-        <line class="arr" x1="400" y1="70" x2="400" y2="34"/>
-        <text class="sub" x="400" y="20" text-anchor="middle">результат вплетается обратно в разговор</text>
+        <rect class="box" x="12" y="45" width="170" height="60" rx="8"/>
+        <text class="lbl" x="97" y="70" text-anchor="middle">Пользователь ↔ GPT-Live</text>
+        <text class="sub" x="97" y="88" text-anchor="middle">живой диалог не прерывается</text>
+        <line class="arr" x1="182" y1="65" x2="392" y2="65"/>
+        <line class="arr" x1="392" y1="85" x2="182" y2="85"/>
+        <rect class="box" x="392" y="45" width="160" height="60" rx="8"/>
+        <text class="lbl" x="472" y="70" text-anchor="middle">GPT-5.5 в фоне</text>
+        <text class="sub" x="472" y="88" text-anchor="middle">поиск, рассуждение, код</text>
+        <text class="sub" x="287" y="55" text-anchor="middle">сложный вопрос →</text>
+        <text class="sub" x="287" y="103" text-anchor="middle">← ответ вплетается в разговор</text>
       </svg>
       <figcaption>
-        <span data-lang="ru">Голосовая модель остаётся быстрой и «разговорчивой», а сложную работу молча передаёт текущей frontier-модели за кулисами.</span>
-        <span data-lang="en">The voice model stays fast and conversational, quietly delegating hard work to whichever frontier model is behind the scenes.</span>
+        <span data-lang="ru">Голосовая модель остаётся быстрой и «разговорчивой», а трудную работу молча передаёт текущей frontier-модели за кулисами.</span>
+        <span data-lang="en">The voice model stays fast and conversational while quietly handing hard work to whatever frontier model sits backstage.</span>
       </figcaption>
     </figure>
 
     <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
     <p>
-      <span data-lang="ru">Паттерн «маленькая быстрая модель ведёт интерфейс, крупная модель решает трудное в фоне» — не специфика голоса: это общий рецепт для любого агентного продукта, где задержка ответа критична, а качество рассуждения — тоже. Обновления backend'а отделены от смены интерфейса, поэтому голос будет становиться умнее сам, без релизов приложения. См. новость о запуске GPT-Live в сводке за этот день.</span>
-      <span data-lang="en">The pattern — "a small fast model runs the interface, a large model solves the hard part in the background" — isn't voice-specific: it's a general recipe for any agentic product where response latency and reasoning quality both matter. Backend upgrades are decoupled from the interface, so voice keeps getting smarter without app releases. See this digest's GPT-Live launch item.</span>
+      <span data-lang="ru">Паттерн «маленькая быстрая модель ведёт интерфейс, крупная решает трудное в фоне» — общий рецепт для любого агентного продукта, где одновременно критичны задержка ответа и качество рассуждения: голосовые ассистенты, лайв-чаты, копайлоты в IDE. Разделение интерфейса и «мозга» также означает, что качество продукта растёт с каждым релизом frontier-моделей автоматически. Новость о самом запуске GPT-Live — в сводке за этот день; здесь — конспект впечатлений из первых рук.</span>
+      <span data-lang="en">The pattern — "a small fast model runs the interface, a large one solves the hard parts in the background" — is a general recipe for any agentic product where response latency and reasoning quality both matter: voice assistants, live chats, IDE copilots. Decoupling the interface from the "brain" also means product quality improves automatically with every frontier-model release. The GPT-Live launch item is in this day's digest; this page digests the first-hand account.</span>
     </p>
   </main>
 

@@ -3,7 +3,7 @@
     {
       "date": "2026-07-09",
       "news_count": 4,
-      "expert_count": 2,
+      "expert_count": 5,
       "top_title": {
         "ru": "xAI выпускает Grok 4.5, обученную вместе с Cursor, — кратно дешевле Opus 4.8 по токенам",
         "en": "xAI launches Grok 4.5, trained alongside Cursor, at a fraction of Opus 4.8's token cost"
