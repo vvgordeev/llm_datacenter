@@ -92,6 +92,7 @@ body {
 .header-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .live-indicator { display: flex; align-items: center; gap: 8px; font-family: var(--font-ui); font-size: 13px; letter-spacing: 2px; color: var(--color-semantic-success); text-transform: uppercase; }
 .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-semantic-success); animation: nr-pulse 2s ease-in-out infinite; }
+.live-meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0; color: var(--color-text-secondary); text-transform: none; }
 .ctrl-btn, .date-select {
   font-family: var(--font-ui); font-weight: 600; letter-spacing: 1px; font-size: 14px;
   background: transparent; color: var(--color-text-primary);
@@ -153,9 +154,8 @@ body {
 .section-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; letter-spacing: 2px; color: var(--color-brand-cyan); margin: 26px 0 4px; }
 .section-subtitle { font-family: var(--font-ui); font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 16px; }
 
-/* панель под заголовком: дата (в режиме «День») + фильтры по моделям */
-.toolbar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 22px; }
-.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+/* фильтры по моделям */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .model-chip {
   font-family: var(--font-ui); font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
   background: transparent; color: var(--color-text-secondary);

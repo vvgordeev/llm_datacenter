@@ -20,7 +20,8 @@
       </div>
     </div>
     <div class="header-right">
-      <span class="live-indicator"><span class="live-dot"></span><span data-i18n="live"></span></span>
+      <span class="live-indicator"><span class="live-dot"></span><span data-i18n="live"></span><span class="live-meta" id="live-meta"></span></span>
+      <select id="date-select" class="date-select" aria-label="date"></select>
       <span class="period-pills">
         <button class="pill active" data-view="day" data-i18n="view_day"></button>
         <button class="pill" data-view="week" data-i18n="view_week"></button>
@@ -55,10 +56,7 @@
   <div class="page active" id="page-radar">
     <h2 class="section-title" data-i18n="radar_title"></h2>
     <div class="section-subtitle" data-i18n="radar_sub"></div>
-    <div class="toolbar">
-      <select id="date-select" class="date-select" aria-label="date"></select>
-      <div class="filters" id="model-filters"></div>
-    </div>
+    <div class="filters" id="model-filters"></div>
     <div class="card-grid" id="news-grid"></div>
   </div>
 

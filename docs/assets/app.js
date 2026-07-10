@@ -190,10 +190,23 @@ function renderChrome() {
   document.querySelectorAll(".nav-btn").forEach(b => b.classList.toggle("active", b.dataset.page === state.pageTab));
   document.querySelectorAll(".pill").forEach(b => b.classList.toggle("active", b.dataset.view === state.view));
   document.querySelectorAll(".page").forEach(p => p.classList.toggle("active", p.id === "page-" + state.pageTab));
+  // селектор даты виден всегда: в «Дне» — выбор дня, в «Неделе»/«Месяце» — конец периода
   const sel = document.getElementById("date-select");
   sel.innerHTML = state.index.days.map(d =>
     `<option value="${d.date}" ${d.date === state.date ? "selected" : ""}>${d.date}</option>`).join("");
-  sel.style.display = state.view === "day" ? "" : "none";
+}
+
+async function renderLiveMeta() {
+  // дата и время последнего обновления — generated_at свежайшего дневного файла
+  const newest = state.index.days[0];
+  if (!newest) return;
+  const day = await loadDay(newest.date);
+  if (!day || !day.generated_at) return;
+  const dt = new Date(day.generated_at);
+  document.getElementById("live-meta").textContent = dt.toLocaleString(
+    state.lang === "ru" ? "ru-RU" : "en-GB",
+    { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }
+  );
 }
 
 function renderFilters(allModels) {
@@ -209,6 +222,7 @@ function renderFilters(allModels) {
 
 async function render() {
   renderChrome();
+  renderLiveMeta();
   let dates;
   if (state.view === "day") dates = [state.date];
   else if (state.view === "week") dates = datesInPeriod(state.date, 7);
