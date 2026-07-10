@@ -152,7 +152,7 @@ body {
 .section-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; letter-spacing: 2px; color: var(--color-brand-cyan); margin: 26px 0 4px; }
 .section-subtitle { font-family: var(--font-ui); font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 22px; }
 
-.period-pills { display: inline-flex; gap: 6px; margin-left: 18px; vertical-align: middle; }
+.period-pills { display: inline-flex; gap: 6px; vertical-align: middle; }
 .pill {
   font-family: var(--font-ui); font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
   background: transparent; color: var(--color-text-secondary);
@@ -265,6 +265,11 @@ body {
     </div>
     <div class="header-right">
       <span class="live-indicator"><span class="live-dot"></span><span data-i18n="live"></span></span>
+      <span class="period-pills">
+        <button class="pill active" data-view="day" data-i18n="view_day"></button>
+        <button class="pill" data-view="week" data-i18n="view_week"></button>
+        <button class="pill" data-view="month" data-i18n="view_month"></button>
+      </span>
       <select id="date-select" class="date-select" aria-label="date"></select>
       <button id="lang-toggle" class="ctrl-btn">RU</button>
       <button id="theme-toggle" class="ctrl-btn" aria-label="theme">◐</button>
@@ -293,13 +298,7 @@ body {
 
 <main class="main-content">
   <div class="page active" id="page-radar">
-    <h2 class="section-title"><span data-i18n="radar_title"></span>
-      <span class="period-pills">
-        <button class="pill active" data-view="day" data-i18n="view_day"></button>
-        <button class="pill" data-view="week" data-i18n="view_week"></button>
-        <button class="pill" data-view="month" data-i18n="view_month"></button>
-      </span>
-    </h2>
+    <h2 class="section-title"><span data-i18n="radar_title"></span></h2>
     <div class="section-subtitle" data-i18n="radar_sub"></div>
     <div class="card-grid" id="news-grid"></div>
   </div>
