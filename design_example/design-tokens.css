@@ -1,0 +1,272 @@
+/* ============================================================
+   Neural Radar — Design Tokens (CSS Custom Properties)
+   Generated: 2026-07-07
+   Format: CSS Variables + Light/Dark Theme Support
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ─────────────────────────────────────────────────────────────
+   CORE TOKENS — Dark Theme (Default)
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Brand Colors ── */
+  --color-brand-cyan:        #00f0ff;
+  --color-brand-cyan-dim:    #00a8b5;
+  --color-brand-cyan-glow:   #00e5ff;
+  --color-brand-violet:      #8b5cf6;
+  --color-brand-violet-glow: #a855f7;
+  --color-brand-pink:        #ff006e;
+  --color-brand-amber:       #ffaa00;
+
+  /* ── Semantic Colors ── */
+  --color-semantic-danger:   #ff3860;
+  --color-semantic-warning:  #ffaa00;
+  --color-semantic-success:  #00e676;
+  --color-semantic-info:     #00f0ff;
+
+  /* ── Background Colors (Dark) ── */
+  --color-bg-primary:        #06060a;
+  --color-bg-secondary:      #0c0c18;
+  --color-bg-card:           rgba(20, 20, 40, 0.7);
+  --color-bg-card-hover:     rgba(30, 30, 60, 0.8);
+
+  /* ── Text Colors (Dark) ── */
+  --color-text-primary:      #e0e0f0;
+  --color-text-secondary:    #8899aa;
+  --color-text-muted:        #556677;
+
+  /* ── Border Colors (Dark) ── */
+  --color-border-default:    rgba(0, 240, 255, 0.15);
+  --color-border-glow:       rgba(0, 240, 255, 0.25);
+
+  /* ── Typography ── */
+  --font-display:  'Orbitron', sans-serif;
+  --font-ui:       'Rajdhani', sans-serif;
+  --font-body:     'Inter', sans-serif;
+  --font-mono:     'JetBrains Mono', monospace;
+
+  /* ── Font Sizes ── */
+  --font-size-hero:        3.5rem;
+  --font-size-h1:          1.8rem;
+  --font-size-h2:          1.1rem;
+  --font-size-body:        0.9rem;
+  --font-size-small:       0.8rem;
+  --font-size-xs:          0.75rem;
+  --font-size-stat:        2rem;
+  --font-size-impact:      0.85rem;
+
+  /* ── Font Weights ── */
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-heavy:     900;
+
+  /* ── Line Heights ── */
+  --line-height-tight:     1.2;
+  --line-height-normal:    1.4;
+  --line-height-loose:     1.6;
+  --line-height-relaxed:   1.7;
+
+  /* ── Letter Spacing ── */
+  --letter-spacing-tight:     0;
+  --letter-spacing-normal:    1px;
+  --letter-spacing-wide:      2px;
+  --letter-spacing-extra-wide: 3px;
+
+  /* ── Spacing Scale ── */
+  --space-0:   0;
+  --space-xs:  0.25rem;   /* 4px  */
+  --space-sm:  0.5rem;    /* 8px  */
+  --space-md:  1rem;      /* 16px */
+  --space-lg:  1.5rem;    /* 24px */
+  --space-xl:  2rem;      /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+
+  /* ── Border Radius ── */
+  --radius-none:     0;
+  --radius-sm:       4px;
+  --radius-md:       8px;
+  --radius-lg:       10px;
+  --radius-xl:       12px;
+  --radius-2xl:      14px;
+  --radius-pill:     9999px;
+  --radius-circular: 50%;
+
+  /* ── Border Width ── */
+  --border-width-thin:    1px;
+  --border-width-medium:  2px;
+  --border-width-thick:   3px;
+
+  /* ── Shadows ── */
+  --shadow-card:        0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-card-light:  0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-card-rest:   0 2px 12px rgba(0, 0, 0, 0.04);
+  --shadow-glow:        0 0 20px rgba(0, 240, 255, 0.1);
+  --shadow-glow-strong: 0 0 40px rgba(0, 240, 255, 0.2);
+
+  /* ── Animation ── */
+  --duration-fast:     0.2s;
+  --duration-normal:   0.3s;
+  --duration-slow:     0.5s;
+  --duration-entrance: 0.4s;
+
+  --easing-default:  cubic-bezier(0.3, 0, 0.2, 1);
+  --easing-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --easing-smooth:   cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-linear:   cubic-bezier(0, 0, 1, 1);
+
+  /* ── Layout ── */
+  --container-max-width: 1600px;
+  --container-padding:   2rem;
+  --header-height:       70px;
+  --nav-height:          50px;
+  --grid-card-min:       380px;
+  --grid-card-gap:       1.5rem;
+
+  /* ── Z-Index Scale ── */
+  --z-background: -1;
+  --z-content:     1;
+  --z-nav:       999;
+  --z-header:   1000;
+  --z-modal:    2000;
+
+  /* ── Backdrop Filters ── */
+  --backdrop-nav:   blur(15px);
+  --backdrop-header: blur(20px);
+  --backdrop-card:  blur(10px);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LIGHT THEME OVERRIDE
+   Activated via: <html data-theme="light">
+   ───────────────────────────────────────────────────────────── */
+
+[data-theme="light"] {
+  /* ── Background (Light) ── */
+  --color-bg-primary:      #f5f7fa;
+  --color-bg-secondary:    rgba(255, 255, 255, 0.92);
+  --color-bg-card:         rgba(255, 255, 255, 0.9);
+  --color-bg-card-hover:   rgba(255, 255, 255, 0.95);
+
+  /* ── Text (Light) ── */
+  --color-text-primary:    #1a1a2e;
+  --color-text-secondary:  #4a4a6a;
+  --color-text-muted:      #8a8aa0;
+
+  /* ── Border (Light) ── */
+  --color-border-default:  rgba(0, 0, 0, 0.06);
+  --color-border-glow:     rgba(0, 0, 0, 0.1);
+
+  /* ── Shadows (Light) ── */
+  --shadow-card:           0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   VENDOR BRAND COLORS
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --vendor-openai-bg:      linear-gradient(135deg, #10a37f, #0d8a6a);
+  --vendor-openai-color:   #10a37f;
+
+  --vendor-anthropic-bg:   linear-gradient(135deg, #d4a574, #c49360);
+  --vendor-anthropic-color:#d4a574;
+
+  --vendor-google-bg:      linear-gradient(135deg, #4285f4, #3367d6);
+  --vendor-google-color:   #4285f4;
+
+  --vendor-meta-bg:        linear-gradient(135deg, #0668e1, #0552b3);
+  --vendor-meta-color:     #0668e1;
+
+  --vendor-xai-bg:         linear-gradient(135deg, #1d9bf0, #1a8cd8);
+  --vendor-xai-color:      #1d9bf0;
+
+  --vendor-deepseek-bg:    linear-gradient(135deg, #4f46e5, #4338ca);
+  --vendor-deepseek-color: #4f46e5;
+
+  --vendor-mistral-bg:     linear-gradient(135deg, #ff6b6b, #ee5a5a);
+  --vendor-mistral-color:  #ff6b6b;
+
+  --vendor-alibaba-bg:     linear-gradient(135deg, #ff5000, #e64900);
+  --vendor-alibaba-color:  #ff5000;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   KEYFRAME DEFINITIONS
+   ───────────────────────────────────────────────────────────── */
+
+@keyframes nr-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.5; transform: scale(1.2); }
+}
+
+@keyframes nr-radar-sweep {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes nr-radar-pulse {
+  0%, 100% { box-shadow: 0 0 20px var(--color-brand-cyan), 0 0 40px var(--color-brand-cyan); }
+  50%      { box-shadow: 0 0 30px var(--color-brand-cyan), 0 0 60px var(--color-brand-cyan); }
+}
+
+@keyframes nr-float-orb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(50px, -30px) scale(1.1); }
+  66%      { transform: translate(-30px, 50px) scale(0.9); }
+}
+
+@keyframes nr-grid-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 0.8; }
+}
+
+@keyframes nr-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nr-sweep-line {
+  0%   { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   UTILITY CLASSES
+   ───────────────────────────────────────────────────────────── */
+
+.nr-animate-fade-in { animation: nr-fade-in var(--duration-entrance) var(--easing-smooth); }
+.nr-animate-pulse   { animation: nr-pulse 2s var(--easing-smooth) infinite; }
+.nr-animate-sweep   { animation: nr-radar-sweep 4s linear infinite; }
+
+/* ─────────────────────────────────────────────────────────────
+   CSS RESET OVERRIDES (apply to Neural Radar scope only)
+   ───────────────────────────────────────────────────────────── */
+
+.nr-scope {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+  line-height: var(--line-height-loose);
+}
+
+.nr-scope ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.nr-scope ::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+.nr-scope ::-webkit-scrollbar-thumb {
+  background: var(--color-border-default);
+  border-radius: var(--radius-sm);
+}
+
+.nr-scope ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-cyan-dim);
+}

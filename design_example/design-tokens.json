@@ -1,0 +1,360 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/schemas/",
+  "_meta": {
+    "name": "Neural Radar Design Tokens",
+    "version": "1.0.0",
+    "description": "Design token system for the Neural Radar LLM Intelligence Dashboard",
+    "author": "Neural Radar Team",
+    "created": "2026-07-07"
+  },
+
+  "color": {
+    "brand": {
+      "cyan": {
+        "base":  { "$type": "color", "$value": "#00f0ff", "$description": "Primary brand accent" },
+        "dim":   { "$type": "color", "$value": "#00a8b5", "$description": "Muted cyan for secondary text" },
+        "glow":  { "$type": "color", "$value": "#00e5ff", "$description": "Glow/ring accent" }
+      },
+      "violet": {
+        "base":  { "$type": "color", "$value": "#8b5cf6", "$description": "Secondary brand accent" },
+        "glow":  { "$type": "color", "$value": "#a855f7", "$description": "Violet glow variant" }
+      },
+      "pink": {
+        "base":  { "$type": "color", "$value": "#ff006e", "$description": "Highlight/priority accent" }
+      },
+      "amber": {
+        "base":  { "$type": "color", "$value": "#ffaa00", "$description": "Warning / medium priority" }
+      }
+    },
+
+    "semantic": {
+      "danger":  { "$type": "color", "$value": "#ff3860", "$description": "Critical alerts, errors, P1 items" },
+      "warning": { "$type": "color", "$value": "#ffaa00", "$description": "High priority, warnings" },
+      "success": { "$type": "color", "$value": "#00e676", "$description": "Live indicator, success states" },
+      "info":    { "$type": "color", "$value": "#00f0ff", "$description": "Information, links" }
+    },
+
+    "dark": {
+      "bg": {
+        "primary":   { "$type": "color", "$value": "#06060a", "$description": "Main page background" },
+        "secondary": { "$type": "color", "$value": "#0c0c18", "$description": "Header/nav bar background" },
+        "card":      { "$type": "color", "$value": "rgba(20, 20, 40, 0.7)", "$description": "Card background" },
+        "cardHover": { "$type": "color", "$value": "rgba(30, 30, 60, 0.8)", "$description": "Card hover state" }
+      },
+      "text": {
+        "primary":   { "$type": "color", "$value": "#e0e0f0", "$description": "Headings, primary text" },
+        "secondary": { "$type": "color", "$value": "#8899aa", "$description": "Body text, descriptions" },
+        "muted":     { "$type": "color", "$value": "#556677", "$description": "Meta text, timestamps" }
+      },
+      "border": {
+        "default": { "$type": "color", "$value": "rgba(0, 240, 255, 0.15)", "$description": "Card borders, dividers" },
+        "glow":    { "$type": "color", "$value": "rgba(0, 240, 255, 0.25)", "$description": "Hover borders, focus states" }
+      }
+    },
+
+    "light": {
+      "bg": {
+        "primary":   { "$type": "color", "$value": "#f5f7fa", "$description": "Light mode page background" },
+        "secondary": { "$type": "color", "$value": "rgba(255, 255, 255, 0.92)", "$description": "Light mode header" },
+        "card":      { "$type": "color", "$value": "rgba(255, 255, 255, 0.9)", "$description": "Light mode card background" },
+        "cardHover": { "$type": "color", "$value": "rgba(255, 255, 255, 0.95)", "$description": "Light mode card hover" }
+      },
+      "text": {
+        "primary":   { "$type": "color", "$value": "#1a1a2e", "$description": "Light mode headings" },
+        "secondary": { "$type": "color", "$value": "#4a4a6a", "$description": "Light mode body" },
+        "muted":     { "$type": "color", "$value": "#8a8aa0", "$description": "Light mode meta" }
+      },
+      "border": {
+        "default": { "$type": "color", "$value": "rgba(0, 0, 0, 0.06)", "$description": "Light mode borders" },
+        "glow":    { "$type": "color", "$value": "rgba(0, 0, 0, 0.1)", "$description": "Light mode hover borders" }
+      }
+    }
+  },
+
+  "fontFamily": {
+    "display": { "$type": "fontFamily", "$value": ["Orbitron", "sans-serif"], "$description": "Logo, section titles, stat values — futuristic tech feel" },
+    "ui":      { "$type": "fontFamily", "$value": ["Rajdhani", "sans-serif"], "$description": "Nav, labels, badges, uppercase — military/sci-fi UI feel" },
+    "body":    { "$type": "fontFamily", "$value": ["Inter", "sans-serif"], "$description": "Body text, card descriptions — maximum readability" },
+    "mono":    { "$type": "fontFamily", "$value": ["JetBrains Mono", "monospace"], "$description": "Dates, scores, code snippets, impact values" }
+  },
+
+  "fontSize": {
+    "hero":       { "$type": "dimension", "$value": "3.5rem", "$description": "Hero title (NEURAL RADAR)" },
+    "h1":         { "$type": "dimension", "$value": "1.8rem", "$description": "Section titles" },
+    "h2":         { "$type": "dimension", "$value": "1.1rem", "$description": "Card titles" },
+    "body":       { "$type": "dimension", "$value": "0.9rem", "$description": "Body / card descriptions" },
+    "small":      { "$type": "dimension", "$value": "0.8rem", "$description": "Footers, timestamps" },
+    "xs":         { "$type": "dimension", "$value": "0.75rem", "$description": "Tags, badges, labels" },
+    "statValue":  { "$type": "dimension", "$value": "2rem", "$description": "Hero stat numbers" },
+    "impactScore":{ "$type": "dimension", "$value": "0.85rem", "$description": "Impact score ring text" }
+  },
+
+  "fontWeight": {
+    "regular":  { "$type": "fontWeight", "$value": 400 },
+    "medium":   { "$type": "fontWeight", "$value": 500 },
+    "semibold": { "$type": "fontWeight", "$value": 600 },
+    "bold":     { "$type": "fontWeight", "$value": 700 },
+    "heavy":    { "$type": "fontWeight", "$value": 900 }
+  },
+
+  "lineHeight": {
+    "tight":  { "$type": "dimension", "$value": "1.2" },
+    "normal": { "$type": "dimension", "$value": "1.4" },
+    "loose":  { "$type": "dimension", "$value": "1.6" },
+    "relaxed":{ "$type": "dimension", "$value": "1.7" }
+  },
+
+  "letterSpacing": {
+    "tight":    { "$type": "dimension", "$value": "0" },
+    "normal":   { "$type": "dimension", "$value": "1px" },
+    "wide":     { "$type": "dimension", "$value": "2px" },
+    "extraWide":{ "$type": "dimension", "$value": "3px", "$description": "Hero subtitle, section subtitles" }
+  },
+
+  "textTransform": {
+    "uppercase": { "$type": "string", "$value": "uppercase", "$description": "Tags, badges, labels, subtitles" },
+    "none":      { "$type": "string", "$value": "none" }
+  },
+
+  "spacing": {
+    "0":  { "$type": "dimension", "$value": "0" },
+    "xs": { "$type": "dimension", "$value": "0.25rem", "$description": "4px" },
+    "sm": { "$type": "dimension", "$value": "0.5rem", "$description": "8px" },
+    "md": { "$type": "dimension", "$value": "1rem", "$description": "16px" },
+    "lg": { "$type": "dimension", "$value": "1.5rem", "$description": "24px" },
+    "xl": { "$type": "dimension", "$value": "2rem", "$description": "32px" },
+    "2xl":{ "$type": "dimension", "$value": "3rem", "$description": "48px" },
+    "3xl":{ "$type": "dimension", "$value": "4rem", "$description": "64px" }
+  },
+
+  "borderRadius": {
+    "none":    { "$type": "dimension", "$value": "0" },
+    "sm":      { "$type": "dimension", "$value": "4px" },
+    "md":      { "$type": "dimension", "$value": "8px" },
+    "lg":      { "$type": "dimension", "$value": "10px" },
+    "xl":      { "$type": "dimension", "$value": "12px" },
+    "2xl":     { "$type": "dimension", "$value": "14px" },
+    "pill":    { "$type": "dimension", "$value": "9999px" },
+    "circular":{ "$type": "dimension", "$value": "50%" }
+  },
+
+  "borderWidth": {
+    "thin":   { "$type": "dimension", "$value": "1px" },
+    "medium": { "$type": "dimension", "$value": "2px" },
+    "thick":  { "$type": "dimension", "$value": "3px" }
+  },
+
+  "shadow": {
+    "card": {
+      "$type": "shadow",
+      "$value": {
+        "color": "rgba(0, 0, 0, 0.4)",
+        "offsetX": "0px",
+        "offsetY": "8px",
+        "blur": "32px",
+        "spread": "0px"
+      },
+      "$description": "Card hover elevation (dark mode)"
+    },
+    "cardLight": {
+      "$type": "shadow",
+      "$value": {
+        "color": "rgba(0, 0, 0, 0.08)",
+        "offsetX": "0px",
+        "offsetY": "8px",
+        "blur": "32px",
+        "spread": "0px"
+      },
+      "$description": "Card hover elevation (light mode)"
+    },
+    "cardRest": {
+      "$type": "shadow",
+      "$value": {
+        "color": "rgba(0, 0, 0, 0.04)",
+        "offsetX": "0px",
+        "offsetY": "2px",
+        "blur": "12px",
+        "spread": "0px"
+      },
+      "$description": "Card rest state (light mode)"
+    },
+    "glow": {
+      "$type": "shadow",
+      "$value": {
+        "color": "rgba(0, 240, 255, 0.1)",
+        "offsetX": "0px",
+        "offsetY": "0px",
+        "blur": "20px",
+        "spread": "0px"
+      },
+      "$description": "Cyan glow on active elements"
+    },
+    "glowStrong": {
+      "$type": "shadow",
+      "$value": {
+        "color": "rgba(0, 240, 255, 0.2)",
+        "offsetX": "0px",
+        "offsetY": "0px",
+        "blur": "40px",
+        "spread": "0px"
+      },
+      "$description": "Strong glow for focus/important elements"
+    }
+  },
+
+  "animation": {
+    "duration": {
+      "fast":   { "$type": "duration", "$value": "0.2s" },
+      "normal": { "$type": "duration", "$value": "0.3s" },
+      "slow":   { "$type": "duration", "$value": "0.5s" },
+      "entrance":{ "$type": "duration", "$value": "0.4s" }
+    },
+    "easing": {
+      "default":  { "$type": "cubicBezier", "$value": [0.3, 0, 0.2, 1] },
+      "bounce":   { "$type": "cubicBezier", "$value": [0.34, 1.56, 0.64, 1] },
+      "smooth":   { "$type": "cubicBezier", "$value": [0.4, 0, 0.2, 1] },
+      "linear":   { "$type": "cubicBezier", "$value": [0, 0, 1, 1] }
+    },
+    "keyframes": {
+      "pulse": {
+        "name": "pulse",
+        "0%,100%":   { "opacity": 1, "transform": "scale(1)" },
+        "50%":       { "opacity": 0.5, "transform": "scale(1.2)" }
+      },
+      "radarSweep": {
+        "name": "radarSweep",
+        "from":      { "transform": "rotate(0deg)" },
+        "to":        { "transform": "rotate(360deg)" }
+      },
+      "radarPulse": {
+        "name": "radarPulse",
+        "0%,100%":   { "box-shadow": "0 0 20px var(--cyan), 0 0 40px var(--cyan)" },
+        "50%":       { "box-shadow": "0 0 30px var(--cyan), 0 0 60px var(--cyan)" }
+      },
+      "floatOrb": {
+        "name": "floatOrb",
+        "0%,100%":   { "transform": "translate(0, 0) scale(1)" },
+        "33%":       { "transform": "translate(50px, -30px) scale(1.1)" },
+        "66%":       { "transform": "translate(-30px, 50px) scale(0.9)" }
+      },
+      "gridPulse": {
+        "name": "gridPulse",
+        "0%,100%":   { "opacity": 0.4 },
+        "50%":        { "opacity": 0.8 }
+      },
+      "fadeIn": {
+        "name": "fadeIn",
+        "from":       { "opacity": 0, "transform": "translateY(20px)" },
+        "to":         { "opacity": 1, "transform": "translateY(0)" }
+      },
+      "sweep": {
+        "name": "sweep",
+        "0%":         { "left": "-100%" },
+        "100%":       { "left": "200%" }
+      }
+    }
+  },
+
+  "layout": {
+    "container": {
+      "maxWidth": { "$type": "dimension", "$value": "1600px" },
+      "padding":  { "$type": "dimension", "$value": "2rem" }
+    },
+    "header": {
+      "height":   { "$type": "dimension", "$value": "70px" }
+    },
+    "nav": {
+      "height":   { "$type": "dimension", "$value": "50px" }
+    },
+    "grid": {
+      "cardMin":  { "$type": "dimension", "$value": "380px" },
+      "cardGap":  { "$type": "dimension", "$value": "1.5rem" }
+    },
+    "zIndex": {
+      "background": { "$type": "number", "$value": -1 },
+      "content":    { "$type": "number", "$value": 1 },
+      "nav":        { "$type": "number", "$value": 999 },
+      "header":     { "$type": "number", "$value": 1000 },
+      "modal":      { "$type": "number", "$value": 2000 }
+    }
+  },
+
+  "backdropFilter": {
+    "nav":   { "$type": "string", "$value": "blur(15px)" },
+    "header":{ "$type": "string", "$value": "blur(20px)" },
+    "card":  { "$type": "string", "$value": "blur(10px)" }
+  },
+
+  "component": {
+    "tag": {
+      "padding":    { "$type": "dimension", "$value": "0.25rem 0.75rem" },
+      "fontSize":   { "$type": "dimension", "$value": "0.75rem" },
+      "fontWeight": { "$type": "fontWeight", "$value": 600 },
+      "letterSpacing": { "$type": "dimension", "$value": "1.5px" },
+      "textTransform": { "$type": "string", "$value": "uppercase" },
+      "borderRadius":  { "$type": "dimension", "$value": "4px" }
+    },
+    "badge": {
+      "padding":    { "$type": "dimension", "$value": "0.4rem 1rem" },
+      "fontSize":   { "$type": "dimension", "$value": "0.9rem" },
+      "fontWeight": { "$type": "fontWeight", "$value": 600 },
+      "borderRadius":  { "$type": "dimension", "$value": "4px" }
+    },
+    "card": {
+      "padding":    { "$type": "dimension", "$value": "1.5rem" },
+      "borderRadius":{ "$type": "dimension", "$value": "12px" }
+    },
+    "button": {
+      "padding":    { "$type": "dimension", "$value": "0.8rem 1.5rem" },
+      "borderRadius":{ "$type": "dimension", "$value": "10px" },
+      "fontSize":   { "$type": "dimension", "$value": "0.9rem" }
+    },
+    "themeToggle": {
+      "size":       { "$type": "dimension", "$value": "40px" },
+      "borderRadius":{ "$type": "dimension", "$value": "10px" }
+    }
+  },
+
+  "vendor": {
+    "openai": {
+      "name": { "$type": "string", "$value": "OpenAI" },
+      "color": { "$type": "color", "$value": "#10a37f" },
+      "iconBg": { "$type": "string", "$value": "linear-gradient(135deg, #10a37f, #0d8a6a)" }
+    },
+    "anthropic": {
+      "name": { "$type": "string", "$value": "Anthropic" },
+      "color": { "$type": "color", "$value": "#d4a574" },
+      "iconBg": { "$type": "string", "$value": "linear-gradient(135deg, #d4a574, #c49360)" }
+    },
+    "google": {
+      "name": { "$type": "string", "$value": "Google DeepMind" },
+      "color": { "$type": "color", "$value": "#4285f4" },
+      "iconBg": { "$type": "string", "$value": "linear-gradient(135deg, #4285f4, #3367d6)" }
+    },
+    "meta": {
+      "name": { "$type": "string", "$value": "Meta AI" },
+      "color": { "$type": "color", "$value": "#0668e1" },
+      "iconBg": { "$type": "string", "$value": "linear-gradient(135deg, #0668e1, #0552b3)" }
+    },
+    "xai": {
+      "name": { "$type": "string", "$value": "xAI" },
+      "color": { "$type": "color", "$value": "#1d9bf0" },
+      "iconBg": { "$type": "string", "$value": "linear-gradient(135deg, #1d9bf0, #1a8cd8)" }
+    },
+    "deepseek": {
+      "name": { "$type": "string", "$value": "DeepSeek" },
+      "color": { "$type": "color", "$value": "#4f46e5" },
+      "iconBg": { "$type": "string", "$value": "linear-gradient(135deg, #4f46e5, #4338ca)" }
+    },
+    "mistral": {
+      "name": { "$type": "string", "$value": "Mistral AI" },
+      "color": { "$type": "color", "$value": "#ff6b6b" },
+      "iconBg": { "$type": "string", "$value": "linear-gradient(135deg, #ff6b6b, #ee5a5a)" }
+    },
+    "alibaba": {
+      "name": { "$type": "string", "$value": "Alibaba / Qwen" },
+      "color": { "$type": "color", "$value": "#ff5000" },
+      "iconBg": { "$type": "string", "$value": "linear-gradient(135deg, #ff5000, #e64900)" }
+    }
+  }
+}

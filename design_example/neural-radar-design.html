@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Radar — LLM Intelligence Dashboard | July 7, 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cyan: #00f0ff;
+            --cyan-dim: #00a8b5;
+            --violet: #8b5cf6;
+            --violet-glow: #a855f7;
+            --dark-bg: #06060a;
+            --panel-bg: rgba(15, 15, 30, 0.85);
+            --card-bg: rgba(20, 20, 40, 0.7);
+            --border: rgba(0, 240, 255, 0.15);
+            --text-primary: #e0e0f0;
+            --text-secondary: #8899aa;
+            --text-muted: #556677;
+            --danger: #ff3860;
+            --warning: #ffaa00;
+            --success: #00e676;
+            --info: #00f0ff;
+        }
+
+        /* ===== LIGHT THEME ===== */
+        [data-theme="light"] {
+            --dark-bg: #f5f7fa;
+            --panel-bg: rgba(255, 255, 255, 0.95);
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --border: rgba(0, 240, 255, 0.25);
+            --text-primary: #1a1a2e;
+            --text-secondary: #4a4a6a;
+            --text-muted: #8a8aa0;
+            --danger: #e11d48;
+            --warning: #d97706;
+            --success: #059669;
+            --info: #0284c7;
+        }
+
+        [data-theme="light"] body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #eef2f7 100%);
+        }
+
+        [data-theme="light"] .bg-animation {
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 240, 255, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.02) 0%, transparent 70%);
+        }
+
+        [data-theme="light"] .bg-grid {
+            background-image:
+                linear-gradient(rgba(0, 240, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.06) 1px, transparent 1px);
+        }
+
+        [data-theme="light"] .header {
+            background: rgba(255, 255, 255, 0.92);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        [data-theme="light"] .nav-bar {
+            background: rgba(255, 255, 255, 0.88);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        [data-theme="light"] .card {
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        [data-theme="light"] .card:hover {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="light"] .card::before {
+            opacity: 0.3;
+        }
+
+        [data-theme="light"] .card-footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        [data-theme="light"] .quote-block {
+            background: rgba(0, 240, 255, 0.04);
+            border-left: 3px solid var(--cyan);
+        }
+
+        [data-theme="light"] .vendor-header {
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        [data-theme="light"] .trend-tag {
+            border: 1px solid rgba(139, 92, 246, 0.15);
+        }
+
+        [data-theme="light"] .data-table th {
+            background: rgba(0, 240, 255, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="light"] .data-table td {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        [data-theme="light"] .data-table tr:hover td {
+            background: rgba(0, 240, 255, 0.03);
+        }
+
+        [data-theme="light"] .footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        [data-theme="light"] .date-badge {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: rgba(0, 240, 255, 0.04);
+        }
+
+        [data-theme="light"] .impact-bar {
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="light"] ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        [data-theme="light"] ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        [data-theme="light"] .nav-btn.active::after {
+            box-shadow: 0 0 6px var(--cyan);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 240, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.03) 0%, transparent 70%);
+        }
+
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+
+        .floating-orbs {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: floatOrb 20s infinite ease-in-out;
+        }
+
+        .orb:nth-child(1) {
+            width: 400px; height: 400px;
+            background: var(--violet);
+            top: 10%; left: -5%;
+            animation-delay: 0s;
+        }
+
+        .orb:nth-child(2) {
+            width: 300px; height: 300px;
+            background: var(--cyan);
+            top: 60%; right: -5%;
+            animation-delay: -7s;
+        }
+
+        .orb:nth-child(3) {
+            width: 250px; height: 250px;
+            background: var(--violet-glow);
+            bottom: 10%; left: 30%;
+            animation-delay: -14s;
+        }
+
+        @keyframes floatOrb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -30px) scale(1.1); }
+            66% { transform: translate(-30px, 50px) scale(0.9); }
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(6, 6, 10, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+        }
+
+        .header-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            position: relative;
+        }
+
+        .logo-icon svg {
+            width: 100%; height: 100%;
+            animation: radarSpin 10s linear infinite;
+        }
+
+        @keyframes radarSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--cyan), var(--violet-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-sub {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            color: var(--success);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .live-dot {
+            width: 8px; height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 10px var(--success);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .date-badge {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--cyan);
+            border: 1px solid var(--border);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            background: rgba(0, 240, 255, 0.05);
+        }
+
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: rgba(0, 240, 255, 0.05);
+            color: var(--cyan);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(0, 240, 255, 0.15);
+            border-color: var(--cyan);
+            transform: scale(1.05);
+        }
+
+        [data-theme="light"] .theme-toggle {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.04);
+        }
+
+        [data-theme="light"] .theme-toggle:hover {
+            background: rgba(0, 0, 0, 0.08);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation */
+        .nav-bar {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: rgba(6, 6, 10, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .nav-inner::-webkit-scrollbar { display: none; }
+
+        .nav-btn {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            position: relative;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            color: var(--cyan);
+        }
+
+        .nav-btn.active {
+            color: var(--cyan);
+        }
+
+        .nav-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+            box-shadow: 0 0 10px var(--cyan);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 140px;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Title */
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--cyan), var(--violet-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-subtitle {
+            font-family: 'Rajdhani', sans-serif;
+            color: var(--text-muted);
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), var(--violet), transparent);
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover {
+            border-color: rgba(0, 240, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0, 240, 255, 0.08);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card-tag {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--cyan);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+        }
+
+        .card-tag.violet {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--violet-glow);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+
+        .card-tag.warning {
+            background: rgba(255, 170, 0, 0.1);
+            color: var(--warning);
+            border-color: rgba(255, 170, 0, 0.2);
+        }
+
+        .card-tag.danger {
+            background: rgba(255, 56, 96, 0.1);
+            color: var(--danger);
+            border-color: rgba(255, 56, 96, 0.2);
+        }
+
+        .card-tag.success {
+            background: rgba(0, 230, 118, 0.1);
+            color: var(--success);
+            border-color: rgba(0, 230, 118, 0.2);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 1rem;
+        }
+
+        .card-source {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .source-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--cyan);
+        }
+
+        /* Impact Score */
+        .impact-score {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .impact-label {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        .impact-bar {
+            flex: 1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .impact-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 1s ease;
+        }
+
+        .impact-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            min-width: 36px;
+            text-align: right;
+        }
+
+        /* Quote Block */
+        .quote-block {
+            background: rgba(0, 240, 255, 0.03);
+            border-left: 3px solid var(--cyan);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        .quote-block::before {
+            content: '"';
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: var(--cyan);
+            opacity: 0.2;
+            position: absolute;
+            top: -0.5rem;
+            left: 0.5rem;
+        }
+
+        .quote-author {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--cyan-dim);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 0 4rem;
+            position: relative;
+        }
+
+        .hero-radar {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .radar-ring {
+            position: absolute;
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .radar-ring:nth-child(1) { width: 60px; height: 60px; }
+        .radar-ring:nth-child(2) { width: 120px; height: 120px; }
+        .radar-ring:nth-child(3) { width: 180px; height: 180px; }
+
+        .radar-sweep {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--cyan), transparent);
+            transform-origin: left center;
+            animation: radarSweep 4s linear infinite;
+            box-shadow: 0 0 10px var(--cyan);
+        }
+
+        @keyframes radarSweep {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .radar-center {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px; height: 12px;
+            background: var(--cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--cyan), 0 0 40px var(--cyan);
+            animation: radarPulse 2s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--cyan), var(--violet-glow), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--cyan);
+        }
+
+        .hero-stat-label {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Priority Radar Specific */
+        .priority-card {
+            grid-column: span 1;
+        }
+
+        .priority-card:nth-child(1) {
+            border-color: rgba(255, 56, 96, 0.3);
+        }
+
+        .priority-card:nth-child(1)::before {
+            background: linear-gradient(90deg, transparent, var(--danger), var(--warning), transparent);
+            opacity: 0.8;
+        }
+
+        .priority-card:nth-child(1) .card-title {
+            color: var(--danger);
+        }
+
+        .priority-rank {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--cyan);
+            opacity: 0.3;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+
+        /* Vendor Section */
+        .vendor-section {
+            margin-bottom: 2rem;
+        }
+
+        .vendor-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .vendor-icon {
+            width: 40px; height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        .vendor-icon.openai { background: linear-gradient(135deg, #10a37f, #0d8a6a); }
+        .vendor-icon.anthropic { background: linear-gradient(135deg, #d4a574, #c49360); }
+        .vendor-icon.google { background: linear-gradient(135deg, #4285f4, #3367d6); }
+        .vendor-icon.meta { background: linear-gradient(135deg, #0668e1, #0552b3); }
+        .vendor-icon.xai { background: linear-gradient(135deg, #1d9bf0, #1a8cd8); }
+        .vendor-icon.deepseek { background: linear-gradient(135deg, #4f46e5, #4338ca); }
+        .vendor-icon.mistral { background: linear-gradient(135deg, #ff6b6b, #ee5a5a); }
+        .vendor-icon.alibaba { background: linear-gradient(135deg, #ff5000, #e64900); }
+
+        .vendor-name {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Trending Tags */
+        .trend-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .trend-tag {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            font-size: 0.8rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            color: var(--violet-glow);
+            transition: all 0.3s;
+        }
+
+        .trend-tag:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Table Styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .data-table th {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+            color: var(--cyan);
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 240, 255, 0.03);
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            color: var(--text-secondary);
+        }
+
+        .data-table tr:hover td {
+            background: rgba(0, 240, 255, 0.02);
+            color: var(--text-primary);
+        }
+
+        .model-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .elo-score {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        .price-tag {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+            .header-inner { padding: 0 1rem; }
+            .main-content { padding-left: 1rem; padding-right: 1rem; }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--cyan-dim);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-brand {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Full-width card */
+        .card-full {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 768px) {
+            .card-full { grid-column: 1; }
+        }
+
+        /* Two-column layout for specific sections */
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .two-col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="bg-grid"></div>
+    <div class="floating-orbs">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="21" cy="21" r="19" stroke="url(#grad1)" stroke-width="1.5" opacity="0.3"/>
+                        <circle cx="21" cy="21" r="14" stroke="url(#grad1)" stroke-width="1" opacity="0.5"/>
+                        <circle cx="21" cy="21" r="9" stroke="url(#grad1)" stroke-width="1" opacity="0.7"/>
+                        <circle cx="21" cy="21" r="3" fill="url(#grad1)"/>
+                        <line x1="21" y1="2" x2="21" y2="40" stroke="url(#grad1)" stroke-width="0.5" opacity="0.3"/>
+                        <line x1="2" y1="21" x2="40" y2="21" stroke="url(#grad1)" stroke-width="0.5" opacity="0.3"/>
+                        <line x1="7.5" y1="7.5" x2="34.5" y2="34.5" stroke="url(#grad1)" stroke-width="0.5" opacity="0.3"/>
+                        <line x1="34.5" y1="7.5" x2="7.5" y2="34.5" stroke="url(#grad1)" stroke-width="0.5" opacity="0.3"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f0ff"/>
+                                <stop offset="100%" style="stop-color:#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div>
+                    <div class="logo-text">NEURAL RADAR</div>
+                    <div class="logo-sub">LLM Intelligence Dashboard</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="live-indicator">
+                    <div class="live-dot"></div>
+                    <span>Live Monitor</span>
+                </div>
+                <div class="date-badge">July 7, 2026</div>
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark theme">
+                    <span id="themeIcon">☀</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="nav-inner">
+            <button class="nav-btn active" onclick="showPage('radar')">Priority Radar</button>
+            <button class="nav-btn" onclick="showPage('vendors')">Vendor & Lab News</button>
+            <button class="nav-btn" onclick="showPage('opinion')">Creators & Opinion</button>
+            <button class="nav-btn" onclick="showPage('trends')">Trending Concepts</button>
+            <button class="nav-btn" onclick="showPage('opensource')">Open Source</button>
+            <button class="nav-btn" onclick="showPage('leaderboard')">Leaderboard</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- HOME / PRIORITY RADAR -->
+        <div id="radar" class="page active">
+            <div class="hero">
+                <div class="hero-radar">
+                    <div class="radar-ring"></div>
+                    <div class="radar-ring"></div>
+                    <div class="radar-ring"></div>
+                    <div class="radar-sweep"></div>
+                    <div class="radar-center"></div>
+                </div>
+                <h1>NEURAL RADAR</h1>
+                <p>Real-Time Intelligence on the Global LLM Landscape</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">8</div>
+                        <div class="hero-stat-label">Major Labs</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">15+</div>
+                        <div class="hero-stat-label">Model Releases</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">24h</div>
+                        <div class="hero-stat-label">Scan Window</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">357</div>
+                        <div class="hero-stat-label">Models Tracked</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">Priority Radar</div>
+            <div class="section-subtitle">Items ranked by game-changing impact — past 24 hours</div>
+
+            <div class="card-grid">
+                <div class="card priority-card">
+                    <div class="priority-rank">01</div>
+                    <div class="card-header">
+                        <span class="card-tag danger">CRITICAL</span>
+                        <span style="font-family: \'Orbitron\'; font-size: 0.75rem; color: var(--cyan);">OPENAI</span>
+                    </div>
+                    <div class="card-title">GPT-5.6 Preview: Sol, Terra & Luna</div>
+                    <div class="card-text">
+                        OpenAI launches the GPT-5.6 model family with a new tiered naming system: Sol (flagship), Terra (balanced), and Luna (efficient). The preview is limited to 20 trusted partners, with public rollout expected by end of July. Sol features enhanced cybersecurity capabilities and runs on Cerebras at up to 750 tokens/sec. New predictable prompt caching with 30-minute minimum cache life and explicit cache breakpoints.
+                    </div>
+                    <div class="quote-block">
+                        The new naming system gives clearer choices across intelligence, speed, and cost — with Sol priced at $5 input / $30 output per 1M tokens.
+                        <div class="quote-author">— OpenAI Release Notes, July 2026</div>
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Impact</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 95%; background: linear-gradient(90deg, var(--danger), var(--warning));"></div></div>
+                        <span class="impact-value" style="color: var(--danger);">9.5</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>releasebot.io / cryptobriefing.com</div>
+                        <span>July 7, 2026</span>
+                    </div>
+                </div>
+
+                <div class="card priority-card">
+                    <div class="priority-rank">02</div>
+                    <div class="card-header">
+                        <span class="card-tag danger">CRITICAL</span>
+                        <span style="font-family: \'Orbitron\'; font-size: 0.75rem; color: var(--cyan);">ANTHROPIC</span>
+                    </div>
+                    <div class="card-title">Claude Fable 5: First Public Mythos-Class Model</div>
+                    <div class="card-text">
+                        Anthropic released Claude Fable 5 on June 9 — the first publicly available model in its Mythos class. It carries a 1M-token context window and up to 128K output tokens. After a brief suspension due to a US government export directive, access has been restored. Fable 5 is described as "relentlessly proactive" — it deploys any available trick to reach its goal. Adaptive thinking is always on.
+                    </div>
+                    <div class="quote-block">
+                        After two days of experience with Claude Fable 5 I think the best way to describe it is relentlessly proactive. It knows a whole lot of tricks and it will deploy pretty much any of them to get to its goal.
+                        <div class="quote-author">— Simon Willison, Developer & AI Researcher</div>
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Impact</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 92%; background: linear-gradient(90deg, var(--danger), var(--warning));"></div></div>
+                        <span class="impact-value" style="color: var(--danger);">9.2</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>infoq.com / releasebot.io</div>
+                        <span>July 1, 2026</span>
+                    </div>
+                </div>
+
+                <div class="card priority-card">
+                    <div class="priority-rank">03</div>
+                    <div class="card-header">
+                        <span class="card-tag warning">HIGH</span>
+                        <span style="font-family: \'Orbitron\'; font-size: 0.75rem; color: var(--cyan);">ANTHROPIC</span>
+                    </div>
+                    <div class="card-title">Claude Sonnet 5: Most Agentic Model Yet</div>
+                    <div class="card-text">
+                        Launched June 30, Claude Sonnet 5 delivers substantial improvements over Sonnet 4.6 in reasoning, tool use, coding, and knowledge work. Anthropic is positioning it as their "most agentic Sonnet model yet." Meanwhile, Claude Code weekly limits increased 50% through July 13 — a competitive response to OpenAI Codex. Claude is now available in Microsoft Foundry (Azure-native) with admin spend controls.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Impact</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 85%; background: linear-gradient(90deg, var(--warning), var(--success));"></div></div>
+                        <span class="impact-value" style="color: var(--warning);">8.5</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>releasebot.io / pasqualepillitteri.it</div>
+                        <span>July 4, 2026</span>
+                    </div>
+                </div>
+
+                <div class="card priority-card">
+                    <div class="priority-rank">04</div>
+                    <div class="card-header">
+                        <span class="card-tag warning">HIGH</span>
+                        <span style="font-family: \'Orbitron\'; font-size: 0.75rem; color: var(--cyan);">XAI</span>
+                    </div>
+                    <div class="card-title">Grok 4.5 V9: 1.5T Parameters in Private Beta</div>
+                    <div class="card-text">
+                        xAI's Grok 4.5 is built on the entirely new V9 architecture (not a fine-tune of V8), completed pre-training May 26. At 1.5 trillion parameters — 3x the scale of V8 — it's now in private beta at SpaceX and Tesla. Musk announced a monthly release cadence for new V9 variants through the rest of 2026. The Grok Build CLI now consolidates all coding workloads under grok-build-0.1, scoring 70.8% on SWE-Bench Verified.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Impact</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 83%; background: linear-gradient(90deg, var(--warning), var(--success));"></div></div>
+                        <span class="impact-value" style="color: var(--warning);">8.3</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>buildfastwithai.com / siliconreport.com</div>
+                        <span>June 28, 2026</span>
+                    </div>
+                </div>
+
+                <div class="card priority-card">
+                    <div class="priority-rank">05</div>
+                    <div class="card-header">
+                        <span class="card-tag">MEDIUM</span>
+                        <span style="font-family: \'Orbitron\'; font-size: 0.75rem; color: var(--cyan);">GOOGLE</span>
+                    </div>
+                    <div class="card-title">Gemini 3.5 Flash: 4x Faster, Agentic-Ready</div>
+                    <div class="card-text">
+                        Gemini 3.5 Flash is now live across the Gemini app, Search, and API — surpassing 3.1 Pro on coding and agentic benchmarks while running 4x faster in output tokens/sec. Gemini 3.5 Pro is in closed testing. Google I/O 2026's central theme was the shift from AI assistants to AI agents. Gemini Spark (24/7 personal agent) and Android XR smart glasses are the headline products to watch.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Impact</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 80%; background: linear-gradient(90deg, var(--cyan-dim), var(--cyan));"></div></div>
+                        <span class="impact-value" style="color: var(--cyan);">8.0</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>osasai.com / webwallah.in</div>
+                        <span>June 30, 2026</span>
+                    </div>
+                </div>
+
+                <div class="card priority-card">
+                    <div class="priority-rank">06</div>
+                    <div class="card-header">
+                        <span class="card-tag">MEDIUM</span>
+                        <span style="font-family: \'Orbitron\'; font-size: 0.75rem; color: var(--cyan);">META</span>
+                    </div>
+                    <div class="card-title">Meta's Dual-Track: Muse Spark Goes Closed</div>
+                    <div class="card-text">
+                        Meta's Muse Spark — launched April 8 by Meta Superintelligence Labs — is the company's first fully closed proprietary model. It reached #5 on Chatbot Arena with 1491 Elo. This marks a strategic pivot: open-weight Llama 4 for ecosystem building, closed Muse for competitive moat. Zuckerberg admitted Meta's AI agent progress is running behind plan. 2026 capex guidance: $125–145 billion.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Impact</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 78%; background: linear-gradient(90deg, var(--cyan-dim), var(--cyan));"></div></div>
+                        <span class="impact-value" style="color: var(--cyan);">7.8</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>hokai.io / fourfoldai.com</div>
+                        <span>July 6, 2026</span>
+                    </div>
+                </div>
+
+                <div class="card priority-card">
+                    <div class="priority-rank">07</div>
+                    <div class="card-header">
+                        <span class="card-tag">MEDIUM</span>
+                        <span style="font-family: \'Orbitron\'; font-size: 0.75rem; color: var(--cyan);">ALIBABA</span>
+                    </div>
+                    <div class="card-title">Qwen 3.7-Max: The "Agent Frontier"</div>
+                    <div class="card-text">
+                        Alibaba's Qwen 3.7-Max launched May 19, positioned as "The Agent Frontier." Built for long-horizon autonomous execution — tasks running for hours with hundreds of tool calls. 1M-token context, 65K max output, both OpenAI and Anthropic API compatible. Qwen 3.6 remains open-weight (Apache 2.0). The Qwen ecosystem has surpassed 200K model variants on Hugging Face and ~1 billion downloads.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Impact</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 75%; background: linear-gradient(90deg, var(--cyan-dim), var(--cyan));"></div></div>
+                        <span class="impact-value" style="color: var(--cyan);">7.5</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>yottalabs.ai / agentconn.com</div>
+                        <span>May 27, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VENDOR & LAB NEWS -->
+        <div id="vendors" class="page">
+            <div class="section-title">Vendor & Lab News</div>
+            <div class="section-subtitle">Expert commentary on every major AI lab's latest moves</div>
+
+            <div class="vendor-section">
+                <div class="vendor-header">
+                    <div class="vendor-icon openai">O</div>
+                    <div class="vendor-name">OpenAI</div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">MODEL</span>
+                        </div>
+                        <div class="card-title">GPT-5.6 Family Preview</div>
+                        <div class="card-text">
+                            Three-tier naming: Sol (flagship, $5/$30 per 1M), Terra ($2.50/$15), and Luna ($1/$6). Cerebras partnership delivers 750 tok/sec. New explicit cache breakpoints with 90% discount on cache reads. Currently limited to 20 partners; public launch expected by July 31. Sol shows heightened severity-3 action propensity during testing, requiring government coordination.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>releasebot.io</div>
+                            <span>July 7, 2026</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">TIMELINE</span>
+                        </div>
+                        <div class="card-title">GPT-5.5 Instant Default Since May 5</div>
+                        <div class="card-text">
+                            GPT-5.5 Instant became the default ChatGPT model for all users on May 5, 2026. The GPT-5 generation has advanced rapidly: 5.1 (Nov 2025), 5.2 (Dec 2025), 5.4 (Mar 2026 — first with native computer-use), 5.5 (Apr 2026). OpenAI also released gpt-oss-120b and gpt-oss-20b open-weight reasoning models in August 2025.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>help.openai.com</div>
+                            <span>Current</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vendor-section">
+                <div class="vendor-header">
+                    <div class="vendor-icon anthropic">A</div>
+                    <div class="vendor-name">Anthropic</div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag danger">FRONTIER</span>
+                        </div>
+                        <div class="card-title">Claude Fable 5 & Mythos Class</div>
+                        <div class="card-text">
+                            Fable 5 is the public, guardrailed sibling of Mythos. Both share the same underlying model: 1M context, 128K output, $10/$50 per 1M tokens. An external bug bounty of 1000+ hours produced no universal jailbreaks. Features include task budgets, memory tool, code execution, programmatic tool calling, and context editing. The Messages API has adaptive thinking always-on.
+                        </div>
+                        <div class="quote-block">
+                            The first model I have used that was so methodical and precise, taking measurements and adding logs, then verifying that it truly fixed the issue before declaring victory.
+                            <div class="quote-author">— Boris Cherny, Builder of Claude Code</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>infoq.com</div>
+                            <span>June 15, 2026</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">PRODUCT</span>
+                        </div>
+                        <div class="card-title">Claude Sonnet 5 + Code Expansion</div>
+                        <div class="card-text">
+                            Sonnet 5 launched June 30 with improvements in reasoning, tool use, coding, and knowledge work. Claude Code weekly limits increased 50% through July 13 for all paid tiers. Claude in Microsoft Foundry is now GA with Opus 4.8 and Haiku 4.5. Claude Tag lets Enterprise users delegate tasks in Slack. Admin API and spend-threshold alerts (75%, 90%) now available.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>releasebot.io</div>
+                            <span>July 1, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vendor-section">
+                <div class="vendor-header">
+                    <div class="vendor-icon google">G</div>
+                    <div class="vendor-name">Google DeepMind</div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">MODEL</span>
+                        </div>
+                        <div class="card-title">Gemini 3.5 Flash & Pro</div>
+                        <div class="card-text">
+                            3.5 Flash surpasses 3.1 Pro on coding, agentic, and multimodal benchmarks at 4x faster output speed. Available now in Gemini app, Search, and API. 3.5 Pro in closed testing. Gemini Omni (text/image/audio/video → grounded video) also shipping. Google I/O 2026 theme: "firmly in the agentic Gemini era."
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>osasai.com</div>
+                            <span>June 30, 2026</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">AGENT</span>
+                        </div>
+                        <div class="card-title">Gemini Spark: 24/7 Personal Agent</div>
+                        <div class="card-text">
+                            Spark is Google's 24/7 autonomous personal agent that can take actions across Gmail, Docs, and connected apps. Universal Cart monitors the internet and executes purchases. Android XR smart glasses (audio + display variants) announced for Fall 2026. Project Astra research capabilities are being staged across Gemini Live, Search, and glasses.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>perplexityaimagazine.com</div>
+                            <span>May 19, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vendor-section">
+                <div class="vendor-header">
+                    <div class="vendor-icon meta">M</div>
+                    <div class="vendor-name">Meta AI</div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">STRATEGY</span>
+                        </div>
+                        <div class="card-title">Dual-Track: Open Llama + Closed Muse</div>
+                        <div class="card-text">
+                            Muse Spark (April 8) is Meta's first closed-weight model — natively multimodal with "Contemplating Mode." Coexists with Llama 4 open ecosystem. Meta Superintelligence Labs led by Alexandr Wang (ex-Scale AI) and Nat Friedman. Zuckerberg admitted AI agent progress is "behind plan." 11 of 14 original Llama paper researchers have left Meta. Capex: $125–145B in 2026.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>hokai.io / explainx.ai</div>
+                            <span>July 6, 2026</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">OPEN</span>
+                        </div>
+                        <div class="card-title">Llama 4 Ecosystem Status</div>
+                        <div class="card-text">
+                            Scout: 109B total, 10M context, fits on single GPU. Maverick: 400B total, 128 experts, outperformed GPT-4o at launch. Behemoth: 288B active, ~2T total, still in training. Llama 4 has 1B+ downloads. 25+ integration partners including AWS, NVIDIA, Databricks. License: custom with 700M MAU cap.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>fourfoldai.com</div>
+                            <span>May 12, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vendor-section">
+                <div class="vendor-header">
+                    <div class="vendor-icon xai">X</div>
+                    <div class="vendor-name">xAI / SpaceXAI</div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">FRONTIER</span>
+                        </div>
+                        <div class="card-title">Grok 4.5 V9: Monthly Release Cadence</div>
+                        <div class="card-text">
+                            V9 is a ground-up redesign, 1.5T parameters (3x V8). Private beta at SpaceX/Tesla since June 28. Musk committed to monthly new-from-scratch V9 variants through SpaceX for rest of 2026. Grok 5 (6T MoE) in pre-training on Colossus 2; 10T variant as ultimate 2026 target. xAI acquired by SpaceX in Feb 2026 ($1.25T combined valuation). All 11 co-founders have departed.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>buildfastwithai.com / aibusinessweekly.net</div>
+                            <span>June 28, 2026</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">DEVTOOL</span>
+                        </div>
+                        <div class="card-title">Grok Build CLI</div>
+                        <div class="card-text">
+                            xAI's terminal-native coding agent. grok-build-0.1 scores 70.8% on SWE-Bench Verified with 256K context. Priced at $0.20 input / $1.50 output per 1M tokens. Directly competes with Claude Code and OpenAI Codex CLI. Consolidates all coding API requests from grok-code-fast-1.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>buildfastwithai.com</div>
+                            <span>May 26, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vendor-section">
+                <div class="vendor-header">
+                    <div class="vendor-icon deepseek">D</div>
+                    <div class="vendor-name">DeepSeek</div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag success">OPEN</span>
+                        </div>
+                        <div class="card-title">DeepSeek V4-Pro & V4-Flash</div>
+                        <div class="card-text">
+                            V4-Pro: 1.6T-parameter MoE, 49B active, 1M context. V4-Flash: 284B MoE, 13B active. Both support non-think, think, and max-thinking modes. MIT license. API supports both OpenAI and Anthropic formats. Extremely competitive pricing. 83.7% SWE-bench Verified, 99.4% AIME 2026. Legacy deepseek-chat and deepseek-reasoner aliases deprecated July 24.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>getaiperks.com / chat-deep.ai</div>
+                            <span>June 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vendor-section">
+                <div class="vendor-header">
+                    <div class="vendor-icon mistral">M</div>
+                    <div class="vendor-name">Mistral AI</div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag success">OPEN</span>
+                        </div>
+                        <div class="card-title">Mistral Model Lineup</div>
+                        <div class="card-text">
+                            Medium 3.5: 128B dense, 256K context, multimodal, agentic coding — powers Le Chat and Vibe. Large 3: 675B total / 41B active MoE, Apache 2.0. Small 4: 119B total / 6B active, 256K context, Apache 2.0. Devstral 2 for coding. Le Chat Work mode and Vibe remote agents for enterprise. Free tier available for evaluation without credit card.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>chat-deep.ai / laozhang.ai</div>
+                            <span>July 2, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vendor-section">
+                <div class="vendor-header">
+                    <div class="vendor-icon alibaba">A</div>
+                    <div class="vendor-name">Alibaba / Qwen</div>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">AGENT</span>
+                        </div>
+                        <div class="card-title">Qwen 3.7-Max: 35h Autonomous Runs</div>
+                        <div class="card-text">
+                            Designed for long-horizon agent workflows: coding agents that write/test/iterate for days, office automation processing thousands of documents. 1M context, 65K output. $1.25/$3.75 per 1M tokens on Yotta Gateway. Cross-harness consistency with Claude Code, OpenClaw, Qwen Code. Not open-weight; 3.6 remains Apache 2.0 open.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>yottalabs.ai</div>
+                            <span>May 19, 2026</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag success">ECOSYSTEM</span>
+                        </div>
+                        <div class="card-title">Qwen Open-Source Dominance</div>
+                        <div class="card-text">
+                            200K+ model variants on Hugging Face. ~1 billion downloads. 203M monthly active users on Qwen Chat. Qwen 3.5 (Feb 2026): 397B total / 17B active, Apache 2.0. Qwen3-VL handles images, videos (>1 hour), PDFs, handwritten text in 32 languages. Qwen3.5-Omni: native multimodal (text/image/audio/video) with real-time voice I/O.
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-source"><div class="source-dot"></div>mysummit.school / particula.tech</div>
+                            <span>Apr 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CREATORS & OPINION -->
+        <div id="opinion" class="page">
+            <div class="section-title">Creators, Bloggers & Opinion</div>
+            <div class="section-subtitle">Expert voices shaping the AI narrative</div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">AGI TIMELINE</span>
+                    </div>
+                    <div class="card-title">The Davos Debate: Amodei vs Hassabis vs LeCun</div>
+                    <div class="card-text">
+                        At WEF Davos 2026, the three most consequential AI leaders laid out starkly different timelines. Amodei: 1-2 years to AI surpassing humans on all tasks. Hassabis: 5-10 years, needs "one or two more breakthroughs." LeCun: LLMs are a "dead end" for human-level intelligence; the industry is "completely LLM-pilled."
+                    </div>
+                    <div class="quote-block">
+                        The biggest thing to watch is AI systems building AI systems. Whether that loop closes will determine if it's a few more years or if we have wonders and a great emergency in front of us.
+                        <div class="quote-author">— Demis Hassabis, CEO Google DeepMind & Nobel Laureate</div>
+                    </div>
+                    <div class="quote-block">
+                        I have engineers at Anthropic who say 'I don't write any code anymore, I just let the model write it.' We are 6-12 months from models end-to-end completing most, or even all, engineer work.
+                        <div class="quote-author">— Dario Amodei, CEO Anthropic</div>
+                    </div>
+                    <div class="quote-block">
+                        The AI industry is completely LLM-pilled. In Silicon Valley, everybody is working on the same thing. They're all digging the same trench.
+                        <div class="quote-author">— Yann LeCun, Turing Award Winner, Founder AMI Labs</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>fortune.com / teamday.ai / algeriatech.news</div>
+                        <span>Jan 2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">SUPERINTELLIGENCE</span>
+                    </div>
+                    <div class="card-title">Sam Altman: "A Couple of Years Away"</div>
+                    <div class="card-text">
+                        At the India AI Impact Summit (Feb 2026), Altman dropped the boldest public prediction yet: early versions of true superintelligence could emerge in just a couple of years — AI outperforming any CEO or top scientist. He proposed an IAEA-like body for superintelligence governance.
+                    </div>
+                    <div class="quote-block">
+                        We've gone from AI systems that struggled with high school-level math to systems that can do research-level mathematics now and derive novel results in theoretical physics... On our current trajectory, we may be only a couple of years away from early versions of true superintelligence.
+                        <div class="quote-author">— Sam Altman, CEO OpenAI</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>indiapresstoday.com</div>
+                        <span>Feb 19, 2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">CODING AUTOMATION</span>
+                    </div>
+                    <div class="card-title">Andrej Karpathy: The "Jagged Entity" Problem</div>
+                    <div class="card-text">
+                        Karpathy's framework at Sequoia AI Ascent 2026: AI automates fastest where output is verifiable. Code and math are in the training distribution because they're economically valuable and easy to verify. But models remain surprisingly brittle in seemingly simple real-world tasks.
+                    </div>
+                    <div class="quote-block">
+                        How is it possible that state-of-the-art Claude Opus can simultaneously refactor a 100,000-line codebase or find zero-day vulnerabilities and yet tells me to walk to this car wash? This is insane.
+                        <div class="quote-author">— Andrej Karpathy, Former Director of AI at Tesla</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>firecrawl.dev</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">RIVALRY</span>
+                    </div>
+                    <div class="card-title">Altman vs Amodei: The AI Cold War</div>
+                    <div class="card-text">
+                        The rivalry escalated in 2026: leaked Slack messages, a Pentagon supply-chain standoff, a viral photo at the India AI Summit where the two refused to hold hands, and a Super Bowl ad war. The core philosophical split: Altman believes in engaging governments from inside; Amodei draws categorical red lines on autonomous weapons and mass surveillance.
+                    </div>
+                    <div class="quote-block">
+                        I was trying to 'save' Anthropic — working back-channels to help de-escalate — while privately venting that Amodei had spent years trying to undermine me.
+                        <div class="quote-author">— Sam Altman, internal Slack messages (via Axios)</div>
+                    </div>
+                    <div class="quote-block">
+                        Straight up lies.
+                        <div class="quote-author">— Dario Amodei, responding to Altman's framing</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>lumichats.com / fortune.com</div>
+                        <span>Apr 2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">OPTIMISM</span>
+                    </div>
+                    <div class="card-title">Amodei: "Machines of Loving Grace"</div>
+                    <div class="card-text">
+                        In his 14,000-word October 2024 essay, Amodei argued that safety is the only remaining obstacle to transformative upside. AI could compress decades of biological research into 5-10 years, potentially eliminating most cancers, PTSD, clinical depression, and extending healthy lifespan.
+                    </div>
+                    <div class="quote-block">
+                        Most people are underestimating how radical the upside of AI could be. We have the potential to cure diseases that have been incurable for thousands of years, to radically improve human health, and to lift billions out of poverty.
+                        <div class="quote-author">— Dario Amodei, "Machines of Loving Grace"</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>startuphub.ai</div>
+                        <span>Oct 2024</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">PRACTICE</span>
+                    </div>
+                    <div class="card-title">Developer Perspectives on Agentic Models</div>
+                    <div class="card-text">
+                        Boris Cherny on Claude Fable 5: methodical, precise, verifying before declaring victory. Simon Willison: relentlessly proactive, deploys any trick to reach goals. The Spotify "Honk" tool lets engineers deploy via Slack in plain English — their best developers haven't written code since December, orchestrating agents instead.
+                    </div>
+                    <div class="quote-block">
+                        The first model I have used that was so methodical and precise, taking measurements and adding logs, then verifying that it truly fixed the issue before declaring victory.
+                        <div class="quote-author">— Boris Cherny, on Claude Fable 5</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>infoq.com / firecrawl.dev</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRENDING CONCEPTS -->
+        <div id="trends" class="page">
+            <div class="section-title">Trending Concepts & Approaches</div>
+            <div class="section-subtitle">The ideas and architectures defining AI in 2026</div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">#1 TREND</span>
+                    </div>
+                    <div class="card-title">Agentic AI → Proactive AI</div>
+                    <div class="card-text">
+                        2026 is the shift from reactive agents (wait for prompt) to proactive agents (monitor, anticipate, act). Google's Gemini Spark monitors calendars and suggests content without being asked. Claude Fable 5 is "relentlessly proactive." The question is shifting from "what can we ask AI to do?" to "what should we allow AI to do on its own?"
+                    </div>
+                    <div class="trend-tags">
+                        <span class="trend-tag">24/7 Agents</span>
+                        <span class="trend-tag">Anticipatory AI</span>
+                        <span class="trend-tag">Digital Employees</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>apmdigest.com / firecrawl.dev</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">#2 TREND</span>
+                    </div>
+                    <div class="card-title">Long-Horizon Agents (Days to Weeks)</div>
+                    <div class="card-text">
+                        Early 2025 agents handled minutes-long tasks. By late 2025, they produced full features over hours. In 2026, agents work for days building entire applications with minimal human intervention. Qwen 3.7-Max is designed for 35-hour autonomous runs. Claude Fable 5 plans across stages, delegates to sub-agents, and self-verifies.
+                    </div>
+                    <div class="trend-tags">
+                        <span class="trend-tag">Multi-Day Tasks</span>
+                        <span class="trend-tag">Self-Verification</span>
+                        <span class="trend-tag">Sub-Agent Delegation</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>anthropic.com / yottalabs.ai</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">#3 TREND</span>
+                    </div>
+                    <div class="card-title">CLI-Native Coding Agents</div>
+                    <div class="card-text">
+                        Three labs, three terminal-native coding agents: Claude Code (Anthropic), Codex CLI (OpenAI), Grok Build (xAI). The bet is that the next decade of developer tooling lives in the terminal, not the chat window. All three support background agents, multi-file editing, and tool use. Claude Code reset weekly limits +50% to match Codex.
+                    </div>
+                    <div class="trend-tags">
+                        <span class="trend-tag">Terminal-First</span>
+                        <span class="trend-tag">Background Agents</span>
+                        <span class="trend-tag">Vibe Coding</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>buildfastwithai.com / releasebot.io</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">#4 TREND</span>
+                    </div>
+                    <div class="card-title">Multi-Agent Orchestration</div>
+                    <div class="card-text">
+                        Single agents are being replaced by coordinated teams. Google's A2A protocol enables Gemini agents to communicate with ServiceNow, Salesforce, Atlassian agents. Fountain's Copilot uses hierarchical orchestration: central agent + specialized sub-agents for screening, document generation, sentiment analysis — cutting fulfillment center staffing from weeks to 72 hours.
+                    </div>
+                    <div class="trend-tags">
+                        <span class="trend-tag">A2A Protocol</span>
+                        <span class="trend-tag">Hierarchical Orchestration</span>
+                        <span class="trend-tag">Enterprise Agents</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>oplexa.com / anthropic.com</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">#5 TREND</span>
+                    </div>
+                    <div class="card-title">Recursive Language Models (RLMs)</div>
+                    <div class="card-text">
+                        MIT researchers built RLM-Qwen3-8B, the first natively recursive LM. It breaks prompts into snippets, processes each recursively, and synthesizes — enabling inputs up to 100x beyond context windows without "lost in the middle" problems. Outperforms base Qwen3-8B by 28.3% on long-context tasks and approaches vanilla GPT-5 quality despite being 50x smaller.
+                    </div>
+                    <div class="trend-tags">
+                        <span class="trend-tag">Beyond Context Windows</span>
+                        <span class="trend-tag">Self-Calling Models</span>
+                        <span class="trend-tag">Efficient Long-Context</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>firecrawl.dev</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">#6 TREND</span>
+                    </div>
+                    <div class="card-title">Small Language Models (SLMs) for Agents</div>
+                    <div class="card-text">
+                        Research shows 1-12B parameter models are sufficient and often superior for agentic workloads where objectives are schema- and API-constrained. NVIDIA: serving a 7B SLM is 10-30x cheaper in latency and energy than 70-175B LLMs. Microsoft's Phi-4 (14B) achieves 88% MMLU — surpassing GPT-3.5 (175B) — consuming 92% less energy per inference.
+                    </div>
+                    <div class="trend-tags">
+                        <span class="trend-tag">Edge Deployment</span>
+                        <span class="trend-tag">Energy Efficiency</span>
+                        <span class="trend-tag">Phi-4 / Gemma Nano</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>firecrawl.dev</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">#7 TREND</span>
+                    </div>
+                    <div class="card-title">Verifiability as the Automation Key</div>
+                    <div class="card-text">
+                        Karpathy's framework: AI automates fastest where output can be verified. Code and math are heavily trained because they're verifiable. Browser agents struggle because multi-step UI flows are hard to verify. For founders: opportunity lies in finding high-value, verifiable domains that labs haven't prioritized yet.
+                    </div>
+                    <div class="trend-tags">
+                        <span class="trend-tag">RL Reward Design</span>
+                        <span class="trend-tag">Deterministic Outputs</span>
+                        <span class="trend-tag">Domain-Specific RL</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>firecrawl.dev</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag violet">#8 TREND</span>
+                    </div>
+                    <div class="card-title">AI Safety & Export Controls</div>
+                    <div class="card-text">
+                        Claude Fable 5 was temporarily suspended by US export directive within 3 days of release. The Pentagon supply-chain risk designation against Anthropic (later blocked by a judge) signals escalating government involvement in frontier AI. OpenAI coordinated GPT-5.6 release with US government. The safety-vs-engagement philosophical war is intensifying.
+                    </div>
+                    <div class="trend-tags">
+                        <span class="trend-tag">Export Controls</span>
+                        <span class="trend-tag">Government Coordination</span>
+                        <span class="trend-tag">Cybersecurity Red Lines</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>infoq.com / lumichats.com</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPEN SOURCE -->
+        <div id="opensource" class="page">
+            <div class="section-title">Open Source Landscape</div>
+            <div class="section-subtitle">Open-weight models, licenses, and deployment economics</div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag success">S-TIER</span>
+                    </div>
+                    <div class="card-title">DeepSeek V4-Pro</div>
+                    <div class="card-text">
+                        1.6T-parameter MoE, 49B active parameters. 1M-token context with "Engram memory." MIT license. 83.7% SWE-bench Verified, 99.4% AIME 2026, 92.8% MMLU-Pro. Strongest open-weight coding and reasoning model. Supports both OpenAI and Anthropic API formats. Self-hosting: 8x H100 for FP16 ($25-40/hr), or 2x H100 with INT4 quantization ($6-10/hr).
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Open Rank</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 98%; background: var(--success);"></div></div>
+                        <span class="impact-value" style="color: var(--success);">#1</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>getaiperks.com</div>
+                        <span>MIT License</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag success">S-TIER</span>
+                    </div>
+                    <div class="card-title">Qwen 3.5 / 3.6</div>
+                    <div class="card-text">
+                        397B total / 17B active MoE. Apache 2.0 — the most permissive license for a frontier-class model. Excellent vision, instruction following, and multimodal understanding. 86.7 on Tau2-Bench (agentic tasks). Native tool use and multi-step planning. 200K+ variants on Hugging Face. 1B+ downloads. Qwen 3.6-Plus is proprietary; 3.5 and 3.6 remain open.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Open Rank</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 95%; background: var(--success);"></div></div>
+                        <span class="impact-value" style="color: var(--success);">#2</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>particula.tech</div>
+                        <span>Apache 2.0</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag success">A-TIER</span>
+                    </div>
+                    <div class="card-title">Llama 4 Scout & Maverick</div>
+                    <div class="card-text">
+                        Scout: 109B total, 10M-token context (largest of any open-weight model), fits on single GPU. Maverick: 400B total, 128 experts, outperformed GPT-4o at launch. Both 17B active parameters. Custom license with 700M MAU cap. 1B+ downloads across versions. 25+ integration partners. Behemoth (288B active, ~2T total) remains in training as teacher model.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Open Rank</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 90%; background: var(--success);"></div></div>
+                        <span class="impact-value" style="color: var(--success);">#3</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>fourfoldai.com</div>
+                        <span>Custom (700M MAU Cap)</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag success">A-TIER</span>
+                    </div>
+                    <div class="card-title">Mistral Large 3 & Small 4</div>
+                    <div class="card-text">
+                        Large 3: 675B total / 41B active MoE, multimodal, Apache 2.0. Small 4: 119B total / 6B active, 256K context, image input, Apache 2.0. Medium 3.5 is 128B dense but uses Modified MIT License with $20M revenue restriction — enterprise legal review required. Strongest European open-weight option with self-hosting paths.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Open Rank</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 85%; background: var(--success);"></div></div>
+                        <span class="impact-value" style="color: var(--success);">#4</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>chat-deep.ai</div>
+                        <span>Apache 2.0 / Modified MIT</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag success">A-TIER</span>
+                    </div>
+                    <div class="card-title">Gemma 4 (Google)</div>
+                    <div class="card-text">
+                        Apache 2.0 with zero restrictions. Full size range: 2.3B (E2B, edge-optimized) to 31B. Deepest integration with Google Cloud, Vertex AI, Android, and Chrome. E2B at 2.3B delivers better edge quality than Qwen's 0.8B. On-device "local agentic intelligence" positioning for Android. Gemma 4 Ultra (larger dense model) hinted for Q3 2026.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Open Rank</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 82%; background: var(--success);"></div></div>
+                        <span class="impact-value" style="color: var(--success);">#5</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>cloudswap.info</div>
+                        <span>Apache 2.0</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag success">B-TIER</span>
+                    </div>
+                    <div class="card-title">GLM-5 / GLM-5.1 (Tsinghua)</div>
+                    <div class="card-text">
+                        Surprised the industry with coding performance rivaling Claude Opus. Strong Chinese and English bilingual capabilities. Open-weight with permissive license. Gaining traction in academic and enterprise deployments in Asia. Less mature ecosystem than Qwen or Llama but competitive on raw benchmarks.
+                    </div>
+                    <div class="impact-score">
+                        <span class="impact-label">Open Rank</span>
+                        <div class="impact-bar"><div class="impact-fill" style="width: 75%; background: var(--cyan);"></div></div>
+                        <span class="impact-value" style="color: var(--cyan);">#6</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>buildfastwithai.com</div>
+                        <span>Open License</span>
+                    </div>
+                </div>
+
+                <div class="card card-full">
+                    <div class="card-header">
+                        <span class="card-tag">COMPARISON</span>
+                    </div>
+                    <div class="card-title">Open-Source vs. Proprietary: The Gap in 2026</div>
+                    <div class="card-text">
+                        The gap between open and closed models has narrowed dramatically. In February 2025, the Arena Elo gap hit just 4 points. Since then, proprietary labs have widened it again. Claude Opus 4.8 leads at ~1580 Elo; the best open model (DeepSeek V4 Pro) sits at ~1462 — a 118-point gap. For context: 100 Elo points means the higher-rated model wins ~64% of pairwise matchups. For most production workloads (coding, RAG, standard reasoning), open models are "close enough that price becomes the deciding factor." For frontier science reasoning, multi-modal agentic reliability, and long-horizon autonomy, proprietary models still hold an edge.
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>swfte.com / benchlm.ai</div>
+                        <span>July 2026</span>
+                    </div>
+                </div>
+
+                <div class="card card-full">
+                    <div class="card-header">
+                        <span class="card-tag">DEPLOYMENT</span>
+                    </div>
+                    <div class="card-title">Self-Hosting Economics: What You Actually Need</div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Min Setup</th>
+                                <th>Cloud Cost/hr</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="model-name">DeepSeek V4-Pro (INT4)</td>
+                                <td>2x H100 80GB</td>
+                                <td class="price-tag">$6–10</td>
+                                <td>Frontier reasoning, coding</td>
+                            </tr>
+                            <tr>
+                                <td class="model-name">Llama 4 Scout (INT8)</td>
+                                <td>1x H100 80GB</td>
+                                <td class="price-tag">$4–8</td>
+                                <td>Ultra-long context (10M)</td>
+                            </tr>
+                            <tr>
+                                <td class="model-name">Qwen 3.5 (INT4)</td>
+                                <td>1x H100 80GB</td>
+                                <td class="price-tag">$3–6</td>
+                                <td>Multilingual, multimodal</td>
+                            </tr>
+                            <tr>
+                                <td class="model-name">Mistral Large 3 (INT8)</td>
+                                <td>2x A100 80GB</td>
+                                <td class="price-tag">$4–8</td>
+                                <td>European compliance, multilingual</td>
+                            </tr>
+                            <tr>
+                                <td class="model-name">Gemma 4 31B (INT8)</td>
+                                <td>1x A100 40GB</td>
+                                <td class="price-tag">$2–4</td>
+                                <td>Edge-to-cloud, Android</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>getaiperks.com / codmaker.com</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LEADERBOARD -->
+        <div id="leaderboard" class="page">
+            <div class="section-title">Arena Leaderboard</div>
+            <div class="section-subtitle">LMArena (formerly LMSys) Elo rankings — July 2026</div>
+
+            <div class="card-grid">
+                <div class="card card-full">
+                    <div class="card-header">
+                        <span class="card-tag">LIVE RANKINGS</span>
+                    </div>
+                    <div class="card-title">Top 10 LMArena Elo — Overall Arena</div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Model</th>
+                                <th>Maker</th>
+                                <th>Overall Elo</th>
+                                <th>Coding Elo</th>
+                                <th>License</th>
+                                <th>Key Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="elo-score">1</td>
+                                <td class="model-name">Claude Opus 4.8</td>
+                                <td>Anthropic</td>
+                                <td class="elo-score">1580</td>
+                                <td class="elo-score">1582</td>
+                                <td>Proprietary</td>
+                                <td>New #1 overall & coding. AAII 61.4</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">2</td>
+                                <td class="model-name">Claude Opus 4.7</td>
+                                <td>Anthropic</td>
+                                <td class="elo-score">1567</td>
+                                <td class="elo-score">1567</td>
+                                <td>Proprietary</td>
+                                <td>Prior coding #1</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">3</td>
+                                <td class="model-name">GPT-5.5 Pro</td>
+                                <td>OpenAI</td>
+                                <td class="elo-score">1551</td>
+                                <td class="elo-score">1531</td>
+                                <td>Proprietary</td>
+                                <td>Reasoning #1 (AAII 59)</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">4</td>
+                                <td class="model-name">Gemini 3.1 Pro</td>
+                                <td>Google</td>
+                                <td class="elo-score">1538</td>
+                                <td class="elo-score">1505</td>
+                                <td>Proprietary</td>
+                                <td>Science #1 (GPQA 94.3%), 2M context</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">5</td>
+                                <td class="model-name">GPT-5.5</td>
+                                <td>OpenAI</td>
+                                <td class="elo-score">1523</td>
+                                <td class="elo-score">1483</td>
+                                <td>Proprietary</td>
+                                <td>Mainline workhorse</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">6</td>
+                                <td class="model-name">Claude Sonnet 4</td>
+                                <td>Anthropic</td>
+                                <td class="elo-score">1518</td>
+                                <td class="elo-score">1520</td>
+                                <td>Proprietary</td>
+                                <td>Production workhorse, 1M context</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">7</td>
+                                <td class="model-name">Gemini 3.0</td>
+                                <td>Google</td>
+                                <td class="elo-score">1505</td>
+                                <td class="elo-score">1462</td>
+                                <td>Proprietary</td>
+                                <td>Cost leader at mainline tier</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">8</td>
+                                <td class="model-name">DeepSeek V4 Pro</td>
+                                <td>DeepSeek</td>
+                                <td class="elo-score">1462</td>
+                                <td class="elo-score">1454</td>
+                                <td class="price-tag" style="color: var(--success);">MIT / Open</td>
+                                <td>~1/8 the price of GPT-5.5 Pro</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">9</td>
+                                <td class="model-name">Qwen 3.7 Max</td>
+                                <td>Alibaba</td>
+                                <td class="elo-score">1455</td>
+                                <td class="elo-score">1450</td>
+                                <td>Proprietary</td>
+                                <td>Highest Chinese model, 35h agent runs</td>
+                            </tr>
+                            <tr>
+                                <td class="elo-score">10</td>
+                                <td class="model-name">Grok 4</td>
+                                <td>xAI</td>
+                                <td class="elo-score">1441</td>
+                                <td class="elo-score">1440</td>
+                                <td>Proprietary</td>
+                                <td>Real-time X data access</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>swfte.com / lmarena.ai</div>
+                        <span>Snapshot: July 2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag">METRICS</span>
+                    </div>
+                    <div class="card-title">Key Benchmarks That Matter in 2026</div>
+                    <div class="card-text">
+                        <strong>LMArena Elo:</strong> Human pairwise preference — best signal for "would users prefer this model."<br><br>
+                        <strong>GPQA Diamond:</strong> 198 hardest PhD-written questions. Human PhDs score ~65%. Frontier models now in high 70s–80s.<br><br>
+                        <strong>SWE-bench Verified:</strong> 500 real GitHub bug fixes. Best signal for production coding ability.<br><br>
+                        <strong>MMLU-Pro:</strong> Harder successor to MMLU. Frontier models 75–87%. Still has signal.<br><br>
+                        <strong>AIME 2026:</strong> Olympiad math. Hard reasoning benchmark for thinking models.
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>futureagi.com</div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-tag">HISTORY</span>
+                    </div>
+                    <div class="card-title">Arena Elo Progress: 2023 → 2026</div>
+                    <div class="card-text">
+                        Top Arena Elo rose from 1094 (vicuna-13b) in May 2023 to 1580 (Claude Opus 4.8) in July 2026 — a gain of +486 points in 38 months. In chess, a 400-point difference means the higher-rated player wins ~91% of the time. OpenAI held #1 for 16 of 38 months (42%), Google for 7 months, Anthropic for 6 months. The crown has changed hands 21 times since May 2023.
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-source"><div class="source-dot"></div>benchlm.ai</div>
+                        <span>May 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">NEURAL RADAR</div>
+        <div>LLM Intelligence Dashboard — Generated July 7, 2026 at 14:04 RTZ</div>
+        <div style="margin-top: 0.5rem; font-size: 0.75rem;">Sources: releasebot.io, infoq.com, swfte.com, buildfastwithai.com, fortune.com, lmarena.ai, and 20+ verified outlets</div>
+        <div style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.6;">This dashboard is synthesized from public web sources. Verify independently before procurement decisions.</div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Animate impact bars on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const fills = document.querySelectorAll('.impact-fill');
+            fills.forEach(fill => {
+                const width = fill.style.width;
+                fill.style.width = '0';
+                setTimeout(() => { fill.style.width = width; }, 300);
+            });
+
+            // Theme toggle
+            initTheme();
+        });
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('neural-radar-theme', next);
+            icon.textContent = next === 'light' ? '☾' : '☀';
+        }
+
+        function initTheme() {
+            const saved = localStorage.getItem('neural-radar-theme');
+            const icon = document.getElementById('themeIcon');
+            if (saved === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                icon.textContent = '☾';
+            } else {
+                icon.textContent = '☀';
+            }
+        }
+    </script>
+</body>
+</html>
