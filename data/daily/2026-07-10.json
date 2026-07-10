@@ -1,11 +1,13 @@
 {
   "date": "2026-07-10",
-  "generated_at": "2026-07-10T09:30:00Z",
+  "generated_at": "2026-07-10T05:22:32Z",
   "news": [
     {
       "id": "2026-07-10-anthropic-reflect",
       "cluster_id": "anthropic-reflect",
-      "models": ["anthropic"],
+      "models": [
+        "anthropic"
+      ],
       "title": {
         "ru": "Anthropic представил Reflect — дашборд самоанализа использования Claude",
         "en": "Anthropic launches Reflect, a self-reflection dashboard for Claude usage"
@@ -53,7 +55,9 @@
     {
       "id": "2026-07-10-openai-chatgpt-work",
       "cluster_id": "openai-chatgpt-work",
-      "models": ["openai"],
+      "models": [
+        "openai"
+      ],
       "title": {
         "ru": "OpenAI запускает ChatGPT Work — многочасового агента для сложных рабочих задач",
         "en": "OpenAI launches ChatGPT Work, an hours-long agent for complex workplace tasks"
@@ -108,7 +112,9 @@
     {
       "id": "2026-07-10-google-alphaevolve-ga",
       "cluster_id": "google-alphaevolve-ga",
-      "models": ["google"],
+      "models": [
+        "google"
+      ],
       "title": {
         "ru": "AlphaEvolve выходит в общий доступ на Gemini Enterprise",
         "en": "AlphaEvolve becomes generally available on Gemini Enterprise"
@@ -163,7 +169,9 @@
     {
       "id": "2026-07-10-meta-muse-spark",
       "cluster_id": "meta-muse-spark",
-      "models": ["meta"],
+      "models": [
+        "meta"
+      ],
       "title": {
         "ru": "Meta выпускает Muse Spark 1.1 — первую платную агентную модель компании",
         "en": "Meta ships Muse Spark 1.1, its first paid agentic model"
@@ -211,7 +219,9 @@
     {
       "id": "2026-07-10-gpt-5-6-reactions",
       "cluster_id": "openai-gpt-5-6",
-      "models": ["openai"],
+      "models": [
+        "openai"
+      ],
       "title": {
         "ru": "GPT-5.6: после запуска — сомнения в бенчмарках и «проблема лжи» из карточки безопасности",
         "en": "GPT-5.6: post-launch, skepticism over benchmarks and a \"lying problem\" in the safety card"
@@ -268,7 +278,9 @@
     {
       "id": "2026-07-10-grok-4-5-trust",
       "cluster_id": "xai-grok-4-5",
-      "models": ["xai"],
+      "models": [
+        "xai"
+      ],
       "title": {
         "ru": "Grok 4.5: цена радует, доверие — главный вопрос запуска",
         "en": "Grok 4.5: price impresses, trust becomes the launch's central question"
