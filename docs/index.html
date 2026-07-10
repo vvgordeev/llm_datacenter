@@ -26,7 +26,6 @@
         <button class="pill" data-view="week" data-i18n="view_week"></button>
         <button class="pill" data-view="month" data-i18n="view_month"></button>
       </span>
-      <select id="date-select" class="date-select" aria-label="date"></select>
       <button id="lang-toggle" class="ctrl-btn">RU</button>
       <button id="theme-toggle" class="ctrl-btn" aria-label="theme">◐</button>
     </div>
@@ -56,7 +55,10 @@
   <div class="page active" id="page-radar">
     <h2 class="section-title" data-i18n="radar_title"></h2>
     <div class="section-subtitle" data-i18n="radar_sub"></div>
-    <div class="filters" id="model-filters"></div>
+    <div class="toolbar">
+      <select id="date-select" class="date-select" aria-label="date"></select>
+      <div class="filters" id="model-filters"></div>
+    </div>
     <div class="card-grid" id="news-grid"></div>
   </div>
 
