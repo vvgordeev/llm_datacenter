@@ -80,7 +80,8 @@ description: Собрать ежедневную сводку новостей L
   }],
   "expert_content": [{
     "id", "type": "article|video", "author", "title": {"ru", "en"}, "url",
-    "summary": {"ru", "en"}, "note_page": "notes/<...>.html"
+    "summary": {"ru", "en"}, "note_page": "notes/<...>.html",
+    "cover": "media/frames/<slug>/<файл>.jpg"  // у видео: самый показательный кадр (обложка карточки); опционально
   }]
 }
 ```

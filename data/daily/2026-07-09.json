@@ -287,7 +287,8 @@
         "ru": "Разбор метода Stanford STORM: параллельный анализ с нескольких экспертных позиций, картирование противоречий, синтез и состязательное рецензирование — превращены в устанавливаемый скилл для Claude, который автор сравнивает со встроенной функцией Deep Research по качеству источников и контролю рисков.",
         "en": "A breakdown of the Stanford STORM method: parallel analysis from multiple expert viewpoints, contradiction mapping, synthesis, and adversarial peer review — packaged into an installable Claude skill that the author compares to the native Deep Research feature on source quality and risk control."
       },
-      "note_page": "notes/videos/stanford-storm-method-claude-research.html"
+      "note_page": "notes/videos/stanford-storm-method-claude-research.html",
+      "cover": "media/frames/stanford-storm-method-claude-research/000015.jpg"
     },
     {
       "id": "2026-07-09-pocock-skills-v1-1",
@@ -302,7 +303,8 @@
         "ru": "Метод целиком: гриллинг (вопросы по одному, факты vs решения) → спека → тикеты размером в сессию → implement с TDD → ревью по «запахам» Фаулера; новинка Wayfinder строит карту решений в GitHub issues для идей, не влезающих в одну сессию.",
         "en": "The whole method: grilling (one question at a time, facts vs decisions) → spec → session-sized tickets → TDD implement → review via Fowler smells; the new Wayfinder charts a decision map in GitHub issues for ideas too big for one session."
       },
-      "note_page": "notes/videos/skills-v1-1-wayfinder.html"
+      "note_page": "notes/videos/skills-v1-1-wayfinder.html",
+      "cover": "media/frames/skills-v1-1-wayfinder/000285.jpg"
     },
     {
       "id": "2026-07-09-bun-rewritten-in-rust",
@@ -332,7 +334,8 @@
         "ru": "«Устав автономии» для длинных прогонов: миссия, ограждения (ничего не выдумывать, никогда не спрашивать), определение оркестрации (фан-ауты, турниры, скептики, критик полноты) и экономика «Fable-оркестратор + дешёвые исполнители» (~500K токенов Fable на целую компанию).",
         "en": "An \"autonomy charter\" for long runs: mission, guardrails (invent nothing, never ask), a definition of orchestration (fan-outs, tournaments, skeptics, a completeness critic) and the \"Fable orchestrator + cheap workers\" economics (~500K Fable tokens for a whole company)."
       },
-      "note_page": "notes/videos/fable-5-built-me-a-business.html"
+      "note_page": "notes/videos/fable-5-built-me-a-business.html",
+      "cover": "media/frames/fable-5-built-me-a-business/000450.jpg"
     }
   ]
 }
