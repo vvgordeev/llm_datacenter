@@ -250,9 +250,36 @@ body {
 .footer a { color: var(--color-brand-cyan); text-decoration: none; }
 
 @media (max-width: 640px) {
-  .header-inner, .nav-inner, .main-content { padding-left: 16px; padding-right: 16px; }
+  .header-inner, .nav-inner, .main-content { padding-left: 14px; padding-right: 14px; }
   .card-grid { grid-template-columns: 1fr; }
-  .nav-bar { top: 108px; }
+
+  /* шапка: не липкая (место экрана дороже), компактная, в 2 ряда максимум */
+  .header { position: static; }
+  .nav-bar { top: 0; }
+  .header-inner { padding-top: 10px; padding-bottom: 10px; gap: 8px 10px; }
+  .logo { gap: 10px; }
+  .logo-icon { width: 26px; height: 26px; }
+  .logo-icon::before { inset: 5px; }
+  .logo-text { font-size: 15px; letter-spacing: 2px; }
+  .logo-sub { display: none; }
+  .live-indicator span[data-i18n="live"] { display: none; } /* остаются точка и время */
+  .live-meta { font-size: 11px; }
+  .header-right { gap: 6px; }
+  .ctrl-btn, .date-select { font-size: 12px; padding: 4px 10px; }
+  .pill { font-size: 11px; letter-spacing: 1px; padding: 3px 10px; }
+  .nav-btn { font-size: 13px; letter-spacing: 1.5px; padding: 12px 12px; }
+
+  /* hero: вдвое компактнее */
+  body { overflow-x: hidden; }
+  .hero { padding: 26px 16px 22px; }
+  .hero h1 { font-size: 23px; letter-spacing: 3px; }
+  .hero-radar { width: 68px; height: 68px; margin-bottom: 16px; }
+  .radar-ring:nth-child(1) { inset: 11px; }
+  .radar-ring:nth-child(2) { inset: 22px; }
+  .hero-tagline { font-size: 11px; letter-spacing: 2.5px; margin-top: 8px; }
+  .hero-stats { gap: 14px 22px; margin-top: 20px; }
+  .hero-stat-value { font-size: 22px; }
+  .hero-stat-label { font-size: 10px; letter-spacing: 1.5px; }
 }
 
 /* ── Совместимость: страницы конспектов (docs/notes/*) и старые классы ──
