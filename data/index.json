@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-10",
+      "news_count": 6,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "OpenAI запускает ChatGPT Work — многочасового агента для сложных рабочих задач",
+        "en": "OpenAI launches ChatGPT Work, an hours-long agent for complex workplace tasks"
+      }
+    },
+    {
       "date": "2026-07-09",
       "news_count": 4,
       "expert_count": 5,

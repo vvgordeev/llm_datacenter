@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Новое семейство GPT-5.6 — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-09</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Новое семейство GPT-5.6: Luna, Terra, Sol</span>
+      <span data-lang="en">The new GPT-5.6 family: Luna, Terra, Sol</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/9/gpt-5-6/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон разбирает релиз GPT-5.6 своим фирменным методом: просит все шесть уровней рассуждения (none, low, medium, high, xhigh, max) у всех трёх моделей семейства нарисовать SVG-пеликана на велосипеде — 18 картинок как неформальный, но на удивление показательный срез качества и цены. Разброс получается огромным: от gpt-5.6-luna на уровне none за 0.71 цента до gpt-5.6-sol на max за 48.55 цента — почти семидесятикратная разница в стоимости запроса при плавно растущей аккуратности рисунка.</span>
+      <span data-lang="en">Simon Willison dissects the GPT-5.6 release with his signature method: he asks all six reasoning levels (none, low, medium, high, xhigh, max) across all three family models to draw an SVG pelican riding a bicycle — 18 images that form an informal but surprisingly telling cross-section of quality and cost. The spread is enormous: from gpt-5.6-luna at level none for 0.71 cents to gpt-5.6-sol at max for 48.55 cents — nearly a seventyfold difference in per-request cost as the drawing quality climbs.</span>
+    </p>
+
+    <h2><span data-lang="ru">Programmatic Tool Calling: агент пишет код вместо цепочки вызовов</span><span data-lang="en">Programmatic Tool Calling: the agent writes code instead of a call chain</span></h2>
+    <p>
+      <span data-lang="ru">Главная содержательная новинка релиза — не сама модель, а новый режим вызова инструментов. Вместо привычного цикла «модель просит вызвать инструмент → получает результат текстом → просит следующий» GPT-5.6 умеет <b>написать JavaScript-программу, которая сама оркестрирует несколько вызовов инструментов</b>: циклы, условия, промежуточные переменные — и вернуть модели уже готовый, свёрнутый результат вычисления, а не сырой поток промежуточных ответов. Это резко сокращает число проходов через контекст модели на сложных многошаговых задачах. По данным OpenAI, у ранних клиентов экономия ощутима: у Clio −38% входных токенов, у Rogo −24% выходных, у PlayCo −63.5% токенов суммарно.</span>
+      <span data-lang="en">The release's real substance isn't the model itself but a new tool-calling mode. Instead of the familiar loop — model asks to call a tool, gets a text result back, asks for the next one — GPT-5.6 can <b>write a JavaScript program that itself orchestrates several tool calls</b>: loops, conditionals, intermediate variables — and hand the model back one finished, collapsed computation result instead of a raw stream of intermediate responses. That sharply cuts the number of passes through the model's context on complex multi-step tasks. Per OpenAI's GA numbers, early customers see real savings: Clio −38% prompt tokens, Rogo −24% output tokens, PlayCo −63.5% total tokens.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ultra и Max: ещё один уровень рассуждения, ещё один — субагенты</span><span data-lang="en">Ultra and Max: one more reasoning tier, one more for subagents</span></h2>
+    <p>
+      <span data-lang="ru">Семейство получает новый верхний уровень рассуждения <b>Max</b> — сверх прежнего максимума даёт Sol больше времени подумать на трудных задачах, — и отдельный режим <b>Ultra</b>, в котором модель вместо того, чтобы думать дольше в одиночку, <b>порождает субагентов</b> для ускорения сложной работы. На бенчмарке Agents' Last Exam Sol набирает 53.6 — на 13.1 балла больше, чем Fable 5, а даже на среднем уровне рассуждения обгоняет Fable 5 на 11.4 балла при цене примерно в четыре раза ниже; Terra и Luna превосходят Fable 5 на этом тесте при цене примерно в 16 раз ниже. Уиллисон подчёркивает: доверять таким цифрам напрямую стоит с осторожностью — это вендорские бенчмарки, и независимая проверка на реальных задачах пока впереди.</span>
+      <span data-lang="en">The family gets a new top reasoning tier, <b>Max</b> — beyond the previous ceiling, giving Sol more time to think on hard problems — and a separate <b>Ultra</b> mode, where instead of thinking longer alone the model <b>spawns subagents</b> to speed up complex work. On the Agents' Last Exam benchmark, Sol scores 53.6 — 13.1 points above Fable 5 — and even at medium reasoning it beats Fable 5 by 11.4 points at roughly a quarter of the cost; Terra and Luna outscore Fable 5 on this test at roughly one-sixteenth the cost. Willison flags the obvious caveat: treat these numbers with caution — they're vendor benchmarks, and independent real-task verification is still pending.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Пеликаний бенчмарк и Programmatic Tool Calling — разные грани одной темы: как измерять и снижать реальную стоимость агентной работы, а не только заявленное качество ответа. Способность модели самой писать оркестрирующий код поверх инструментов — вероятно, паттерн, который в ближайшие месяцы скопируют и другие вендоры: он снижает число проходов через контекст ровно там, где агентные задачи сегодня дороже всего. Сам релиз GPT-5.6 разобран в новостях этого дня; здесь — независимый разбор с цифрами и оговорками, которых нет в официальном пресс-релизе.</span>
+      <span data-lang="en">The pelican benchmark and Programmatic Tool Calling are two facets of the same question: how to measure and cut the real cost of agentic work, not just the claimed answer quality. A model's ability to write its own orchestration code on top of tool calls is likely a pattern other vendors will copy in the coming months — it cuts context passes exactly where agentic work is most expensive today. The GPT-5.6 release itself is covered in this day's news; this page digests an independent take with numbers and caveats the official press release leaves out.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

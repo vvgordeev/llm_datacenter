@@ -1,0 +1,47 @@
+{
+  "date": "2026-07-10",
+  "generated_at": "2026-07-10T09:30:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 через egress-прокси; далее — WebSearch"},
+    {"source": "anthropic — WebSearch", "status": "ok", "candidates": 2, "note": "Reflect (взято), Cowork web/mobile (уже опубликовано 2026-07-08 — пропущено)"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 через egress-прокси; далее — WebSearch"},
+    {"source": "openai — WebSearch", "status": "ok", "candidates": 3, "note": "ChatGPT Work (взято), GPT-5.6 публичный релиз (уже опубликовано 2026-07-09 — как продолжение сюжета взята реакция/скепсис), gpt-realtime апдейты (без новизны)"},
+    {"source": "google/deepmind blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 через egress-прокси; далее — WebSearch"},
+    {"source": "google — WebSearch", "status": "ok", "candidates": 2, "note": "AlphaEvolve GA (взято), Gemini 3.5 Pro delay to July 17 (не новость о фиче — отклонено)"},
+    {"source": "meta/llama blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 через egress-прокси; далее — WebSearch"},
+    {"source": "meta — WebSearch", "status": "ok", "candidates": 1, "note": "Muse Spark 1.1 — первая платная агентная модель Meta (взято); первый заход по ключевому слову «Llama» пропустил эту новость, нашлась через Simon Willison / вторичный поиск"},
+    {"source": "xai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 через egress-прокси; далее — WebSearch"},
+    {"source": "xai — WebSearch", "status": "ok", "candidates": 2, "note": "реакции на Grok 4.5 (доверие/политический нюдж — взято как продолжение сюжета), Voice Agent Builder (опубликован 1 июля — вне окна, пропущено)"},
+    {"source": "mistral blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 через egress-прокси; далее — WebSearch"},
+    {"source": "mistral — WebSearch", "status": "ok", "candidates": 1, "note": "открытая MoE-модель в раннем доступе — без официального анонса и даты, слишком спекулятивно, отклонено"},
+    {"source": "deepseek blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 через egress-прокси; далее — WebSearch"},
+    {"source": "deepseek — WebSearch", "status": "ok", "candidates": 2, "note": "V4 mid-July релиз (уже известно с 2026-07-05, без новизны), собственный AI-чип (не продуктовая LLM-новость — отклонено)"},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "403 через egress-прокси (WebFetch на hn.algolia.com); реакции собраны через WebSearch по конкретным тредам"},
+    {"source": "агрегаторы (smol.ai, TLDR AI, simonwillison linkblog)", "status": "blocked→partial", "candidates": 1, "note": "прямой WebFetch — 403; simonwillison.net найден через WebSearch (GPT-5.6, Muse Spark 1.1 — оба взяты в expert_content)"},
+    {"source": "эксперты: Simon Willison", "status": "ok", "candidates": 2, "note": "GPT-5.6 разбор (взято), Muse Spark 1.1 первые впечатления (взято)"},
+    {"source": "эксперты: Andrej Karpathy (YouTube)", "status": "ok", "candidates": 1, "note": "видео о «третьем сдвиге» интерфейса LLM, ~2026-07-03 (взято)"},
+    {"source": "эксперты: Matt Pocock (YouTube)", "status": "ok", "candidates": 1, "note": "«Building Great Agent Skills», ~2026-07-03 (взято)"},
+    {"source": "эксперты: Nate Herk (YouTube)", "status": "empty", "candidates": 0, "note": "последнее найденное видео о методе (STORM) уже опубликовано 2026-07-09; более новых по существу подходов не нашлось"},
+    {"source": "эксперты: AI Explained (YouTube)", "status": "empty", "candidates": 0, "note": "последние видео — еженедельные новостные обзоры, не разбор подходов — отклонены по правилу «не пересказ новостей»"},
+    {"source": "эксперты: Matt Wolfe, Latent Space (YouTube/статьи)", "status": "empty", "candidates": 0, "note": "не нашлось материала за последнюю неделю, не являющегося новостным пересказом"},
+    {"source": "эксперты: Ethan Mollick (oneusefulthing.org)", "status": "empty", "candidates": 0, "note": "последний пост уже опубликован 2026-07-06"},
+    {"source": "WebSearch: широкий проход «best AI article/video this week»", "status": "ok", "candidates": 1, "note": "150sec.com статья о context engineering — без именованного автора (только «150Sec Team»), отклонена в пользу именованных источников"}
+  ],
+  "totals": {
+    "candidates": 18,
+    "published_news": 6,
+    "published_expert": 4,
+    "rejected": {
+      "уже опубликовано ранее": 4,
+      "не новость о фиче/продукте": 3,
+      "без официального анонса/даты": 1,
+      "вне окна свежести (недельные новостные обзоры)": 3,
+      "без именованного автора": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok: GEMINI_API_KEY доступен, scripts/gemini_video.py отработал на обоих видео (Karpathy, Pocock) — тезисы и таймкоды получены",
+    "frames": "skipped: yt-dlp установлен из pip (yt-dlp + imageio-ffmpeg), но потоковый доступ к YouTube через egress-прокси даёт 403 на туннель — extract_frames.py не смог получить поток ни для одного видео; конспекты опубликованы без кадров с пометкой на странице"
+  },
+  "note": "min_expert_total=5 не достигнут (опубликовано 4): расширенный поиск (Zvi Mowshowitz, Nathan Lambert, 150sec.com) не дал материала, одновременно свежего, по теме подходов и с именованным автором — решено не публиковать натянутые кандидаты. AlphaEvolve GA (Google) добавлена в новости, хотя обычно ищется по ключевому слову «Gemini» — фактически анонс сделан через Google Cloud Blog, а не blog.google/technology/google-deepmind; учтено на будущее."
+}

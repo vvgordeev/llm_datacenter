@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Как писать хорошие агентные скиллы — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Matt Pocock · 2026-07-03 · 21 мин</span>
+      <span data-lang="en">Video digest · Matt Pocock · 2026-07-03 · 21 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как писать хорошие агентные скиллы: недостающее руководство</span>
+      <span data-lang="en">Building Great Agent Skills: The Missing Manual</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=UNzCG3lw6O0" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Скиллы для агентов (переиспользуемые инструкции вроде SKILL.md для Claude Code) расплодились настолько, что Мэтт Покок описывает это состояние как «ад навыков» <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=50">[00:50]</a>: пользователи и команды не могут отличить хороший скилл от плохого и просто нагромождают их один на другой. Ответ — не «ещё один скилл», а чек-лист из четырёх пунктов для оценки и улучшения того, что уже написано: Триггер, Структура, Управление, Обрезка <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=140">[02:20]</a>.</span>
+      <span data-lang="en">Agent skills (reusable instruction files like SKILL.md for Claude Code) have multiplied to the point Matt Pocock calls it "Skill Hell" <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=50">[00:50]</a>: users and teams can't tell a good skill from a bad one and just keep piling more on. His answer isn't "write one more skill" but a four-point checklist for evaluating and improving what already exists: Trigger, Structure, Steering, Pruning <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=140">[02:20]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Триггер: кто решает, что скилл нужен сейчас</span><span data-lang="en">Trigger: who decides the skill is needed now</span></h2>
+    <p>
+      <span data-lang="ru">Первый пункт — осознанный выбор между двумя способами вызова скилла <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=309">[05:09]</a>. <b>Вызов пользователем</b> (например, слэш-команда) даёт предсказуемость — скилл срабатывает точно тогда, когда его позвали, — но перекладывает когнитивную нагрузку на человека: нужно помнить, что скилл вообще существует и когда его использовать. <b>Вызов моделью</b> — агент сам решает подключить скилл, ориентируясь на его описание, — снимает нагрузку с пользователя, но добавляет её агенту: чем больше таких скиллов одновременно доступно, тем больше контекста тратится на то, чтобы понять, какой из них подходит, и тем выше риск, что агент выберет не тот или пропустит нужный.</span>
+      <span data-lang="en">The first point is a conscious choice between two ways of invoking a skill <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=309">[05:09]</a>. <b>User-invoked</b> (a slash command, say) is predictable — the skill fires exactly when called — but shifts the cognitive load onto the human: they have to remember the skill exists and when to reach for it. <b>Model-invoked</b> — the agent decides on its own to pull the skill in, based on its description — removes that load from the user but adds it to the agent: the more such skills are available at once, the more context gets spent figuring out which one applies, and the higher the risk the agent picks the wrong one or misses the right one.</span>
+    </p>
+
+    <h2><span data-lang="ru">Структура: шаги против справочника, и маленький SKILL.md</span><span data-lang="en">Structure: steps vs. reference, and a small SKILL.md</span></h2>
+    <p>
+      <span data-lang="ru">Второй пункт — как организовать содержимое скилла <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=524">[08:44]</a>: разделять <b>«шаги»</b> (собственно процедуру — что делать по порядку) и <b>«справочную информацию»</b> (вспомогательные детали, нужные не всегда). Главный файл SKILL.md должен оставаться как можно меньше — ветвящийся справочный материал прячется за отдельными файлами, на которые в SKILL.md стоят лишь короткие указатели-ссылки. Так агент подгружает в контекст только то, что реально нужно для текущей задачи, а не весь скилл целиком, — это одновременно снижает стоимость токенов и облегчает поддержку.</span>
+      <span data-lang="en">The second point is how to organize a skill's contents <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=524">[08:44]</a>: separate <b>"steps"</b> (the actual procedure — what to do, in order) from <b>"reference"</b> (supporting detail that isn't always needed). The main SKILL.md file should stay as small as possible — branching reference material is hidden behind separate files that SKILL.md only points to with short links. That way the agent loads into context only what the current task actually needs, not the whole skill at once — cutting token cost while making the skill easier to maintain.</span>
+    </p>
+
+    <h2><span data-lang="ru">Управление: ведущие слова направляют рассуждение агента</span><span data-lang="en">Steering: leading words guide the agent's reasoning</span></h2>
+    <p>
+      <span data-lang="ru">Покок показывает практический приём: последовательные «ведущие слова» внутри скилла — например, фраза «Вертикальный срез» как обязательный первый шаг любого плана — заметно влияют на то, как агент строит рассуждение и во что превращается план реализации <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=740">[12:20]</a>. На примере он показывает, как сложную задачу стоит разбивать на более мелкие скиллы — это вынуждает агента делать более тщательную подготовительную работу перед тем, как приступить к реализации, вместо того чтобы сразу бросаться писать код <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=948">[15:48]</a>.</span>
+      <span data-lang="en">Pocock demonstrates a practical trick: consistent "leading words" inside a skill — for instance, the phrase "Vertical Slice" as a mandatory first step in any plan — measurably shape how the agent reasons and what its implementation plan turns into <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=740">[12:20]</a>. He shows an example of splitting a complex task into smaller skills, which forces the agent to do more thorough legwork before implementation instead of jumping straight into writing code <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=948">[15:48]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Обрезка: тест на удаление</span><span data-lang="en">Pruning: the deletion test</span></h2>
+    <p>
+      <span data-lang="ru">Последний пункт — регулярная чистка: скиллы со временем накапливают «no-ops» (формулировки, которые никак не влияют на поведение агента), «осадок» (нерелевантный или устаревший материал) и повторы. Практический приём — <b>тест на удаление</b>: убрать фрагмент и проверить, изменилось ли поведение агента; если нет — фрагмент не нужен <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=1132">[18:52]</a>. Покок завершает видео призывом применить весь чек-лист к собственным скиллам через отдельный скилл <code>/writing-great-skills</code>, который он же и выпустил <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=1195">[19:55]</a>.</span>
+      <span data-lang="en">The last point is regular cleanup: skills accumulate "no-ops" (wording that doesn't affect agent behavior at all), "sediment" (irrelevant or stale material), and repetition over time. The practical trick is a <b>deletion test</b>: remove a fragment and check whether the agent's behavior changes; if it doesn't, the fragment wasn't needed <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=1132">[18:52]</a>. Pocock closes by urging viewers to run the whole checklist on their own skills via a companion skill he shipped, <code>/writing-great-skills</code> <a class="ts" href="https://www.youtube.com/watch?v=UNzCG3lw6O0&t=1195">[19:55]</a>.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API; кадры извлечь не удалось — в текущем облачном окружении egress-прокси блокирует потоковый доступ yt-dlp к YouTube (403 на туннель). Статус — в run_log дня.</span>
+      <span data-lang="en">Digest built from a Gemini API video analysis; frame extraction failed — in this cloud environment the egress proxy blocks yt-dlp's streaming access to YouTube (403 on the tunnel). Status is recorded in the day's run_log.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

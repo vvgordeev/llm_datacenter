@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Знакомство с Muse Spark 1.1 — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-09</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Знакомство с Muse Spark 1.1</span>
+      <span data-lang="en">Introducing Muse Spark 1.1</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/9/muse-spark-1-1/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Получив несколько дней превью-доступа к новой модели Meta, Саймон Уиллисон поступил как обычно с новыми моделями: написал плагин, чтобы попробовать её из терминала. <code>llm-meta-ai</code> — новый провайдер для его CLI/Python-библиотеки <code>llm</code>, дающий доступ к Muse Spark 1.1 одной командой без похода в веб-интерфейс. По его словам, это первая модель Meta, которую он смог протестировать «по-настоящему», а не только через демо-презентацию.</span>
+      <span data-lang="en">Given a few days of preview access to Meta's new model, Simon Willison did what he usually does with new models: he wrote a plugin to try it from the terminal. <code>llm-meta-ai</code> is a new provider for his <code>llm</code> CLI/Python library, giving one-command access to Muse Spark 1.1 without going through the web UI. He notes it's the first Meta model he's been able to test "for real," rather than just watch in a demo.</span>
+    </p>
+
+    <h2><span data-lang="ru">Побочный эксперимент: модель разговаривает сама с собой</span><span data-lang="en">A side experiment: the model talks to itself</span></h2>
+    <p>
+      <span data-lang="ru">Самая любопытная часть заметки — не бенчмарки, а небольшой эксперимент: Уиллисон запустил две копии Muse Spark 1.1 в режиме диалога друг с другом без темы, заданной человеком, и оставил их общаться. Разговор быстро уходит от бытовых реплик в сторону абстрактных, почти философских размышлений о собственной природе и «существовании» — модель раз за разом скатывается в один и тот же тип рассуждения независимо от точки старта. Автор называет это «аттракторным состоянием» (attractor state): устойчивый паттерн, к которому система стягивается сама, а не то, что в неё явно заложили.</span>
+      <span data-lang="en">The most curious part of the post isn't the benchmarks but a small experiment: Willison set two copies of Muse Spark 1.1 talking to each other with no human-supplied topic, and let them run. The conversation quickly drifts from small talk into abstract, near-philosophical musings about its own nature and "existence" — the model repeatedly settles into the same kind of reasoning regardless of the starting point. He calls this an "attractor state": a stable pattern the system gravitates toward on its own, rather than something explicitly built in.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Аттракторные состояния в самодиалоге моделей — не новый феномен (его отмечали и на других моделях), но каждый новый пример помогает понять, насколько это общее свойство архитектуры «трансформер + RLHF», а не особенность конкретного вендора. Для практика это скорее любопытство, чем инструмент, — но именно такие независимые, неформальные тесты первыми ловят особенности поведения модели, которые не видны в официальных бенчмарках. Сам релиз Muse Spark 1.1 — в новостях этого дня; здесь — конспект первых впечатлений практикующего инженера с доступом к модели до её широкого релиза.</span>
+      <span data-lang="en">Attractor states in model self-dialogue aren't a new phenomenon — they've been noted on other models too — but every new example helps separate a general property of the "transformer + RLHF" architecture from something specific to one vendor. For a practitioner it's more curiosity than tool, but this kind of independent, informal testing is exactly what first catches behavioral quirks that official benchmarks don't surface. The Muse Spark 1.1 release itself is covered in this day's news; this page digests a practicing engineer's first impressions with early access ahead of the wide release.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
