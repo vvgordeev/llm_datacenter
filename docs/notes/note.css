@@ -10,6 +10,10 @@
 .note-source a { color: var(--accent); text-decoration: none; font-size: 14px; }
 .note-source a:hover { text-decoration: underline; }
 
+.note-actions { display: flex; gap: 10px; margin: 14px 0 4px; }
+.note-actions .chip-btn { font-size: 13px; }
+.note-actions .chip-btn:disabled { opacity: .7; cursor: default; }
+
 .theses { padding-left: 20px; }
 .theses li { margin: 12px 0; color: var(--ink-2); }
 .theses b { color: var(--ink); }
