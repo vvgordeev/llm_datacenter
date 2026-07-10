@@ -69,7 +69,7 @@ description: Собрать ежедневную сводку новостей L
 ```json
 {
   "date": "YYYY-MM-DD",
-  "generated_at": "ISO-8601 UTC",
+  "generated_at": "ISO-8601 UTC — РЕАЛЬНЫЙ момент сборки (дашборд показывает его как «обновлено»; не ставь приблизительное время)",
   "news": [{
     "id": "<date>-<slug>", "cluster_id": "<сюжет>", "models": ["<tag из sources.yaml>"],
     "title": {"ru", "en"}, "summary": {"ru", "en"},

@@ -197,16 +197,21 @@ function renderChrome() {
 }
 
 async function renderLiveMeta() {
-  // дата и время последнего обновления — generated_at свежайшего дневного файла
+  // дата и время последнего обновления — generated_at свежайшего дневного файла.
+  // Показывается в московском времени (GMT+3) с явной пометкой: расписание
+  // пайплайна задано в этом поясе, а пояс браузера зрителя может быть любым.
   const newest = state.index.days[0];
   if (!newest) return;
   const day = await loadDay(newest.date);
   if (!day || !day.generated_at) return;
   const dt = new Date(day.generated_at);
-  document.getElementById("live-meta").textContent = dt.toLocaleString(
+  const formatted = dt.toLocaleString(
     state.lang === "ru" ? "ru-RU" : "en-GB",
-    { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }
+    { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit",
+      timeZone: "Europe/Moscow" }
   );
+  document.getElementById("live-meta").textContent =
+    `${formatted} ${state.lang === "ru" ? "МСК" : "MSK"}`;
 }
 
 function renderFilters(allModels) {
