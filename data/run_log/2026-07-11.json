@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-11",
+  "generated_at": "2026-07-11T05:30:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403 (egress-прокси); прошли через WebSearch"},
+    {"source": "anthropic (WebSearch x2)", "status": "empty", "candidates": 0, "note": "за окно 36ч только повторы уже опубликованного (Reflect, Cowork mobile, Claude Science, Sonnet 5 июнь)"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "openai (WebSearch x2)", "status": "empty", "candidates": 0, "note": "GPT-5.6/GPT-Live/ChatGPT Work уже опубликованы вчера; новых релизов за 36ч нет (group-chats deprecation отфильтрован как слишком незначительный)"},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "google (WebSearch x2)", "status": "rejected", "candidates": 1, "note": "Gemini 3.5 Pro delay — только вторичные источники (BigGo/HackerNoon/Medium), нет официального подтверждения Google; отклонено как непроверенный слух"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "meta (WebSearch x2)", "status": "ok", "candidates": 1, "note": "Muse Image launch (7 июля) + отключение функции тегов из Instagram (10 июля) — опубликовано"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "xai (WebSearch x2)", "status": "ok", "candidates": 2, "note": "21 новый голос Grok Voice (продолжение xai-grok-build-voice) + независимый рейтинг Grok 4.5 на Artificial Analysis (продолжение xai-grok-4-5) — оба опубликованы"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "mistral (WebSearch x2)", "status": "rejected", "candidates": 1, "note": "OCR 4 include_blocks — сама модель OCR 4 вышла ещё 23-25 июня, отклонено как несвежее для окна сбора"},
+    {"source": "deepseek news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "deepseek (WebSearch x2)", "status": "empty", "candidates": 0, "note": "V4 официальный релиз всё ещё «намечен на середину июля», без новых фактов сверх уже опубликованного 2026-07-05; $7B раунд отклонён как финансовая новость без продуктовой части"},
+    {"source": "AI News (smol.ai)", "status": "blocked→ok via WebSearch", "candidates": 3, "note": "403 на прямой fetch; через WebSearch нашли инвайт на историю про скрытый код в Claude Code (11+ дней, вне окна — отклонено), Accenture-инцидент (не LLM-фича — отклонено)"},
+    {"source": "TLDR AI", "status": "blocked→ok via WebSearch", "candidates": 0, "note": "403 на прямой fetch; контент за 10 июля — повтор GPT-5.6/Accenture, ничего нового"},
+    {"source": "Simon Willison linkblog (агрегатор)", "status": "ok", "candidates": 0, "note": "все существенные посты за окно уже опубликованы в предыдущих сводках; короткий quote-пост 10 июля слишком тонкий для новости"},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "403 на CONNECT через egress-прокси (connect_rejected, policy denial) — перешли на WebSearch site:news.ycombinator.com"},
+    {"source": "Hacker News (WebSearch)", "status": "ok", "candidates": 4, "note": "нашли треды по Muse Image, build-off сравнению моделей — использованы как opinions/экспертный контент"},
+    {"source": "r/LocalLLaMA, r/ClaudeAI, X (community)", "status": "empty", "candidates": 0, "note": "WebSearch не дал конкретных свежих постов за окно сверх уже учтённого в новостях"},
+    {"source": "расширенный проход (LLM news/AI model release/AI coding agent update)", "status": "ok", "candidates": 2, "note": "после узкого прохода было <5 кандидатов — расширили поиск; подтвердили отсутствие других свежих релизов за окно"},
+    {"source": "эксперты: Simon Willison, Karpathy, Latent Space, AI Explained, Matt Wolfe, Ethan Mollick, Nate Herk, Matt Pocock (все из config)", "status": "partial", "candidates": 2, "note": "Nate Herk (видео, ~3 недели) и Latent Space (статья/подкаст, 8 июля) — свежий фит; у остальных либо уже опубликованный на прошлых днях материал, либо не нашли содержательного нового поста/видео за разумное окно"},
+    {"source": "расширение экспертного контента за пределы config (TryAI, Towards AI, eesel AI)", "status": "ok", "candidates": 3, "note": "min_expert_total=5 не набирался только из config-списка; добавили резонансные независимые материалы о подходах (build-off сравнение моделей, разбор Programmatic Tool Calling, обзор Muse Image)"}
+  ],
+  "totals": {
+    "candidates": 20,
+    "published": 3,
+    "rejected": {
+      "неподтверждённый слух (Gemini 3.5 Pro delay)": 1,
+      "несвежее для окна сбора (Mistral OCR 4, DeepSeek V4 без новых фактов, Grok voice guide уже опубликован)": 2,
+      "финансовая новость без продуктовой части (DeepSeek $7B раунд)": 1,
+      "вне окна сбора / устаревшее (скрытый трекинг-код в Claude Code, 11+ дней)": 1,
+      "не по теме LLM (Accenture инцидент, White House framework)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — python scripts/gemini_video.py успешно отработал на https://www.youtube.com/watch?v=EuzYhzB0vbI (Nate Herk, Agent Loops), вернул тезисы и таймкоды",
+    "frames": "skipped: yt-dlp/imageio-ffmpeg установлены через pip (как предписано для облачного окружения), но прямой доступ к www.youtube.com заблокирован egress-прокси (connect_rejected, policy denial), несмотря на заявленное в SKILL.md разрешение youtube.com/googlevideo.com — расхождение со средой прошлых прогонов; конспект видео опубликован без кадров с явной пометкой на странице"
+  },
+  "notes": "Более трети источников (модели: anthropic/openai/google/meta/xai/mistral/deepseek — все 7 блогов, плюс smol.ai, TLDR AI, HN API) заблокированы на прямой WebFetch/curl (403) и на HN API — на CONNECT (403 policy denial); это деградация окружения, а не признак пустого дня — обход через WebSearch сработал и дал материал. День после серии крупных релизов (GPT-5.6/Grok 4.5/Muse Spark/Cowork/ChatGPT Work 8-10 июля) оказался закономерно тише: 3 подтверждённых новости вместо форсирования до 12 натянутых."
+}

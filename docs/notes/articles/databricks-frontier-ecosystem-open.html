@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Почему экосистема фронтир-моделей должна быть открытой — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи (подкаст) · Latent Space (swyx), гости Матей Захария и Рейнольд Син · 2026-07-08</span>
+      <span data-lang="en">Article/podcast digest · Latent Space (swyx), guests Matei Zaharia and Reynold Xin · 2026-07-08</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Почему экосистема фронтир-моделей должна оставаться открытой — Матей Захария и Рейнольд Син (Databricks)</span>
+      <span data-lang="en">Why the Frontier Ecosystem Must Be Open — Matei Zaharia and Reynold Xin, Databricks</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/databricks" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Записанный на Data + AI Summit 2026 разговор swyx с сооснователями Databricks Матеем Захарией и Рейнольдом Сином посвящён не конкретной модели, а тому, как должна быть устроена инфраструктура вокруг агентов, если агенты действительно начнут выполнять реальную работу компаний: единый открытый слой поверх разных агентных фреймворков и данные, к которым эти агенты обращаются.</span>
+      <span data-lang="en">Recorded at the 2026 Data + AI Summit, swyx's conversation with Databricks cofounders Matei Zaharia and Reynold Xin isn't about a specific model — it's about how the infrastructure around agents needs to be built if agents are actually going to do a company's real work: a single open layer over different agent frameworks, and the data those agents reach into.</span>
+    </p>
+
+    <h2><span data-lang="ru">Omnigent: обёртка, а не замена агентным фреймворкам</span><span data-lang="en">Omnigent: a wrapper, not a replacement for agent frameworks</span></h2>
+    <p>
+      <span data-lang="ru">Omnigent — открытый мета-слой Databricks для объединения, контроля и совместного использования агентов сразу в Claude Code, Codex, Cursor и других собственных или сторонних инструментах компании. Важный тезис: Omnigent не заменяет эти фреймворки, а оборачивает их поверх — обеспечивает единые политики доступа, совместимость между разными моделями и возможность передавать живую сессию агента от одного инструмента к другому, не начиная работу заново.</span>
+      <span data-lang="en">Omnigent is Databricks' open meta-layer for combining, controlling, and sharing agents across Claude Code, Codex, Cursor, and other in-house or third-party tools a company already runs. The key point: Omnigent doesn't replace those frameworks — it wraps around them, enforcing shared access policies, enabling interoperability across different models, and letting a live agent session hand off from one tool to another without starting the work over.</span>
+    </p>
+
+    <h2><span data-lang="ru">LTAP и Lakebase: база данных для эпохи агентов</span><span data-lang="en">LTAP and Lakebase: a database for the agent era</span></h2>
+    <p>
+      <span data-lang="ru">Захария объясняет, зачем в мире, где агенты сами читают и пишут данные, нужна новая архитектура хранения. LTAP объединяет аналитическую (OLAP) и транзакционную (OLTP) обработку на одной копии данных, убирая ETL-пайплайны и реплики, которые раньше держали эти два мира раздельно. Lakebase — новая категория serverless Postgres с мгновенным ветвлением базы данных, рассчитанная на то, как команды пишут софт сегодня: агент может создать ветку базы для эксперимента и не бояться сломать основную.</span>
+      <span data-lang="en">Zaharia explains why a world where agents themselves read and write data needs a new storage architecture. LTAP unifies analytical (OLAP) and transactional (OLTP) processing on a single copy of data, removing the ETL pipelines and replicas that used to keep these two worlds separate. Lakebase is a new category of serverless Postgres with instant database branching, built for how teams write software today: an agent can spin up a database branch for an experiment without risking the main one.</span>
+    </p>
+
+    <h2><span data-lang="ru">Контекстные политики как guardrails и почему открытость важна</span><span data-lang="en">Contextual policies as guardrails, and why openness matters</span></h2>
+    <p>
+      <span data-lang="ru">На вопрос о безопасности агентов Захария описывает систему «контекстных политик» — правил, которые компания задаёт для поведения агента: бюджеты по стоимости выполнения, ограничение скорости запросов, скоринг риска операции и маршрутизация задачи к конкретной модели в зависимости от её характера. Общий тезис эпизода, вынесенный в заголовок: если агентная экосистема останется закрытой и завязанной на одного вендора, компании потеряют возможность комбинировать лучшие модели и инструменты под конкретную задачу — поэтому Databricks делает ставку на открытые форматы и совместимость как основу инфраструктуры, а не на закрытый стек одного поставщика.</span>
+      <span data-lang="en">Asked about agent safety, Zaharia describes a system of "contextual policies" — rules a company sets for agent behavior: cost budgets for a run, rate limiting on requests, risk scoring for an operation, and routing a task to a specific model based on its nature. The episode's headline thesis: if the agent ecosystem stays closed and locked to a single vendor, companies lose the ability to mix the best models and tools for a given task — which is why Databricks is betting on open formats and interoperability as the foundation of the infrastructure, rather than one vendor's closed stack.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

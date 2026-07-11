@@ -1,0 +1,243 @@
+{
+  "date": "2026-07-11",
+  "generated_at": "2026-07-11T05:30:00Z",
+  "news": [
+    {
+      "id": "2026-07-11-meta-muse-image-backlash",
+      "cluster_id": "meta-muse-image",
+      "models": ["meta"],
+      "title": {
+        "ru": "Meta отключает функцию Muse Image по тегам из Instagram после давления SAG-AFTRA и CAA",
+        "en": "Meta pulls Muse Image's Instagram-tagging feature after backlash from SAG-AFTRA and CAA"
+      },
+      "summary": {
+        "ru": "Muse Image — первая модель генерации изображений от Meta Superintelligence Labs, запущенная 7 июля в Meta AI, Instagram и WhatsApp — позволяла тегать любой публичный аккаунт Instagram, чтобы вставить внешность этого человека в сгенерированное изображение. Функция была включена по умолчанию (opt-out, а не opt-in) и не уведомляла владельца аккаунта об использовании его фото. После жалоб агентства CAA (клиенты — Том Хэнкс, Мерил Стрип) и профсоюза SAG-AFTRA, призвавшего участников отключить функцию, Meta 10 июля отключила её полностью, заявив, что она «не оправдала ожиданий».",
+        "en": "Muse Image is Meta Superintelligence Labs' first image-generation model, launched July 7 inside Meta AI, Instagram and WhatsApp — it let anyone tag a public Instagram account to insert that person's likeness into a generated image. The feature defaulted to opt-out rather than opt-in, and gave no notice to an account owner when their photos were used as a reference. After talent agency CAA (whose clients include Tom Hanks and Meryl Streep) and actors' union SAG-AFTRA urged members to opt out, Meta disabled the feature entirely on July 10, saying it had \"missed the mark\"."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Не новый подход к LLM как таковой, но значимый прецедент по безопасности/согласию для целого класса будущих функций «генерация по чужим публичным фото» — широкая аудитория (пользователи Instagram/Meta AI), сильная и быстрая реакция сообщества и индустрии.",
+        "en": "Not a new LLM approach per se, but a significant safety/consent precedent for a whole future class of \"generate from someone else's public photos\" features — a wide audience (Instagram/Meta AI users) and a strong, fast community and industry reaction."
+      },
+      "source_url": "https://variety.com/2026/biz/news/meta-suspends-ai-image-instagram-feature-backlash-1236806989/",
+      "opinions": [
+        {
+          "author": "CAA",
+          "stance": "positive",
+          "quote": {
+            "ru": "Мы благодарим Meta за оперативное решение убрать функцию Muse Image.",
+            "en": "We commend Meta for its swift decision to remove the Muse Image feature."
+          },
+          "url": "https://deadline.com/2026/07/meta-disables-new-ai-image-generator-zuckerberg-1236979706/"
+        },
+        {
+          "author": "SAG-AFTRA",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Примите меры, чтобы защитить своё изображение — отключите функцию, пока Meta не проведёт нужные изменения.",
+            "en": "Take action to protect your likeness — opt out while Meta works through the necessary changes."
+          },
+          "url": "https://deadline.com/2026/07/sag-aftra-recommends-members-opt-out-meta-ai-feature-1236979025/"
+        },
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "neutral",
+          "quote": {
+            "ru": "По качеству картинки Muse Image на ступень ниже и Nano Banana Pro, и GPT Image — при этом архитектура «поиск и самопроверка» с промежуточными правками — самое интересное, что случилось в потребительской генерации изображений в этом году.",
+            "en": "Early testers rank it a notch below both Nano Banana Pro and GPT Image on raw quality — but the search-and-self-refine architecture with mid-generation revisions is the most interesting thing to happen to consumer image generation this year."
+          },
+          "url": "https://news.ycombinator.com/item?id=48821795"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Изначальный сценарий использования: пользователь тегает публичный аккаунт Instagram (свой или чужой), чтобы Muse Image вставил внешность этого человека в новую сгенерированную сцену.",
+            "en": "The original intended use case: a user tags a public Instagram account (their own or someone else's) so Muse Image inserts that person's likeness into a newly generated scene."
+          },
+          "url": "https://thehackernews.com/2026/07/metas-new-ai-image-tool-lets-others-use.html"
+        },
+        {
+          "text": {
+            "ru": "До отключения функции пользователям советовали вручную зайти в настройки Meta AI и отключить использование своих публичных фото в качестве референса для чужих генераций.",
+            "en": "Before the feature was pulled, users were advised to manually go into Meta AI settings and opt their public photos out of being used as a reference for other people's generations."
+          },
+          "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-11-xai-grok-voice-21",
+      "cluster_id": "xai-grok-build-voice",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI добавляет 21 новый мультиязычный голос в Grok Voice",
+        "en": "xAI adds 21 new multilingual voices to Grok Voice"
+      },
+      "summary": {
+        "ru": "xAI выпустил 21 новый голос для Grok Voice в дополнение к исходным пяти (Ara, Eve, Leo, Rex, Sal, которые заодно переобучили ради более естественного темпа и интонаций). Каждый новый голос — от Carina и Zagan до Atlas — изначально мультиязычный: поддерживает все 25+ языков Grok Voice без переключения модели. Добавлены речевые теги вроде [pause] для управления подачей и клонирование голоса по референсному клипу длиной до 120 секунд. Голоса доступны через Realtime Voice Agent API, Text to Speech API и новый Grok Voice Agent Builder.",
+        "en": "xAI shipped 21 new voices for Grok Voice on top of the original five (Ara, Eve, Leo, Rex, Sal, which were also retrained for more natural pacing and phrasing). Every new voice — from Carina and Zagan to Atlas — is natively multilingual, covering all 25+ Grok Voice languages without a model switch. The release adds speech tags like [pause] for delivery control and voice cloning from a reference clip up to 120 seconds long. Voices are available via the Realtime Voice Agent API, the Text to Speech API, and the new Grok Voice Agent Builder."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Расширение линейки голосов и языков для голосовых агентов — полезное, но инкрементальное развитие в рамках уже существующего подхода к voice API, не меняющее сами практики использования.",
+        "en": "An expansion of voices and languages for voice agents — a useful but incremental development within an already-existing approach to voice APIs, not a change to how people actually use them."
+      },
+      "source_url": "https://x.ai/news/new-flagship-voices",
+      "opinions": [
+        {
+          "author": "TestingCatalog",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Качество голоса, охват языков и доступность через API напрямую определяют, смогут ли голосовые агентные сценарии перейти от демо к реальным пилотам.",
+            "en": "Voice quality, multilingual coverage, and API availability directly affect whether agentic voice workflows can move from demos to production pilots."
+          },
+          "url": "https://www.testingcatalog.com/spacexai-launches-21-new-grok-voices-on-xai-console/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Каждый голос подобран под конкретную задачу — поддержка клиентов, персонажи, комментарии, реклама, образование — что позволяет разработчикам выбирать голос по назначению, а не только по звучанию.",
+            "en": "Each voice was cast for a specific job — support, characters, commentary, advertising, education — letting developers pick a voice by purpose rather than just by how it sounds."
+          },
+          "url": "https://x.ai/news/new-flagship-voices"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-11-grok-4-5-benchmark-rank",
+      "cluster_id": "xai-grok-4-5",
+      "models": ["xai"],
+      "title": {
+        "ru": "Независимый бенчмарк ставит Grok 4.5 на четвёртое место — ниже заявленного Маском уровня Opus",
+        "en": "Independent benchmark ranks Grok 4.5 fourth, below Musk's \"Opus-class\" claim"
+      },
+      "summary": {
+        "ru": "Artificial Analysis Intelligence Index v4.1 (композит из девяти сложных оценок, включая Terminal-Bench 2.1, SciCode и Humanity's Last Exam) ставит Grok 4.5 на четвёртое место с 54 баллами — позади Claude Fable 5 (60), Claude Opus 4.8 (56) и GPT-5.5 (55). Это на 16 баллов выше Grok 4.3 (38→54) — крупнейший скачок за одно поколение в таблице. При этом на Coding Agent Index Grok 4.5 в связке Grok Build показывает результат на уровне GPT-5.5, но при заметно меньшей цене: около $2.59 за задачу против расходов конкурентов, и примерно на 60% дешевле по токенам, чем Opus 4.8.",
+        "en": "The Artificial Analysis Intelligence Index v4.1 (a composite of nine hard evals including Terminal-Bench 2.1, SciCode, and Humanity's Last Exam) ranks Grok 4.5 fourth with a score of 54 — behind Claude Fable 5 (60), Claude Opus 4.8 (56), and GPT-5.5 (55). That's a 16-point jump over Grok 4.3 (38→54), the biggest single-generation leap on the board. On the Coding Agent Index, though, Grok 4.5 in the Grok Build harness matches GPT-5.5's score at a markedly lower cost — about $2.59 per task, and roughly 60% cheaper on tokens than Opus 4.8."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Не новая функция, но независимая оценка снижает доверие к маркетинговому заявлению «уровня Opus» и даёт конкретные цифры для выбора модели по соотношению цена/качество в агентных задачах.",
+        "en": "Not a new feature, but an independent evaluation that dents trust in the vendor's \"Opus-class\" marketing claim and gives concrete numbers for picking a model by price-to-quality for agentic work."
+      },
+      "source_url": "https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier",
+      "opinions": [
+        {
+          "author": "Let's Data Science",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Маск назвал Grok 4.5 «моделью уровня Opus». Независимые тесты поставили её на четвёртое место.",
+            "en": "Musk called Grok 4.5 Opus-class. Independent testers ranked it fourth."
+          },
+          "url": "https://letsdatascience.com/blog/grok-4-5-opus-class-claim-ranks-fourth"
+        },
+        {
+          "author": "Artificial Analysis",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Grok 4.5 набирает 54 балла и занимает четвёртое место в Intelligence Index — сразу за Fable 5, GPT-5.5 и Opus 4.8; в Coding Agent Index на связке Grok Build он на уровне GPT-5.5, но по заметно меньшей цене.",
+            "en": "Grok 4.5 scores 54 to place fourth on the Intelligence Index, following only Fable 5, GPT-5.5 and Opus 4.8; on the Coding Agent Index in the Grok Build harness it scores on par with GPT-5.5, at much lower cost."
+          },
+          "url": "https://x.com/ArtificialAnlys/status/2074956932289282087"
+        },
+        {
+          "author": "участники r/ (по данным Let's Data Science)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Да, до топ-3 по чистому интеллекту не дотягивает — но по соотношению цены и качества это лучший вариант на рынке.",
+            "en": "It doesn't reach the top 3 in pure intelligence — but its cost-performance is the best in class."
+          },
+          "url": "https://letsdatascience.com/blog/grok-4-5-opus-class-claim-ranks-fourth"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды, выбирающие модель для агентного кодинга через Grok Build, получают результат уровня GPT-5.5 при заметно меньших расходах на токены.",
+            "en": "Teams picking a model for agentic coding through Grok Build get GPT-5.5-level results at a markedly lower token spend."
+          },
+          "url": "https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-11-tryai-build-off",
+      "type": "article",
+      "author": "TryAI",
+      "title": {
+        "ru": "GPT-5.6, Grok 4.5, Claude и Muse Spark строят одни и те же 4 приложения",
+        "en": "GPT-5.6, Grok 4.5, Claude, and Muse Spark build the same 4 apps"
+      },
+      "url": "https://www.tryai.dev/blog/gpt-5.6-build-off-12-models",
+      "summary": {
+        "ru": "Практический build-off: 12 моделей (все три уровня GPT-5.6, Grok 4.5, Claude Opus 4.8 и Fable 5, Muse Spark 1.1, а также открытые GLM-5.2, Qwen 3.7 Plus, DeepSeek V4 Pro, Kimi K2.6) получают одно и то же задание — рейкастер, кубик Рубика, калькулятор и Game of Life — по пять попыток на модель. Вывод: на сложных задачах разрыв между топовыми и открытыми моделями сохраняется, а на простой, многократно решённой в интернете задаче открытые модели держатся вровень с топами.",
+        "en": "A hands-on build-off: 12 models (all three GPT-5.6 tiers, Grok 4.5, Claude Opus 4.8 and Fable 5, Muse Spark 1.1, plus open-weight GLM-5.2, Qwen 3.7 Plus, DeepSeek V4 Pro, and Kimi K2.6) get the same four tasks — a raycaster, a Rubik's cube, a calculator, and Game of Life — five attempts each. The takeaway: on hard, novel tasks the gap between frontier and open-weight models persists, while on a simple, well-trodden task open-weight models hold their own against the frontier."
+      },
+      "note_page": "notes/articles/gpt-5-6-build-off-comparison.html"
+    },
+    {
+      "id": "2026-07-11-towardsai-programmatic-tool-calling",
+      "type": "article",
+      "author": "Chew Loong Nian (Towards AI)",
+      "title": {
+        "ru": "GPT-5.6 больше не вызывает инструменты по одному — теперь он пишет код, сократив токены на 63,5%",
+        "en": "GPT-5.6 stopped calling tools one at a time — it writes code now, and cut tokens 63.5%"
+      },
+      "url": "https://pub.towardsai.net/gpt-5-6-stopped-calling-tools-one-at-a-time-it-writes-code-now-and-cut-tokens-63-5-387d2b7160f9",
+      "summary": {
+        "ru": "Технический разбор Programmatic Tool Calling — новой функции GPT-5.6, которую автор называет самой важной в релизе, хотя о ней почти никто не говорит. Вместо цикла «модель просит инструмент → получает текстовый ответ → просит следующий» модель пишет JS-программу, которая сама вызывает нужные инструменты в изолированной среде V8 без доступа к сети. Один из ранних клиентов OpenAI прогнал того же агента на тех же инструментах и сжёг на 63,5% меньше токенов.",
+        "en": "A technical dive into Programmatic Tool Calling — the GPT-5.6 feature the author calls the most important thing in the release, even though almost nobody is talking about it. Instead of the loop where the model asks for a tool, gets a text result back, and asks for the next one, the model writes a JS program that itself calls the needed tools inside an isolated, network-free V8 runtime. One of OpenAI's launch customers ran the exact same agent on the exact same tools and burned 63.5% fewer tokens."
+      },
+      "note_page": "notes/articles/gpt-5-6-programmatic-tool-calling-explained.html"
+    },
+    {
+      "id": "2026-07-11-eesel-muse-image-review",
+      "type": "article",
+      "author": "eesel AI",
+      "title": {
+        "ru": "Обзор Meta Muse Image: а хорош ли он на самом деле?",
+        "en": "Meta Muse Image review: is it actually good?"
+      },
+      "url": "https://www.eesel.ai/blog/meta-muse-image-review",
+      "summary": {
+        "ru": "Независимый обзор новой модели генерации изображений от Meta: в отличие от однопроходных генераторов, Muse Image умеет искать в вебе, писать код и переделывать черновик прямо по ходу генерации — архитектуру «поиск и самопроверка» автор называет самым интересным, что случилось в потребительской генерации картинок в этом году. При этом по чистому качеству (105 баллов Elo позади GPT Image 2, всего 9 — впереди третьего места) модель на ступень ниже конкурентов и чаще проваливается в зловещую долину.",
+        "en": "An independent review of Meta's new image model: unlike single-pass generators, Muse Image can search the web, write code, and revise its draft mid-generation — a \"search-and-self-refine\" architecture the reviewer calls the most interesting thing to happen to consumer image generation this year. On raw quality, though (105 Elo points behind GPT Image 2, just 9 ahead of third place) it lands a notch below competitors and slips into the uncanny valley more often."
+      },
+      "note_page": "notes/articles/meta-muse-image-review.html"
+    },
+    {
+      "id": "2026-07-11-latent-space-databricks",
+      "type": "article",
+      "author": "Latent Space (swyx)",
+      "title": {
+        "ru": "Почему экосистема фронтир-моделей должна оставаться открытой — Матей Захария и Рейнольд Син (Databricks)",
+        "en": "Why the Frontier Ecosystem Must Be Open — Matei Zaharia and Reynold Xin, Databricks"
+      },
+      "url": "https://www.latent.space/p/databricks",
+      "summary": {
+        "ru": "Сооснователи Databricks на подкасте Latent Space (запись на Data + AI Summit 2026) рассказывают про Omnigent — открытый мета-слой, который оборачивает уже используемые компанией агентные фреймворки (Claude Code, Codex, Cursor и другие), не заменяя их, а добавляя политики и совместимость между моделями и живыми сессиями. Отдельно — про LTAP, архитектуру, объединяющую OLAP и OLTP на одной копии данных без ETL и реплик, про Lakebase — serverless Postgres с мгновенным ветвлением, и про «контекстные политики» как guardrails для агентов: бюджеты по стоимости, ограничение скорости, скоринг риска, маршрутизация по моделям.",
+        "en": "Databricks' cofounders, on the Latent Space podcast (recorded at Data + AI Summit 2026), describe Omnigent — an open meta-layer that wraps whatever agent frameworks a company already uses (Claude Code, Codex, Cursor, and others) without replacing them, adding policy enforcement and interoperability across models and live sessions. They also cover LTAP, an architecture unifying OLAP and OLTP on one copy of data with no ETL or replicas; Lakebase, a serverless Postgres with instant branching; and \"contextual policies\" as agent guardrails — cost budgets, rate limiting, risk scoring, and model routing."
+      },
+      "note_page": "notes/articles/databricks-frontier-ecosystem-open.html"
+    },
+    {
+      "id": "2026-07-11-nate-herk-agent-loops",
+      "type": "video",
+      "author": "Nate Herk",
+      "title": {
+        "ru": "Наконец-то: агентные циклы понятно объяснены",
+        "en": "Finally. Agent Loops Clearly Explained."
+      },
+      "url": "https://www.youtube.com/watch?v=EuzYhzB0vbI",
+      "summary": {
+        "ru": "Методический разбор паттерна «агентный цикл» (reason → act → observe → repeat): почему решающий фактор — чёткий и объективно проверяемый критерий «готово», какие бывают архитектуры циклов (одиночный агент, «создатель-проверяющий», «менеджер-помощники») и когда цикл вообще нужен — только для повторяющихся задач с непредсказуемым числом шагов, которые ИИ может сам объективно проверить.",
+        "en": "A methodical breakdown of the \"agent loop\" pattern (reason → act → observe → repeat): why the deciding factor is a clear, objectively checkable \"done\" criterion, what loop architectures exist (solo agent, maker-checker, manager-helpers), and when a loop is actually warranted — only for repetitive tasks with an unpredictable number of steps that the AI itself can objectively verify."
+      },
+      "note_page": "notes/videos/agent-loops-clearly-explained.html"
+    }
+  ]
+}

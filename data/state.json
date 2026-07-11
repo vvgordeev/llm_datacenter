@@ -39,7 +39,15 @@
     "https://simonwillison.net/2026/Jul/9/gpt-5-6/": "2026-07-10",
     "https://simonwillison.net/2026/Jul/9/muse-spark-1-1/": "2026-07-10",
     "https://www.youtube.com/watch?v=eMVaGOsfYs8": "2026-07-10",
-    "https://www.youtube.com/watch?v=UNzCG3lw6O0": "2026-07-10"
+    "https://www.youtube.com/watch?v=UNzCG3lw6O0": "2026-07-10",
+    "https://variety.com/2026/biz/news/meta-suspends-ai-image-instagram-feature-backlash-1236806989/": "2026-07-11",
+    "https://x.ai/news/new-flagship-voices": "2026-07-11",
+    "https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier": "2026-07-11",
+    "https://www.tryai.dev/blog/gpt-5.6-build-off-12-models": "2026-07-11",
+    "https://pub.towardsai.net/gpt-5-6-stopped-calling-tools-one-at-a-time-it-writes-code-now-and-cut-tokens-63-5-387d2b7160f9": "2026-07-11",
+    "https://www.eesel.ai/blog/meta-muse-image-review": "2026-07-11",
+    "https://www.latent.space/p/databricks": "2026-07-11",
+    "https://www.youtube.com/watch?v=EuzYhzB0vbI": "2026-07-11"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -55,8 +63,8 @@
       "summary": "OpenAI launches ChatGPT Work, a GPT-5.6-powered agent that plans and executes multi-hour workplace tasks across files, apps and the web, plus a Sites beta and Scheduled Tasks"
     },
     "xai-grok-4-5": {
-      "last_date": "2026-07-10",
-      "summary": "xAI launches Grok 4.5, trained alongside Cursor, at a fraction of Opus 4.8's token cost on coding benchmarks; day-two reaction centers on trust/political-nudging concerns rather than capability"
+      "last_date": "2026-07-11",
+      "summary": "xAI launches Grok 4.5 (trained alongside Cursor); day-two reaction centers on trust concerns, day-three independent benchmarks rank it 4th on Artificial Analysis Intelligence Index behind Fable 5/Opus 4.8/GPT-5.5 but best-in-class on cost"
     },
     "anthropic-reflect": {
       "last_date": "2026-07-10",
@@ -95,8 +103,8 @@
       "summary": "DeepSeek V4's official release adds peak-hour API pricing — a first for the company"
     },
     "xai-grok-build-voice": {
-      "last_date": "2026-07-05",
-      "summary": "xAI brings voice dictation directly into Grok Build's coding agent"
+      "last_date": "2026-07-11",
+      "summary": "xAI brings voice dictation into Grok Build's coding agent, then adds 21 new multilingual flagship voices to Grok Voice"
     },
     "mistral-leanstral": {
       "last_date": "2026-07-06",
@@ -113,6 +121,10 @@
     "glm-5-2-economics": {
       "last_date": "2026-07-07",
       "summary": "\"GLM 5.2 and the coming AI margin collapse\" — an essay on open models breaking c"
+    },
+    "meta-muse-image": {
+      "last_date": "2026-07-11",
+      "summary": "Meta launches Muse Image (July 7), its first image-gen model; an Instagram-tagging feature draws backlash from SAG-AFTRA/CAA and is pulled July 10"
     }
   }
 }

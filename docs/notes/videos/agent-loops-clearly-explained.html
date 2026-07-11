@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Наконец-то — агентные циклы понятно объяснены — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-06 · 14 мин</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-06 · 14 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Наконец-то: агентные циклы понятно объяснены</span>
+      <span data-lang="en">Finally. Agent Loops Clearly Explained.</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=EuzYhzB0vbI" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Херк начинает с твита Питера Штайнбергера <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=8">[00:08]</a> о том, что главный сдвиг в работе с агентами — это переход от написания промптов к проектированию циклов: вместо одной инструкции для одного ответа вы задаёте цель и правило проверки, а агент сам крутит цикл «рассуждение → действие → наблюдение» до тех пор, пока условие не будет выполнено <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=45">[00:45]</a>.</span>
+      <span data-lang="en">Nate Herk opens with a tweet from Peter Steinberger <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=8">[00:08]</a> arguing that the real shift in working with agents is moving from writing prompts to designing loops: instead of one instruction for one answer, you set a goal and a verification rule, and the agent itself cycles through reason → act → observe until the condition is met <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=45">[00:45]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Главное условие: объективный критерий «готово»</span><span data-lang="en">The core requirement: an objective "done" criterion</span></h2>
+    <p>
+      <span data-lang="ru">Херк подчёркивает: цикл работает только тогда, когда у ИИ есть чёткий, объективно проверяемый способ понять, что задача выполнена — субъективная оценка «выглядит нормально» не подходит, потому что агент либо остановится слишком рано, либо будет крутиться бесконечно <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=637">[10:37]</a>. На графике он показывает, как качество результата растёт с каждой итерацией цикла именно потому, что каждая итерация сверяется с этим критерием, а не идёт вслепую <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=184">[03:04]</a>.</span>
+      <span data-lang="en">Herk stresses that a loop only works when the AI has a clear, objectively checkable way to know the task is done — a subjective "looks fine" won't do, because the agent will either stop too early or spin forever <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=637">[10:37]</a>. A chart shows quality climbing with each loop iteration precisely because every iteration checks itself against that criterion instead of running blind <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=184">[03:04]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда цикл вообще нужен, и какие бывают архитектуры</span><span data-lang="en">When a loop is actually warranted, and what architectures exist</span></h2>
+    <p>
+      <span data-lang="ru">Дальше — практическое руководство по принятию решения <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=326">[05:26]</a>: агентный цикл нужен не для любой задачи, а именно для повторяющихся работ с непредсказуемым числом шагов, где результат можно объективно проверить программно или моделью-судьёй. Херк перечисляет архитектуры по возрастанию сложности — одиночный агент, который сам себя проверяет; связка «создатель-проверяющий», где один агент делает, а второй независимо оценивает; и иерархия «менеджер-помощники», где верхнеуровневый агент раздаёт подзадачи нескольким исполнителям. Выбор архитектуры зависит от того, насколько задачу можно разложить на независимо проверяемые куски.</span>
+      <span data-lang="en">Next comes a practical decision guide <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=326">[05:26]</a>: an agent loop isn't for every task — it's specifically for repetitive work with an unpredictable number of steps, where the result can be objectively checked by code or a judge model. Herk lays out architectures in order of complexity — a solo agent that checks its own work; a "maker-checker" pair where one agent does the work and a second independently evaluates it; and a "manager-helpers" hierarchy where a top-level agent hands out subtasks to several workers. Which architecture fits depends on how cleanly the task splits into independently verifiable pieces.</span>
+    </p>
+
+    <h2><span data-lang="ru">Демонстрация на реальной задаче и предостережение от переусложнения</span><span data-lang="en">A live demo, and a caution against over-engineering</span></h2>
+    <p>
+      <span data-lang="ru">Как иллюстрацию Херк показывает цикл генерации миниатюр для видео: агент создаёт вариант обложки, сверяет его с критериями (читаемость текста, контраст, соответствие теме), при необходимости переделывает — и так до прохождения проверки <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=388">[06:28]</a>. В конце — личный опыт и предостережение <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=744">[12:24]</a>: циклы стоят денег и времени при каждой итерации, поэтому нужны жёсткие ограничения (максимум итераций, бюджет по стоимости) и постоянный контроль, оправдывает ли качество результата эти траты; не всем задачам и не всем людям нужны круглосуточные автономные агенты — часто короткий, узко сфокусированный цикл продуктивнее, чем попытка автоматизировать всё сразу.</span>
+      <span data-lang="en">As an illustration, Herk walks through a thumbnail-generation loop: the agent produces a cover draft, checks it against criteria (text legibility, contrast, on-topic fit), redoes it if needed — and repeats until it passes <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=388">[06:28]</a>. He closes with personal experience and a caution <a class="ts" href="https://www.youtube.com/watch?v=EuzYhzB0vbI&t=744">[12:24]</a>: loops cost money and time on every iteration, so they need hard limits (a max iteration count, a cost budget) and constant monitoring of whether the quality gain is worth the spend; not every task or every person needs a 24/7 autonomous agent — a short, narrowly scoped loop is often more productive than trying to automate everything at once.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API; кадры извлечь не удалось — в текущем облачном окружении egress-прокси блокирует потоковый доступ yt-dlp к YouTube (403 на туннель, несмотря на установленные yt-dlp/imageio-ffmpeg из pip). Статус — в run_log дня.</span>
+      <span data-lang="en">Digest built from a Gemini API video analysis; frame extraction failed — in this cloud environment the egress proxy blocks yt-dlp's streaming access to YouTube (403 on the tunnel, despite yt-dlp/imageio-ffmpeg being installed via pip). Status is recorded in the day's run_log.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: GPT-5.6 больше не вызывает инструменты по одному — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Chew Loong Nian (Towards AI) · 2026-07-09</span>
+      <span data-lang="en">Article digest · Chew Loong Nian (Towards AI) · 2026-07-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">GPT-5.6 больше не вызывает инструменты по одному — теперь он пишет код, сократив токены на 63,5%</span>
+      <span data-lang="en">GPT-5.6 stopped calling tools one at a time — it writes code now, and cut tokens 63.5%</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://pub.towardsai.net/gpt-5-6-stopped-calling-tools-one-at-a-time-it-writes-code-now-and-cut-tokens-63-5-387d2b7160f9" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Автор начинает с прямого утверждения: главное в релизе GPT-5.6 — не сама модель, а тихо переписанный способ вызова инструментов, о котором почти никто не говорит. Речь о Programmatic Tool Calling — новом режиме в Responses API, который меняет саму механику того, как агент работает с внешними инструментами на многошаговых задачах.</span>
+      <span data-lang="en">The author opens with a blunt claim: the real substance of the GPT-5.6 release isn't the model itself, but a quietly rewritten way of calling tools that almost nobody is talking about. That's Programmatic Tool Calling — a new mode in the Responses API that changes the actual mechanics of how an agent works with external tools on multi-step tasks.</span>
+    </p>
+
+    <h2><span data-lang="ru">Старый цикл vs код-оркестратор</span><span data-lang="en">The old loop vs. code-as-orchestrator</span></h2>
+    <p>
+      <span data-lang="ru">В привычной схеме модель делает один шаг за раз: формирует структурированный запрос на вызов инструмента, ваш код его выполняет, весь результат целиком возвращается обратно в контекст модели, и только после этого модель решает, что делать дальше. На задачах с большим числом вызовов инструментов это дорого — каждый промежуточный результат целиком проходит через контекст. Programmatic Tool Calling меняет расстановку ролей: теперь GPT-5.6 сам пишет короткую программу на JavaScript, которая вызывает нужные инструменты, передаёт результаты между вызовами и обрабатывает промежуточные данные — а модель получает уже свёрнутый итог, а не сырой поток ответов на каждом шаге.</span>
+      <span data-lang="en">In the familiar setup, the model moves one step at a time: it emits a structured request to call a tool, your code runs it, the entire result comes back into the model's context, and only then does the model decide on the next move. On tasks with many tool calls this is expensive — every intermediate result passes through the context in full. Programmatic Tool Calling flips the roles: GPT-5.6 now writes a short JavaScript program itself that calls the needed tools, passes results between calls, and processes intermediate data — and the model gets back one collapsed result instead of a raw stream of responses at every step.</span>
+    </p>
+
+    <h2><span data-lang="ru">Изолированная среда V8 — без сети</span><span data-lang="en">An isolated V8 runtime — no network access</span></h2>
+    <p>
+      <span data-lang="ru">Написанный моделью код исполняется в изолированной среде V8 (движок JavaScript из Chrome/Node.js), у которой нет доступа к сети — это ограничивает риск того, что модель через собственный код сделает что-то за пределами разрешённых инструментов. Автор подчёркивает, что режим подходит именно для «ограниченных» тул-хэви задач, где не требуется свежее суждение модели между каждым шагом: код может фильтровать большие объёмы промежуточных данных, оставлять только нужное и адаптировать порядок действий по ходу выполнения — без обращения к модели на каждой мелочи.</span>
+      <span data-lang="en">The model-written code runs inside an isolated V8 runtime (the JavaScript engine behind Chrome/Node.js) with no network access — limiting the risk that the model's own code does something outside the allowed tools. The author stresses this mode fits "bounded," tool-heavy workflows that don't need fresh model judgment between every step: the code can filter large volumes of intermediate data, keep only what matters, and adapt the workflow along the way — without pinging the model for every small decision.</span>
+    </p>
+
+    <h2><span data-lang="ru">Цифры и когда это применять</span><span data-lang="en">The numbers, and when to reach for it</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая цифра статьи: один из ранних клиентов OpenAI запустил того же агента на тех же инструментах и получил сокращение токенов на 63,5% при той же задаче — вместе с более быстрым и более дешёвым выполнением по другим замерам (24% меньше выходных токенов и на 28% быстрее в одном из кейсов). Автор предупреждает: это не универсальная замена обычному tool calling — там, где агенту действительно нужно принимать решение после каждого шага на основе непредсказуемого результата, старая схема остаётся уместнее; выигрыш максимален именно на длинных, предсказуемых по структуре цепочках вызовов.</span>
+      <span data-lang="en">The article's headline number: one of OpenAI's early customers ran the same agent on the same tools and saw a 63.5% cut in tokens on the identical task — alongside faster, cheaper execution on other measures (24% fewer output tokens and 28% faster in one case). The author cautions this isn't a universal replacement for ordinary tool calling — where an agent genuinely needs to decide after every step based on an unpredictable result, the old scheme still fits better; the payoff is biggest specifically on long, structurally predictable chains of tool calls.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

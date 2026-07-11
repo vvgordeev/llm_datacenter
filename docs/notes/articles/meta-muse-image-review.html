@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Обзор Meta Muse Image — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · eesel AI · 2026-07-09</span>
+      <span data-lang="en">Article digest · eesel AI · 2026-07-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Обзор Meta Muse Image: а хорош ли он на самом деле?</span>
+      <span data-lang="en">Meta Muse Image review: is it actually good?</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.eesel.ai/blog/meta-muse-image-review" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Через два дня после запуска Muse Image — первой модели генерации изображений от Meta Superintelligence Labs, вышедшей 7 июля в Meta AI, Instagram и WhatsApp — eesel AI разбирает, чем она отличается технически от типичных однопроходных генераторов вроде Nano Banana или GPT Image, которые превращают промпт в картинку за один проход.</span>
+      <span data-lang="en">Two days after the launch of Muse Image — Meta Superintelligence Labs' first image-generation model, released July 7 inside Meta AI, Instagram and WhatsApp — eesel AI breaks down how it differs technically from typical single-pass generators like Nano Banana or GPT Image, which turn a prompt into a picture in one pass.</span>
+    </p>
+
+    <h2><span data-lang="ru">Архитектура «поиск и самопроверка»</span><span data-lang="en">The search-and-self-refine architecture</span></h2>
+    <p>
+      <span data-lang="ru">Ключевое отличие Muse Image — модель не просто рендерит картинку, а по ходу генерации может искать в вебе, писать код и пересматривать собственный черновик, прежде чем выдать финальный результат. Тестировщики также заметили, что модель, по всей видимости, авторегрессионная — похожая по устройству на Nano Banana и ChatGPT Images — и в процессе можно увидеть её «следы рассуждения». Именно эту архитектуру «поиск и самопроверка» автор называет самым интересным событием в потребительской генерации изображений за весь год.</span>
+      <span data-lang="en">Muse Image's key difference: the model doesn't just render an image — it can search the web, write code, and revise its own draft mid-generation before producing the final result. Testers also noted the model appears to be autoregressive — architecturally similar to Nano Banana and ChatGPT Images — and its "thinking traces" are visible along the way. The reviewer calls this search-and-self-refine architecture the single most interesting thing to happen to consumer image generation this year.</span>
+    </p>
+
+    <h2><span data-lang="ru">Сильные и слабые стороны на практике</span><span data-lang="en">Strengths and weaknesses in practice</span></h2>
+    <p>
+      <span data-lang="ru">На арене text-to-image Muse Image набирает 1280 очков — на 105 позади лидера GPT Image 2 (1385) и всего на 9 впереди третьего места (Reve 2.0), что ближе к четырёхсторонней ничьей, чем к чёткому второму месту. Тестировщики на Hacker News сходятся: по картинке модель на ступень ниже и Nano Banana Pro, и GPT Image, а результаты чаще проваливаются в «зловещую долину» — особенно на изображениях людей. Зато модель чисто рендерит текст внутри изображения и работает бесплатно прямо внутри приложений, которыми пользуются миллиарды людей: WhatsApp, Instagram Stories, Meta AI.</span>
+      <span data-lang="en">On the text-to-image arena, Muse Image scores 1280 — 105 points behind leader GPT Image 2 (1385) and just 9 ahead of third-place Reve 2.0, closer to a four-way tie than a clear runner-up spot. Hacker News testers converge on the same verdict: on raw image quality the model sits a notch below both Nano Banana Pro and GPT Image, and its outputs slip into the "uncanny valley" more often — especially with people. On the plus side, it renders in-image text cleanly and runs for free directly inside apps a few billion people already use daily: WhatsApp, Instagram Stories, Meta AI.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Обзор выходит на фоне более громкой истории вокруг Muse Image — функции тегирования публичных аккаунтов Instagram для вставки чужой внешности в генерацию, которую Meta отключила через три дня после запуска из-за давления SAG-AFTRA и CAA (разобрано в новостях этого дня). Независимо от архитектурных находок, автор фиксирует практический вывод для тех, кто выбирает инструмент генерации изображений: интересная инженерия «поиска и самопроверки» пока не переводится в лидерство по чистому качеству, зато бесплатная встроенность в социальные приложения — реальное конкурентное преимущество, которое чистые бенчмарки не отражают.</span>
+      <span data-lang="en">The review lands against the backdrop of the louder story around Muse Image — the feature letting users tag public Instagram accounts to insert someone else's likeness into a generation, which Meta pulled three days after launch under pressure from SAG-AFTRA and CAA (covered in this day's news). Setting the controversy aside, the reviewer's practical takeaway for anyone picking an image tool: the interesting search-and-self-refine engineering doesn't yet translate into a lead on raw quality, but free, native placement inside social apps is a real competitive edge that pure benchmarks don't capture.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

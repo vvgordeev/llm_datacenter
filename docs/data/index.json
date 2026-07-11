@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-11",
+      "news_count": 3,
+      "expert_count": 5,
+      "top_title": {
+        "ru": "Meta отключает функцию Muse Image по тегам из Instagram после давления SAG-AFTRA и CAA",
+        "en": "Meta pulls Muse Image's Instagram-tagging feature after backlash from SAG-AFTRA and CAA"
+      }
+    },
+    {
       "date": "2026-07-10",
       "news_count": 6,
       "expert_count": 4,

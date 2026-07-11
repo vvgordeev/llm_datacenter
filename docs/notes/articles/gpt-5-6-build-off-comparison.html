@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: GPT-5.6, Grok 4.5, Claude и Muse Spark строят одни и те же 4 приложения — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · TryAI · 2026-07-09</span>
+      <span data-lang="en">Article digest · TryAI · 2026-07-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">GPT-5.6, Grok 4.5, Claude и Muse Spark строят одни и те же 4 приложения</span>
+      <span data-lang="en">GPT-5.6, Grok 4.5, Claude, and Muse Spark build the same 4 apps</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.tryai.dev/blog/gpt-5.6-build-off-12-models" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Вместо очередной таблицы бенчмарков TryAI поставил простой практический эксперимент: взять 12 моделей — все три уровня GPT-5.6 (Sol, Terra, Luna), Grok 4.5, Claude Opus 4.8 и Fable 5, Muse Spark 1.1, а также открытые GLM-5.2, Qwen 3.7 Plus, DeepSeek V4 Pro и Kimi K2.6 (все — через Fireworks) — и попросить каждую построить одно и то же: рейкастер, кубик Рубика, калькулятор и Game of Life, по пять попыток на приложение. Цель — увидеть не заявленные баллы, а то, что реально получается на экране при одинаковом задании.</span>
+      <span data-lang="en">Instead of another benchmark table, TryAI ran a simple hands-on experiment: take 12 models — all three GPT-5.6 tiers (Sol, Terra, Luna), Grok 4.5, Claude Opus 4.8 and Fable 5, Muse Spark 1.1, plus open-weight GLM-5.2, Qwen 3.7 Plus, DeepSeek V4 Pro, and Kimi K2.6 (all served via Fireworks) — and ask each one to build the same four things: a raycaster, a Rubik's cube, a calculator, and Game of Life, five attempts per app. The point was to see what actually shows up on screen under an identical brief, not the claimed benchmark scores.</span>
+    </p>
+
+    <h2><span data-lang="ru">Где выигрывает фронтир: рейкастер и кубик Рубика</span><span data-lang="en">Where the frontier wins: the raycaster and the Rubik's cube</span></h2>
+    <p>
+      <span data-lang="ru">На двух самых требовательных задачах разрыв между топовыми и открытыми моделями виден невооружённым глазом. В рейкастере — 3D-рендеринге сцены лучами из точки обзора, классической, но не тривиальной задаче — GPT-5.6 Sol обошёл всех, при этом Grok показал себя как реально рабочая альтернатива по своей цене, а Muse Spark неожиданно порадовал на тех прогонах, где вообще заработал. На кубике Рубика картина перевернулась: GPT, несмотря на явное лидерство в 3D-рендере, здесь просел, а Claude Fable 5 выдал безупречные пять из пяти решений — притом что Opus, старшая модель того же семейства, не смог довести до конца ни одной попытки без ошибок.</span>
+      <span data-lang="en">On the two most demanding tasks, the gap between frontier and open-weight models is visible with the naked eye. On the raycaster — 3D scene rendering by casting rays from a viewpoint, a classic but non-trivial task — GPT-5.6 Sol beat everyone, Grok proved a genuinely usable alternative at its price point, and Muse Spark was a real surprise on the runs that actually worked. The Rubik's cube flipped the picture: GPT, despite its clear 3D lead, stumbled here, while Claude Fable 5 delivered a clean five-for-five, even as Opus — the senior model in the same family — couldn't land a single flawless solve.</span>
+    </p>
+
+    <h2><span data-lang="ru">Калькулятор — территория Claude, Game of Life — ничья с открытыми моделями</span><span data-lang="en">The calculator is Claude's territory, Game of Life is a tie with open weights</span></h2>
+    <p>
+      <span data-lang="ru">Калькулятор оказался лучшей работой Claude в этом тесте: и Opus, и Fable справились со всеми пятью попытками, а стиль реализации Fable авторы отметили как фаворита. А вот на Game of Life — простой, многократно решённой в интернете задаче, для которой в обучающих данных наверняка нашлось множество готовых примеров кода — открытые модели держались наравне с топовыми: у Qwen 3.7 и GLM-5.2 получилось решить задачу почти даром по цене, тогда как DeepSeek и GLM в целом работали заметно медленнее остальных участников теста.</span>
+      <span data-lang="en">The calculator turned out to be Claude's best showing in the whole test: both Opus and Fable nailed all five attempts, with Fable's implementation style singled out as the reviewers' favorite. Game of Life told the opposite story — a simple, well-trodden task with plenty of example code already in the training data — where open-weight models held their own against the frontier: Qwen 3.7 and GLM-5.2 nailed it at a fraction of the cost, though DeepSeek and GLM were noticeably slower than the rest of the field overall.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Главный вывод build-off'а — разрыв между state-of-the-art и открытыми моделями никуда не делся, но он не универсален: он проявляется именно на новых, содержательно сложных задачах (рейкастер, кубик), а на простых и «многократно решённых» задачах почти стирается. Для практика это значит: выбор модели должен зависеть не от общего рейтинга, а от того, насколько задача похожа на то, что модель уже «видела» — GPT-5.6 Luna отвечает на короткие запросы быстрее всех (около секунды), а самой дешёвой и быстрой из всех вообще оказалась Qwen. Тест опубликован на второй день после публичного релиза GPT-5.6 и стал одним из самых обсуждаемых постов на Hacker News в те же сутки.</span>
+      <span data-lang="en">The build-off's core takeaway: the gap between state-of-the-art and open-weight models hasn't closed, but it isn't universal — it shows up specifically on novel, genuinely hard tasks (the raycaster, the cube) and nearly disappears on simple, "already-solved-a-thousand-times" ones. For a practitioner that means picking a model isn't about the overall leaderboard rank but about how closely the task resembles what the model has already "seen" — GPT-5.6 Luna answers short prompts fastest of all (about a second), while Qwen turned out to be the cheapest and fastest model overall. The piece went up two days after GPT-5.6's public release and became one of the most-discussed posts on Hacker News that same day.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
