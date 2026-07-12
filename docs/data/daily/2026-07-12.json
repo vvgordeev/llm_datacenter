@@ -1,0 +1,67 @@
+{
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12T05:45:00Z",
+  "news": [
+    {
+      "id": "2026-07-12-xai-grok-build-v0-2-97",
+      "cluster_id": "xai-grok-build-voice",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI обновляет Grok Build до v0.2.97: учёт стоимости токенов, редактирование сообщений и голосовой режим для API-сессий",
+        "en": "xAI updates Grok Build to v0.2.97: token-cost tracking, message editing, and voice mode for API-key sessions"
+      },
+      "summary": {
+        "ru": "Новый релиз кодового агента Grok Build добавляет вывод точной стоимости и числа токенов на промпт и на сессию в headless-JSON и в SDK, позволяет редактировать и переотправлять предыдущее сообщение прямо из истории диалога (двойной клик или Enter), больше не запрашивает разрешение на команды с rg (ripgrep) по умолчанию и включает голосовой режим для сессий по API-ключу.",
+        "en": "The latest release of xAI's coding-agent CLI adds exact per-prompt and per-session token/cost accounting to headless JSON output and the SDK, lets users edit and resubmit a previous message directly from the transcript (double-click or Enter), stops prompting for permission on rg (ripgrep) shell commands by default, and turns on voice mode for API-key sessions."
+      },
+      "impact_score": 2,
+      "impact_reason": {
+        "ru": "Инкрементальное обновление инструмента разработчика: полезно для контроля бюджета и UX, но не меняет подходы к использованию LLM.",
+        "en": "An incremental developer-tooling update — useful for budget control and UX, but it doesn't change approaches to using LLMs."
+      },
+      "source_url": "https://x.ai/build/changelog",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды могут точно считать стоимость каждого запуска Grok Build по промптам и сессиям через headless JSON, а не оценивать её приблизительно.",
+            "en": "Teams can now audit the exact per-prompt and per-session cost of a Grok Build run via headless JSON output instead of estimating it."
+          },
+          "url": "https://x.ai/build/changelog"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-12-simon-willison-llm-meta-ai",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Релиз: llm-meta-ai 0.1",
+        "en": "Release: llm-meta-ai 0.1"
+      },
+      "url": "https://simonwillison.net/2026/Jul/9/llm-meta-ai/",
+      "summary": {
+        "ru": "Получив всего несколько дней предварительного доступа к API новой модели Meta (Muse Spark 1.1), Саймон Уиллисон собрал плагин для своего CLI-инструмента llm, дающий единый интерфейс к модели наравне с десятками других провайдеров. Плагин поддерживает управление глубиной рассуждений (none…xhigh) и передачу изображений по URL; попутно тестирование выявило и тут же починило баг в самом ядре llm 0.31.1.",
+        "en": "With only a few days of preview access to Meta's new model API (Muse Spark 1.1), Simon Willison put together a plugin for his llm CLI tool, giving it the same unified interface already used for dozens of other providers. The plugin supports reasoning-depth control (none…xhigh) and image input by URL; testing it also surfaced and immediately fixed a bug in llm 0.31.1's core."
+      },
+      "note_page": "notes/articles/release-llm-meta-ai-0-1.html"
+    },
+    {
+      "id": "2026-07-12-nate-herk-claude-money",
+      "type": "video",
+      "author": "Nate Herk",
+      "title": {
+        "ru": "Я попросил Claude Code заработать мне как можно больше денег",
+        "en": "I asked Claude Code to make me as much money as possible"
+      },
+      "url": "https://www.youtube.com/watch?v=iTY8Q449YNQ",
+      "summary": {
+        "ru": "Четыре конкретных изменения в работе с Claude, которые, по словам автора, вместе утроили его доход за 30 дней: навык /roast — совет из разных персон, оспаривающих идею вместо сикофантского согласия; двусторонняя верификация до и после «готово» (демо с Playwright); сброс контекста на «якорные» файлы против «гниения контекста»; и субагенты с целью через /goal вместо человека как узкого места.",
+        "en": "Four specific changes to working with Claude that, per the author, together tripled his income in 30 days: a /roast skill — a panel of personas that challenge an idea instead of Claude's sycophantic agreement; dual-sided verification before and after \"done\" (demoed with Playwright); resetting context onto \"anchor\" files against \"context rot\"; and goal-driven sub-agents via /goal instead of the human being the bottleneck."
+      },
+      "note_page": "notes/videos/i-asked-claude-code-to-make-me-as-much-money-as-possible.html"
+    }
+  ]
+}

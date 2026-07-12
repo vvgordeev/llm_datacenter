@@ -47,7 +47,10 @@
     "https://pub.towardsai.net/gpt-5-6-stopped-calling-tools-one-at-a-time-it-writes-code-now-and-cut-tokens-63-5-387d2b7160f9": "2026-07-11",
     "https://www.eesel.ai/blog/meta-muse-image-review": "2026-07-11",
     "https://www.latent.space/p/databricks": "2026-07-11",
-    "https://www.youtube.com/watch?v=EuzYhzB0vbI": "2026-07-11"
+    "https://www.youtube.com/watch?v=EuzYhzB0vbI": "2026-07-11",
+    "https://x.ai/build/changelog": "2026-07-12",
+    "https://simonwillison.net/2026/Jul/9/llm-meta-ai/": "2026-07-12",
+    "https://www.youtube.com/watch?v=iTY8Q449YNQ": "2026-07-12"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -103,8 +106,8 @@
       "summary": "DeepSeek V4's official release adds peak-hour API pricing — a first for the company"
     },
     "xai-grok-build-voice": {
-      "last_date": "2026-07-11",
-      "summary": "xAI brings voice dictation into Grok Build's coding agent, then adds 21 new multilingual flagship voices to Grok Voice"
+      "last_date": "2026-07-12",
+      "summary": "xAI brings voice dictation into Grok Build's coding agent, adds 21 new multilingual flagship voices to Grok Voice, then ships v0.2.97 with token/cost tracking, message editing and voice mode for API-key sessions"
     },
     "mistral-leanstral": {
       "last_date": "2026-07-06",

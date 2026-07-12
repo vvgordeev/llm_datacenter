@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Релиз — llm-meta-ai 0.1 — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-09</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Релиз: llm-meta-ai 0.1</span>
+      <span data-lang="en">Release: llm-meta-ai 0.1</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/9/llm-meta-ai/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон получил всего несколько дней предварительного доступа к API новой модели Meta — Muse Spark 1.1 — и этого хватило, чтобы за то же время собрать <code>llm-meta-ai</code>: плагин для его собственного CLI-инструмента <code>llm</code>, дающий доступ к модели из командной строки и из Python-библиотеки. Это не разовый эксперимент, а рутинный для Уиллисона приём: у него уже собрана экосистема из десятков похожих плагинов под разных провайдеров, и появление новой модели означает не «искать, как к ней обращаться», а «написать тонкую обёртку по знакомому шаблону и подключить её к тому же интерфейсу, что и всё остальное».</span>
+      <span data-lang="en">Simon Willison had only a few days of preview access to Meta's new model API — Muse Spark 1.1 — and that was long enough to put together <code>llm-meta-ai</code>: a plugin for his own <code>llm</code> CLI tool that gives command-line and Python-library access to the model. This isn't a one-off experiment; it's a routine move for Willison, who already maintains a whole ecosystem of similar plugins for different providers. A new model showing up doesn't mean "figure out how to call it" — it means "write a thin wrapper to the familiar template and plug it into the same interface as everything else."</span>
+    </p>
+
+    <h2><span data-lang="ru">Один интерфейс поверх множества провайдеров</span><span data-lang="en">One interface over many providers</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая идея подхода Уиллисона — модели разных вендоров живут в <code>llm</code> под общим пространством имён с префиксом провайдера: новая модель доступна как <code>meta-ai/muse-spark-1.1</code>, и вызов выглядит одинаково для любого провайдера — <code>llm -m meta-ai/muse-spark-1.1 "What is the capital of France?"</code>. Установка занимает три команды: поставить сам <code>llm</code> (<code>uv tool install llm</code>), поставить плагин (<code>llm install llm-meta-ai</code>) и сохранить ключ (<code>llm keys set meta-ai</code>). Для пользователя это означает, что переключение между Claude, GPT, Gemini или новой моделью Meta — вопрос смены одного аргумента <code>-m</code>, а не изучения нового SDK и другого набора соглашений по каждому провайдеру.</span>
+      <span data-lang="en">The core idea behind Willison's approach is that different vendors' models live inside <code>llm</code> under a shared provider-prefixed namespace: the new model is available as <code>meta-ai/muse-spark-1.1</code>, and the call looks identical regardless of provider — <code>llm -m meta-ai/muse-spark-1.1 "What is the capital of France?"</code>. Setup takes three commands: install <code>llm</code> itself (<code>uv tool install llm</code>), install the plugin (<code>llm install llm-meta-ai</code>), and store the key (<code>llm keys set meta-ai</code>). For the user, that means switching between Claude, GPT, Gemini, or Meta's new model is a matter of changing one <code>-m</code> argument, not learning a new SDK and a different set of per-provider conventions.</span>
+    </p>
+
+    <h2><span data-lang="ru">Рассуждающая модель и картинки — тоже через общий контракт</span><span data-lang="en">A reasoning model and images — through the same contract</span></h2>
+    <p>
+      <span data-lang="ru">Muse Spark 1.1 — рассуждающая модель: она «думает» перед ответом, и токены рассуждения включаются в бюджет выходных токенов. Плагин добавляет управление глубиной рассуждений через параметр с уровнями <code>none</code>, <code>minimal</code>, <code>low</code>, <code>medium</code>, <code>high</code> и <code>xhigh</code> — то есть эта настройка вписана в тот же унифицированный интерфейс, что и у других рассуждающих моделей в экосистеме <code>llm</code>, а не изобретена заново под конкретного вендора. Отдельно плагин поддерживает передачу изображений по URL — модель может описывать картинки из интернета прямо по ссылке, без предварительного скачивания и кодирования в base64 вручную.</span>
+      <span data-lang="en">Muse Spark 1.1 is a reasoning model: it "thinks" before answering, and reasoning tokens count against the output token budget. The plugin exposes control over reasoning depth through a parameter with levels <code>none</code>, <code>minimal</code>, <code>low</code>, <code>medium</code>, <code>high</code>, and <code>xhigh</code> — meaning this setting slots into the same unified interface already used for other reasoning models in the <code>llm</code> ecosystem, rather than being reinvented per vendor. Separately, the plugin supports passing images by URL — the model can describe pictures straight from a web link, with no manual downloading or base64 encoding needed first.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это интересно как подход</span><span data-lang="en">Why this matters as an approach</span></h2>
+    <p>
+      <span data-lang="ru">Показательная деталь: тестируя плагин, Уиллисон нашёл и тут же исправил баг в самом ядре <code>llm</code> 0.31.1 — некоторые провайдеры возвращали ошибку JSON на вызов инструмента с пустыми аргументами через эндпоинт OpenAI Chat Completions. То есть работа над плагином для одной новой модели улучшила инфраструктуру для всех остальных. Это и есть суть паттерна: вместо того чтобы каждый раз оценивать новую модель через отдельный, специфичный для вендора клиент, у практика есть один устойчивый инструмент, который растёт вширь с каждым новым релизом — а любой найденный по пути баг чинится один раз в общем месте, а не в N местах.</span>
+      <span data-lang="en">A telling detail: while testing the plugin, Willison found and immediately fixed a bug in <code>llm</code> 0.31.1's core — some providers returned a JSON error on a tool call with empty arguments through the OpenAI Chat Completions endpoint. So the work on a plugin for one new model improved the infrastructure for everything else. That's the essence of the pattern: instead of evaluating every new model through a separate, vendor-specific client, a practitioner keeps one durable tool that grows wider with each new release — and any bug found along the way gets fixed once in a shared place, not N times.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

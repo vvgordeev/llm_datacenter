@@ -1,0 +1,48 @@
+{
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12T05:45:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403 (egress-прокси); прошли через WebSearch"},
+    {"source": "anthropic (WebSearch x2+доп.)", "status": "empty", "candidates": 0, "note": "За окно 36ч — только повторы уже опубликованного (Reflect, Cowork mobile, Chrome GA — оказался от 1 июля, Microsoft Foundry GA — от 29 июня). Ничего нового и датированного 11-12 июля."},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "openai (WebSearch x2+доп.)", "status": "empty", "candidates": 0, "note": "GPT-5.6/ChatGPT Work/GPT-Live — всё уже в кластерах с прошлых дней. Group chat removal (9 июля) — не функция, а удаление, отклонено."},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "google (WebSearch x2+доп.)", "status": "rejected", "candidates": 1, "note": "Gemini 3.5 Pro delay to July 17 + DeepMind talent exodus (Shazeer/Jumper/Adler/Pritzel) — крупная история, но это НЕ анонс функции/релиза LLM, а организационно-финансовая новость (задержка + отток кадров + падение капитализации на $225B) — отклонено по правилам скилла."},
+    {"source": "meta blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "meta (WebSearch x2+доп.)", "status": "empty", "candidates": 0, "note": "Muse Image / Instagram-тегирование — уже в кластере meta-muse-image (закрыт 10-11 июля)"},
+    {"source": "xai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "xai (WebSearch x2+доп.)", "status": "ok", "candidates": 1, "note": "Grok Build v0.2.97 changelog (11 июля) — учёт стоимости токенов, редактирование сообщений, голосовой режим для API-сессий. Опубликовано как продолжение кластера xai-grok-build-voice."},
+    {"source": "mistral blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "mistral (WebSearch x2+доп.)", "status": "empty", "candidates": 0, "note": "Robostral Navigate/Leanstral 1.5 — уже в кластерах; ничего нового за 11-12 июля"},
+    {"source": "deepseek blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "deepseek (WebSearch x2+доп.)", "status": "empty", "candidates": 0, "note": "V4 официальный релиз всё ещё анонсирован на «середину июля», подтверждения запуска именно сегодня не найдено"},
+    {"source": "aggregators (AI News smol.ai, TLDR AI)", "status": "empty", "candidates": 0, "note": "Прямой fetch — 403. TLDR AI не выходит по выходным (12 июля — воскресенье); smol.ai issue за 11-12 июля не проиндексирован поиском"},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "WebFetch на API-эндпоинт — тоже 403 (egress-прокси блокирует, несмотря на note в sources.yaml); обход через WebSearch site:news.ycombinator.com — ничего нового по теме LLM-функций за 11-12 июля"},
+    {"source": "community (Reddit/X, через WebSearch)", "status": "empty", "candidates": 0, "note": "Ничего специфичного к 11-12 июля сверх уже покрытого"},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 1, "note": "Release: llm-meta-ai 0.1 (9 июля) — дата подтверждена через GitHub release tag (структурные данные, не LLM-синтез поиска)"},
+    {"source": "expert: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "Последнее новое видео («третий сдвиг») уже опубликовано вчера (07-11); видео 'Skill Issue' оказалось от марта 2026 при проверке — отклонено"},
+    {"source": "expert: Latent Space", "status": "rejected", "candidates": 0, "note": "Кандидат (интервью с CTO Modal) — поиск дал ПРОТИВОРЕЧИВЫЕ даты публикации в разных запросах (июль 2026 vs сентябрь 2025); не удалось разрешить достоверно (WebFetch на latent.space — 403), решено не публиковать во избежание недостоверной даты"},
+    {"source": "expert: AI Explained", "status": "rejected", "candidates": 0, "note": "Свежее видео — формат «новости за минуту» (пересказ), исключено правилом скилла"},
+    {"source": "expert: Matt Wolfe", "status": "rejected", "candidates": 0, "note": "Свежее видео — еженедельный новостной пересказ, исключено правилом скилла"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "Последний пост — 1 июля (уже опубликован ранее); других постов за июль не найдено"},
+    {"source": "expert: Nate Herk", "status": "ok", "candidates": 1, "note": "«I asked Claude Code to make me as much money as possible» — содержание подтверждено реальным анализом через Gemini API; точная дата публикации не подтверждена (по независимым оценкам поиска — конец июня 2026), честно помечено в конспекте и здесь"},
+    {"source": "expert: Matt Pocock", "status": "empty", "candidates": 0, "note": "Последнее видео (Sandcastle) — от 1 мая 2026 при проверке; новых видео за июль не найдено"},
+    {"source": "expert: расширенный поиск (Andrew Ng/Batch, Matt Shumer, Hugo Bowne-Anderson, eesel, interconnects.ai и др.)", "status": "rejected", "candidates": 0, "note": "Andrew Ng/Batch letter про «agentic coding loops» — та же тема (Peter Steinberger), что уже раскрыта в конспекте Nate Herk от 07-11, отклонено как дублирующее; Matt Shumer guide — не найден точный первоисточник с достоверной датой; остальные — content-farm без чёткого автора/даты"}
+  ],
+  "totals": {
+    "candidates": 6,
+    "published": 3,
+    "rejected": {
+      "не по теме (финансы/оргновости, не фича)": 1,
+      "дубликаты уже раскрытых сюжетов/тем": 1,
+      "недостоверная/противоречивая дата публикации": 1,
+      "новостные пересказы (видео)": 2,
+      "устаревшие при проверке (найдены, но не за целевой период)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — python scripts/gemini_video.py успешно отработал на https://www.youtube.com/watch?v=iTY8Q449YNQ (Nate Herk), вернул тезисы и таймкоды",
+    "frames": "skipped: yt-dlp/imageio-ffmpeg установлены через pip, но доступ к www.youtube.com заблокирован egress-прокси (connect_rejected, policy denial) — подтверждено и через yt-dlp напрямую, и через curl $HTTPS_PROXY/__agentproxy/status (recentRelayFailures: gateway 403 to CONNECT www.youtube.com:443). Конспект видео опубликован без кадров с явной пометкой на странице."
+  },
+  "notes": "Тонкий день: сначала обнаружено и исправлено расхождение окружения — 7 коммитов за 09-11 июля (сборки и дизайн-правки) были сделаны в detached HEAD и НИКОГДА не попадали в origin/main; фаст-форвардили main и запушили их перед началом сегодняшнего сбора. По собственно сегодняшнему сбору: воскресенье, выходной новостной цикл — после серии крупных релизов 8-10 июля (GPT-5.6/Grok 4.5/Muse Spark/ChatGPT Work) наступило затишье, агрегаторы (TLDR AI) по выходным не выходят. Единственная опубликованная новость — минорное (impact 2) обновление Grok Build v0.2.97, найдено и перепроверено по трём независимым источникам. Важное методологическое наблюдение: в ходе проверки дат экспертного контента WebSearch дважды дал галлюцинированные/противоречивые даты публикации (для эссе Итана Моллика и для эпизода Latent Space про Modal — там прямое противоречие 'июль 2026' vs 'сентябрь 2025' в разных запросах); решено исключать такие кандидаты, а не публиковать с недостоверной датой. Итог: 2 экспертных материала вместо целевых 5 (limits.min_expert_total) — оба перепроверены максимально надёжно (GitHub release tag для Willison, реальный Gemini-анализ видео для Herk), но количественная планка не выполнена честно, а не подгонкой."
+}

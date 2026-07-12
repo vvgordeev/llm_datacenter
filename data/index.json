@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-12",
+      "news_count": 1,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "xAI обновляет Grok Build до v0.2.97: учёт стоимости токенов, редактирование сообщений и голосовой режим для API-сессий",
+        "en": "xAI updates Grok Build to v0.2.97: token-cost tracking, message editing, and voice mode for API-key sessions"
+      }
+    },
+    {
       "date": "2026-07-11",
       "news_count": 3,
       "expert_count": 5,

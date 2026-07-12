@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Я попросил Claude Code заработать мне как можно больше денег — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Datacenter</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-06 · 28 мин</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-06 · 28 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Я попросил Claude Code заработать мне как можно больше денег</span>
+      <span data-lang="en">I asked Claude Code to make me as much money as possible</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=iTY8Q449YNQ" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Заголовок звучит как кликбейт, но Нейт Херк сразу переводит его в практическую плоскость <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=13">[00:13]</a>: дело не в одном волшебном промпте, а в четырёх конкретных изменениях того, как он работает с Claude, которые вместе, по его словам, утроили его доход за 30 дней. Отправная точка — диагноз: Claude страдает встроенным «сикофанством» — моделью выгоднее (в смысле функции потерь на этапе обучения) согласиться и обнадёжить пользователя, чем оспорить сомнительную идею, и это незаметно тратит время и деньги на реализацию того, что изначально было плохо продумано <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=112">[01:52]</a>.</span>
+      <span data-lang="en">The title reads as clickbait, but Nate Herk immediately grounds it in something practical <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=13">[00:13]</a>: it isn't about one magic prompt, but about four specific changes to how he works with Claude that, together, he says tripled his income in 30 days. The starting diagnosis: Claude has built-in "sycophancy" — the model's training makes it more rewarding to agree and reassure the user than to challenge a shaky idea — and that quietly burns time and money building out things that were poorly thought through in the first place <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=112">[01:52]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Улучшение 1 и 2: заставить модель спорить и проверять саму себя</span><span data-lang="en">Upgrades 1 and 2: make it argue back and check its own work</span></h2>
+    <p>
+      <span data-lang="ru">Первое противоядие от сикофанства — навык <code>/roast</code>: вместо того чтобы просить Claude оценить идею напрямую, Херк заставляет его смоделировать совет из нескольких разных персон (например, скептичного инвестора, дотошного технаря, целевого пользователя), которые придирчиво разносят идею до того, как за неё возьмутся всерьёз <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=185">[03:05]</a>. Второе улучшение — двусторонняя верификация: модель обязана проверять свою работу и до, и после того, как заявляет «готово», а не просто рапортовать об успехе на слово. В качестве живой демонстрации Херк на глазах у зрителей собирает и тут же проверяет с помощью Playwright целевую страницу — сам факт автоматической браузерной проверки закрывает разрыв между «код написан» и «код действительно работает так, как задумано» <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=473">[07:53]</a>, <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=639">[10:39]</a>.</span>
+      <span data-lang="en">The first antidote to sycophancy is a <code>/roast</code> skill: instead of asking Claude to judge an idea directly, Herk has it simulate a panel of distinct personas (a skeptical investor, a nitpicky engineer, a target user) who pick the idea apart before it's built for real <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=185">[03:05]</a>. The second upgrade is dual-sided verification: the model has to check its own work both before and after declaring "done," instead of just reporting success on its own word. As a live demo, Herk builds a landing page on screen and immediately verifies it with Playwright — the automated browser check closes the gap between "the code was written" and "the code actually works the way it was meant to" <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=473">[07:53]</a>, <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=639">[10:39]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Улучшение 3: управление контекстом против «гниения контекста»</span><span data-lang="en">Upgrade 3: managing context against "context rot"</span></h2>
+    <p>
+      <span data-lang="ru">Третье улучшение касается длинных сессий: по мере роста контекстного окна качество ответов модели деградирует, а количество галлюцинаций растёт — Херк называет это «гниением контекста» <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=1006">[16:46]</a>. Рецепт — не пытаться дотянуть одну сессию до предела, а сознательно сбрасывать контекст на заранее подготовленные «якорные» файлы, в которых зафиксировано состояние проекта и следующий шаг, вместо того чтобы модель по крупицам восстанавливала его из разросшейся истории диалога.</span>
+      <span data-lang="en">The third upgrade concerns long sessions: as the context window fills up, the model's response quality degrades and hallucinations increase — Herk calls this "context rot" <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=1006">[16:46]</a>. The fix is to not try to stretch a single session to its limit, but to deliberately reset context onto pre-prepared "anchor" files that capture the project's state and next step, rather than have the model piece that state back together from a bloated conversation history.</span>
+    </p>
+
+    <h2><span data-lang="ru">Улучшение 4: субагенты и цели вместо человека как узкого места</span><span data-lang="en">Upgrade 4: sub-agents and goals instead of the human as bottleneck</span></h2>
+    <p>
+      <span data-lang="ru">Последнее улучшение переворачивает роль пользователя: вместо того чтобы быть тем единственным местом, через которое проходит любое решение, Херк ставит Claude цель через команду <code>/goal</code> и раздаёт параллельную работу субагентам, которые действуют одновременно, а не по очереди <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=1274">[21:14]</a>. В финальной демонстрации на глазах у зрителей собирается целый комплект материалов для выхода на рынок — тексты, лендинг, план — силами нескольких параллельно работающих субагентов за один проход <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=1400">[23:20]</a>. Общий вывод видео: по отдельности каждое из четырёх улучшений — небольшая настройка привычки работы с моделью, но вместе они меняют Claude из инструмента, отвечающего на отдельные запросы, в подобие параллельно работающей команды, где человек всё ещё задаёт цели и проверяет качество, но перестаёт быть узким местом на каждом шаге.</span>
+      <span data-lang="en">The final upgrade flips the user's role: instead of being the single chokepoint every decision passes through, Herk gives Claude a goal via the <code>/goal</code> command and hands out parallel work to sub-agents that act simultaneously rather than one after another <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=1274">[21:14]</a>. In the closing demo, a full go-to-market kit — copy, a landing page, a plan — gets assembled on screen by several sub-agents working in parallel in a single pass <a class="ts" href="https://www.youtube.com/watch?v=iTY8Q449YNQ&t=1400">[23:20]</a>. The video's overall point: each of the four upgrades is a small change to a habit of working with the model, but together they turn Claude from a tool that answers individual requests into something closer to a parallel-working team, where the human still sets goals and checks quality but stops being the bottleneck at every step.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API; кадры извлечь не удалось — в текущем облачном окружении egress-прокси блокирует доступ yt-dlp к YouTube (403 на CONNECT, «policy denial»), несмотря на установленные через pip yt-dlp/imageio-ffmpeg. Точная дата публикации видео не подтверждена: по независимым оценкам поиска — ориентировочно конец июня 2026. Статус — в run_log дня.</span>
+      <span data-lang="en">Digest built from a Gemini API video analysis; frame extraction failed — in this cloud environment the egress proxy blocks yt-dlp's access to YouTube (403 on CONNECT, "policy denial"), despite yt-dlp/imageio-ffmpeg being installed via pip. The exact publish date is unconfirmed: independent search estimates place it around late June 2026. Status is recorded in the day's run_log.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
