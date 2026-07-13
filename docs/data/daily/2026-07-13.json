@@ -1,0 +1,141 @@
+{
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T05:20:00Z",
+  "news": [
+    {
+      "id": "2026-07-13-openai-sol-ultra-cdc-proof",
+      "cluster_id": "openai-gpt-5-6",
+      "models": ["openai"],
+      "title": {
+        "ru": "GPT-5.6 Sol Ultra публикует «доказательство» гипотезы о двойном покрытии циклов — математики отнеслись скептически",
+        "en": "GPT-5.6 Sol Ultra publishes a 'proof' of the Cycle Double Cover Conjecture — mathematicians are skeptical"
+      },
+      "summary": {
+        "ru": "Инженер OpenAI Итан Найт сообщил, что GPT-5.6 Sol Ultra, работая как 64 взаимодействующих субагента, за час сгенерировал доказательство полувековой гипотезы о двойном покрытии циклов (Cycle Double Cover Conjecture) в теории графов; OpenAI опубликовала PDF с доказательством и с использованным промптом. Математическое сообщество, включая обсуждение на Hacker News, указывает, что доказательство не прошло рецензирование и не верифицировано формально — библиотеки Lean для теории графов такого уровня пока не готовы, а у гипотезы уже была история ложных «доказательств».",
+        "en": "OpenAI engineer Ethan Knight announced that GPT-5.6 Sol Ultra, orchestrating 64 cooperating subagents, produced a proof of the 50-year-old graph-theory Cycle Double Cover Conjecture in under an hour; OpenAI published PDFs of both the proof and the prompt used. The math community, including a Hacker News discussion, points out the proof hasn't been peer-reviewed or formally verified — Lean's graph-theory libraries aren't mature enough for a research-level theorem — and the conjecture already has a history of false claimed proofs."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Показывает новый сценарий использования LLM — оркестрацию десятков субагентов над открытой формальной задачей, — но отсутствие независимой верификации и рецензии удерживает оценку на уровне «заметно», а не выше.",
+        "en": "Demonstrates a new usage pattern — orchestrating dozens of subagents against an open formal problem — but the lack of independent verification or peer review keeps this at 'notable' rather than higher."
+      },
+      "source_url": "https://x.com/__eknight__/status/2075643450196971805",
+      "opinions": [
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это прекрасно иллюстрирует проблему: есть заявление о доказательстве гипотезы, но проверено оно — никем.",
+            "en": "This perfectly captures the problem: there's a claim that the conjecture has been proven, but verified by — no one."
+          },
+          "url": "https://news.ycombinator.com/item?id=48863490"
+        },
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Для теории графов такого уровня пока нет зрелой системы формальной проверки — ведущая библиотека Lean (Graphlib) не готова к теоремам исследовательского уровня.",
+            "en": "There's really no proof system mature enough yet for graph theory at this level — the leading Lean library (Graphlib) isn't ready for research-level theorems."
+          },
+          "url": "https://news.ycombinator.com/item?id=48866051"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Опубликованный промпт показывает, как открытую формальную задачу можно разложить на этапы, которые параллельно прорабатывают десятки субагентов, — в качестве одной ограниченной по времени попытки прорыва, требующей последующей человеческой/формальной проверки.",
+            "en": "The published prompt shows how an open formal problem can be broken into stages that dozens of subagents work through in parallel — as one time-boxed breakthrough attempt that still needs follow-up human/formal verification."
+          },
+          "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_prompt.pdf"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-13-anthropic-fable-extension-july19",
+      "cluster_id": "anthropic-fable-mythos-restore",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic в третий раз продлевает включённый доступ к Claude Fable 5 — теперь до 19 июля",
+        "en": "Anthropic extends included Claude Fable 5 access a third time — now through July 19"
+      },
+      "summary": {
+        "ru": "Anthropic снова сдвинула дедлайн включённого в платные тарифы доступа к Claude Fable 5 (до 50% недельного лимита без доплаты) — с 12 на 19 июля 2026, 23:59:59 по тихоокеанскому времени; после этой даты превышение лимита переводится на платные токены (10$/млн входных, 50$/млн выходных). Это уже третье продление после запуска модели: изначальный промо-период закончился 22 июня, затем модель временно сняли с публичного доступа по требованию экспортного контроля, перезапустили 1 июля с новыми ограничениями и продлевали 7 и 12 июля.",
+        "en": "Anthropic pushed back the deadline for included Claude Fable 5 access on paid plans (up to 50% of weekly usage limits at no extra cost) a third time — from July 12 to July 19, 2026, 11:59:59 PM PT; after that, overage usage switches to metered credits ($10/Mtok input, $50/Mtok output). This is the third extension since launch: the original promo ended June 22, the model was then briefly pulled from public access under an export-control order, relaunched July 1 with new safeguards, and extended again on July 7 and July 12."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Тактическое продление доступа на фоне конкуренции с GPT-5.6 Sol — не новая функция и не релиз, но показательный сигнал ценового/конкурентного давления на флагманскую модель.",
+        "en": "A tactical access extension amid competitive pressure from GPT-5.6 Sol — not a new feature or release, but a telling signal of pricing/competitive pressure on a flagship model."
+      },
+      "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Судя по всему, это модель уровня Fable/Mythos: GPT-5.6 Sol от OpenAI почти не уступает Fable 5 по совокупным бенчмаркам при примерно втрое меньшей цене.",
+            "en": "Clearly a Fable/Mythos-class model: OpenAI's GPT-5.6 Sol nearly matches Fable 5 on aggregated benchmarks at roughly a third of the cost."
+          },
+          "url": "https://simonwillison.net/2026/Jul/12/bump/"
+        },
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Похоже на паттерн «то дают, то отнимают»: страшно переходить на платный тариф, когда дедлайн постоянно сдвигают.",
+            "en": "Feels like a 'rug pull' pattern — hesitant to upgrade to a paid tier when the deadline keeps moving."
+          },
+          "url": "https://news.ycombinator.com/item?id=48882730"
+        },
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Использую Claude, Codex, Cursor и Kiro на базовых тарифах; если бы Fable сделали постоянной частью подписки — перешёл бы на Max 20x.",
+            "en": "I run Claude, Codex, Cursor and Kiro on basic tiers; if Fable were made a permanent part of the subscription, I'd upgrade to Max 20x."
+          },
+          "url": "https://news.ycombinator.com/item?id=48884990"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Продление также сохраняет повышенные на 50% недельные лимиты Claude Code — то есть даёт командам ещё неделю более щедрого агентного кодинга без перехода на метered-тарификацию.",
+            "en": "The extension also keeps Claude Code's 50%-higher weekly rate limits in place — giving teams another week of more generous agentic coding before metered pricing kicks in."
+          },
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-13-xai-grok-build-v0-2-98",
+      "cluster_id": "xai-grok-build-voice",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI обновляет Grok Build до v0.2.98: привязка авторизации, стоимость навыков/MCP в /context и улучшения терминала",
+        "en": "xAI updates Grok Build to v0.2.98: auth pinning, skill/MCP cost visibility in /context, and terminal improvements"
+      },
+      "summary": {
+        "ru": "Новая версия CLI-агента Grok Build закрепляет способ авторизации в config.toml (API-ключ или OIDC) и убирает тихий автоматический переход между ними, добавляет в команду /context отображение стоимости токенов на навыки и MCP-серверы, делает надёжнее вставку через среднюю кнопку мыши из основного выделения на Linux, а /terminal-setup теперь показывает уровень поддержки цвета терминала и доступные темы.",
+        "en": "The latest Grok Build CLI release pins the authentication method in config.toml (API key or OIDC) and removes the silent auto-fallback between them, adds token-cost visibility for skills and MCP servers to the /context command, makes Linux middle-click paste from the primary selection more reliable, and has /terminal-setup report the terminal's color-support level and available themes."
+      },
+      "impact_score": 2,
+      "impact_reason": {
+        "ru": "Инкрементальные доработки CLI-инструмента — полезно для отладки и UX, но подходы к использованию LLM не меняет.",
+        "en": "Incremental CLI tooling polish — useful for debugging and UX, but it doesn't change approaches to using LLMs."
+      },
+      "source_url": "https://x.ai/build/changelog",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчики теперь видят точную стоимость токенов, которые тратят конкретные навыки и MCP-серверы внутри сессии, прямо в /context, и могут закрепить способ входа для CI, чтобы избежать неожиданного молчаливого переключения между API-ключом и OIDC.",
+            "en": "Developers can now see the exact token cost of individual skills and MCP servers within a session directly in /context, and can pin the login method for CI to avoid an unexpected silent switch between API key and OIDC."
+          },
+          "url": "https://x.ai/build/changelog"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

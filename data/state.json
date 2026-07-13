@@ -48,14 +48,16 @@
     "https://www.eesel.ai/blog/meta-muse-image-review": "2026-07-11",
     "https://www.latent.space/p/databricks": "2026-07-11",
     "https://www.youtube.com/watch?v=EuzYhzB0vbI": "2026-07-11",
-    "https://x.ai/build/changelog": "2026-07-12",
+    "https://x.ai/build/changelog": "2026-07-13",
     "https://simonwillison.net/2026/Jul/9/llm-meta-ai/": "2026-07-12",
-    "https://www.youtube.com/watch?v=iTY8Q449YNQ": "2026-07-12"
+    "https://www.youtube.com/watch?v=iTY8Q449YNQ": "2026-07-12",
+    "https://x.com/__eknight__/status/2075643450196971805": "2026-07-13",
+    "https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/": "2026-07-13"
   },
   "clusters": {
     "openai-gpt-5-6": {
-      "last_date": "2026-07-10",
-      "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna), brings Sol to Cerebras, teases Sol Ultra for Codex, gets US Commerce Dept approval to lift access restrictions, goes publicly live on July 9, then draws benchmark skepticism and safety-card scrutiny ('lying problem') on July 10"
+      "last_date": "2026-07-13",
+      "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna), brings Sol to Cerebras, teases Sol Ultra for Codex, gets US Commerce Dept approval to lift access restrictions, goes publicly live on July 9, draws benchmark skepticism and safety-card scrutiny ('lying problem') on July 10, then Sol Ultra claims a Cycle Double Cover Conjecture proof via 64 subagents (announced July 10) that mathematicians meet with unverified/unreviewed skepticism"
     },
     "openai-gpt-live": {
       "last_date": "2026-07-09",
@@ -98,16 +100,16 @@
       "summary": "Anthropic launches Claude Science, an AI workbench for researchers and pharma"
     },
     "anthropic-fable-mythos-restore": {
-      "last_date": "2026-07-05",
-      "summary": "Claude Fable 5 and Mythos 5 return after US export controls are lifted"
+      "last_date": "2026-07-13",
+      "summary": "Claude Fable 5 and Mythos 5 return after US export controls are lifted; included access extended a third time to July 19 amid GPT-5.6 Sol competitive pressure"
     },
     "deepseek-v4-peak-pricing": {
       "last_date": "2026-07-05",
       "summary": "DeepSeek V4's official release adds peak-hour API pricing — a first for the company"
     },
     "xai-grok-build-voice": {
-      "last_date": "2026-07-12",
-      "summary": "xAI brings voice dictation into Grok Build's coding agent, adds 21 new multilingual flagship voices to Grok Voice, then ships v0.2.97 with token/cost tracking, message editing and voice mode for API-key sessions"
+      "last_date": "2026-07-13",
+      "summary": "xAI's Grok Build CLI ships frequent changelog updates: v0.2.97 added token-cost tracking, message editing and voice mode for API-key sessions (2026-07-12); v0.2.98 added config.toml auth pinning, /context skill/MCP cost visibility, more reliable Linux middle-click paste, and terminal color/theme reporting in /terminal-setup (2026-07-13)"
     },
     "mistral-leanstral": {
       "last_date": "2026-07-06",
