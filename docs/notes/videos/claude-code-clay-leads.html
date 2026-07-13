@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Claude Code + Clay — лидогенерация на автопилоте — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Datacenter</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk | AI Automation · 2026-07-12 · 18 мин</span>
+      <span data-lang="en">Video digest · Nate Herk | AI Automation · 2026-07-12 · 18 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Claude Code + Clay: лидогенерация одним промптом</span>
+      <span data-lang="en">Claude Code + Clay: lead generation from a single prompt</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=zyvdl__Ywfk" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Херк показывает связку, в которой холодный аутрич собирается одним промптом: <b>Claude Code — оркестратор, Clay — источник B2B-данных</b>. Идея разделения проста: у аутрича две проблемы — данные (найти бизнесы и настоящие контакты) и инструменты (десяток сервисов с разными UI). Clay закрывает первую своим «водопадом» провайдеров (если первый поставщик не нашёл email, запрос спускается по цепочке — доля найденных контактов растёт с ~30% до 80–90%), а Claude Code закрывает вторую: «не хочу учить новый интерфейс — пусть агент сам разбирается с эндпоинтами» <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=47">[00:47]</a> <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=213">[03:33]</a>.</span>
+      <span data-lang="en">Nate Herk demonstrates a stack where cold outreach is assembled from one prompt: <b>Claude Code as the orchestrator, Clay as the B2B data source</b>. The split is simple: outreach has two problems — data (finding businesses and real contacts) and tooling (a dozen services with different UIs). Clay solves the first with its provider "waterfall" (if the top vendor misses an email, the request cascades down the chain — hit rate climbs from ~30% to 80–90%), and Claude Code solves the second: "I don't want to learn another UI — let the agent figure out the endpoints" <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=47">[00:47]</a> <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=213">[03:33]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: контекст → goal-промпт → фан-аут → верификация</span><span data-lang="en">The method: context → goal prompt → fan-out → verification</span></h2>
+    <p>
+      <span data-lang="ru">Установка — через plugin marketplace в терминале Claude Code, авторизация Clay — по ссылке из их собственного скилла <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=331">[05:31]</a>. Обязательное условие качества — <b>заранее собранный контекст о своём бизнесе</b>: профиль, кейсы, оффер, копирайт сайта; без этого агент не напишет персональные письма <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=140">[02:20]</a>. Дальше один /goal-промпт: «50 обогащённых лидов HVAC-компаний с email, болями бизнеса, свежими сигналами; каждому — персональные тема и тело письма; CTA — согласие на 90-секундный Loom; не останавливайся, пока не будет всех 50, и проверь себя динамическим workflow» <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=497">[08:17]</a>. Агент сам выбрал стратегию: <b>шесть параллельных субагентов по городам</b>, каждый ищет и обогащает ~25 компаний, затем агрегация, дедуп и проверки — включая «дебаты» агентов о качестве темы и тела письма <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=590">[09:50]</a>. Стиль копирайта агент взял из транскрипта подкаста с практиком холодных писем, который автор скормил системе как образец <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=801">[13:21]</a>.</span>
+      <span data-lang="en">Setup goes through the plugin marketplace in the Claude Code terminal, with Clay auth via a link from Clay's own skill <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=331">[05:31]</a>. The quality prerequisite is <b>pre-built business context</b>: profile, case studies, offer, website copy; without it the agent can't write personal emails <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=140">[02:20]</a>. Then one /goal prompt: "50 enriched HVAC leads with emails, business pain points, fresh signals; personalized subject and body for each; CTA — a yes to a 90-second Loom; don't stop until all 50, and verify yourself with a dynamic workflow" <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=497">[08:17]</a>. The agent picked its own strategy: <b>six parallel subagents by city</b>, each sourcing and enriching ~25 companies, then aggregation, dedup and checks — including agent "debates" over subject/body quality <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=590">[09:50]</a>. The copy style came from a cold-email practitioner's podcast transcript the author fed in as a style guide <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=801">[13:21]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/claude-code-clay-leads/000590.jpg" alt="Six background agents by city in Claude Code">
+      <figcaption>
+        <span data-lang="ru">09:50 — шесть фоновых агентов по городам (Хьюстон, Сан-Антонио, Атланта…) обогащают по ~25 компаний каждый; goal активен 22 минуты.</span>
+        <span data-lang="en">09:50 — six background agents by city (Houston, San Antonio, Atlanta…) each enriching ~25 companies; the goal has been active for 22 minutes.</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Результат и экономика</span><span data-lang="en">Results and economics</span></h2>
+    <p>
+      <span data-lang="ru">Через час — CSV с 50 лидами: верифицированные email, телефоны, рейтинг и отзывы Google, боли бизнеса, свежий сигнал, персональный крючок и готовые тема+тело письма (пример: тема «Ваш единственный плохой отзыв — про необработанные звонки», в теле — конкретный кейс из отзывов клиента) <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=704">[11:44]</a>. Цена — <b>172 кредита Clay ≈ $12 за 50 полностью обогащённых лидов</b>; быстрый прогон без обогащения занимает ~5 минут <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=677">[11:17]</a>. Финал — CSV импортируется обратно в Clay: кампания собирается подстановкой переменных из колонок, там же покупаются прогретые домены для отправки <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=890">[14:50]</a>.</span>
+      <span data-lang="en">An hour later — a CSV of 50 leads: verified emails, phones, Google rating and reviews, business pain points, a fresh signal, a personalization hook and ready-made subject+body (example subject: "your one bad review is about call backs," with a concrete case from the customer's reviews in the body) <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=704">[11:44]</a>. The price — <b>172 Clay credits ≈ $12 for 50 fully enriched leads</b>; a quick run without enrichment takes ~5 minutes <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=677">[11:17]</a>. The finale: the CSV goes back into Clay — the campaign is assembled by mapping column variables, and pre-warmed sending domains are bought right there <a class="ts" href="https://www.youtube.com/watch?v=zyvdl__Ywfk&t=890">[14:50]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/claude-code-clay-leads/000890.jpg" alt="Clay campaign setup with variables from the CSV">
+      <figcaption>
+        <span data-lang="ru">14:50 — кампания в Clay: тема и тело письма подставляются переменными из сгенерированной агентом таблицы.</span>
+        <span data-lang="en">14:50 — the Clay campaign: subject and body mapped as variables from the agent-generated table.</span>
+      </figcaption>
+    </figure>
+
+    <p>
+      <span data-lang="ru"><b>Почему это важно:</b> шаблон «агент-оркестратор + специализированный источник данных через плагин» переносится далеко за пределы лидогенерации — тот же рисунок работает для любых пайплайнов «найди → обогати → сгенерируй персональный контент». И характерно, что автор строит его без единого нового UI: интерфейсом становится сам агент.</span>
+      <span data-lang="en">**Why it matters:** the "agent orchestrator + specialized data source via plugin" template travels far beyond lead gen — the same shape fits any find → enrich → generate-personalized-content pipeline. Tellingly, the author builds it without learning a single new UI: the agent itself becomes the interface.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по субтитрам; кадры извлечены по таймкодам, отобранным из транскрипта.</span>
+      <span data-lang="en">Digest built from subtitles; frames extracted at timestamps picked from the transcript.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

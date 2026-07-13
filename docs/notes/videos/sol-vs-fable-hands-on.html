@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: тест GPT-5.6 Sol против Fable 5 руками — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Datacenter</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk | AI Automation · 2026-07-10 · 20 мин · 180K просмотров</span>
+      <span data-lang="en">Video digest · Nate Herk | AI Automation · 2026-07-10 · 20 min · 180K views</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Я протестировал GPT-5.6 Sol против Fable 5: что нужно знать</span>
+      <span data-lang="en">I tested GPT-5.6 Sol vs Fable 5: what you need to know</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=EthxaDswUFo" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Вместо пересказа бенчмарков — день параллельной работы: слева Claude Code с Fable 5, справа Codex с GPT-5.6 Sol, обоим — одинаковые /goal-промпты, а вечером — вердикт по ощущениям от реальных задач <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=25">[00:25]</a>. Это самый честный формат сравнения флагманов из доступных: «одно дело смотреть бенчмарки — другое запачкать руки своей ежедневной работой» <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=1195">[19:55]</a>.</span>
+      <span data-lang="en">Instead of benchmark recaps — a day of side-by-side work: Claude Code with Fable 5 on the left, Codex with GPT-5.6 Sol on the right, identical /goal prompts for both, and an evening verdict grounded in real tasks <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=25">[00:25]</a>. It's the most honest flagship comparison format available: "benchmarks are one thing — getting your hands dirty with your day-to-day work is another" <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=1195">[19:55]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три слепых теста и цена</span><span data-lang="en">Three blind tests and the cost</span></h2>
+    <p>
+      <span data-lang="ru">Браузерная игра про велосипед: победа Fable (полноценный 3D-мир против неудобного вида сверху) при сопоставимом времени — но $14.22 против $4.50, причём Fable выдала 90K output-токенов против 31K у Sol <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=177">[02:57]</a>. Скролл-сайт: снова победа Fable по вау-эффекту — но $19.24 против чуть более доллара («в 20 раз дешевле — был ли результат Fable в 20 раз лучше? Нет») <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=333">[05:33]</a>. Пять произвольных визуальных «миров»: единственная победа Sol — разнообразнее идеи, и при этом самый быстрый прогон дня (7 минут против 15) <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=727">[12:07]</a>. Сквозная закономерность: <b>Sol системно экономнее в токенах</b> (в ~3 раза), а по замерам API у Sol лучше медианная задержка, но разброс больше — Fable стабильнее держится у своих ~20 секунд <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=992">[16:32]</a>.</span>
+      <span data-lang="en">A browser bike game: Fable wins (a proper 3D world vs an awkward top-down view) at similar build times — but $14.22 vs $4.50, with Fable emitting 90K output tokens to Sol's 31K <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=177">[02:57]</a>. A scroll-stopping website: Fable again wins on wow factor — at $19.24 vs just over a dollar ("20x cheaper — was Fable's output 20x better? No") <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=333">[05:33]</a>. Five arbitrary visual "worlds": Sol's only win — more diverse ideas, and the day's fastest run (7 minutes vs 15) <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=727">[12:07]</a>. The through-line: <b>Sol is systematically ~3x more token-frugal</b>, and on API measurements Sol's median latency is better but variance is wider — Fable consistently hovers around its ~20 seconds <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=992">[16:32]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/sol-vs-fable-hands-on/000185.jpg" alt="Token and cost breakdown of a Fable run">
+      <figcaption>
+        <span data-lang="ru">03:05 — разбор стоимости прогона Fable: 4.48M токенов за $14.22, из них 87% — дешёвые кэш-чтения; «кэширование промптов сделало основную работу».</span>
+        <span data-lang="en">03:05 — a Fable run's cost breakdown: 4.48M tokens for $14.22, 87% of them cheap cache reads; "prompt caching did most of the heavy lifting."</span>
+      </figcaption>
+    </figure>
+
+    <h2><span data-lang="ru">Вердикт: Fable — менеджер, Sol — исполнитель</span><span data-lang="en">The verdict: Fable the manager, Sol the worker</span></h2>
+    <p>
+      <span data-lang="ru">Итоговая доска: Sol лучше в цене, computer use, «адвокате дьявола», поиске багов, верификации и скорости; Fable — в креативности, письме, стратегии, советах и умении <b>не</b> переинженирить (Sol на ultra «пишет тесты и думает без остановки») <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=1040">[17:20]</a>. Формула автора: «Fable — сооснователь и менеджер, Sol — очень хороший исполнитель; Fable, оркестрирующая толпу Sol-агентов, была бы великолепна» <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=1020">[17:00]</a>. По чистой способности разрыв остаётся: «Sol — уровня Opus 4.8, и оценена как Opus; будь она уровня Fable — и стоила бы как Fable» <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=1143">[19:03]</a>.</span>
+      <span data-lang="en">The final board: Sol wins on price, computer use, devil's advocacy, bug-finding, verification and speed; Fable on creativity, writing, strategy, advising and <b>not</b> over-engineering (Sol on ultra "keeps writing tests and thinking forever") <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=1040">[17:20]</a>. The author's formula: "Fable is a co-founder and manager, Sol is a really good worker; Fable orchestrating a fleet of Sol agents would be amazing" <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=1020">[17:00]</a>. On raw capability the gap stands: "Sol is Opus 4.8-tier, and it's priced like Opus; if it were Fable-tier, it would be priced like Fable" <a class="ts" href="https://www.youtube.com/watch?v=EthxaDswUFo&t=1143">[19:03]</a>.</span>
+    </p>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/sol-vs-fable-hands-on/001040.jpg" alt="Fable vs Sol pros board">
+      <figcaption>
+        <span data-lang="ru">17:20 — итоговая доска: Fable — «менеджер» (креатив, знания, видео, capability), Sol — «исполнитель» (цена, computer use, поиск багов, верификация, скорость).</span>
+        <span data-lang="en">17:20 — the final board: Fable the "manager" (creativity, knowledge work, video, capability), Sol the "worker" (price, computer use, bug-finding, verification, speed).</span>
+      </figcaption>
+    </figure>
+
+    <figure class="inline-frame">
+      <img src="../../media/frames/sol-vs-fable-hands-on/001175.jpg" alt="Model tier map: GPT 5.5, Opus 4.8, Sol, Fable">
+      <figcaption>
+        <span data-lang="ru">19:35 — карта уровней по опыту автора: GPT-5.5 ≈ Opus 4.8 → Sol заметно впереди обоих → Fable 5 в отдельном тире.</span>
+        <span data-lang="en">19:35 — the author's tier map: GPT-5.5 ≈ Opus 4.8 → Sol clearly ahead of both → Fable 5 in a tier of its own.</span>
+      </figcaption>
+    </figure>
+
+    <p>
+      <span data-lang="ru"><b>Почему это важно:</b> это практическое подтверждение стратегии роутинга, о которой тот же автор говорил всю неделю: дорогая модель — на замысел, дешёвая — на исполнение и верификацию. Свежая вводная — Sol как «работник» теперь конкурирует с Opus по цене при большей токен-экономности, что меняет арифметику мультиагентных прогонов.</span>
+      <span data-lang="en">**Why it matters:** hands-on confirmation of the routing strategy the same author has pushed all week: the expensive model for judgment, the cheap one for execution and verification. The fresh input — Sol as the "worker" now rivals Opus on price with better token frugality, which changes the arithmetic of multi-agent runs.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по субтитрам; кадры извлечены по таймкодам, отобранным из транскрипта.</span>
+      <span data-lang="en">Digest built from subtitles; frames extracted at timestamps picked from the transcript.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

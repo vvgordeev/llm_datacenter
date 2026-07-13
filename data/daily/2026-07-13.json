@@ -1,11 +1,13 @@
 {
   "date": "2026-07-13",
-  "generated_at": "2026-07-13T05:20:00Z",
+  "generated_at": "2026-07-13T14:43:59Z",
   "news": [
     {
       "id": "2026-07-13-openai-sol-ultra-cdc-proof",
       "cluster_id": "openai-gpt-5-6",
-      "models": ["openai"],
+      "models": [
+        "openai"
+      ],
       "title": {
         "ru": "GPT-5.6 Sol Ultra публикует «доказательство» гипотезы о двойном покрытии циклов — математики отнеслись скептически",
         "en": "GPT-5.6 Sol Ultra publishes a 'proof' of the Cycle Double Cover Conjecture — mathematicians are skeptical"
@@ -53,7 +55,9 @@
     {
       "id": "2026-07-13-anthropic-fable-extension-july19",
       "cluster_id": "anthropic-fable-mythos-restore",
-      "models": ["anthropic"],
+      "models": [
+        "anthropic"
+      ],
       "title": {
         "ru": "Anthropic в третий раз продлевает включённый доступ к Claude Fable 5 — теперь до 19 июля",
         "en": "Anthropic extends included Claude Fable 5 access a third time — now through July 19"
@@ -110,7 +114,9 @@
     {
       "id": "2026-07-13-xai-grok-build-v0-2-98",
       "cluster_id": "xai-grok-build-voice",
-      "models": ["xai"],
+      "models": [
+        "xai"
+      ],
       "title": {
         "ru": "xAI обновляет Grok Build до v0.2.98: привязка авторизации, стоимость навыков/MCP в /context и улучшения терминала",
         "en": "xAI updates Grok Build to v0.2.98: auth pinning, skill/MCP cost visibility in /context, and terminal improvements"
@@ -137,5 +143,84 @@
       ]
     }
   ],
-  "expert_content": []
+  "expert_content": [
+    {
+      "id": "2026-07-13-nateherk-clay-leads",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Claude Code + Clay: лидогенерация одним промптом",
+        "en": "Claude Code + Clay: lead generation from a single prompt"
+      },
+      "url": "https://www.youtube.com/watch?v=zyvdl__Ywfk",
+      "summary": {
+        "ru": "Агент-оркестратор + источник B2B-данных через плагин: один /goal-промпт разворачивает 6 субагентов по городам, обогащает 50 лидов «водопадом» провайдеров и пишет персональные письма — за ~$12 кредитов Clay.",
+        "en": "Agent orchestrator + a B2B data source via plugin: one /goal prompt fans out 6 city subagents, enriches 50 leads through a provider waterfall and writes personalized emails — for ~$12 in Clay credits."
+      },
+      "note_page": "notes/videos/claude-code-clay-leads.html",
+      "cover": "media/frames/claude-code-clay-leads/000590.jpg"
+    },
+    {
+      "id": "2026-07-13-nateherk-non-coders-course",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Claude Code для не-программистов: бесплатный 6-часовой курс",
+        "en": "Claude Code for non-coders: a free 6-hour course"
+      },
+      "url": "https://www.youtube.com/watch?v=jdbOVepEtUE",
+      "summary": {
+        "ru": "35 глав от установки до облачных автоматизаций: «12 сдвигов мышления», контекст-инжиниринг, скиллы, субагенты, пять уровней «второго мозга» — готовая программа агентной грамотности для нетехнической аудитории.",
+        "en": "35 chapters from installation to cloud automations: \"12 mindset shifts,\" context engineering, skills, subagents, five \"second brain\" levels — a ready agent-literacy curriculum for non-technical people."
+      },
+      "note_page": "notes/videos/claude-code-for-non-coders.html",
+      "cover": "media/frames/claude-code-for-non-coders/011950.jpg"
+    },
+    {
+      "id": "2026-07-13-nateherk-sol-vs-fable",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Я протестировал GPT-5.6 Sol против Fable 5: что нужно знать",
+        "en": "I tested GPT-5.6 Sol vs Fable 5: what you need to know"
+      },
+      "url": "https://www.youtube.com/watch?v=EthxaDswUFo",
+      "summary": {
+        "ru": "День параллельной работы вместо бенчмарков: Fable выигрывает в креативе, но втрое прожорливее по токенам; вердикт — «Fable — менеджер, Sol — исполнитель», Sol ≈ уровень и цена Opus 4.8.",
+        "en": "A day of side-by-side work instead of benchmarks: Fable wins on creativity but burns 3x the tokens; the verdict — \"Fable is the manager, Sol the worker,\" with Sol at Opus 4.8's tier and price."
+      },
+      "note_page": "notes/videos/sol-vs-fable-hands-on.html",
+      "cover": "media/frames/sol-vs-fable-hands-on/001040.jpg"
+    },
+    {
+      "id": "2026-07-13-willison-dri",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Directly Responsible Individuals: почему агент не может быть ответственным лицом",
+        "en": "Directly Responsible Individuals: why an agent can't be the DRI"
+      },
+      "url": "https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/",
+      "summary": {
+        "ru": "Организационное правило эпохи агентов: агент может выполнять работу ответственного, но DRI — всегда человек, «машины не могут принимать ответственность». В подкрепление — слайд IBM 1979 года.",
+        "en": "An organizational rule for the agent era: an agent may do the DRI's work, but the DRI is always human — \"machines cannot take accountability.\" Backed by the 1979 IBM slide."
+      },
+      "note_page": "notes/articles/agents-cannot-be-dri.html"
+    },
+    {
+      "id": "2026-07-13-willison-sqlite-utils-4-1",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "sqlite-utils 4.1: агент добывает лёгкие фичи из трекера задач",
+        "en": "sqlite-utils 4.1: an agent mines the issue tracker for easy wins"
+      },
+      "url": "https://simonwillison.net/2026/Jul/11/sqlite-utils/",
+      "summary": {
+        "ru": "Два переносимых приёма: «агент-старатель» выбирает из открытых issues дешёвые в реализации фичи, а промпт «вручную поупражняйся с новой функцией» ловит баги, пропущенные автотестами.",
+        "en": "Two transferable tricks: a \"prospector agent\" picks cheap-to-implement features from open issues, and a \"manually exercise the new feature\" prompt catches bugs automated tests missed."
+      },
+      "note_page": "notes/articles/sqlite-utils-4-1-codex-issue-mining.html"
+    }
+  ]
 }

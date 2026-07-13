@@ -48,6 +48,8 @@ community:
     note: плохо индексируется — цитаты по мере доступности через поиск
 
 # Эксперты/блогеры для секции конспектов (статьи и видео).
+# У видео-каналов channel_id — для RSS-discovery: youtube.com/feeds/videos.xml?channel_id=<ID>
+# (мгновенно отдаёт свежие ролики с датами; поисковый индекс отстаёт на 1-2 дня).
 experts:
   - name: Simon Willison
     url: https://simonwillison.net
@@ -55,24 +57,29 @@ experts:
   - name: Andrej Karpathy
     url: https://www.youtube.com/@AndrejKarpathy
     type: video
+    channel_id: UCXUPKJO5MZQN11PqgIvyuvQ
   - name: Latent Space
     url: https://www.latent.space
     type: article
   - name: AI Explained
     url: https://www.youtube.com/@aiexplained-official
     type: video
+    channel_id: UCNJ1Ymd5yFuUPtn21xtRbbw
   - name: Matt Wolfe
     url: https://www.youtube.com/@mreflow
     type: video
+    channel_id: UChpleBmo18P08aKCIgti38g
   - name: Ethan Mollick (One Useful Thing)
     url: https://www.oneusefulthing.org
     type: article
   - name: Nate Herk | AI Automation
     url: https://www.youtube.com/@nateherk
     type: video
+    channel_id: UC2ojq-nuP8ceeHqiroeKhBA
   - name: Matt Pocock
     url: https://www.youtube.com/@mattpocockuk
     type: video
+    channel_id: UCswG6FSbgZjbWtdf_hMLaow
 
 # Агрегаторы-дайджесты — источники ОБНАРУЖЕНИЯ событий (в сводке ссылаемся на первоисточники).
 aggregators:

@@ -2,32 +2,162 @@
   "date": "2026-07-13",
   "generated_at": "2026-07-13T05:20:00Z",
   "sources": [
-    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403 (egress-прокси); прошли через WebSearch"},
-    {"source": "anthropic (WebSearch x3+)", "status": "ok", "candidates": 1, "note": "Fable 5 включённый доступ продлён в третий раз до 19 июля (объявлено ~12-13 июля через @claudeai) — опубликовано как продолжение anthropic-fable-mythos-restore. Никакого нового продукта/фичи не найдено."},
-    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
-    {"source": "openai (WebSearch x3+)", "status": "ok", "candidates": 1, "note": "Sol Ultra: заявленное доказательство Cycle Double Cover Conjecture (объявлено 10 июля Итаном Найтом), скептическая реакция математиков — опубликовано как продолжение openai-gpt-5-6. ChatGPT Sites (под-фича ChatGPT Work) — отклонена как не новая, уже в кластере от 07-10."},
-    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
-    {"source": "google (WebSearch x3+, включая ai.google.dev/changelog, releasebot.io — оба 403)", "status": "empty", "candidates": 0, "note": "Ничего нового за 11-13 июля. Gemini 3.5 Pro delay/DeepMind talent exodus — повторно отклонено как орг/финансовая новость, не продуктовая; Gemini 3.5 Pro пока не вышла."},
-    {"source": "meta blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
-    {"source": "meta (WebSearch x3+)", "status": "empty", "candidates": 0, "note": "Muse Spark/Muse Image — только уточняющие детали (Forbes) к уже известным кластерам, не новое событие"},
-    {"source": "xai blog + changelog (direct fetch)", "status": "blocked", "candidates": 0, "note": "x.ai/news и x.ai/build/changelog — оба 403; releasebot.io зеркало — тоже 403"},
-    {"source": "xai (WebSearch x3+)", "status": "ok", "candidates": 1, "note": "Grok Build v0.2.98 (config.toml auth pinning, /context стоимость навыков/MCP, Linux paste, /terminal-setup) — подтверждено косвенно через поисковые сниппеты (прямой fetch недоступен), опубликовано как продолжение xai-grok-build-voice."},
-    {"source": "xai — расследование о скрытой отправке данных Grok Build (byteiota.com, gist cereblab, HN)", "status": "rejected", "candidates": 1, "note": "Серьёзное заявление о скрытой выгрузке репозитория на GCS не подтверждено независимо: единственный источник — самостоятельно опубликованный gist без независимой репликации, без освещения в крупных СМИ или у ИБ-исследователей. Отклонено по правилу «слухи без первоисточника» — недостаточно для публикации утверждения такого масштаба."},
-    {"source": "mistral blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
-    {"source": "mistral (WebSearch x3+)", "status": "empty", "candidates": 0, "note": "Robostral Navigate/Leanstral 1.5 — без изменений; тизер новой sparse-MoE модели без конкретики, не публикуется"},
-    {"source": "deepseek blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "403"},
-    {"source": "deepseek (WebSearch x3+)", "status": "empty", "candidates": 0, "note": "V4 всё ещё не подтверждён как выпущенный (только preview от 24 апреля); слух о раунде финансирования $7B — единственный источник (Pandaily), не продуктовая новость, не публикуется"},
-    {"source": "aggregators (smol.ai, TLDR AI — оба 403; HN Algolia API — 403)", "status": "blocked", "candidates": 0, "note": "Все три прямых источника заблокированы; обход через WebSearch — Tencent HunYuan 3.0 (6 июля, вне окна), GLM-5.2 (13 июня, вне окна) — оба слишком старые"},
-    {"source": "community Reddit/X (WebSearch)", "status": "empty", "candidates": 0, "note": "site:reddit.com не даёт результатов через используемый поисковый бэкенд; отдельных находок сверх уже покрытого нет"},
-    {"source": "expert: Simon Willison", "status": "empty", "candidates": 0, "note": "Кандидат на sqlite-utils 4.1 (~11 июля) при проверке оказался тем же постом от 5 июля (sqlite-utils-fable), уже опубликованным 07-07 — дубль, отклонён"},
-    {"source": "expert: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "Новых видео за июль не найдено"},
-    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "Только news-recap (AINews), последнее содержательное эссе — от января/апреля, вне окна"},
-    {"source": "expert: AI Explained", "status": "rejected", "candidates": 0, "note": "Свежий контент — сравнение Fable 5 vs GPT-5.6, формат новостного пересказа, исключено правилом скилла"},
-    {"source": "expert: Matt Wolfe", "status": "empty", "candidates": 0, "note": "Продолжает еженедельный новостной формат по пятницам, ничего нового по методам"},
-    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "Последний пост всё ещё от 6 июля; кандидаты при проверке оказались от сентября 2025/2024"},
-    {"source": "expert: Nate Herk", "status": "empty", "candidates": 0, "note": "Единственное новое видео (\"Agent Loops Clearly Explained\") уже опубликовано 07-11 — дубль"},
-    {"source": "expert: Matt Pocock", "status": "empty", "candidates": 0, "note": "Последнее подтверждённое видео — 1 мая; новых не найдено"},
-    {"source": "expert: расширенный поиск (~15 доп. авторов/каналов: interconnects.ai, swyx соло, Hamel Husain, Eugene Yan, Chip Huyen, Raschka, Dwarkesh, ThePrimeagen, Fireship, AI Jason и др.)", "status": "empty", "candidates": 0, "note": "Ничего датированного и верифицированного в окне 8-13 июля с фокусом на методы/подходы; Matt Pocock workshop (апрель) и Claire Gouze/context engineering (2 июля, только через агрегаторы) — вне окна или недостаточно источников"}
+    {
+      "source": "anthropic blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403 (egress-прокси); прошли через WebSearch"
+    },
+    {
+      "source": "anthropic (WebSearch x3+)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Fable 5 включённый доступ продлён в третий раз до 19 июля (объявлено ~12-13 июля через @claudeai) — опубликовано как продолжение anthropic-fable-mythos-restore. Никакого нового продукта/фичи не найдено."
+    },
+    {
+      "source": "openai blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "403"
+    },
+    {
+      "source": "openai (WebSearch x3+)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Sol Ultra: заявленное доказательство Cycle Double Cover Conjecture (объявлено 10 июля Итаном Найтом), скептическая реакция математиков — опубликовано как продолжение openai-gpt-5-6. ChatGPT Sites (под-фича ChatGPT Work) — отклонена как не новая, уже в кластере от 07-10."
+    },
+    {
+      "source": "google/deepmind blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "403"
+    },
+    {
+      "source": "google (WebSearch x3+, включая ai.google.dev/changelog, releasebot.io — оба 403)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Ничего нового за 11-13 июля. Gemini 3.5 Pro delay/DeepMind talent exodus — повторно отклонено как орг/финансовая новость, не продуктовая; Gemini 3.5 Pro пока не вышла."
+    },
+    {
+      "source": "meta blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "403"
+    },
+    {
+      "source": "meta (WebSearch x3+)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Muse Spark/Muse Image — только уточняющие детали (Forbes) к уже известным кластерам, не новое событие"
+    },
+    {
+      "source": "xai blog + changelog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "x.ai/news и x.ai/build/changelog — оба 403; releasebot.io зеркало — тоже 403"
+    },
+    {
+      "source": "xai (WebSearch x3+)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Grok Build v0.2.98 (config.toml auth pinning, /context стоимость навыков/MCP, Linux paste, /terminal-setup) — подтверждено косвенно через поисковые сниппеты (прямой fetch недоступен), опубликовано как продолжение xai-grok-build-voice."
+    },
+    {
+      "source": "xai — расследование о скрытой отправке данных Grok Build (byteiota.com, gist cereblab, HN)",
+      "status": "rejected",
+      "candidates": 1,
+      "note": "Серьёзное заявление о скрытой выгрузке репозитория на GCS не подтверждено независимо: единственный источник — самостоятельно опубликованный gist без независимой репликации, без освещения в крупных СМИ или у ИБ-исследователей. Отклонено по правилу «слухи без первоисточника» — недостаточно для публикации утверждения такого масштаба."
+    },
+    {
+      "source": "mistral blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "403"
+    },
+    {
+      "source": "mistral (WebSearch x3+)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Robostral Navigate/Leanstral 1.5 — без изменений; тизер новой sparse-MoE модели без конкретики, не публикуется"
+    },
+    {
+      "source": "deepseek blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "403"
+    },
+    {
+      "source": "deepseek (WebSearch x3+)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "V4 всё ещё не подтверждён как выпущенный (только preview от 24 апреля); слух о раунде финансирования $7B — единственный источник (Pandaily), не продуктовая новость, не публикуется"
+    },
+    {
+      "source": "aggregators (smol.ai, TLDR AI — оба 403; HN Algolia API — 403)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "Все три прямых источника заблокированы; обход через WebSearch — Tencent HunYuan 3.0 (6 июля, вне окна), GLM-5.2 (13 июня, вне окна) — оба слишком старые"
+    },
+    {
+      "source": "community Reddit/X (WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "site:reddit.com не даёт результатов через используемый поисковый бэкенд; отдельных находок сверх уже покрытого нет"
+    },
+    {
+      "source": "expert: Simon Willison",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Кандидат на sqlite-utils 4.1 (~11 июля) при проверке оказался тем же постом от 5 июля (sqlite-utils-fable), уже опубликованным 07-07 — дубль, отклонён"
+    },
+    {
+      "source": "expert: Andrej Karpathy",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Новых видео за июль не найдено"
+    },
+    {
+      "source": "expert: Latent Space",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Только news-recap (AINews), последнее содержательное эссе — от января/апреля, вне окна"
+    },
+    {
+      "source": "expert: AI Explained",
+      "status": "rejected",
+      "candidates": 0,
+      "note": "Свежий контент — сравнение Fable 5 vs GPT-5.6, формат новостного пересказа, исключено правилом скилла"
+    },
+    {
+      "source": "expert: Matt Wolfe",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Продолжает еженедельный новостной формат по пятницам, ничего нового по методам"
+    },
+    {
+      "source": "expert: Ethan Mollick",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Последний пост всё ещё от 6 июля; кандидаты при проверке оказались от сентября 2025/2024"
+    },
+    {
+      "source": "expert: Nate Herk",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Единственное новое видео (\"Agent Loops Clearly Explained\") уже опубликовано 07-11 — дубль"
+    },
+    {
+      "source": "expert: Matt Pocock",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Последнее подтверждённое видео — 1 мая; новых не найдено"
+    },
+    {
+      "source": "expert: расширенный поиск (~15 доп. авторов/каналов: interconnects.ai, swyx соло, Hamel Husain, Eugene Yan, Chip Huyen, Raschka, Dwarkesh, ThePrimeagen, Fireship, AI Jason и др.)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Ничего датированного и верифицированного в окне 8-13 июля с фокусом на методы/подходы; Matt Pocock workshop (апрель) и Claire Gouze/context engineering (2 июля, только через агрегаторы) — вне окна или недостаточно источников"
+    }
   ],
   "totals": {
     "candidates": 5,
@@ -43,5 +173,10 @@
     "gemini": "not used — сегодня не найдено ни одного нового видео-кандидата, конспекты видео не готовились",
     "frames": "not applicable"
   },
-  "notes": "Понедельник, тонкий новостной день после серии крупных релизов 8-12 июля. Опубликованы 3 новости — все продолжения уже известных сюжетов (openai-gpt-5-6, anthropic-fable-mythos-restore, xai-grok-build-voice), ни одного принципиально нового кластера не обнаружено при полном проходе по 7 включённым моделям + агрегаторам + HN + community. Экспертный контент: 0 из целевых min_expert_total=5 — все 8 экспертов из конфига и ~15 дополнительных авторов/каналов из расширенного поиска дали либо уже опубликованные материалы (дубли), либо материалы вне окна сбора, либо формат новостного пересказа (исключён правилами скилла). Это не подгонка под ноль, а результат добросовестной проверки: каждый кандидат перепроверен на дубликат по data/state.json и по фактическому содержанию. Отдельно: расследование о предполагаемой скрытой отправке данных Grok Build CLI на серверы xAI — самое заметное из отклонённого — не опубликовано из-за отсутствия независимой репликации серьёзного заявления (единственный источник — неверифицированный gist). Прямой WebFetch заблокирован (403 egress-прокси) на всех блогах вендоров, агрегаторах и HN API — это соответствует ранее задокументированному поведению облачной песочницы (см. run_log 2026-07-09..12), WebSearch как основной канал сработал штатно."
+  "notes": "Понедельник, тонкий новостной день после серии крупных релизов 8-12 июля. Опубликованы 3 новости — все продолжения уже известных сюжетов (openai-gpt-5-6, anthropic-fable-mythos-restore, xai-grok-build-voice), ни одного принципиально нового кластера не обнаружено при полном проходе по 7 включённым моделям + агрегаторам + HN + community. Экспертный контент: 0 из целевых min_expert_total=5 — все 8 экспертов из конфига и ~15 дополнительных авторов/каналов из расширенного поиска дали либо уже опубликованные материалы (дубли), либо материалы вне окна сбора, либо формат новостного пересказа (исключён правилами скилла). Это не подгонка под ноль, а результат добросовестной проверки: каждый кандидат перепроверен на дубликат по data/state.json и по фактическому содержанию. Отдельно: расследование о предполагаемой скрытой отправке данных Grok Build CLI на серверы xAI — самое заметное из отклонённого — не опубликовано из-за отсутствия независимой репликации серьёзного заявления (единственный источник — неверифицированный gist). Прямой WebFetch заблокирован (403 egress-прокси) на всех блогах вендоров, агрегаторах и HN API — это соответствует ранее задокументированному поведению облачной песочницы (см. run_log 2026-07-09..12), WebSearch как основной канал сработал штатно.",
+  "local_followup": {
+    "generated_at": "2026-07-13T14:43:59Z",
+    "note": "Локальный добор экспертной секции (0 → 5). Облачный прогон не нашёл видео из-за лага индексации WebSearch: свежие ролики (11-12 июля) ещё не индексируются поиском, а прямой fetch youtube.com скилл не использовал. Добраны: 3 видео Nate Herk (Clay-лидоген 12.07, курс для не-программистов 11.07, тест Sol vs Fable 10.07 — 180K просмотров) + 2 статьи Willison (DRI 12.07, sqlite-utils 4.1 11.07). Кадры извлечены локально (9 шт.). Системный фикс discovery — в SKILL.md этим же днём.",
+    "published_expert": 5
+  }
 }

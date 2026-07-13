@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: агент не может быть ответственным лицом — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Datacenter</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-12</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-12</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Directly Responsible Individuals: почему агент не может быть ответственным лицом</span>
+      <span data-lang="en">Directly Responsible Individuals: why an agent can't be the DRI</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Короткое, но принципиальное эссе о границе автономии агентов в организациях. Отправная точка — концепция DRI (Directly Responsible Individual) из хендбука GitLab, восходящая к Apple: у каждого проекта есть один человек, «в конечном счёте отвечающий за его успех или провал». По мере того как агенты берут на себя всё больше реальной работы — код, ревью, релизы, — возникает соблазн записать в ответственные саму систему. Уиллисон проводит здесь жёсткую черту.</span>
+      <span data-lang="en">A short but foundational essay on the boundary of agent autonomy in organizations. The starting point is the DRI (Directly Responsible Individual) concept from GitLab's handbook, tracing back to Apple: every project has one person "ultimately accountable for its success or failure." As agents take over more real work — code, reviews, releases — the temptation grows to put the system itself on the hook. Willison draws a hard line here.</span>
+    </p>
+
+    <h2><span data-lang="ru">Аргумент</span><span data-lang="en">The argument</span></h2>
+    <p>
+      <span data-lang="ru">Роль DRI «ощущается уникально человеческой, потому что люди могут принимать ответственность за свои действия, а машины — нет». Ответственность — не функция качества работы: даже безупречно выполняющий задачи агент не может ответить за провал ни репутацией, ни позицией, ни обязательством исправить. В подкрепление — легендарный слайд IBM 1979 года: <b>«Компьютер никогда не может быть привлечён к ответственности, поэтому компьютер никогда не должен принимать управленческие решения»</b> — проблеме почти полвека, и автономные агенты её не отменили, а обострили.</span>
+      <span data-lang="en">The DRI role "feels uniquely human, because humans can take accountability for their actions where machines cannot." Accountability isn't a function of work quality: even a flawlessly executing agent can't answer for failure with reputation, position, or a commitment to fix things. Reinforcing it — the legendary 1979 IBM slide: <b>"A computer can never be held accountable, therefore a computer must never make a management decision"</b> — the problem is nearly half a century old, and autonomous agents have sharpened it, not repealed it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Это готовое организационное правило для эпохи агентных команд: <b>агент может выполнять работу DRI, но DRI всегда человек</b>. Практическое следствие для процессов: у каждого агентного прогона, автономного пайплайна и «агента-сотрудника» должен быть поимённо назначенный владелец-человек, принимающий результат. Ср. с материалами последних сводок: и «устав автономии» с definition of done, и правило «человек ревьюит в GitHub» из истории sqlite-utils — частные случаи этого принципа.</span>
+      <span data-lang="en">It's a ready-made organizational rule for the agent-team era: <b>an agent may do the DRI's work, but the DRI is always a human</b>. The practical consequence for processes: every agent run, autonomous pipeline, and "agent employee" needs a named human owner who accepts the result. Compare recent digest materials: the "autonomy charter" with its definition of done, and the "human reviews in GitHub" rule from the sqlite-utils story — both are special cases of this principle.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
