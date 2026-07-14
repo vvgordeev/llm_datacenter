@@ -1,4 +1,4 @@
-/* LLM Datacenter — дашборд (дизайн Neural Radar, ADR-6).
+/* LLM Radar — дашборд (дизайн Neural Radar, ADR-6).
    Статический SPA: дневные JSON — единственный источник, срезы
    Неделя/Месяц считаются на клиенте (инвариант 5 architecture.md). */
 
@@ -21,7 +21,7 @@ const I18N = {
     type_article: "Статья", type_video: "Видео",
     impact: "Impact", empty: "Нет данных за период", empty_filtered: "Нет новостей по выбранным фильтрам",
     all_models: "Все модели",
-    footer: "LLM Datacenter · обновляется ежедневно в 08:00 GMT+3 · ", footer_repo: "репозиторий"
+    footer: "LLM Radar · обновляется ежедневно в 08:00 GMT+3 · ", footer_repo: "репозиторий"
   },
   en: {
     logo_sub: "LLM news digest", live: "updated",
@@ -38,7 +38,7 @@ const I18N = {
     type_article: "Article", type_video: "Video",
     impact: "Impact", empty: "No data for this period", empty_filtered: "No news for the selected filters",
     all_models: "All models",
-    footer: "LLM Datacenter · updated daily at 08:00 GMT+3 · ", footer_repo: "repository"
+    footer: "LLM Radar · updated daily at 08:00 GMT+3 · ", footer_repo: "repository"
   }
 };
 

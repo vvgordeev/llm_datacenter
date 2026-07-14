@@ -1,5 +1,7 @@
 # Дашборд (docs/)
 
+Отображаемое имя продукта — **LLM Radar** (переименовано с «LLM Datacenter» 2026-07-14; имя репозитория и внутренние пути не менялись).
+
 Статический SPA без сборки: `docs/index.html` + `docs/assets/app.js` + `docs/assets/style.css`. Корень GitHub Pages — `docs/`. Дизайн-система — **Neural Radar** (ADR-6): токены в начале `style.css` (эталон — `design_example/design-tokens.css`), шрифты Orbitron/Rajdhani/Inter/JetBrains Mono с Google Fonts, тёмная (по умолчанию) и светлая темы через `data-theme` на `<html>`.
 
 ## Структура
