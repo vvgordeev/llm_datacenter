@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Зачем писать код в 2026-м — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Datacenter</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Doug Turnbull (softwaredoug.com) · 2026-07-09</span>
+      <span data-lang="en">Article digest · Doug Turnbull (softwaredoug.com) · 2026-07-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Зачем писать код в 2026-м, если бо́льшую часть пишет ИИ</span>
+      <span data-lang="en">Why write code in 2026, when AI writes most of it</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://softwaredoug.com/blog/2026/07/09/write-code.html" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Тёрнбулл честно признаёт: бо́льшую часть кода в своих проектах теперь пишет не он, а модель. И всё же он продолжает писать код руками — не из ностальгии, а потому что находит в этом функциональную ценность, которую ревью чужого (агентского) вывода не даёт. Разница, которую он описывает, — это разница между «думать через код» и «думать через английский, который потом превращается в код»: когда пишешь сам, внимание направлено прямо на исполняемую среду, а не проходит через прослойку естественного языка и последующую проверку результата.</span>
+      <span data-lang="en">Turnbull is upfront: most of the code in his projects is now written by a model, not by him. And yet he keeps writing code by hand — not out of nostalgia, but because he finds functional value in it that reviewing someone else's (agent-written) output doesn't provide. The distinction he draws is between "thinking through code" and "thinking through English that later turns into code": when you write it yourself, your attention points directly at the execution environment, rather than passing through a natural-language layer and a subsequent review pass.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: инженер как управляющий «фабрикой ПО»</span><span data-lang="en">The method: the engineer as "software factory" manager</span></h2>
+    <p>
+      <span data-lang="ru">Ядро эссе — переосмысление роли инженера. Задача теперь не «написать фичу», а построить и поддерживать <b>фабрику ПО</b>: конвейер, архитектуру и документацию, достаточно чистые и последовательные, чтобы по ним мог ориентироваться не только человек, но и агент. Если кодовую базу трудно расширять, не сломав что-то попутно, агенту в ней разобраться ещё труднее, чем человеку, — а значит, вложение в архитектурную дисциплину и документацию окупается напрямую в скорости и надёжности агентной работы. Автор описывает будущую структуру команд вокруг «владения компонентом»: один ответственный за компонент («управляющий цехом») плюс несколько менее квалифицированных операторов на рутинный мониторинг — вместо прежней модели «каждый пишет свой участок».</span>
+      <span data-lang="en">The heart of the essay is a reframing of the engineer's job. The task is no longer "write the feature" but build and maintain the <b>software factory</b>: a pipeline, architecture and documentation clean and consistent enough that not just a human but an agent can navigate it. If a codebase is hard to extend without breaking something, it's even harder for an agent to make sense of than for a human — so investing in architectural discipline and documentation pays off directly in the speed and reliability of agentic work. The author sketches a future team structure built around "component ownership": one person responsible for a component (a "plant manager") plus a few lower-skilled operators handling routine monitoring — replacing the old model of everyone owning their own slice of code by hand.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Тёрнбулл прямо возражает популярному контраргументу «ИИ может писать скрипты, но не тронет мою кодовую базу» — экономика проста: если компания А настаивает на ручной разработке, пока компания Б агентно пересобирает ту же фичу за часы и в разы дешевле, компания А не получает медаль за усердие, она проигрывает на рынке. При этом текст не сводится к «пишите меньше кода» — он о том, что ценность ручного написания смещается: не в объём произведённого кода, а в поддержание среды, которая делает агентный труд (свой и чужих агентов) вообще возможным и безопасным.</span>
+      <span data-lang="en">Turnbull directly pushes back on the popular counter-argument that "AI can write scripts, sure, but it won't touch my codebase" — the economics are simple: if Company A insists on hand-crafted software while Company B uses agents to rebuild the same feature in hours at a fraction of the cost, Company A doesn't get a medal for effort — it loses in the market. The piece isn't really an argument for "write less code" — it's about where the value of hand-writing code shifts to: not the volume of code produced, but maintaining the environment that makes agentic labor (your own and other agents') possible and safe in the first place.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

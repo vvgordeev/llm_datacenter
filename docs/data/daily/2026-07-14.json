@@ -1,0 +1,227 @@
+{
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T05:19:42Z",
+  "news": [
+    {
+      "id": "2026-07-14-xai-grok-build-repo-upload",
+      "cluster_id": "xai-grok-build-data-leak",
+      "models": [
+        "xai"
+      ],
+      "title": {
+        "ru": "xAI тайно загружал целые репозитории пользователей Grok Build CLI в облако — включая секреты",
+        "en": "xAI's Grok Build CLI was secretly uploading users' entire repositories to the cloud — secrets included"
+      },
+      "summary": {
+        "ru": "Независимый исследователь cereblab опубликовал разбор сетевого трафика Grok Build CLI (версия 0.2.93): инструмент фоном загружал весь git-репозиторий целиком — все отслеживаемые файлы плюс полную историю коммитов — в управляемый xAI бакет Google Cloud Storage «grok-code-session-traces», независимо от того, какие файлы агент реально читал. На тестовом 12-гигабайтном репозитории трафик, реально нужный модели, составил около 192 КБ, а загрузка в хранилище — около 5,1 ГБ; подсадной секрет из .env-файла попал в трафик дословно и без маскировки. Отключение переключателя «Improve the model» загрузки не останавливало. После публикации отчёта xAI без объявлений тихо отключила механизм на сервере; компания заявила, что данные будут удалены для тех, кто включит режим нулевого хранения (ZDR), но не дала официального заявления о масштабе и сроках хранения уже собранного.",
+        "en": "Independent researcher cereblab published a wire-level analysis of Grok Build CLI (version 0.2.93) showing it silently uploaded the entire git-tracked repository — every tracked file plus full commit history — to an xAI-controlled Google Cloud Storage bucket called \"grok-code-session-traces,\" regardless of which files the agent actually read. On a 12GB test repository, traffic the model actually needed was about 192KB, while the storage upload ran roughly 5.1GB; a canary secret planted in a .env file showed up verbatim and unredacted. Disabling the \"Improve the model\" toggle did not stop the uploads. After the report went public, xAI quietly disabled the mechanism server-side with no advisory; the company said data would be deleted for users who enable Zero Data Retention, but gave no official statement on the scope or retention of data already collected."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Серьёзный удар по доверию к целому классу агентных coding-инструментов (широкая применимость, любой пользователь Grok Build), но это исправляемый баг конкретного вендора, а не новый подход к использованию LLM.",
+        "en": "A serious trust hit for an entire class of agentic coding tools (broad reach — any Grok Build user), but it's a fixable vendor-specific bug, not a new approach to using LLMs."
+      },
+      "source_url": "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Выбирая любой агентный coding-инструмент, вы доверяете свой компьютер, код и бизнес тому харнессу, модели и провайдеру, который выбрали. Так себе положение дел, но это наша реальность. Выбирайте с умом.",
+            "en": "With all the coding agent options, you're choosing to trust your computer, code, and business to whichever harness, model, and provider you pick. It's not a great state of affairs, but that's where we are. Choose wisely."
+          },
+          "url": "https://news.ycombinator.com/item?id=48877371"
+        },
+        {
+          "author": "International Cyber Digest",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Загрузки прекратились тихо, через скрытый серверный флаг, а xAI так и не сказала ни слова о масштабе, сроках хранения и удалении уже собранных данных.",
+            "en": "The uploads quietly stopped via a hidden server-side flag, and xAI still has not said a word about scope, retention, or deletion."
+          },
+          "url": "https://x.com/IntCyberDigest/status/2076689215258014069"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Исследователь выложил воспроизводимый набор (mitmproxy-харнесс + подсадной репозиторий с канареечным секретом), которым разработчики могут сами проверить, что их agentic CLI-инструмент реально отправляет по сети.",
+            "en": "The researcher published a reproducible kit (mitmproxy harness + canary repo with a planted secret) that lets developers audit for themselves what their agentic CLI tool actually sends over the network."
+          },
+          "url": "https://github.com/cereblab/grok-build-exfil-repro"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-14-anthropic-claude-code-token-overhead",
+      "cluster_id": "anthropic-claude-code-token-overhead",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Исследование: Claude Code отправляет ~33 тыс. токенов ещё до чтения промпта — в 4,7 раза больше, чем OpenCode",
+        "en": "Study: Claude Code sends ~33k tokens before it even reads your prompt — 4.7x more than OpenCode"
+      },
+      "summary": {
+        "ru": "AI-консалтинговая фирма Systima залогировала реальный трафик между агентными coding-инструментами и API моделей и обнаружила, что системный промпт и схемы 27 инструментов Claude Code стоят около 33 000 токенов (из них около 24 000 — только описания инструментов) ещё до обработки первого сообщения пользователя, против примерно 7 000 токенов у открытого OpenCode с более скромным набором инструментов. При добавлении MCP-серверов и файлов-инструкций (CLAUDE.md) реальные накладные расходы вырастают примерно до 75 000 токенов — около трети от 200-тысячного окна контекста тратится ещё до какого-либо кода или диалога. Обсуждение на Hacker News (538 очков, 300+ комментариев) также отметило, что Claude Code перезаписывает существенно больше токенов prompt-кеша за ход, чем OpenCode, а такие перезаписи биллятся по повышенной ставке.",
+        "en": "AI consulting firm Systima logged raw traffic between agentic coding tools and the model APIs and found that Claude Code's system prompt plus 27 tool schemas cost about 33,000 tokens (roughly 24,000 of that just tool descriptions) before the user's first message is even processed, versus about 7,000 tokens for the leaner open-source OpenCode. Add MCP servers and CLAUDE.md instruction files, and real-world overhead climbs to roughly 75,000 tokens — about a third of a 200k-token context window spent before any actual code or conversation. The Hacker News discussion (538 points, 300+ comments) also noted Claude Code rewrites substantially more prompt-cache tokens per turn than OpenCode, and those rewrites are billed at a premium rate."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Не новая функция, но широко обсуждаемый и хорошо измеренный факт об эффективности, напрямую влияющий на выбор и настройку агентного coding-инструмента и его стоимость.",
+        "en": "Not a new feature, but a widely discussed, well-measured efficiency finding that directly affects the choice, configuration and cost of a widely used coding agent."
+      },
+      "source_url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+      "opinions": [
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Более высокая цена хода у Claude Code компенсируется тем, что он группирует вызовы инструментов эффективнее — иногда это даёт меньше запросов в сумме, чем у OpenCode.",
+            "en": "Claude Code's higher per-turn cost is offset by its ability to batch tool calls more efficiently — sometimes resulting in fewer total requests than OpenCode."
+          },
+          "url": "https://news.ycombinator.com/item?id=48883275"
+        },
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это фиксированный налог, который платится на каждой сессии независимо от размера задачи — для мелких разовых запросов он ощущается особенно неоправданным.",
+            "en": "It's a fixed tax paid on every session regardless of task size — for small one-off requests it feels especially hard to justify."
+          },
+          "url": "https://news.ycombinator.com/item?id=48883275"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разбивка по токенам даёт командам основания выбирать или настраивать coding-агента по реальной фиксированной стоимости контекста (например, отключая неиспользуемые инструменты), а не по маркетинговым заявлениям.",
+            "en": "The token breakdown gives teams a basis to choose or configure a coding agent by real fixed context cost (e.g. disabling unused tools) rather than by marketing claims."
+          },
+          "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-14-openai-ploy-gpt-5-6-migration",
+      "cluster_id": "openai-gpt-5-6",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "Ploy перевёл продакшен-агента с Claude Opus 4.8 на GPT-5.6 Sol: в 2,2 раза быстрее и на 27% дешевле",
+        "en": "Ploy migrates its production agent from Claude Opus 4.8 to GPT-5.6 Sol: 2.2x faster, 27% cheaper"
+      },
+      "summary": {
+        "ru": "Ploy — компания, чей агент самостоятельно планирует, пишет компоненты, генерирует изображения, делает скриншоты своей работы и решает, когда сайт готов, — четыре месяца не видела ни одной фронтир-модели, обходящей Claude Opus в их продакшен-оценках, пока не появился GPT-5.6 Sol. После прямого сравнения компания сделала Sol моделью по умолчанию для всех рабочих пространств: сборка страниц стала в 2,2 раза быстрее, на 27% дешевле и тратит примерно вдвое меньше выходных токенов при сопоставимом или лучшем качестве. Миграция вскрыла зависимости от конкретного провайдера: статический префикс промпта агента (~29 тыс. токенов) у Claude кешировался через cache_control с попаданием в кеш 92–96%, и эту схему пришлось переработать под другую модель кеширования OpenAI.",
+        "en": "Ploy — whose agent independently plans pages, writes components, generates imagery, screenshots its own work and decides when a site is done — went four months without a single frontier model beating Claude Opus in its production evaluations, until GPT-5.6 Sol did. After a head-to-head comparison, the company made Sol the default model across every workspace: builds finished 2.2x faster, cost 27% less, and used roughly half the output tokens at comparable or better quality. The migration exposed provider-specific plumbing: the agent's ~29k-token static prompt prefix relied on Claude's cache_control caching with a 92-96% hit rate, and that scheme had to be reworked for OpenAI's different caching model."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Конкретный измеримый production-кейс в пользу GPT-5.6 в агентных задачах — полезно для выбора модели, но это частный опыт одной компании, а не смена подхода.",
+        "en": "A concrete, measured production case for GPT-5.6 in agentic work — useful for model-choice decisions, but it's one company's experience, not a shift in approach."
+      },
+      "source_url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Был бы приятно удивлён, если бы это действительно дало сокращение — 5.5 и так была до неприличия токен-эффективна, настолько, что её reasoning-трейсы стали куда менее стабильно сжимаемыми по сравнению с 5.4 и превратились местами в едва вразумительную абракадабру.",
+            "en": "I'd be very impressed if they actually managed any reduction, as 5.5 is already obscenely token efficient — to the point that its reasoning traces seem to compact far less reliably compared to 5.4 and have become barely comprehensible gibberish in places."
+          },
+          "url": "https://news.ycombinator.com/item?id=48882716"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "В посте описаны конкретные шаги миграции автономного coding/website-агента между провайдерами: пересборка допущений о prompt-кешировании, различия в заполнении аргументов инструментов и в повторном использовании reasoning между ходами.",
+            "en": "The post documents concrete steps for migrating an autonomous coding/website-building agent between providers: reworking prompt-caching assumptions, differences in tool-argument filling, and reasoning replay behavior between turns."
+          },
+          "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-14-openai-cdc-proof-bloom-review",
+      "cluster_id": "openai-gpt-5-6",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "Математик Томас Блум: доказательство GPT-5.6 Sol Ultra «изящное», но без ссылок на предыдущие работы",
+        "en": "Mathematician Thomas Bloom: GPT-5.6 Sol Ultra's proof is \"a very nice proof\" — but omits key prior citations"
+      },
+      "summary": {
+        "ru": "Математик из Манчестерского университета Томас Блум опубликовал первую содержательную экспертную оценку доказательства гипотезы о двойном покрытии циклов, представленного OpenAI как результат работы GPT-5.6 Sol Ultra (см. сводку от 13 июля). Блум называет доказательство корректным, коротким и элементарным — «могло быть найдено ещё в 1980-х», — но указывает, что в нём полностью отсутствуют ссылки на предшествующие работы, включая основополагающую статью Бермона, Джексона и Джагера 1983 года, покрывающую близкую территорию. Доказательство по-прежнему не прошло рецензируемую публикацию.",
+        "en": "University of Manchester mathematician Thomas Bloom published the first substantive expert review of the Cycle Double Cover Conjecture proof OpenAI attributed to GPT-5.6 Sol Ultra (covered in our July 13 digest). Bloom calls the proof valid, short and elementary — \"could have been discovered in the 1980s\" — but notes it completely lacks citations to prior work, including a foundational 1983 paper by Bermond, Jackson and Jaeger covering closely related territory. The proof still hasn't appeared in a peer-reviewed publication."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Первая содержательная экспертная проверка снижает неопределённость вокруг заявленного результата, но также показывает, что метод — аккуратная компиляция известной техники, а не принципиально новый математический приём.",
+        "en": "The first substantive expert check reduces uncertainty around the claimed result, but also shows the method is a careful compilation of known technique rather than a principally new mathematical approach."
+      },
+      "source_url": "https://x.com/thomasfbloom/status/2075855061494706240",
+      "opinions": [
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Отсутствие ссылок не делает математику неверной, но это меняет саму историю: это уже не «модель с нуля решила полувековую проблему», а аккуратная сборка известных лемм без указания, откуда они взяты.",
+            "en": "Missing citations don't make the math wrong, but they change the story: it's no longer 'a model solved a 50-year problem from scratch' — it's a careful assembly of known lemmas without crediting where they came from."
+          },
+          "url": "https://news.ycombinator.com/item?id=48863490"
+        }
+      ],
+      "use_cases": []
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-14-willison-fable-bump",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "«Fable снова сдвигают»: почему Anthropic пора сделать доступ постоянным",
+        "en": "\"Fable gets another bump\": why Anthropic should just make access permanent"
+      },
+      "url": "https://simonwillison.net/2026/Jul/12/bump/",
+      "summary": {
+        "ru": "Уиллисон разбирает третье продление бесплатного доступа к Claude Fable 5 на фоне запуска GPT-5.6 Sol и предлагает Anthropic просто оставить Fable в подписке навсегда: неопределённость сроков отпугивает пользователей сильнее, чем сама стоимость вычислений.",
+        "en": "Willison unpacks Anthropic's third extension of free Fable 5 access amid GPT-5.6 Sol's launch, and argues Anthropic should just make Fable a permanent part of subscriptions — the recurring deadline uncertainty scares off users more than the compute cost itself."
+      },
+      "note_page": "notes/articles/fable-gets-another-bump.html"
+    },
+    {
+      "id": "2026-07-14-turnbull-why-write-code",
+      "type": "article",
+      "author": "Doug Turnbull (softwaredoug.com)",
+      "title": {
+        "ru": "Зачем писать код в 2026-м, если бо́льшую часть пишет ИИ",
+        "en": "Why write code in 2026, when AI writes most of it"
+      },
+      "url": "https://softwaredoug.com/blog/2026/07/09/write-code.html",
+      "summary": {
+        "ru": "Хотя бо́льшую часть своего кода Тёрнбулл теперь получает от ИИ, он продолжает писать код сам — это единственный способ думать прямо в среде исполнения, а не через прокладку-английский; ревью чужого (агентского) кода не даёт того же чувства владения. Вторая половина эссе — про роль инженера как «управляющего фабрикой ПО»: поддерживать архитектуру достаточно чистой и документированной, чтобы агенты тоже могли в ней ориентироваться.",
+        "en": "Even though most of Turnbull's code now comes from AI, he keeps writing code himself — it's the only way to think directly in the execution environment rather than through an English proxy; reviewing someone else's (agent-written) code doesn't give the same sense of ownership. The essay's second half is about the engineer's role as \"software factory manager\": keeping the architecture clean and documented enough that agents can navigate it too."
+      },
+      "note_page": "notes/articles/why-write-code-in-2026.html"
+    },
+    {
+      "id": "2026-07-14-latentspace-modal-agent-cloud",
+      "type": "article",
+      "author": "Latent Space (Akshat Bubna, Modal CTO)",
+      "title": {
+        "ru": "Почему инфраструктура ИИ должна измениться ради «agent experience» — Modal",
+        "en": "Why AI infrastructure must evolve for \"agent experience\" — Modal"
+      },
+      "url": "https://www.latent.space/p/modal2026",
+      "summary": {
+        "ru": "Заключительная часть серии Latent Space об «Agent Cloud» (после Databricks, Daytona, Railway, E2B): CTO Modal Акшат Бубна объясняет, что меняется в облачной инфраструктуре, когда её основной потребитель — не человек за терминалом, а автономный агент, порождающий короткоживущие sandboxed-окружения тысячами.",
+        "en": "The closing piece of Latent Space's \"Agent Cloud\" series (after Databricks, Daytona, Railway, E2B): Modal CTO Akshat Bubna on what changes in cloud infrastructure when its primary consumer is not a human at a terminal but an autonomous agent spinning up thousands of short-lived sandboxed environments."
+      },
+      "note_page": "notes/articles/modal-agent-cloud-infrastructure.html"
+    }
+  ]
+}

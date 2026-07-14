@@ -1,0 +1,33 @@
+{
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T05:19:42Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch surfaced only already-covered items (Reflect, Claude for Gov beta from Jul 7, Sonnet 5 1M ctx from Jun 30) — nothing new in lookback window"},
+    {"source": "openai blog", "status": "ok", "candidates": 2, "note": "WebSearch found genuine follow-ups to GPT-5.6 launch: Ploy production migration case study, Thomas Bloom's math review of the CDC proof"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; only found rumor-grade 'Gemini 3.5 Pro delayed to July 17' from low-quality SEO reposts with no official Google statement — rejected as unverified rumor"},
+    {"source": "meta ai blog", "status": "empty", "candidates": 0, "note": "Muse Image rollback already covered July 10-11; no new Meta item in window"},
+    {"source": "xai news", "status": "ok", "candidates": 1, "note": "Grok Build CLI data-exfiltration story (cereblab report + HN); genuinely new, well-corroborated across multiple independent outlets"},
+    {"source": "mistral news", "status": "rejected", "candidates": 1, "note": "WebSearch initially claimed a 'July 14-15 AI Now Summit' with Vibe rebrand — cross-checked and found the actual event/rebrand happened May 28, 2026; discarded as a search-synthesis dating error, not real news for today"},
+    {"source": "deepseek news", "status": "empty", "candidates": 0, "note": "V4 official release confirmed for July 15 (tomorrow), not yet live"},
+    {"source": "qwen blog", "status": "skipped", "candidates": 0, "note": "enabled: false in sources.yaml"},
+    {"source": "hn api (algolia)", "status": "blocked", "candidates": 0, "note": "proxy 403 as documented; used WebSearch site:news.ycombinator.com fallback instead, which surfaced the 3 community-story candidates"},
+    {"source": "aggregators (smol.ai, tldr.tech)", "status": "blocked/empty", "candidates": 0, "note": "WebFetch 403 on news.smol.ai; WebSearch could not locate a Jul 13/14 issue specifically"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch returned only generic subreddit-stats pages, no dated posts"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "used 'Fable gets another bump' (Jul 12)"},
+    {"source": "experts: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "RSS blocked (proxy 403 on youtube.com feeds); WebSearch found no video newer than the already-published Jul 10 one, and misattributed an old (Mar 2026) podcast episode when queried loosely"},
+    {"source": "experts: Latent Space", "status": "ok", "candidates": 1, "note": "used Modal/Akshat Bubna Agent Cloud piece (Jul 8), verified distinct URL from already-published Databricks piece"},
+    {"source": "experts: AI Explained", "status": "rejected", "candidates": 1, "note": "WebSearch surfaced 'Episode 214' as if from this channel; verification showed it actually belongs to a different, similarly-named podcast ('The Artificial Intelligence Show') — discarded"},
+    {"source": "experts: Matt Wolfe", "status": "empty", "candidates": 0, "note": "RSS blocked; WebSearch could not confirm a video newer than the already-published Jul 10 one with a verifiable date"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "latest identifiable post from Jul 1, outside the 7-day window"},
+    {"source": "experts: Nate Herk", "status": "empty", "candidates": 0, "note": "RSS blocked; WebSearch repeatedly resurfaced already-published (Jul 13) or much older (Apr 2026) videos, no verifiable new upload found"},
+    {"source": "experts: Matt Pocock", "status": "empty", "candidates": 0, "note": "no video with a confirmed date in the window found via WebSearch"},
+    {"source": "other author: Doug Turnbull (softwaredoug.com)", "status": "ok", "candidates": 1, "note": "expanded search per SKILL rule; 'Why write code in 2026', real HN discussion corroborates"}
+  ],
+  "totals": {
+    "candidates": 14,
+    "published": 4,
+    "rejected": {"rumor without solid primary source (Gemini 3.5 Pro delay)": 1, "search-synthesis dating error (Mistral Vibe/AI Now Summit)": 1, "misattributed to wrong show (AI Explained ep 214)": 1, "old/already-published or unconfirmed dates (video experts)": 7}
+  },
+  "video_pipeline": {"gemini": "not attempted: no qualifying fresh video candidate found this run", "frames": "skipped: no video content"},
+  "notes": "Environment degradation: WebFetch returned HTTP 403 for essentially every external domain tried this run (vendor blogs, HN, X, YouTube RSS feeds, simonwillison.net, softwaredoug.com, mistral.ai, venturebeat.com) — far more than the 'most direct fetches 403' baseline noted in prior run_logs; discovery relied entirely on WebSearch synthesis, which twice produced date/attribution errors that were caught only by cross-checking with a second independent query (Mistral Vibe's real date was May 28 not Jul 14; 'AI Explained episode 214' belongs to a different podcast). Recommend treating single-source WebSearch date/attribution claims as unverified until corroborated. Expert section fell short of min_expert_total=5 (3 articles, 0 videos) despite extensive expansion — RSS discovery for video experts was fully blocked and WebSearch could not reliably confirm upload dates for any configured video channel this run."
+}

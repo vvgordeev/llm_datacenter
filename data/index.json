@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-14",
+      "news_count": 4,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "xAI тайно загружал целые репозитории пользователей Grok Build CLI в облако — включая секреты",
+        "en": "xAI's Grok Build CLI was secretly uploading users' entire repositories to the cloud — secrets included"
+      }
+    },
+    {
       "date": "2026-07-13",
       "news_count": 3,
       "expert_count": 5,

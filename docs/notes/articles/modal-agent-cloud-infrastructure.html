@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Инфраструктура ИИ и agent experience (Modal) — LLM Datacenter</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Datacenter</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (Акшат Бубна, Modal) · 2026-07-08</span>
+      <span data-lang="en">Article digest · Latent Space (Akshat Bubna, Modal) · 2026-07-08</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Почему инфраструктура ИИ должна измениться ради «agent experience» — Modal</span>
+      <span data-lang="en">Why AI infrastructure must evolve for "agent experience" — Modal</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/modal2026" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Материал завершает серию Latent Space об «Agent Cloud» — обзор провайдеров инфраструктуры (Databricks, Daytona, Railway, E2B), к которым разработчики агентов обращаются вместо классических облаков. Завершающий гость — Акшат Бубна, технический директор Modal, компании, только что закрывшей раунд Series C на 355 млн долларов. Его тезис: облачная инфраструктура последние 15 лет проектировалась для человека, который время от времени деплоит сервис и рассчитывает на стабильный, долгоживущий процесс. Агент — принципиально другой потребитель: он порождает короткоживущие изолированные окружения тысячами, часто на секунды, и ожидает, что новая песочница поднимется мгновенно, а не через типичный для облака цикл выделения ресурсов.</span>
+      <span data-lang="en">The piece closes out Latent Space's "Agent Cloud" series — a survey of infrastructure providers (Databricks, Daytona, Railway, E2B) that agent developers are turning to instead of classic clouds. The closing guest is Akshat Bubna, CTO of Modal, a company that just closed a $355M Series C. His thesis: cloud infrastructure has spent the last 15 years being designed around a human who occasionally deploys a service and expects a stable, long-running process. An agent is a fundamentally different consumer: it spins up thousands of short-lived, isolated environments, often for mere seconds, and expects a fresh sandbox to boot instantly rather than go through a cloud's typical resource-provisioning cycle.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: чем «agent experience» отличается от «developer experience»</span><span data-lang="en">The method: how "agent experience" differs from "developer experience"</span></h2>
+    <p>
+      <span data-lang="ru">Бубна раскладывает разницу на конкретные требования. Во-первых, холодный старт: человек терпит запуск контейнера за секунды, агент, повторяющий цикл «написал код → выполнил → проверил результат» сотни раз за сессию, требует запуска за десятки-сотни миллисекунд, иначе вся выгода от скорости самой модели теряется на ожидании инфраструктуры. Во-вторых, изоляция по умолчанию: каждый агентный вызов инструмента в идеале выполняется в одноразовой песочнице, а не в общем персистентном окружении, — это одновременно требование безопасности (агент может выполнить произвольный код) и требование чистоты состояния (агент не должен унаследовать побочные эффекты предыдущего запуска). В-третьих, оплата за фактическое использование до долей секунды, а не по классическим облачным юнитам, — иначе экономика операций, которые агент повторяет тысячи раз в день, не сходится.</span>
+      <span data-lang="en">Bubna breaks the difference down into concrete requirements. First, cold start: a human tolerates a container spinning up in seconds, but an agent repeating a "write code → run it → check the result" loop hundreds of times per session needs startup in tens or hundreds of milliseconds — otherwise all the speed gained from the model itself is lost waiting on infrastructure. Second, isolation by default: each agentic tool call ideally runs in a disposable sandbox rather than a shared persistent environment — both a security requirement (the agent can execute arbitrary code) and a state-hygiene requirement (the agent shouldn't inherit side effects from a previous run). Third, billing down to fractions of a second of actual use rather than classic cloud units — otherwise the economics don't work for operations an agent repeats thousands of times a day.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно</span><span data-lang="en">Why it matters</span></h2>
+    <p>
+      <span data-lang="ru">Материал полезен как чек-лист для любого, кто строит агентную систему за пределами демо: если инфраструктура выбрана «как для обычного бэкенда», холодные старты и общие окружения незаметно съедят выгоду от более быстрой модели и станут источником трудноуловимых багов из-за унаследованного состояния. Более широкий сигнал серии в целом — вокруг «agent-native» инфраструктуры формируется отдельный рынок провайдеров, и выбор между ними всё чаще определяет реальную производительность агентного продукта не меньше, чем выбор модели.</span>
+      <span data-lang="en">The piece works as a checklist for anyone building an agentic system beyond a demo: if the infrastructure is chosen "like for a regular backend," cold starts and shared environments will quietly eat the gains from a faster model and become a source of hard-to-trace bugs from inherited state. The broader signal from the series as a whole: a distinct market of "agent-native" infrastructure providers is forming, and the choice among them increasingly determines an agentic product's real-world performance as much as the choice of model does.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
