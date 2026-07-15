@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: полный разбор всех 21 скилла Матта Покока — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Radar</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Matt Pocock · 2026-07-11 · 20 мин</span>
+      <span data-lang="en">Video digest · Matt Pocock · 2026-07-11 · 20 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">mattpocock/skills: полный разбор всех 21 скилла для Claude Code</span>
+      <span data-lang="en">mattpocock/skills: the complete deep dive on all 21 Claude Code skills</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=M3jYrNKQjEg" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Матт Покок выпустил давно обещанный полный разбор своего репозитория скиллов для Claude Code и Codex — тот самый, что стал самым устанавливаемым личным набором скиллов в экосистеме (160K звёзд, 7.5 млн загрузок), но до этого видео не имел единого туториала. Отправная точка ролика <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=0">[00:00]</a> — противопоставление «vibe coding» (хаотичной генерации кода без структуры) и дисциплинированной инженерной практики, которую и реализуют скиллы репозитория.</span>
+      <span data-lang="en">Matt Pocock shipped the long-promised complete walkthrough of his Claude Code / Codex skills repository — the one that became the most-installed personal skills repo in the ecosystem (160K stars, 7.5m downloads) without ever having a single tutorial to point to. The video's starting point <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=0">[00:00]</a> is a contrast between "vibe coding" (chaotic, structureless code generation) and the disciplined engineering practice the repo's skills are built to enforce.</span>
+    </p>
+
+    <h2><span data-lang="ru">Четыре поломки, которые чинит набор скиллов</span><span data-lang="en">The four failure modes the toolkit fixes</span></h2>
+    <p>
+      <span data-lang="ru">Покок раскладывает мотивацию всего репозитория на четыре повторяющиеся проблемы агентной разработки <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=69">[01:09]</a>: агент неверно считывает намерение задачи, выдаёт избыточный (multi verbose) ответ вместо нужного, пишет код с багами и постепенно разрушает архитектуру кодовой базы, если её никто явно не защищает. Дальше видео разбито на две главы скиллов, каждая нацелена на свою половину этих проблем.</span>
+      <span data-lang="en">Pocock breaks the whole repo's motivation into four recurring failures of agentic development <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=69">[01:09]</a>: the agent misreads task intent, produces an overly verbose response instead of the needed one, writes buggy code, and gradually erodes the codebase's architecture if nothing explicitly guards it. The rest of the video is split into two chapters of skills, each aimed at one half of these failures.</span>
+    </p>
+
+    <h2><span data-lang="ru">Глава 1 — инженерные скиллы: от согласования модели до TDD</span><span data-lang="en">Chapter 1 — engineering skills: from model alignment to TDD</span></h2>
+    <p>
+      <span data-lang="ru">Первая глава <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=110">[01:50]</a> посвящена скиллам, которые заставляют агента проектировать и писать код методично. <b>/grill-with-docs</b> <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=186">[03:06]</a> заставляет агента сперва согласовать доменную модель с человеком, а не сразу писать реализацию. <b>/implement</b> <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=460">[07:40]</a> — ядро всего конвейера: разработка через тесты (TDD) на заранее согласованных «швах» кода, с обязательным код-ревью перед коммитом. А скилл <b>/tdd</b> <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=687">[11:27]</a> закрепляет мысль отдельно: агенту нужны короткие, частые циклы обратной связи (написал тест → увидел падение → починил), иначе он накапливает ошибки незаметно для себя между шагами.</span>
+      <span data-lang="en">The first chapter <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=110">[01:50]</a> covers the skills that force the agent to design and write code methodically. <b>/grill-with-docs</b> <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=186">[03:06]</a> makes the agent align on a domain model with the human first, rather than jumping straight to implementation. <b>/implement</b> <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=460">[07:40]</a> is the core of the whole pipeline: test-driven development at pre-agreed code "seams," with a mandatory code review before commit. The <b>/tdd</b> skill <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=687">[11:27]</a> drives the same point home on its own: the agent needs short, frequent feedback loops (write a test → watch it fail → fix it), or it silently accumulates errors between steps.</span>
+    </p>
+
+    <h2><span data-lang="ru">Глава 2 — продуктивность: прояснение решений и передача контекста</span><span data-lang="en">Chapter 2 — productivity: clarifying decisions and handing off context</span></h2>
+    <p>
+      <span data-lang="ru">Вторая глава <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=881">[14:41]</a> — не про написание кода как такового, а про мышление вокруг него: <b>/grill-me</b> помогает прояснить архитектурное решение до того, как оно закреплено в реализации (тот же принцип «сначала вопросы, потом код», что и в /grill-with-docs, но применённый к произвольным решениям, а не только к доменной модели), а <b>/handoff</b> решает конкретную боль долгих агентных сессий — потерю контекста между ними: скилл упаковывает состояние работы так, чтобы следующая сессия не начинала с нуля. Покок завершает ролик демонстрацией того, как все скиллы стыкуются друг с другом в единый конвейер <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=1131">[18:51]</a> — вывод в том, что ценность не в отдельных файлах, а именно в композиции: каждый скилл занимает свою фазу цикла «идея → спецификация → тикеты → реализация → ревью», и вместе они превращают агента из непредсказуемого соавтора в дисциплинированного исполнителя процесса.</span>
+      <span data-lang="en">The second chapter <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=881">[14:41]</a> isn't about writing code per se, but about the thinking around it: <b>/grill-me</b> helps clarify an architectural decision before it's locked into an implementation (the same "questions first, code later" principle as /grill-with-docs, but applied to arbitrary decisions rather than just the domain model), while <b>/handoff</b> solves a specific pain point of long agent sessions — losing context between them: the skill packages the state of the work so the next session doesn't start from zero. Pocock closes the video by showing how all the skills snap together into a single pipeline <a class="ts" href="https://www.youtube.com/watch?v=M3jYrNKQjEg&t=1131">[18:51]</a> — the takeaway being that the value isn't in the individual files but in the composition: each skill owns its phase of the "idea → spec → tickets → implementation → review" cycle, and together they turn the agent from an unpredictable co-writer into a disciplined process executor.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API; кадры извлечь не удалось — в текущем облачном окружении egress-прокси блокирует потоковый доступ yt-dlp к YouTube (403 на туннель). Статус — в run_log дня.</span>
+      <span data-lang="en">Digest built from a Gemini API video analysis; frame extraction failed — in this cloud environment the egress proxy blocks yt-dlp's streaming access to YouTube (403 on the tunnel). Status is recorded in the day's run_log.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

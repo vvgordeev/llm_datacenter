@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T05:27:33Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked→ok", "candidates": 1, "note": "WebFetch on anthropic.com/news 403; WebSearch found Claude for Teachers (Jul 14), independently corroborated across Chalkbeat/EdSurge/Forbes/9to5Mac"},
+    {"source": "openai blog", "status": "empty", "candidates": 0, "note": "All findings (GPT-5.6, ChatGPT Work, GPT-Live) already published in prior digests (Jul 9-11); nothing new in the Jul 13-15 window"},
+    {"source": "google/deepmind blog", "status": "blocked→ok", "candidates": 1, "note": "WebFetch 403; Gemini 3.5 Pro delay remains an unconfirmed rumor (rejected again); found legitimate research item GenCeption (arXiv 2607.09024, DeepMind authors incl. Kaiming He/Andrew Zisserman) via WebSearch, corroborated independently"},
+    {"source": "meta ai blog", "status": "empty", "candidates": 0, "note": "Muse Spark/Muse Image fully covered Jul 7-11; nothing new in window"},
+    {"source": "xai news", "status": "ok", "candidates": 1, "note": "Continuation of yesterday's Grok Build story: Musk's personal data-deletion pledge (The Register, Neowin, Axios, Jul 14), independently corroborated"},
+    {"source": "mistral news", "status": "rejected", "candidates": 0, "note": "AI Now Summit / Vibe rebrand / OCR4 stories all date to late June, already flagged as a search-synthesis dating error in the prior run_log"},
+    {"source": "deepseek news", "status": "ok", "candidates": 1, "note": "Official V4 release + peak-hour pricing goes live today (Jul 15) per multiple independent sources (KuCoin, TechNode, Tech Buzz China, deepseek.day)"},
+    {"source": "qwen blog", "status": "skipped", "candidates": 0, "note": "enabled: false in sources.yaml"},
+    {"source": "hn api (algolia)", "status": "blocked", "candidates": 0, "note": "proxy 403 as documented; WebSearch site:news.ycombinator.com fallback surfaced only older DeepSeek V4 preview threads"},
+    {"source": "aggregators (smol.ai)", "status": "blocked→ok", "candidates": 0, "note": "WebFetch 403; WebSearch found Jul 14 digest (Z.ai ZCode, Sonnet 5, RSI Lab) — all already covered or outside tracked model list"},
+    {"source": "aggregators (tldr.tech)", "status": "blocked→ok", "candidates": 1, "note": "WebFetch 403; WebSearch surfaced GenCeption mention in Jul 14 issue, used as a lead to find the primary arXiv source"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch returned no dated posts for DeepSeek V4 or Claude for Teachers on these subreddits"},
+    {"source": "X (twitter)", "status": "ok", "candidates": 3, "note": "Verifiable quotes found: Rohan Paul (DeepSeek pricing), Elon Musk (data purge), corroborating cereblab GitHub note"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "DOOMQL (Jul 13) — direct fetch blocked (403), found and corroborated via WebSearch; other July posts already published/in seen_urls"},
+    {"source": "experts: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "RSS blocked (403); WebSearch found no new video in the 7-day window beyond the already-published Jul 3 note; a March 2026 podcast appearance was out of window"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "Recent posts either already covered (Databricks, Modal) or outside the 7-day window (Cursor's Third Era, Experts Have World Models, etc.)"},
+    {"source": "experts: AI Explained", "status": "ok", "candidates": 1, "note": "\"The Complete AI Tech Stack in 2026\" (~Jul 8) found via WebSearch, RSS blocked"},
+    {"source": "experts: Matt Wolfe", "status": "empty", "candidates": 0, "note": "Only a weekly news-roundup video found (~Jul 10-13) — excluded as a recap, not approach content"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "Only July post is \"Twilight of the Chatbots\" (Jul 1), already published; other surfaced titles verified as older/unrelated"},
+    {"source": "experts: Nate Herk", "status": "empty", "candidates": 0, "note": "Three most recent videos already covered by existing notes; no newer upload found in window"},
+    {"source": "experts: Matt Pocock", "status": "ok", "candidates": 1, "note": "\"mattpocock/skills — Complete Deep Dive: All 21 Claude Code Skills Explained\" (~Jul 11, M3jYrNKQjEg) found via WebSearch, RSS blocked; distinct from already-covered v1.1 announcement video"},
+    {"source": "other author: AI_chemyst (Substack, expansion)", "status": "ok", "candidates": 1, "note": "Added per SKILL expansion rule to approach min_expert_total; substantive agent-loop/mission-brief methodology post (~Jul 8)"}
+  ],
+  "totals": {
+    "candidates": 26,
+    "published": 8,
+    "rejected": {
+      "unconfirmed rumor (Gemini 3.5 Pro delay)": 1,
+      "stale/already-rejected dating error (Mistral AI Now Summit/Vibe)": 1,
+      "already-published or out-of-window items (OpenAI GPT-5.6 follow-ups, Meta Muse, Karpathy/Latent Space/Mollick/Wolfe/Herk older or recap content)": 12,
+      "financial/policy news without a product angle": 4
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok (2 videos processed: Matt Pocock skills deep-dive on 2nd attempt with gemini-flash-latest after gemini-2.5-flash 503s; AI Explained tech-stack video ok directly on gemini-2.5-flash)",
+    "frames": "skipped: yt-dlp failed with 'Tunnel connection failed: 403 Forbidden' — egress proxy blocks youtube.com streaming access in this cloud sandbox, consistent with prior run_logs"
+  },
+  "notes": "Environment degradation persists: WebFetch/curl return 403 for nearly every external domain tried (vendor blogs, HN, X, YouTube RSS, aggregators, simonwillison.net, latent.space, oneusefulthing.org) — discovery relied entirely on WebSearch, cross-checked independently for each of the 4 news items and 4 expert-content items before inclusion. yt-dlp/imageio-ffmpeg were pip-installed at the start of this run (absent from the base image) but streaming access to YouTube itself remains blocked by the egress proxy, so video frame extraction failed for both processed videos as in prior runs. Expert section reached 4 of 5 minimum (min_expert_total) despite extensive expansion across all configured experts plus one additional author — several configured video experts (Karpathy, Latent Space, Wolfe, Mollick, Nate Herk) had no qualifying new content in the 7-day window this run."
+}

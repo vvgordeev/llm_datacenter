@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: дайте Fable 5 задание, а не промпт — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · AI_chemyst · 2026-07-08</span>
+      <span data-lang="en">Article digest · AI_chemyst · 2026-07-08</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Дайте Fable 5 задание, а не промпт</span>
+      <span data-lang="en">Give Fable 5 a mission, not just a "prompt"</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://aichemyst.substack.com/p/give-fable-5-a-mission-not-a-just" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Центральный тезис автора: для моделей уровня Fable 5, рассчитанных на долгую самостоятельную работу, короткий промпт — это потраченный впустую потенциал модели. Автор проводит границу между «промптом» в старом смысле (короткой инструкцией на один ответ) и «мишн-брифом» (mission brief) — операционным заданием с полным контуром: определить цель → передать контекст → задать границы допустимого → сформулировать критерий успеха → потребовать доказательства прогресса → проверить результат. Разница не косметическая: тонкий промпт оставляет модели слишком много неявных решений, которые она либо додумывает произвольно, либо решает слишком консервативно — а щедро описанный бриф даёт ей пространство работать на всю мощность, не отклоняясь от намерения автора.</span>
+      <span data-lang="en">The author's central claim: for models like Fable 5, built for long, unsupervised runs, a short prompt is wasted model potential. The piece draws a line between a "prompt" in the old sense (a short one-shot instruction) and a "mission brief" — an operating assignment with a full loop: define the objective → supply context → set boundaries → specify success criteria → require evidence of progress → review the output. The difference isn't cosmetic: a thin prompt leaves the model too many implicit decisions, which it either fills in arbitrarily or resolves too conservatively — a generously specified brief gives it room to work at full capacity without drifting from the author's intent.</span>
+    </p>
+
+    <h2><span data-lang="ru">Анатомия цикла: шесть частей, а не одна строка</span><span data-lang="en">Anatomy of the loop: six parts, not one line</span></h2>
+    <p>
+      <span data-lang="ru">Автор раскладывает практический шаблон долгоживущего агентного цикла на шесть элементов. <b>Триггер</b> запускает итерацию — это может быть расписание cron, упавшая CI-проверка, вебхук или самостоятельный ритм модели через /loop. <b>Правила</b> подгружают замороженные знания о проекте и накопленную память между итерациями. <b>Исполнитель</b> делает ровно одну ограниченную единицу работы — не расплывчатое «продвинься дальше», а конкретное «почини следующий падающий тест» или «обработай следующие десять файлов»: чем у́же и измеримее единица работы, тем меньше шансов, что модель наберёт незамеченных ошибок за один проход. Замыкают цикл <b>верификатор</b>, <b>память</b> и правила остановки.</span>
+      <span data-lang="en">The author lays out a practical template for a long-running agent loop as six pieces. A <b>trigger</b> kicks off an iteration — a cron schedule, a failed CI check, a webhook, or the model's own pacing via /loop. <b>Rules</b> load frozen project knowledge plus accumulated memory between iterations. The <b>executor</b> does exactly one bounded unit of work — not a vague "make progress" but a concrete "fix the next failing test" or "process the next ten files": the narrower and more measurable the unit, the less chance the model racks up unnoticed mistakes in a single pass. The loop closes with a <b>verifier</b>, <b>memory</b>, and stop rules.</span>
+    </p>
+
+    <h2><span data-lang="ru">Верификатор в свежем контексте: почему самокритика слабее</span><span data-lang="en">A fresh-context verifier: why self-critique is weaker</span></h2>
+    <p>
+      <span data-lang="ru">Отдельное и самое конкретное место статьи — про верификатора. Автор настаивает, что проверка должна идти в <b>отдельном, свежем контексте</b>: тот, кто выполнял работу, видит собственную цепочку рассуждений и потому склонен себя оправдывать, а верификатор должен видеть только готовый артефакт и критерий (рубрику) — без доступа к тому, как агент пришёл к результату. В подтверждение автор ссылается на промптинг-гайд Anthropic по Fable 5: независимые верификаторы-субагенты в свежем контексте поймали около 73% специально внесённых ошибок, тогда как самокритика (когда модель проверяет саму себя в том же контексте) — всего 7–33%. Практический вывод для читателя: если агентный цикл уже настроен, но качество плавает, первое, что стоит проверить — не делит ли верификатор контекст с исполнителем, и достаточно ли ограничена единица работы для одной итерации.</span>
+      <span data-lang="en">The piece's single most concrete point is about the verifier. The author insists verification must run in a <b>separate, fresh context</b>: whoever did the work sees its own reasoning trail and is therefore inclined to excuse itself, while the verifier should see only the finished artifact and the rubric — with no access to how the agent got there. In support, the author cites Anthropic's Fable 5 prompting guide: independent fresh-context verifier subagents caught around 73% of seeded issues, versus just 7–33% for self-critique (the model checking itself within the same context). The practical takeaway for the reader: if an agent loop is already set up but quality is inconsistent, the first thing to check is whether the verifier shares context with the executor, and whether the unit of work is bounded enough for a single iteration.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

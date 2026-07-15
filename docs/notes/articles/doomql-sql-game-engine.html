@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: DOOMQL — Doom, целиком написанный на SQL — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-13</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">DOOMQL: Doom, в котором каждый пиксель — это строка в SQLite</span>
+      <span data-lang="en">DOOMQL: a Doom clone where every pixel is a row in SQLite</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/13/doomql/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уиллисон описывает проект Питера Гостева DOOMQL — и повод для заметки не столько сама игра, сколько намеренно неразумный вопрос, из которого она выросла: что, если SQLite — это не место, где игра хранит данные, а сам игровой движок? Гостев собрал DOOMQL с помощью GPT-5.6 Sol: получившаяся игра в стиле Doom работает на Python-скрипте для терминала, но движение, столкновения, врагов, бой, прогресс и вообще каждый RGB-пиксель на экране считает и хранит SQL. Уиллисон называет результат «сплошным весельем» — не потому что игра технически совершенна, а потому что сама постановка задачи заставляет модель придумывать нетривиальные способы выразить игровую логику через таблицы, представления и запросы.</span>
+      <span data-lang="en">Willison writes up Peter Gostev's DOOMQL project — and the point of the post isn't really the game itself but the deliberately unreasonable question it grew from: what if SQLite isn't where a game stores its data, but the game engine itself? Gostev built DOOMQL with GPT-5.6 Sol: the resulting Doom-style game runs as a Python terminal script, but movement, collision, enemies, combat, progression, and literally every RGB pixel on screen are computed and stored by SQL. Willison calls the result "a lot of fun" — not because the game is technically polished, but because the premise itself forces the model to invent non-obvious ways to express game logic through tables, views, and queries.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: неразумное ограничение как инструмент оценки модели</span><span data-lang="en">The method: an unreasonable constraint as a model-evaluation tool</span></h2>
+    <p>
+      <span data-lang="ru">Это укладывается в паттерн, который Уиллисон регулярно освещает в своём блоге: ставить перед фронтир-моделью технически абсурдную, но чётко очерченную задачу — и смотреть, как далеко хватит её архитектурного мышления. SQL не проектировался как язык для расчёта коллизий или игрового цикла в реальном времени, поэтому «заставить» его исполнять эту роль требует от модели построить собственную непротиворечивую схему данных и логику обновления состояния, а не копировать шаблонное решение. Такой тест интереснее классических бенчмарков именно потому, что у него нет эталонного решения в обучающих данных — модель обязана рассуждать, а не подставлять запомненный паттерн.</span>
+      <span data-lang="en">This fits a pattern Willison regularly covers on his blog: give a frontier model a technically absurd but sharply scoped task, then see how far its architectural reasoning stretches. SQL wasn't designed for real-time collision math or a game loop, so "forcing" it into that role requires the model to build its own consistent data schema and state-update logic rather than lean on a canned solution. That kind of test is more interesting than a standard benchmark precisely because there's no reference answer sitting in the training data — the model has to reason, not pattern-match a memorized template.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как заглянуть внутрь: Datasette вместо чтения кода</span><span data-lang="en">Looking inside: Datasette instead of reading code</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон приводит инструкцию для запуска: <code>git clone https://github.com/petergpt/doomql</code>, затем <code>uv run host/doomql.py</code> — и это создаёт файл <code>.doomql/doomql.sqlite</code> прямо во время игры. Дальше он предлагает открыть эту базу через свой собственный инструмент Datasette и наблюдать за игровым состоянием не через код, а через таблицы: положение игрока, список активных врагов, очки здоровья — всё это обычные строки, которые можно просматривать и запрашивать SQL-запросами в реальном времени. Это частный случай более общего приёма, который Уиллисон продвигает: когда агент генерирует artefact с прозрачным внутренним состоянием (тут — SQLite-база), у человека появляется способ проверить и понять его работу без построчного чтения сгенерированного кода — сам формат данных становится отладочным интерфейсом.</span>
+      <span data-lang="en">Willison includes the run instructions: <code>git clone https://github.com/petergpt/doomql</code>, then <code>uv run host/doomql.py</code> — which creates a <code>.doomql/doomql.sqlite</code> file while you play. He then suggests opening that database with his own Datasette tool and watching the game state not through code but through tables: player position, the list of active enemies, health points — all of it is just ordinary rows you can browse and query with SQL in real time. It's a specific instance of a broader technique Willison advocates: when an agent produces an artifact with transparent internal state (here, a SQLite database), a human gets a way to verify and understand its work without reading the generated code line by line — the data format itself becomes a debugging interface.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

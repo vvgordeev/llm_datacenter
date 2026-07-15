@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: полный ИИ-стек 2026 — мультиагентная архитектура на MCP, A2A и AG-UI — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="back-link" href="../../index.html">← LLM Radar</a>
+    </div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · AI Explained · 2026-07-08 · 9 мин</span>
+      <span data-lang="en">Video digest · AI Explained · 2026-07-08 · 9 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Полный ИИ-стек 2026: мультиагентная архитектура на MCP, A2A и AG-UI</span>
+      <span data-lang="en">The complete AI tech stack in 2026: a multi-agent architecture on MCP, A2A and AG-UI</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=3b5v1-jlyZs" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Канал AI Explained собирает работающий мультиагентный планировщик путешествий, чтобы на конкретном примере показать, из каких слоёв в 2026 году собирают production-стек вокруг LLM <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=0">[00:00]</a>. Ключевой архитектурный выбор задан сразу <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=16">[00:16]</a>: вместо одного большого агента-монолита — микросервисная архитектура, где каждый агент работает в собственном контейнере. Это даёт изоляцию сбоев (падение одного агента не роняет систему), модульность (чёткие контракты между сервисами, никакого общего состояния) и гибкость — модели, векторные хранилища и слои памяти можно заменять по отдельности, не переписывая систему целиком.</span>
+      <span data-lang="en">AI Explained assembles a working multi-agent trip planner to use a concrete example for showing what layers a production LLM stack is built from in 2026 <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=0">[00:00]</a>. The key architectural choice is stated right away <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=16">[00:16]</a>: instead of one large monolithic agent, a microservice architecture where each agent runs in its own container. That buys failure isolation (one agent crashing doesn't take down the system), modularity (clear contracts between services, no shared state), and flexibility — models, vector stores, and memory layers can each be swapped independently without rewriting the whole system.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три протокола вместо самодельной шины сообщений</span><span data-lang="en">Three protocols instead of a homegrown message bus</span></h2>
+    <p>
+      <span data-lang="ru">Вместо того чтобы изобретать формат обмена сообщениями между частями системы, видео показывает три специализированных протокола, каждый под свою задачу <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=68">[01:08]</a>: <b>A2A</b> (Agent-to-Agent) — для задач между агентами; <b>MCP</b> (Model Context Protocol) — для обращения агента к внешним инструментам; <b>AG-UI</b> (Agent-to-UI) — для потоковой трансляции живого прогресса работы агента на фронтенд. Структура самих агентов строится на LangGraph вокруг связки «оркестратор + специализированные агенты» <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=136">[02:16]</a>: оркестратор разбирает запрос пользователя и раздаёт подзадачи специалистам (поиск рейсов, отелей, маршрутов), а не пытается сделать всё сам одним проходом.</span>
+      <span data-lang="en">Rather than inventing a custom message format between the system's parts, the video shows three specialized protocols, each scoped to its own job <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=68">[01:08]</a>: <b>A2A</b> (Agent-to-Agent) for inter-agent tasks; <b>MCP</b> (Model Context Protocol) for an agent talking to external tools; <b>AG-UI</b> (Agent-to-UI) for streaming an agent's live work progress to the frontend. The agents themselves are structured on LangGraph around an "orchestrator plus specialist agents" pattern <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=136">[02:16]</a>: the orchestrator parses the user's request and hands out subtasks to specialists (flight search, hotel search, routing) instead of trying to do everything itself in one pass.</span>
+    </p>
+
+    <h2><span data-lang="ru">Инструменты как сервисы, память — отдельным слоем</span><span data-lang="en">Tools as services, memory as its own layer</span></h2>
+    <p>
+      <span data-lang="ru">Дальше видео разводит по разным сервисам две вещи, которые в наивных агентных реализациях часто смешивают в одном процессе. Инструменты (поиск, погода, бронирование) реализованы не как встроенные функции внутри агента, а как независимые веб-сервисы, говорящие по MCP <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=186">[03:06]</a> — тогда любой агент или фреймворк может обнаружить и использовать инструмент одинаковым способом. Память вынесена в отдельный сервис поверх Mem0 <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=211">[03:31]</a>: он извлекает факты из разговоров и предпочтения пользователя и отдаёт их как контекст для будущих обращений, но писать в память разрешено только оркестратору — иначе разные агенты, не зная друг о друге, начинают записывать противоречивые факты. Хранилище тоже подобрано под задачу: PostgreSQL с расширением pgvector — для RAG-контента и состояния разговора, а отдельная высокопроизводительная векторная база Qdrant — специально под долгосрочную память сервиса Mem0.</span>
+      <span data-lang="en">The video then splits into separate services two things that naive agent implementations often bundle into one process. Tools (search, weather, booking) are implemented not as functions embedded in the agent but as independent web services speaking MCP <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=186">[03:06]</a> — so any agent or framework can discover and use a tool the same way. Memory is pulled out into its own service on top of Mem0 <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=211">[03:31]</a>: it extracts facts from conversations and user preferences and hands them back as context for future turns, but only the orchestrator is allowed to write to it — otherwise separate agents, unaware of each other, start writing contradictory facts. Storage is likewise matched to the job: PostgreSQL with the pgvector extension for RAG content and conversation state, and a separate high-performance vector database, Qdrant, specifically for the Mem0 service's long-term memory.</span>
+    </p>
+
+    <h2><span data-lang="ru">Сквозная трассировка вместо логов вручную</span><span data-lang="en">End-to-end tracing instead of hand-rolled logging</span></h2>
+    <p>
+      <span data-lang="ru">Последний слой стека — наблюдаемость <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=259">[04:19]</a>: каждый пользовательский запрос порождает трассировку через OpenTelemetry, визуализируемую в Langfuse, охватывающую все сервисы, агентов, инструменты и вызовы модели — задержки, ошибки, расход токенов и метаданные видны как единая цепочка, а не разрозненные логи из разных контейнеров. Финал видео — живая демонстрация всей системы в работе: планировщик путешествий получает запрос, оркестратор раздаёт его специализированным агентам, а зритель видит в реальном времени, как каждый протокол и сервис отрабатывает свою часть <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=361">[06:01]</a>.</span>
+      <span data-lang="en">The stack's last layer is observability <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=259">[04:19]</a>: every user request generates a trace via OpenTelemetry, visualized in Langfuse, spanning all services, agents, tools, and model calls — latency, errors, token spend, and metadata show up as a single chain rather than scattered logs from different containers. The video closes with a live demo of the whole system running: the trip planner receives a request, the orchestrator hands it to specialist agents, and the viewer watches in real time as each protocol and service does its part <a class="ts" href="https://www.youtube.com/watch?v=3b5v1-jlyZs&t=361">[06:01]</a>.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API; кадры извлечь не удалось — в текущем облачном окружении egress-прокси блокирует потоковый доступ yt-dlp к YouTube (403 на туннель). Статус — в run_log дня.</span>
+      <span data-lang="en">Digest built from a Gemini API video analysis; frame extraction failed — in this cloud environment the egress proxy blocks yt-dlp's streaming access to YouTube (403 on the tunnel). Status is recorded in the day's run_log.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

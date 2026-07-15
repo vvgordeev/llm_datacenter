@@ -1,0 +1,282 @@
+{
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T05:27:33Z",
+  "news": [
+    {
+      "id": "2026-07-15-anthropic-claude-for-teachers",
+      "cluster_id": "anthropic-claude-for-teachers",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic запускает Claude for Teachers — бесплатный доступ для школьных учителей США",
+        "en": "Anthropic launches Claude for Teachers — free access for US K-12 educators"
+      },
+      "summary": {
+        "ru": "Anthropic открыла бесплатный годовой доступ к премиум-версии Claude — включая Claude Code и Cowork — для проверенных школьных учителей K-12 в США, добавив библиотеку учебных навыков и подключение к образовательным стандартам всех 50 штатов через партнёрство с Learning Commons. Компания подчёркивает, что данные учителей и учеников не используются для обучения моделей, а условия приватности согласованы с профсоюзом American Federation of Teachers как «золотой стандарт» для K-12. Продукт уже опробован в пилотных школьных округах (включая Детройт и Prospect Schools в Бруклине) до общего запуска.",
+        "en": "Anthropic is giving verified US K-12 teachers a full year of free access to premium Claude, including Claude Code and Cowork, bundled with a library of teaching skills and curriculum connections tied to standards in all 50 states through a Learning Commons partnership. The company says teacher and student data isn't used for model training, and it worked with the American Federation of Teachers to align privacy practices with what the union calls a 'gold standard' for K-12. The product was piloted in districts including Detroit and Brooklyn's Prospect Schools before this general rollout."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Открывает новый пользовательский сегмент (учителя K-12) и закрепляет отраслевой стандарт приватности для образовательных данных, но это упаковка существующих возможностей Claude под конкретную аудиторию, а не новый способ применения LLM.",
+        "en": "Opens a new user segment (K-12 teachers) and sets an industry privacy bar for education data, but it packages existing Claude capabilities for a specific audience rather than introducing a new way of using LLMs."
+      },
+      "source_url": "https://www.anthropic.com/news/claude-for-teachers",
+      "opinions": [
+        {
+          "author": "Randi Weingarten, президент American Federation of Teachers",
+          "stance": "positive",
+          "quote": {
+            "ru": "Мы работали с Anthropic над «золотым стандартом», который задаёт лучшие отраслевые практики безопасности и приватности для K-12 — важно, что Anthropic закладывает эти принципы в Claude for Teachers, инструмент, созданный учителями и для учителей.",
+            "en": "We've been working with Anthropic on a Gold Standard that sets out industry best practices for safety and privacy in K-12 education — it's important that Anthropic is committing to these principles in their new Claude for Teachers, a tool designed by and for educators."
+          },
+          "url": "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/"
+        },
+        {
+          "author": "Daniel Buck, American Enterprise Institute",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Если учителя перекладывают эту работу на ИИ-ассистента, не удивляйтесь, что школьное сообщество и учебные результаты начнут быстро деградировать.",
+            "en": "If educators outsource that to an AI assistant, don't be surprised when classroom community and academic outcomes rapidly deteriorate."
+          },
+          "url": "https://www.aei.org/op-eds/why-teachers-shouldnt-offload-their-busywork-to-ai/"
+        },
+        {
+          "author": "Chalkbeat (обзор мнений критиков)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Помимо когнитивной разгрузки учителей, скептики указывают на риски приватности учеников при вводе персональных данных в такие модели, как Claude.",
+            "en": "Beyond concerns about cognitive offloading for teachers, skeptics point to student-privacy risks from entering personal information into models like Claude."
+          },
+          "url": "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Учитель загружает в Cowork папку с посещаемостью, диагностическими работами и данными класса и просит Claude выявить учеников, которые начинают отставать.",
+            "en": "A teacher uploads a folder of attendance records, diagnostic assessments and class data into Cowork and asks Claude to flag students who appear to be falling behind."
+          },
+          "url": "https://www.anthropic.com/news/claude-for-teachers"
+        },
+        {
+          "text": {
+            "ru": "Через интеграцию с Learning Commons учителя получают дифференцированные материалы и опоры для многоязычных учеников и учеников с индивидуальными образовательными программами, привязанные к стандартам конкретного штата.",
+            "en": "Through the Learning Commons integration, teachers get differentiated materials and scaffolds for multilingual learners and students with individualized education programs, tied to their specific state's standards."
+          },
+          "url": "https://learningcommons.org/news/claude-for-teachers/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-15-deepseek-v4-official-launch",
+      "cluster_id": "deepseek-v4-peak-pricing",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "DeepSeek V4 переходит в официальный релиз: с 15 июля в силу вступают пиковые цены API",
+        "en": "DeepSeek V4 goes from preview to official release as peak-hour API pricing kicks in July 15"
+      },
+      "summary": {
+        "ru": "DeepSeek перевела V4-Pro и V4-Flash из апрельского превью в статус официального релиза, зафиксировав контекст в 1 млн токенов по всей линейке и заявив о приросте в агентных, математических и код-задачах. Одновременно компания впервые в своей истории вводит пиковую тарификацию API: цены удваиваются с 9:00 до 12:00 и с 14:00 до 18:00 по пекинскому времени, а вне пиковых часов остаются на прежнем низком уровне. Это разворот на 180 градусов для компании, которая весь прошлый год демпинговала и совсем недавно сделала постоянной 75%-ную скидку на V4-Pro.",
+        "en": "DeepSeek has moved V4-Pro and V4-Flash from their April preview into an official release, locking in a 1-million-token context window across the lineup and claiming gains on agentic, math and coding tasks. At the same time, the company is introducing peak-hour API pricing for the first time in its history: prices double from 9am-noon and 2pm-6pm Beijing time, staying at the old low rate the rest of the day. It's a reversal for a company that spent the past year undercutting rivals on price and only recently made a 75% V4-Pro discount permanent."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Первая в истории компании динамическая тарификация API меняет то, как разработчики планируют инференс-расходы на одну из самых дешёвых открытых моделей, но сама модель и её возможности — это развитие существующей линейки, а не новый подход к использованию LLM.",
+        "en": "The company's first-ever dynamic API pricing changes how developers plan inference spend on one of the cheapest open models around, but the model itself is an evolution of the existing line, not a new way of using LLMs."
+      },
+      "source_url": "https://deepseek.day/en/blog/deepseek-v4-peak-pricing-launch/",
+      "opinions": [
+        {
+          "author": "Rohan Paul (X)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Тарификация по времени суток в ИИ наконец пришла: DeepSeek удваивает цены на API V4 в часы пик — с 9 до 12 и с 14 до 18 по пекинскому времени — ради более стабильного сервиса и лучшего распределения дефицитных ресурсов. Всего за несколько недель до этого DeepSeek сделала постоянной скидку на V4-Pro.",
+            "en": "Surge pricing in AI just arrived. DeepSeek is doubling peak-hour V4 API prices. The change covers 9am to noon and 2pm to 6pm Beijing time. Says the goal is steadier service and better distribution of scarce resources. Just weeks before, DeepSeek permanently lowered V4-Pro."
+          },
+          "url": "https://x.com/rohanpaul_ai/status/2073294551339638883"
+        },
+        {
+          "author": "разработчик, опрошенный South China Morning Post",
+          "stance": "positive",
+          "quote": {
+            "ru": "Даже с удвоенными ценами в пиковые часы DeepSeek остаётся одним из самых дешёвых вариантов на рынке — значение имеет не сама цена, а насколько выросли возможности официальной версии V4.",
+            "en": "Even with doubled peak-hour pricing, DeepSeek's overall pricing remains highly competitive within the industry — what really matters is the capability upgrade of the official V4 release, not the price itself."
+          },
+          "url": "https://www.scmp.com/tech/big-tech/article/3358868/after-triggering-price-war-deepseek-reverses-course-surcharge-peak-hour-api-use"
+        },
+        {
+          "author": "разработчики, опрошенные Odaily",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Часть разработчиков недовольна выбором временных окон: пиковые часы приходятся на рабочий день в Китае, что фактически бьёт по внутренним пользователям сильнее, чем по зарубежным.",
+            "en": "Some developers are unhappy with how the time windows were drawn: peak hours land squarely in China's working day, which effectively hits domestic users harder than overseas ones."
+          },
+          "url": "https://www.odaily.news/en/newsflash/495722"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды могут переносить тяжёлые батчевые инференс-джобы на непиковые часы (после 18:00 или до 9:00 по Пекину), чтобы сохранить прежнюю низкую цену V4.",
+            "en": "Teams can shift heavy batch-inference jobs to off-peak hours (after 6pm or before 9am Beijing time) to keep V4's old low pricing."
+          },
+          "url": "https://deepseek.day/en/blog/deepseek-v4-peak-pricing-launch/"
+        },
+        {
+          "text": {
+            "ru": "Официальный релиз доступен через интерфейсы, совместимые с OpenAI и Anthropic, что позволяет подключить V4 как замену модели в существующих агентных инструментах вроде Claude Code и OpenCode без переписывания интеграции.",
+            "en": "The official release is available through OpenAI- and Anthropic-compatible interfaces, letting teams drop V4 in as a model swap inside existing agent tools like Claude Code and OpenCode without rewriting their integration."
+          },
+          "url": "https://explainx.ai/blog/deepseek-v4-official-release-peak-pricing-mid-july-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-15-xai-grok-build-musk-data-purge",
+      "cluster_id": "xai-grok-build-data-leak",
+      "models": ["xai"],
+      "title": {
+        "ru": "Маск лично обещает «полностью и окончательно» удалить все данные, выгруженные Grok Build",
+        "en": "Musk personally promises Grok Build's uploaded data will be 'completely and utterly deleted'"
+      },
+      "summary": {
+        "ru": "После вчерашнего разбора cereblab, показавшего, что Grok Build CLI тайно выгружал целые git-репозитории пользователей в облако xAI, Илон Маск лично написал в X: «Все данные пользователей, загруженные в SpaceXAI до этого момента, будут полностью и окончательно удалены. Не останется вообще ничего». Инженер xAI Эндрю Милич подтвердил, что удаление задним числом коснётся всех пользователей независимо от настроек Zero Data Retention. Независимые наблюдатели отмечают, что это обещание пока никак не проверить, а сам cereblab указывает, что реальной причиной остановки выгрузок стал скрытый серверный флаг, а не разрекламированная команда /privacy.",
+        "en": "After yesterday's cereblab wire analysis showed Grok Build CLI was silently uploading users' entire git repositories to xAI's cloud, Elon Musk personally posted on X: 'All user data that was uploaded to SpaceXAI before now will be completely and utterly deleted. Zero anything whatsoever will remain.' xAI engineer Andrew Milich confirmed the retroactive deletion applies to all users regardless of their Zero Data Retention settings. Independent observers note the promise can't yet be independently verified, and cereblab itself points out that what actually stopped the uploads was a hidden server-side flag, not the widely publicized /privacy command."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Публичное личное обязательство первого лица компании расширяет вчерашнюю историю о доверии к агентным coding-инструментам, но по сути это PR-реакция на уже описанный баг, а не новое развитие событий с точки зрения продукта.",
+        "en": "A public, personal commitment from the company's public face extends yesterday's trust story around agentic coding tools, but it's fundamentally a PR response to an already-reported bug, not a new product development."
+      },
+      "source_url": "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123",
+      "opinions": [
+        {
+          "author": "Elon Musk (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Да. В качестве меры предосторожности все данные пользователей, загруженные в SpaceXAI до этого момента, будут полностью и окончательно удалены. Не останется вообще ничего.",
+            "en": "True. As a precautionary measure, all user data that was uploaded to SpaceXAI before now will be completely and utterly deleted. Zero anything whatsoever will remain."
+          },
+          "url": "https://x.com/elonmusk/status/2076739687658496209"
+        },
+        {
+          "author": "The Register",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Издание не может независимо подтвердить, действительно ли SpaceXAI удалила данные, как было обещано.",
+            "en": "The Register cannot independently verify whether SpaceXAI has deleted the data as promised."
+          },
+          "url": "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123"
+        },
+        {
+          "author": "cereblab",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "/privacy — это тумблер хранения данных на стороне сервера для одной сессии, а не переключатель, который на самом деле остановил утечку, и указывать на него как на решение проблемы не стоит.",
+            "en": "/privacy is a per-session, server-side retention toggle, not the switch that actually fixed this, so it shouldn't be pointed to as the control."
+          },
+          "url": "https://github.com/cereblab/grok-build-exfil-repro/blob/main/PRIVACY_OPTOUT.md"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчики, обеспокоенные утечкой, могут запросить у xAI подтверждение включения Zero Data Retention и потребовать удаления ранее выгруженных репозиториев через канал поддержки, опираясь на публичное обязательство Маска как на рычаг давления.",
+            "en": "Developers worried about the leak can ask xAI to confirm Zero Data Retention is enabled and demand deletion of previously uploaded repositories through support channels, using Musk's public commitment as leverage."
+          },
+          "url": "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-15-google-genception-vision",
+      "cluster_id": "google-genception-vision",
+      "models": ["google"],
+      "title": {
+        "ru": "Google DeepMind: модели генерации видео как универсальная основа для задач компьютерного зрения",
+        "en": "Google DeepMind: video generation models as a general-purpose backbone for computer vision"
+      },
+      "summary": {
+        "ru": "Исследователи Google DeepMind представили GenCeption — метод, превращающий предобученную диффузионную модель генерации видео в единую feed-forward модель зрения, управляемую текстовыми инструкциями. Модель показывает результаты на уровне или выше специализированных решений на задачах оценки глубины, нормалей поверхности, позы камеры, сегментации по текстовому описанию и 3D-разметки ключевых точек — при этом требуя в 7–500 раз меньше обучающих данных, чем специализированные аналоги. Авторы (включая Кайминга Хэ и Эндрю Зиссермана) утверждают, что крупномасштабная генерация видео — это самостоятельная и мощная парадигма предобучения для зрения, а не просто побочный эффект генеративных моделей.",
+        "en": "Google DeepMind researchers introduced GenCeption, a method that turns a pretrained video-generation diffusion model into a single feed-forward vision model steered by text instructions. It matches or beats specialized models on depth estimation, surface normals, camera pose, referring segmentation and 3D keypoint prediction, while needing 7-500x less training data than task-specific alternatives. The authors — including Kaiming He and Andrew Zisserman — argue that large-scale video generation is itself a powerful pretraining paradigm for vision, not just a byproduct of generative modeling."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Многообещающее направление исследований, показывающее, что генеративные видео-модели могут заменить набор узкоспециализированных vision-моделей одной универсальной, но это академическая работа без продукта или интеграции в Gemini, и пока нет заметной реакции сообщества.",
+        "en": "A promising research direction showing generative video models could replace a zoo of specialized vision models with one general one, but it's an academic paper with no shipped product or Gemini integration yet, and community reaction is still minimal."
+      },
+      "source_url": "https://arxiv.org/abs/2607.09024",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Единая модель, обученная в основном на синтетических видео, обобщается на реальные кадры и объекты вне обучающего распределения — потенциально закрывая задачи оценки глубины и позы камеры для робототехники и AR без отдельной специализированной модели под каждую задачу.",
+            "en": "A single model trained mostly on synthetic video generalizes to real-world footage and out-of-distribution objects — potentially covering depth- and pose-estimation tasks for robotics and AR without a separate specialized model for each task."
+          },
+          "url": "https://genception.github.io/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-15-doomql-sql-game-engine",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "DOOMQL: Doom, в котором каждый пиксель — это строка в SQLite",
+        "en": "DOOMQL: a Doom clone where every pixel is a row in SQLite"
+      },
+      "url": "https://simonwillison.net/2026/Jul/13/doomql/",
+      "summary": {
+        "ru": "Уиллисон разбирает проект Питера Гостева, построенный на GPT-5.6 Sol: SQL как игровой движок, а не хранилище данных, плюс приём — исследовать состояние агента через Datasette вместо чтения кода.",
+        "en": "Willison covers Peter Gostev's GPT-5.6-Sol-built project: SQL as the game engine rather than storage, plus the technique of inspecting agent-generated state through Datasette instead of reading code."
+      },
+      "note_page": "notes/articles/doomql-sql-game-engine.html"
+    },
+    {
+      "id": "2026-07-15-mattpocock-skills-complete-deep-dive",
+      "type": "video",
+      "author": "Matt Pocock",
+      "title": {
+        "ru": "mattpocock/skills: полный разбор всех 21 скилла для Claude Code",
+        "en": "mattpocock/skills: the complete deep dive on all 21 Claude Code skills"
+      },
+      "url": "https://www.youtube.com/watch?v=M3jYrNKQjEg",
+      "summary": {
+        "ru": "Полный туториал по репозиторию скиллов Покока: четыре типовые поломки агентной разработки и то, как инженерные (grill-with-docs, implement, tdd) и продуктивные (grill-me, handoff) скиллы складываются в единый конвейер.",
+        "en": "A full tutorial on Pocock's skills repo: four recurring failure modes of agentic development, and how engineering skills (grill-with-docs, implement, tdd) and productivity skills (grill-me, handoff) compose into one pipeline."
+      },
+      "note_page": "notes/videos/mattpocock-skills-complete-deep-dive.html"
+    },
+    {
+      "id": "2026-07-15-complete-ai-tech-stack-2026",
+      "type": "video",
+      "author": "AI Explained",
+      "title": {
+        "ru": "Полный ИИ-стек 2026: мультиагентная архитектура на MCP, A2A и AG-UI",
+        "en": "The complete AI tech stack in 2026: a multi-agent architecture on MCP, A2A and AG-UI"
+      },
+      "url": "https://www.youtube.com/watch?v=3b5v1-jlyZs",
+      "summary": {
+        "ru": "На примере планировщика путешествий показан production-стек 2026 года: контейнеризованные агенты, протоколы A2A/MCP/AG-UI, вынесенные в сервисы память (Mem0) и инструменты, сквозная трассировка через OpenTelemetry/Langfuse.",
+        "en": "Using a trip-planner example, the video shows a 2026 production stack: containerized agents, the A2A/MCP/AG-UI protocols, memory (Mem0) and tools split into their own services, and end-to-end tracing via OpenTelemetry/Langfuse."
+      },
+      "note_page": "notes/videos/complete-ai-tech-stack-2026.html"
+    },
+    {
+      "id": "2026-07-15-give-fable-5-a-mission-not-a-prompt",
+      "type": "article",
+      "author": "AI_chemyst",
+      "title": {
+        "ru": "Дайте Fable 5 задание, а не промпт",
+        "en": "Give Fable 5 a mission, not just a \"prompt\""
+      },
+      "url": "https://aichemyst.substack.com/p/give-fable-5-a-mission-not-a-just",
+      "summary": {
+        "ru": "Методичка по «мишн-брифам» для долгоживущих агентных циклов: шесть частей цикла (триггер, правила, исполнитель, верификатор, память, остановка) и почему верификатор в свежем контексте почти вдвое точнее самокритики.",
+        "en": "A practical guide to \"mission briefs\" for long-running agent loops: the six-part loop (trigger, rules, executor, verifier, memory, stop rules), and why a fresh-context verifier beats self-critique by a wide margin."
+      },
+      "note_page": "notes/articles/give-fable-5-a-mission-not-a-prompt.html"
+    }
+  ]
+}

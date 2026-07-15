@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-15",
+      "news_count": 4,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Anthropic запускает Claude for Teachers — бесплатный доступ для школьных учителей США",
+        "en": "Anthropic launches Claude for Teachers — free access for US K-12 educators"
+      }
+    },
+    {
       "date": "2026-07-14",
       "news_count": 4,
       "expert_count": 3,
