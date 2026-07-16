@@ -1,0 +1,102 @@
+{
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T05:19:59Z",
+  "news": [
+    {
+      "id": "2026-07-16-xai-grok-build-open-source",
+      "cluster_id": "xai-grok-build-data-leak",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI открывает исходный код Grok Build и сбрасывает лимиты — ответ на скандал с утечкой репозиториев",
+        "en": "xAI open-sources Grok Build and resets usage limits — the response to the repository-leak scandal"
+      },
+      "summary": {
+        "ru": "xAI опубликовала полный исходный код Grok Build — терминального агента для кодинга — под лицензией Apache 2.0 и обнулила лимиты использования для всех пользователей. Шаг стал ответом на историю недельной давности: независимый разбор трафика показал, что CLI по умолчанию выгружал целые git-репозитории, включая историю коммитов и секреты, в облако xAI, после чего Илон Маск лично пообещал удалить все ранее загруженные данные. Теперь агент можно скомпилировать самостоятельно и направить на собственную инференс-инфраструктуру через config.toml, то есть запускать полностью локально, без обращения к серверам xAI.",
+        "en": "xAI has published the complete source code of Grok Build — its terminal coding agent — under an Apache 2.0 license and reset usage limits for every user. The move responds to last week's scandal: an independent wire-level analysis showed the CLI was uploading entire git repositories, including commit history and secrets, to xAI's cloud by default, after which Elon Musk personally pledged to delete all previously uploaded data. Developers can now compile the agent themselves and point it at their own inference infrastructure via config.toml, running it fully locally without ever touching xAI's servers."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Открытый код и возможность локального запуска дают проверяемость вместо голых обещаний и слегка расширяют подход «local-first» для агентных coding-инструментов, но по существу это PR-реакция на утечку данных: внешние pull request'ы отклоняются, issues на GitHub отключены — это прозрачность исходников одного инструмента, а не новый способ применения LLM.",
+        "en": "Open code and local-first operation give auditability instead of bare promises and modestly extend the local-first approach for agentic coding tools, but it's fundamentally a PR response to a data leak: external pull requests are rejected and GitHub issues are disabled — source transparency for one tool, not a new way of using LLMs."
+      },
+      "source_url": "https://x.ai/news/grok-build-open-source",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Кодовая база — 844 530 строк Rust, из которых лишь около 3% — vendored-код. В коде всё ещё остались следы прежней выгрузки в Google Cloud Storage (gcs.rs, функция upload_session_state), но, похоже, теперь они отключены.",
+            "en": "The codebase is 844,530 lines of Rust, of which only about 3% appears to be vendored. There are still remnants of the code that used to upload everything to Google Cloud Storage (gcs.rs, an upload_session_state function), but they seem to have been disabled now."
+          },
+          "url": "https://simonwillison.net/2026/Jul/15/grok-build/"
+        },
+        {
+          "author": "Blockchain.News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Публикация полного исходного кода на GitHub означает, что разработчики теперь могут проверить именно то, что делает инструмент, доработать его под свои процессы и убедиться, что данные не покидают их машину.",
+            "en": "Publishing the full source code on GitHub means developers can now audit exactly what the tool does, adapt it to their own workflows, and verify that no data leaves their machine."
+          },
+          "url": "https://blockchain.news/news/xai-open-sources-grok-build"
+        },
+        {
+          "author": "ExplainX",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Лицензия Apache 2.0, цикл агента читаем, локальный inference задокументирован — но внешние contribution'ы прямо отклоняются, а issues на GitHub отключены: это прозрачность исходников, а не community-проект вроде OpenCode. Open source плюс локальный запуск позволяют проверить поведение вместо доверия на слово маркетингу — жест сильнее, чем у большинства закрытых агентов, но это всё ещё восстановление доверия, а не криптографическое доказательство.",
+            "en": "The license is Apache 2.0, the agent loop is readable, and local-first inference is documented — but external contributions are explicitly rejected and GitHub issues are disabled: this is source transparency, not a community-governed project like OpenCode. Open source plus local-first lets teams verify behavior instead of trusting marketing copy — a stronger remediation arc than most closed-source agents offer, but still trust recovery, not a cryptographic proof."
+          },
+          "url": "https://explainx.ai/blog/grok-build-open-source-spacexai-july-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды с высокими требованиями к приватности кода могут скомпилировать Grok Build самостоятельно и направить его на собственную инференс-инфраструктуру через config.toml, полностью убрав зависимость от облака xAI.",
+            "en": "Privacy-conscious teams can compile Grok Build themselves and point it at their own inference infrastructure via config.toml, removing any dependency on xAI's cloud entirely."
+          },
+          "url": "https://x.ai/news/grok-build-open-source"
+        },
+        {
+          "text": {
+            "ru": "Разработчики могут прочитать код инструментов чтения/правки/выполнения и терминального UI, чтобы независимо проверить, какие данные покидают машину, вместо того чтобы полагаться на заявления вендора.",
+            "en": "Developers can read the source of the read/edit/execute tools and the terminal-UI harness to independently verify what data leaves the machine, instead of relying on vendor claims."
+          },
+          "url": "https://simonwillison.net/2026/Jul/15/grok-build/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-16-xai-grok-build-now-open-source",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "xai-org/grok-build: теперь с открытым исходным кодом",
+        "en": "xai-org/grok-build, now open source"
+      },
+      "url": "https://simonwillison.net/2026/Jul/15/grok-build/",
+      "summary": {
+        "ru": "Уиллисон разбирает выложенный на GitHub код Grok Build построчно: 844 530 строк Rust, всего ~3% vendored, и остатки отключённого кода выгрузки в Google Cloud, которые он нашёл, читая исходники, а не пресс-релиз.",
+        "en": "Willison walks through the newly published Grok Build codebase line by line: 844,530 lines of Rust, only ~3% vendored, and the remnants of disabled Google Cloud upload code that he found by reading the source rather than the press release."
+      },
+      "note_page": "notes/articles/xai-grok-build-now-open-source.html"
+    },
+    {
+      "id": "2026-07-16-simonw-pedalican",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "simonw/pedalican: GPT-5.6 Sol придумывает питомца-пеликана для рабочего стола Codex",
+        "en": "simonw/pedalican: GPT-5.6 Sol designs a desktop pelican pet for Codex"
+      },
+      "url": "https://simonwillison.net/2026/Jul/14/pedalican/",
+      "summary": {
+        "ru": "Уиллисон использует новую функцию кастомных «питомцев» в Codex Desktop, чтобы попросить GPT-5.6 Sol придумать пеликана на велосипеде, который сообщает о статусе фоновых задач — и показывает, как модель за несколько раундов с gpt-image-2 доводит спрайты до нужного вида.",
+        "en": "Willison uses Codex Desktop's new custom-pet feature to ask GPT-5.6 Sol for a pelican-on-a-bicycle that reports on background task status, showing how the model iterates with gpt-image-2 over several rounds to land on the right sprite."
+      },
+      "note_page": "notes/articles/simonw-pedalican.html"
+    }
+  ]
+}

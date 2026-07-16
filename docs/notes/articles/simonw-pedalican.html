@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: simonw/pedalican — питомец-пеликан для рабочего стола Codex — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-14</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-14</span>
+    </p>
+    <h1>
+      <span data-lang="ru">simonw/pedalican: GPT-5.6 Sol придумывает питомца-пеликана для рабочего стола Codex</span>
+      <span data-lang="en">simonw/pedalican: GPT-5.6 Sol designs a desktop pelican pet for Codex</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/14/pedalican/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Поводом для заметки стала новая, довольно несерьёзная на вид функция Codex Desktop — кастомные «питомцы», маленькие анимированные существа, которые живут поверх рабочего стола и как-то реагируют на происходящее в фоновых задачах агента. Уиллисон, известный тем, что регулярно тестирует модели на пеликанах, катающихся на велосипеде — собственном неформальном бенчмарке визуального и пространственного мышления моделей, — не мог пройти мимо возможности завести именно такого питомца. Он попросил GPT-5.6 Sol придумать пеликана на велосипеде, который бы сообщал об изменениях статуса задач в Codex.</span>
+      <span data-lang="en">The post's occasion is a small, deliberately unserious new Codex Desktop feature: custom "pets," tiny animated creatures that live on top of your desktop and react somehow to what's happening in the agent's background tasks. Willison, known for regularly testing models by asking them to draw a pelican riding a bicycle — his own informal benchmark for a model's visual and spatial reasoning — couldn't pass up the chance to make exactly that his pet. He asked GPT-5.6 Sol to design a pelican on a bicycle that reports on Codex task-status changes.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: несколько раундов генерации изображений вместо одного запроса</span><span data-lang="en">The method: several image-generation rounds, not one request</span></h2>
+    <p>
+      <span data-lang="ru">Технически интересная часть — не сама идея питомца, а то, как модель к ней пришла. GPT-5.6 Sol не сгенерировала спрайты одним запросом к gpt-image-2, а прошла несколько раундов: сгенерировала черновой вариант, оценила его пригодность как маленькой анимированной иконки (читаемость силуэта на малом размере, количество кадров анимации, соответствие стилю системных иконок), скорректировала промпт и повторила процесс, пока результат не стал одновременно узнаваемым пеликаном и рабочим ассетом для интерфейса. Модель сама придумала имени питомцу — «Pedalican» — как каламбур из pedal (педаль) и pelican (пеликан).</span>
+      <span data-lang="en">The technically interesting part isn't the pet idea itself but how the model arrived at it. GPT-5.6 Sol didn't generate the sprites in one call to gpt-image-2; it went through several rounds: generate a draft, evaluate its fitness as a tiny animated icon (silhouette readability at small size, number of animation frames, consistency with system-icon style), adjust the prompt, and repeat until the result was both a recognizable pelican and a working UI asset. The model came up with the pet's name itself — "Pedalican," a pun on pedal and pelican.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это не просто шутка</span><span data-lang="en">Why this isn't just a joke</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон подаёт заметку с юмором, но за ней стоит вполне серьёзное наблюдение: генерация изображений моделью здесь используется не для отдельной творческой задачи, а как встроенный шаг в производство обычных UI-ассетов — там, где раньше нужен был бы дизайнер или готовый набор иконок. Итеративный цикл «сгенерировать → оценить пригодность как элемента интерфейса → доработать» — обобщаемый приём: то же самое можно применить не к питомцу, а к иконкам статуса, аватарам, элементам онбординга — везде, где нужен маленький, стилистически согласованный визуальный ассет, а не разовая иллюстрация.</span>
+      <span data-lang="en">Willison's tone is playful, but underneath it is a fairly serious observation: image generation here isn't a standalone creative task but a built-in step in producing ordinary UI assets, in a spot that used to require a designer or a pre-made icon set. The iterative loop — generate, evaluate fitness as a UI element, refine — is a generalizable technique: the same loop applies not just to a pet but to status icons, avatars, onboarding illustrations — anywhere you need a small, stylistically consistent visual asset rather than a one-off illustration.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

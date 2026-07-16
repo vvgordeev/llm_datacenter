@@ -1,0 +1,40 @@
+{
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T05:22:53Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "direct WebFetch 403 (confirmed sandbox pattern); WebSearch pass found only already-covered items (Claude for Teachers 07-15, Reflect 07-10, HIPAA/Chrome-GA dates unconfirmed)"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "direct WebFetch 403; WebSearch found only already-covered GPT-5.6/ChatGPT Work/GPT-Live items"},
+    {"source": "google blog", "status": "blocked", "candidates": 0, "note": "direct WebFetch 403; WebSearch found only already-covered items; Gemini 3.5 Pro GA is an unconfirmed rumor (target July 17), excluded"},
+    {"source": "meta blog", "status": "blocked", "candidates": 0, "note": "direct WebFetch 403; WebSearch found only already-covered Muse Spark 1.1 items"},
+    {"source": "xai news", "status": "blocked", "candidates": 1, "note": "direct WebFetch 403; WebSearch surfaced genuine new development: xAI open-sourced Grok Build + reset usage limits (2026-07-15), continuation of xai-grok-build-data-leak cluster"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "direct WebFetch 403; WebSearch found only older items (AI Now Summit was May 28, not July)"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "direct WebFetch 403; WebSearch found only funding/IPO news (out of scope, not product features)"},
+    {"source": "aggregator smol.ai", "status": "blocked", "candidates": 0, "note": "direct WebFetch 403, no WebSearch fallback content found beyond already-covered items"},
+    {"source": "aggregator TLDR AI", "status": "blocked", "candidates": 0, "note": "direct WebFetch 403; WebSearch found Anthropic ad backlash story, excluded as marketing/not a product feature"},
+    {"source": "aggregator Simon Willison linkblog", "status": "ok", "candidates": 2, "note": "accessed via WebSearch only (direct WebFetch to simonwillison.net 403'd); yielded grok-build and pedalican posts"},
+    {"source": "Hacker News API", "status": "error", "candidates": 0, "note": "curl to hn.algolia.com failed (proxy CONNECT 403 / network unreachable); WebSearch fallback used for HN thread content on Grok Build"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 2, "note": "grok-build code review (07-15), pedalican (07-14) — both published"},
+    {"source": "experts: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "no video newer than the one already covered 2026-07-10"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "a promising 'World's Fair 2026 trends' piece (~07-14) surfaced repeatedly in search summaries but no verifiable direct latent.space URL could be pinned down; dropped per no-URL-no-data rule"},
+    {"source": "experts: AI Explained", "status": "empty", "candidates": 0, "note": "only found a daily news-roundup video (AI Top 5, 07-14) — excluded as news recap, not an approaches piece"},
+    {"source": "experts: Matt Wolfe", "status": "empty", "candidates": 0, "note": "no dated fresh video found beyond a vague 'weekly AI news' upload"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "most recent post is still 'Twilight of the Chatbots' (already covered 07-06); a 07-14 Forbes piece about him is secondary commentary on that same old post, skipped as non-fresh"},
+    {"source": "experts: Nate Herk", "status": "empty", "candidates": 0, "note": "all recent uploads found already covered on 07-12/07-13"},
+    {"source": "experts: Matt Pocock", "status": "empty", "candidates": 0, "note": "no fresh video found beyond the one already covered 07-15"}
+  ],
+  "totals": {
+    "candidates": 19,
+    "published": 3,
+    "rejected": {
+      "перепечатки/уже опубликовано": 10,
+      "не по теме (маркетинг/финансы/IPO)": 3,
+      "неподтверждено/румор": 1,
+      "новости-пересказ (не подходит для экспертной секции)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — no video expert_content selected today",
+    "frames": "not used — no video expert_content selected today"
+  },
+  "degradation_note": "Все 9 прямых WebFetch к блогам/агрегаторам вернули 403 (ожидаемо для облачной песочницы); HN API недоступен по сети напрямую (curl: CONNECT tunnel failed). WebSearch как основной канал сбора отработал штатно. День и по новостям, и по экспертному контенту вышел тонким: после насыщенной прошлой недели (07-09..07-15) большинство свежих кандидатов оказались либо уже опубликованы, либо не проходят по критериям (рекапы, слухи, не-продуктовые новости). Экспертная секция — 2 материала вместо целевого минимума 5: расширенный поиск проведён по всем 8 экспертам из конфига плюс сторонним каналам (Fireship, ThePrimeagen, Two Minute Papers, Cole Medin, David Ondrej) без результата, качество важнее квоты."
+}

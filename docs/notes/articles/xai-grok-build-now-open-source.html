@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: xai-org/grok-build — теперь с открытым исходным кодом — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-15</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-15</span>
+    </p>
+    <h1>
+      <span data-lang="ru">xai-org/grok-build: теперь с открытым исходным кодом</span>
+      <span data-lang="en">xai-org/grok-build, now open source</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/15/grok-build/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Неделей ранее независимый разбор трафика показал, что терминальный coding-агент xAI Grok Build по умолчанию выгружал в облако компании не только файлы, которые читал агент, но и весь git-репозиторий целиком — включая историю коммитов и секреты, — причём в объёме на порядки больше, чем требовала сама задача. После публичного скандала и личного обещания Илона Маска удалить все ранее собранные данные xAI выложила полный исходный код Grok Build на GitHub под лицензией Apache 2.0. Уиллисон разбирает не пресс-релиз об этом, а сам код — потому что теперь это можно сделать напрямую, а не гадать по документации.</span>
+      <span data-lang="en">A week earlier, an independent wire-level analysis showed that xAI's terminal coding agent Grok Build was, by default, uploading to the company's cloud not just the files the agent read but the entire git repository — commit history, secrets and all — at a volume orders of magnitude beyond what the task required. After the public backlash and Elon Musk's personal pledge to delete all previously collected data, xAI published the complete Grok Build source code on GitHub under an Apache 2.0 license. Willison's post digs into the code itself rather than the press release, because now that's something you can actually do instead of guessing from documentation.</span>
+    </p>
+
+    <h2><span data-lang="ru">844 530 строк Rust: масштаб, который стал сюрпризом</span><span data-lang="en">844,530 lines of Rust: a scale that surprised him</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон прогоняет репозиторий через собственный инструмент подсчёта строк и получает 844 530 строк Rust, из которых, по его оценке, лишь около 3% — vendored-код сторонних библиотек. Это заметно больше, чем он ожидал от терминального coding-агента, и он прямо пишет, что недооценивал, насколько сложны современные агенты для терминала: помимо собственно цикла агента и вызова модели, в кодовой базе — полноценный terminal UI с поддержкой мыши и полноэкранных меню, набор инструментов чтения/правки/поиска/выполнения кода и целая система расширений. Иными словами, публичное представление о «CLI-обёртке над API-вызовом» не соответствует тому, что реально нужно построить, чтобы агент нормально работал в терминале.</span>
+      <span data-lang="en">Willison runs the repository through his own line-counting tool and gets 844,530 lines of Rust, of which he estimates only about 3% is vendored third-party code. That's noticeably more than he expected from a terminal coding agent, and he says outright that he'd underestimated how complex modern terminal agents actually are: beyond the core agent loop and model calls, the codebase includes a full terminal UI with mouse support and fullscreen menus, a full set of read/edit/search/execute tools, and an entire extension system. In other words, the popular mental model of "a thin CLI wrapper around an API call" doesn't match what it actually takes to make an agent work well in a terminal.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что осталось от старого кода выгрузки</span><span data-lang="en">What's left of the old upload code</span></h2>
+    <p>
+      <span data-lang="ru">Самая конкретная находка поста — не общие слова о доверии, а построчная археология. Уиллисон указывает на файл <code>xai-grok-shell/src/upload/gcs.rs</code>, который по-прежнему содержит код для выгрузки данных в бакет Google Cloud Storage, и на <code>upload/trace.rs</code> с функцией <code>upload_session_state()</code>, которая теперь всегда возвращает жёстко прописанную ошибку <code>session_state_upload_unavailable</code>. То есть механизм выгрузки не удалён из кодовой базы, а деактивирован программно — этого достаточно, чтобы поведение соответствовало сегодняшним обещаниям xAI, но означает, что доверие по-прежнему опирается на то, что флаг не включат обратно, а не на то, что сама возможность физически отсутствует в коде.</span>
+      <span data-lang="en">The post's most concrete finding isn't a general statement about trust but line-by-line archaeology. Willison points to <code>xai-grok-shell/src/upload/gcs.rs</code>, which still contains code for uploading data to a Google Cloud Storage bucket, and to <code>upload/trace.rs</code>, whose <code>upload_session_state()</code> function now always returns a hard-coded <code>session_state_upload_unavailable</code> error. The upload mechanism hasn't been removed from the codebase — it's been disabled in software. That's enough to match xAI's current promises, but it means trust still rests on the flag staying off, not on the capability being physically absent from the code.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уиллисон не делает из этого драматичного вывода — тон поста скорее техническо-любопытствующий, чем обвинительный: для него важнее сам факт, что теперь это вообще можно проверить чтением исходников, а не заявлениями вендора. Именно в этом, по его мнению, ценность открытия кода даже при жёстких ограничениях (внешние pull request'ы не принимаются, issues на GitHub отключены) — это не community-проект, но это проверяемый артефакт.</span>
+      <span data-lang="en">Willison doesn't draw a dramatic conclusion from this — the post's tone is more technically curious than accusatory: what matters to him is that this can now be checked by reading source code at all, rather than by trusting vendor statements. That, in his view, is the value of the source release even under tight constraints (external pull requests aren't accepted, GitHub issues are disabled) — not a community project, but a verifiable artifact.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

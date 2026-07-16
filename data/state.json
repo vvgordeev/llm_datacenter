@@ -76,7 +76,12 @@
     "https://www.youtube.com/watch?v=3b5v1-jlyZs": "2026-07-15",
     "notes/videos/complete-ai-tech-stack-2026.html": "2026-07-15",
     "https://aichemyst.substack.com/p/give-fable-5-a-mission-not-a-just": "2026-07-15",
-    "notes/articles/give-fable-5-a-mission-not-a-prompt.html": "2026-07-15"
+    "notes/articles/give-fable-5-a-mission-not-a-prompt.html": "2026-07-15",
+    "https://x.ai/news/grok-build-open-source": "2026-07-16",
+    "https://simonwillison.net/2026/Jul/15/grok-build/": "2026-07-16",
+    "notes/articles/xai-grok-build-now-open-source.html": "2026-07-16",
+    "https://simonwillison.net/2026/Jul/14/pedalican/": "2026-07-16",
+    "notes/articles/simonw-pedalican.html": "2026-07-16"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -159,10 +164,10 @@
       "summary": "Meta launches Muse Image (July 7), its first image-gen model; an Instagram-tagging feature draws backlash from SAG-AFTRA/CAA and is pulled July 10"
     },
     "xai-grok-build-data-leak": {
-      "last_date": "2026-07-15",
+      "last_date": "2026-07-16",
       "summary": {
-        "ru": "xAI Grok Build CLI — утечка данных и реакция Маска",
-        "en": "xAI Grok Build CLI — data leak and Musk response"
+        "ru": "xAI Grok Build CLI — утечка данных, реакция Маска, затем открытие исходного кода и сброс лимитов (2026-07-16)",
+        "en": "xAI Grok Build CLI — data leak, Musk's response, then open-sourcing the code and resetting usage limits (2026-07-16)"
       }
     },
     "anthropic-claude-code-token-overhead": {

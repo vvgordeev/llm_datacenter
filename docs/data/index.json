@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-16",
+      "news_count": 1,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "xAI открывает исходный код Grok Build и сбрасывает лимиты — ответ на скандал с утечкой репозиториев",
+        "en": "xAI open-sources Grok Build and resets usage limits — the response to the repository-leak scandal"
+      }
+    },
+    {
       "date": "2026-07-15",
       "news_count": 4,
       "expert_count": 4,
