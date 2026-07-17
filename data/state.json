@@ -81,7 +81,16 @@
     "https://simonwillison.net/2026/Jul/15/grok-build/": "2026-07-16",
     "notes/articles/xai-grok-build-now-open-source.html": "2026-07-16",
     "https://simonwillison.net/2026/Jul/14/pedalican/": "2026-07-16",
-    "notes/articles/simonw-pedalican.html": "2026-07-16"
+    "notes/articles/simonw-pedalican.html": "2026-07-16",
+    "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/": "2026-07-17",
+    "https://thinkingmachines.ai/news/introducing-inkling/": "2026-07-17",
+    "https://deepmind.google/blog/our-approach-to-bioresilience/": "2026-07-17",
+    "https://simonwillison.net/2026/Jul/16/kimi-k3/": "2026-07-17",
+    "notes/articles/kimi-k3-pelican-benchmark.html": "2026-07-17",
+    "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/": "2026-07-17",
+    "notes/articles/claude-web-fetch-exfiltration.html": "2026-07-17",
+    "https://www.latent.space/p/aiewf26trends": "2026-07-17",
+    "notes/articles/aiewf26-five-trends.html": "2026-07-17"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -186,6 +195,27 @@
       "summary": {
         "ru": "Google DeepMind GenCeption — видео-модели как универсальное зрение",
         "en": "Google DeepMind GenCeption — video models as general-purpose vision"
+      }
+    },
+    "moonshot-kimi-k3": {
+      "last_date": "2026-07-17",
+      "summary": {
+        "ru": "Moonshot AI выпускает Kimi K3 — заявленную крупнейшую открытую модель (2.8T MoE), метится в Opus 4.8 по цене Sonnet",
+        "en": "Moonshot AI ships Kimi K3 — claimed largest open model (2.8T MoE), aiming at Opus 4.8 at Sonnet-level pricing"
+      }
+    },
+    "thinking-machines-inkling": {
+      "last_date": "2026-07-17",
+      "summary": {
+        "ru": "Thinking Machines Lab выпускает Inkling — первую открытую модель (975B MoE) с самонастройкой через Tinker",
+        "en": "Thinking Machines Lab ships Inkling — its first open model (975B MoE) with self-tuning via Tinker"
+      }
+    },
+    "google-bioresilience-program": {
+      "last_date": "2026-07-17",
+      "summary": {
+        "ru": "Google DeepMind и Isomorphic Labs запускают программу Bioresilience — ИИ-доступ для биобезопасности",
+        "en": "Google DeepMind and Isomorphic Labs launch Bioresilience — AI access for biosecurity"
       }
     }
   }

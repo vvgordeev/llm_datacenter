@@ -1,0 +1,218 @@
+{
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T05:19:28Z",
+  "news": [
+    {
+      "id": "2026-07-17-moonshot-kimi-k3",
+      "cluster_id": "moonshot-kimi-k3",
+      "models": ["moonshot"],
+      "title": {
+        "ru": "Kimi K3 от Moonshot AI — крупнейшая открытая модель (2.8 трлн параметров) метится в Opus 4.8 по цене Sonnet",
+        "en": "Moonshot AI's Kimi K3 — the largest open model yet (2.8T parameters) — aims at Opus 4.8 at Sonnet-level pricing"
+      },
+      "summary": {
+        "ru": "Moonshot AI выпустила Kimi K3 — MoE-модель с заявленными 2.8 трлн параметров (претендует на звание крупнейшей открытой модели) и контекстом в 1 млн токенов. Модель получила новый механизм внимания Kimi Delta Attention, ускоряющий декодирование до 6.3 раза, принимает текст, изображения и видео, всегда работает в режиме рассуждения с настраиваемым reasoning_effort. Доступна через API уже сейчас (~$3/млн входных токенов, $15/млн выходных — заметно дешевле западных флагманов), полностью открытые веса обещаны к 27 июля. Компания позиционирует K3 как открытого конкурента Claude Opus 4.8 по возможностям, но независимые бенчмарки на момент запуска ещё не подтверждены — большинство цифр происходит от самой Moonshot.",
+        "en": "Moonshot AI has released Kimi K3, an MoE model claimed at 2.8 trillion parameters — a bid for the title of largest open model yet — with a 1M-token context window. It ships a new Kimi Delta Attention mechanism that speeds up decoding by up to 6.3x, accepts text, image and video input, runs with thinking always on, and exposes a tunable reasoning_effort control. It's live via API today (~$3/M input tokens, $15/M output — well below Western flagship pricing), with full open weights promised by July 27. Moonshot positions K3 as an open rival to Claude Opus 4.8 on capability, but independent benchmarks weren't yet available at launch — most of the numbers circulating are self-reported by Moonshot."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Крупнейшая на сегодня открытая модель, которая по заявленным метрикам приближается к закрытым флагманам вроде Opus 4.8 при цене на порядок ниже, меняет расчёт «открытая модель против закрытой» для широкого круга разработчиков — но пока это заявленные, а не независимо подтверждённые результаты, поэтому оценка консервативна до верификации.",
+        "en": "The largest open model to date, reportedly closing in on closed flagships like Opus 4.8 at an order-of-magnitude lower price, shifts the open-vs-closed calculus for a broad swath of developers — but the numbers are self-reported, not yet independently confirmed, so the score stays conservative pending verification."
+      },
+      "source_url": "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Я снова прогнал через модель свой тест «пеликан на велосипеде» — старый бенчмарк уже не показывает больших различий между топовыми моделями, но остаётся полезным быстрым индикатором, что модель вообще в состоянии выполнить нетривиальную инструкцию по генерации SVG.",
+            "en": "I ran my 'pelican riding a bicycle' test on it again — the old benchmark barely distinguishes between top models anymore, but it's still a useful quick signal for whether a model can follow a non-trivial SVG-generation instruction at all."
+          },
+          "url": "https://simonwillison.net/2026/Jul/16/kimi-k3/"
+        },
+        {
+          "author": "kimmonismus (Chubby) на X",
+          "stance": "positive",
+          "quote": {
+            "ru": "Бенчмарки Kimi K3 просто безумны. DeepSWE — сразу за Fable 5, а по Terminal-бенчмарку модель обходит Opus 4.8. Открытый код больше не отстаёт от западных закрытых моделей на полгода.",
+            "en": "The Kimi k3 benchmarks are absolutely insane. DeepSWE is just behind Fable 5, and the Terminal benchmark is ahead of Opus 4.8. Open source is no longer lagging six months behind Western closed-source models."
+          },
+          "url": "https://x.com/kimmonismus/status/2077818040578695175"
+        },
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Хватит уже столбчатых диаграмм — хочу увидеть отчёты о реальном использовании в длинных сессиях, прежде чем верить в этот рейтинг.",
+            "en": "I've seen enough bar-charts — I want real long-session usage reports before I buy into this ranking."
+          },
+          "url": "https://news.ycombinator.com/item?id=48935342"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Kimi K3 нацелена на агентные coding-сценарии — работу внутри Codex, Claude Code, Cline и RooCode: починку репозиториев, работу в терминале и восстановление больших программ целиком.",
+            "en": "Kimi K3 targets agentic coding scenarios — running inside Codex, Claude Code, Cline and RooCode — for repository repair, terminal work and whole-program reconstruction."
+          },
+          "url": "https://www.nxcode.io/resources/news/kimi-k3-benchmarks-coding-agent-evaluation-guide-2026"
+        },
+        {
+          "text": {
+            "ru": "Открытый CLI-харнесс Kimi Code (аналог Claude Code) позволяет разработчикам изучать и модифицировать сам агентный цикл, а не только вызывать модель через API.",
+            "en": "The open Kimi Code CLI harness (a Claude-Code analog) lets developers inspect and modify the agent loop itself, not just call the model through an API."
+          },
+          "url": "https://github.com/MoonshotAI/kimi-code"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-17-thinking-machines-inkling",
+      "cluster_id": "thinking-machines-inkling",
+      "models": ["thinking-machines"],
+      "title": {
+        "ru": "Thinking Machines Lab выпускает Inkling — первую открытую модель с управляемым «усилием мышления»",
+        "en": "Thinking Machines Lab ships Inkling — its first open-weights model with controllable 'thinking effort'"
+      },
+      "summary": {
+        "ru": "Лаборатория Миры Мурати Thinking Machines Lab представила Inkling — мультимодальную MoE-модель на 975 млрд параметров (41 млрд активных), обученную на 45 трлн токенов текста, изображений, аудио и видео, с контекстом до 1 млн токенов. Веса модели выложены в открытый доступ на Hugging Face под лицензией Apache 2.0; параллельно вышел облегчённый превью Inkling-Small (12 млрд активных параметров). Модель умеет калибровать неопределённость — явно сообщать о ней вместо угадывания — и позволяет крутить ползунок «усилия мышления» в обмен на скорость. Основной способ применения — не сама модель, а её тонкая настройка через платформу Tinker: например, Inkling дообучила саму себя через Tinker, чтобы писать ответы без буквы «e» (демонстрация self-tuning), а компания Bridgewater дообучила модель под финансовую экспертизу так, что та обошла проприетарные модели примерно при 1/14 стоимости инференса.",
+        "en": "Mira Murati's Thinking Machines Lab has released Inkling — a multimodal MoE model with 975B total parameters (41B active), pretrained on 45 trillion tokens of text, images, audio and video, with up to a 1M-token context window. Weights are openly available on Hugging Face under an Apache 2.0 license; a lighter Inkling-Small preview (12B active) shipped alongside it. The model calibrates uncertainty — flagging it explicitly instead of guessing — and lets users dial a 'thinking effort' slider to trade against speed. The main intended use isn't the base model itself but fine-tuning it via the company's Tinker platform: Inkling fine-tuned itself through Tinker to answer without ever using the letter 'e' (a self-tuning demo), and Bridgewater tuned it on financial expertise to outperform proprietary models at roughly one-fourteenth the inference cost."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открытые веса плюс платформа Tinker снижают порог входа в тонкую настройку фронтир-модели до уровня, где юрфирма или клиника могут адаптировать модель под себя без штата ML-инженеров — это расширяет круг тех, кто может кастомизировать LLM под конкретную задачу, хотя базовые характеристики модели (MoE, управляемое мышление) — развитие уже известных подходов, а не новая парадигма.",
+        "en": "Open weights plus the Tinker platform lower the bar for fine-tuning a frontier model to the point where a law firm or clinic can adapt it without an ML-engineering staff — that broadens who can customize an LLM for a specific task, even though the base model's traits (MoE, dialable reasoning effort) extend known approaches rather than break new ground."
+      },
+      "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Америке нужен свой DeepSeek или Z.ai — многие болеют за открытые китайские модели просто потому, что другого выбора нет. Thinking Machines вполне может стать этим выбором.",
+            "en": "America needs its own DeepSeek or Z.ai — a lot of people root for open Chinese models to win because they have no other choice. Thinking Machines might be it."
+          },
+          "url": "https://news.ycombinator.com/item?id=48924912"
+        },
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Если модель примерно на 30% больше GLM 5.2 и при этом не лучше — зачем мне вообще с ней возиться?",
+            "en": "If it's ~30% bigger and not as good as GLM 5.2, why would I tinker with this model?"
+          },
+          "url": "https://news.ycombinator.com/item?id=48924912"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Thinking Machines показала Inkling, дообучающую саму себя через Tinker: модель написала, запустила и оценила собственное задание на файнтюн, превратив себя в липограмную модель, никогда не использующую букву «e».",
+            "en": "Thinking Machines demoed Inkling fine-tuning itself via Tinker: the model wrote, ran and evaluated its own fine-tuning job, turning itself into a lipogram model that never uses the letter 'e'."
+          },
+          "url": "https://www.hpcwire.com/aiwire/2026/07/16/thinking-machines-launches-open-weight-inkling-foundation-model-for-fine-tuning/"
+        },
+        {
+          "text": {
+            "ru": "Юридическая фирма может дообучить Inkling на собственных документах и регламентах, а клиника — на одобренной медицинской терминологии и рабочих процессах, без привлечения специалистов по ML.",
+            "en": "A law firm can fine-tune Inkling on its own briefs and policies, and a clinic on approved medical terminology and workflows, without bringing in ML specialists."
+          },
+          "url": "https://www.hpcwire.com/aiwire/2026/07/16/thinking-machines-launches-open-weight-inkling-foundation-model-for-fine-tuning/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-17-google-deepmind-bioresilience",
+      "cluster_id": "google-bioresilience-program",
+      "models": ["google"],
+      "title": {
+        "ru": "Google DeepMind и Isomorphic Labs запускают программу Bioresilience — ИИ для биобезопасности",
+        "en": "Google DeepMind and Isomorphic Labs launch Bioresilience — AI for biosecurity"
+      },
+      "summary": {
+        "ru": "Google DeepMind вместе с Isomorphic Labs представили инициативу Bioresilience: более 15 партнёрств с государственными и биобезопасностными организациями (включая национальные лаборатории Минэнерго США в рамках Genesis Mission) получают доступ к передовым моделям DeepMind, включая Co-Scientist, для наблюдения за патогенами, ускорения разработки вакцин и реагирования на вспышки. Isomorphic Labs создаёт отдельное подразделение, которое направит движок дизайна лекарств IsoDDE на быстрый поиск контрмер против новых вспышек — как естественных, так и связанных с потенциальным злоупотреблением ИИ.",
+        "en": "Google DeepMind and Isomorphic Labs unveiled the Bioresilience initiative: more than 15 partnerships with government and biosecurity organizations (including US Department of Energy national labs under the Genesis Mission) now get access to DeepMind's frontier models, including Co-Scientist, for pathogen surveillance, faster vaccine design and outbreak response. Isomorphic Labs is standing up a dedicated unit to point its IsoDDE drug-design engine at rapidly countering new outbreaks — both naturally occurring ones and risks tied to potential AI misuse."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Расширяет применение переднего края ИИ (инструменты вроде Co-Scientist, IsoDDE) на критическую нишевую область — биозащиту — с реальными партнёрствами и финансированием, но это программа доступа для узкого круга исследователей и госорганов, а не новый способ использования LLM для большинства пользователей.",
+        "en": "Extends frontier AI tooling (Co-Scientist, IsoDDE) into a critical but niche domain — biodefense — backed by real partnerships and funding, but it's an access program for a narrow circle of researchers and governments, not a new way most LLM users interact with models."
+      },
+      "source_url": "https://deepmind.google/blog/our-approach-to-bioresilience/",
+      "opinions": [
+        {
+          "author": "Helen King (Google DeepMind, вице-президент по ответственному ИИ)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Если бы мы увидели, что приближаемся к критическому уровню возможностей модели без соответствующих мер защиты, мы бы не стали её выпускать.",
+            "en": "If we were to find that we were reaching a critical capability level and we didn't have the appropriate mitigations, then we would not be launching."
+          },
+          "url": "https://www.ibtimes.com/google-deepmind-preparing-ais-biggest-risk-biosecurity-becoming-new-battleground-3805376"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Национальные лаборатории Минэнерго США и другие доверенные исследовательские группы получают доступ к Co-Scientist и связанным моделям DeepMind для наблюдения за патогенами и анализа рисков вспышек.",
+            "en": "US DOE national labs and other trusted research groups get access to Co-Scientist and related DeepMind models for pathogen surveillance and outbreak-risk analysis."
+          },
+          "url": "https://tech.yahoo.com/ai/gemini/articles/exclusive-google-deepmind-expands-biosecurity-100005302.html"
+        },
+        {
+          "text": {
+            "ru": "Isomorphic Labs направляет движок дизайна лекарств IsoDDE на ускоренную разработку медицинских контрмер (вакцин и терапий) в ответ на конкретные вспышки заболеваний.",
+            "en": "Isomorphic Labs points its IsoDDE drug-design engine at accelerated development of medical countermeasures (vaccines and therapeutics) in response to specific disease outbreaks."
+          },
+          "url": "https://deepmind.google/blog/our-approach-to-bioresilience/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-17-willison-kimi-k3-pelican",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Kimi K3 и чему нас всё ещё учит бенчмарк с пеликаном",
+        "en": "Kimi K3, and what we can still learn from the pelican benchmark"
+      },
+      "url": "https://simonwillison.net/2026/Jul/16/kimi-k3/",
+      "summary": {
+        "ru": "Уиллисон прогоняет только что вышедшую Kimi K3 через свой многолетний тест «нарисуй SVG пеликана на велосипеде» и использует результат, чтобы порассуждать, зачем вообще нужен такой простой бенчмарк в эпоху, когда топовые модели рисуют пеликана почти неотличимо хорошо: тест перестал ранжировать лидеров, но остаётся быстрой проверкой базовой работоспособности модели и удобным способом сравнивать закрытые и открытые модели на одном простом задании.",
+        "en": "Willison runs the freshly released Kimi K3 through his years-running 'draw an SVG of a pelican riding a bicycle' test and uses the result to think through why such a simple benchmark still matters in an era when top models draw a near-indistinguishable pelican: the test has stopped ranking the leaders, but it remains a fast basic-competence check and a convenient way to compare closed and open models on one simple task."
+      },
+      "note_page": "notes/articles/kimi-k3-pelican-benchmark.html"
+    },
+    {
+      "id": "2026-07-17-willison-claude-web-fetch-exfiltration",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Как исследователь заставил Claude слить твои самые личные данные",
+        "en": "How I tricked Claude into leaking your deepest, darkest secrets"
+      },
+      "url": "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/",
+      "summary": {
+        "ru": "Уиллисон разбирает работу исследователя Аюша Пола «The Memory Heist»: связка памяти Claude.ai (автосводки + поиск по переписке) с инструментом web_fetch позволяла через фейковый сайт «кофейни» с цепочкой вложенных ссылок вытащить имя, работодателя и даже город пользователя по одному символу за раз. Anthropic закрыла дыру, запретив web_fetch переходить по ссылкам, найденным в уже загруженном контенте, оставив переходы только по ссылкам из поиска и введённым пользователем.",
+        "en": "Willison walks through researcher Ayush Paul's 'The Memory Heist': chaining Claude.ai's memory (auto-summaries plus conversation search) with the web_fetch tool let a fake 'coffee shop' site with a chain of nested links exfiltrate a user's name, employer, and even hometown one character at a time. Anthropic closed the hole by blocking web_fetch from following links discovered within already-fetched content, limiting navigation to search-result and user-provided URLs."
+      },
+      "note_page": "notes/articles/claude-web-fetch-exfiltration.html"
+    },
+    {
+      "id": "2026-07-17-latent-space-5-trends-aiewf",
+      "type": "article",
+      "author": "Latent Space",
+      "title": {
+        "ru": "Пять трендов, определивших AI Engineering на World's Fair 2026",
+        "en": "5 Trends That Defined AI Engineering at World's Fair 2026"
+      },
+      "url": "https://www.latent.space/p/aiewf26trends",
+      "summary": {
+        "ru": "Обзор AI Engineer World's Fair 2026 фиксирует сдвиг фокуса индустрии: от «построения с агентами» к «построению систем вокруг агентов». На первый план выходят харнесс (управление воркфлоу, контекстом, правами доступа), оценка (evals) вывода моделей и постоянное состояние, а не сам по себе промптинг; RAG и prompt engineering отходят на второй план, уступая место оркестрации агентных команд и новым категориям вроде «software factories».",
+        "en": "This recap of the AI Engineer World's Fair 2026 captures the industry's shift in focus: from 'building with agents' to 'building systems around agents.' Center stage now belongs to the harness (workflow, context and permission management), output evals, and persistent state — not prompting on its own; RAG and prompt engineering fade into the background as orchestrating agent teams and new categories like 'software factories' take over."
+      },
+      "note_page": "notes/articles/aiewf26-five-trends.html"
+    }
+  ]
+}

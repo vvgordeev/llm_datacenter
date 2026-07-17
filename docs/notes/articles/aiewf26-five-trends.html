@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: пять трендов AI Engineering World's Fair 2026 — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space · 2026-07-14</span>
+      <span data-lang="en">Article digest · Latent Space · 2026-07-14</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Пять трендов, определивших AI Engineering на World's Fair 2026</span>
+      <span data-lang="en">5 Trends That Defined AI Engineering at World's Fair 2026</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/aiewf26trends" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Главный тезис обзора конференции AI Engineer World's Fair 2026: индустрия прошла точку, где сама способность агента выполнить задачу считается решённой проблемой, и сместила внимание на то, что происходит вокруг агента. Год назад разговоры велись о том, как заставить агента работать вообще; в этом году — о том, как выстроить надёжную систему, в которой агент — лишь один из компонентов.</span>
+      <span data-lang="en">The core claim of this AI Engineer World's Fair 2026 recap: the industry has passed the point where an agent's basic ability to complete a task is treated as a solved problem, and shifted its attention to what happens around the agent. A year ago the conversation was about getting an agent to work at all; this year it's about building a reliable system in which the agent is just one component.</span>
+    </p>
+
+    <h2><span data-lang="ru">От промптинга — к инженерии харнесса</span><span data-lang="en">From prompting to harness engineering</span></h2>
+    <p>
+      <span data-lang="ru">Центральное понятие обзора — «харнесс»: программная обвязка вокруг модели, которая решает, какие инструменты она вызывает, что она помнит, как оценивается результат её работы и как это состояние переживает между сессиями. Идея в том, что при сопоставимых базовых моделях именно качество харнесса — управление воркфлоу, контекстом, правами доступа, оценкой (evals) и постоянным состоянием — определяет, получится ли из модели надёжный агент или нет. Статья прямо ссылается на эссе Лилиан Венг «Harness Engineering for Self-Improvement», которое разворачивает этот же тезис в сторону рекурсивного самоулучшения: путь туда лежит не через переписывание весов модели, а через оптимизацию именно этой окружающей рантайм-системы.</span>
+      <span data-lang="en">The recap's central concept is the 'harness': the software wrapped around a model that decides which tools it calls, what it remembers, how its output gets evaluated, and how that state survives between sessions. The idea is that with comparable base models, it's harness quality — workflow, context, permission and eval management, and persistent state — that determines whether a model becomes a reliable agent or not. The piece explicitly points to Lilian Weng's essay 'Harness Engineering for Self-Improvement,' which extends the same idea toward recursive self-improvement: the path there runs not through rewriting model weights, but through optimizing this same surrounding runtime system.</span>
+    </p>
+
+    <h2><span data-lang="ru">Кодинг-агенты расширяются за пределы кода, RAG уходит на периферию</span><span data-lang="en">Coding agents expand beyond code, RAG moves to the margins</span></h2>
+    <p>
+      <span data-lang="ru">Обзор фиксирует, что тренд «агентов для кодинга» больше не ограничен написанием кода как таковым — он распространяется, например, на веб-разработку: Vercel называет свой продукт eve не инструментом, а «agent framework», по аналогии с тем, чем в своё время стал Next.js для React. Одновременно RAG и классический prompt engineering, ещё недавно центральные темы индустрии, отходят на второй план — их вытесняют оркестрация команд агентов, управление контекстом и evals, а также вовсе новые категории вроде «software factories» — систем, которые не просто выполняют одну задачу, а организуют конвейер из нескольких агентов и проверок.</span>
+      <span data-lang="en">The recap notes that the 'coding agent' trend is no longer bounded by code-writing itself — it's extending into areas like web development: Vercel describes its eve product not as a tool but as an 'agent framework,' echoing the role Next.js once played for React. At the same time, RAG and classic prompt engineering — recently central industry topics — are fading to the margins, pushed aside by orchestrating agent teams, context management and evals, along with entirely new categories like 'software factories': systems that don't just perform one task but organize a pipeline of multiple agents and checks.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Общий вывод, который делает автор: год назад главным вопросом было «работает ли агент», сейчас — «можно ли положиться на систему из агентов в проде», и именно этот сдвиг определяет, куда в 2026 году движутся инвестиции внимания и инструментов AI-инженеров.</span>
+      <span data-lang="en">The author's overall takeaway: a year ago the main question was 'does the agent work'; now it's 'can you rely on a system of agents in production' — and that shift is what's steering where AI engineers' attention and tooling investment are heading in 2026.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Kimi K3 и чему нас всё ещё учит бенчмарк с пеликаном — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-16</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-16</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Kimi K3 и чему нас всё ещё учит бенчмарк с пеликаном</span>
+      <span data-lang="en">Kimi K3, and what we can still learn from the pelican benchmark</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/16/kimi-k3/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В день выхода Kimi K3 — заявленной Moonshot AI как крупнейшей в мире открытой модели (2.8 трлн параметров) — Уиллисон в очередной раз прогоняет модель через свой многолетний персональный тест: попросить сгенерировать SVG-изображение пеликана, едущего на велосипеде. Пост не столько о самой K3, сколько о том, что стало с этим бенчмарком спустя годы использования на десятках моделей подряд.</span>
+      <span data-lang="en">On the day Kimi K3 launched — claimed by Moonshot AI as the world's largest open model at 2.8 trillion parameters — Willison runs it through his years-running personal test: ask it to generate an SVG of a pelican riding a bicycle. The post is less about K3 itself and more about what's happened to this benchmark after years of running it against dozens of models in a row.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем нужен тест, который больше не различает лидеров</span><span data-lang="en">Why keep a test that no longer separates the leaders</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон честно признаёт: разница между тем, как топовые модели 2026 года рисуют пеликана, стала настолько незначительной, что тест перестал быть инструментом ранжирования лучших моделей друг относительно друга. Но он продолжает его использовать по другой причине — это дешёвый и мгновенный способ проверить самое базовое: способна ли модель вообще выполнить нетривиальную, но чётко сформулированную инструкцию генерации SVG без синтаксических ошибок и с узнаваемым результатом. Именно это делает тест удобным именно для только что вышедших моделей вроде Kimi K3: не нужно ждать полноценных бенчмарков, чтобы понять, что модель в принципе работоспособна.</span>
+      <span data-lang="en">Willison is upfront: the gap between how 2026's top models draw a pelican has shrunk to the point where the test no longer ranks the leaders against each other. But he keeps running it for a different reason — it's a cheap, instant check of the most basic thing: can the model follow a non-trivial but precisely specified SVG-generation instruction without syntax errors and produce a recognizable result. That's exactly what makes it useful for a model that just shipped, like Kimi K3: you don't need to wait for full benchmark suites to see whether the model is functional at all.</span>
+    </p>
+
+    <h2><span data-lang="ru">Открытая модель против закрытых — на одном и том же простом задании</span><span data-lang="en">Open model vs. closed ones — on the exact same simple task</span></h2>
+    <p>
+      <span data-lang="ru">Вторая причина держаться за старый бенчмарк — сопоставимость. Поскольку Уиллисон прогонял через него практически все значимые модели последних лет, результат Kimi K3 сразу помещается в общий ряд вместе с закрытыми флагманами и другими открытыми моделями, без необходимости придумывать новую методологию сравнения. Для модели, которая на старте позиционирует себя как открытый конкурент Claude Opus 4.8, но пока опирается в основном на собственные, ещё не подтверждённые независимо цифры Moonshot, такой простой, воспроизводимый и уже откалиброванный на десятках предыдущих моделей тест — это единственная точка сравнения, которую можно получить не дожидаясь недель независимой верификации.</span>
+      <span data-lang="en">The second reason to stick with the old benchmark is comparability. Because Willison has run it against nearly every significant model of the last few years, Kimi K3's result slots straight into that running lineup alongside closed flagships and other open models, without inventing a new comparison methodology. For a model that launches positioning itself as an open rival to Claude Opus 4.8 but is, for now, mostly backed by Moonshot's own not-yet-independently-verified numbers, a simple, reproducible test already calibrated against dozens of prior models is the one comparison point available without waiting weeks for independent verification.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Вывод, который Уиллисон делает из собственной практики: узкие, наивные бенчмарки не теряют ценность с ростом моделей — они просто меняют роль. Из инструмента ранжирования они превращаются в инструмент проверки на вменяемость (sanity check) для новых релизов, и именно в этой роли им имеет смысл продолжать жить рядом с куда более сложными и дорогими наборами оценок.</span>
+      <span data-lang="en">The conclusion Willison draws from his own practice: narrow, naive benchmarks don't lose value as models improve — they just change roles. They move from a ranking tool to a sanity-check tool for new releases, and it's in that role that they're worth keeping around alongside far more elaborate and expensive eval suites.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

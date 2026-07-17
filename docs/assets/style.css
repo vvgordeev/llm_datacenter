@@ -34,6 +34,7 @@
   --vendor-openai: #10a37f; --vendor-anthropic: #d4a574; --vendor-google: #4285f4;
   --vendor-meta: #0668e1; --vendor-xai: #1d9bf0; --vendor-deepseek: #4f46e5;
   --vendor-mistral: #ff6b6b; --vendor-qwen: #ff5000; --vendor-tencent: #00b8a9;
+  --vendor-moonshot: #6c5ce7; --vendor-thinking-machines: #2d9d78;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

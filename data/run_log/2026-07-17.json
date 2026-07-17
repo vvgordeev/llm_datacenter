@@ -1,0 +1,36 @@
+{
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T05:19:28Z",
+  "sources": [
+    {"source": "anthropic blog (anthropic.com/news)", "status": "blocked", "candidates": 3, "note": "WebFetch 403; WebSearch found 'Ode with Anthropic' JV (07-15, business/not product), 'Claude for Teachers' (07-14, outside 36-48h window, already covered 07-15), unverifiable 'memory restructuring' rumor without a dated primary source — none published"},
+    {"source": "openai blog (openai.com/news)", "status": "blocked", "candidates": 2, "note": "WebFetch 403; hardware speaker device is third-party rumor (no OpenAI primary source), ChatGPT-on-WhatsApp-EEA restoration is regulatory not product — none published"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 2, "note": "WebFetch 403; Bioresilience program (07-16, deepmind.google primary source) confirmed and published; 'Gemini 3.5 Pro today' is unconfirmed rumor, excluded"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch found no new product/feature news in window (only an unrelated employee-lawsuit story)"},
+    {"source": "xai blog (x.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch 403; only continuation of already-published Grok Build storyline (wire-level analysis is the same underlying event as 07-16 digest), no new development since"},
+    {"source": "mistral blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; all candidates found (Robostral Navigate, Leanstral 1.5, Forge, Connectors, Vibe) dated well outside the window"},
+    {"source": "deepseek blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; V4 preview-to-GA transition + peak pricing was already published 2026-07-15; a possible new milestone today is unconfirmed/contradictory across sources - flagged to re-check tomorrow, not reported"},
+    {"source": "aggregators: news.smol.ai, tldr.tech/ai", "status": "blocked", "note": "WebFetch 403 on both; WebSearch fallback surfaced Thinking Machines Inkling and Moonshot Kimi K3 via recap coverage"},
+    {"source": "Simon Willison linkblog", "status": "blocked", "candidates": 4, "note": "WebFetch 403 on simonwillison.net; WebSearch surfaced 4 real, dated posts used for expert_content (Kimi K3 pelican benchmark, Memory Heist web_fetch writeup, sqlite-utils 4.1 release) plus corroborating commentary on Kimi K3 and Grok Build"},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "note": "WebFetch 403; WebSearch site:news.ycombinator.com fallback found real threads for Inkling (id 48924912) and Kimi K3 (id 48935342) with quotable comments"},
+    {"source": "Reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "note": "WebSearch could not surface individual indexed threads (only subreddit-stats aggregator pages) — no usable candidates or quotes this cycle"},
+    {"source": "X (Twitter)", "status": "ok", "note": "WebSearch found attributable, real reactions to Kimi K3 (kimmonismus, LLMJunky, AndrewCurran_)"},
+    {"source": "experts: Simon Willison, Latent Space, Ethan Mollick (articles)", "status": "ok", "candidates": 3, "note": "WebFetch blocked on all 3 sites; WebSearch found qualifying content for Willison (x2) and Latent Space (x1); no qualifying Ethan Mollick post in the 7-day window (latest was June 30). A 4th candidate (Willison's sqlite-utils 4.1 post, 07-11) was initially drafted but caught as a duplicate before publishing — that same URL/note_page was already published in the 2026-07-13 digest (id 2026-07-13-willison-sqlite-utils-4-1); it was NOT in data/state.json's seen_urls (a gap in that day's bookkeeping), so cross-checking past data/daily/*.json directly is what caught it. Removed from today's expert_content and its draft note page deleted."},
+    {"source": "experts: Karpathy, AI Explained, Matt Wolfe, Nate Herk, Matt Pocock (videos, YouTube RSS)", "status": "blocked", "candidates": 0, "note": "YouTube RSS feeds (youtube.com/feeds/videos.xml) returned 403 from this environment's egress proxy for all 5 channels, contrary to the SKILL note that youtube.com is normally reachable — confirmed via direct WebFetch test, not just via the research agent. WebSearch fallback found no qualifying in-window method/approach video: Karpathy/AI Explained/Nate Herk had no confirmable dated upload, Matt Wolfe's only in-window video was a news recap (excluded by criteria), and Matt Pocock's closest candidate ('5 Claude Code skills I use every single day', 2026-07-09) is 8 days old (past the 7-day freshness window) and thematically overlaps a Pocock skills video already conspected 2026-07-15/16 (mattpocock-skills-complete-deep-dive.html) — skipped rather than stretched"}
+  ],
+  "totals": {
+    "candidates": 27,
+    "published": 3,
+    "rejected": {
+      "уже известно / вне окна сбора": 15,
+      "неподтверждено / слух без первоисточника": 3,
+      "бизнес/финансы без продуктовой части": 3,
+      "не по теме (регуляторное/юридическое, не продукт)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not invoked — no qualifying in-window video found (see expert video source note)",
+    "frames": "not invoked",
+    "environment": "GEMINI_API_KEY present; yt-dlp and imageio-ffmpeg installed via pip this run and available, but unused since no video was selected"
+  },
+  "notes": "≥1/3 источников были blocked/error (WebFetch 403 практически везде, включая YouTube RSS, что расходится с заметкой SKILL.md о youtube.com как доверенном домене) — это сигнал деградации окружения, не «тихий день»; тем не менее WebSearch как основной канал сработал достаточно широко, чтобы найти 3 настоящие новости и 3 экспертных материала. min_expert_total=5 не достигнут (3 вместо 5): видео-кандидат по теме нашёлся только один и оказался бы тематическим дублем недавно законспектированного материала того же автора (Мэтт Покок), а черновой 4-й кандидат-статья (sqlite-utils 4.1) при проверке оказался уже опубликован 2026-07-13 — обнаружено сверкой с data/daily/*.json напрямую, так как data/state.json эту публикацию не зафиксировал (пробел в бухгалтерии прошлого прогона, стоит проверить другие дни на похожие пропуски)."
+}

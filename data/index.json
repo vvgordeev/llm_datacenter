@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-17",
+      "news_count": 3,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Kimi K3 от Moonshot AI — крупнейшая открытая модель (2.8 трлн параметров) метится в Opus 4.8 по цене Sonnet",
+        "en": "Moonshot AI's Kimi K3 — the largest open model yet (2.8T parameters) — aims at Opus 4.8 at Sonnet-level pricing"
+      }
+    },
+    {
       "date": "2026-07-16",
       "news_count": 1,
       "expert_count": 2,

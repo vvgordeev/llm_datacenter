@@ -48,7 +48,9 @@ const VENDORS = {
   google: ["Google", "var(--vendor-google)"], meta: ["Meta", "var(--vendor-meta)"],
   xai: ["xAI", "var(--vendor-xai)"], mistral: ["Mistral", "var(--vendor-mistral)"],
   deepseek: ["DeepSeek", "var(--vendor-deepseek)"], qwen: ["Qwen", "var(--vendor-qwen)"],
-  tencent: ["Tencent", "var(--vendor-tencent)"]
+  tencent: ["Tencent", "var(--vendor-tencent)"],
+  moonshot: ["Moonshot AI", "var(--vendor-moonshot)"],
+  "thinking-machines": ["Thinking Machines", "var(--vendor-thinking-machines)"]
 };
 const TOP_N = { week: 10, month: 15 };
 
