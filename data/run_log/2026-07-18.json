@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T05:35:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch: только уже опубликованные ранее сюжеты (Claude for Teachers 07-14, Reflect 07-10) вне окна lookback"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch: 'A scorecard for the AI age' (07-17, CFO-эссе про ROI) — не продуктовая новость, отклонено"},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл NotebookLM→Gemini Notebook (07-16) — опубликовано; Gemini 3.5 Pro — только слухи/утечки, ни одного официального подтверждения (техтаймс 07-16: 'третий перенос', 'unconfirmed') — отклонено как неподтверждённое"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не дал ничего свежее lookback-окна"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; свежих анонсов нет — Grok CLI data-leak и Grok 4.5 уже опубликованы ранее (07-16, 07-09)"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не дал ничего свежее lookback-окна"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; V4 официальный релиз — 'mid-July', точная дата не подтверждена, конкретного анонса за 17-18.07 не найдено"},
+    {"source": "hacker news api (algolia)", "status": "error", "candidates": 0, "note": "WebFetch на hn.algolia.com вернул 403; использован WebSearch site:news.ycombinator.com — нашёл тред по Gemini Notebook (id=48936451), использован как источник мнения"},
+    {"source": "aggregators (smol.ai, tldr.tech)", "status": "blocked", "candidates": 0, "note": "WebFetch 403 на оба; WebSearch дал общую картину дня, использован для discovery (Kimi K3 market reaction)"},
+    {"source": "community (reddit, x)", "status": "empty", "candidates": 0, "note": "WebSearch по r/LocalLLaMA и X для наших двух новостей не дал самостоятельных находок сверх аналитических цитат из финансовых изданий"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 2,
+    "rejected": {
+      "неподтверждённые слухи (Gemini 3.5 Pro)": 1,
+      "не продуктовая новость / financial-personnel (наём Karpathy в Anthropic, иски Apple-OpenAI, WAICO/Xi keynote, IBM warning, OpenAI ROI-эссе)": 5,
+      "уже опубликовано ранее (Grok Build leak, Claude Reflect, Claude for Teachers, GPT-5.6 family)": 4
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — generativelanguage.googleapis.com доступен, видео анализируется по URL без скачивания",
+    "frames": "skipped: youtube.com заблокирован сетевой политикой окружения на уровне egress-прокси (CONNECT 403 и для WebFetch, и для yt-dlp/curl напрямую) — в отличие от прогона 2026-07-09, RSS-discovery (feeds/videos.xml) и yt-dlp тоже недоступны в этом прогоне; video discovery шёл полностью через WebSearch"
+  },
+  "notes": "Деградация окружения: ключевой домен youtube.com недоступен на уровне сети (не только для скрейпинга блогов), что снизило точность video-discovery (RSS не сработал) и полностью исключило извлечение кадров. Из 10 источников (7 моделей + HN API + 2 агрегатора) заблокированы или дали ошибку 9 — существенно больше 1/3, конфигурация окружения деградировала относительно прошлых прогонов, но WebSearch как основной канал сработал штатно. День оказался тонким на реально новые (не переизданные) события: опубликовано 2 новости и 2 материала экспертной секции (ниже min_expert_total=5) — расширенный проход (WebSearch по всем 8 экспертам конфига + widened queries) не нашёл более 2 свежих, не дублирующих материалов последних 13 дней."
+}

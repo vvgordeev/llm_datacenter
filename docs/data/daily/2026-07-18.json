@@ -1,0 +1,126 @@
+{
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T05:35:00Z",
+  "news": [
+    {
+      "id": "2026-07-18-google-gemini-notebook-rebrand",
+      "cluster_id": "google-gemini-notebook-rebrand",
+      "models": ["google"],
+      "title": {
+        "ru": "NotebookLM переименован в Gemini Notebook и получил защищённый облачный «компьютер» для запуска кода",
+        "en": "NotebookLM renamed to Gemini Notebook, gains a secure cloud \"computer\" for running code"
+      },
+      "summary": {
+        "ru": "Google переименовал NotebookLM в Gemini Notebook, привязав продукт к бренду Gemini (новый логотип с сине-фиолетовым градиентом) и переведя его на Gemini 3.5 и агентную платформу Antigravity. Главное функциональное изменение: у каждого блокнота появился изолированный облачный «компьютер» — Gemini Notebook пишет и выполняет Python-код по загруженным пользователем источникам вместо того, чтобы просто пересказывать их текстом, возвращая таблицы, графики и готовые расчёты. Сервисом пользуются свыше 30 млн человек и 600 тыс. организаций.",
+        "en": "Google renamed NotebookLM to Gemini Notebook, tying the product to the Gemini brand (a new blue-purple gradient logo) and moving it onto Gemini 3.5 and the Antigravity agentic platform. The headline functional change: every notebook now gets an isolated cloud \"computer\" — Gemini Notebook writes and executes Python code against a user's uploaded sources instead of just summarizing them in prose, returning tables, charts, and finished calculations. The product is used by more than 30 million people and 600,000 organizations."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Полезное развитие в рамках текущего подхода: превращает инструмент для чтения источников в лёгкий workbench для анализа данных, но это не смена парадигмы, а расширение уже известного паттерна «код как инструмент рассуждения» на нишевый, хоть и массовый (30 млн пользователей) продукт.",
+        "en": "Notable development within the current approach: turns a source-reading tool into a lightweight data-analysis workbench, but it's an extension of the already-known 'code as a reasoning tool' pattern to a large (30M-user) product, not a paradigm shift."
+      },
+      "source_url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "opinions": [
+        {
+          "author": "9to5Google",
+          "stance": "positive",
+          "quote": {
+            "ru": "NotebookLM теперь называется Gemini Notebook — с апгрейдом до 3.5 и Antigravity, который скоро придёт в AI Pro.",
+            "en": "NotebookLM is now Gemini Notebook, with a 3.5 + Antigravity upgrade coming to AI Pro."
+          },
+          "url": "https://9to5google.com/2026/07/16/notebooklm-gemini-notebook/"
+        },
+        {
+          "author": "TechCrunch",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Google продолжает свою серию ребрендингов, превращая NotebookLM в Gemini Notebook.",
+            "en": "Google continues its renaming streak by turning NotebookLM into Gemini Notebook."
+          },
+          "url": "https://techcrunch.com/2026/07/16/google-continues-its-renaming-streak-by-turning-notebooklm-to-gemini-notebook/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Аналитики, журналисты и исследователи просят Gemini Notebook посчитать и визуализировать закономерности прямо в загруженном датасете — блокнот пишет и выполняет Python-код в песочнице вместо пересказа источников.",
+            "en": "Analysts, journalists, and researchers ask Gemini Notebook to compute and visualize patterns directly in an uploaded dataset — the notebook writes and runs Python code in a sandbox instead of summarizing the sources in prose."
+          },
+          "url": "https://www.ghacks.net/2026/07/17/google-rebrands-notebooklm-as-gemini-notebook-and-expands-cloud-computer-access-to-ai-pro/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-18-moonshot-kimi-k3-market-reaction",
+      "cluster_id": "moonshot-kimi-k3",
+      "models": ["moonshot"],
+      "title": {
+        "ru": "Kimi K3 устроил новый «момент DeepSeek»: распродажа техакций и чипмейкеров по всему миру",
+        "en": "Kimi K3 triggers a new \"DeepSeek moment\": tech and chipmaker stocks sell off worldwide"
+      },
+      "summary": {
+        "ru": "На следующий день после выхода Kimi K3 рынки отреагировали резкой распродажей: фьючерсы на Nasdaq 100 падали до 2,3%, индекс полупроводников Philadelphia Semiconductor терял до 5,7% за пятницу (около 11% за неделю) — трейдеры окрестили это «моментом Kimi» по аналогии с шоком от DeepSeek в начале 2025 года. Инвесторов встревожило, что модель открытых китайских весов сопоставима по бенчмаркам с Opus 4.8 и GPT-5.6, а значит паритет с фронтир-моделями Запада больше не требует западных масштабов расходов на compute.",
+        "en": "The day after Kimi K3 shipped, markets sold off sharply: Nasdaq 100 futures fell as much as 2.3%, and the Philadelphia Semiconductor Index dropped as much as 5.7% on Friday (roughly 11% for the week) — traders dubbed it a \"Kimi moment,\" echoing the DeepSeek shock of early 2025. Investors were rattled that an open-weight Chinese model matches Opus 4.8 and GPT-5.6 on benchmarks, suggesting frontier-level parity no longer requires Western-scale compute spending."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Продолжение известного сюжета (Kimi K3) с новым содержанием — волна рыночной реакции: сила и масштаб реакции (обвал чипмейкеров) показывают, что участники рынка допускают пересмотр самого подхода к масштабированию compute, хотя это не изменение практик использования LLM как таковых.",
+        "en": "Continuation of a known story (Kimi K3) with new content — a market reaction wave: the scale of the reaction (chipmaker selloff) shows market participants are reconsidering the compute-scaling approach itself, though it isn't a change in how LLMs are actually used."
+      },
+      "source_url": "https://finance.yahoo.com/technology/ai/articles/kimi-k3-ai-breakthrough-wall-123003909.html",
+      "opinions": [
+        {
+          "author": "Gary Yu (Morgan Stanley)",
+          "stance": "positive",
+          "quote": {
+            "ru": "K3 получил позитивные отклики по всему миру, сигнализируя о всестороннем сокращении отставания китайских LLM от лидеров США по размеру модели, производительности и цене. K3 — крупнейшая пока открытая китайская LLM — может говорить о том, что закон масштабирования всё ещё работает.",
+            "en": "K3 has received positive feedback globally, signaling an all-round catch-up of Chinese LLMs with US leaders in model size, performance, and pricing. K3, the largest open-weight Chinese LLM so far, may suggest the scaling law still holds."
+          },
+          "url": "https://finance.yahoo.com/technology/ai/articles/kimi-k3-ai-breakthrough-wall-123003909.html"
+        },
+        {
+          "author": "Andrew Tyler (JPMorgan)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Релиз Kimi K3, несомненно, подлил масла в огонь: опасения по поводу «момента DeepSeek 2.0» давят и на азиатские, и на американские техакции.",
+            "en": "The release of Kimi K3 undoubtedly added fuel to the fire — concerns over a 'DeepSeek 2.0 moment' are weighing on both Asian and U.S. tech stocks."
+          },
+          "url": "https://finance.yahoo.com/technology/ai/articles/kimi-k3-ai-breakthrough-wall-123003909.html"
+        }
+      ],
+      "use_cases": []
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-18-willison-doomql",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "DOOMQL: LLM строит движок Doom-подобной игры на чистом SQL",
+        "en": "DOOMQL: an LLM builds a Doom-like game engine in pure SQL"
+      },
+      "url": "https://simonwillison.net/2026/Jul/13/doomql/",
+      "summary": {
+        "ru": "Уиллисон разбирает DOOMQL — эксперимент, где GPT-5.6-Sol-Ultra реализует движение, столкновения, рейкастинг сцены, врагов, бой и весь рендер Doom-подобной игры в 2000+ строках SQL, исполняемых поверх SQLite.",
+        "en": "Willison examines DOOMQL, an experiment where GPT-5.6-Sol-Ultra implements movement, collision, scene raycasting, enemies, combat, and the entire render loop of a Doom-like game in 2,000+ lines of SQL running on top of SQLite."
+      },
+      "note_page": "notes/articles/willison-doomql.html"
+    },
+    {
+      "id": "2026-07-18-mattwolfe-kimi-k3-paper-mario",
+      "type": "video",
+      "author": "Matt Wolfe",
+      "title": {
+        "ru": "Я собрал Paper Mario с помощью Kimi K3, Grok Build и Claude Code",
+        "en": "I Built Paper Mario With Kimi K3, Grok Build & Claude Code"
+      },
+      "url": "https://www.youtube.com/watch?v=RE8DA1y6GME",
+      "summary": {
+        "ru": "Вольф прогоняет свежевышедшую Kimi K3 через агентные кодинг-среды Claude Code и Grok Build и собирает работающую 2.5D-игру в духе Paper Mario за несколько запросов, попутно показывая, как переключаться между моделями через алиасы и конфиги.",
+        "en": "Wolfe runs the freshly-released Kimi K3 through the Claude Code and Grok Build agentic coding environments and assembles a working Paper Mario-style 2.5D game in a handful of prompts, along the way showing how to switch between models via aliases and config files."
+      },
+      "note_page": "notes/videos/mattwolfe-kimi-k3-paper-mario.html"
+    }
+  ]
+}

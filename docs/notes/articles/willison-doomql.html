@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: DOOMQL — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-13</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">DOOMQL: движок Doom-подобной игры, полностью написанный на SQL</span>
+      <span data-lang="en">DOOMQL: a Doom-like game engine written entirely in SQL</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/13/doomql/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уиллисон разбирает DOOMQL Питера Гостева — проект, отвечающий на намеренно неразумный вопрос: что если SQLite будет не местом хранения данных игры, а самим игровым движком? У Гостева SQL отвечает буквально за всё: движение персонажа, столкновения, врагов, бой, прогрессию и каждый пиксель кадра. Инструментом для этой затеи выступила GPT-5.6 Sol — модель написала игру как терминальный Python-скрипт примерно в 150 строк, вокруг одного огромного SQL-запроса.</span>
+      <span data-lang="en">Willison examines Peter Gostev's DOOMQL — a project built around a deliberately unreasonable question: what if SQLite were the game engine itself, not merely where a game stores its data? In Gostev's build, SQL is literally responsible for everything: character movement, collisions, enemies, combat, progression, and every pixel of the frame. The tool behind the project was GPT-5.6 Sol, which wrote the game as a roughly 150-line terminal Python script wrapped around one enormous SQL query.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как SQL становится игровым движком</span><span data-lang="en">How SQL becomes a game engine</span></h2>
+    <p>
+      <span data-lang="ru">Внутри игры «всё — данные»: карта уровня, монстры, игрок, ввод с клавиатуры, спрайты — обычные таблицы SQLite. Рендер устроен как цепочка SQL-представлений (views), которые последовательно превращают это состояние в трёхмерную картинку: сначала полноценный raycasting сцены через рекурсивное CTE (рекурсивный common table expression эмулирует луч, шагающий по карте до столкновения со стеной), затем проекция спрайтов и учёт перекрытия объектов друг другом, затем HUD и миникарта поверх кадра. Маленький shell-скрипт просто прогоняет этот SQL-запрос ~30 раз в секунду, каждый раз обновляя позиции пуль, проверяя столкновения, считывая ввод и возрождая игроков после смерти.</span>
+      <span data-lang="en">Inside the game, "everything is data": the level map, monsters, the player, keyboard input, sprites — all ordinary SQLite tables. Rendering is a chain of SQL views that progressively turn that state into a 3D picture: first a full scene raycast via a recursive CTE (a recursive common table expression emulates a ray marching across the map until it hits a wall), then sprite projection with occlusion between objects, then a HUD and minimap layered on top of the frame. A small shell script just runs this SQL query roughly 30 times a second, each pass updating bullet positions, checking collisions, reading input, and respawning players after death.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это нужно — не ради Doom</span><span data-lang="en">The point isn't really Doom</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон подаёт DOOMQL в привычном для себя жанре: не «ещё один клон игры», а стресс-тест того, что LLM-агент способен довести до конца по-настоящему избыточно сложную, самому себе поставленную инженерную задачу — без готового плана и без человека, пишущего код руками. Ценность в демонстрации: если модель может удержать в голове согласованную архитектуру (таблицы → представления → рендер-цикл) на протяжении тысяч строк декларативного SQL, где легко потерять нить, это говорит о её способности планировать многошаговые технические решения куда шире, чем сама механика игры про пеликанов или Doom.</span>
+      <span data-lang="en">Willison frames DOOMQL in his familiar mode: not "another game clone" but a stress test of whether an LLM agent can carry a genuinely over-engineered, self-imposed technical challenge through to completion — with no pre-built plan and no human writing the code by hand. The value is in the demonstration: if a model can hold a coherent architecture (tables → views → render loop) in its head across thousands of lines of declarative SQL, where it's easy to lose the thread, that speaks to its ability to plan multi-step technical solutions far beyond the mechanics of a pelican drawing or a Doom clone.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

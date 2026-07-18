@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-18",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Kimi K3 устроил новый «момент DeepSeek»: распродажа техакций и чипмейкеров по всему миру",
+        "en": "Kimi K3 triggers a new \"DeepSeek moment\": tech and chipmaker stocks sell off worldwide"
+      }
+    },
+    {
       "date": "2026-07-17",
       "news_count": 3,
       "expert_count": 3,

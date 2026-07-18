@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: Paper Mario с Kimi K3, Grok Build и Claude Code — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Matt Wolfe · 2026-07-17 · 07:50</span>
+      <span data-lang="en">Video digest · Matt Wolfe · 2026-07-17 · 07:50</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Я собрал Paper Mario с помощью Kimi K3, Grok Build и Claude Code</span>
+      <span data-lang="en">I Built Paper Mario With Kimi K3, Grok Build &amp; Claude Code</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=RE8DA1y6GME" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">В день, когда Moonshot AI выпустила Kimi K3, Мэтт Вольф прогоняет свежую модель через два агентных кодинг-инструмента — Grok Build и Claude Code — и в несколько запросов собирает работающую 2.5D-игру в духе Paper Mario: движение персонажа, сбор монет, динамическая камера, полупрозрачность объектов на переднем плане <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=72">[01:12]</a>. Видео сначала коротко сверяет заявленные бенчмарки Kimi K3 — модель обходит Opus 4.8 и местами GPT-5.6 Sol на тестах кода <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=19">[00:19]</a> — а затем целиком переключается на практику: как реально подключить свежевышедшую модель к уже привычным инструментам.</span>
+      <span data-lang="en">On the day Moonshot AI shipped Kimi K3, Matt Wolfe runs the new model through two agentic coding tools — Grok Build and Claude Code — and assembles a working Paper Mario-style 2.5D game in a handful of prompts: character movement, coin pickup, a dynamic camera, translucent foreground objects <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=72">[01:12]</a>. The video opens with a quick check of Kimi K3's claimed benchmarks — beating Opus 4.8 and, in places, GPT-5.6 Sol on coding tests <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=19">[00:19]</a> — then pivots entirely to practice: how to actually wire a just-released model into tools you already use.</span>
+    </p>
+
+    <h2><span data-lang="ru">Переключение моделей внутри агентных сред</span><span data-lang="en">Swapping models inside agentic environments</span></h2>
+    <p>
+      <span data-lang="ru">Главный практический кусок видео — не сама игра, а то, как Kimi K3 заводится внутри сред, изначально построенных вокруг других моделей. И Grok Build, и Claude Code позволяют подставить произвольный OpenAI-совместимый API через конфигурационный файл или флаг командной строки <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=48">[00:48]</a>. Вольф показывает настройку обеих сред под Kimi K3 <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=85">[01:25]</a>, а затем — приём для быстрого переключения между моделями без правки конфигов каждый раз: алиасы командной строки, которые перед запуском агента подставляют нужный набор переменных окружения (API-ключ, base URL, имя модели) <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=209">[03:29]</a>. Для тех, кто пробует новые модели в день релиза, это снимает главное трение — не переписывать настройки заново, а держать наготове набор коротких команд под каждую модель.</span>
+      <span data-lang="en">The video's real practical payload isn't the game — it's how Kimi K3 gets bolted onto environments originally built around other models. Both Grok Build and Claude Code let you point them at an arbitrary OpenAI-compatible API via a config file or a command-line flag <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=48">[00:48]</a>. Wolfe walks through configuring both environments for Kimi K3 <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=85">[01:25]</a>, then shows a trick for switching models quickly without re-editing configs each time: command-line aliases that inject the right set of environment variables (API key, base URL, model name) before launching the agent <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=209">[03:29]</a>. For anyone trying a new model the day it ships, that removes the main friction — no need to rewrite settings, just keep a short command ready per model.</span>
+    </p>
+
+    <h2><span data-lang="ru">Спрайты — тоже через промпт</span><span data-lang="en">Sprites, also via prompt</span></h2>
+    <p>
+      <span data-lang="ru">Отдельный кусок видео посвящён Spriteriffic.com — сервису, который по текстовому описанию генерирует уже готовые спрайт-листы с согласованной анимацией персонажа (ходьба, прыжок, атака в одном стиле и масштабе) <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=315">[05:15]</a>. Ключевая деталь для агентного кодинга: результат сразу ложится в проект без ручной нарезки кадров или подгонки палитры — то есть художественная часть игры делегируется отдельному узкоспециализированному генератору, пока кодовую часть ведёт LLM-агент. Автор явно подаёт это как общий паттерн: для конкретной подзадачи (спрайты, музыка, тексты) может быть выгоднее нишевый инструмент, чем просить основную модель рисовать за себя.</span>
+      <span data-lang="en">A separate segment covers Spriteriffic.com, a service that turns a text description into ready-made spritesheets with consistent character animation (walk, jump, attack in one style and scale) <a class="ts" href="https://www.youtube.com/watch?v=RE8DA1y6GME&t=315">[05:15]</a>. The key detail for agentic coding: the output drops straight into the project with no manual frame-slicing or palette matching — the art side of the game is delegated to a narrow, specialized generator while the LLM agent handles the code. Wolfe frames this explicitly as a general pattern: for a specific sub-task (sprites, music, copy), a niche tool can beat asking the main model to draw for itself.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

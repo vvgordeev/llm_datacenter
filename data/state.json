@@ -69,7 +69,7 @@
     "https://deepseek.day/en/blog/deepseek-v4-peak-pricing-launch/": "2026-07-15",
     "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123": "2026-07-15",
     "https://arxiv.org/abs/2607.09024": "2026-07-15",
-    "https://simonwillison.net/2026/Jul/13/doomql/": "2026-07-15",
+    "https://simonwillison.net/2026/Jul/13/doomql/": "2026-07-18",
     "notes/articles/doomql-sql-game-engine.html": "2026-07-15",
     "https://www.youtube.com/watch?v=M3jYrNKQjEg": "2026-07-15",
     "notes/videos/mattpocock-skills-complete-deep-dive.html": "2026-07-15",
@@ -90,7 +90,12 @@
     "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/": "2026-07-17",
     "notes/articles/claude-web-fetch-exfiltration.html": "2026-07-17",
     "https://www.latent.space/p/aiewf26trends": "2026-07-17",
-    "notes/articles/aiewf26-five-trends.html": "2026-07-17"
+    "notes/articles/aiewf26-five-trends.html": "2026-07-17",
+    "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/": "2026-07-18",
+    "https://finance.yahoo.com/technology/ai/articles/kimi-k3-ai-breakthrough-wall-123003909.html": "2026-07-18",
+    "https://www.youtube.com/watch?v=RE8DA1y6GME": "2026-07-18",
+    "notes/articles/willison-doomql.html": "2026-07-18",
+    "notes/videos/mattwolfe-kimi-k3-paper-mario.html": "2026-07-18"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -198,10 +203,10 @@
       }
     },
     "moonshot-kimi-k3": {
-      "last_date": "2026-07-17",
+      "last_date": "2026-07-18",
       "summary": {
-        "ru": "Moonshot AI выпускает Kimi K3 — заявленную крупнейшую открытую модель (2.8T MoE), метится в Opus 4.8 по цене Sonnet",
-        "en": "Moonshot AI ships Kimi K3 — claimed largest open model (2.8T MoE), aiming at Opus 4.8 at Sonnet-level pricing"
+        "ru": "Moonshot AI выпускает Kimi K3 (2.8T MoE, метится в Opus 4.8 по цене Sonnet); на следующий день релиз triggers распродажу техакций и чипмейкеров — новый «момент DeepSeek»",
+        "en": "Moonshot AI ships Kimi K3 (2.8T MoE, aiming at Opus 4.8 at Sonnet-level pricing); the next day the release triggers a tech and chipmaker stock selloff — a new \"DeepSeek moment\""
       }
     },
     "thinking-machines-inkling": {
@@ -216,6 +221,13 @@
       "summary": {
         "ru": "Google DeepMind и Isomorphic Labs запускают программу Bioresilience — ИИ-доступ для биобезопасности",
         "en": "Google DeepMind and Isomorphic Labs launch Bioresilience — AI access for biosecurity"
+      }
+    },
+    "google-gemini-notebook-rebrand": {
+      "last_date": "2026-07-18",
+      "summary": {
+        "ru": "Google переименовал NotebookLM в Gemini Notebook, добавив защищённый облачный «компьютер» для выполнения кода по источникам",
+        "en": "Google renamed NotebookLM to Gemini Notebook, adding a secure cloud \"computer\" that executes code against a notebook's sources"
       }
     }
   }
