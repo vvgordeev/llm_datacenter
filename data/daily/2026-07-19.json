@@ -1,0 +1,243 @@
+{
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T05:18:00Z",
+  "news": [
+    {
+      "id": "2026-07-19-anthropic-fable-5-permanent",
+      "cluster_id": "anthropic-fable-mythos-restore",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Claude Fable 5 становится постоянной частью Max и Team Premium — Pro остаётся на кредитах",
+        "en": "Claude Fable 5 becomes a permanent Max/Team Premium feature — Pro stays on usage credits"
+      },
+      "summary": {
+        "ru": "Anthropic завершила почти полуторамесячную чехарду с доступом к Claude Fable 5: с 20 июля модель официально и без даты истечения включена в подписки Max и Team Premium (до 50% недельного лимита), а не является временной акцией. Пользователи Pro и Team Standard сохраняют доступ только через платные usage-кредиты ($10/$50 за млн токенов) и получают разовый бонус в $100 кредитов как компенсацию за месяц нестабильных условий.",
+        "en": "Anthropic has closed out a month and a half of back-and-forth over Claude Fable 5 access: starting July 20, the model is officially — and with no expiration date this time — included in Max and Team Premium subscriptions (up to 50% of the weekly limit), rather than a temporary promo. Pro and Team Standard subscribers keep access only through paid usage credits ($10/$50 per million tokens) and get a one-time $100 credit bonus as compensation for a month of shifting terms."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Меняется не подход к использованию модели, а бизнес-условия доступа к флагману для миллионов платных подписчиков Claude — заметно для рынка и для планирования бюджета на LLM, но не открывает новых сценариев применения, поэтому оценка держится на уровне «заметно», а не «крупно».",
+        "en": "This changes access economics for a flagship model used by millions of paid Claude subscribers, not how the model is used — material for the market and for LLM budget planning, but it doesn't open new usage scenarios, so the score stays at 'notable' rather than 'major'."
+      },
+      "source_url": "https://www.techtimes.com/articles/320905/20260718/claude-fable-5-ends-subscription-limbo-permanent-max-credits-only-pro.htm",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Я отменил Max и запросил возврат, когда Fable исчезла из подписки, а первого числа, в день возвращения модели, снова оформил подписку.",
+            "en": "I cancelled my Max plan and asked for a refund when Fable disappeared from the subscription, then re-subscribed on the day it came back."
+          },
+          "url": "https://news.ycombinator.com/item?id=48950477"
+        },
+        {
+          "author": "PCWorld",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Подписчикам при запуске 9 июня обещали 14 дней включённого доступа — по факту они получили около трёх дней до первой паузы и вернулись к более короткому окну на половине недельного лимита.",
+            "en": "Subscribers were promised 14 days of included access at the June 9 launch — they got about three days before the pause, and came back to a shorter window at half the weekly limit."
+          },
+          "url": "https://www.pcworld.com/article/3181897/claude-subscribers-are-furious-over-fables-new-restrictions.html"
+        },
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Конкуренция со стороны GPT-5.6 Sol и отчасти Kimi K3 сделала невыполнимым план убрать Fable 5 из подписок и оставить только API-тарификацию.",
+            "en": "Competition from GPT-5.6 Sol (and maybe to a lesser extent Kimi K3) made untenable Anthropic's plan to remove Fable 5 from subscription accounts and make it available exclusively through API pricing."
+          },
+          "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды на Max/Team Premium теперь могут закладывать Fable 5 в постоянные агентные пайплайны (Claude Code и др.), не опасаясь, что модель через месяц снова уйдёт исключительно на платные кредиты.",
+            "en": "Teams on Max/Team Premium can now bake Fable 5 into standing agentic pipelines (Claude Code and others) without worrying the model will vanish behind paid-credits-only access again in a month."
+          },
+          "url": "https://www.techtimes.com/articles/320905/20260718/claude-fable-5-ends-subscription-limbo-permanent-max-credits-only-pro.htm"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-19-lmstudio-bionic",
+      "cluster_id": "lmstudio-bionic",
+      "models": [
+        "lmstudio"
+      ],
+      "title": {
+        "ru": "LM Studio выпускает Bionic — агента для локальных и открытых моделей с автосохранением контрольных точек",
+        "en": "LM Studio ships Bionic — an agent app for local and open models with automatic checkpointing"
+      },
+      "summary": {
+        "ru": "LM Studio выпустила Bionic — отдельное от привычного браузера моделей приложение-агент, рассчитанное на открытые модели: «Code»-проекты для работы с репозиториями (инлайн-диффы, агентный поиск по коду) и «Work»-проекты для документов, PDF, слайдов и таблиц. Ключевая особенность — автоматическое сохранение контрольных точек на каждое изменение агента, позволяющее безопасно откатить или сравнить версии, плюс возможность подключить более мощные открытые модели через Secure Cloud с юридически закреплённым Zero Data Retention.",
+        "en": "LM Studio has released Bionic, an agent app separate from its familiar model browser, built for open models: 'Code' projects for working with repositories (inline diffs, agentic code search) and 'Work' projects for documents, PDFs, slide decks, and spreadsheets. The key feature is automatic checkpointing on every agent change, letting users safely roll back or compare versions, plus the option to run larger open models through a Secure Cloud with contractually negotiated Zero Data Retention."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Автоматические контрольные точки на каждый шаг агента и прозрачная цепочка рассуждений снижают главный барьер для автономной агентной работы с локальными/открытыми моделями — риск необратимых правок без надзора; это расширяет круг тех, кто готов доверить агенту самостоятельную работу, но сама механика (агент + чекпоинты) не создаёт нового класса сценариев, а делает существующий безопаснее.",
+        "en": "Automatic checkpoints on every agent step plus a transparent reasoning trail remove the main barrier to unsupervised agentic work with local/open models — the risk of unreviewable, irreversible edits; that broadens who's willing to let an agent work autonomously, but the mechanism (agent + checkpoints) makes an existing scenario safer rather than creating a new class of scenario."
+      },
+      "source_url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Один из лучших агентных харнессов, которые я видел, для инспекции цепочек рассуждений — иногда чтение самих рассуждений полезнее для меня, чем чтение финального ответа.",
+            "en": "One of the better agent harnesses I've seen for inspecting reasoning chains — sometimes reading the reasoning is better for my needs than reading the response."
+          },
+          "url": "https://news.ycombinator.com/item?id=48939662"
+        },
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Надёжность веб-навигации у Bionic пока заметно отстаёт от других агентных инструментов.",
+            "en": "Bionic's web navigation reliability trails that of other agent tools right now."
+          },
+          "url": "https://news.ycombinator.com/item?id=48939662"
+        },
+        {
+          "author": "Yagil Burowski (CEO LM Studio) на X",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Открытые модели прошли точку перелома с Kimi K2.6, а затем и с GLM 5.2 — Bionic сделан именно под этот момент.",
+            "en": "A few months ago open models crossed an inflection point with Kimi K2.6, and recently with GLM 5.2. LM Studio Bionic is built for this moment."
+          },
+          "url": "https://x.com/yagilb/status/2077840161241456649"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Автоматические чекпоинты в «Code»-проектах позволяют разработчику дать агенту многошаговую задачу по репозиторию и откатить любой шаг, если правка окажется неудачной, не теряя весь прогресс сессии.",
+            "en": "Automatic checkpoints in 'Code' projects let a developer hand the agent a multi-step task on a repository and roll back any single step if a change goes wrong, without losing the rest of the session's progress."
+          },
+          "url": "https://lmstudio.ai/docs/bionic"
+        },
+        {
+          "text": {
+            "ru": "«Work»-проекты дают агенту на локальной модели работать с документами, PDF и таблицами напрямую на устройстве, а Secure Cloud с ZDR — подключать более мощные открытые модели для тех же задач без отправки данных третьим лицам без гарантий.",
+            "en": "'Work' projects let an agent running a local model handle documents, PDFs, and spreadsheets directly on-device, while the ZDR-backed Secure Cloud lets the same workflows call larger open models without sending data to a third party without guarantees."
+          },
+          "url": "https://finance.biggo.com/news/6714c349-41f5-43d4-8f17-8e0bfacb24c5"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-19-openai-chatgpt-unified-search",
+      "cluster_id": "openai-chatgpt-unified-search",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "ChatGPT получает единый поиск по всем чатам, проектам, изображениям и документам",
+        "en": "ChatGPT adds unified search across all chats, projects, images, and documents"
+      },
+      "summary": {
+        "ru": "OpenAI выкатила для ChatGPT единую строку поиска в сайдбаре, которая ищет сразу по всей истории переписок, проектам, загруженным изображениям и документам пользователя — на вебе, iOS и Android, на всех тарифах от Free до Enterprise. Результаты можно фильтровать по типу контента (только изображения, только файлы конкретного проекта), а выбор результата открывает исходный чат, проект или файл без потери текущего контекста.",
+        "en": "OpenAI rolled out a single search box in ChatGPT's sidebar that queries a user's entire conversation history, Projects, uploaded images, and documents at once — on web, iOS, and Android, across every plan from Free to Enterprise. Results can be filtered by content type (images only, or files from a specific Project), and selecting a result opens the original chat, project, or file without losing the current context."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Полезное расширение существующего сценария — ChatGPT как накопитель истории работы пользователя, теперь ещё и с поиском по нему, — но это развитие интерфейса, а не новый подход к использованию модели, и охват (кто реально роется в старых чатах ежедневно) у улучшения, скорее, нишевый.",
+        "en": "A useful extension of an existing scenario — ChatGPT as a store of a user's accumulated work, now searchable — but it's an interface improvement, not a new approach to using the model, and the audience that regularly digs through old chats is comparatively niche."
+      },
+      "source_url": "https://www.techtimes.com/articles/320519/20260714/chatgpt-turns-searchable-knowledge-base-every-conversation-now-findable.htm",
+      "opinions": [
+        {
+          "author": "Digital Trends",
+          "stance": "positive",
+          "quote": {
+            "ru": "Новый поиск избавляет от необходимости копаться в старых чатах, файлах и изображениях в поисках нужного.",
+            "en": "The new search tool saves you from digging through old chats, files, and images."
+          },
+          "url": "https://www.digitaltrends.com/computing/chatgpts-new-search-tool-saves-you-from-digging-through-old-chats-files-and-images/"
+        },
+        {
+          "author": "Notebookcheck",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Новый поиск находит старые чаты, изображения и документы пользователя по единому запросу.",
+            "en": "The new search finds your old chats, images and documents from a single query."
+          },
+          "url": "https://www.notebookcheck.net/ChatGPT-New-search-finds-your-old-chats-images-and-documents.1344318.0.html"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пользователь, полгода назад обсуждавший с ChatGPT конкретную юридическую формулировку или рецепт кода, находит тот разговор одним запросом вместо пролистывания истории чатов.",
+            "en": "A user who discussed a specific legal phrasing or code snippet with ChatGPT six months ago can find that conversation with a single query instead of scrolling through chat history."
+          },
+          "url": "https://www.progressiverobot.com/2026/07/14/chatgpt-rolls-out-search-across-chats-projects-images-and-documents/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-19-willison-fable-5-permanent",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Claude делает Fable 5 постоянной моделью подписки",
+        "en": "Claude make Fable 5 permanent"
+      },
+      "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/",
+      "summary": {
+        "ru": "Разбор того, как полуторамесячная чехарда с доступом к Fable 5 закончилась постоянным включением модели в Max/Team Premium — и почему это решение продиктовано конкуренцией с GPT-5.6 Sol и Kimi K3, а не доброй волей Anthropic.",
+        "en": "A breakdown of how a month and a half of back-and-forth over Fable 5 access ended in the model being permanently included in Max/Team Premium — and why the decision was driven by competition from GPT-5.6 Sol and Kimi K3, not Anthropic's goodwill."
+      },
+      "note_page": "notes/articles/claude-make-fable-5-permanent.html"
+    },
+    {
+      "id": "2026-07-19-zvi-ai-177-part-2",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #177, часть 2: инструмент против агента",
+        "en": "AI #177 Part 2: Wish You Were Here"
+      },
+      "url": "https://thezvi.substack.com/p/ai-177-part-2-wish-you-were-here",
+      "summary": {
+        "ru": "Еженедельный разбор смещается от релизов недели к вопросу, почему любой «инструмент ИИ» рано или поздно переизобретают в агента с собственными целями, и что это значит для управления и контроля.",
+        "en": "The weekly roundup shifts from the week's releases to why any 'Tool AI' eventually gets reinvented as an agent with its own goals, and what that means for governance and control."
+      },
+      "note_page": "notes/articles/ai-177-part-2-wish-you-were-here.html"
+    },
+    {
+      "id": "2026-07-19-klaassen-polish-agents",
+      "type": "article",
+      "author": "Kieran Klaassen (Every)",
+      "title": {
+        "ru": "Как я довожу до ума софт, написанный агентами",
+        "en": "How I Polish Software That Agents Built"
+      },
+      "url": "https://every.to/source-code/how-i-polish-software-that-agents-built",
+      "summary": {
+        "ru": "Метод финальной полировки в compound engineering: держать работающее приложение рядом с агентом, замечать, что не так, на глаз, и говорить это агенту простыми словами вместо правки кода вручную.",
+        "en": "The final-polish method in compound engineering: keep a running app next to the agent, notice what feels off by eye, and tell the agent in plain language instead of editing code by hand."
+      },
+      "note_page": "notes/articles/how-i-polish-software-that-agents-built.html"
+    },
+    {
+      "id": "2026-07-19-parrott-chatgpt-codex-merge",
+      "type": "article",
+      "author": "Katie Parrott (Every)",
+      "title": {
+        "ru": "Тяга к слиянию: ChatGPT и Codex",
+        "en": "The Urge to Merge (ChatGPT and Codex)"
+      },
+      "url": "https://every.to/context-window/the-urge-to-merge-chatgpt-and-codex",
+      "summary": {
+        "ru": "Как слияние приложений ChatGPT и Codex вызвало бунт разработчиков-повербюзеров — и почему OpenAI сознательно выбрала массовую аудиторию ChatGPT вместо узкой, но лояльной аудитории Codex.",
+        "en": "How merging the ChatGPT and Codex apps triggered a revolt among developer power users — and why OpenAI deliberately chose ChatGPT's mass audience over Codex's narrow but loyal one."
+      },
+      "note_page": "notes/articles/the-urge-to-merge-chatgpt-and-codex.html"
+    }
+  ]
+}

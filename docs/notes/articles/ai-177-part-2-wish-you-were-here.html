@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: AI #177 Part 2 — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Zvi Mowshowitz · 2026-07-17</span>
+      <span data-lang="en">Article digest · Zvi Mowshowitz · 2026-07-17</span>
+    </p>
+    <h1>
+      <span data-lang="ru">AI #177, часть 2: инструмент против агента — кто на самом деле принимает решения</span>
+      <span data-lang="en">AI #177 Part 2: Wish You Were Here</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thezvi.substack.com/p/ai-177-part-2-wish-you-were-here" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Вторая часть еженедельного разбора Zvi Mowshowitz «AI #177» в этот раз посвящена не столько новым релизам (Kimi K3, Inkling, GPT-5.6 Sol уже разобраны в первой части), сколько более медленному, но принципиальному сдвигу: границе между «инструментом» и «агентом» и тому, кто в итоге принимает решения — модель, оператор или регулятор.</span>
+      <span data-lang="en">The second installment of Zvi Mowshowitz's weekly "AI #177" roundup shifts focus away from the week's new releases (Kimi K3, Inkling, GPT-5.6 Sol were already covered in part one) toward a slower but more fundamental shift: the boundary between "tool" and "agent," and who actually ends up making decisions — the model, the operator, or the regulator.</span>
+    </p>
+
+    <h2><span data-lang="ru">Инструмент, который сам себя переизобретает в агента</span><span data-lang="en">A tool that reinvents itself as an agent</span></h2>
+    <p>
+      <span data-lang="ru">Мовшовиц возвращается к старому спору о «Tool AI»: идее, что можно ограничить систему узкими, заранее заданными запросами без собственных целей — и тем самым избежать рисков автономного поведения. Его наблюдение: на практике это ограничение не выживает конкуренции. Как только у людей появляется способ превратить инструмент в агента — дать ему цель и позволить самому решать, как её достигать, — они это делают, потому что агент почти всегда полезнее инструмента для той же задачи. Это не разовый эксцесс отдельных лабораторий, а системное давление: рынок вознаграждает автономность, даже если она добавляет непредсказуемости.</span>
+      <span data-lang="en">Mowshowitz revisits the old "Tool AI" debate: the idea that a system can be confined to narrow, pre-specified requests with no goals of its own, thereby sidestepping the risks of autonomous behavior. His observation is that in practice this constraint doesn't survive competition. As soon as people have a way to turn a tool into an agent — giving it a goal and letting it decide how to reach it — they do, because an agent is almost always more useful than a tool for the same task. This isn't a one-off excess of a particular lab; it's a systemic pressure — the market rewards autonomy even when it adds unpredictability.</span>
+    </p>
+
+    <h2><span data-lang="ru">Управление, открытость и кто пишет правила</span><span data-lang="en">Governance, openness, and who writes the rules</span></h2>
+    <p>
+      <span data-lang="ru">Отдельный блок разбирает позицию Китая по глобальному управлению ИИ: официальная риторика говорит о «человекоцентричном» подходе, общем процветании и справедливой системе глобального управления, одновременно продвигая открытость и совместное использование моделей — то есть открытые веса используются как инструмент soft power, а не только как техническая философия. Мовшовиц сопоставляет это с более широкой тревогой раздела: постепенная утрата контроля людьми над всё более автономными системами, концентрация власти в руках немногих операторов моделей и вопрос, останутся ли демократические механизмы принятия решений релевантными, когда часть решений эффективнее делегировать агентам.</span>
+      <span data-lang="en">A separate section unpacks China's stated position on global AI governance: official rhetoric emphasizes a "people-centered" approach, shared prosperity, and a fair system of global governance, while simultaneously promoting openness and model-sharing — meaning open weights are being used as a soft-power instrument, not just a technical philosophy. Mowshowitz ties this to the section's broader worry: humans gradually losing control over increasingly autonomous systems, power concentrating among a small number of model operators, and the open question of whether democratic decision-making stays relevant once some decisions are more efficiently delegated to agents.</span>
+    </p>
+
+    <h2><span data-lang="ru">Практический вывод для тех, кто строит агентов</span><span data-lang="en">The practical takeaway for agent builders</span></h2>
+    <p>
+      <span data-lang="ru">Для практика, а не только для наблюдателя за политикой ИИ, вывод раздела простой: если продукт задуман как «инструмент», стоит явно закладывать в архитектуру, что рано или поздно кто-то — сам разработчик под давлением пользователей или сами пользователи через обходные пути — превратит его в агента с собственными целями. Ограничения, добавленные постфактум, работают хуже, чем изначально спроектированные границы автономии (какие действия агент может предпринимать без подтверждения, какие цели ему разрешено ставить самому).</span>
+      <span data-lang="en">For a practitioner — not just a policy-watcher — the section's takeaway is simple: if a product is conceived as a "tool," the architecture should explicitly assume that sooner or later someone — the builder under user pressure, or users themselves via workarounds — will turn it into an agent with its own goals. Guardrails bolted on after the fact work worse than autonomy boundaries designed in from the start (which actions the agent may take without confirmation, which goals it's allowed to set for itself).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

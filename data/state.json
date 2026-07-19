@@ -95,7 +95,18 @@
     "https://finance.yahoo.com/technology/ai/articles/kimi-k3-ai-breakthrough-wall-123003909.html": "2026-07-18",
     "https://www.youtube.com/watch?v=RE8DA1y6GME": "2026-07-18",
     "notes/articles/willison-doomql.html": "2026-07-18",
-    "notes/videos/mattwolfe-kimi-k3-paper-mario.html": "2026-07-18"
+    "notes/videos/mattwolfe-kimi-k3-paper-mario.html": "2026-07-18",
+    "https://www.techtimes.com/articles/320905/20260718/claude-fable-5-ends-subscription-limbo-permanent-max-credits-only-pro.htm": "2026-07-19",
+    "https://lmstudio.ai/blog/introducing-lm-studio-bionic": "2026-07-19",
+    "https://www.techtimes.com/articles/320519/20260714/chatgpt-turns-searchable-knowledge-base-every-conversation-now-findable.htm": "2026-07-19",
+    "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/": "2026-07-19",
+    "https://thezvi.substack.com/p/ai-177-part-2-wish-you-were-here": "2026-07-19",
+    "https://every.to/source-code/how-i-polish-software-that-agents-built": "2026-07-19",
+    "https://every.to/context-window/the-urge-to-merge-chatgpt-and-codex": "2026-07-19",
+    "notes/articles/claude-make-fable-5-permanent.html": "2026-07-19",
+    "notes/articles/ai-177-part-2-wish-you-were-here.html": "2026-07-19",
+    "notes/articles/how-i-polish-software-that-agents-built.html": "2026-07-19",
+    "notes/articles/the-urge-to-merge-chatgpt-and-codex.html": "2026-07-19"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -143,8 +154,11 @@
       "summary": "Anthropic launches Claude Science, an AI workbench for researchers and pharma"
     },
     "anthropic-fable-mythos-restore": {
-      "last_date": "2026-07-13",
-      "summary": "Claude Fable 5 and Mythos 5 return after US export controls are lifted; included access extended a third time to July 19 amid GPT-5.6 Sol competitive pressure"
+      "last_date": "2026-07-19",
+      "summary": {
+        "ru": "Claude Fable 5 и Mythos 5 возвращаются после снятия экспортных ограничений; включённый доступ продлевался трижды до 19 июля под давлением GPT-5.6 Sol, а с 20 июля становится постоянной частью Max/Team Premium (Pro — на кредитах)",
+        "en": "Claude Fable 5 and Mythos 5 return after US export controls are lifted; included access is extended three times to July 19 under GPT-5.6 Sol pressure, then becomes a permanent Max/Team Premium feature from July 20 (Pro stays on credits)"
+      }
     },
     "deepseek-v4-peak-pricing": {
       "last_date": "2026-07-15",
@@ -228,6 +242,20 @@
       "summary": {
         "ru": "Google переименовал NotebookLM в Gemini Notebook, добавив защищённый облачный «компьютер» для выполнения кода по источникам",
         "en": "Google renamed NotebookLM to Gemini Notebook, adding a secure cloud \"computer\" that executes code against a notebook's sources"
+      }
+    },
+    "lmstudio-bionic": {
+      "last_date": "2026-07-19",
+      "summary": {
+        "ru": "LM Studio выпускает Bionic — агента для локальных/открытых моделей с автосохранением контрольных точек и Secure Cloud (ZDR)",
+        "en": "LM Studio ships Bionic — an agent app for local/open models with automatic checkpointing and a ZDR Secure Cloud"
+      }
+    },
+    "openai-chatgpt-unified-search": {
+      "last_date": "2026-07-19",
+      "summary": {
+        "ru": "ChatGPT добавляет единый поиск по чатам, проектам, изображениям и документам на всех тарифах",
+        "en": "ChatGPT adds unified search across chats, Projects, images and documents on every plan"
       }
     }
   }

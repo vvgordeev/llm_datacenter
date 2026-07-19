@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: как я довожу до ума софт, написанный агентами — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Kieran Klaassen (Every) · 2026-07-12</span>
+      <span data-lang="en">Article digest · Kieran Klaassen (Every) · 2026-07-12</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как я довожу до ума софт, написанный агентами</span>
+      <span data-lang="en">How I Polish Software That Agents Built</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://every.to/source-code/how-i-polish-software-that-agents-built" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Кирен Клаасен, руководящий продуктом Cora в Every, описывает метод «полировки» — финальный этап практики, которую он больше года называет compound engineering («компаундный инжиниринг»): дисциплины разработки, где каждая итерация делает следующую итерацию умнее. По мере того как средние этапы — написание кода, тесты, ревью — всё больше автоматизируются агентами, именно полировка становится тем немногим, что остаётся человеку, и поэтому ей стоит уделять больше, а не меньше внимания.</span>
+      <span data-lang="en">Kieran Klaassen, who runs the Cora product at Every, describes "polish" — the final step of a practice he's spent over a year calling compound engineering: a development discipline where every iteration makes the next iteration smarter. As the middle stretch of the work — writing code, tests, review — gets increasingly automated by agents, polish is one of the few parts of the job still genuinely yours, which is why it deserves more attention, not less.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: смотреть на приложение, а не на код</span><span data-lang="en">The method: look at the app, not the code</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая идея статьи — полировка не читает diff, а использует приложение. Плагин compound engineering, который Клаасен построил для этого шага, переключается на ветку, которую нужно довести до ума, поднимает dev-сервер в фоне и открывает работающее приложение прямо внутри редактора, рядом с агентом. Дальше цикл предельно прост и повторяем: человек открывает приложение и использует его как обычный пользователь, замечает, что «не так» — слишком тесный отступ, неудобный порядок полей, дёрганая анимация, — и произносит это агенту простыми словами, без указания конкретных файлов или строк кода. Агент вносит правку, приложение перезагружается по hot-reload, человек смотрит снова и либо продолжает список замечаний, либо считает шаг завершённым.</span>
+      <span data-lang="en">The article's core idea: polish doesn't read the diff, it uses the app. The compound-engineering plugin Klaassen built for this step checks out the branch being polished, starts the dev server in the background, and opens the running app right inside the editor, next to the agent. From there the loop is deliberately simple and repeatable: the human opens the app and uses it like an ordinary user, notices what feels off — padding too tight, an awkward field order, a jerky animation — and says so to the agent in plain language, without pointing at specific files or lines of code. The agent makes the change, the app hot-reloads, the human looks again, and either keeps adding notes or calls the step done.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда применять и какие у метода границы</span><span data-lang="en">When to use it, and where it runs out</span></h2>
+    <p>
+      <span data-lang="ru">Клаасен подчёркивает роль человека в этой схеме: не сборщик на конвейере, который выполняет шаги, а контролёр в конце линии, решающий, достаточно ли хорошо, чтобы поставить своё имя под результатом. Метод рассчитан именно на субъективные, сложно формализуемые критерии качества — ощущение интерфейса, темп анимации, тон текста, — которые тяжело заранее описать как тест или спецификацию для агента. Там, где критерий уже формализуем (производительность, соответствие API-контракту, покрытие тестами), полировка через «использование приложения» избыточна — эти вещи стоит проверять автоматизированными проверками до, а не вместо ручной полировки. Ограничение метода в том, что он требует реального, работающего окружения на каждой итерации: без dev-сервера и hot-reload рядом с агентом цикл «заметил → сказал → посмотрел снова» просто не собирается.</span>
+      <span data-lang="en">Klaassen is explicit about the human's role in this setup: not an assembly-line worker executing steps, but the person at the end of the line deciding whether the result is good enough to put their name on. The method is built specifically for subjective, hard-to-formalize quality criteria — how an interface feels, an animation's pacing, a text's tone — the kind of thing that's difficult to spell out in advance as a test or a spec for an agent. Where a criterion is already formalizable (performance, API-contract conformance, test coverage), polishing by "using the app" is overkill — those should be caught by automated checks before, not instead of, manual polish. The method's limit is that it requires a real, running environment on every iteration: without a dev server and hot-reload sitting next to the agent, the "notice → say → look again" loop simply doesn't come together.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

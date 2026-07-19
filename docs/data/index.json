@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-19",
+      "news_count": 3,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "LM Studio выпускает Bionic — агента для локальных и открытых моделей с автосохранением контрольных точек",
+        "en": "LM Studio ships Bionic — an agent app for local and open models with automatic checkpointing"
+      }
+    },
+    {
       "date": "2026-07-18",
       "news_count": 2,
       "expert_count": 2,

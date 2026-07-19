@@ -1,0 +1,50 @@
+{
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T05:18:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 от egress-прокси, как и в предыдущих прогонах"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "google/deepmind blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "meta ai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "xai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "mistral blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "deepseek blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 1, "note": "Fable 5 permanent — единственная новая новость за окно, остальное уже опубликовано в прошлых сводках"},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 1, "note": "unified search across chats/projects/images/docs (событие от 14 июля, ранее пропущено, добрано широким поиском)"},
+    {"source": "google/gemini (WebSearch)", "status": "empty", "candidates": 0, "note": "Gemini 3.5 Pro остаётся неподтверждённым слухом (пропустила уже третий дедлайн) — не включено"},
+    {"source": "meta (WebSearch)", "status": "empty", "candidates": 0, "note": "нет событий за окно"},
+    {"source": "xai (WebSearch)", "status": "empty", "candidates": 0, "note": "нет новых событий за окно, только продолжение уже опубликованных сюжетов"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "нет событий за окно"},
+    {"source": "deepseek (WebSearch)", "status": "empty", "candidates": 0, "note": "нет событий за окно"},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "CONNECT 403 на уровне egress-прокси, как и в прошлых прогонах; заменено WebSearch по site:news.ycombinator.com"},
+    {"source": "aggregators (smol.ai, TLDR AI)", "status": "ok", "candidates": 1, "note": "LM Studio Bionic обнаружена через community/aggregator обход (HN, обзоры)"},
+    {"source": "widened pass (общие запросы)", "status": "ok", "candidates": 0, "note": "рассмотрен и отклонён как неподтверждённый слух: Microsoft Project Perception (только анонимные источники/утечки, нет официального анонса Microsoft)"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "Fable 5 permanent (07-18)"},
+    {"source": "experts: Andrej Karpathy (видео)", "status": "empty", "candidates": 0, "note": "нет свежих видео за 7 дней (последнее — Sequoia Ascent, апрель)"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "последний релевантный пост (aiewf26trends) уже опубликован 07-17; AINews-выпуск за 16-17 июля пересекается по теме с уже опубликованной новостью о Kimi K3, не добавлен как отдельный конспект"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "не удалось подтвердить дату свежего видео за последние 7 дней"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "blocked", "candidates": 0, "note": "YouTube (RSS/WebFetch) — 403 на уровне egress-прокси; WebSearch не дал видео с подтверждаемой датой и содержанием"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост — 1 июля (twilight of chatbots), уже опубликован 07-06"},
+    {"source": "experts: Nate Herk (видео)", "status": "blocked", "candidates": 0, "note": "YouTube 403; единственный найденный релевантный ролик оказался от апреля 2025 — отклонён как несвежий"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "последнее релевантное видео (Sandcastle) — май 2026, вне 7-дневного окна"},
+    {"source": "experts: widened search (Every.to — Kieran Klaassen, Katie Parrott; Zvi Mowshowitz)", "status": "ok", "candidates": 2, "note": "добор до близкого к минимуму значения через заметных авторов вне конфига, т.к. видео-каналы конфига не дали свежего контента"}
+  ],
+  "totals": {
+    "candidates": 24,
+    "published": 3,
+    "rejected": {
+      "уже опубликовано ранее (см. seen_urls)": 14,
+      "неподтверждённый слух (Project Perception, Gemini 3.5 Pro launch)": 2,
+      "несвежее/не по теме при проверке даты (Nate Herk video, MindStudio article, Latent Space Agent Labs, Karpathy Sequoia, доп. посты Willison)": 5
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted — не найдено ни одного видео, прошедшего проверку свежести/содержания",
+    "frames": "not attempted",
+    "note": "yt-dlp/imageio-ffmpeg установлены через pip в начале прогона (доступны), но не понадобились: YouTube (RSS и WebFetch) отдавал 403 на уровне egress-прокси весь прогон, а WebSearch не смог подтвердить содержание и точную дату ни одного кандидата в видео за последние 7 дней среди каналов из config/sources.yaml"
+  },
+  "notes": [
+    "expert_content: 4 статьи вместо минимума в 5 материалов (limits.min_expert_total). Широкий проход выполнен (все 8 экспертов конфига + WebSearch по резонансным материалам недели + два автора вне конфига через Every.to), видео-кандидат с проверяемой датой и содержанием найти не удалось из-за блокировки YouTube в песочнице и отставания поискового индекса. Указано честно, а не добрано выдумкой.",
+    "≥1/3 источников (7 из 7 официальных блогов моделей + HN API) заблокированы на уровне egress-прокси — WebSearch как основной канал сработал, но это сигнал деградации сети в облачном окружении, а не «пустой день»."
+  ]
+}
