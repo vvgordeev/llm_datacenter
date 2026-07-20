@@ -1,0 +1,92 @@
+{
+  "date": "2026-07-20",
+  "generated_at": "2026-07-20T05:30:00Z",
+  "news": [
+    {
+      "id": "2026-07-20-anthropic-fable-5-limits-live",
+      "cluster_id": "anthropic-fable-mythos-restore",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Fable 5 вернулась в Max/Team Premium — но в тот же день базовые лимиты урезали примерно на треть",
+        "en": "Fable 5's Max/Team Premium return lands — with base plan limits cut by roughly a third the same day"
+      },
+      "summary": {
+        "ru": "Обещанный ещё 18 июля возврат Claude Fable 5 в подписки Max и Team Premium вступил в силу 20 июля — но одновременно закончилась фаза бонусного использования: базовые недельные лимиты этих планов сократились примерно на треть, а Fable 5 доступна лишь в пределах 50% уже уменьшенного лимита. У Pro и Team Standard по-прежнему только платный доступ через usage-кредиты и разовый бонус в $100.",
+        "en": "The Claude Fable 5 return to Max and Team Premium subscriptions, promised on July 18, took effect on July 20 — but the bonus-usage phase ended the same day: the plans' base weekly limits dropped by roughly a third, and Fable 5 itself is capped at 50% of that now-smaller limit. Pro and Team Standard subscribers still only get paid API-credit access plus the one-time $100 credit."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Это уточняющая корректировка тарифов и доступа поверх уже опубликованной вчера политики — новых возможностей или сценариев использования не появляется, поэтому оценка остаётся у нижней границы «минорного».",
+        "en": "This is a pricing/access adjustment layered on top of yesterday's already-published policy — no new capability or usage pattern appears, so the score stays at the low end of 'minor'."
+      },
+      "source_url": "https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/",
+      "opinions": [
+        {
+          "author": "Claude (официальный аккаунт на X)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Начиная с 20 июля Claude Fable 5 включается во все планы Max и Team Premium в пределах 50% лимита.",
+            "en": "Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits."
+          },
+          "url": "https://x.com/claudeai/status/2078302415804379218"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды на Max/Team Premium, заложившие в план постоянную нагрузку на Fable 5 исходя из вчерашнего анонса «50% лимита», должны пересчитать бюджет: сама база для этих 50% уменьшилась в тот же день.",
+            "en": "Teams on Max/Team Premium who budgeted for standing Fable 5 workloads based on yesterday's '50% of the limit' announcement need to recalculate: the base that 50% applies to shrank the same day."
+          },
+          "url": "https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-20-willison-ai-mania",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Мания ИИ уничтожает корпоративное принятие решений",
+        "en": "AI Mania Is Eviscerating Global Decision-Making"
+      },
+      "url": "https://simonwillison.net/2026/Jul/19/ai-mania/",
+      "summary": {
+        "ru": "Уиллисон указывает на вирусное эссе консультанта Ника Суреша (Ludicity): страх перед несогласием с «ИИ-стратегией» и метрики вроде «сколько потрачено на ИИ» ломают обычное корпоративное суждение — с анекдотами вплоть до руководителя, никогда не пользовавшегося ChatGPT, но написавшего ИИ-стратегию на $2 млрд+ выручки.",
+        "en": "Willison points to a viral essay by consultant Nik Suresh (Ludicity): fear of dissenting from 'AI strategy' and metrics like 'money spent on AI' are breaking ordinary corporate judgment — with anecdotes up to an executive who never used ChatGPT yet authored an AI strategy for a $2B+-revenue company."
+      },
+      "note_page": "notes/articles/ai-mania-decision-making.html"
+    },
+    {
+      "id": "2026-07-20-zvi-hassabis-framework",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "Хассабис о новой наступающей эпохе",
+        "en": "Demis Hassabis on the New Coming Age"
+      },
+      "url": "https://thezvi.substack.com/p/demis-hassabis-on-the-new-coming",
+      "summary": {
+        "ru": "Zvi разбирает предложение Хассабиса о FINRA-подобном органе проверки frontier-моделей рядом с историей ухода исследователя безопасности DeepMind Алекса Тёрнера — из-за военного контракта Google без ограничений на автономное оружие, вопреки собственным принципам компании 2018 года.",
+        "en": "Zvi examines Hassabis's proposal for a FINRA-style frontier-model testing body alongside the story of DeepMind safety researcher Alex Turner's resignation — over a Google military contract with no autonomous-weapons restrictions, contradicting the company's own 2018 principles."
+      },
+      "note_page": "notes/articles/hassabis-frontier-ai-framework.html"
+    },
+    {
+      "id": "2026-07-20-nateherk-200k-job",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Работа на $200K, которой не существовало год назад",
+        "en": "The $200K AI Job That Didn't Exist Last Year"
+      },
+      "url": "https://www.youtube.com/watch?v=eFOTQpbGcy8",
+      "summary": {
+        "ru": "Дорожная карта, как самому создать себе роль «внутреннего ИИ-консультанта»: аудит своих задач, автоматизация процессов с максимальным эффектом, наглядная демонстрация ценности и формальное предложение новой должности — ценность сместилась от умения собрать автоматизацию к суждению, что именно стоит автоматизировать.",
+        "en": "A roadmap for building yourself an in-house AI-consultant role: audit your own tasks, automate the highest-impact processes, visibly demonstrate the value, then formally propose the new position — value has shifted from being able to build an automation to judging what's worth automating."
+      },
+      "note_page": "notes/videos/200k-ai-consultant-job.html"
+    }
+  ]
+}

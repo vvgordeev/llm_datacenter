@@ -1,0 +1,55 @@
+{
+  "date": "2026-07-20",
+  "generated_at": "2026-07-20T05:30:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 от egress-прокси"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "google/deepmind blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "meta ai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "xai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "mistral blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "deepseek blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "не пробовали напрямую после повторяющихся 403 в прошлых прогонах; заменено WebSearch по site:news.ycombinator.com"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 3, "note": "Claude for Teachers, MS365 write tools, HIPAA self-serve — все опубликованы 07-07..07-15, старше lookback; Fable-5-rollout-day (лимиты урезаны на треть) — единственный новый по содержанию, опубликован"},
+    {"source": "openai (WebSearch)", "status": "empty", "candidates": 0, "note": "GPT-5.6/GPT-Live/ChatGPT Work/desktop-обновления — всё уже опубликовано в предыдущих сводках, ничего нового за окно"},
+    {"source": "google/gemini (WebSearch)", "status": "empty", "candidates": 0, "note": "Gemini 3.5 Pro по-прежнему не выпущена (третий пропущенный дедлайн — 17 июля), рабочая версия недоступна публично; не включено как неподтверждённое"},
+    {"source": "meta (WebSearch)", "status": "empty", "candidates": 0, "note": "Muse Video/Audex-соседние материалы датированы 07-07, вне lookback, и являются частью уже опубликованного анонса Muse Image"},
+    {"source": "xai (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok Build changelog — минорные CLI-правки (refresh rate, session compat), не датированы точно в пределах окна, отклонены как слишком незначительные для отдельной карточки"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "новая open-weight модель всё ещё в early access у партнёров, дата публичного релиза не объявлена — нет нового события за окно"},
+    {"source": "deepseek (WebSearch)", "status": "empty", "candidates": 0, "note": "V4 официальный релиз уже опубликован ранее (07-15), нового за окно нет"},
+    {"source": "aggregators (smol.ai, tldr.tech)", "status": "ok", "candidates": 2, "note": "Qwen3.8-Max preview (Alibaba, 07-19) и Moonshot IPO — оба отклонены (Qwen отключён в config: enabled false; IPO — финансовая новость без продуктовой части)"},
+    {"source": "widened pass (общие запросы: AI model release, AI coding agent update, LLM news)", "status": "ok", "candidates": 0, "note": "не дал новых кандидатов сверх уже рассмотренных"},
+    {"source": "community: reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "поиск по site: не вернул индексируемых результатов"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "AI Mania Is Eviscerating Global Decision-Making (07-19)"},
+    {"source": "experts: Andrej Karpathy (видео)", "status": "empty", "candidates": 0, "note": "последнее видео уже опубликовано 07-10 (New AI Workflow)"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "и Inkling (07-15), и aiewf26trends (07-15/16) уже опубликованы 07-17"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "не удалось найти видео с подтверждаемым URL и датой в пределах недели — поисковые совпадения вели на другие каналы"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "empty", "candidates": 0, "note": "все найденные с точной датой видео («Anthropic Went Crazy», «They All Launched the Same Thing») оказались от марта 2026"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост — 30 июня (twilight of chatbots), уже опубликован 07-06"},
+    {"source": "experts: Nate Herk (видео)", "status": "ok", "candidates": 1, "note": "The $200K AI Job That Didn't Exist Last Year (07-18); два более очевидных кандидата — 6-часовой курс (не влезает в лимит кадров Gemini: 400 too many images) и Sol-vs-Fable (уже опубликован 07-13) — отклонены"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "последнее найденное с датой видео — апрель 2026 (AI Engineer workshop walkthrough)"},
+    {"source": "experts: widened search (Zvi Mowshowitz, Every.to)", "status": "ok", "candidates": 1, "note": "Zvi: Demis Hassabis on the New Coming Age (07-19, Hassabis framework + уход Alex Turner). Every.to: единственные найденные посты Kieran Klaassen/Katie Parrott/Laura Entis старше недели (апрель-июнь, 'Codex in Practice' обновлён 07-18 но исходно от 07-01) — не включены"}
+  ],
+  "totals": {
+    "candidates": 17,
+    "published": 1,
+    "rejected": {
+      "уже опубликовано ранее (см. seen_urls) или старше lookback": 9,
+      "config-исключено (qwen: enabled false)": 1,
+      "финансовая новость без продуктовой части (Moonshot IPO)": 1,
+      "неподтверждённый/не выпущен публично (Gemini 3.5 Pro, Mistral open-weight early access)": 2,
+      "слишком незначительно для отдельной карточки (Grok Build CLI polish)": 1,
+      "не удалось подтвердить дату/URL в пределах недели (AI Explained, Matt Pocock, старые Matt Wolfe видео)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — обработано 2 видео Nate Herk: 6-часовой курс отклонён с ошибкой Gemini 400 (too many images для видео такой длины при дефолтной частоте кадров), для 10-минутного ролика (eFOTQpbGcy8) конспект получен успешно",
+    "frames": "skipped: youtube blocked — yt-dlp получил 'Unable to connect to proxy: Tunnel connection failed: 403 Forbidden' на уровне egress-прокси для обоих видео; кадры не извлечены, помечено на странице конспекта",
+    "note": "yt-dlp/imageio-ffmpeg установлены через pip в начале прогона; сам Gemini API успешно скачал видео на своей стороне (generativelanguage.googleapis.com), несмотря на блокировку youtube.com для клиента"
+  },
+  "notes": [
+    "news: 1 карточка вместо обычных 2-4 — очень тихий день. Широкий и расширенный проход выполнены (все 7 включённых моделей WebFetch+2×WebSearch, агрегаторы, HN, community, widened queries по общим формулировкам), почти все найденные события за последние 36ч оказались либо уже опубликованы в предыдущих сводках (Fable 5 permanent, GPT-5.6, Grok 4.5, Kimi K3, Gemini delay), либо старше lookback (Claude for Teachers, MS365 write tools, HIPAA, Muse Video/Audex — все 07-07..07-15), либо не проходят критерии (Qwen3.8 — явно отключена в config несмотря на широкую доступность в WebSearch; Moonshot IPO — финансы без продукта). Единственный по-настоящему новый факт за 20 июля — компаундинг-урезание базовых лимитов Max/Team Premium в день рemitteр Fable 5 — опубликован как продолжение кластера anthropic-fable-mythos-restore.",
+    "expert_content: 3 материала вместо минимума в 5 (limits.min_expert_total). Пройдены все 8 экспертов конфига + широкий поиск (Zvi Mowshowitz, Every.to — Kieran Klaassen/Katie Parrott/Laura Entis). Видео-каналы конфига (Karpathy, AI Explained, Matt Wolfe, Nate Herk основные кандидаты, Matt Pocock) в основном уже выработаны прошлыми прогонами или не дали проверяемо свежих (≤7 дней) видео — единственный пригодный найденный видео-кандидат Nate Herk потребовал двух попыток (первая — 6-часовой курс — не влезла в лимит Gemini). Every.to не дал ничего свежее недели. Указано честно, а не добрано выдумкой.",
+    "Egress-деградация окружения: все 7 официальных блогов моделей + HN API + YouTube (RSS/WebFetch/yt-dlp) заблокированы на уровне egress-прокси весь прогон — WebSearch как основной канал сработал для обнаружения, но покрытие видео-контента снижено (кадры недоступны, RSS-discovery недоступен)."
+  ]
+}

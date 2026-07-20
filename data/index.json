@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-20",
+      "news_count": 1,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Fable 5 вернулась в Max/Team Premium — но в тот же день базовые лимиты урезали примерно на треть",
+        "en": "Fable 5's Max/Team Premium return lands — with base plan limits cut by roughly a third the same day"
+      }
+    },
+    {
       "date": "2026-07-19",
       "news_count": 3,
       "expert_count": 4,
