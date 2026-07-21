@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21T05:35:00Z",
+  "news": [
+    {
+      "id": "2026-07-21-xai-grok-4-6-training",
+      "cluster_id": "xai-grok-4-6",
+      "models": ["xai"],
+      "title": {
+        "ru": "Маск подтвердил: 2-триллионный Grok 4.6 заканчивает обучение — ответ на Kimi K3",
+        "en": "Musk confirms 2-trillion-parameter Grok 4.6 finishes training — xAI's answer to Kimi K3"
+      },
+      "summary": {
+        "ru": "18 июля Илон Маск в ответ на пост в X подтвердил, что новая модель xAI на 2 трлн параметров (рабочее имя Grok 4.6) завершает первичное обучение «на следующей неделе». По словам Маска, модель превосходит нынешний флагман Grok 4.5 (1.5 трлн, кодовое имя V9) «во всём» и нацелена сравняться или превзойти Kimi K3 от Moonshot (2.8 трлн), сохранив скорость и токен-эффективность 4.5. Публичного релиза, бенчмарков и цены пока нет.",
+        "en": "On July 18, replying to a post on X, Elon Musk confirmed xAI's new 2-trillion-parameter model (working name Grok 4.6) will finish its initial training run 'next week.' Musk says the model beats the current flagship Grok 4.5 (1.5T, codename V9) 'in every way' and aims to match or exceed Moonshot's Kimi K3 (2.8T) while keeping Grok 4.5's speed and token efficiency. No public release, benchmarks, or pricing yet."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Пока это анонс тренировки, а не релиз: новых возможностей или подходов к использованию LLM нет — сигнал важен скорее как индикатор темпа гонки масштабирования между xAI и китайскими открытыми моделями.",
+        "en": "This is a training-progress announcement, not a release — no new capability or usage pattern yet; it mainly signals the pace of the scaling race between xAI and Chinese open models."
+      },
+      "source_url": "https://x.com/elonmusk/status/2078289996323148076",
+      "opinions": [
+        {
+          "author": "Min Choi (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Grok 4.5 — всего 1.5 трлн параметров. Kimi K3 — 2.8 трлн... и стоит в 3 раза дороже за задачу. SpaceXAI взломали эффективность интеллекта. Представьте Grok на 3 трлн.",
+            "en": "Grok 4.5 is only 1.5T parameters. Kimi K3 is 2.8T... and costs 3× more per task. SpaceXAI cracked intelligence efficiency. Now imagine Grok at 3T."
+          },
+          "url": "https://x.com/minchoi/status/2078239768459030811"
+        },
+        {
+          "author": "Kimi (Moonshot AI, официальный аккаунт)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Добро пожаловать в клуб «2 триллиона+».",
+            "en": "Welcome to the '2 Trillion+' club."
+          },
+          "url": "https://finance.biggo.com/news/dGTB-pwBDPbb-ItTVjU2"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды, планирующие агентные coding-нагрузки на Grok, ждут релиза 4.6, а не переключаются сразу: Маск обещает прирост возможностей без потери нынешней скорости/цены Grok 4.5 — это важно для тех, кто уже завязан на дешёвый токен xAI в Cursor-подобных пайплайнах.",
+            "en": "Teams planning agentic coding workloads on Grok are waiting for the 4.6 release rather than switching immediately: Musk is promising a capability jump without giving up Grok 4.5's current speed/price, which matters for anyone already relying on xAI's cheap tokens in Cursor-like pipelines."
+          },
+          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262040652-spacex-ai-musk-kimi-k3-tsla-xai-grok4-6-tradingkey"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-21-moonshot-kimi-k3-subscription-pause",
+      "cluster_id": "moonshot-kimi-k3",
+      "models": ["moonshot"],
+      "title": {
+        "ru": "Kimi K3 настолько популярна, что Moonshot приостановил новые подписки",
+        "en": "Kimi K3 is so popular Moonshot paused new subscriptions"
+      },
+      "summary": {
+        "ru": "19 июля, спустя три дня после релиза 2.8-триллионной Kimi K3, Moonshot AI приостановил приём новых потребительских подписок: спрос за 48 часов подошёл к пределу GPU-мощностей компании. Действующих подписчиков пауза не затрагивает, слоты будут открывать партиями; заодно Moonshot решил разделить тарифы на «Kimi Membership» (веб/приложение/Kimi Work) и «Kimi Code Membership» (кодинг-агенты) — чтобы точнее распределять компьют между casual-чатом и тяжёлыми agentic-сессиями.",
+        "en": "On July 19, three days after releasing the 2.8-trillion-parameter Kimi K3, Moonshot AI paused new consumer subscriptions: demand over 48 hours pushed close to the limits of its GPU capacity. Existing subscribers are unaffected, and new slots will reopen in batches; Moonshot is also splitting its plans into 'Kimi Membership' (web/app/Kimi Work) and 'Kimi Code Membership' (coding agents) to match compute more precisely to casual chat versus heavy agentic sessions."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Не новая возможность модели, а сильный сигнал реального спроса на открытую китайскую LLM для агентных задач — интересно как индикатор рынка, но не меняет подходы к использованию LLM.",
+        "en": "Not a new model capability but a strong real-world demand signal for an open Chinese LLM in agentic workloads — notable as a market indicator, but it doesn't change how people use LLMs."
+      },
+      "source_url": "https://x.com/Kimi_Moonshot/status/2078855608565207130",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Компания молодец: приоритет — действующие клиенты и их удовлетворённость, а не гонка за ростом любой ценой.",
+            "en": "Good on the company for prioritizing existing customers and keeping them satisfied instead of just chasing fast growth."
+          },
+          "url": "https://news.ycombinator.com/item?id=48969291"
+        },
+        {
+          "author": "Chubby (kimmonismus, X)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Спрос на Kimi K3 настолько высок, что приём новых подписок сейчас приостановлен. K3 — оглушительный успех, лучшей рекламы не придумаешь.",
+            "en": "Demand for Kimi k3 is so high that no new subscriptions are currently paused. k3 is a resounding success; you couldn't ask for better publicity."
+          },
+          "url": "https://x.com/kimmonismus/status/2078883000847085928"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разделение на Kimi Membership и Kimi Code Membership напрямую касается команд, использующих Kimi Code для агентных coding-workflow: им обещают отдельную квоту компьюта, не зависящую от нагрузки от обычных чат-пользователей.",
+            "en": "The Kimi Membership / Kimi Code Membership split directly affects teams running agentic coding workflows through Kimi Code: they're promised a separate compute quota, insulated from load created by casual chat users."
+          },
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/moonshot-halts-new-kimi-k3-subscriptions-demand-overwhelms-compute/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-21-willison-afraid-of-chinese-models",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Кого пугают китайские модели?",
+        "en": "Who's Afraid of Chinese Models?"
+      },
+      "url": "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/",
+      "summary": {
+        "ru": "Уиллисон пересказывает и поддерживает эссе Бена Томпсона (Stratechery): дистилляцию — по сути обращение к чужому API — физически невозможно запретить, поэтому вместо охоты на китайские модели США стоит признать сбор данных для обучения добросовестным использованием и запретить лицензионные условия, блокирующие дистилляцию для американских компаний. Иначе открытые модели США вынуждены дистиллировать дистилляты через китайские лабы вместо прямого доступа к границе возможностей.",
+        "en": "Willison relays and endorses Ben Thompson's (Stratechery) essay: distillation is essentially just querying someone else's API and is practically impossible to police, so instead of chasing down Chinese models the US should recognize training-data collection as fair use and ban license terms that forbid distillation for US companies. Otherwise American open models end up distilling a distillation via Chinese labs instead of the frontier directly."
+      },
+      "note_page": "notes/articles/willison-afraid-of-chinese-models.html"
+    },
+    {
+      "id": "2026-07-21-lambert-kimi-k3-open-weights-escalation",
+      "type": "article",
+      "author": "Nathan Lambert",
+      "title": {
+        "ru": "Kimi K3: эскалация открытых весов",
+        "en": "Kimi K3: The open-weights escalation"
+      },
+      "url": "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation",
+      "summary": {
+        "ru": "Лэмберт утверждает, что Kimi K3 должен повысить оценку вероятности того, что Китай сможет лидировать в ИИ-возможностях за счёт более капитало-эффективного обучения: американские лаборатории тратят силы на резкие прорывы фронтира, китайские — на догоняющую разработку, которая объективно дешевле. K3 занимает #2 в индексе Vals AI и #3 в Artificial Analysis Intelligence Index при кратно меньшем капитале Moonshot по сравнению с OpenAI/Anthropic — вывод: тезис «китайские модели хороши только за счёт кражи IP» не выдерживает критики.",
+        "en": "Lambert argues Kimi K3 should raise people's estimate that China could outright lead in AI capability through more capital-efficient training: American labs spend effort on dramatic frontier leaps, Chinese labs on catch-up work that's objectively cheaper. K3 ranks #2 on the Vals AI index and #3 on Artificial Analysis's Intelligence Index despite Moonshot having raised orders of magnitude less capital than OpenAI or Anthropic — the takeaway: the 'Chinese models are only good because of IP theft' narrative doesn't hold up."
+      },
+      "note_page": "notes/articles/lambert-kimi-k3-open-weights-escalation.html"
+    }
+  ]
+}

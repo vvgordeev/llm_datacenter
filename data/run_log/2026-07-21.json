@@ -1,0 +1,57 @@
+{
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21T05:35:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403 от egress-прокси"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "google/deepmind blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "meta ai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "xai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "mistral blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "deepseek blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "403"},
+    {"source": "Hacker News API (hn.algolia.com, WebFetch)", "status": "blocked", "candidates": 0, "note": "403 от egress-прокси; заменено WebSearch по site:news.ycombinator.com"},
+    {"source": "anthropic (WebSearch, 2x)", "status": "empty", "candidates": 0, "note": "Reflect, Claude Code stability update, Usage-tab в admin console — все уже опубликованы в предыдущих сводках или датированы вне окна (компилятивные releasebot-сводки без точной даты, не включены во избежание выдумывания даты)"},
+    {"source": "openai (WebSearch, 2x)", "status": "empty", "candidates": 0, "note": "GPT-5.6/GPT-Live/ChatGPT Work/unified search/desktop — всё уже опубликовано в предыдущих сводках"},
+    {"source": "google/gemini (WebSearch, 2x)", "status": "empty", "candidates": 0, "note": "Gemini 3.5 Pro по-прежнему не выпущена публично (третий пропущенный дедлайн — 17 июля); Antigravity CLI migration — анонс от 19 мая, дедлайн 18 июня, вне окна"},
+    {"source": "meta (WebSearch)", "status": "empty", "candidates": 0, "note": "нет нового за окно 19-21 июля"},
+    {"source": "xai (WebSearch, 3x)", "status": "ok", "candidates": 1, "note": "Grok 4.6 (2T, обучение завершается 'на следующей неделе') — подтверждено твитом Маска от 18 июля, репортинг 20 июля; опубликовано"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "новая open-weight модель всё ещё в early access, дата релиза не объявлена"},
+    {"source": "deepseek (WebSearch)", "status": "empty", "candidates": 0, "note": "V4 уже опубликован ранее (07-15), нового за окно нет"},
+    {"source": "aggregators (smol.ai, tldr.tech, AI Weekly, WebSearch)", "status": "ok", "candidates": 3, "note": "Qwen3.8-Max preview (отклонено — enabled:false в config), Kimi K3 subscription pause (опубликовано), World AI Conference/EU-Android/CISA — не продуктовые новости LLM, отклонены"},
+    {"source": "widened pass (AI model release/coding agent update/LLM news July 2026)", "status": "ok", "candidates": 0, "note": "новых кандидатов сверх уже рассмотренных не дал"},
+    {"source": "community: HN (site:news.ycombinator.com)", "status": "ok", "candidates": 2, "note": "Moonshot subscription pause thread (id 48969291) — использован как мнение; Grok 4.6 отдельного треда не нашлось"},
+    {"source": "community: reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "поиск по site: не вернул индексируемых результатов за окно"},
+    {"source": "community: X/Twitter (WebSearch)", "status": "ok", "candidates": 2, "note": "Min Choi, Chubby (kimmonismus) — использованы как мнения"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "Who's Afraid of Chinese Models? (07-20) — опубликовано"},
+    {"source": "experts: Andrej Karpathy (видео)", "status": "empty", "candidates": 0, "note": "последнее найденное видео уже опубликовано 07-10"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "эпизод 214 (07-16, Lila Sciences/lab-as-datacenter) — тема не про подходы к использованию LLM, отклонён"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "не удалось найти видео с подтверждаемой датой в пределах недели"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "empty", "candidates": 0, "note": "найденные кандидаты либо без даты, либо старше недели"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост — 1 июля (twilight of chatbots), уже опубликован; более старые посты вне окна"},
+    {"source": "experts: Nate Herk (видео)", "status": "empty", "candidates": 0, "note": "все проверенные недавние видео (Clay lead-gen 07-12, Claude Code course 07-13, 200K job 07-18) уже опубликованы в предыдущих сводках"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "новых видео с подтверждаемой датой не найдено"},
+    {"source": "experts: widened search (Nathan Lambert/Interconnects, Zvi Mowshowitz)", "status": "ok", "candidates": 1, "note": "Nathan Lambert — Kimi K3: The open-weights escalation — опубликовано; Zvi AI #177 Part 1 найден, но содержание (иск Apple-OpenAI) слишком тонкое/не по теме использования LLM для честного нарративного конспекта — отклонён"}
+  ],
+  "totals": {
+    "candidates": 15,
+    "published": 2,
+    "rejected": {
+      "уже опубликовано ранее (см. seen_urls) или вне окна": 7,
+      "config-исключено (qwen: enabled false)": 1,
+      "не продуктовые/финансовые новости без продуктовой части (World AI Conference, EU-Android, CISA, Moonshot IPO)": 3,
+      "неподтверждённый/не выпущен публично (Gemini 3.5 Pro)": 1,
+      "недостаточно содержания по теме для честного конспекта (Zvi AI #177 Part 1, Latent Space ep.214)": 2,
+      "дата не подтверждена в пределах недели (AI Explained, Matt Pocock, старые Matt Wolfe видео)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not run — ни один видео-кандидат не прошёл отбор (все найденные видео экспертов либо уже опубликованы, либо без проверяемой свежей даты)",
+    "frames": "not run — см. выше",
+    "note": "yt-dlp/imageio-ffmpeg установлены через pip в начале прогона на случай появления видео-кандидата; YouTube RSS-discovery (feeds/videos.xml) дал 403 от egress-прокси на всех 5 проверенных каналах — соответствует нестабильности, отмеченной в SKILL.md"
+  },
+  "notes": [
+    "news: 2 карточки — тихий день, широкий и расширенный проход выполнены (все 7 включённых моделей WebSearch x2-3, агрегаторы, HN, community X/Reddit, widened queries). Оба факта — Grok 4.6 (анонс тренировки, не релиза) и пауза подписок Kimi K3 (спрос/капасити, не новая возможность) — реальны и подтверждены несколькими независимыми источниками, но по существу не меняют подходы к использованию LLM, отсюда impact_score 4 у обоих.",
+    "expert_content: 2 материала вместо минимума в 5 (limits.min_expert_total). Пройдены все 8 экспертов конфига + широкий поиск (Nathan Lambert/Interconnects, Zvi Mowshowitz). Видео-каналы конфига дали 0 пригодных кандидатов: либо уже опубликованы в сводках 07-09..07-19, либо без проверяемой даты в пределах недели. Zvi AI #177 Part 1 и эпизод Latent Space #214 найдены, но отклонены как слишком тонкие/не по теме LLM-usage для честного нарративного конспекта без риска придумывания деталей. Указано честно, а не добрано выдумкой — совпадает с прецедентом run_log 2026-07-20 (тоже 3/5 на схожем by-video-exhaustion основании).",
+    "Egress-деградация окружения: все 7 официальных блогов моделей + HN API + YouTube (RSS/WebFetch) заблокированы на уровне egress-прокси весь прогон — WebSearch как основной канал сработал для обнаружения новостей и мнений, но видео-контент остался полностью недоступен (ни RSS-discovery, ни свежие даты через WebSearch)."
+  ]
+}

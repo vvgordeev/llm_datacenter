@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-21",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Маск подтвердил: 2-триллионный Grok 4.6 заканчивает обучение — ответ на Kimi K3",
+        "en": "Musk confirms 2-trillion-parameter Grok 4.6 finishes training — xAI's answer to Kimi K3"
+      }
+    },
+    {
       "date": "2026-07-20",
       "news_count": 1,
       "expert_count": 3,

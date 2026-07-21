@@ -110,7 +110,13 @@
     "https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/": "2026-07-20",
     "https://simonwillison.net/2026/Jul/19/ai-mania/": "2026-07-20",
     "https://thezvi.substack.com/p/demis-hassabis-on-the-new-coming": "2026-07-20",
-    "https://www.youtube.com/watch?v=eFOTQpbGcy8": "2026-07-20"
+    "https://www.youtube.com/watch?v=eFOTQpbGcy8": "2026-07-20",
+    "https://x.com/elonmusk/status/2078289996323148076": "2026-07-21",
+    "https://x.com/Kimi_Moonshot/status/2078855608565207130": "2026-07-21",
+    "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/": "2026-07-21",
+    "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation": "2026-07-21",
+    "notes/articles/willison-afraid-of-chinese-models.html": "2026-07-21",
+    "notes/articles/lambert-kimi-k3-open-weights-escalation.html": "2026-07-21"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -221,10 +227,10 @@
       }
     },
     "moonshot-kimi-k3": {
-      "last_date": "2026-07-18",
+      "last_date": "2026-07-21",
       "summary": {
-        "ru": "Moonshot AI выпускает Kimi K3 (2.8T MoE, метится в Opus 4.8 по цене Sonnet); на следующий день релиз triggers распродажу техакций и чипмейкеров — новый «момент DeepSeek»",
-        "en": "Moonshot AI ships Kimi K3 (2.8T MoE, aiming at Opus 4.8 at Sonnet-level pricing); the next day the release triggers a tech and chipmaker stock selloff — a new \"DeepSeek moment\""
+        "ru": "Moonshot AI выпускает Kimi K3 (2.8T MoE, метится в Opus 4.8 по цене Sonnet); релиз triggers распродажу техакций; 19 июля — пауза новых подписок из-за спроса, превысившего GPU-мощности",
+        "en": "Moonshot AI ships Kimi K3 (2.8T MoE, aiming at Opus 4.8 at Sonnet-level pricing); the release triggers a tech stock selloff; on July 19, new subscriptions are paused as demand outstrips GPU capacity"
       }
     },
     "thinking-machines-inkling": {
@@ -260,6 +266,13 @@
       "summary": {
         "ru": "ChatGPT добавляет единый поиск по чатам, проектам, изображениям и документам на всех тарифах",
         "en": "ChatGPT adds unified search across chats, Projects, images and documents on every plan"
+      }
+    },
+    "xai-grok-4-6": {
+      "last_date": "2026-07-21",
+      "summary": {
+        "ru": "Маск подтверждает 2-триллионный Grok 4.6, нацеленный обойти Kimi K3 при скорости/цене уровня Grok 4.5; обучение завершается «на следующей неделе», релиза пока нет",
+        "en": "Musk confirms a 2-trillion-parameter Grok 4.6 aimed at beating Kimi K3 while keeping Grok 4.5-level speed/price; training finishes 'next week', no release yet"
       }
     }
   }

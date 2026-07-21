@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Кого пугают китайские модели? — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-20</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Кого пугают китайские модели?</span>
+      <span data-lang="en">Who's Afraid of Chinese Models?</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки (Simon Willison, со ссылкой на эссе Бена Томпсона) ↗</span><span data-lang="en">Original post (Simon Willison, linking Ben Thompson's essay) ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">На фоне волны открытых китайских моделей — Kimi K3 от Moonshot и анонсированного Alibaba превью Qwen3.8-Max — Уиллисон пересказывает и поддерживает аргумент Бена Томпсона (Stratechery): паника вокруг «китайских моделей» бьёт не туда. Настоящая уязвимость американской индустрии — не сами китайские лабы, а собственная политика лицензирования, которая мешает открытым моделям США конкурировать напрямую.</span>
+      <span data-lang="en">Against the backdrop of a wave of open Chinese models — Moonshot's Kimi K3 and Alibaba's just-announced Qwen3.8-Max preview — Willison relays and endorses an argument from Ben Thompson (Stratechery): the panic over "Chinese models" is aimed at the wrong target. The real vulnerability in the US industry isn't the Chinese labs themselves — it's America's own licensing policy, which keeps its own open models from competing directly.</span>
+    </p>
+
+    <h2><span data-lang="ru">Дистилляцию нельзя запретить технически — только договором</span><span data-lang="en">Distillation can't be blocked technically — only contractually</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой тезис: дистилляция чужой модели — это по сути просто отправка запросов к чужому API и обучение своей модели на полученных ответах. Технически остановить это невозможно: любой, кто может платить за токены, может дистиллировать. Единственный реальный рычаг, которым располагают фронтир-лабы, — условия использования (terms of service), запрещающие клиентам обучать конкурирующие модели на выдаче их API. Но это правило соблюдают в основном добросовестные американские компании — модели с открытыми весами уже впитали большую часть этих знаний через более длинную цепочку посредников, и китайские лабы в этой цепочке не связаны теми же контрактными ограничениями.</span>
+      <span data-lang="en">The core claim: distilling someone else's model is essentially just querying their API and training on the responses. There's no technical way to stop it — anyone willing to pay for tokens can distill. The only real lever frontier labs have is contractual: terms of service that forbid customers from training competing models on their API output. But that rule is mostly honored by law-abiding American companies — open-weight models have already absorbed most of that knowledge through a longer chain of intermediaries, and the Chinese labs in that chain aren't bound by the same contractual restrictions.</span>
+    </p>
+
+    <h2><span data-lang="ru">Итог: американские открытые модели дистиллируют дистилляты</span><span data-lang="en">The result: American open models end up distilling a distillation</span></h2>
+    <p>
+      <span data-lang="ru">Раз в терминах использования у больших лабораторий стоит запрет на дистилляцию, а обходить его напрямую готовы не все, получается странная картина: американские открытые модели вынуждены учиться не у самого фронтира, а у китайских моделей, которые сами уже задистиллировали фронтир в обход этих ограничений — то есть дистиллируют дистилляцию через посредника вместо прямого доступа к границе возможностей. Томпсон предлагает конкретную политическую меру: закрепить законом, что сбор данных для обучения моделей — добросовестное использование (fair use), и одновременно запретить для американских компаний лицензионные условия, блокирующие дистилляцию. Это не остановит копирование как явление, зато уравняет условия для открытых моделей США.</span>
+      <span data-lang="en">Because the big labs' terms of service ban distillation, and not everyone is willing to route around that directly, you get a strange picture: American open models end up learning not from the frontier itself but from Chinese models that have already distilled the frontier around those restrictions — distilling a distillation through an intermediary instead of getting direct access to the frontier. Thompson proposes a concrete policy fix: codify in law that collecting training data is fair use, and simultaneously ban license terms that forbid distillation, at least for US companies. That wouldn't stop copying as a phenomenon, but it would level the playing field for US open models.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уиллисон добавляет контекст к тому же обсуждению: по версии Томпсона, решение Alibaba всё же выпустить веса Qwen3.8-Max в открытый доступ — разворот по сравнению с апрельским решением придержать веса Qwen3.7-Max — могло быть подтолкнуто недавней речью Си Цзиньпина о поддержке открытости и обмена в ИИ. Для читателя дашборда вывод простой: спор идёт не о том, «опасны ли» китайские открытые модели, а о том, что нынешняя политика лицензирования США фактически передаёт им преимущество, которое могло бы достаться американским открытым альтернативам.</span>
+      <span data-lang="en">Willison adds context to the same discussion: per Thompson, Alibaba's decision to release Qwen3.8-Max's weights openly after all — a reversal from its April decision to withhold Qwen3.7-Max's weights — may have been nudged by a recent speech from Xi Jinping encouraging openness and sharing in AI. The takeaway for this dashboard's readers is simple: the debate isn't really about whether Chinese open models are "dangerous" — it's that current US licensing policy is effectively handing them an advantage that American open alternatives could otherwise have had.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
