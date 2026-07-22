@@ -1,0 +1,48 @@
+{
+  "date": "2026-07-22",
+  "generated_at": "2026-07-22T05:19:07Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403 at proxy, per known cloud-sandbox pattern"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 0, "note": "recent items already covered in prior days (Reflect, memory, Claude for Teachers); nothing new in lookback window"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 1, "note": "long-horizon sandbox-escape safety report — published"},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "google/deepmind (WebSearch)", "status": "ok", "candidates": 1, "note": "Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber — published"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "meta (WebSearch)", "status": "ok", "candidates": 0, "note": "no fresh product news in lookback window (search surfaced only Llama 3 retrospective content)"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "xai (WebSearch)", "status": "ok", "candidates": 0, "note": "Grok 4.6 pretraining-milestone news is a repeat of yesterday's cluster with no new facts; rejected as reprint"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "mistral (WebSearch)", "status": "ok", "candidates": 1, "note": "Microsoft-Mistral partnership expansion (Azure Local disconnected deployment) — published"},
+    {"source": "deepseek news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "deepseek (WebSearch)", "status": "ok", "candidates": 0, "note": "no new facts beyond already-known mid-July V4 official release / peak pricing (covered 2026-07-15)"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "WebFetch 403, per known cloud-sandbox pattern; used WebSearch site:news.ycombinator.com as fallback throughout"},
+    {"source": "news.smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "tldr.tech/ai", "status": "ok (via WebSearch)", "candidates": 1, "note": "surfaced the OpenAI sandbox-escape story and Kimi K3 subscription pause as top items; no unique candidate beyond those already found"},
+    {"source": "reddit / X community", "status": "ok (via WebSearch)", "candidates": 0, "note": "no distinct new events beyond the above; used as opinion source for published news items"},
+    {"source": "expert: Simon Willison (article)", "status": "ok", "candidates": 2, "note": "2 fresh articles published (cat-and-thariq fireside chat, cheap-reverse-engineering)"},
+    {"source": "expert: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "RSS blocked (403); WebSearch found only already-covered or unverifiable-channel videos this week"},
+    {"source": "expert: Latent Space (article)", "status": "empty", "candidates": 0, "note": "recent posts (Databricks ep., AI Engineer World's Fair trends) already published in prior days"},
+    {"source": "expert: AI Explained (video)", "status": "empty", "candidates": 0, "note": "RSS blocked (403); could not confirm channel ownership of candidate videos via WebSearch alone"},
+    {"source": "expert: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "RSS blocked (403); no confirmed fresh non-duplicate video found via WebSearch"},
+    {"source": "expert: Ethan Mollick (article)", "status": "empty", "candidates": 0, "note": "latest identifiable post ('twilight of the chatbots') already published 2026-07-06"},
+    {"source": "expert: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "candidate videos found were duplicates already in seen_urls"},
+    {"source": "expert: Matt Pocock (video)", "status": "ok", "candidates": 1, "note": "fresh video confirmed on configured channel_id, non-duplicate"}
+  ],
+  "totals": {
+    "candidates": 22,
+    "published": 4,
+    "rejected": {
+      "перепечатки/уже покрыто": 8,
+      "не по теме (финансовые/рыночные без продуктовой части)": 2,
+      "неподтверждённый канал/авторство": 3,
+      "недостаточно нового по сюжету": 1
+    }
+  },
+  "video_pipeline": {
+    "yt_dlp_ffmpeg": "installed via pip at run start (yt-dlp, imageio-ffmpeg) per SKILL.md step 0.4",
+    "gemini": "ok — 1 video analyzed (Matt Pocock, YLq04CDeOTE), theses+timestamps extracted",
+    "frames": "skipped: youtube.com CONNECT blocked at egress proxy (403) for yt-dlp today, consistent with 2026-07-18 pattern; video note published without frames, noted inline"
+  },
+  "notes": "Direct WebFetch to all vendor blogs, YouTube RSS feeds and HN Algolia API returned 403 at the proxy layer today (consistent with known cloud-sandbox behavior) — WebSearch was the sole discovery channel for the entire run. That's >1/3 of configured sources blocked at the transport level; treated as expected environment degradation, not a silent-day signal, per the discovery results above. Expert-content minimum (5) was not met (3 published: 2 articles + 1 video) — video discovery was hit hardest since RSS and yt-dlp were both blocked, and several plausible candidate videos could not be confidently attributed to a configured channel via WebSearch alone, so they were left out rather than risked."
+}

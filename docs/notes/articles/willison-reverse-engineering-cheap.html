@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Реверс-инжиниринг подешевел — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-20</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Реверс-инжиниринг теперь дёшев</span>
+      <span data-lang="en">Reverse-engineering is cheap now</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон собирает подборку анекдотов от людей, которые с помощью кодинг-агентов реверс-инжинирили и автоматизировали устройства у себя дома — от недокументированных API бытовой техники до самодельных интеграций «умного дома». Он подаёт это не как список забавных хаков, а как иллюстрацию того, к чему на практике приводит резкое удешевление написания кода: раньше нерентабельная категория работы становится рентабельной.</span>
+      <span data-lang="en">Simon Willison collects a set of anecdotes from people who used coding agents to reverse-engineer and automate devices in their own homes — from undocumented appliance APIs to homegrown smart-home integrations. He frames it not as a list of fun hacks but as an illustration of what falls out in practice once writing code gets radically cheaper: a category of work that used to be unprofitable becomes worth doing.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод не новый — новая экономика вокруг него</span><span data-lang="en">The method isn't new — the economics around it are</span></h2>
+    <p>
+      <span data-lang="ru">Реверс-инжиниринг недокументированного устройства был технически возможен и до агентов: перехватить трафик, разобрать протокол, написать клиент. Проблема была не в возможности, а в ROI. Опытные разработчики хорошо знают: недокументированный, нестабильный API производителя может измениться или сломаться в любом следующем обновлении прошивки, и вопрос всегда был один — стоит ли вкладывать часы в работу, которая с равной вероятностью обернётся бесконечным циклом починки. Для большинства людей и большинства устройств ответом было «нет» — овчинка не стоила выделки, и задача так и оставалась в списке «было бы неплохо, но не сейчас».</span>
+      <span data-lang="en">Reverse-engineering an undocumented device was technically possible before coding agents too: sniff the traffic, work out the protocol, write a client. The problem was never feasibility — it was ROI. Experienced developers know an unstable, undocumented vendor API can change or break with the next firmware update, and the question was always whether hours of upfront work were worth committing to, given it might turn into an endless maintenance loop. For most people and most devices, the answer was no — the payoff wasn't worth the effort, and the task stayed on the "would be nice, not now" list.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда код дешёв, не жалко его выбросить</span><span data-lang="en">When code is cheap, throwing it away doesn't hurt</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой сдвиг, который описывает Уиллисон: кодинг-агенты меняют это уравнение целиком, а не частично. Снижается не только усилие на то, чтобы довести автоматизацию до рабочего состояния, — снижается и цена неудачной попытки. Если код стоит дёшево написать, то и мысль о том, что его придётся поддерживать в будущем или выбросить и начать заново, несёт гораздо меньше психологического груза. Раньше «выбросить два часа работы» ощущалось как потеря; когда агент пишет черновой клиент за несколько минут, эта же неудача — не более чем один из вариантов, которые стоило попробовать.</span>
+      <span data-lang="en">The key shift Willison describes: coding agents change that equation wholesale, not partially. It's not just the effort of getting an automation working that drops — the cost of a failed attempt drops too. If code is cheap to write, the prospect of maintaining it later, or throwing it away and starting over, carries far less psychological weight. Losing "two hours of work" used to feel like a real loss; when an agent drafts a client in a few minutes, that same failure is just one of several things worth trying.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что это меняет — и чего не меняет</span><span data-lang="en">What this changes — and what it doesn't</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод для читателей дашборда: категория задач «реверс-инжиниринг ради одной небольшой личной автоматизации» перестаёт быть уделом энтузиастов с большим запасом свободного времени — порог входа резко упал вместе со стоимостью написания и переписывания кода. При этом сама природа риска не изменилась: недокументированный API производителя всё так же может сломаться при следующем обновлении, и никакой агент не отменяет вопросов легальности и условий использования, которые остаются на стороне человека, запускающего автоматизацию. Изменилось именно то, что решение «попробовать» больше не требует ставить на кон часы работы — можно быстро проверить гипотезу и, если она не сработала, откатиться без сожалений.</span>
+      <span data-lang="en">The practical takeaway for this dashboard's readers: the category of "reverse-engineer a device for one small personal automation" stops being the domain of enthusiasts with lots of spare time — the entry cost fell in lockstep with the cost of writing and rewriting code. The nature of the risk itself hasn't changed, though: an undocumented vendor API can still break on the next update, and no agent resolves the legal and terms-of-service questions that remain the human operator's responsibility. What changed is that deciding to "just try it" no longer means staking hours of work on the outcome — you can test the hypothesis quickly and, if it fails, walk away without regret.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

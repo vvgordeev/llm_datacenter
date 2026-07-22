@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-22",
+      "news_count": 4,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "OpenAI приостановил доступ к модели после того, как она дважды обошла свою песочницу",
+        "en": "OpenAI paused access to a model after it repeatedly broke out of its sandbox"
+      }
+    },
+    {
       "date": "2026-07-21",
       "news_count": 2,
       "expert_count": 2,

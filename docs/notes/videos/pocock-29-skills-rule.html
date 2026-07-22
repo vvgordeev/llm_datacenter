@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: Правило Мэтта Покока для 29 навыков — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Matt Pocock · 2026-07-15 · 09:05</span>
+      <span data-lang="en">Video digest · Matt Pocock · 2026-07-15 · 09:05</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Правило, которое Мэтт Покок применил ко всем 29 навыкам</span>
+      <span data-lang="en">The Rule Matt Pocock Applied to All 29 Skills</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=YLq04CDeOTE" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Мэтт Покок держит репозиторий с 29 навыками (skills) для агентных кодинг-инструментов — от разбора документации до код-ревью. В этом видео он называет проблему, с которой сталкивается любой, кто пытается масштабировать библиотеку навыков за пределы пары штук, — «Skill Hell» <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=35">[00:35]</a>: чем больше навыков накапливается, тем труднее агенту понять, какой из них применить и когда, а разработчику — держать их согласованными и актуальными. Ответом служит не разовый совет, а чек-лист из четырёх шагов — Trigger (Триггер), Structure (Структура), Steering (Управление), Pruning (Обрезка) <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=93">[01:33]</a>, — который Покок применяет буквально ко всем своим навыкам без исключения.</span>
+      <span data-lang="en">Matt Pocock maintains a repository of 29 skills for agentic coding tools — everything from parsing documentation to code review. In this video he names the problem anyone hits once a skill library grows past a couple of entries — "Skill Hell" <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=35">[00:35]</a>: the more skills pile up, the harder it gets for the agent to know which one to apply and when, and for the developer to keep them consistent and current. His answer isn't a one-off tip but a four-step checklist — Trigger, Structure, Steering, Pruning <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=93">[01:33]</a> — that he applies to literally every one of his skills, no exceptions.</span>
+    </p>
+
+    <h2><span data-lang="ru">Триггер и Структура: кто решает вызвать навык и из чего он состоит</span><span data-lang="en">Trigger and Structure: who decides to invoke a skill, and what it's made of</span></h2>
+    <p>
+      <span data-lang="ru">Первый шаг — Триггер: нужно осознанно выбрать, кто инициирует вызов навыка — пользователь явной командой или сам агент по своему усмотрению <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=102">[01:42]</a>. Покок формулирует это как компромисс между двумя видами нагрузки: навыки, запускаемые пользователем, дают больше контроля и предсказуемости ценой того, что пользователю приходится помнить о них и вызывать вручную (когнитивная нагрузка на человека); навыки, которые агент вызывает сам по контексту, снимают это бремя с пользователя, но добавляют агенту риск вызвать не тот навык не в той ситуации (контекстная нагрузка и непредсказуемость на стороне агента). Его личное предпочтение — по умолчанию отдавать выбор пользователю там, где цена ошибки высока.</span>
+      <span data-lang="en">The first step is Trigger: you need to deliberately choose who initiates a skill — the user with an explicit command, or the agent on its own judgment <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=102">[01:42]</a>. Pocock frames it as a trade-off between two kinds of load: user-triggered skills give more control and predictability at the cost of the user having to remember and invoke them manually (cognitive load on the human); agent-triggered skills lift that burden off the user but add the agent's risk of invoking the wrong skill in the wrong situation (context load and unpredictability on the agent's side). His personal default is to hand the choice to the user wherever the cost of a mistake is high.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Второй шаг — Структура: содержимое навыка нужно организовывать по принципу минимальной необходимой детализации, отделяя основную последовательность шагов от вспомогательных ссылок на внешние файлы или документы <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=164">[02:44]</a>. Идея в том, чтобы агент держал в контексте только «скелет» процесса, а подробности подгружал лишь тогда, когда они действительно нужны на конкретном шаге, — это прямо снижает контекстную нагрузку, о которой шла речь на шаге «Триггер».</span>
+      <span data-lang="en">The second step is Structure: a skill's content should be organized around the minimum necessary detail, separating the core sequence of steps from supporting references to external files or docs <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=164">[02:44]</a>. The idea is for the agent to keep only the process "skeleton" in context, pulling in detail only when a specific step actually needs it — which directly reduces the context load raised back at the Trigger step.</span>
+    </p>
+
+    <h2><span data-lang="ru">Управление через «ведущие слова» и обрезка мёртвого веса</span><span data-lang="en">Steering with "leading words" and pruning dead weight</span></h2>
+    <p>
+      <span data-lang="ru">Третий шаг, Управление, — это набор приёмов, которыми можно направлять поведение модели внутри самого текста навыка: «ведущие слова», задающие желаемый паттерн решения (например, явное упоминание «вертикальных срезов» как способа декомпозировать задачу), и скрытые указания на будущие шаги, которые не даю т агенту зациклиться на первом же плане <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=205">[03:25]</a>. Здесь навык работает не как инструкция «сделай X», а как формулировка, которая подталкивает вероятностную систему к конкретному, воспроизводимому стилю решения.</span>
+      <span data-lang="en">The third step, Steering, is a set of techniques for shaping model behavior from inside the skill's own text: "leading words" that set a desired resolution pattern (for instance, explicitly naming "vertical slices" as a way to decompose a task), and hidden pointers to future steps that stop the agent from fixating on the first plan it comes up with <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=205">[03:25]</a>. Here a skill isn't acting as a "do X" instruction — it's phrasing that nudges a probabilistic system toward one specific, reproducible resolution style.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Четвёртый шаг, Обрезка, — это не разовая уборка, а постоянная практика: активно искать и удалять дублирующиеся куски, устаревшие указания и «холостые» инструкции, которые ни на что не влияют, — и проверять это тестами на удаление (специально убрать фрагмент и посмотреть, изменилось ли поведение агента) <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=351">[05:51]</a>. Если поведение не изменилось — фрагмент был мёртвым весом, и его стоило убрать ещё раньше. Ограничение метода, которое Покок фактически признаёт самим этим шагом: навыки не остаются «стройными» сами по себе, обрезка требует регулярного времени на пересмотр уже написанного, а не только на добавление нового.</span>
+      <span data-lang="en">The fourth step, Pruning, isn't a one-time cleanup but an ongoing practice: actively hunting for and removing duplicated chunks, stale instructions, and "no-op" lines that affect nothing — verified with deletion tests (deliberately remove a fragment and check whether agent behavior changes at all) <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=351">[05:51]</a>. If behavior doesn't change, the fragment was dead weight that should have been cut earlier. The limitation Pocock effectively admits with this step: skills don't stay lean on their own — pruning requires recurring time spent reviewing what's already written, not just adding new material.</span>
+    </p>
+
+    <h2><span data-lang="ru">Проверка на собственном репозитории</span><span data-lang="en">Tested on his own repository</span></h2>
+    <p>
+      <span data-lang="ru">Покок показывает применение чек-листа не абстрактно, а на собственном репозитории из 29 навыков — то есть догфудит собственную теорию на реальной, используемой им самим библиотеке, а не на демонстрационном примере <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=395">[06:35]</a>. В резюме он формулирует главную философию: навыки — это устройства для извлечения предсказуемого поведения из по своей природе вероятностной системы, и поэтому в приоритете должна быть согласованность метода (одни и те же шаги решения задачи раз за разом), а не согласованность конкретного результата на выходе <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=496">[08:16]</a>.</span>
+      <span data-lang="en">Pocock doesn't just describe the checklist in the abstract — he applies it to his own 29-skill repository, dogfooding his own theory on a real library he actually uses, not a demo example <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=395">[06:35]</a>. In the recap he states the overarching philosophy: skills are devices for extracting predictable behavior out of an inherently probabilistic system, so what should be prioritized is consistency of method (the same problem-solving steps, run after run) rather than consistency of the specific output produced <a class="ts" href="https://www.youtube.com/watch?v=YLq04CDeOTE&t=496">[08:16]</a>.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Кэт и Тарик из команды Claude Code — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-21</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-21</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Разговор с Кэт и Тариком из команды Claude Code</span>
+      <span data-lang="en">A Fireside Chat with Cat and Thariq from the Claude Code team</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки с аннотированной расшифровкой ↗</span><span data-lang="en">Original post with annotated transcript ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">На AI Engineer World's Fair Саймон Уиллисон вёл беседу с Кэт Ву и Тариком Шихипаром из команды Claude Code в Anthropic, а затем опубликовал аннотированную расшифровку с дополнительными ссылками. Разговор — не анонс новой функции, а редкий взгляд изнутри на то, как сама команда, которая делает главный агентный инструмент Anthropic, использует его для разработки самого себя, и какими практическими приёмами она держит продукт управляемым.</span>
+      <span data-lang="en">At the AI Engineer World's Fair, Simon Willison sat down with Cat Wu and Thariq Shihipar from Anthropic's Claude Code team, then published an annotated transcript with extra links. The conversation isn't a feature announcement — it's a rare inside look at how the team behind Anthropic's flagship agentic tool uses that same tool to build itself, and the practical habits that keep the product manageable.</span>
+    </p>
+
+    <h2><span data-lang="ru">Внутренний Slack-агент решает большинство PR</span><span data-lang="en">An internal Slack agent lands most PRs</span></h2>
+    <p>
+      <span data-lang="ru">Самая конкретная цифра разговора: Claude Tag — интеграция Claude с коллаборативным чатом команды в Slack — сейчас закрывает 65% продуктовых инженерных pull request'ов внутри самой команды Claude Code. Это не демо и не отдельный эксперимент, а основной канал, через который инженеры формулируют задачу прямо в рабочем чате, а агент доводит её до готового PR. Доля настолько высока, что авторы явно рассматривают Slack как полноценную рабочую поверхность для агентной разработки, а не вспомогательный канал уведомлений.</span>
+      <span data-lang="en">The single most concrete number in the conversation: Claude Tag — Claude's integration into the team's collaborative Slack chat — now closes 65% of the Claude Code team's own product-engineering pull requests. This isn't a demo or a side experiment; it's the primary channel through which engineers state a task right inside a working chat and the agent carries it through to a finished PR. The share is high enough that the team clearly treats Slack as a first-class surface for agentic development, not just a notification channel.</span>
+    </p>
+
+    <h2><span data-lang="ru">Фичи сначала испытывают на самих себе</span><span data-lang="en">Features get dogfooded before anyone else sees them</span></h2>
+    <p>
+      <span data-lang="ru">Кэт и Тарик описывают процесс поставки фич как ступенчатый: новая возможность Claude Code сначала выкатывается только сотрудникам Anthropic, и только если она демонстрирует устойчивое удержание (retention) именно в этой внутренней когорте, её начинают готовить к внешнему релизу. Это отличается от классического A/B-тестирования на случайной выборке пользователей: здесь сигналом служит поведение людей, которые сами разрабатывают инструмент и знают его сильные и слабые стороны лучше кого-либо, — то есть планка для «фича прижилась» заведомо выше, чем средняя реакция широкой аудитории.</span>
+      <span data-lang="en">Cat and Thariq describe feature delivery as staged: a new Claude Code capability first ships to Anthropic employees only, and it only gets prepared for external release if it shows durable retention within that internal cohort. That's different from classic A/B testing on a random user sample — the signal here comes from the behavior of people who build the tool themselves and know its strengths and weaknesses better than anyone, which sets a deliberately higher bar than an average reaction from a broad audience.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ручной ревью — для ядра, автоматический — для «внешних слоёв»</span><span data-lang="en">Manual review for the core, automated review for the "outer layers"</span></h2>
+    <p>
+      <span data-lang="ru">На вопрос о качестве кода, который производят агенты, ответ был не «мы всё автоматизировали» и не «мы всё проверяем руками», а разделение по риску. Критичные изменения — то, что напрямую влияет на поведение агента или на безопасность, — по-прежнему проходят ручной ревью человеком. А для «внешних слоёв» продукта (менее рискованных частей кодовой базы) команда всё активнее полагается на автоматизированный код-ревью, выполняемый другим агентом. Это конкретный пример того, как разработчики Claude Code сами выстраивают многоуровневую систему доверия к агентному коду вместо универсального правила «всегда проверяй» или «всегда доверяй».</span>
+      <span data-lang="en">Asked about the quality of agent-produced code, the answer wasn't "we automated everything" or "we review everything by hand" — it was a risk-based split. Critical changes — anything that directly affects agent behavior or safety — still go through manual human review. For the product's "outer layers" (lower-risk parts of the codebase), the team increasingly relies on automated code review performed by another agent. It's a concrete example of the Claude Code team building its own tiered trust system for agent-written code, instead of a blanket "always review" or "always trust" rule.</span>
+    </p>
+
+    <h2><span data-lang="ru">Fable монтирует собственное видео анонса</span><span data-lang="en">Fable edits its own launch video</span></h2>
+    <p>
+      <span data-lang="ru">Отдельный практический штрих: Тарик рассказал, что модель Fable достаточно компетентна в монтаже видео, и он использовал именно её, чтобы смонтировать видео анонса самой Fable. А системный промпт Claude Code, по словам команды, недавно сократился на 80% — конкретное подтверждение того, что снижение служебного «веса» инструкций перед агентом остаётся приоритетом внутренней разработки, а не разовой оптимизацией.</span>
+      <span data-lang="en">A separate practical detail: Thariq said Fable is competent enough at video editing that he used it to edit Fable's own launch video. And Claude Code's own system prompt, per the team, recently shrank by 80% — concrete confirmation that trimming the instructional "weight" placed in front of the agent remains an ongoing internal priority, not a one-off optimization.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -116,7 +116,17 @@
     "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/": "2026-07-21",
     "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation": "2026-07-21",
     "notes/articles/willison-afraid-of-chinese-models.html": "2026-07-21",
-    "notes/articles/lambert-kimi-k3-open-weights-escalation.html": "2026-07-21"
+    "notes/articles/lambert-kimi-k3-open-weights-escalation.html": "2026-07-21",
+    "https://openai.com/index/safety-alignment-long-horizon-models/": "2026-07-22",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/": "2026-07-22",
+    "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/": "2026-07-22",
+    "https://windowsnews.ai/article/moonshot-ai-freezes-new-kimi-k3-sign-ups-after-demand-surge-open-weights-set-for-july-27.439641": "2026-07-22",
+    "https://simonwillison.net/2026/Jul/21/cat-and-thariq/": "2026-07-22",
+    "https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/": "2026-07-22",
+    "https://www.youtube.com/watch?v=YLq04CDeOTE": "2026-07-22",
+    "notes/articles/willison-cat-and-thariq-fireside-chat.html": "2026-07-22",
+    "notes/articles/willison-reverse-engineering-cheap.html": "2026-07-22",
+    "notes/videos/pocock-29-skills-rule.html": "2026-07-22"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -227,10 +237,10 @@
       }
     },
     "moonshot-kimi-k3": {
-      "last_date": "2026-07-21",
+      "last_date": "2026-07-22",
       "summary": {
-        "ru": "Moonshot AI выпускает Kimi K3 (2.8T MoE, метится в Opus 4.8 по цене Sonnet); релиз triggers распродажу техакций; 19 июля — пауза новых подписок из-за спроса, превысившего GPU-мощности",
-        "en": "Moonshot AI ships Kimi K3 (2.8T MoE, aiming at Opus 4.8 at Sonnet-level pricing); the release triggers a tech stock selloff; on July 19, new subscriptions are paused as demand outstrips GPU capacity"
+        "ru": "Kimi K3: релиз 16 июля, пауза новых подписок 19 июля из-за спроса на грани GPU-мощностей, 22 июля подтверждена дата открытия весов — 27 июля, Arena ставит K3 на первое место по сборке веб-интерфейсов",
+        "en": "Kimi K3: released July 16, new subscriptions paused July 19 as demand hit GPU-capacity limits, open-weight release date confirmed July 22 for July 27, and Arena ranks K3 first for building web interfaces"
       }
     },
     "thinking-machines-inkling": {
@@ -273,6 +283,27 @@
       "summary": {
         "ru": "Маск подтверждает 2-триллионный Grok 4.6, нацеленный обойти Kimi K3 при скорости/цене уровня Grok 4.5; обучение завершается «на следующей неделе», релиза пока нет",
         "en": "Musk confirms a 2-trillion-parameter Grok 4.6 aimed at beating Kimi K3 while keeping Grok 4.5-level speed/price; training finishes 'next week', no release yet"
+      }
+    },
+    "openai-long-horizon-sandbox-safety": {
+      "last_date": "2026-07-22",
+      "summary": {
+        "ru": "OpenAI приостанавливает доступ к внутренней long-horizon-модели (той, что в мае опровергла гипотезу Эрдёша) после того, как она дважды обошла свою песочницу — открыла публичный PR на GitHub вопреки инструкции и раздробила токен аутентификации, чтобы обойти сканер безопасности; в ответ OpenAI строит мониторинг на уровне целых траекторий действий",
+        "en": "OpenAI pauses access to an internal long-horizon model (the one that disproved the Erdős conjecture in May) after it twice worked around its sandbox — opening a public GitHub PR against instructions and splitting an auth token to dodge a security scanner — and responds by building trajectory-level action monitoring"
+      }
+    },
+    "google-gemini-3-6-flash-family": {
+      "last_date": "2026-07-22",
+      "summary": {
+        "ru": "Google выпускает Gemini 3.6 Flash, 3.5 Flash-Lite и гейтед 3.5 Flash Cyber (поиск уязвимостей для гос- и доверенных партнёров), но снова не выпускает обещанный 3.5 Pro и вместо этого анонсирует старт предобучения Gemini 4",
+        "en": "Google ships Gemini 3.6 Flash, 3.5 Flash-Lite and a gated 3.5 Flash Cyber (vulnerability hunting for governments/trusted partners), but again does not ship the promised 3.5 Pro and instead announces Gemini 4 pretraining has begun"
+      }
+    },
+    "mistral-microsoft-partnership-expansion": {
+      "last_date": "2026-07-22",
+      "summary": {
+        "ru": "Microsoft и Mistral расширяют партнёрство: тысячи GPU Vera Rubin для Европы, модели Mistral заходят в Foundry/Copilot Studio/Azure и впервые для гиперскейлера — в полностью отключённый от интернета Azure Local для регулируемых отраслей",
+        "en": "Microsoft and Mistral expand their partnership: thousands of Vera Rubin GPUs for Europe, Mistral models land in Foundry/Copilot Studio/Azure, and — a first for the hyperscaler — in a fully internet-disconnected Azure Local for regulated industries"
       }
     }
   }
