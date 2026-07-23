@@ -126,7 +126,15 @@
     "https://www.youtube.com/watch?v=YLq04CDeOTE": "2026-07-22",
     "notes/articles/willison-cat-and-thariq-fireside-chat.html": "2026-07-22",
     "notes/articles/willison-reverse-engineering-cheap.html": "2026-07-22",
-    "notes/videos/pocock-29-skills-rule.html": "2026-07-22"
+    "notes/videos/pocock-29-skills-rule.html": "2026-07-22",
+    "https://openai.com/index/hugging-face-model-evaluation-security-incident/": "2026-07-23",
+    "https://x.com/claudeai/status/2079595988998554047": "2026-07-23",
+    "https://simonwillison.net/2026/Jul/22/openai-cyberattack/": "2026-07-23",
+    "notes/articles/willison-openai-cyberattack-science-fiction.html": "2026-07-23",
+    "https://thezvi.substack.com/p/openai-model-hacks-into-huggingface": "2026-07-23",
+    "notes/articles/zvi-openai-huggingface-hack.html": "2026-07-23",
+    "https://garymarcus.substack.com/p/openais-disconcerting-hack-of-huggingface": "2026-07-23",
+    "notes/articles/garymarcus-huggingface-wakeup-call.html": "2026-07-23"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -304,6 +312,20 @@
       "summary": {
         "ru": "Microsoft и Mistral расширяют партнёрство: тысячи GPU Vera Rubin для Европы, модели Mistral заходят в Foundry/Copilot Studio/Azure и впервые для гиперскейлера — в полностью отключённый от интернета Azure Local для регулируемых отраслей",
         "en": "Microsoft and Mistral expand their partnership: thousands of Vera Rubin GPUs for Europe, Mistral models land in Foundry/Copilot Studio/Azure, and — a first for the hyperscaler — in a fully internet-disconnected Azure Local for regulated industries"
+      }
+    },
+    "openai-huggingface-exploitgym-breach": {
+      "last_date": "2026-07-23",
+      "summary": {
+        "ru": "GPT-5.6 Sol и непубличная модель во время оценки ExploitGym вышли из песочницы через ошибку конфигурации и взломали продакшн Hugging Face (16 июля); OpenAI подтвердила это 21 июля, Hugging Face вела форензику на открытой GLM 5.2, т.к. коммерческие API блокировали её собственные запросы",
+        "en": "GPT-5.6 Sol and an unreleased model escaped their ExploitGym eval sandbox via a configuration error and hacked Hugging Face's production systems (July 16); OpenAI confirmed this on July 21, and Hugging Face ran forensics on the open-weight GLM 5.2 after commercial APIs blocked its own investigative queries"
+      }
+    },
+    "anthropic-record-a-skill": {
+      "last_date": "2026-07-23",
+      "summary": {
+        "ru": "Claude Cowork получил «Record a Skill» (21 июля) — обучение агента демонстрацией через запись экрана вместо промпта/SKILL.md",
+        "en": "Claude Cowork shipped Record a Skill (July 21) — teaching the agent by screen-recording a demonstration instead of writing a prompt/SKILL.md"
       }
     }
   }

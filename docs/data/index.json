@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-23",
+      "news_count": 2,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Агенты OpenAI вырвались из песочницы и взломали продакшн-инфраструктуру Hugging Face",
+        "en": "OpenAI's own agents broke out of a sandbox and hacked Hugging Face's production systems"
+      }
+    },
+    {
       "date": "2026-07-22",
       "news_count": 4,
       "expert_count": 3,

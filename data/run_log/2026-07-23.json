@@ -1,0 +1,51 @@
+{
+  "date": "2026-07-23",
+  "generated_at": "2026-07-23T06:10:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403 at proxy"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 1, "note": "\"Record a Skill\" in Claude Cowork (shipped 2026-07-21, discovered today) — published"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 1, "note": "OpenAI/Hugging Face ExploitGym sandbox-escape breach (disclosed 2026-07-21/22) — published, high impact"},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "google/deepmind (WebSearch)", "status": "ok", "candidates": 0, "note": "Gemini 3.6 Flash family already published 2026-07-22; no new facts in lookback window beyond EU DMA Android ruling (regulatory, not a product feature — rejected)"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "meta (WebSearch)", "status": "ok", "candidates": 0, "note": "no fresh product news in lookback window"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "xai (WebSearch)", "status": "ok", "candidates": 0, "note": "Grok 4.6 pretraining-completion coverage repeats yesterday's cluster with no new dated facts; Odyssey-film teaser is marketing without product content — both rejected"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "mistral (WebSearch)", "status": "ok", "candidates": 0, "note": "Microsoft partnership already published 2026-07-22; nothing new"},
+    {"source": "deepseek news (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "deepseek (WebSearch)", "status": "ok", "candidates": 0, "note": "July 24 date is an API model-name deprecation deadline, not a new release — rejected as not-news"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch site:news.ycombinator.com used as fallback throughout"},
+    {"source": "news.smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "tldr.tech/ai (via WebSearch)", "status": "ok", "candidates": 0, "note": "surfaced the same OpenAI/Hugging Face story already found via direct model search; no unique candidate"},
+    {"source": "reddit / X community (via WebSearch)", "status": "ok", "candidates": 0, "note": "no distinct new events; used extensively as opinion source for the two published news items"},
+    {"source": "broadened pass (\"LLM news July 23\", \"AI model release week\", \"AI coding agent update\")", "status": "ok", "candidates": 0, "note": "ran per SKILL.md <5-candidates rule; surfaced only already-covered stories (Kimi K3, Grok 4.6) and off-topic regulatory/financial items"},
+    {"source": "expert: Simon Willison (article)", "status": "ok", "candidates": 1, "note": "fresh analysis of the OpenAI/Hugging Face breach — published"},
+    {"source": "expert: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "no video within 7-day window; his most-cited recent viral thread (\"second brain\") dates to April 2026, too old"},
+    {"source": "expert: Latent Space (article + podcast)", "status": "empty", "candidates": 0, "note": "podcast ep.215 (2026-07-21) topic/guest could not be confirmed via WebSearch (no show notes indexed); newsletter's freshest text post duplicates one already published 2026-07-17"},
+    {"source": "expert: AI Explained (video)", "status": "empty", "candidates": 0, "note": "RSS/yt-dlp CONNECT to youtube.com blocked (403) at the proxy; WebSearch could not surface a dated upload from the configured channel this week; a similarly-named separate podcast entity was found but not used to avoid misattribution"},
+    {"source": "expert: Matt Wolfe (video)", "status": "rejected", "candidates": 1, "note": "processed \"AI News in a Minute, Fri Jul 17\" via gemini_video.py (theses+timestamps extracted successfully) but excluded: pure news-recap format, explicitly out of scope per SKILL.md (\"не новости-пересказы\")"},
+    {"source": "expert: Ethan Mollick (article)", "status": "empty", "candidates": 0, "note": "latest identifiable post is June 30 (\"Twilight of the Chatbots\", already published 2026-07-06); nothing newer found"},
+    {"source": "expert: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "candidate videos found were either duplicates already in seen_urls or outside the 7-day window (May/June uploads)"},
+    {"source": "expert: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "his deep-dive video was already published 2026-07-22; no newer non-duplicate upload found within window"},
+    {"source": "expert: broadened (Zvi Mowshowitz, Don't Worry About the Vase)", "status": "ok", "candidates": 1, "note": "same-day analysis of the OpenAI/Hugging Face breach, ~10h old at search time — published"},
+    {"source": "expert: broadened (Gary Marcus)", "status": "ok", "candidates": 1, "note": "same-day policy commentary on the OpenAI/Hugging Face breach — published"},
+    {"source": "expert: broadened (Nathan Lambert, interconnects.ai)", "status": "empty", "candidates": 0, "note": "latest post is 2026-07-12, outside the 7-day window"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 2,
+    "rejected": {
+      "уже покрыто вчера/ранее (Gemini 3.6 Flash family, Grok 4.6, Mistral-Microsoft, Kimi K3)": 4,
+      "не по теме — регуляторное/маркетинг без продуктовой части (EU DMA ruling, Grok Odyssey teaser)": 2,
+      "не новость — дедлайн переименования API, не релиз (DeepSeek Jul-24 deprecation)": 1
+    }
+  },
+  "video_pipeline": {
+    "yt_dlp_ffmpeg": "installed via pip at run start (yt-dlp, imageio-ffmpeg) per SKILL.md step 0.4",
+    "gemini": "ok — 1 video analyzed end-to-end (Matt Wolfe, RDf7gsvS9e0) confirming generativelanguage.googleapis.com is reachable even though youtube.com CONNECT is blocked; result excluded from digest for content-fit reasons (news-recap format), not a pipeline failure",
+    "frames": "not attempted — the one video processed was not selected for publication, so extract_frames.py was not run this cycle"
+  },
+  "notes": "Direct WebFetch to every vendor blog, aggregator, the HN Algolia API, and youtube.com (including yt-dlp's own CONNECT, tested directly) returned 403 at the proxy layer today — consistent with the known cloud-sandbox pattern described in SKILL.md. WebSearch was the sole discovery channel end-to-end. That's the large majority of configured sources blocked at the transport level; treated as expected environment degradation rather than a quiet-day signal. News: only 2 genuinely new stories survived a full pass over all 7 models, 4 aggregator channels, HN, and 3 broadened queries — this looks like a real quiet week for product news (dominated by the OpenAI/Hugging Face story), not under-searching. Expert content: min_expert_total (5) was NOT met — 3 published (1 Simon Willison + 2 broadened: Zvi Mowshowitz, Gary Marcus) against a target of 5, despite widening past the 8 configured experts. Of the 8 configured experts, only Simon Willison yielded a fresh, on-topic, non-duplicate item this cycle; the other 7 (Karpathy, Latent Space, AI Explained, Matt Wolfe, Ethan Mollick, Nate Herk, Matt Pocock) had nothing that was simultaneously fresh (7-day window), non-duplicate, and not a pure news-recap — a genuine channel-access gap (YouTube RSS/yt-dlp CONNECT blocked, WebSearch indexing lag on this week's uploads), not a lack of trying. All 3 published expert pieces analyze the same OpenAI/Hugging Face incident from distinct angles (technical/security, alignment/eval-practice, policy/liability) rather than 3 unrelated topics — a deliberate choice reflecting what actually dominated this week's expert discourse, not a search shortcut."
+}
