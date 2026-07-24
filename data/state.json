@@ -134,7 +134,20 @@
     "https://thezvi.substack.com/p/openai-model-hacks-into-huggingface": "2026-07-23",
     "notes/articles/zvi-openai-huggingface-hack.html": "2026-07-23",
     "https://garymarcus.substack.com/p/openais-disconcerting-hack-of-huggingface": "2026-07-23",
-    "notes/articles/garymarcus-huggingface-wakeup-call.html": "2026-07-23"
+    "notes/articles/garymarcus-huggingface-wakeup-call.html": "2026-07-23",
+    "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/": "2026-07-24",
+    "https://openai.com/index/introducing-openai-presence/": "2026-07-24",
+    "https://x.com/mkratsios47/status/2079933645888880708": "2026-07-24",
+    "https://simonwillison.net/2026/Jul/21/nativ/": "2026-07-24",
+    "notes/articles/willison-nativ-local-ai-mac.html": "2026-07-24",
+    "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3": "2026-07-24",
+    "notes/articles/lambert-open-models-recap-kimi-qwen.html": "2026-07-24",
+    "https://thezvi.substack.com/p/on-kimi-k3-its-capabilities-and-related": "2026-07-24",
+    "notes/articles/zvi-kimi-k3-capabilities-discontents.html": "2026-07-24",
+    "https://thenewstack.io/moonshot-fable5-distillation-accusations/": "2026-07-24",
+    "notes/articles/thenewstack-kimi-k3-fable5-siphoning.html": "2026-07-24",
+    "https://www.youtube.com/watch?v=wzY2fV4Mp3U": "2026-07-24",
+    "notes/videos/aiexplained-huggingface-incident-sans-hype.html": "2026-07-24"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -245,10 +258,10 @@
       }
     },
     "moonshot-kimi-k3": {
-      "last_date": "2026-07-22",
+      "last_date": "2026-07-24",
       "summary": {
-        "ru": "Kimi K3: релиз 16 июля, пауза новых подписок 19 июля из-за спроса на грани GPU-мощностей, 22 июля подтверждена дата открытия весов — 27 июля, Arena ставит K3 на первое место по сборке веб-интерфейсов",
-        "en": "Kimi K3: released July 16, new subscriptions paused July 19 as demand hit GPU-capacity limits, open-weight release date confirmed July 22 for July 27, and Arena ranks K3 first for building web interfaces"
+        "ru": "Kimi K3: релиз 16 июля, пауза подписок 19 июля, открытие весов подтверждено на 27 июля; 22 июля Белый дом обвинил Moonshot в скрытой промышленной дистилляции Fable и доступе к запрещённым чипам Nvidia GB300, Минфин допустил санкции, но независимые исследователи (Lambert, Greenblatt) находят обвинение технически сомнительным и не подкреплённым публичными доказательствами",
+        "en": "Kimi K3: released July 16, subscriptions paused July 19, open-weight release confirmed for July 27; on July 22 the White House accused Moonshot of covert industrial distillation of Fable and access to export-banned Nvidia GB300 chips, Treasury floated sanctions, but independent researchers (Lambert, Greenblatt) find the accusation technically questionable and unsupported by public evidence"
       }
     },
     "thinking-machines-inkling": {
@@ -326,6 +339,20 @@
       "summary": {
         "ru": "Claude Cowork получил «Record a Skill» (21 июля) — обучение агента демонстрацией через запись экрана вместо промпта/SKILL.md",
         "en": "Claude Cowork shipped Record a Skill (July 21) — teaching the agent by screen-recording a demonstration instead of writing a prompt/SKILL.md"
+      }
+    },
+    "anthropic-claude-voice-mode-upgrade": {
+      "last_date": "2026-07-24",
+      "summary": {
+        "ru": "Anthropic обновила голосовой режим Claude: Opus и Sonnet вместо только Haiku, кросс-приложенная автоматизация (Gmail, Calendar, Slack, Canva, Notion), поддержка 10 языков",
+        "en": "Anthropic updated Claude's voice mode: Opus and Sonnet alongside Haiku, cross-app automation (Gmail, Calendar, Slack, Canva, Notion), support for 10 languages"
+      }
+    },
+    "openai-presence": {
+      "last_date": "2026-07-24",
+      "summary": {
+        "ru": "OpenAI запустила Presence — управляемую платформу для продакшн-агентов (политики, guardrails, Codex-цикл улучшений); внутреннее использование даёт 75% автоматического решения обращений, партнёры — BBVA Mexico, SoftBank",
+        "en": "OpenAI launched Presence, a managed platform for production agents (policies, guardrails, Codex improvement loop); internal use hits 75% automated resolution, partners include BBVA Mexico and SoftBank"
       }
     }
   }

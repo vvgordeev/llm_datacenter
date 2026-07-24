@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Открытые модели: ещё раз о Kimi K3, Qwen 3.8, речи Си на WAIC и дистилляции» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Nathan Lambert (Interconnects) · 2026-07-22</span>
+      <span data-lang="en">Article digest · Nathan Lambert (Interconnects) · 2026-07-22</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Открытые модели: ещё раз о Kimi K3, Qwen 3.8, речи Си на WAIC и дистилляции</span>
+      <span data-lang="en">Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC speech, distillation, and what's next</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейтан Лэмберт вместе с Флорианом Брандом разбирают волну событий вокруг открытых моделей за последнюю неделю: релиз Kimi K3 от Moonshot 16 июля, анонс Alibaba о том, что веса Qwen 3.8 тоже будут открытыми, речь Си Цзиньпина на конференции WAIC в Шанхае в поддержку доступного ИИ — и вспыхнувший следом спор о том, была ли K3 дистиллирована из модели Anthropic. Ядро материала — не политический спор сам по себе, а попытка объяснить методологию: что вообще такое дистилляция и почему большинство разговоров о ней в этом случае поверхностны.</span>
+      <span data-lang="en">Nathan Lambert and Florian Brand break down a week's worth of open-model news: Moonshot's Kimi K3 release on July 16, Alibaba's announcement that Qwen 3.8's weights will also be open, Xi Jinping's speech at the WAIC conference in Shanghai in support of accessible AI — and the distillation dispute that flared up right after. The core of the piece isn't the political fight itself but an attempt to explain the methodology: what distillation actually is, and why most of the discourse around it here is shallow.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что такое дистилляция и где проходит граница легальности</span><span data-lang="en">What distillation is, and where the line of legality runs</span></h2>
+    <p>
+      <span data-lang="ru">Дистилляция — это обучение более слабой («ученик») модели имитировать выходы более сильной («учитель»): ученику показывают ответы учителя на множество запросов и настраивают его веса так, чтобы он воспроизводил похожее поведение при меньшем размере или цене. Сделанная в небольшом, публичном масштабе — например, когда открытая модель дообучается на публично доступных ответах ChatGPT или Claude, — это давняя и повсеместная практика всей индустрии, включая западные лаборатории. Спорной её делает не сам факт, а масштаб и скрытность: обвинение Кратсиоса описывает не разовое использование выходов чужой модели, а построенную инфраструктуру, которая переключает методы доступа именно для того, чтобы не быть замеченной поставщиком модели-учителя.</span>
+      <span data-lang="en">Distillation trains a weaker "student" model to imitate a stronger "teacher" model's outputs: the student is shown the teacher's answers to many prompts, and its weights are tuned to reproduce similar behavior at a smaller size or lower cost. Done at small, public scale — say, an open model fine-tuned on publicly available ChatGPT or Claude responses — it's a long-standing, industry-wide practice, including at Western labs. What makes a case contested isn't the act itself but its scale and covertness: Kratsios's accusation describes not a one-off use of another model's outputs, but built infrastructure that switches access methods specifically to avoid detection by the teacher model's provider.</span>
+    </p>
+
+    <h2><span data-lang="ru">K3 поднимает потолок для будущей дистилляции</span><span data-lang="en">K3 raises the ceiling for future distillation</span></h2>
+    <p>
+      <span data-lang="ru">Отдельный тезис Лэмберта: независимо от того, как именно была обучена сама K3, теперь она поднимает планку для всех, кто дистиллирует модели дальше по цепочке. Любая модель, обученная имитировать выходы K3, унаследует больше её глубины рассуждений, качества кода и предметных знаний, чем унаследовала бы от более слабого учителя, — то есть спор про K3 важен не только сам по себе, а как прецедент для следующего раунда открытых моделей, включая ожидаемый открытый релиз Qwen 3.8.</span>
+      <span data-lang="en">A separate point Lambert makes: regardless of exactly how K3 itself was trained, it now raises the bar for everyone distilling models further down the chain. Any model trained to imitate K3's outputs will inherit more of its reasoning depth, coding quality, and domain knowledge than it would from a weaker teacher — so the fight over K3 matters not just on its own, but as a precedent for the next round of open models, including the expected open release of Qwen 3.8.</span>
+    </p>
+
+    <h2><span data-lang="ru">Смещение баланса между открытыми и закрытыми моделями</span><span data-lang="en">A shifting balance between open and closed models</span></h2>
+    <p>
+      <span data-lang="ru">Авторы связывают три события в одну картину: релиз K3, предстоящий открытый Qwen 3.8 и явную политическую поддержку доступного ИИ со стороны Пекина на WAIC. Вывод — открытый фронтир Китая движется быстрее, чем предполагали большинство западных наблюдателей ещё в начале года, и обвинения в дистилляции, даже если они верны лишь частично, не отменяют того, что разрыв между открытыми и закрытыми моделями продолжает сокращаться по причинам, не сводящимся к одной лишь дистилляции.</span>
+      <span data-lang="en">The authors tie three events into one picture: the K3 release, the coming open-weight Qwen 3.8, and Beijing's explicit political backing of accessible AI at WAIC. Their takeaway: China's open frontier is moving faster than most Western observers expected even at the start of the year, and distillation accusations, even if partly true, don't change the fact that the open-closed gap keeps narrowing for reasons that don't reduce to distillation alone.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

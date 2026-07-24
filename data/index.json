@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-24",
+      "news_count": 3,
+      "expert_count": 5,
+      "top_title": {
+        "ru": "OpenAI запускает Presence — управляемую платформу для продакшн-агентов",
+        "en": "OpenAI launches Presence, a managed platform for production agents"
+      }
+    },
+    {
       "date": "2026-07-23",
       "news_count": 2,
       "expert_count": 3,

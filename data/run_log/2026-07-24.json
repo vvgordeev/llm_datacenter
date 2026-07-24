@@ -1,0 +1,201 @@
+{
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T05:27:03Z",
+  "sources": [
+    {
+      "source": "anthropic blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403 at proxy"
+    },
+    {
+      "source": "anthropic (WebSearch)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Claude voice mode upgrade (Opus/Sonnet, cross-app automation), announced 2026-07-23 — published"
+    },
+    {
+      "source": "openai blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403"
+    },
+    {
+      "source": "openai (WebSearch)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "OpenAI Presence (enterprise agent platform, 2026-07-22) — published; Codex 'tomorrow is feeling codexy' teaser (2026-07-23) — rejected, unconfirmed rumor with no primary announcement yet"
+    },
+    {
+      "source": "google/deepmind blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403"
+    },
+    {
+      "source": "google/deepmind (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Gemini 3.6 Flash family already published 2026-07-22; Google Vids Gemini Omni rollout dates to 2026-07-16/18, outside lookback and no fresh facts"
+    },
+    {
+      "source": "meta ai blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403"
+    },
+    {
+      "source": "meta (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "no fresh product news in lookback window"
+    },
+    {
+      "source": "xai news (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403"
+    },
+    {
+      "source": "xai (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Grok 4.6 training-next-week cluster unchanged since 2026-07-21; no new dated facts"
+    },
+    {
+      "source": "mistral news (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403"
+    },
+    {
+      "source": "mistral (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Microsoft partnership already published 2026-07-22; nothing new"
+    },
+    {
+      "source": "deepseek news (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403"
+    },
+    {
+      "source": "deepseek (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "no confirmed V4 stable/GA release found for 2026-07-24 despite multiple targeted searches; only the already-known API alias deprecation deadline — rejected as not-news"
+    },
+    {
+      "source": "hn algolia api",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403; WebSearch site:news.ycombinator.com used as fallback throughout"
+    },
+    {
+      "source": "news.smol.ai",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch 403; WebSearch summary of today's issue used instead, surfaced Moonshot/distillation and OpenAI Presence stories already found via direct model search"
+    },
+    {
+      "source": "tldr.tech/ai (via WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "no unique candidate beyond stories already found"
+    },
+    {
+      "source": "reddit / X community (via WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "no distinct new product events; used extensively as opinion source for all three published news items"
+    },
+    {
+      "source": "broadened pass (\"AI news July 24 2026\", geopolitics/White House Moonshot search)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "surfaced the White House-vs-Moonshot Kimi K3 distillation accusation (2026-07-22/23) — published as a continuation of the moonshot-kimi-k3 cluster given its scale of community/expert reaction"
+    },
+    {
+      "source": "expert: Simon Willison (article)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Nativ (MLX macOS app), 2026-07-21 — published; his more recent 'cat-and-thariq' post was already published 2026-07-22"
+    },
+    {
+      "source": "expert: Andrej Karpathy (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no video within 7-day window found via WebSearch; most-cited recent video already in seen_urls (2026-07-10)"
+    },
+    {
+      "source": "expert: Latent Space (article + podcast)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "freshest text post ('5 Trends...') already published 2026-07-17; no other dated piece within window confirmed"
+    },
+    {
+      "source": "expert: AI Explained (video)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "'GPT-6 Goes Rogue? The HuggingFace Incident, Sans Hype' — published. IMPORTANT CAVEAT: WebSearch first surfaced a different video ID under a Kimi-K3-themed title that turned out, on Gemini-based verification, to actually be an AI-generated NotebookLM video with unrelated content — discarded before publication. Channel/date for the published video were independently confirmed by asking Gemini to read on-screen dates/watermarks from the video itself, since youtube.com (including oembed) and yt-dlp metadata lookups were 403 at the proxy all run."
+    },
+    {
+      "source": "expert: Matt Wolfe (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no dated upload within window could be confirmed via WebSearch"
+    },
+    {
+      "source": "expert: Ethan Mollick (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "latest identifiable post is May 26 ('Choosing to Stay Human'); recent X posts found but no matching Substack article confirmed"
+    },
+    {
+      "source": "expert: Nate Herk (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no dated, non-duplicate upload found within window"
+    },
+    {
+      "source": "expert: Matt Pocock (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no dated, non-duplicate upload found within window"
+    },
+    {
+      "source": "expert: broadened (Nathan Lambert, interconnects.ai)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "'Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC speech, distillation...' (~2026-07-22) — published"
+    },
+    {
+      "source": "expert: broadened (Zvi Mowshowitz)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "'On Kimi K3: Its Capabilities And Related Discontents' (2026-07-20) — published"
+    },
+    {
+      "source": "expert: broadened (The New Stack)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "'Kimi K3: White House alleges Fable 5 siphoning' (2026-07-23) — published"
+    }
+  ],
+  "totals": {
+    "candidates": 12,
+    "published": 3,
+    "rejected": {
+      "уже покрыто ранее (Gemini 3.6 Flash, Grok 4.6, Mistral-Microsoft partnership)": 3,
+      "неподтверждённый слух без первоисточника (OpenAI Codex 'tomorrow is feeling codexy' teaser)": 1,
+      "не новость — дедлайн переименования API, не релиз (DeepSeek alias deprecation)": 1
+    }
+  },
+  "video_pipeline": {
+    "yt_dlp_ffmpeg": "installed via pip at run start (yt-dlp, imageio-ffmpeg) per SKILL.md step 0.4",
+    "gemini": "ok — 2 videos analyzed via generativelanguage.googleapis.com (confirmed reachable even though youtube.com CONNECT is blocked); 1 published (AI Explained, wzY2fV4Mp3U), 1 discarded after verification showed it was an unrelated NotebookLM-generated video misattributed by WebSearch to a different title/channel",
+    "frames": "attempted for the published video via extract_frames.py — failed: yt-dlp's own CONNECT to youtube.com returned 403 at the proxy (same failure mode as gemini_video.py's URL-based analysis does NOT hit, since that goes through Google's own servers). Video note published without frames, disclaimer added on the page per SKILL.md."
+  },
+  "notes": "Direct WebFetch to every vendor blog, aggregator, the HN Algolia API, and the youtube.com domain (main page, oembed endpoint, and yt-dlp's own CONNECT) returned 403 at the proxy layer all run — consistent with the cloud-sandbox pattern noted in SKILL.md for 2026-07-18. WebSearch was the sole discovery channel end-to-end; Gemini's server-side video fetch (generativelanguage.googleapis.com) was the one channel that still worked for YouTube content. One real near-miss is worth flagging: WebSearch attributed a video ID to an 'AI Explained: Kimi K3 week recap' title, but asking Gemini to read the video's own on-screen branding revealed it was actually an unrelated NotebookLM-generated clip — it was discarded rather than published, and a second, independently verified AI Explained video was found and used instead. Given today's near-total inability to verify YouTube titles/channels/dates through search alone, every video candidate this run was cross-checked by asking Gemini to read on-screen text/watermarks/dates directly from the footage before being trusted, not just taken from WebSearch's summary. News: 3 stories published after a full pass over all 7 enabled models, 4 aggregator channels, HN, and community search — Anthropic's voice-mode upgrade, OpenAI's Presence enterprise-agent platform, and the White House-vs-Moonshot Kimi K3 distillation accusation (continuation of the moonshot-kimi-k3 cluster, included despite its geopolitical rather than product-feature framing because of its scale of community/expert reaction and real stakes for access to open Chinese models). Expert content: min_expert_total (5) was met exactly — 4 articles (Simon Willison, Nathan Lambert, Zvi Mowshowitz, The New Stack) + 1 video (AI Explained), 3 of which independently converge on the same Kimi K3 distillation dispute from distinct angles (methodology of distillation itself, capability/benchmark assessment, accusation mechanics) — a deliberate reflection of what dominated this week's expert discourse, not a search shortcut."
+}

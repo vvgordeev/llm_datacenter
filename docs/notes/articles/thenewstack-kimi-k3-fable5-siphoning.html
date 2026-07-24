@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Kimi K3: Белый дом утверждает об утечке Fable 5» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · The New Stack · 2026-07-23</span>
+      <span data-lang="en">Article digest · The New Stack · 2026-07-23</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Kimi K3: Белый дом утверждает об утечке Fable 5</span>
+      <span data-lang="en">Kimi K3: White House alleges Fable 5 siphoning</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thenewstack.io/moonshot-fable5-distillation-accusations/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">The New Stack разбирает обвинение директора Управления по науке и технологиям Белого дома Майкла Кратсиоса в адрес Moonshot AI не с политической, а с методологической стороны: что вообще означает «дистилляция» применительно к языковым моделям, и почему проведение этой границы между законной и незаконной практикой — само по себе нетривиальная задача.</span>
+      <span data-lang="en">The New Stack unpacks White House OSTP Director Michael Kratsios's accusation against Moonshot AI not from a political angle but a methodological one: what "distillation" actually means for language models, and why drawing the line between its legitimate and illegitimate use is itself a non-trivial task.</span>
+    </p>
+
+    <h2><span data-lang="ru">Механика приёма: модель-ученик учится на модели-учителе</span><span data-lang="en">The mechanics of the technique: a student model learns from a teacher</span></h2>
+    <p>
+      <span data-lang="ru">Дистилляция в самом общем виде — это подача выходов более сильной модели («учителя») на вход более слабой модели («ученика») с последующим обучением ученика имитировать эти выходы. Если делать это открыто и в небольшом масштабе — например, дообучая открытую модель на публично доступных ответах коммерческого чат-бота, — это стандартная и легальная практика, которой пользуется вся индустрия, включая крупные западные лаборатории. Статья подчёркивает: сам факт дистилляции ничего не говорит о её законности — важны масштаб и то, скрывается ли сам процесс от модели-учителя.</span>
+      <span data-lang="en">Distillation, in its most general form, is feeding a stronger model's ("teacher's") outputs into a weaker model ("student") and then training the student to imitate them. Done openly and at small scale — say, fine-tuning an open model on a commercial chatbot's publicly available answers — it's a standard, legal practice used across the industry, including major Western labs. The article stresses that the mere fact of distillation says nothing about its legality — what matters is scale, and whether the process is deliberately hidden from the teacher model's provider.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что именно вменяется Moonshot</span><span data-lang="en">What exactly Moonshot is accused of</span></h2>
+    <p>
+      <span data-lang="ru">По словам Кратсиоса, Moonshot построила отдельную внутреннюю платформу именно для того, чтобы вести дистилляцию в промышленных масштабах против американских моделей, переключаясь между несколькими способами доступа, чтобы избежать обнаружения, — то есть обвинение описывает не разовое использование чужих выходов, а специально спроектированную инфраструктуру уклонения. Отдельно упоминается предполагаемый доступ к запрещённым к экспорту чипам Nvidia GB300 через сервера в Таиланде.</span>
+      <span data-lang="en">According to Kratsios, Moonshot built a dedicated internal platform specifically to run industrial-scale distillation against US models, switching between several access methods to avoid detection — so the accusation describes not a one-off use of another model's outputs, but purpose-built evasion infrastructure. The piece separately notes the alleged access to export-banned Nvidia GB300 chips via servers in Thailand.</span>
+    </p>
+
+    <h2><span data-lang="ru">Обвинение пока без публичных доказательств</span><span data-lang="en">An accusation without public evidence, so far</span></h2>
+    <p>
+      <span data-lang="ru">The New Stack прямо указывает: значимость самого обвинения не отменяет того, что оно пока не подкреплено публично проверяемыми доказательствами. Статья напоминает и более раннюю часть этой же истории — Anthropic ещё в феврале заявляла, что отследила 3,4 миллиона обращений к Claude со стороны Moonshot, и нынешние бенчмарки K3 действительно оказываются в пределах нескольких пунктов от моделей, упомянутых в той более ранней жалобе. Ограничение метода такой журналистской реконструкции честно признано в тексте: без доступа к обучающим логам Moonshot ни подтвердить, ни опровергнуть конкретный механизм дистилляции невозможно — можно лишь сопоставлять косвенные сигналы.</span>
+      <span data-lang="en">The New Stack states plainly: the seriousness of the accusation doesn't change the fact that it isn't yet backed by publicly verifiable evidence. The piece also recalls an earlier chapter of the same story — Anthropic claimed back in February to have traced 3.4 million Claude exchanges to Moonshot, and K3's current benchmarks do land within a few points of the models named in that earlier complaint. The piece is upfront about the limit of this kind of journalistic reconstruction: without access to Moonshot's training logs, no one can confirm or rule out the specific distillation mechanism — only weigh circumstantial signals against each other.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «О Kimi K3: возможности модели и связанные с ними недовольства» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Zvi Mowshowitz · 2026-07-20</span>
+      <span data-lang="en">Article digest · Zvi Mowshowitz · 2026-07-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">О Kimi K3: возможности модели и связанные с ними недовольства</span>
+      <span data-lang="en">On Kimi K3: Its Capabilities And Related Discontents</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thezvi.substack.com/p/on-kimi-k3-its-capabilities-and-related" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Мошовиц сознательно откладывает в сторону политический спор о происхождении Kimi K3 и задаётся более узким вопросом: насколько эта модель на самом деле хороша как инструмент. Его вывод — Kimi K3, если её веса действительно откроют как обещано, станет по чистой заявленной способности сильнейшей открытой моделью, — но дальше он методично объясняет, почему это не значит того, что кажется на первый взгляд.</span>
+      <span data-lang="en">Mowshowitz deliberately sets aside the political dispute over Kimi K3's origin and asks a narrower question: how good is this model actually, as a tool. His conclusion is that K3, assuming its weights are released as promised, will be the strongest open model by raw claimed capability — but he then methodically explains why that doesn't mean what it first appears to.</span>
+    </p>
+
+    <h2><span data-lang="ru">Отставание от закрытого фронтира на месяцы, а не на дни</span><span data-lang="en">Trailing the closed frontier by months, not days</span></h2>
+    <p>
+      <span data-lang="ru">Несмотря на впечатляющие бенчмарки, в совокупности K3 отстаёт от закрытого фронтира на несколько месяцев — по медианной оценке автора, около шести, с более коротким разрывом в предобучении и более длинным именно в постобучении (post-training). Это важное уточнение метода оценки моделей: смотреть нужно не только на итоговый счёт в баллах, но и на то, какой компонент пайплайна (предобучение против постобучения / RLHF-подобной доводки) определяет реальный разрыв, потому что эти два типа отставания закрываются с разной скоростью.</span>
+      <span data-lang="en">Despite impressive benchmarks, K3 trails the closed frontier in aggregate by several months — by the author's median guess, around six, with a shorter gap in pre-training and a longer one specifically in post-training. That's a useful refinement to how models get evaluated: you need to look not just at the final score, but at which pipeline component (pre-training vs. post-training / RLHF-style tuning) drives the real gap, because the two kinds of lag close at different speeds.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему бенчмарки завышают практическую разницу</span><span data-lang="en">Why the benchmarks overstate the practical gap</span></h2>
+    <p>
+      <span data-lang="ru">Ключевое наблюдение Мошовица — методологическая деталь, которую легко упустить: заявленные бенчмарки K3 получены при максимальном бюджете токенов на рассуждение, заметно большем, чем обычно расходуют Fable или Sol в сопоставимых тестах. Иначе говоря, сравнение «баллы к баллам» не учитывает, что модели тратят на получение этих баллов разное количество вычислений — и если пересчитать результат на равный бюджет токенов, реальный разрыв в практической полезности оказывается меньше эффектных цифр, но не равен нулю.</span>
+      <span data-lang="en">Mowshowitz's key observation is a methodological detail that's easy to miss: K3's headline benchmarks were obtained at maximum reasoning-token budget, noticeably higher than what Fable or Sol typically spend on comparable tests. In other words, a score-to-score comparison ignores that the models spend different amounts of compute to reach those scores — and normalized to an equal token budget, the real gap in practical usefulness turns out smaller than the eye-catching numbers, though it isn't zero.</span>
+    </p>
+
+    <h2><span data-lang="ru">Практическая рекомендация: проверить, но не переоценивать</span><span data-lang="en">The practical takeaway: check it, don't overrate it</span></h2>
+    <p>
+      <span data-lang="ru">Итоговый совет автора — прагматичный: Kimi K3 однозначно стоит проверить на предмет того, впишется ли она в конкретные рабочие процессы, но по своей цене она не займёт нишу более дешёвых и мелких открытых моделей, и в прямом столкновении с лучшими закрытыми моделями чаще будет проигрывать — при этом останутся конкретные задачи, где K3 окажется удачным выбором. Ограничение самого подхода Мошовица он признаёт открыто: без доступа к весам и обучающим данным его оценка отставания в месяцах остаётся образованной догадкой, а не измеримым фактом.</span>
+      <span data-lang="en">The author's bottom-line advice is pragmatic: Kimi K3 is absolutely worth checking against specific workflows, but at its price point it won't fill the niche of cheaper, smaller open models, and in a direct fight against the best closed models it will more often lose out — while specific tasks will remain where K3 is the right choice. Mowshowitz openly admits the limit of his own approach: without access to the weights and training data, his months-long lag estimate remains an educated guess rather than a measurable fact.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

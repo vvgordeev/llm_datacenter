@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Nativ: запускаем ИИ-модели локально на Mac» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-21</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-21</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Nativ: запускаем ИИ-модели локально на Mac</span>
+      <span data-lang="en">Nativ: Run AI models locally on your Mac</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/21/nativ/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон рассказывает про Nativ — новое приложение для macOS от Принса Канумы, автора библиотеки mlx-vlm, которая уже несколько лет служит основным мостом между открытыми моделями и Apple Silicon. Nativ — не очередной обёрточный чат-бот, а полноценный локальный workspace: одно приложение объединяет чат, менеджер моделей, дашборд производительности и локальный сервер с API, совместимым с OpenAI и Anthropic.</span>
+      <span data-lang="en">Simon Willison covers Nativ, a new macOS app by Prince Canuma, creator of mlx-vlm — the library that has served for years as the main bridge between open models and Apple Silicon. Nativ isn't another wrapper chatbot; it's a full local workspace, with one app combining chat, a model manager, a performance dashboard, and a local server exposing an OpenAI- and Anthropic-compatible API.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что именно делает приложение</span><span data-lang="en">What the app actually does</span></h2>
+    <p>
+      <span data-lang="ru">В основе Nativ лежит связка MLX (фреймворк Apple для машинного обучения на собственном железе) и уже существующего сервера mlx-vlm, которую Кануза упаковал в нативное SwiftUI-приложение. Чат поддерживает потоковую генерацию, вложения изображений, вывод рассуждений модели и метрики ответа; отдельная вкладка находит уже установленные модели и позволяет искать и скачивать совместимые модели прямо с Hugging Face, предупреждая, если модель не поместится в память конкретного Mac. Дашборд показывает объём запросов, использование токенов, время до первого токена и скорость декодирования — то есть то же самое, что обычно приходится собирать вручную через логи локального сервера.</span>
+      <span data-lang="en">At its core, Nativ pairs MLX (Apple's on-device machine-learning framework) with the existing mlx-vlm server, which Canuma packaged into a native SwiftUI app. Chat supports streaming generation, image attachments, model reasoning output, and response metrics; a separate tab finds already-installed models and lets you browse and download compatible ones directly from Hugging Face, warning you if a model won't fit in a given Mac's memory. The dashboard shows request volume, token usage, time to first token, and decode speed — the same numbers you'd otherwise have to piece together by hand from a local server's logs.</span>
+    </p>
+
+    <h2><span data-lang="ru">Локальный сервер вместо облака</span><span data-lang="en">A local server instead of the cloud</span></h2>
+    <p>
+      <span data-lang="ru">По умолчанию Nativ поднимает сервер на <code>http://127.0.0.1:8080</code> с полным списком доступных эндпоинтов на странице для разработчиков, откуда их удобно скопировать в другой инструмент — например, в кодинг-агента, который умеет говорить с OpenAI- или Anthropic-совместимым API. Это делает Nativ не только чат-приложением для человека, но и локальной подменой облачного API для любых инструментов, которые уже умеют работать с этими протоколами: приложение честно находит модели в кэше Hugging Face (учитывая переменные окружения <code>HF_HUB_CACHE</code> и <code>HF_HOME</code>), так что не плодит отдельное хранилище моделей.</span>
+      <span data-lang="en">By default, Nativ spins up a server at <code>http://127.0.0.1:8080</code>, with a developer page listing every available endpoint so they're easy to copy into another tool — for instance, a coding agent that already speaks an OpenAI- or Anthropic-compatible API. That makes Nativ not just a chat app for a person, but a local drop-in replacement for a cloud API for any tool that already talks those protocols: it correctly discovers models in the existing Hugging Face cache (respecting the <code>HF_HUB_CACHE</code> and <code>HF_HOME</code> environment variables), so it doesn't spawn a separate model store of its own.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Приложение полностью бесплатно, с открытым исходным кодом под лицензией MIT, не требует аккаунта или подписки, и весь инференс выполняется локально на кремнии Mac — ни один токен не уходит в облако. Для тех, кто уже пользуется открытыми моделями через командную строку, Nativ снимает основной барьер входа: не нужно самому поднимать сервер, следить за версиями mlx-vlm и вручную писать интеграцию с инструментами. Ограничение метода — он работает только на Apple Silicon и только с моделями, которые уже портированы под MLX, то есть не заменяет более широкую экосистему GGUF/llama.cpp там, где нужна модель, которой ещё нет в MLX-формате.</span>
+      <span data-lang="en">The app is entirely free, open source under the MIT license, needs no account or subscription, and runs all inference locally on the Mac's own silicon — no token ever leaves the machine. For anyone already running open models from the command line, Nativ removes the main entry barrier: no need to stand up your own server, track mlx-vlm versions, or hand-write tool integrations. The method's limitation is that it only runs on Apple Silicon and only with models already ported to MLX, so it doesn't replace the broader GGUF/llama.cpp ecosystem where the model you need isn't available in MLX format yet.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
