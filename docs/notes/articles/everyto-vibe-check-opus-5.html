@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Vibe Check: Claude Opus 5» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Dan Shipper (Every) · 2026-07-24</span>
+      <span data-lang="en">Article digest · Dan Shipper (Every) · 2026-07-24</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Vibe Check: Claude Opus 5 — блестящий местами, неудобный на практике</span>
+      <span data-lang="en">Vibe Check: Claude Opus 5 Is Brilliant in Flashes, Frustrating in Practice</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://every.to/vibe-check/opus-5" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">«Vibe Check» — регулярная рубрика Every, в которой команда неделю живёт с новой моделью на реальных задачах: кодинг, письмо, работа со знаниями и внутренний агент компании. В день выхода Claude Opus 5 (24 июля) сооснователь и CEO Every Дэн Шиппер написал, что модель — «трудная для любви»: она спорила с инструкциями, останавливалась, не доведя задачу до конца, и плохо уживалась с уже накопленными у команды скиллами и плагинами вроде Compound Engineering. Первая реакция команды: «что они сделали с нашим мальчиком».</span>
+      <span data-lang="en">"Vibe Check" is Every's recurring column where the team lives with a new model for a week on real work: coding, writing, knowledge work, and the company's internal agent. On the day Claude Opus 5 shipped (July 24), Every co-founder and CEO Dan Shipper wrote that the model is "hard to love": it argued with instructions, stopped before finishing a task, and didn't play well with the team's accumulated skills and plugins like Compound Engineering. The team's first reaction: "what have they done to my boy?"</span>
+    </p>
+
+    <h2><span data-lang="ru">Находка: сломанный workflow — не значит сломанная модель</span><span data-lang="en">The discovery: a broken workflow isn't a broken model</span></h2>
+    <p>
+      <span data-lang="ru">Переломный момент случился, когда Киран Клаассен из команды Every предположил: проблема не в Opus 5, а в наслоенных за предыдущие поколения моделей скиллах и промптах, написанных под характер более ранних версий Opus. Команда удалила существующие скиллы и элементарные обвязки и попробовала снова — без унаследованной инфраструктуры результаты стали заметно лучше, а «блеск» модели проявился именно на задачах, где ей не мешали старые костыли.</span>
+      <span data-lang="en">The turning point came when Every's Kieran Klaassen suggested the problem wasn't Opus 5 itself but the skills and prompts layered up over previous model generations, written to fit earlier Opus versions' quirks. The team deleted its existing skills and elaborate scaffolding and tried again — without the inherited infrastructure, results improved noticeably, and the model's "brilliance" showed up specifically on tasks where old crutches weren't getting in the way.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: скиллы — это одноразовая обвязка под конкретное поколение модели</span><span data-lang="en">The method: skills are disposable scaffolding for one model generation</span></h2>
+    <p>
+      <span data-lang="ru">Практический урок Every формулируют так: промпты, «скиллы» и элаборированные workflow, выстроенные вокруг конкретной модели, стоит воспринимать как временную обвязку, настроенную под её характер, а не как постоянную инфраструктуру. При переходе на модель нового поколения — особенно если она заметно меняет манеру следования инструкциям — есть смысл сначала попробовать голую модель без старых скиллов, а уже потом решать, какие обвязки действительно нужны заново, а не переносить старые автоматически.</span>
+      <span data-lang="en">Every's practical lesson: prompts, "skills," and elaborate workflows built around a specific model should be treated as temporary scaffolding tuned to its particular quirks, not as permanent infrastructure. When moving to a new model generation — especially one that noticeably changes how it follows instructions — it's worth first trying the bare model without legacy skills, then deciding which scaffolding is actually still needed, rather than carrying the old setup over automatically.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Это не бенчмарк и не системная методология, а честный отчёт одной команды за одну неделю практики — с конкретным, воспроизводимым наблюдением: накопленный поверх модели инструментарий («Compound Engineering» у Every) может начать мешать при апгрейде, если он был подстроен под старые слабости модели, которых у новой версии уже нет. Ограничение вывода в том, что он основан на внутренних задачах одной компании и не проверен на более широком наборе сценариев — но сама привычка перепроверять «скиллы» при смене модели, а не считать их вечными, обобщается за пределы конкретно Opus 5.</span>
+      <span data-lang="en">This isn't a benchmark or a systematic methodology, but one team's honest report from one week of hands-on use — with a concrete, reproducible observation: tooling accumulated on top of a model (Every's "Compound Engineering") can start getting in the way after an upgrade if it was tuned around the old model's specific weaknesses, which the new version no longer has. The finding's limitation is that it's grounded in one company's internal tasks and untested across a broader set of scenarios — but the habit of re-checking "skills" on a model switch, rather than treating them as permanent, generalizes well beyond Opus 5 specifically.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «AIE Europe Debrief + Agent Labs Thesis» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (Shawn «swyx» Wang) · 2026-07-22</span>
+      <span data-lang="en">Article digest · Latent Space (Shawn "swyx" Wang) · 2026-07-22</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Спецвыпуск Latent Space × Unsupervised Learning: год, когда агенты выходят за пределы кода</span>
+      <span data-lang="en">Latent Space × Unsupervised Learning crossover: the year agents outgrow code</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/unsupervised-learning-2026" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал материала ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Это второй кроссовер подкастов Latent Space и Unsupervised Learning — год спустя после первого. Разговор записан сразу после конференции AIE Europe и ещё до сделки Cursor–xAI, поэтому звучит как честный срез того, что изменилось за год в индустрии AI-инжиниринга, а не постфактум-анализ уже случившихся сделок. Ведущий Latent Space Шон Уэнг (swyx) описывает происходящее с позиции человека, который последние несколько лет буквально живёт на конференциях AI-инженеров и видит, какие темы вытесняют друг друга в программе докладов.</span>
+      <span data-lang="en">This is the second crossover between the Latent Space and Unsupervised Learning podcasts — a year after the first. The conversation was recorded right after the AIE Europe conference and before the Cursor–xAI deal, so it reads as an honest snapshot of what changed over the year in AI engineering rather than after-the-fact analysis of deals that had already happened. Latent Space host Shawn Wang (swyx) describes it from the vantage point of someone who has spent the last few years essentially living at AI engineer conferences, watching which topics push others out of the program.</span>
+    </p>
+
+    <h2><span data-lang="ru">От моделей к харнессам</span><span data-lang="en">From models to harnesses</span></h2>
+    <p>
+      <span data-lang="ru">Главное наблюдение swyx: то, что ещё недавно было нишевой темой для специалистов, — харнесс-инжиниринг (проектирование окружения, в котором работает агент), контекст-инжиниринг, evals и наблюдаемость — теперь занимает центральное место в программах конференций, оттесняя доклады о самих моделях. Логика простая: разрыв в качестве базовых моделей между лабораториями сузился, а решающим фактором того, хорошо или плохо работает агент в проде, всё чаще оказывается не «интеллект» модели, а то, как устроены инструменты, права доступа, параллельные воркеры и постоянство состояния вокруг неё.</span>
+      <span data-lang="en">swyx's core observation: what was until recently a niche specialist topic — harness engineering (designing the environment an agent runs in), context engineering, evals, and observability — now sits at the center of conference programs, pushing out talks about the models themselves. The logic is simple: the capability gap between labs' base models has narrowed, and what increasingly decides whether an agent works well in production isn't the model's raw "intelligence" but how the tools, permissions, parallel workers, and persistent state around it are engineered.</span>
+    </p>
+
+    <h2><span data-lang="ru">Тезис: 2025 — год кодинг-агентов, 2026 — год, когда они выходят за пределы кода</span><span data-lang="en">The thesis: 2025 was coding agents, 2026 is agents breaking containment</span></h2>
+    <p>
+      <span data-lang="ru">Центральный тезис выпуска: 2025 год был годом кодинг-агентов — именно на задачах программирования агентные подходы впервые заработали достаточно надёжно, потому что код имеет встроенный, автоматически проверяемый критерий правильности (тесты, компиляция, линтеры). 2026-й, по мнению swyx, становится годом, когда агенты начинают «пробивать» границы этой узкой, легко проверяемой области и идти дальше: потребительские агенты для повседневных задач, computer use (управление обычным графическим интерфейсом, а не только API и терминалом) — области, где чёткого автоматического критерия «успех/провал» уже нет.</span>
+      <span data-lang="en">The episode's central thesis: 2025 was the year of coding agents — it was on programming tasks that agentic approaches first became reliable enough, because code has a built-in, automatically checkable correctness signal (tests, compilation, linters). 2026, in swyx's view, is becoming the year agents start breaking out of that narrow, easily verified domain and moving further: consumer agents for everyday tasks, computer use (driving an ordinary graphical interface rather than just an API or a terminal) — areas that no longer have a clean automatic pass/fail signal.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение метода</span><span data-lang="en">Why this matters, and where the method runs out</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод для команд, которые строят агентов: инвестиции, которые окупились на кодинге — харнесс, evals, песочницы, наблюдаемость — не переносятся в новые домены автоматически, потому что там сложнее сформулировать, что вообще считается «правильным» результатом. Там, где для кода есть тест, для, скажем, бронирования поездки или составления отчёта такого объективного теста часто нет — и именно здесь, по мысли выпуска, будет решаться, какие агентные продукты 2026 года реально работают, а какие остаются эффектной демкой. Ограничение самого разговора очевидное: это взгляд практиков AI-инженерного сообщества «изнутри тусовки», а не количественное исследование — ценность в том, что он фиксирует сдвиг фокуса раньше, чем это станет общим местом.</span>
+      <span data-lang="en">The practical takeaway for teams building agents: the investments that paid off in coding — harnesses, evals, sandboxes, observability — don't transfer to new domains automatically, because it's harder there to even define what counts as a "correct" result. Where code has a test, something like booking a trip or drafting a report often has no such objective test — and that, per the episode, is where it'll be decided which 2026 agent products actually work and which stay flashy demos. The conversation's own limitation is obvious: it's an insider view from AI-engineering-community practitioners, not a quantitative study — its value is in catching the shift in focus before it becomes conventional wisdom.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

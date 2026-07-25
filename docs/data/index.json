@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-25",
+      "news_count": 2,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "OpenAI открывает ChatGPT Health всем взрослым пользователям в США",
+        "en": "OpenAI rolls out ChatGPT Health to all US adult users"
+      }
+    },
+    {
       "date": "2026-07-24",
       "news_count": 3,
       "expert_count": 5,

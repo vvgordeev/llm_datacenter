@@ -147,7 +147,13 @@
     "https://thenewstack.io/moonshot-fable5-distillation-accusations/": "2026-07-24",
     "notes/articles/thenewstack-kimi-k3-fable5-siphoning.html": "2026-07-24",
     "https://www.youtube.com/watch?v=wzY2fV4Mp3U": "2026-07-24",
-    "notes/videos/aiexplained-huggingface-incident-sans-hype.html": "2026-07-24"
+    "notes/videos/aiexplained-huggingface-incident-sans-hype.html": "2026-07-24",
+    "https://www.anthropic.com/news/claude-opus-5": "2026-07-25",
+    "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/": "2026-07-25",
+    "https://www.latent.space/p/unsupervised-learning-2026": "2026-07-25",
+    "https://every.to/vibe-check/opus-5": "2026-07-25",
+    "https://stratechery.com/2026/openai-hacks-hugging-face-what-happened-alignment-and-paper-clips/": "2026-07-25",
+    "https://thezvi.substack.com/p/ai-178-a-fire-alarm-for-general-intelligence": "2026-07-25"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -353,6 +359,20 @@
       "summary": {
         "ru": "OpenAI запустила Presence — управляемую платформу для продакшн-агентов (политики, guardrails, Codex-цикл улучшений); внутреннее использование даёт 75% автоматического решения обращений, партнёры — BBVA Mexico, SoftBank",
         "en": "OpenAI launched Presence, a managed platform for production agents (policies, guardrails, Codex improvement loop); internal use hits 75% automated resolution, partners include BBVA Mexico and SoftBank"
+      }
+    },
+    "anthropic-claude-opus-5": {
+      "last_date": "2026-07-25",
+      "summary": {
+        "ru": "Anthropic выпускает Claude Opus 5 — почти уровень Fable 5 при неизменной цене, с новым регулируемым effort-параметром",
+        "en": "Anthropic ships Claude Opus 5 — near-Fable-5 performance at unchanged pricing, with a new adjustable effort setting"
+      }
+    },
+    "openai-chatgpt-health": {
+      "last_date": "2026-07-25",
+      "summary": {
+        "ru": "OpenAI открывает ChatGPT Health всем взрослым пользователям в США на всех тарифах; резкая критика приватности и параллельный иск",
+        "en": "OpenAI rolls out ChatGPT Health to all US adult users on every plan; sharp privacy criticism and a parallel lawsuit"
       }
     }
   }
