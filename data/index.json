@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-26",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "DeepSeek V4: истёк срок миграции со старых имён API, независимые обзоры подтверждают «почти фронтир по цене в разы ниже»",
+        "en": "DeepSeek V4: legacy API names cut off as independent reviews confirm 'near-frontier at a fraction of the price'"
+      }
+    },
+    {
       "date": "2026-07-25",
       "news_count": 2,
       "expert_count": 4,

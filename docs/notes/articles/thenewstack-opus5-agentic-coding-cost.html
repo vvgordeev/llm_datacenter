@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Opus 5 стоит втрое дешевле — и в этом проблема» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · The New Stack · 2026-07-24</span>
+      <span data-lang="en">Article digest · The New Stack · 2026-07-24</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Opus 5 стоит втрое дешевле — и в этом проблема</span>
+      <span data-lang="en">Opus 5 Costs a Third of the Price — and That's Actually the Problem</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thenewstack.io/opus-5-agentic-coding-cost/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В отличие от большинства материалов о запуске Claude Opus 5, посвящённых бенчмаркам, The New Stack разбирает не «насколько модель умна», а что происходит, когда агентный кодинг резко дешевеет. Opus 5 стоит $5/$25 за млн входных/выходных токенов — при той же цене, что у Opus 4.8, но примерно с удвоенным результатом на агентных бенчмарках. Для команды, тратившей $4000 в месяц на токены Fable 5, эквивалентный расход на Opus 5 — около $2000, ещё до учёта прироста эффективности на задачу. Автор формулирует тезис статьи так: это не просто скидка, а расширение воронки задач, которые становится экономически выгодно передавать агенту на автономное выполнение — а значит, растёт и число автономных агентов, работающих без постоянного присмотра человека.</span>
+      <span data-lang="en">Unlike most Opus 5 launch coverage focused on benchmarks, The New Stack looks past "how smart is the model" to what happens once agentic coding gets sharply cheaper. Opus 5 is priced at $5/$25 per million input/output tokens — the same price as Opus 4.8, but at roughly double the score on agentic benchmarks. For a team spending $4,000 a month on Fable 5 tokens, the equivalent Opus 5 spend is about $2,000, before any per-task efficiency gain. The piece's thesis: this isn't just a discount, it's a widening of the funnel of tasks that become economical to hand an agent to run autonomously — which means more autonomous agents operating without constant human oversight.</span>
+    </p>
+
+    <h2><span data-lang="ru">Проблема доступа: постоянные права опаснее временных</span><span data-lang="en">The access problem: standing permissions are more dangerous than temporary ones</span></h2>
+    <p>
+      <span data-lang="ru">Когда модель работает сразу в нескольких системах без постоянного присмотра, доступ должен быть временным и легко отзываемым — иначе одна скомпрометированная или просто «зависшая» агентная сессия получает те же права, что и постоянный сервисный аккаунт. Статья указывает на смещение внимания индустрии к короткоживущим, выдаваемым «точно на момент» (just-in-time) учётным данным — по аналогии с моделью делегированной аутентификации, которую 1Password уже разрабатывает специально под Claude. Практический вывод метода: доступ агента к системам нужно проектировать не как «дать токен один раз», а как непрерывно истекающий и переиздаваемый набор прав под конкретную задачу.</span>
+      <span data-lang="en">When a model works across several systems without constant oversight, access has to be temporary and easy to revoke — otherwise one compromised or simply "stuck" agent session ends up with the same standing rights as a permanent service account. The article points to an industry shift toward short-lived, just-in-time credentials — akin to the delegated-authentication model 1Password is already building specifically for Claude. The method's practical takeaway: an agent's access to systems should be designed not as "issue a token once" but as a continuously expiring, task-scoped set of permissions reissued as needed.</span>
+    </p>
+
+    <h2><span data-lang="ru">Проблема расходов: нужен «семантический автомат защиты»</span><span data-lang="en">The spend problem: you need a "semantic circuit breaker"</span></h2>
+    <p>
+      <span data-lang="ru">Обратная сторона неутомимости агента — он не знает, когда остановиться. Модель, работающая в фоновых циклах часами, может сжечь миллионы токенов ещё до того, как передаст готовый pull request — а обычные логи API не замечают такое поведение вовремя, потому что формально каждый вызов выглядит нормальным. Метод, который предлагает статья: команде нужна не просто система алертов по общей сумме расходов, а телеметрия, которая понимает контекст самого рабочего процесса (сколько итераций типично для такой задачи, когда повторяющиеся попытки перестают быть прогрессом) — своего рода семантический автомат защиты, который обрывает сессию до того, как агент выест весь бюджет на вычисления, а не постфактум присылает счёт.</span>
+      <span data-lang="en">The flip side of an agent's relentlessness is that it doesn't know when to quit. A model running background loops for hours can churn through millions of tokens before handing off a finished pull request — and standard API logs won't flag that behavior in time, because each individual call looks normal in isolation. The method the article proposes: teams need more than alerts on total spend — they need telemetry that understands the workflow's own context (how many iterations are typical for a task like this, when repeated attempts stop being progress) — a kind of semantic circuit breaker that cuts the session before the agent burns through the compute budget, rather than a bill that arrives after the fact.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Ценность материала — в том, что он честно называет цену дешёвого интеллекта: она не в токенах, а в новых требованиях к инфраструктуре контроля вокруг агента. Это не готовое решение, а диагноз с направлением — конкретных инструментов «семантического автомата защиты» на рынке пока нет, речь идёт скорее о требовании, которое индустрии предстоит закрыть, чем о проверенной практике. Ограничение в том, что статья строится на одном ценовом кейсе (Opus 5 против Fable 5) и не даёт универсальных цифр для порогов срабатывания — но сам сдвиг рамки мышления, от «сколько стоит токен» к «сколько стоит бесконтрольная сессия», переносится на любую модель, которая станет следующей по дешевизне.</span>
+      <span data-lang="en">The piece's value is that it honestly names the price of cheap intelligence: it's not measured in tokens, but in new control-infrastructure requirements around the agent. This isn't a ready-made solution but a diagnosis with a direction — no concrete "semantic circuit breaker" tooling exists on the market yet; it's more a requirement the industry still has to close than a proven practice. The limitation is that the article builds its case on a single pricing comparison (Opus 5 vs. Fable 5) and offers no universal thresholds for when to trip the breaker — but the framing shift itself, from "what does a token cost" to "what does an unsupervised session cost," carries over to whichever model becomes the next cheap one.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

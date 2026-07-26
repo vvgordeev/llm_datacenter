@@ -153,7 +153,13 @@
     "https://www.latent.space/p/unsupervised-learning-2026": "2026-07-25",
     "https://every.to/vibe-check/opus-5": "2026-07-25",
     "https://stratechery.com/2026/openai-hacks-hugging-face-what-happened-alignment-and-paper-clips/": "2026-07-25",
-    "https://thezvi.substack.com/p/ai-178-a-fire-alarm-for-general-intelligence": "2026-07-25"
+    "https://thezvi.substack.com/p/ai-178-a-fire-alarm-for-general-intelligence": "2026-07-25",
+    "https://api-docs.deepseek.com/updates/": "2026-07-26",
+    "https://workspace.google.com/marketplace/app/grok/660927092109": "2026-07-26",
+    "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22": "2026-07-26",
+    "notes/articles/mollick-opinionated-guide-summer-2026.html": "2026-07-26",
+    "https://thenewstack.io/opus-5-agentic-coding-cost/": "2026-07-26",
+    "notes/articles/thenewstack-opus5-agentic-coding-cost.html": "2026-07-26"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -208,10 +214,10 @@
       }
     },
     "deepseek-v4-peak-pricing": {
-      "last_date": "2026-07-15",
+      "last_date": "2026-07-26",
       "summary": {
-        "ru": "DeepSeek V4 — официальный релиз и пиковая тарификация API",
-        "en": "DeepSeek V4 — official release and peak-hour API pricing"
+        "ru": "DeepSeek V4 — официальный релиз, пиковая тарификация API, истёк срок миграции со старых имён, первые независимые обзоры",
+        "en": "DeepSeek V4 — official release, peak-hour API pricing, legacy alias migration deadline hit, first independent reviews"
       }
     },
     "xai-grok-build-voice": {
@@ -373,6 +379,13 @@
       "summary": {
         "ru": "OpenAI открывает ChatGPT Health всем взрослым пользователям в США на всех тарифах; резкая критика приватности и параллельный иск",
         "en": "OpenAI rolls out ChatGPT Health to all US adult users on every plan; sharp privacy criticism and a parallel lawsuit"
+      }
+    },
+    "xai-grok-workspace-addon": {
+      "last_date": "2026-07-26",
+      "summary": {
+        "ru": "xAI выпускает бесплатное расширение Grok для Google Workspace (Docs/Sheets/Slides)",
+        "en": "xAI ships a free Grok add-on for Google Workspace (Docs/Sheets/Slides)"
       }
     }
   }

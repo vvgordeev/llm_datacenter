@@ -1,0 +1,166 @@
+{
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T05:24:34Z",
+  "news": [
+    {
+      "id": "2026-07-26-deepseek-v4-ga-legacy-cutover",
+      "cluster_id": "deepseek-v4-peak-pricing",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "DeepSeek V4: истёк срок миграции со старых имён API, независимые обзоры подтверждают «почти фронтир по цене в разы ниже»",
+        "en": "DeepSeek V4: legacy API names cut off as independent reviews confirm 'near-frontier at a fraction of the price'"
+      },
+      "summary": {
+        "ru": "24 июля истёк трёхмесячный переходный период: DeepSeek прекратила автоматически перенаправлять вызовы по старым именам deepseek-chat и deepseek-reasoner на V4-Flash — теперь такие запросы возвращают ошибку, и разработчикам нужно явно перейти на deepseek-v4-pro/deepseek-v4-flash. Одновременно, после того как модель перешла из превью в официальный релиз ещё в середине июля, в сети накопился первый пул независимых обзоров и бенчмарков: они подтверждают, что V4-Pro — крупнейшая из известных открытых моделей (1.6Т параметров) — вплотную приближается к результатам Opus 4.7/GPT-5.5 на агентных и код-задачах при цене в разы ниже, хотя и с заметным разбросом по разным бенчмаркам (SWE-bench Verified против более строгого SWE-Bench Pro и DeepSWE).",
+        "en": "On July 24 the three-month migration window closed: DeepSeek stopped silently forwarding calls made under the old deepseek-chat and deepseek-reasoner names to V4-Flash — such requests now return an error, and developers must explicitly switch to deepseek-v4-pro/deepseek-v4-flash. At the same time, following the model's move from preview to official release back in mid-July, the first wave of independent reviews and benchmarks has landed: they confirm that V4-Pro — the largest known open-weight model at 1.6T parameters — sits close to Opus 4.7/GPT-5.5 on agentic and coding tasks at a fraction of the price, though with notable spread across benchmarks (SWE-bench Verified versus the stricter SWE-Bench Pro and DeepSWE)."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Не меняет подход к использованию LLM сам по себе, но заметно сдвигает соотношение цена/качество для открытых моделей на агентных и код-задачах и завершает первую в истории компании динамическую тарификацию API — существенно для любого разработчика, выбирающего модель по бюджету, но не открывает нового класса сценариев.",
+        "en": "Doesn't change the approach to using LLMs by itself, but meaningfully shifts the price/performance ratio for open-weight models on agentic and coding tasks, and completes the company's first-ever dynamic API pricing rollout — material for any developer choosing a model on budget, but not a new class of scenario."
+      },
+      "source_url": "https://api-docs.deepseek.com/updates/",
+      "opinions": [
+        {
+          "author": "Thomas Wiegold",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "DeepSeek сами признают в техническом отчёте, что V4 отстаёт от абсолютного фронтира на 3–6 месяцев, а по независимой оценке CAISI разрыв ближе к восьми.",
+            "en": "DeepSeek themselves admit in their technical report that V4 trails the absolute frontier by three to six months — CAISI's independent estimate puts the gap closer to eight."
+          },
+          "url": "https://thomas-wiegold.com/blog/deepseek-v4-review/"
+        },
+        {
+          "author": "Codersera",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Лучший выбор для чувствительных к цене задач кодинга и рассуждений; Claude Opus 4.7 по-прежнему выигрывает в длинных агентных циклах, GPT-5.5 — в мультимодальных задачах.",
+            "en": "Best pick for cost-sensitive coding and reasoning work; Claude Opus 4.7 still wins on long agentic loops, GPT-5.5 still wins on multimodal tasks."
+          },
+          "url": "https://codersera.com/blog/deepseek-v4-pro-review-benchmarks-pricing-2026/"
+        },
+        {
+          "author": "AI for Developers (Substack)",
+          "stance": "positive",
+          "quote": {
+            "ru": "DeepSeek V4 — самое ясное на сегодня доказательство того, что производительность фронтир-уровня и цена фронтир-уровня окончательно разошлись.",
+            "en": "DeepSeek V4 is the clearest proof yet that frontier AI performance and frontier AI pricing are being permanently decoupled."
+          },
+          "url": "https://aifordevelopers.substack.com/p/deepseek-v4-just-dropped-and-its"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчикам, использовавшим старые алиасы deepseek-chat/deepseek-reasoner, нужно явно переключиться на deepseek-v4-pro/deepseek-v4-flash — после 24 июля старые имена возвращают ошибку вместо тихой переадресации.",
+            "en": "Developers still using the legacy deepseek-chat/deepseek-reasoner aliases need to explicitly switch to deepseek-v4-pro/deepseek-v4-flash — after July 24 the old names return an error instead of silently forwarding."
+          },
+          "url": "https://api-docs.deepseek.com/updates/"
+        },
+        {
+          "text": {
+            "ru": "V4-Flash подходит для высокообъёмной классификации и извлечения данных по цене на уровне самых дешёвых моделей, а V4-Pro — для рассуждений и кодинга с контекстом до 1 млн токенов.",
+            "en": "V4-Flash fits high-volume classification and extraction at pricing on par with the cheapest small models, while V4-Pro is the pick for reasoning and coding with up to a 1M-token context."
+          },
+          "url": "https://www.morphllm.com/deepseek-v4"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-26-xai-grok-google-workspace",
+      "cluster_id": "xai-grok-workspace-addon",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI выпускает бесплатное расширение Grok для Google Workspace — прямо в Docs, Sheets и Slides",
+        "en": "xAI ships a free Grok add-on for Google Workspace — right inside Docs, Sheets, and Slides"
+      },
+      "summary": {
+        "ru": "24 июля xAI официально представила бесплатное расширение Grok для Google Workspace (в маркетплейсе оно появилось 21 июля): одна установка добавляет Grok как боковую панель сразу в Google Docs, Sheets и Slides, без листа ожидания и запроса бета-доступа. В Sheets Grok отвечает на вопросы по активной таблице со ссылками на конкретные ячейки, пишет формулы и строит графики; в Slides — превращает текстовый план в готовую презентацию, подтягивая материал из веба и X; в Docs — приводит черновые заметки к структурированному тексту с заголовками и списками. Релиз идёт неделей позже аналогичного расширения для Microsoft 365 (Excel, Word, PowerPoint).",
+        "en": "On July 24 xAI officially introduced a free Grok add-on for Google Workspace (it appeared on the Marketplace on July 21): one install adds Grok as a sidebar panel inside Google Docs, Sheets, and Slides at once, with no waitlist or beta request. In Sheets, Grok answers questions about the active spreadsheet citing specific cells, writes formulas, and builds charts; in Slides, it turns a text outline into a finished deck, pulling material from the web and X; in Docs, it turns rough notes into structured text with headings and lists. The release follows xAI's similar Microsoft 365 add-on (Excel, Word, PowerPoint) by about a week."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Полезное расширение существующего подхода «ИИ-ассистент внутри офисных документов» на ещё одну крупную платформу — заметно для пользователей Google Workspace, но не меняет сами способы работы с LLM и не открывает нового класса сценариев.",
+        "en": "A useful extension of the existing 'AI assistant inside office documents' approach to another major platform — noticeable for Google Workspace users, but it doesn't change how people work with LLMs or open a new class of scenario."
+      },
+      "source_url": "https://workspace.google.com/marketplace/app/grok/660927092109",
+      "opinions": [
+        {
+          "author": "Techgenyz",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Расширение добралось до трёх самых используемых приложений Google бесплатно, но прежде чем подпускать его к закрытым документам, командам корпоративного ИТ понадобятся гарантии.",
+            "en": "The add-on hits three of Google's most-used apps for free, but enterprise IT teams will want assurances before letting it touch proprietary documents."
+          },
+          "url": "https://techgenyz.com/grok-google-workspace-addon/"
+        },
+        {
+          "author": "The Tech Outlook",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Единая установка через Google Workspace Marketplace даёт доступ к Grok сразу в Docs, Sheets и Slides — без отдельной настройки для каждого приложения.",
+            "en": "A single install through the Google Workspace Marketplace enables Grok across Docs, Sheets, and Slides at once — no separate setup per app."
+          },
+          "url": "https://www.thetechoutlook.com/new-release/software-apps/spacexai-introduces-grok-add-on-for-google-workspace/"
+        },
+        {
+          "author": "Basenor",
+          "stance": "positive",
+          "quote": {
+            "ru": "Никакого листа ожидания и запроса бета-доступа — просто ищете «Grok for Google Workspace by SpaceXAI», устанавливаете и пользуетесь.",
+            "en": "No waitlist, no beta access request — just search for 'Grok for Google Workspace by SpaceXAI', install it, and use it."
+          },
+          "url": "https://www.basenor.com/blogs/news/grok-in-google-workspace-5-details-that-matter"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Маркетинговые команды используют Grok в Sheets, чтобы строить формулы и графики для отслеживания эффективности кампаний по нескольким клиентам сразу.",
+            "en": "Marketing teams use Grok inside Sheets to build formulas and charts for tracking campaign performance across several clients at once."
+          },
+          "url": "https://coursiv.io/blog/how-to-use-grok-for-business-2026"
+        },
+        {
+          "text": {
+            "ru": "В Slides текстовый план превращается в готовую презентацию в уже заданной теме, с исследованием материала из веба и X и добавлением диаграмм и изображений.",
+            "en": "In Slides, a plain outline turns into a finished deck in the existing theme, with research pulled from the web and X and diagrams or images added where they help."
+          },
+          "url": "https://www.basenor.com/blogs/news/grok-in-google-workspace-5-details-that-matter"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-26-mollick-opinionated-guide-summer-2026",
+      "type": "article",
+      "author": "Ethan Mollick (One Useful Thing)",
+      "title": {
+        "ru": "Опинионированный гид: какой ИИ для чего использовать — летнее издание 2026",
+        "en": "An Opinionated Guide to Which AI to Use to Do Stuff — Summer 2026 Edition"
+      },
+      "url": "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
+      "summary": {
+        "ru": "Итан Моллик обновляет свой регулярный практический гид по выбору модели и режима под задачу: для низких ставок годится почти любая модель, включая бесплатные; для высоких ставок (медицина, право) — только топ-модели (Opus/Fable, GPT-5.6 Sol) с уровнем рассуждений «high» и выше; для агентного доступа к компьютеру (ChatGPT Work/Codex, Claude Cowork/Code) — явный выбор модели, уровня рассуждений и ограниченного набора приложений, к которым агенту разрешён доступ.",
+        "en": "Ethan Mollick refreshes his recurring practical guide to picking a model and mode for a task: for low stakes, almost any model works, including free ones; for high stakes (medicine, law), only top-tier models (Opus/Fable, GPT-5.6 Sol) at 'high' reasoning or above; for agentic computer access (ChatGPT Work/Codex, Claude Cowork/Code), an explicit choice of model, reasoning level, and a scoped set of applications the agent is allowed to touch."
+      },
+      "note_page": "notes/articles/mollick-opinionated-guide-summer-2026.html"
+    },
+    {
+      "id": "2026-07-26-thenewstack-opus5-agentic-coding-cost",
+      "type": "article",
+      "author": "The New Stack",
+      "title": {
+        "ru": "Opus 5 стоит втрое дешевле — и в этом проблема",
+        "en": "Opus 5 Costs a Third of the Price — and That's Actually the Problem"
+      },
+      "url": "https://thenewstack.io/opus-5-agentic-coding-cost/",
+      "summary": {
+        "ru": "The New Stack разбирает не бенчмарки Opus 5, а последствия резкого удешевления агентного кодинга: расширяется круг задач, которые выгодно отдавать автономному агенту без постоянного присмотра — а значит, растут требования к временным, легко отзываемым правам доступа и к «семантическому автомату защиты», который понимает контекст рабочего процесса и обрывает сессию до того, как агент сожжёт весь бюджет на вычисления.",
+        "en": "The New Stack looks past Opus 5's benchmarks to the consequences of agentic coding getting sharply cheaper: more tasks become economical to hand an unsupervised autonomous agent — raising the bar for temporary, easily revocable access rights and for a 'semantic circuit breaker' that understands workflow context and cuts a session before the agent burns through the compute budget."
+      },
+      "note_page": "notes/articles/thenewstack-opus5-agentic-coding-cost.html"
+    }
+  ]
+}

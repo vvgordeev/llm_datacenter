@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Опинионированный гид: какой ИИ для чего использовать» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Ethan Mollick (One Useful Thing) · 2026-07-23</span>
+      <span data-lang="en">Article digest · Ethan Mollick (One Useful Thing) · 2026-07-23</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Опинионированный гид: какой ИИ для чего использовать — летнее издание 2026</span>
+      <span data-lang="en">An Opinionated Guide to Which AI to Use to Do Stuff — Summer 2026 Edition</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Итан Моллик регулярно обновляет один и тот же материал — практический гид по выбору модели и режима под конкретную задачу, а не рейтинг «какая модель лучше вообще». Летнее издание 2026 года выходит на фоне одновременного присутствия на рынке нескольких моделей примерно одного уровня (Claude Opus 5 и Fable 5, GPT-5.6 Sol, Gemini) — и главный тезис гида в том, что в этих условиях вопрос «какая модель» менее важен, чем вопрос «какой режим и с каким уровнем рассуждений».</span>
+      <span data-lang="en">Ethan Mollick periodically refreshes the same piece — a practical guide to picking a model and mode for a specific task, not a ranking of "which model is best overall." The Summer 2026 edition lands with several roughly equivalent frontier models on the market at once (Claude Opus 5 and Fable 5, GPT-5.6 Sol, Gemini) — and the guide's core claim is that under those conditions, "which model" matters less than "which mode, at what thinking level."</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: три уровня ставок — три разных ответа</span><span data-lang="en">The method: three stakes levels, three different answers</span></h2>
+    <p>
+      <span data-lang="ru">Гид делит задачи на три уровня ставок и даёт для каждого конкретную рекомендацию, а не общий совет. Для низких ставок (рецепт, короткое письмо, простой вопрос) годится практически любая современная модель, включая бесплатные тарифы — разница между топовыми моделями на таких задачах для обычного пользователя незаметна. Для высоких ставок (медицинские и юридические вопросы, решения с реальной ценой ошибки) рекомендация жёсткая: только модели верхнего эшелона — Claude Opus или Fable, либо GPT-5.6 Sol — и обязательно с уровнем рассуждений «high» и выше, потому что именно на этом уровне заметно падает частота ошибок и растёт точность на сложных предметных тестах.</span>
+      <span data-lang="en">The guide splits tasks into three stakes tiers and gives each a concrete recommendation rather than generic advice. For low-stakes work (a recipe, a short email, a simple question), almost any current model works, including free tiers — the gap between top models is invisible to an ordinary user on tasks like these. For high-stakes work (medical and legal questions, decisions with a real cost of being wrong), the recommendation is strict: top-tier models only — Claude Opus or Fable, or GPT-5.6 Sol — and always with the reasoning level set to "high" or above, because that's specifically where error rates drop and accuracy on hard domain benchmarks rises.</span>
+    </p>
+
+    <h2><span data-lang="ru">Третий уровень: агентный доступ к компьютеру</span><span data-lang="en">The third tier: agentic computer access</span></h2>
+    <p>
+      <span data-lang="ru">Отдельная, самая мощная категория в гиде — не чат, а режим, в котором модель получает доступ к приложениям пользователя и действует за него: у ChatGPT это Work и Codex, у Claude — Cowork и Code. Практический рецепт запуска: выбрать модель и уровень рассуждений (Моллик советует начинать с Sol на «high» для ChatGPT и Opus или Fable на «high» для Claude), затем явно указать, с какими именно приложениями агенту разрешено работать — то есть ограничить его доступ конкретным набором инструментов, а не давать доступ ко всему сразу.</span>
+      <span data-lang="en">The guide's most powerful, separate category isn't chat at all — it's the mode where the model gets access to a user's applications and acts on their behalf: ChatGPT's Work and Codex, Claude's Cowork and Code. The practical setup recipe: pick a model and a thinking level (Mollick suggests starting with Sol at "high" for ChatGPT and Opus or Fable at "high" for Claude), then explicitly scope which applications the agent is allowed to touch — restricting it to a specific toolset rather than granting access to everything at once.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Ценность гида — не в конкретных названиях моделей (они устареют за несколько месяцев), а в самом методе принятия решения: сначала оценить ставки задачи, затем подобрать модель и режим под этот уровень, и отдельно — явно выставить уровень рассуждений и область доступа для агентных режимов. Ограничение подхода в том, что он основан на личной практике одного автора и рассчитан на пользователей с доступом к платным тарифам нескольких вендоров одновременно — но сама трёхуровневая рамка (низкие ставки → любая модель, высокие ставки → топ + high thinking, агентный доступ → выбор модели плюс явное ограничение инструментов) переносится на любой набор моделей, которые появятся позже.</span>
+      <span data-lang="en">The guide's value isn't in the specific model names (those will be stale within months) but in the decision method itself: first assess the task's stakes, then match a model and mode to that level, and separately set the reasoning level and access scope explicitly for agentic modes. The approach's limitation is that it's grounded in one author's personal practice and assumes access to paid tiers across several vendors at once — but the three-tier frame itself (low stakes → any model, high stakes → top tier plus high thinking, agentic access → pick a model and explicitly scope its tools) carries over to whatever models come next.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
