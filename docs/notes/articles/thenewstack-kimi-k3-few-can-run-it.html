@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Moonshot открыла веса Kimi K3 — но запустить её могут единицы» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · The New Stack · 2026-07-27</span>
+      <span data-lang="en">Article digest · The New Stack · 2026-07-27</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Moonshot открыла веса Kimi K3 — но запустить её могут единицы</span>
+      <span data-lang="en">Moonshot Opens Kimi K3 Weights — But Few Can Run It</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thenewstack.io/kimi-k3-open-weights/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">The New Stack спускает эйфорию вокруг «крупнейшего открытого релиза весов в истории» на землю: 2,8-триллионная модель весит около 1,4 терабайта, и путь, который раньше делал открытые модели по-настоящему портативными — разработчик-одиночка скачивает веса на свою рабочую станцию, — для модели такого размера попросту не работает. Статья формулирует свой тезис так: открытость весов Kimi K3 реальна юридически, но не универсальна практически — она открывает доступ не всем, а конкретному кругу игроков.</span>
+      <span data-lang="en">The New Stack brings the euphoria around "the largest open-weight release in history" down to earth: the 2.8-trillion-parameter model weighs in at around 1.4 terabytes, and the path that used to make open models genuinely portable — a solo developer pulling weights onto a workstation — simply doesn't reach a model this size. The article's thesis: Kimi K3's open weights are legally real but not practically universal — they open access to a specific set of players, not everyone.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: кому реально достаётся выгода</span><span data-lang="en">The method: who actually captures the benefit</span></h2>
+    <p>
+      <span data-lang="ru">Статья предлагает практический фильтр для оценки любого «гигантского» открытого релиза: спросить не «может ли кто-то в принципе скачать веса», а «у кого уже есть железо, чтобы их запустить». Для K3 ответ — инференс-провайдеры, немногочисленные крупные предприятия и облачные платформы, уже эксплуатирующие стойки GPU Blackwell или MI400; именно они получают выгоду в первую очередь, а не разработчики-одиночки, для которых и задумывался изначальный дух «открытых весов».</span>
+      <span data-lang="en">The article offers a practical filter for evaluating any "giant" open-weight release: ask not "can anyone in principle download the weights" but "who already has the hardware to run them." For K3, the answer is inference providers, a handful of large enterprises, and cloud platforms already operating racks of Blackwell or MI400 GPUs — they capture the benefit first, not the solo developers the original "open weights" ethos was meant for.</span>
+    </p>
+
+    <h2><span data-lang="ru">Экономика замены: капитальные затраты вместо аренды</span><span data-lang="en">The economics of the swap: capex instead of rent</span></h2>
+    <p>
+      <span data-lang="ru">Для тех, кто всё же рассматривает самостоятельный хостинг, статья формулирует реальный компромисс: вместо повторяющихся платежей за API OpenAI или Anthropic организация меняет их на существенные разовые и постоянные вложения — GPU, сетевое оборудование, хранилище, электропитание и эксплуатационную экспертизу. Для организаций под жёсткими регуляторными требованиями (данные не должны покидать периметр) такая инвестиция может быть оправдана независимо от цены; для большинства остальных управляемый API, по оценке издания, скорее всего остаётся более экономичным вариантом.</span>
+      <span data-lang="en">For those still considering self-hosting, the article states the real trade-off plainly: instead of recurring payments to OpenAI's or Anthropic's API, an organization swaps them for substantial upfront and ongoing investment — GPUs, networking, storage, power, and operational expertise. For organizations under strict regulatory requirements (data can't leave the perimeter), that investment may be justified regardless of price; for most everyone else, the outlet judges a managed API likely remains the more economical option.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Ценность материала — в том, что он отделяет символическое значение релиза (доказательство того, что открытые веса достигли фронтир-уровня возможностей) от его немедленной практической доступности, которые в остальном освещении релиза часто смешиваются. Ограничение в том, что статья не даёт точных цифр совокупной стоимости владения для самостоятельного хостинга — оценка строится на общих категориях расходов (GPU, сеть, электричество, персонал), а не на конкретном расчёте, так что решение «свой кластер против API» команде придётся считать самостоятельно, применительно к своему объёму трафика.</span>
+      <span data-lang="en">The piece's value is separating the release's symbolic significance (proof that open weights have reached frontier-tier capability) from its immediate practical accessibility, which other coverage of the release often blurs together. The limitation is that it offers no precise total-cost-of-ownership figures for self-hosting — the estimate stays at the level of expense categories (GPUs, networking, power, staff) rather than a worked calculation, so the "own cluster vs. API" decision is left for each team to run against its own traffic volume.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

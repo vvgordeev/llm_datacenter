@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-28",
+      "news_count": 1,
+      "expert_count": 5,
+      "top_title": {
+        "ru": "Kimi K3: Moonshot открывает веса 2,8-триллионной модели — и инфраструктуру вокруг неё",
+        "en": "Kimi K3: Moonshot open-sources the 2.8-trillion-parameter model's weights — and the infrastructure behind it"
+      }
+    },
+    {
       "date": "2026-07-26",
       "news_count": 2,
       "expert_count": 2,

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Открытые веса достигли фронтира: что Kimi K3 значит для вашего агентного стека» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · MindStudio · 2026-07-27</span>
+      <span data-lang="en">Article digest · MindStudio · 2026-07-27</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Открытые веса достигли фронтира: что Kimi K3 значит для вашего агентного стека</span>
+      <span data-lang="en">Open-Weight AI Reaches the Frontier: What Kimi K3 Means for Your Agent Stack</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.mindstudio.ai/blog/open-weight-ai-frontier-kimi-k3-agent-stack" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">MindStudio не пересказывает бенчмарки Kimi K3, а сразу переходит к вопросу архитектуры: раньше проприетарные фронтир-модели OpenAI, Anthropic и Google держали устойчивое преимущество именно на сложных задачах кодинга и многошагового рассуждения — том классе работы, которая и определяет ценность агентных систем. Появление открытой модели, сопоставимой с ними на самых сложных задачах кодинга, впервые даёт командам, строящим агентов, реальный выбор: не «закрытая модель или ничего», а комбинация уровней.</span>
+      <span data-lang="en">MindStudio doesn't recap Kimi K3's benchmarks — it goes straight to the architecture question: proprietary frontier models from OpenAI, Anthropic, and Google used to hold a reliable edge specifically on hard coding tasks and multi-step reasoning chains — the class of work that defines an agentic system's value. An open-weight model now comparable to them on the hardest coding tasks gives teams building agents a real choice for the first time: not "closed model or nothing," but a mix of tiers.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: маршрутизация задач по уровню сложности</span><span data-lang="en">The method: routing tasks by complexity tier</span></h2>
+    <p>
+      <span data-lang="ru">Конкретная рекомендация статьи — паттерн маршрутизации в агентном стеке: недорогие или быстрые модели берут на себя классификацию запроса, поиск по базе знаний и простую генерацию текста, а сложные шаги — написание и правку кода, многошаговое рассуждение — направляются на Kimi K3, развёрнутую на собственной инфраструктуре. Формула метода, которую даёт MindStudio: так вы получаете «производительность около проприетарного уровня там, где она нужна, по цене открытых весов» — то есть не заменяете весь стек одной моделью, а вставляете K3 именно в узкое место, где раньше был вынужден стоять дорогой закрытый API.</span>
+      <span data-lang="en">The article's concrete recommendation is a routing pattern for the agent stack: cheap or fast models handle request classification, knowledge-base retrieval, and simple text generation, while complex steps — writing and editing code, multi-step reasoning — get routed to a self-hosted Kimi K3. MindStudio's formula for the method: this way you get "near-proprietary performance where you need it, at open-weight costs" — meaning you don't replace the whole stack with one model, you slot K3 into precisely the bottleneck that used to require an expensive closed API.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему архитектура модели это позволяет</span><span data-lang="en">Why the model's architecture makes this possible</span></h2>
+    <p>
+      <span data-lang="ru">Статья привязывает возможность такой маршрутизации к архитектуре K3: Mixture-of-Experts с 896 экспертами, из которых на каждый токен активируется всего 16, — а значит, реально задействуется около 32 млрд параметров за шаг инференса, несмотря на общий размер модели в 2,8 триллиона. Именно эта разреженность держит вычислительную стоимость управляемой даже при полном размере модели, что и делает выделение отдельного GPU-кластера под «сложный уровень» стека экономически осмысленным, а не расточительным.</span>
+      <span data-lang="en">The article ties this routing pattern to K3's architecture: a Mixture-of-Experts design with 896 experts, of which only 16 are activated per token — meaning roughly 32 billion parameters are actually engaged per inference step, despite the model's total size of 2.8 trillion parameters. That sparsity is what keeps compute cost manageable even at the model's full size, which is what makes dedicating a separate GPU cluster to the stack's "hard tier" economically sensible rather than wasteful.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Ценность метода — в том, что он даёт конкретный, воспроизводимый критерий («сложные шаги — на self-hosted K3, простые — на дешёвые модели») вместо расплывчатого «попробуйте открытую модель». Ограничение в том, что сам паттерн предполагает наличие у команды инфраструктуры и экспертизы для развёртывания мультиГПУ-кластера под K3 — то есть выгода реализуется только при достаточном объёме трафика на «сложном» уровне, чтобы окупить капитальные затраты; для команд с малым и нерегулярным объёмом сложных задач управляемый API, вероятно, остаётся проще и дешевле.</span>
+      <span data-lang="en">The method's value is offering a concrete, repeatable criterion ("hard steps go to self-hosted K3, easy ones to cheap models") instead of a vague "try the open model." The limitation is that the pattern assumes the team already has the infrastructure and expertise to deploy a multi-GPU cluster for K3 — meaning the payoff only materializes with enough traffic at the "hard" tier to justify the capital cost; for teams with a small, irregular volume of hard tasks, a managed API likely remains simpler and cheaper.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

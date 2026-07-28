@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Полные веса Kimi K3 доступны — но «открытость» с оговоркой» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · VentureBeat · 2026-07-27</span>
+      <span data-lang="en">Article digest · VentureBeat · 2026-07-27</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Полные веса Kimi K3 доступны — но «открытость» с оговоркой: что нужно знать бизнесу</span>
+      <span data-lang="en">Kimi K3's Full Weights Are Here, But They're 'Open' With a Caveat: What Enterprises Should Know</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://venturebeat.com/technology/kimi-k3s-full-weights-are-here-but-theyre-open-with-a-caveat-what-enterprises-should-know" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Пока большинство материалов о релизе весов Kimi K3 разбирают параметры и бенчмарки, VentureBeat читает то, что реально имеет значение перед внедрением в компании — текст лицензии. Moonshot опубликовала веса под собственной кастомной лицензией на базе MIT: она либеральнее большинства открытых лицензий для одних сценариев, но добавляет условия, которых нет в Apache 2.0 или классическом MIT, для других. Разбор лицензии — это не разовая формальность, а метод, который стоит применять к любой открытой модели прежде, чем строить на ней продукт: читать не заголовок «open-weight», а конкретные пороги обязательств.</span>
+      <span data-lang="en">While most Kimi K3 weight-release coverage digs into parameters and benchmarks, VentureBeat reads the thing that actually matters before an enterprise adopts it — the license text. Moonshot published the weights under its own custom, MIT-derived license: more permissive than most open licenses for some scenarios, but it adds conditions absent from Apache 2.0 or vanilla MIT for others. Reading the license isn't a one-off formality — it's a method worth applying to any open-weight model before building a product on it: read past the "open-weight" headline to the actual obligation thresholds.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: где проходит граница обязательств</span><span data-lang="en">The method: where the obligation line sits</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой практический шаг — сверить свой сценарий использования с двумя количественными порогами лицензии, а не полагаться на общее слово «permissive». Первый порог: любая компания, работающая как поставщик Model-as-a-Service с выручкой свыше $20 млн за любые скользящие 12 месяцев, обязана подписать отдельное соглашение с Moonshot — просто скачать веса и предлагать инференс как сервис в таком масштабе недостаточно. Второй порог: любой продукт на базе K3 с аудиторией свыше 100 млн активных пользователей в месяц или доходом свыше $20 млн в месяц обязан показывать название «Kimi K3» в интерфейсе — требование атрибуции, которого нет у Apache 2.0.</span>
+      <span data-lang="en">The key practical step is checking your use case against the license's two numeric thresholds rather than trusting the general word "permissive." First threshold: any company operating as a Model-as-a-Service provider with revenue over $20M in any trailing 12 months must sign a separate agreement with Moonshot — simply downloading the weights and offering inference as a service at that scale isn't enough on its own. Second threshold: any K3-based product with over 100 million monthly active users or over $20M in monthly revenue must display the "Kimi K3" name in its interface — an attribution requirement absent from Apache 2.0.</span>
+    </p>
+
+    <h2><span data-lang="ru">Исключение, которое снимает большинство рисков</span><span data-lang="en">The exemption that removes most of the risk</span></h2>
+    <p>
+      <span data-lang="ru">Для сценария, который реально волнует большинство компаний — модель работает целиком внутри организации, поддерживая разработчиков, исследователей, юристов или внутренние продуктивность-процессы — лицензия оказывается заметно мягче: внутреннее использование, а также использование через официальные продукты Moonshot или сертифицированных инференс-партнёров, освобождено от обоих порогов. Иначе говоря, порог срабатывает именно тогда, когда компания сама становится реселлером доступа к модели в большом масштабе, а не когда просто применяет её в своих процессах.</span>
+      <span data-lang="en">For the scenario that actually concerns most companies — the model running entirely inside the organization, supporting developers, researchers, legal teams, or internal productivity workflows — the license turns out to be substantially more permissive: internal use, plus use through Moonshot's own official products or certified inference partners, is exempt from both thresholds. In other words, the threshold trips specifically when a company itself becomes a large-scale reseller of access to the model, not when it simply uses the model in its own processes.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Ценность материала — в конкретности порогов: он переводит абстрактный вопрос «можно ли нам это использовать» в проверяемые цифры выручки и аудитории, которые юридический отдел может сверить за один присест. Ограничение — сама формулировка «свыше $20 млн за скользящие 12 месяцев» пока не проверена прецедентом: как именно Moonshot будет отслеживать и применять порог для компаний за пределами Китая, юридически неопределённо, а значит крупным MaaS-провайдерам стоит закладывать время на переговоры с Moonshot заранее, а не постфактум.</span>
+      <span data-lang="en">The piece's value is in the specificity of the thresholds: it turns the abstract "can we use this" question into checkable revenue and audience numbers legal can verify in one sitting. The limitation is that the "$20M over a trailing 12 months" wording hasn't been tested by precedent yet — exactly how Moonshot will track and enforce the threshold for companies outside China remains legally untested, so large MaaS providers should budget time to negotiate with Moonshot upfront rather than after the fact.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

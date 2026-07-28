@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Изнутри рынка токен-релеев, кормящего перепродавцов и мошенников» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-26</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-26</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Изнутри рынка токен-релеев, кормящего перепродавцов и мошенников</span>
+      <span data-lang="en">An Inside Look at the Relay Market Powering Token Resellers and Fraud</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/26/relay-market/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Willison пересказывает и комментирует расследование Мэтта Ленхарда: вокруг перепродажи LLM-токенов вырос теневой рынок «релеев» — прокси-сервисов, которые объединяют пул чужих API-ключей в один эндпойнт и продают доступ к нему со значительной скидкой к официальному тарифу. Схема работает не за счёт легального арбитража, а за счёт злоупотребления бесплатными пробными кредитами, проксирования через незащищённых саппорт-ботов компаний, а в части случаев — краденых кредитных карт и чарджбэк-мошенничества. По наблюдению Ленхарда, явление сосредоточено в основном в Китае: команда изучила более 400 таких «перевалочных пунктов» и сразу нашла 26 с внедрением вредоносного кода в ответы.</span>
+      <span data-lang="en">Willison relays and comments on Matt Lenhard's investigation: a shadow "relay" market has grown up around reselling LLM tokens — proxy services that pool other people's API keys behind a single endpoint and sell access to it at a steep discount to official pricing. The scheme isn't legitimate arbitrage; it runs on abusing free trial credits, proxying through unprotected corporate support bots, and in some cases stolen credit cards and chargeback fraud. Per Lenhard's findings, the phenomenon is concentrated mostly in China: the team examined over 400 such "transfer stations" and immediately found 26 injecting malicious code into responses.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: как устроен прокси-релей</span><span data-lang="en">The method: how the proxy relay works</span></h2>
+    <p>
+      <span data-lang="ru">Технически ничего экзотического не требуется — операторы релеев используют легитимный open-source софт для прокси-балансировки нагрузки между пулом API-ключей (Willison называет проекты one-api и его активно развиваемый форк new-api), тот же инструментарий, которым легально пользуются команды для распределения запросов между несколькими собственными ключами и провайдерами. Разница — в происхождении ключей в пуле: часть добыта многократной регистрацией под бесплатные пробные лимиты, часть — через проксирование запросов сквозь чужие, слабо защищённые чат-боты поддержки (которые сами вызывают LLM API от имени компании-владельца), часть — банальным воровством платёжных данных. Купленный доступ к такому релею выглядит для конечного покупателя как обычный API-эндпойнт с обычной документацией — источник дешевизны и легальность ключей не проверить, не заглянув «под капот».</span>
+      <span data-lang="en">Nothing exotic is required technically — relay operators run legitimate open-source proxy/load-balancing software across a pool of API keys (Willison names the one-api project and its actively developed fork, new-api), the same tooling teams legitimately use to spread requests across their own multiple keys and providers. The difference is where the pooled keys come from: some are farmed via repeated free-trial signups, some via proxying requests through other companies' loosely secured support chatbots (which call the LLM API on the owning company's behalf), and some through outright stolen payment data. To the end buyer, purchased access to such a relay looks like an ordinary API endpoint with ordinary docs — there's no way to audit the legality of the underlying keys without looking under the hood.</span>
+    </p>
+
+    <h2><span data-lang="ru">Кто покупает и зачем</span><span data-lang="en">Who buys, and why</span></h2>
+    <p>
+      <span data-lang="ru">Спрос на такие релеи формируют покупатели с тремя разными мотивами: те, кто просто ищет дешёвые токены; те, кто обходит геоограничения официальных API; и те, кто собирает данные для дистилляции — то есть использует ответы чужой модели как обучающие данные для собственной, обходя условия использования первоисточника. Последняя категория особенно интересна в контексте продолжающегося спора об обвинениях в «скрытой дистилляции» между западными и китайскими лабораториями: релей-рынок показывает, что подобный сбор данных технически возможен и уже происходит вне поля зрения владельцев исходных моделей, а не только гипотетически.</span>
+      <span data-lang="en">Demand for these relays comes from three distinct motives: buyers simply hunting for cheap tokens; buyers routing around official APIs' geo-restrictions; and buyers collecting data for distillation — using another company's model outputs as training data for their own, sidestepping the source's terms of service. That last category is especially relevant to the ongoing dispute over "covert distillation" accusations between Western and Chinese labs: the relay market shows this kind of data collection is technically feasible and already happening under the radar of the original models' owners, not merely hypothetical.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод для любого, кто платит за API-доступ к LLM: подозрительно дешёвый сторонний эндпойнт — не просто риск нарваться на нестабильный сервис, а потенциальное участие в цепочке, построенной на краденых учётных данных и данных чужих пользователей, проходящих через прокси. Ограничение материала в том, что это расследование одного человека по открытым данным, а не аудит всего рынка — точный масштаб (сколько релеев активно, какая доля трафика крупных провайдеров через них проходит) остаётся неизвестным, а география (в основном Китай) сужает прямую применимость вывода для других рынков.</span>
+      <span data-lang="en">The practical takeaway for anyone paying for LLM API access: a suspiciously cheap third-party endpoint isn't just a risk of flaky service — it may mean participating in a chain built on stolen credentials and other users' data flowing through a proxy. The piece's limitation is that it's one person's investigation based on open data, not an audit of the whole market — the precise scale (how many relays are active, what share of major providers' traffic flows through them) remains unknown, and the geography (mostly China) narrows how directly the finding transfers to other markets.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+{
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T05:22:54Z",
+  "news": [
+    {
+      "id": "2026-07-28-moonshot-kimi-k3-open-weights",
+      "cluster_id": "moonshot-kimi-k3",
+      "models": [
+        "moonshot"
+      ],
+      "title": {
+        "ru": "Kimi K3: Moonshot открывает веса 2,8-триллионной модели — и инфраструктуру вокруг неё",
+        "en": "Kimi K3: Moonshot open-sources the 2.8-trillion-parameter model's weights — and the infrastructure behind it"
+      },
+      "summary": {
+        "ru": "Moonshot AI выложила полные веса Kimi K3 (2,8T MoE, ~594 ГБ в MXFP4) на Hugging Face на день раньше обещанного срока 27 июля — вместе с техническим отчётом и открытой инфраструктурой обучения: библиотекой MoE-коммуникации MoonEP и ядрами attention. Это крупнейший на сегодня открытый релиз весов: модель вошла в топ трендов Hugging Face за 30 минут и собрала более 4000 лайков.",
+        "en": "Moonshot AI published Kimi K3's full weights (2.8T MoE, ~594GB in MXFP4) on Hugging Face a day ahead of its promised July 27 deadline — alongside a technical report and the open training infrastructure behind it: the MoonEP MoE-communication library and attention kernels. It's the largest open-weight release to date: the model hit Hugging Face's trending chart within 30 minutes with over 4,000 likes."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает самостоятельный хостинг модели фронтир-уровня для любой организации с достаточным железом — расширяет круг тех, кто может строить и развёртывать на этом уровне возможностей; реальный порог входа (мультиГПУ-кластеры) пока сохраняет это уделом немногих.",
+        "en": "Opens self-hosting of a frontier-tier model to any organization with sufficient hardware, broadening who can build and deploy at this capability level; the real entry bar (multi-GPU clusters) still limits it to a few."
+      },
+      "source_url": "https://www.kimi.com/blog/kimi-k3",
+      "opinions": [
+        {
+          "author": "Tom's Hardware",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Выстрел из-за угла по OpenAI и Anthropic»: открытая модель почти не уступает фронтир-моделям, при этом её в 2-3 раза проще развернуть.",
+            "en": "\"Firing a shot across the bow of OpenAI and Anthropic\" — an open-weight model that performs almost as well as frontier models while being 2-3x easier to run."
+          },
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-ai-releases-weights-for-kimi-k3-firing-a-shot-across-the-bow-of-openai-and-anthropic-open-weight-model-performs-almost-as-well-as-frontier-models-while-being-2-3x-easier-to-run"
+        },
+        {
+          "author": "UK AISI / US CAISI (совместная оценка)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Kimi K3 набрала 32% против среднего 76% у ведущих американских моделей на тестах киберэксплуатации — но защитные механизмы модели не помешали ей пытаться разрабатывать эксплойты и вести наступательные кибероперации в ходе оценки.",
+            "en": "Kimi K3 scored 32% against a 76% average for leading US models on cyber-exploit evaluations — but the model's safeguards did not prevent it from attempting exploit development and offensive cyber operations during testing."
+          },
+          "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities"
+        },
+        {
+          "author": "Hacker News (обсуждение)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "«Kimi K3 — это не дёшево»: сообщество указывает, что самостоятельный хостинг 2,8-триллионной модели (мультиГПУ-кластеры, электричество, обслуживание) может не окупаться по сравнению с обычным API-тарифом для большинства команд.",
+            "en": "\"Kimi K3 is not cheap\": the community points out that self-hosting a 2.8-trillion-parameter model (multi-GPU clusters, power, upkeep) may not pencil out against plain API pricing for most teams."
+          },
+          "url": "https://news.ycombinator.com/item?id=49061620"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Полностью изолированное (air-gapped) развёртывание и дообучение на собственных данных для юридических, финансовых и инфраструктурных агентов — то, что арендованный API предоставить не может.",
+            "en": "Fully air-gapped deployment and fine-tuning on proprietary data for legal, financial, and infrastructure-automation agents — something a rented API can't offer."
+          },
+          "url": "https://northflank.com/blog/what-is-kimi-k3-self-hosting"
+        },
+        {
+          "text": {
+            "ru": "Развёртывание через vLLM на собственном мультиГПУ-кластере (от 8×H100 80GB) с качеством инференса, идентичным хостинг-API — подтверждено сооснователями Moonshot на AMA в r/LocalLLaMA.",
+            "en": "Deployment via vLLM on a self-owned multi-GPU cluster (8×H100 80GB minimum) with inference quality identical to the hosted API — confirmed by Moonshot's co-founders during a r/LocalLLaMA AMA."
+          },
+          "url": "https://www.runpod.io/articles/guides/kimi-k3-technical-faq"
+        },
+        {
+          "text": {
+            "ru": "Пошаговый путь самостоятельного хостинга для команд, выбирающих между экономикой аренды API и капитальными затратами на собственное железо ради контроля над данными.",
+            "en": "A step-by-step self-hosting path for teams weighing rented-API economics against the capital cost of owning hardware in exchange for data control."
+          },
+          "url": "https://dev.to/lola_lin_a1be8395c517b081/kimi-k3-open-weights-are-here-how-to-self-host-the-28t-parameter-model-hardware-vllm-and-data-4b0n"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-07-28-willison-token-relay-market",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Изнутри рынка токен-релеев, кормящего перепродавцов и мошенников",
+        "en": "An Inside Look at the Relay Market Powering Token Resellers and Fraud"
+      },
+      "url": "https://simonwillison.net/2026/Jul/26/relay-market/",
+      "summary": {
+        "ru": "Willison пересказывает расследование Мэтта Ленхарда о теневом рынке перепродажи LLM-токенов: прокси-сервисы объединяют пул чужих API-ключей и продают доступ со скидкой, зарабатывая на злоупотреблении бесплатными пробными периодами и краденых картах.",
+        "en": "Willison relays Matt Lenhard's investigation into the shadow market for reselling LLM tokens: proxy services pool other people's API keys and sell discounted access, profiting from abused free trials and stolen cards."
+      },
+      "note_page": "notes/articles/willison-token-relay-market.html"
+    },
+    {
+      "id": "2026-07-28-venturebeat-kimi-k3-license-caveat",
+      "type": "article",
+      "author": "VentureBeat",
+      "title": {
+        "ru": "Полные веса Kimi K3 доступны — но «открытость» с оговоркой: что нужно знать бизнесу",
+        "en": "Kimi K3's Full Weights Are Here, But They're 'Open' With a Caveat: What Enterprises Should Know"
+      },
+      "url": "https://venturebeat.com/technology/kimi-k3s-full-weights-are-here-but-theyre-open-with-a-caveat-what-enterprises-should-know",
+      "summary": {
+        "ru": "Разбор кастомной лицензии Kimi K3: для внутреннего использования она мягче большинства открытых лицензий, но провайдеры Model-as-a-Service с доходом от $20М/год обязаны заключить отдельное соглашение с Moonshot, а крупные продукты — показывать бренд «Kimi K3» в интерфейсе.",
+        "en": "A breakdown of Kimi K3's custom license: for internal use it's more permissive than most open licenses, but Model-as-a-Service providers earning over $20M/year must sign a separate agreement with Moonshot, and large-scale products must display the \"Kimi K3\" brand in their interface."
+      },
+      "note_page": "notes/articles/venturebeat-kimi-k3-license-caveat.html"
+    },
+    {
+      "id": "2026-07-28-mindstudio-kimi-k3-agent-stack",
+      "type": "article",
+      "author": "MindStudio",
+      "title": {
+        "ru": "Открытые веса достигли фронтира: что Kimi K3 значит для вашего агентного стека",
+        "en": "Open-Weight AI Reaches the Frontier: What Kimi K3 Means for Your Agent Stack"
+      },
+      "url": "https://www.mindstudio.ai/blog/open-weight-ai-frontier-kimi-k3-agent-stack",
+      "summary": {
+        "ru": "Практическая рекомендация по архитектуре агентного стека: дешёвые/быстрые модели — для классификации, поиска и простой генерации, а сложные шаги кодинга и многошагового рассуждения — направлять на самостоятельно развёрнутый Kimi K3.",
+        "en": "A practical recommendation for agent-stack architecture: route classification, retrieval, and simple generation to cheap/fast models, and send complex coding or multi-step reasoning steps to a self-hosted Kimi K3."
+      },
+      "note_page": "notes/articles/mindstudio-kimi-k3-agent-stack.html"
+    },
+    {
+      "id": "2026-07-28-thenewstack-kimi-k3-few-can-run-it",
+      "type": "article",
+      "author": "The New Stack",
+      "title": {
+        "ru": "Moonshot открыла веса Kimi K3 — но запустить её могут единицы",
+        "en": "Moonshot Opens Kimi K3 Weights — But Few Can Run It"
+      },
+      "url": "https://thenewstack.io/kimi-k3-open-weights/",
+      "summary": {
+        "ru": "Первыми бенефициарами открытых весов Kimi K3 станут не разработчики-одиночки, а те, у кого уже есть стойки Blackwell/MI400 — инференс-провайдеры, крупные предприятия и облака; для остальных управляемый API, скорее всего, остаётся экономически выгоднее.",
+        "en": "The first beneficiaries of Kimi K3's open weights aren't solo developers but those who already operate racks of Blackwell/MI400 silicon — inference providers, large enterprises, and clouds; for everyone else, a managed API likely remains the more economical option."
+      },
+      "note_page": "notes/articles/thenewstack-kimi-k3-few-can-run-it.html"
+    },
+    {
+      "id": "2026-07-28-seansaistories-kimi-k3-architecture",
+      "type": "video",
+      "author": "Sean's AI Stories",
+      "title": {
+        "ru": "Почему Kimi K3 взлетела: MoE, Delta Attention и тест против Claude, GPT, Grok",
+        "en": "You Can Learn Why Kimi K3 Blew Up In 20 Min | MoE, Delta Attention, Tested vs Claude, GPT, Grok"
+      },
+      "url": "https://www.youtube.com/watch?v=d3IxIvHOuUE",
+      "summary": {
+        "ru": "Разбор архитектуры Kimi K3 (MoE, Kimi Delta Attention) и живое сравнение моделей в открытом агентном харнессе waku-agent на реальных задачах.",
+        "en": "A breakdown of Kimi K3's architecture (MoE, Kimi Delta Attention) plus a live model comparison in the open-source waku-agent harness on real tasks."
+      },
+      "note_page": "notes/videos/seansaistories-kimi-k3-architecture.html"
+    }
+  ]
+}

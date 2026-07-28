@@ -1,0 +1,52 @@
+{
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T05:22:54Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403 at proxy"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 0, "note": "latest is Claude Opus 5 (already published 2026-07-25) plus minor Claude Code items (Trusted Devices, self-serve HIPAA config) both predating the lookback window or too minor/old to be today's news"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 0, "note": "no new product/feature announcement found for 2026-07-27/28; Nvidia financing talks and news-org partnership post are non-product"},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "google/deepmind (WebSearch)", "status": "ok", "candidates": 0, "note": "latest model news still Gemini 3.6 Flash family (2026-07-21), already published; Gemini for Home update (2026-07-23) too minor/consumer-only"},
+    {"source": "meta blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "meta (WebSearch)", "status": "empty", "candidates": 0, "note": "no fresh Llama/Meta AI announcement found within lookback window"},
+    {"source": "xai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "xai (WebSearch)", "status": "ok", "candidates": 1, "note": "Musk X-thread claim (2026-07-25) that Grok 4.5 co-leads a 'Pareto frontier' with Opus 5, plus a Grok 4.6/4.7 timeline (2/4 weeks out) — rejected as marketing rhetoric without a benchmark sheet and no actual release; tracked in existing xai-grok-4-6 cluster, not republished without a shipped model"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "no new facts since 2026-07-21/22 Microsoft-partnership coverage"},
+    {"source": "deepseek (WebSearch)", "status": "empty", "candidates": 0, "note": "no new facts since 2026-07-26 GA/legacy-cutover entry"},
+    {"source": "Kimi/Moonshot (WebSearch, not in models config but tracked as recurring cluster)", "status": "ok", "candidates": 1, "note": "Kimi K3 open weights (2.8T MoE, ~594GB MXFP4) published on Hugging Face 2026-07-26 evening, ahead of the 2026-07-27 promised date, with technical report and open training infra (MoonEP, attention kernels) — published as continuation of moonshot-kimi-k3 cluster"},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "WebFetch 403 at proxy on hn.algolia.com"},
+    {"source": "Hacker News (WebSearch)", "status": "ok", "candidates": 0, "note": "surfaced several Kimi K3 threads (cyber-capability assessment, cost complaints, benchmark comparisons) — used as opinion sources on the Kimi K3 news item rather than standalone news"},
+    {"source": "AI News (smol.ai)", "status": "blocked", "candidates": 0, "note": "WebFetch 403"},
+    {"source": "TLDR AI", "status": "blocked", "candidates": 0, "note": "WebFetch 403; no usable WebSearch snippet for a 2026-07-27/28 edition"},
+    {"source": "Simon Willison linkblog", "status": "ok", "candidates": 1, "note": "relay-market/token-reseller-fraud post (2026-07-26) found and published as expert content; no post found specifically about the K3 weights landing beyond the already-published 2026-07-16 announcement piece"},
+    {"source": "Zvi Mowshowitz (Don't Worry About the Vase)", "status": "empty", "candidates": 0, "note": "AI #178 already published 2026-07-25; AI #179 not yet out as of this run"},
+    {"source": "Latent Space", "status": "empty", "candidates": 0, "note": "crossover post already published 2026-07-25; no new post found for 2026-07-27/28"},
+    {"source": "Ethan Mollick (One Useful Thing)", "status": "empty", "candidates": 0, "note": "Summer 2026 guide already published 2026-07-26; nothing newer found"},
+    {"source": "Nathan Lambert (Interconnects)", "status": "empty", "candidates": 0, "note": "Kimi K3 escalation piece already published 2026-07-21; no new post found"},
+    {"source": "Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "no new July video found via WebSearch"},
+    {"source": "AI Explained (video)", "status": "empty", "candidates": 0, "note": "no specific new video confirmed via WebSearch beyond the already-published 2026-07-24 entry"},
+    {"source": "Matt Wolfe (video)", "status": "ok", "candidates": 1, "note": "2026-07-24 weekly news-recap video found but rejected per skill rule (video section excludes news-retelling content, not methods/approaches)"},
+    {"source": "Nate Herk (video)", "status": "empty", "candidates": 0, "note": "no new specific video confirmed for this window"},
+    {"source": "Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "latest confirmed video still from May 2026"},
+    {"source": "widened expert search (VentureBeat, MindStudio, The New Stack, Forbes, Sean's AI Stories/waku-agent)", "status": "ok", "candidates": 4, "note": "min_expert_total not reachable from configured experts alone this run (only 1 qualifying piece, and max_articles_per_day=4 caps articles below the 5-item minimum on its own) — widened per skill step 4; 3 additional articles + 1 video published, all distinct angles on the Kimi K3 open-weights story (license/governance, agent-stack architecture, hardware economics, architecture deep-dive + hands-on demo)"}
+  ],
+  "totals": {
+    "candidates": 8,
+    "published": 1,
+    "rejected": {"уже освещено без новых фактов": 4, "маркетинг/риторика без релиза (Grok 4.6 claim)": 1, "формат видео = пересказ новостей, не метод (Matt Wolfe recap)": 1, "вне тематики (Nvidia financing, регуляторика)": 2}
+  },
+  "expert_content": {
+    "min_expert_total_target": 5,
+    "published": 5,
+    "note": "Only 1 qualifying piece came from the 8 configured experts this run (Simon Willison's relay-market post); reaching the minimum required widening to other noteworthy authors per skill step 4 (VentureBeat, MindStudio, The New Stack, Forbes-adjacent commentary, and a technical/hands-on YouTube deep-dive by Sean's AI Stories, discovered via its own open-source waku-agent tool). All 5 published pieces are distinct angles on the Kimi K3 open-weights release rather than 5 separate stories, reflecting how thin the wider news day was.",
+    "sources_checked": ["Simon Willison", "Andrej Karpathy", "Latent Space", "AI Explained", "Matt Wolfe", "Ethan Mollick", "Nate Herk", "Matt Pocock", "Zvi Mowshowitz (widened)", "Nathan Lambert/Interconnects (widened)", "VentureBeat (widened)", "MindStudio (widened)", "The New Stack (widened)", "Forbes (widened, checked not used)", "Sean's AI Stories (widened, video)"]
+  },
+  "video_pipeline": {
+    "gemini": "ok — GEMINI_API_KEY available; generated a real transcript-based summary (theses + timestamps) for the Sean's AI Stories Kimi K3 architecture video",
+    "frames": "blocked: yt-dlp/imageio-ffmpeg installed via pip successfully, but youtube.com is unreachable at the proxy CONNECT level this run (confirmed via both yt-dlp direct test and extract_frames.py, same failure mode as 2026-07-18); video note published without frames, noted on the note page"
+  },
+  "environment_notes": {
+    "git_state": "session started with local HEAD detached 3 commits ahead of the stale cached origin/main ref (2026-07-24/25/26 digests); a fresh `git fetch origin main` showed origin/main was actually already at 2026-07-26 (fast-forward only, no divergence) — reattached to main via `git checkout main && git merge --ff-only origin/main`. No 2026-07-27 digest exists in the archive (gap of one day, run_log for that date also absent) — this run only covers 2026-07-28 and does not backfill 2026-07-27."
+  }
+}

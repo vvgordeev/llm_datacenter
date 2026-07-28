@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Почему Kimi K3 взлетела: MoE, Delta Attention и тест против Claude, GPT, Grok» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Sean's AI Stories · 2026-07-22 · 20:04</span>
+      <span data-lang="en">Video digest · Sean's AI Stories · 2026-07-22 · 20:04</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Почему Kimi K3 взлетела: MoE, Delta Attention и тест против Claude, GPT, Grok</span>
+      <span data-lang="en">You Can Learn Why Kimi K3 Blew Up In 20 Min | MoE, Delta Attention, Tested vs Claude, GPT, Grok</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=d3IxIvHOuUE" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com на уровне CONNECT, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct CONNECT-level access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Автор канала Sean's AI Stories открывает видео <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=0">[00:00]</a> с ключевого числа: Kimi K3 — это модель Mixture-of-Experts на 2,8 триллиона параметров, но одновременно активно лишь около 50 млрд из них, что и держит стоимость инференса управляемой при таком общем размере. Вместо пересказа релиз-нот автор сразу переходит к демонстрации собственного открытого инструмента для сравнения моделей — waku-agent <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=39">[00:39]</a>, локального агентного харнесса с памятью и инструментами, который позволяет прогонять одинаковые задачи через разные LLM и сравнивать не бенчмарки на бумаге, а поведение агента вживую.</span>
+      <span data-lang="en">Sean's AI Stories opens the video <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=0">[00:00]</a> with the key number: Kimi K3 is a 2.8-trillion-parameter Mixture-of-Experts model, but only around 50 billion of those parameters are active at once, which is what keeps inference cost manageable at that total size. Rather than reciting release notes, the host moves straight to demoing his own open-source model-comparison tool — waku-agent <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=39">[00:39]</a>, a local agent harness with memory and tools that lets you run identical tasks through different LLMs and compare live agent behavior rather than paper benchmarks.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: зачем нужны Delta Attention и почему модель «построена для циклов»</span><span data-lang="en">The method: what Delta Attention is for, and why the model is "built for loops"</span></h2>
+    <p>
+      <span data-lang="ru">Центральная часть видео <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=106">[01:46]</a> объясняет архитектуру MoE на пальцах: вместо того чтобы прогонять каждый токен через всю сеть, модель выбирает узкое подмножество «экспертов» под конкретный токен — отсюда и разрыв между общим размером (2,8Т) и активными параметрами (~50 млрд). Далее <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=225">[03:45]</a> автор подробно разбирает Kimi Delta Attention (KDA) и Attention Residuals — механизмы, которые держат стоимость внимания линейной даже на контексте в миллион токенов. Практический вывод, который выводит автор: модель «построена для циклов» — то есть переиспользует уже посчитанное для повторяющихся частей контекста вместо пересчёта заново, из-за чего многошаговые агентные рабочие процессы (когда одна и та же история диалога прогоняется через десятки итераций) становятся на порядок дешевле, чем на архитектурах без такой оптимизации.</span>
+      <span data-lang="en">The video's core section <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=106">[01:46]</a> explains the MoE architecture plainly: instead of running every token through the whole network, the model routes each token to a narrow subset of "experts" — hence the gap between total size (2.8T) and active parameters (~50B). It then walks through <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=225">[03:45]</a> Kimi Delta Attention (KDA) and Attention Residuals — mechanisms that keep attention cost linear even at a million-token context. The host's practical takeaway: the model is "built for loops" — it reuses prior computation for repeated parts of the context instead of recomputing it, which makes multi-step agentic workflows (where the same conversation history gets re-run across dozens of iterations) an order of magnitude cheaper than on architectures without that optimization.</span>
+    </p>
+
+    <h2><span data-lang="ru">Демонстрация: одинаковые задачи, разные модели</span><span data-lang="en">The demo: identical tasks, different models</span></h2>
+    <p>
+      <span data-lang="ru">С отметки <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=523">[08:43]</a> начинается живое сравнение в waku-agent: автор прогоняет через несколько моделей, включая Kimi K3, одну и ту же задачу «запланировать встречу за кофе с Алексом» с интеграцией календаря <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=628">[10:28]</a>, а затем — задачу «написать игру Змейка на Python» <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=960">[16:00]</a>. Сравнение показывает не абстрактные очки бенчмарков, а разницу в стоимости и скорости получения рабочего результата: по наблюдению автора, Kimi K2.7 (code-highspeed) и Grok 4.5 показывают заметно лучшее соотношение результата к цене на этих конкретных задачах, тогда как модели Anthropic обходятся существенно дороже за сопоставимый исход.</span>
+      <span data-lang="en">From <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=523">[08:43]</a>, a live waku-agent comparison begins: the host runs the same "schedule a coffee with Alex" task with calendar integration <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=628">[10:28]</a> through several models including Kimi K3, then a "build a Snake game in Python" task <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=960">[16:00]</a>. The comparison isn't about abstract benchmark scores but the cost and speed of getting a working result: per the host's observation, Kimi K2.7 (code-highspeed) and Grok 4.5 show a noticeably better result-to-cost ratio on these specific tasks, while Anthropic's models cost substantially more for a comparable outcome.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Ценность видео — в том, что оно не ограничивается пересказом архитектурных нововведений, а сразу проверяет их на практике через открытый, воспроизводимый инструмент, который зритель может запустить сам. Ограничение — сравнение построено на двух конкретных, довольно небольших задачах и на хостинг-API моделей, а не на самостоятельно развёрнутых открытых весах K3 <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=1106">[18:26]</a>; выводы о соотношении цены и результата могут не переноситься напрямую на более длинные агентные сессии или на self-hosted инференс с иной экономикой.</span>
+      <span data-lang="en">The video's value is that it doesn't stop at reciting architectural innovations — it immediately tests them in practice via an open, reproducible tool viewers can run themselves. The limitation is that the comparison rests on two specific, fairly small tasks and on the models' hosted APIs rather than self-hosted K3 weights <a class="ts" href="https://www.youtube.com/watch?v=d3IxIvHOuUE&t=1106">[18:26]</a>; the price-to-result conclusions may not carry over directly to longer agentic sessions or to self-hosted inference with different economics.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

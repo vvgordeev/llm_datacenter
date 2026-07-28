@@ -159,7 +159,18 @@
     "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22": "2026-07-26",
     "notes/articles/mollick-opinionated-guide-summer-2026.html": "2026-07-26",
     "https://thenewstack.io/opus-5-agentic-coding-cost/": "2026-07-26",
-    "notes/articles/thenewstack-opus5-agentic-coding-cost.html": "2026-07-26"
+    "notes/articles/thenewstack-opus5-agentic-coding-cost.html": "2026-07-26",
+    "https://www.kimi.com/blog/kimi-k3": "2026-07-28",
+    "https://simonwillison.net/2026/Jul/26/relay-market/": "2026-07-28",
+    "notes/articles/willison-token-relay-market.html": "2026-07-28",
+    "https://venturebeat.com/technology/kimi-k3s-full-weights-are-here-but-theyre-open-with-a-caveat-what-enterprises-should-know": "2026-07-28",
+    "notes/articles/venturebeat-kimi-k3-license-caveat.html": "2026-07-28",
+    "https://www.mindstudio.ai/blog/open-weight-ai-frontier-kimi-k3-agent-stack": "2026-07-28",
+    "notes/articles/mindstudio-kimi-k3-agent-stack.html": "2026-07-28",
+    "https://thenewstack.io/kimi-k3-open-weights/": "2026-07-28",
+    "notes/articles/thenewstack-kimi-k3-few-can-run-it.html": "2026-07-28",
+    "https://www.youtube.com/watch?v=d3IxIvHOuUE": "2026-07-28",
+    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -270,10 +281,10 @@
       }
     },
     "moonshot-kimi-k3": {
-      "last_date": "2026-07-24",
+      "last_date": "2026-07-28",
       "summary": {
-        "ru": "Kimi K3: релиз 16 июля, пауза подписок 19 июля, открытие весов подтверждено на 27 июля; 22 июля Белый дом обвинил Moonshot в скрытой промышленной дистилляции Fable и доступе к запрещённым чипам Nvidia GB300, Минфин допустил санкции, но независимые исследователи (Lambert, Greenblatt) находят обвинение технически сомнительным и не подкреплённым публичными доказательствами",
-        "en": "Kimi K3: released July 16, subscriptions paused July 19, open-weight release confirmed for July 27; on July 22 the White House accused Moonshot of covert industrial distillation of Fable and access to export-banned Nvidia GB300 chips, Treasury floated sanctions, but independent researchers (Lambert, Greenblatt) find the accusation technically questionable and unsupported by public evidence"
+        "ru": "Kimi K3: релиз 16 июля, пауза подписок 19 июля, обвинения Белого дома в дистилляции Fable 22 июля (эксперты скептичны), открытые веса (2,8T MoE, ~594ГБ MXFP4) опубликованы 26-27 июля на день раньше срока вместе с инфраструктурой обучения — крупнейший открытый релиз весов на сегодня; UK AISI/US CAISI находят её слабой в кибербезопасности (32% против 76% у топ-моделей США), а сообщество отмечает, что запустить самостоятельно её могут лишь немногие организации с мультиГПУ-кластерами",
+        "en": "Kimi K3: released July 16, subscriptions paused July 19, White House distillation accusations July 22 (experts skeptical), open weights (2.8T MoE, ~594GB MXFP4) published July 26-27 a day ahead of schedule along with training infrastructure — the largest open-weight release to date; UK AISI/US CAISI find it weak on cybersecurity (32% vs. a 76% average for top US models), and the community notes only organizations with multi-GPU clusters can realistically self-host it"
       }
     },
     "thinking-machines-inkling": {
