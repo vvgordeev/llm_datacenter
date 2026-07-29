@@ -170,7 +170,18 @@
     "https://thenewstack.io/kimi-k3-open-weights/": "2026-07-28",
     "notes/articles/thenewstack-kimi-k3-few-can-run-it.html": "2026-07-28",
     "https://www.youtube.com/watch?v=d3IxIvHOuUE": "2026-07-28",
-    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28"
+    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28",
+    "https://www.anthropic.com/research/discovering-cryptographic-weaknesses": "2026-07-29",
+    "https://blog.modelcontextprotocol.io/posts/2026-07-28/": "2026-07-29",
+    "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/": "2026-07-29",
+    "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/": "2026-07-29",
+    "notes/articles/willison-runaway-ai-agent.html": "2026-07-29",
+    "https://huggingface.co/blog/agent-intrusion-technical-timeline": "2026-07-29",
+    "notes/articles/huggingface-agent-intrusion-timeline.html": "2026-07-29",
+    "https://thezvi.substack.com/p/claude-opus-5-is-highly-capable-but": "2026-07-29",
+    "notes/articles/zvi-opus-5-vs-mythos.html": "2026-07-29",
+    "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-2-winners-and-losers/": "2026-07-29",
+    "notes/articles/alderson-ai-margin-collapse-part2.html": "2026-07-29"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -397,6 +408,27 @@
       "summary": {
         "ru": "xAI выпускает бесплатное расширение Grok для Google Workspace (Docs/Sheets/Slides)",
         "en": "xAI ships a free Grok add-on for Google Workspace (Docs/Sheets/Slides)"
+      }
+    },
+    "anthropic-mythos-cryptanalysis": {
+      "last_date": "2026-07-29",
+      "summary": {
+        "ru": "Claude Mythos Preview за ~60 часов автономной работы находит новые атаки на постквантовую HAWK (стойкость вдвое ниже) и 7-раундовый AES (техника «Мёбиус-мост», ускорение 200-800x); координировано с NIST и авторами схем, на продакшн не влияет",
+        "en": "Claude Mythos Preview spends ~60 hours working autonomously to find new attacks on post-quantum HAWK (key strength halved) and 7-round AES (the 'Mobius Bridge' technique, 200-800x speedup); coordinated with NIST and the schemes' authors, no production impact"
+      }
+    },
+    "mcp-2026-07-28-stateless": {
+      "last_date": "2026-07-29",
+      "summary": {
+        "ru": "MCP выпускает spec 2026-07-28 — крупнейшее обновление протокола: stateless-ядро без handshake/сессий, multi-round-trip запросы, маршрутизация по заголовкам, кэшируемые списки; используется Claude/OpenAI/Google/Microsoft/AWS, 10000+ серверов в проде",
+        "en": "MCP ships the 2026-07-28 spec — the largest protocol update yet: stateless core with no handshake/sessions, multi-round-trip requests, header-based routing, cacheable lists; used by Claude/OpenAI/Google/Microsoft/AWS, 10,000+ servers in production"
+      }
+    },
+    "meta-ai-scheduled-tasks": {
+      "last_date": "2026-07-29",
+      "summary": {
+        "ru": "Meta AI получает мобильные разделы Scheduled Tasks и Artefacts на базе Muse Spark 1.1: ежедневный брифинг из календаря и повторяющиеся задачи без переспроса; ограниченный список рынков, WhatsApp позже",
+        "en": "Meta AI gets mobile Scheduled Tasks and Artefacts sections powered by Muse Spark 1.1: a daily calendar briefing and recurring tasks without re-prompting; limited markets, WhatsApp to follow"
       }
     }
   }

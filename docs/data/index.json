@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-29",
+      "news_count": 3,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Claude Mythos Preview нашла новые атаки на HAWK и AES",
+        "en": "Claude Mythos Preview finds new attacks on HAWK and AES"
+      }
+    },
+    {
       "date": "2026-07-28",
       "news_count": 1,
       "expert_count": 5,

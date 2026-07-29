@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Победители и проигравшие грядущего коллапса маржи в AI (часть 2)» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Martin Alderson · 2026-07-22</span>
+      <span data-lang="en">Article digest · Martin Alderson · 2026-07-22</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Победители и проигравшие грядущего коллапса маржи в AI (часть 2)</span>
+      <span data-lang="en">Winners and losers in the coming AI margin collapse (part 2)</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-2-winners-and-losers/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Во второй части серии (первая разбирала GLM 5.2 как первую открытую модель, реально конкурирующую с Opus и GPT по агентным задачам примерно за 15–20% их цены) Мартин Алдерсон раскладывает, кто выигрывает, а кто проигрывает от надвигающегося схлопывания маржи в инференсе LLM. Его тезис: рынок расслаивается на два сегмента — дорогие модели самого верха (Fable, возможно GPT-5.6 Sol) и широкий пласт «достаточно хороших» дешёвых моделей (уровня Opus и ниже) — и именно во втором сегменте маржа схлопывается быстрее всего.</span>
+      <span data-lang="en">In part two of the series (part one covered GLM 5.2 as the first open-weight model genuinely competitive with Opus and GPT on agentic tasks at roughly 15-20% of their price), Martin Alderson lays out who wins and who loses as inference margins for LLMs collapse. His thesis: the market is bifurcating into two segments — expensive top-tier models (Fable, perhaps GPT-5.6 Sol) and a broad swath of "good enough," cheap models (roughly Opus-level and below) — and it's the second segment where margins are collapsing fastest.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: кто оказывается победителем</span><span data-lang="en">The method: who ends up winning</span></h2>
+    <p>
+      <span data-lang="ru">Алдерсон прослеживает цепочку выгодоприобретателей вниз по стеку: производители полупроводников и вся аппаратная цепочка поставок до инференса выигрывают первыми, потому что раньше они перепродавали фронтир-инференс с почти нулевой маржой, а появление «достаточно хороших» дешёвых моделей переворачивает эту экономику — теперь кодинг-агенты могут предлагать результат на уровне 90% от Opus за долю цены и при этом реально зарабатывать. Вторые выгодоприобретатели — конечные потребители, для которых инференс попросту дешевеет. Третьи, менее очевидные, — компании, строящие продукты поверх дешёвых моделей: их главный приз не экономия на токенах, а данные о реальном агентном использовании, тот самый сигнал, который нужен лабораториям для обучения следующего поколения моделей.</span>
+      <span data-lang="en">Alderson traces the chain of beneficiaries down the stack: semiconductor makers and the whole hardware supply chain feeding inference win first, because they used to resell frontier inference at near-zero margin, and "good enough" cheap models flip that economics — coding agents can now offer results roughly 90% as capable as Opus at a fraction of the price and still turn a profit. Second beneficiaries are end consumers, for whom inference simply gets cheaper. A third, less obvious group is companies building products on top of cheap models: their real prize isn't token cost savings but real-world agentic usage data — the exact signal labs need to train the next model generation.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пути отступления фронтир-лабораторий</span><span data-lang="en">The frontier labs' escape routes</span></h2>
+    <p>
+      <span data-lang="ru">Для лабораторий, делающих самые дорогие топ-модели, Алдерсон видит два пути остаться прибыльными в новой реальности: управляемые агентные продукты (где ценность не в токене, а в результате целого рабочего процесса, который сложно скопировать одной дешёвой моделью) и постоянное удержание позиции «на голову впереди» по абсолютным возможностям. Агрессивная ценовая политика xAI с Grok 4.5 (около $6 за миллион токенов на выходе) он приводит как пример того, как более слабый по фронтир-меркам игрок компенсирует это ценой — потому что обогнать OpenAI и Anthropic на самом верху у xAI шансов немного, а вот забрать долю снизу — вполне.</span>
+      <span data-lang="en">For labs making the priciest top-tier models, Alderson sees two ways to stay profitable in the new reality: managed agentic products (where the value sits in an entire workflow's output, not the token, and is hard to copy with one cheap model) and simply staying a head ahead on absolute capability. He cites xAI's aggressive pricing on Grok 4.5 (around $6 per million output tokens) as an example of a frontier-adjacent-but-not-frontier player compensating with price — because xAI has little chance of beating OpenAI and Anthropic at the very top, but a real shot at taking share from below.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение анализа</span><span data-lang="en">Where the analysis is limited</span></h2>
+    <p>
+      <span data-lang="ru">Материал — это экономическая экстраполяция независимого автора на основе текущих цен и релизов (GLM 5.2, Grok 4.5), а не прогноз с расчётом конкретных финансовых показателей компаний; сам Алдерсон подчёркивает, что делает ставку на направление тренда, а не на точные сроки и цифры. Скорость, с которой маржа реально схлопнется в каждом сегменте, зависит от факторов вне анализа — например, от того, как быстро экспортные ограничения и правила доступа к открытым весам (тема, которую в те же дни поднимает и Simon Willison) изменят набор доступных дешёвых моделей.</span>
+      <span data-lang="en">The piece is an independent author's economic extrapolation from current pricing and releases (GLM 5.2, Grok 4.5), not a forecast with modeled company financials; Alderson himself stresses he's betting on the trend's direction, not exact timing or figures. How fast margins actually collapse in each segment depends on factors outside the analysis — for instance, how quickly export controls and open-weight access rules (a theme Simon Willison raises in the same window) reshape which cheap models remain available.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

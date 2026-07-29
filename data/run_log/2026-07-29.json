@@ -1,0 +1,44 @@
+{
+  "date": "2026-07-29",
+  "generated_at": "2026-07-29T05:35:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; покрыто через WebSearch — найдена новость о Claude Mythos Preview (криптоанализ HAWK/AES)"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — только инцидентные апдейты (ошибки генерации изображений), новых фич не найдено"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — ничего нового за 36ч (последний релиз Gemini 3.6 Flash 21 июля, уже покрыт ранее)"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл мобильный rollout Scheduled Tasks/Artefacts (Muse Spark 1.1)"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — только анонс сроков Grok 4.6/4.7 без содержания (маркетинг без деталей), отклонено"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — ничего нового за 36ч"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — только смена тарификации/деприкейшн старых имён моделей, не новая функция"},
+    {"source": "qwen blog", "status": "ok", "candidates": 0, "note": "enabled: false — пропущено по конфигу"},
+    {"source": "hacker news api", "status": "blocked", "candidates": 0, "note": "hn.algolia.com 403 CONNECT; WebSearch как основной канал"},
+    {"source": "aggregator smol.ai", "status": "blocked", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл issue 26-07-27 'not much happened today', подтверждает спокойный день"},
+    {"source": "aggregator tldr.tech/ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не дал содержания конкретного выпуска"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch не дал релевантных новых тредов за окно"},
+    {"source": "widened search (MCP spec, cyber research)", "status": "ok", "candidates": 2, "note": "MCP 2026-07-28 stateless spec и Claude Mythos crypto research найдены через расширенный проход"},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 2, "note": "runaway AI agent (23 июля) + линк на форензик HF (28 июля); один пост (27 июля) оказался перепечаткой уже опубликованного материала Mollick — отклонён"},
+    {"source": "expert: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "новых видео за 7 дней не найдено (последнее — конец июня)"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "свежие статьи уже были опубликованы ранее (aiewf26trends — 17 июля, уже в архиве)"},
+    {"source": "expert: AI Explained (video)", "status": "empty", "candidates": 0, "note": "эпизод от 22 июля не удалось однозначно атрибутировать к каналу — не включён во избежание ошибки атрибуции"},
+    {"source": "expert: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "найден недельный newsroundup от 24 июля — формат пересказа новостей, не 'подход к использованию', отклонён по правилам скилла"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост (23 июля) уже опубликован в сводке 2026-07-26"},
+    {"source": "expert: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "самое свежее релевантное видео — от 8 июля, вне 7-дневного окна"},
+    {"source": "expert: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "конкретное новое видео за 7 дней не найдено, только апдейт статистики репозитория skills"},
+    {"source": "expert: widened (Zvi Mowshowitz)", "status": "ok", "candidates": 1, "note": "Claude Opus 5 Is Highly Capable, But Is No Mythos — 28 июля"},
+    {"source": "expert: widened (Martin Alderson)", "status": "ok", "candidates": 1, "note": "AI margin collapse part 2 — 22 июля"},
+    {"source": "expert: widened (Hugging Face)", "status": "ok", "candidates": 1, "note": "форензик-хроника вторжения агента — 27-28 июля"}
+  ],
+  "totals": {
+    "candidates": 12,
+    "published": 3,
+    "rejected": {
+      "маркетинг без содержания (Grok 4.6/4.7 сроки)": 1,
+      "не новая функция/перепечатка (Kimi K3 продолжение, уже в архиве 28 июля)": 1,
+      "не по теме продукта (Nvidia Open Secure AI Alliance, HF breach как hard news, employee petition, robotics/FCC новости)": 4
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — видео-конспектов в этом прогоне нет (не найдено подходящих свежих видео в 7-дневном окне у сконфигурированных каналов)",
+    "frames": "skipped: видео не выбрано"
+  },
+  "notes": "Прямой WebFetch заблокирован (403) почти для всех источников, включая hn.algolia.com и youtube.com feeds — подтверждает известную деградацию облачного egress-прокси (см. run_log 2026-07-09, 2026-07-18). Основной канал — WebSearch. Экспертный контент: 4 из 5 целевых (min_expert_total) — после широкого прохода по всем 8 сконфигурированным экспертам и нескольким дополнительным авторам не найдено ни одного видео, одновременно свежего (≤7 дней), по теме 'подходы к использованию LLM' и надёжно атрибутируемого к нужному каналу; решено не включать сомнительный или пересказ-формат кандидат, а не дотягивать число искусственно."
+}

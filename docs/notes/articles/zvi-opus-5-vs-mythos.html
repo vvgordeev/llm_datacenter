@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Claude Opus 5 очень способна, но это не Mythos» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Zvi Mowshowitz · 2026-07-28</span>
+      <span data-lang="en">Article digest · Zvi Mowshowitz · 2026-07-28</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Claude Opus 5 очень способна, но это не Mythos</span>
+      <span data-lang="en">Claude Opus 5 Is Highly Capable, But Is No Mythos</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thezvi.substack.com/p/claude-opus-5-is-highly-capable-but" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Zvi Mowshowitz разбирает Claude Opus 5 (вышла 24 июля) не как попытку Anthropic выпустить самую мощную модель на рынке, а как осознанный компромисс: по большинству реальных задач Opus 5 работает примерно на уровне Fable, местами чуть лучше, но по-прежнему заметно уступает непубличной Mythos — особенно в задачах кибербезопасности, требующих связывать разрозненные эксплойты в цепочку атаки самостоятельно («у неё нет того самого "the Juice"», как формулирует Zvi). При этом цена — половина тарифа Fable за токен на API и заметно дешевле через подписку — превращает Opus 5 в модель по умолчанию для Claude Max и самую мощную опцию на Claude Pro.</span>
+      <span data-lang="en">Zvi Mowshowitz reviews Claude Opus 5 (released July 24) not as Anthropic's attempt at the market's most powerful model, but as a deliberate trade-off: on most real-world tasks Opus 5 performs roughly at Fable's level, sometimes a bit better, but still clearly behind the unreleased Mythos — especially on cybersecurity tasks that require autonomously chaining disparate exploits into an attack ("it doesn't have 'the Juice,'" as Zvi puts it). At the same time, its price — half of Fable's per-token API rate, and noticeably cheaper via subscription — makes Opus 5 the new default model on Claude Max and the strongest option on Claude Pro.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод оценки: где Opus 5 сильна, а где — нет</span><span data-lang="en">The evaluation approach: where Opus 5 is strong, and where it isn't</span></h2>
+    <p>
+      <span data-lang="ru">Zvi опирается на комбинацию бенчмарков (Frontier-Bench, GDPval-AA) и собственного опыта использования, а не на один синтетический тест. На таких оценках по кодингу и «интеллектуальной» офисной работе Opus 5 показывает новый уровень state-of-the-art среди доступных широкой публике моделей. Но паттерн способностей асимметричен: модель отлично «думает локально» — сильна как исполнитель конкретной, хорошо очерченной подзадачи, то есть как сабагент, — и заметно хуже «думает глобально», когда ей поручают самой вести весь процесс от начала до конца без внешнего дирижёра.</span>
+      <span data-lang="en">Zvi draws on a combination of benchmarks (Frontier-Bench, GDPval-AA) and hands-on usage rather than a single synthetic test. On coding and "knowledge work" evaluations of that kind, Opus 5 sets a new state-of-the-art among publicly available models. But the capability pattern is asymmetric: the model is excellent at thinking locally — strong as the executor of a specific, well-scoped subtask, i.e. as a subagent — and noticeably weaker at thinking globally, when asked to run an entire process end-to-end without an external conductor.</span>
+    </p>
+
+    <h2><span data-lang="ru">Безопасность: наименее подверженная prompt injection модель</span><span data-lang="en">Safety: the least prompt-injectable model yet</span></h2>
+    <p>
+      <span data-lang="ru">Отдельно Zvi отмечает результаты по устойчивости к prompt injection: по его прочтению системной карты и результатов ред-тиминга, Opus 5 — на сегодня наименее подверженная такому классу атак модель среди протестированных, с заметно более высоким сопротивлением, чем у предыдущих релизов Anthropic. В сочетании с более мягкими классификаторами (о которых пишет и Anthropic в анонсе, и что делает модель менее склонной блокировать легитимные agentic-задачи) это подкрепляет позиционирование Opus 5 как рабочей лошадки для повседневного, а не демонстрационного использования.</span>
+      <span data-lang="en">Separately, Zvi highlights the prompt-injection resistance results: based on his reading of the system card and red-teaming results, Opus 5 is currently the least prompt-injectable model among those tested, with markedly higher resistance than Anthropic's previous releases. Combined with more permissive classifiers (which Anthropic's own announcement also notes, and which make the model less prone to blocking legitimate agentic tasks), this reinforces Opus 5's positioning as a daily workhorse rather than a showcase model.</span>
+    </p>
+
+    <h2><span data-lang="ru">Вывод и ограничение</span><span data-lang="en">Takeaway, and where the piece is limited</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод Zvi: для подавляющего большинства пользователей и агентных пайплайнов Opus 5 — разумный выбор по соотношению цена/возможности, а не признак того, что Anthropic придерживает Mythos «для галочки» — она выпускает отдельный, объективно более способный, но и более дорогой и рискованный класс моделей для другой аудитории. Ограничение обзора в том, что это анализ одного (пусть и очень внимательного к деталям) независимого автора по публичным бенчмаркам и собственному опыту использования, а не контролируемое сравнение силами третьей независимой лаборатории.</span>
+      <span data-lang="en">Zvi's practical takeaway: for the vast majority of users and agentic pipelines, Opus 5 is a sound price/capability choice, not evidence that Anthropic is sandbagging Mythos — it's shipping a separate, objectively more capable but also pricier and riskier model tier for a different audience. The review's limitation is that it's one independent author's analysis (however detail-attentive) based on public benchmarks and personal usage, not a controlled comparison run by an independent third-party lab.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
