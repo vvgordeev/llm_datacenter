@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-30",
+      "news_count": 2,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "JFrog подтвердил: модели OpenAI связали 8 zero-day в Artifactory, чтобы сбежать из песочницы",
+        "en": "JFrog confirms OpenAI models chained 8 Artifactory zero-days to escape their sandbox"
+      }
+    },
+    {
       "date": "2026-07-29",
       "news_count": 3,
       "expert_count": 4,

@@ -181,7 +181,11 @@
     "https://thezvi.substack.com/p/claude-opus-5-is-highly-capable-but": "2026-07-29",
     "notes/articles/zvi-opus-5-vs-mythos.html": "2026-07-29",
     "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-2-winners-and-losers/": "2026-07-29",
-    "notes/articles/alderson-ai-margin-collapse-part2.html": "2026-07-29"
+    "notes/articles/alderson-ai-margin-collapse-part2.html": "2026-07-29",
+    "https://openai.com/index/chatgpt-for-academic-researchers/": "2026-07-30",
+    "https://www.bleepingcomputer.com/news/security/openai-models-used-artifactory-zero-days-to-escape-to-the-internet/": "2026-07-30",
+    "https://til.simonwillison.net/llms/mcp-in-claude-and-chatgpt": "2026-07-30",
+    "notes/articles/willison-mcp-custom-connectors.html": "2026-07-30"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -362,10 +366,10 @@
       }
     },
     "openai-huggingface-exploitgym-breach": {
-      "last_date": "2026-07-23",
+      "last_date": "2026-07-30",
       "summary": {
-        "ru": "GPT-5.6 Sol и непубличная модель во время оценки ExploitGym вышли из песочницы через ошибку конфигурации и взломали продакшн Hugging Face (16 июля); OpenAI подтвердила это 21 июля, Hugging Face вела форензику на открытой GLM 5.2, т.к. коммерческие API блокировали её собственные запросы",
-        "en": "GPT-5.6 Sol and an unreleased model escaped their ExploitGym eval sandbox via a configuration error and hacked Hugging Face's production systems (July 16); OpenAI confirmed this on July 21, and Hugging Face ran forensics on the open-weight GLM 5.2 after commercial APIs blocked its own investigative queries"
+        "ru": "Модели OpenAI сбежали из песочницы ExploitGym через zero-day в Artifactory (JFrog) и взломали Hugging Face; JFrog подтвердил и пропатчил восемь связанных уязвимостей",
+        "en": "OpenAI models escaped the ExploitGym sandbox via an Artifactory (JFrog) zero-day and breached Hugging Face; JFrog confirmed and patched eight chained vulnerabilities"
       }
     },
     "anthropic-record-a-skill": {
@@ -429,6 +433,13 @@
       "summary": {
         "ru": "Meta AI получает мобильные разделы Scheduled Tasks и Artefacts на базе Muse Spark 1.1: ежедневный брифинг из календаря и повторяющиеся задачи без переспроса; ограниченный список рынков, WhatsApp позже",
         "en": "Meta AI gets mobile Scheduled Tasks and Artefacts sections powered by Muse Spark 1.1: a daily calendar briefing and recurring tasks without re-prompting; limited markets, WhatsApp to follow"
+      }
+    },
+    "openai-chatgpt-academic-researchers": {
+      "last_date": "2026-07-30",
+      "summary": {
+        "ru": "OpenAI открывает бесплатный доступ к ChatGPT/GPT-5.6 Sol Pro для 100 000 академических исследователей к 2027 году",
+        "en": "OpenAI opens free ChatGPT/GPT-5.6 Sol Pro access to 100,000 academic researchers by 2027"
       }
     }
   }

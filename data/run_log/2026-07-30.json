@@ -1,0 +1,42 @@
+{
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30T05:19:11Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch за 36ч — только уже известное (Opus 5 24 июля, MCP-спека 28 июля, открытое письмо по open-weights 27-28 июля — политика, не фича, отклонено)"},
+    {"source": "openai blog", "status": "ok", "candidates": 1, "note": "WebFetch 403 на openai.com, но WebSearch нашёл ChatGPT for Academic Researchers (29 июля) — опубликовано"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — ничего нового за 36ч (Gemini 3.6 Flash уже от 21 июля, ранее не покрыт в архиве, но вне окна и без реакций — не тянет на самостоятельную карточку сегодня)"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — нового за 36ч не найдено (Scheduled Tasks уже опубликованы вчера)"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — только роадмап Grok 4.6/4.7 без бенчмарков (маркетинг без содержания) и Grok for Google Workspace (уже в архиве 26 июля) — отклонено"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — только тизер нового MoE без спеков/лицензии (маркетинг без содержания) и Robostral Navigate (уже в архиве)"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — ничего нового за 36ч, V4 GA и пиринг уже покрыты ранее"},
+    {"source": "qwen blog", "status": "ok", "candidates": 0, "note": "enabled: false — пропущено по конфигу"},
+    {"source": "hacker news api", "status": "blocked", "candidates": 0, "note": "hn.algolia.com 403 CONNECT; WebSearch по HN — совпадения либо старые, либо перепечатки уже известного (форензик HF)"},
+    {"source": "aggregator smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не нашёл индексированного выпуска за 29-30 июля"},
+    {"source": "aggregator tldr.tech/ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch дал содержание выпуска 29 июля — из релевантного только уже известное письмо про pacing (политика, не фича)"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch не дал новых релевантных тредов за окно"},
+    {"source": "widened search (JFrog/Artifactory форензика, общие AI-news запросы)", "status": "ok", "candidates": 1, "note": "Продолжение известного кластера openai-huggingface-exploitgym-breach: JFrog официально подтвердил 8 цепочек zero-day и патч 7.161.15 — новые факты, опубликовано с тем же cluster_id"},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 1, "note": "TIL от 29 июля 'Adding a custom MCP server to Claude and ChatGPT' — метод, опубликовано; пост 27 июля оказался ссылкой на уже опубликованную статью Mollick (перепечатка, отклонена)"},
+    {"source": "expert: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "новых видео не найдено, последнее — конец апреля (Sequoia Ascent)"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "последний эпизод подкаста — 1 июля, вне 7-дневного окна"},
+    {"source": "expert: AI Explained (video)", "status": "empty", "candidates": 0, "note": "последний найденный эпизод подкаста — 22 июля, вне окна; новых видео на канале за 7 дней не найдено"},
+    {"source": "expert: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "формат — еженедельный пересказ новостей, не 'подход к использованию' (правило скилла), отклонено по формату"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост (23 июля, 'Summer 2026 edition') уже опубликован в сводке 2026-07-26"},
+    {"source": "expert: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "самое релевантное видео ('Claude Code for Non-Coders') — около 3 недель назад, вне 7-дневного окна"},
+    {"source": "expert: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "новое видео за 7 дней не найдено"},
+    {"source": "widened: Every.to, thezvi, Stratechery, HF blog", "status": "empty", "candidates": 0, "note": "Every.to — только сборные еженедельные заметки без единой темы; у Zvi нового AI#-выпуска нет (#178 от 23 июля уже использован); Stratechery в отпуске до 3 августа; у HF нет нового поста кроме уже опубликованного 29 июля"}
+  ],
+  "totals": {
+    "candidates": 10,
+    "published": 2,
+    "rejected": {
+      "маркетинг без содержания (роадмап Grok 4.6/4.7, тизер нового Mistral MoE)": 2,
+      "уже в архиве / перепечатка (Grok for Google Workspace, Robostral Navigate, Gemini 3.6 Flash, DeepSeek V4, Willison-репост guide Mollick)": 5,
+      "не по теме продукта / политика, не фича (open letter по AI pacing, письмо Anthropic про open-weights ban, статья Axios про изоляцию Anthropic в политике)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — подходящего свежего видео в 7-дневном окне у сконфигурированных каналов не найдено",
+    "frames": "skipped: видео не выбрано"
+  },
+  "notes": "Прямой WebFetch по-прежнему заблокирован (403) почти для всех блогов вендоров и hn.algolia.com — деградация облачного egress-прокси сохраняется (см. run_log 2026-07-09, 2026-07-18, 2026-07-29). WebSearch — основной канал. Тихий день по новостям (2/12 от лимита): после широкого прохода по всем 7 включённым моделям, агрегаторам, HN и community реальных, ранее не опубликованных фактов о новых функциях нашлось всего два — оба тщательно проверены на дубли с data/state.json. Экспертный контент: 1 из 5 (min_expert_total) — после прохода по всем 8 экспертам конфига и нескольких дополнительных авторов (Every.to, Zvi, Stratechery, Hugging Face) свежего (≤7 дней), небанального и не дублирующего архив материала кроме одной статьи Willison не нашлось; решено не дотягивать число искусственно (пересказы новостей, перепечатки и материалы вне окна отклонены)."
+}

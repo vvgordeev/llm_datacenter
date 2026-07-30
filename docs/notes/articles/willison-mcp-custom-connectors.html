@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Adding a custom MCP server to Claude and ChatGPT» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-29</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-29</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как подключить собственный MCP-сервер к Claude и ChatGPT</span>
+      <span data-lang="en">Adding a custom MCP server to Claude and ChatGPT</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://til.simonwillison.net/llms/mcp-in-claude-and-chatgpt" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Веб-версии чатов Claude.ai и ChatGPT давно умеют подключаться к серверам Model Context Protocol, но интерфейсы для этого спрятаны и устроены совершенно по-разному. Willison показывает это на собственном примере: у него есть безавторизационный MCP-сервер по адресу datasette.simonwillison.net/-/mcp на базе datasette-mcp, который позволяет модели выполнять только read-only SQL-запросы к копии базы данных его блога. На этом примере он проходит оба интерфейса подключения и сравнивает, насколько по-разному вендоры относятся к риску произвольного стороннего сервера в обычном чате.</span>
+      <span data-lang="en">The web chat interfaces for both Claude.ai and ChatGPT have supported connecting to Model Context Protocol servers for a while, but the UI for doing so is tucked away and built completely differently on each. Willison demonstrates this with his own example: an unauthenticated MCP server at datasette.simonwillison.net/-/mcp, built on datasette-mcp, which lets a model run only read-only SQL queries against a copy of his blog's database. Using that example, he walks through both connection flows and compares how differently each vendor treats the risk of an arbitrary third-party server sitting inside an ordinary chat.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: подключение в Claude.ai</span><span data-lang="en">The method: connecting in Claude.ai</span></h2>
+    <p>
+      <span data-lang="ru">В Claude.ai путь короткий: меню «+» рядом со строкой ввода → «Add custom connector» → в открывшемся окне вставляется URL MCP-сервера и, по желанию, настраивается авторизация. После добавления сервер появляется в меню Connectors, где его можно включать и выключать для конкретного чата отдельным тумблером — то есть подключённый однажды сервер не обязан быть активным в каждом новом разговоре.</span>
+      <span data-lang="en">In Claude.ai the path is short: the "+" menu next to the prompt box → "Add custom connector" → a modal where you paste the MCP server's URL and, optionally, configure authentication. Once added, the server shows up in the Connectors menu, where it can be toggled on and off per chat — a server you've added once doesn't have to be active in every new conversation.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: подключение в ChatGPT и «опасный» режим разработчика</span><span data-lang="en">The method: connecting in ChatGPT, and the "dangerous" developer mode</span></h2>
+    <p>
+      <span data-lang="ru">В ChatGPT процесс заметно тяжелее: сначала нужно включить Developer mode в Settings → Security and login, и только после этого в разделе Plugins становится доступна кнопка добавления MCP-сервера для конкретного адреса. OpenAI прямым текстом описывает этот режим как «мощный, но опасный»: он даёт модели возможность выполнять реальные операции записи, а значит нужно следить за промпт-инъекциями, ошибками модели в write-действиях, способными необратимо испортить данные, и за вредоносными MCP-серверами, которые пытаются выкрасть информацию из разговора. Подключаться стоит только к серверам, которым вы действительно доверяете — любой сторонний MCP получает тот контекст разговора, который модель сочтёт нужным передать, и туда может случайно попасть чувствительная информация из более ранних реплик.</span>
+      <span data-lang="en">In ChatGPT the process is noticeably heavier: you first have to turn on Developer mode under Settings → Security and login, and only then does the Plugins section expose a button for adding an MCP server at a given address. OpenAI itself describes the mode in blunt terms as "powerful but dangerous": it gives the model the ability to perform real write operations, so you need to watch for prompt injections, model mistakes on write actions that could irreversibly damage data, and malicious MCP servers that try to exfiltrate information from the conversation. You should only connect to servers you genuinely trust — any third-party MCP receives whatever conversational context the model decides to hand it, and that can inadvertently include sensitive information from earlier in the chat.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это уместно и где граница</span><span data-lang="en">When this is appropriate, and where the line sits</span></h2>
+    <p>
+      <span data-lang="ru">Разница интерфейсов отражает разную философию: Claude.ai встраивает custom-коннекторы как обычную настройку для любого пользователя, тогда как ChatGPT прячет ту же возможность за флагом для разработчиков и явным предупреждением. Практический вывод у Willison простой — безавторизационный read-only MCP вроде его собственного датасета безопасен именно потому, что он read-only и не содержит ничего приватного; но то же самое расширение в общем чате, подключённое к MCP с правами записи или доступом к приватным данным, требует того уровня осторожности, который OpenAI закладывает в само название режима.</span>
+      <span data-lang="en">The interface difference reflects a real philosophical split: Claude.ai treats custom connectors as an ordinary setting available to any user, while ChatGPT gates the same capability behind a developer flag and an explicit warning. Willison's practical takeaway is simple: an unauthenticated, read-only MCP like his own dataset example is safe precisely because it's read-only and holds nothing private; the same feature, pointed at an MCP server with write access or private data, in an ordinary chat UI, needs exactly the level of caution OpenAI bakes into the mode's own name.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
