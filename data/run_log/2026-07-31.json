@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T05:17:09Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл собственный пост Anthropic 'Investigating three real-world incidents in our cybersecurity evaluations' (30-31 июля) — опубликовано как основная новость"},
+    {"source": "openai blog", "status": "ok", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл официальный пост 'Advancing the price-performance frontier with GPT-5.6' (снижение цен Luna/Terra, 30 июля) — опубликовано"},
+    {"source": "google/deepmind blog", "status": "ok", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл Gemini Robotics 2 (30 июля) — опубликовано"},
+    {"source": "meta ai blog", "status": "empty", "candidates": 0, "note": "WebFetch 403; WebSearch за 36ч — ничего нового (Muse Spark 1.1 обновления уже покрыты ранее, свежих релизов не найдено)"},
+    {"source": "xai news", "status": "empty", "candidates": 0, "note": "WebFetch 403; WebSearch — только Tesla Summer Update (Grok управляет автомобилем голосом, только на AMD-чипах) и обновление голосов Grok Voice, оба маркетинг без значимого содержания для подходов к использованию LLM — отклонено"},
+    {"source": "mistral news", "status": "empty", "candidates": 0, "note": "WebFetch 403; WebSearch — ничего нового за 36ч (партнёрство с Microsoft от 21 июля и тизер открытой модели уже покрыты ранее)"},
+    {"source": "deepseek news", "status": "empty", "candidates": 0, "note": "WebFetch 403; WebSearch — официальный релиз V4 (обещан на середину июля) по состоянию на 31 июля всё ещё не подтверждён как отгруженный, новых материалов за 36ч нет"},
+    {"source": "qwen blog", "status": "ok", "candidates": 0, "note": "enabled: false — пропущено по конфигу"},
+    {"source": "hacker news api", "status": "blocked", "candidates": 0, "note": "hn.algolia.com 403 CONNECT; WebSearch по HN дал релевантный тред по Gemini Robotics 2 (id=49111237) — использован как мнение, отдельной новостью не стал"},
+    {"source": "aggregator smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не нашёл индексированного выпуска за 30-31 июля, но косвенно подтвердил Gemini Robotics 2 и AWS/Nscale-Anyscale (инфраструктура, не LLM-фича — отклонено)"},
+    {"source": "aggregator tldr.tech/ai", "status": "ok", "candidates": 1, "note": "WebFetch 403; WebSearch дал содержание выпуска 30 июля — упомянул Gemini Robotics 2 (уже найдено независимо) и ThinkingCap-Qwen3.6-27B (видео Sam Witteveen с неподтверждённой из-за противоречивых данных индексации свежестью — не взято в экспертный контент из осторожности)"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch не дал новых релевантных тредов за окно, кроме нерелевантного старого треда о мартовской утечке исходников Claude Code (отфильтрован по дате)"},
+    {"source": "widened search (AI model release news, coding agent update, general LLM news 31 июля)", "status": "empty", "candidates": 0, "note": "Дополнительные широкие запросы не вскрыли новых кандидатов сверх трёх найденных; политические/инфраструктурные материалы (регулирование ИИ-агентов в Китае, EU AI Gigafactory, CVE в стороннем инструменте Ruflo, уход Lilian Weng) отклонены как не по теме продукта"},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 1, "note": "'AI Worming through Word' (29 июля) — опубликовано; пост от 30 июля про MCP-коннекторы уже использован в сводке 2026-07-30"},
+    {"source": "expert: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "новых видео не найдено, последнее заметное — Sequoia Ascent, конец апреля"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "эпизод #217 от 28 июля не по теме подходов к использованию LLM (про разрыв между кодом и программированием в общем, содержание эпизода не подтверждено достаточно детально)"},
+    {"source": "expert: AI Explained (video)", "status": "empty", "candidates": 0, "note": "новых видео за 7 дней не найдено, WebSearch выдаёт только материалы за июнь"},
+    {"source": "expert: Matt Wolfe", "status": "empty", "candidates": 0, "note": "формат — еженедельный новостной дайджест, не про подходы к использованию (правило скилла); конкретного нового видео за окно не найдено"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост (23 июля, Summer 2026 Edition) уже опубликован в сводке 2026-07-26"},
+    {"source": "expert: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "самое свежее подтверждённое видео (GPT-5.6 Sol vs Fable 5) — от 10 июля, вне 7-дневного окна"},
+    {"source": "expert: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "новых видео за 7 дней не найдено"},
+    {"source": "widened: Zvi Mowshowitz (thezvi.substack.com)", "status": "ok", "candidates": 1, "note": "AI #179 Part 1 (30 июля) — опубликовано"},
+    {"source": "widened: Every.to", "status": "ok", "candidates": 1, "note": "'Inside OpenAI's Race to Reinvent Software Development for the Agent Era' (31 июля) — опубликовано"},
+    {"source": "widened: ThePrimeagen (X)", "status": "ok", "candidates": 1, "note": "пост о методе 'field guide' (журнал сессий в markdown + коммит-хэши, ~26 июля) — опубликовано как article"},
+    {"source": "widened: Two Minute Papers, Dwarkesh Podcast, Fireship, ThePrimeagen (видео), AI Jason, David Ondrej, Wes Roth, Sam Witteveen", "status": "empty", "candidates": 0, "note": "ни один поиск не дал видео за 7-дневное окно с проверяемой свежей датой и достаточным содержанием; кандидат Sam Witteveen (ThinkingCap-Qwen3.6-27B) отклонён из-за противоречивых данных об индексации ('3 недели назад' против упоминания в TLDR за 30 июля) — решено не рисковать точностью даты"}
+  ],
+  "totals": {
+    "candidates": 12,
+    "published": 3,
+    "rejected": {
+      "маркетинг без значимого содержания (Tesla/Grok voice hardware, новые голоса Grok Voice)": 2,
+      "не по теме продукта / политика-инфраструктура (регулирование ИИ-агентов в Китае, EU AI Gigafactory, CVE Ruflo, уход Lilian Weng, AWS Q2/Nscale-Anyscale)": 5,
+      "неподтверждённая свежесть или недостаточно проверяемое содержание (DeepSeek V4 официальный релиз, Latent Space #217, видео Sam Witteveen)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — ни один видео-кандидат за 7-дневное окно не прошёл проверку свежести/содержания; экспертный раздел закрыт 4 статьями вместо min_expert_total=5",
+    "frames": "skipped: видео не выбрано"
+  },
+  "notes": "Прямой WebFetch по-прежнему 403 почти для всех блогов вендоров и hn.algolia.com — WebSearch остаётся основным каналом. За окно lookback_hours=36 (после утреннего июльского фона регуляторных/инфраструктурных новостей) нашлось три реальных, хорошо документированных кандидата: раскрытие Anthropic о трёх взломанных Claude организациях (прямое продолжение истории OpenAI-Hugging Face, но по другой первопричине — конфигурация, а не эксплойт), Gemini Robotics 2 (новый класс сценариев — унифицированное управление всем телом гуманоида) и снижение цен GPT-5.6 Luna/Terra. Экспертный раздел: широкий проход по всем 8 экспертам конфига плюс 8 дополнительных авторов/каналов (Zvi, Every.to, ThePrimeagen, Two Minute Papers, Dwarkesh, Fireship, AI Jason/David Ondrej/Wes Roth, Sam Witteveen) дал 4 качественных статьи, но ни одного видео с надёжно подтверждённой свежестью — решено закрыть сводку 4 материалами вместо 5, не дотягивая число видео искусственно за счёт кандидата с противоречивой датой публикации."
+}

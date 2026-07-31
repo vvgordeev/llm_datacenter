@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-07-31",
+      "news_count": 3,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Google DeepMind выпускает Gemini Robotics 2 — управление всем телом гуманоида одной моделью",
+        "en": "Google DeepMind ships Gemini Robotics 2 — whole-body humanoid control in a single model"
+      }
+    },
+    {
       "date": "2026-07-30",
       "news_count": 2,
       "expert_count": 1,

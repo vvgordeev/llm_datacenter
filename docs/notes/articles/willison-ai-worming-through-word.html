@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «AI Worming through Word» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-29</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-29</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как prompt injection превращается в самовоспроизводящегося «червя» через Copilot для Word</span>
+      <span data-lang="en">AI Worming through Word</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/29/ai-worming-through-word/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Willison разбирает находку независимого исследователя Хокона Молёя (Håkon Måløy), который показал, как обычную атаку prompt injection на Copilot для Word можно превратить в нечто гораздо более опасное — в самовоспроизводящегося червя, распространяющегося между документами без участия атакующего после первого шага. Молёй сообщил об уязвимости в Microsoft Security Response Center 6 марта 2026 года, и находка была опубликована после стандартных 144 дней координированного раскрытия.</span>
+      <span data-lang="en">Willison walks through a finding by independent researcher Håkon Måløy, who showed how an ordinary prompt injection attack against Copilot for Word can be upgraded into something far more dangerous — a self-replicating worm that spreads between documents without any further involvement from the attacker after the first step. Måløy reported the issue to Microsoft's Security Response Center on March 6, 2026, and the finding was published after the standard 144-day coordinated disclosure window.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: как документ заражает следующий документ</span><span data-lang="en">The method: how one document infects the next</span></h2>
+    <p>
+      <span data-lang="ru">Механика опирается на обычный сценарий: пользователь использует один документ как исходный материал, когда просит Copilot составить или отредактировать другой. Атакующий прячет в исходном документе инструкции на естественном языке — например, белым текстом на белом фоне мелким шрифтом — которые Copilot интерпретирует как часть запроса пользователя. Помимо изменения результата так, как хочет атакующий, вредоносная инструкция включает требование: скопировать саму себя в новый документ, который Copilot сейчас составляет. Так итоговый документ становится новым носителем — и если его, в свою очередь, использовать как источник в другой сессии с Copilot, цепочка запускается заново, уже без исходного файла-переносчика.</span>
+      <span data-lang="en">The mechanics rest on an ordinary scenario: a user feeds one document into Copilot as source material while asking it to draft or edit another. The attacker hides natural-language instructions in the source document — for example, in white-on-white text at a tiny font size — which Copilot interprets as part of the user's own request. Beyond steering the output the way the attacker wants, the hidden instruction includes a further command: copy itself into the new document Copilot is currently drafting. The resulting document becomes a new carrier — and if it's later fed back into Copilot as source material in another session, the chain fires again, with no need for the original carrier file to still be around.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это червь, а не разовая инъекция</span><span data-lang="en">Why this is a worm, not a one-off injection</span></h2>
+    <p>
+      <span data-lang="ru">Обычный prompt injection компрометирует один конкретный вывод модели — атакующему нужно, чтобы жертва открыла именно заражённый файл. Здесь же цепочка самоподдерживающаяся: заражение переживает исходный документ и распространяется по любой цепочке «документ Б составлен на основе документа А» внутри организации, где документы регулярно используются как источники друг для друга — отчёты, шаблоны, сводки прошлых версий. Willison подчёркивает, что это именно тот класс риска, о котором предупреждало сообщество prompt-injection-исследователей: LLM, встроенный в обычный рабочий процесс с document-to-document контекстом, наследует свойства самовоспроизводящегося вредоносного кода, даже если сам код никто не писал — вся «логика» червя выражена естественным языком.</span>
+      <span data-lang="en">An ordinary prompt injection compromises a single specific model output — the attacker needs the victim to open that one infected file. Here the chain is self-sustaining: the infection outlives the original document and propagates along any "document B was drafted from document A" chain inside an organization where documents routinely serve as source material for each other — reports, templates, summaries of earlier versions. Willison stresses this is exactly the risk class the prompt-injection research community has been warning about: an LLM embedded in an ordinary document-to-document workflow inherits the properties of self-replicating malware even though nobody wrote any code — the worm's entire "logic" is expressed in natural language.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения и что это значит на практике</span><span data-lang="en">Limitations, and what this means in practice</span></h2>
+    <p>
+      <span data-lang="ru">Условие срабатывания — что Copilot действительно копирует скрытый текст в новый документ и интерпретирует его как инструкцию, а не как нейтральный цитируемый материал, — не гарантировано в каждом случае и зависит от того, как именно построен промпт вокруг источника. Тем не менее сообщается, что после раскрытия и двух патчей Microsoft уязвимость всё ещё частично воспроизводится 144 дня спустя. Практический вывод для тех, кто использует LLM-ассистентов поверх документов организации: любой текст, который модель прочитает как «источник», нужно воспринимать как потенциально недоверенный ввод, а не как пассивные данные, — и явно ограничивать, какие инструкции модель может извлекать из содержимого файла, а не только из явного запроса пользователя.</span>
+      <span data-lang="en">The trigger condition — that Copilot actually copies the hidden text into the new document and interprets it as an instruction rather than as neutral quoted material — isn't guaranteed in every case and depends on exactly how the surrounding prompt is built. Even so, reporting indicates the issue is still partially reproducible 144 days after disclosure and two Microsoft patches. The practical takeaway for anyone running LLM assistants over an organization's documents: any text the model reads as "source material" has to be treated as potentially untrusted input, not passive data — with explicit limits on what instructions the model is allowed to pull from file contents, as opposed to the user's own explicit request.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

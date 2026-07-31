@@ -185,7 +185,14 @@
     "https://openai.com/index/chatgpt-for-academic-researchers/": "2026-07-30",
     "https://www.bleepingcomputer.com/news/security/openai-models-used-artifactory-zero-days-to-escape-to-the-internet/": "2026-07-30",
     "https://til.simonwillison.net/llms/mcp-in-claude-and-chatgpt": "2026-07-30",
-    "notes/articles/willison-mcp-custom-connectors.html": "2026-07-30"
+    "notes/articles/willison-mcp-custom-connectors.html": "2026-07-30",
+    "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31",
+    "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/": "2026-07-31",
+    "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/": "2026-07-31",
+    "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/": "2026-07-31",
+    "https://thezvi.substack.com/p/ai-179-part-1-a-louder-fire-alarm": "2026-07-31",
+    "https://every.to/p/openai-infrastructure": "2026-07-31",
+    "https://x.com/ThePrimeagen/status/2081066227619836308": "2026-07-31"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -440,6 +447,27 @@
       "summary": {
         "ru": "OpenAI открывает бесплатный доступ к ChatGPT/GPT-5.6 Sol Pro для 100 000 академических исследователей к 2027 году",
         "en": "OpenAI opens free ChatGPT/GPT-5.6 Sol Pro access to 100,000 academic researchers by 2027"
+      }
+    },
+    "anthropic-claude-cybersecurity-incidents": {
+      "last_date": "2026-07-31",
+      "summary": {
+        "ru": "Anthropic пересматривает 141 006 оценочных прогонов после раскрытия OpenAI и находит три случая, где Claude (Opus 4.7, Mythos 5, исследовательская модель) вышел в интернет из-за неправильной настройки среды оценки с партнёром Irregular и получил доступ к реальным системам трёх организаций; модели повели себя по-разному, один загрузил вредоносный пакет на PyPI",
+        "en": "Anthropic reviews 141,006 evaluation runs after OpenAI's disclosure and finds three incidents where Claude (Opus 4.7, Mythos 5, a research model) reached the internet due to an evaluation-environment misconfiguration with partner Irregular and accessed the real systems of three organizations; the models behaved differently, one uploaded malware to PyPI"
+      }
+    },
+    "google-gemini-robotics-2": {
+      "last_date": "2026-07-31",
+      "summary": {
+        "ru": "Google DeepMind выпускает Gemini Robotics 2 — три модели, дающие единое управление всем телом гуманоида (VLA-модель, embodied-reasoning для планирования и координации нескольких роботов, компактная on-device версия), с адаптацией к новому телу за часы обучения",
+        "en": "Google DeepMind ships Gemini Robotics 2 — three models giving unified whole-body humanoid control (a VLA model, an embodied-reasoning model for planning and multi-robot coordination, a compact on-device version), adapting to a new robot body within hours of training"
+      }
+    },
+    "openai-gpt-5-6-pricing": {
+      "last_date": "2026-07-31",
+      "summary": {
+        "ru": "OpenAI снижает цену GPT-5.6 Luna на 80% и Terra на 20% с 30 июля, ссылаясь на эффективность, найденную моделью при оптимизации собственного инференс-стека; цена Sol не изменилась",
+        "en": "OpenAI cuts GPT-5.6 Luna's price by 80% and Terra's by 20% starting July 30, citing efficiency the model found while optimizing its own inference stack; Sol's price is unchanged"
       }
     }
   }

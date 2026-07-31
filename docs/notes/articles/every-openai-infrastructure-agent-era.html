@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Inside OpenAI's Race to Reinvent Software Development for the Agent Era» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Every · 2026-07-31</span>
+      <span data-lang="en">Article digest · Every · 2026-07-31</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как инфраструктурная команда OpenAI перестраивает разработку ПО под эпоху агентов</span>
+      <span data-lang="en">Inside OpenAI's Race to Reinvent Software Development for the Agent Era</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://every.to/p/openai-infrastructure" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Материал Every — это репортаж изнутри о том, как собственная applied-infrastructure команда OpenAI (та, что держит внутренние сервисы компании) на практике перестроила рабочий процесс вокруг Codex, а не абстрактное рассуждение о будущем агентного программирования. В отличие от маркетинговых кейсов, здесь описано, что именно меняется в повседневной работе конкретной команды, когда доля кода, написанного не человеком напрямую, становится подавляющей.</span>
+      <span data-lang="en">Every's piece is an inside report on how OpenAI's own applied-infrastructure team (the one running the company's internal services) has practically restructured its workflow around Codex, rather than an abstract argument about the future of agentic coding. Unlike marketing case studies, it describes exactly what changes in one specific team's day-to-day work once the share of code not written directly by a human becomes overwhelming.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: ревью смещается с кода на решения агента</span><span data-lang="en">The method: review shifts from code to the agent's decisions</span></h2>
+    <p>
+      <span data-lang="ru">В течение нескольких недель после выхода GPT-5.5 использование десктоп-приложения Codex внутри инфраструктурной команды достигло почти 100% — и это изменило саму единицу ревью. Инженеры теперь не читают diff построчно как раньше, а разбирают AI-сгенерированный код, AI-сгенерированные тесты к нему и AI-предложенные фиксы прямо внутри приложения Codex, оценивая скорее корректность решения агента и покрытие тестами, чем стиль кода. Объём pull request'ов вырос в 5–10 раз за последний год, и заметная часть этого объёма теперь приходит от людей из нетехнических подразделений компании, которые раньше вообще не отправляли код.</span>
+      <span data-lang="en">Within weeks of GPT-5.5's release, Codex desktop app adoption inside the infrastructure team reached nearly 100% — and that shifted the actual unit of review. Engineers no longer read diffs line by line the old way; they review AI-generated code, its AI-generated tests, and AI-proposed fixes from inside the Codex app itself, judging the agent's decision and test coverage more than code style. Pull request volume has jumped five- to tenfold over the past year, and a meaningful share of that volume now comes from people in non-technical parts of the company who previously never shipped code at all.</span>
+    </p>
+
+    <h2><span data-lang="ru">Кейс: агент расследует инцидент ночью без человека</span><span data-lang="en">The case: an agent investigates an incident overnight, unattended</span></h2>
+    <p>
+      <span data-lang="ru">Статья приводит конкретный эпизод: агент всю ночь самостоятельно занимался инфраструктурным инцидентом — диагностировал проблему и проверял возможные причины, — пока исследователь и дежурный инженер Джеймс Кац спали, и к утру предоставил именно те данные, которые требовались для решения, без вмешательства человека в процессе. Это не демонстрационный пример, а описание того, как выглядит on-call, когда часть диагностической работы делегирована агенту, который не спит и не ждёт утра, чтобы начать копать.</span>
+      <span data-lang="en">The article gives a specific episode: an agent worked overnight on an infrastructure incident on its own — diagnosing the problem and investigating candidate causes — while the researcher and on-call infrastructure engineer James Katz were asleep, and by morning had produced exactly the data needed to resolve it, with no human intervention along the way. This isn't a staged demo; it's a description of what on-call looks like once part of the diagnostic work is delegated to an agent that doesn't sleep and doesn't wait until morning to start digging.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения: не «код сам себя пишет», а смена природы работы</span><span data-lang="en">The limits: not "code writes itself," but a change in the nature of the work</span></h2>
+    <p>
+      <span data-lang="ru">Материал не утверждает, что человеческий надзор исчез, — рост объёма PR в 5–10 раз означает, что нагрузка на ревью выросла, просто сместилась с написания на проверку решений; именно поэтому статья описывает ревью AI-сгенерированных тестов как отдельный, не менее важный этап, а не формальность. Практический вывод для любой инженерной команды, планирующей похожий переход: узкое место переносится с написания кода на способность быстро и надёжно оценивать, правильное ли решение принял агент, — и именно эта способность, а не скорость генерации кода, определяет, выдержит ли команда рост объёма в разы.</span>
+      <span data-lang="en">The piece doesn't claim human oversight has disappeared — a 5-10x jump in PR volume means the review workload grew, it just shifted from writing to judging decisions; that's why the article treats reviewing AI-generated tests as a distinct, equally important step rather than a formality. The practical takeaway for any engineering team planning a similar transition: the bottleneck moves from writing code to being able to quickly and reliably judge whether the agent made the right call — and it's that capability, not code-generation speed, that determines whether a team can absorb a multi-fold volume increase.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

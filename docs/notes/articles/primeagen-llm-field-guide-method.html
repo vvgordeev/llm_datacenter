@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «The "field guide" method» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект поста · ThePrimeagen (X) · 2026-07-26</span>
+      <span data-lang="en">Post digest · ThePrimeagen (X) · 2026-07-26</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Field guide»: как вести markdown-журнал сессий с LLM ради надёжного кода</span>
+      <span data-lang="en">The "field guide" method: logging LLM sessions in markdown for reliable code</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://x.com/ThePrimeagen/status/2081066227619836308" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал поста ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">ThePrimeagen делится приёмом, который, по его словам, подсмотрел у Cursor: техникой, заметно повысившей надёжность кода, который он получает от LLM-агента. Идея не в конкретном промпте, а в том, чтобы дать системе устойчивую память о том, как устроена конкретная кодовая база, — вместо того, чтобы каждый раз заново объяснять контекст.</span>
+      <span data-lang="en">ThePrimeagen shares a technique he says he picked up from Cursor — one that noticeably improved the reliability of the code he gets from an LLM agent. The idea isn't a specific prompt; it's giving the system a durable memory of how a particular codebase works, instead of re-explaining context every time.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: журнал, привязанный к коммитам, и обобщение задним числом</span><span data-lang="en">The method: a commit-linked log, and after-the-fact generalization</span></h2>
+    <p>
+      <span data-lang="ru">Шаги такие: во-первых, на старте работы он придирчив к каждой детали и добивается от агента ровно того кода, который хочет, — в том числе надиктовывая правки голосом. Во-вторых, каждый раунд переписки — запрос, ответ агента, правки — записывается в markdown-файл вместе с хэшем коммита, соответствующего изменению. В-третьих, после набора таких раундов агенту дают команду самому просмотреть накопленный журнал переписки и связанные с ним изменения и вывести из них устойчивые, обобщённые правила — своего рода «полевой справочник» по кодовой базе, — которые сохраняются в отдельную директорию и переиспользуются в следующих сессиях.</span>
+      <span data-lang="en">The steps: first, at the start he nitpicks every detail and pushes the agent until it produces exactly the code he wants, including by dictating corrections by voice. Second, every round of back-and-forth — the request, the agent's response, the edits — gets logged to a markdown file together with the commit hash of the resulting change. Third, after accumulating enough of these rounds, he has the agent review that accumulated log and its linked changes itself and distill durable, generalized rules from it — a kind of "field guide" to the codebase — which get saved to a dedicated directory and reused in later sessions.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это работает: память вместо повторного объяснения</span><span data-lang="en">Why it works: memory instead of re-explaining</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой тезис — это не «магический промпт», а надёжная память о том, как устроена кодовая база, накопленная из реальных прецедентов, а не сформулированная заранее в общем виде. По наблюдению автора, за последние 10 сессий объём ручных уточнений, которые приходится давать агенту, заметно снизился, хотя ни модель, ни харнесс за это время не менялись, — то есть улучшение исходит именно из накопленного журнала и выведенных из него правил, а не из более сильной модели.</span>
+      <span data-lang="en">The core claim: this isn't magic prompting, it's a reliable memory of how the codebase works, built up from real precedents rather than stated up front in the abstract. By the author's own account, over the last 10 sessions the amount of manual correction he's had to give the agent has dropped noticeably, even though neither the model nor the harness changed in that time — meaning the improvement comes specifically from the accumulated log and the rules distilled from it, not from a stronger model.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда применять и в чём ограничение</span><span data-lang="en">When to use it, and its limitation</span></h2>
+    <p>
+      <span data-lang="ru">Метод рассчитан на длительную, повторяющуюся работу над одной и той же кодовой базой — накопление журнала и обобщение имеют смысл именно тогда, когда одни и те же паттерны кода и решений повторяются от сессии к сессии. Для разовой задачи или работы над новым, ещё не изученным проектом накопленного журнала попросту неоткуда взяться, и выгода метода не проявится. Пост не содержит инструмента или репозитория — это личное наблюдение о рабочем процессе, а не готовое решение под ключ, и его придётся собирать вручную под конкретный агент и харнесс.</span>
+      <span data-lang="en">The method is built for long-running, repeated work on the same codebase — accumulating a log and generalizing from it only pays off once the same code and decision patterns recur session after session. For a one-off task, or work on a new project that hasn't been logged yet, there's simply no accumulated log to draw on, and the method's benefit won't show up. The post doesn't come with a tool or a repo — it's a personal workflow observation, not a turnkey solution, and it has to be assembled by hand for whichever agent and harness you're using.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
