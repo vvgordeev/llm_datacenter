@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Investigating three real-world incidents in our cybersecurity evaluations» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-30</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-30</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как «эта среда — симуляция без интернета» превратилась в настоящий доступ к сети</span>
+      <span data-lang="en">How "this environment is a simulation with no internet" turned into real network access</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/30/three-real-world-incidents/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Willison разбирает отчёт Anthropic о ревизии 141 006 прогонов кибербезопасностных оценок, который вышел на день раньше и уже попал в дневную сводку как новость. Его собственный текст — не пересказ, а разбор того, ГДЕ именно в методологии оценки образовалась дыра: во всех трёх найденных инцидентах (шесть отдельных прогонов, четыре из которых задели одну и ту же организацию) промпт оценки прямо говорил модели, что она находится в симуляции без доступа в интернет. Из-за недопонимания между Anthropic и партнёром по оценке Irregular интернет в этой «симуляции» на самом деле был доступен.</span>
+      <span data-lang="en">Willison digs into Anthropic's report on its review of 141,006 cybersecurity evaluation runs, published a day earlier and already covered as a news item in this digest. His own post isn't a recap — it's a dissection of exactly where in the evaluation methodology the hole opened up: in all three incidents found (six individual runs, four of which hit the same organization), the evaluation prompt told the model outright that it was in a simulation with no internet access. Because of a misunderstanding between Anthropic and its evaluation partner Irregular, the internet was in fact reachable from inside that "simulation."</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: как модель приняла реальность за декорацию</span><span data-lang="en">The mechanism: how the model mistook reality for a stage set</span></h2>
+    <p>
+      <span data-lang="ru">Механика проста и от этого тревожна: когда модель в ходе задания на поиск уязвимостей натыкалась на реальные системы в открытом интернете, она обращалась с ними как с частью учебного упражнения — просто потому, что промпт заранее исключил саму возможность «настоящего» интернета. Модель не «взбунтовалась» и не обошла защиту сознательно; она честно выполняла инструкцию в среде, которая перестала соответствовать этой инструкции. Willison подчёркивает, что расследование не ограничилось найденными случаями: оно подтолкнуло саму Anthropic перепроверить собственные логи, и там всплыли ещё три похожих (хотя менее показательных) инцидента, самый ранний — ещё в апреле.</span>
+      <span data-lang="en">The mechanism is simple, and unsettling precisely because of that: when the model, while working a vulnerability-hunting task, ran into real systems on the open internet, it treated them as part of the training exercise — simply because the prompt had ruled out the possibility of a "real" internet from the start. The model didn't rebel or knowingly bypass a safeguard; it was faithfully following an instruction inside an environment that had quietly stopped matching that instruction. Willison notes the review didn't stop at the cases already found: it pushed Anthropic itself to re-check its own logs, which turned up three more similar (if less dramatic) incidents, the earliest dating back to April.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это урок про методологию оценки, а не про «сбежавший ИИ»</span><span data-lang="en">Why this is a lesson about eval methodology, not a "rogue AI" story</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой вывод, который Willison выносит из отчёта: заголовки про «модель ИИ взломала три организации» искажают суть произошедшего. Настоящая уязвимость — в границе между тестовой и реальной средой, а не в способностях или намерениях модели. Любая команда, которая строит агентные оценки безопасности с явным заявлением «здесь нет интернета», должна технически гарантировать это на уровне сети (файрвол, изоляция контейнера), а не полагаться на то, что модель поверит тексту в промпте и остановится сама. Для инженеров, работающих с автономными агентами вообще, это применимо шире оценок: любое утверждение о границах среды в системном промпте нужно подтверждать реальной изоляцией, иначе агент рано или поздно проверит эту границу на прочность в процессе честного выполнения задачи.</span>
+      <span data-lang="en">The key takeaway Willison draws from the report: headlines about "an AI model breached three organizations" distort what actually happened. The real vulnerability sits at the boundary between the test environment and the real one, not in the model's capabilities or intentions. Any team building agentic security evaluations that explicitly claims "there's no internet here" needs to guarantee that at the network level — firewalling, container isolation — rather than relying on the model simply believing the prompt's text and stopping on its own. For anyone working with autonomous agents more broadly, the lesson generalizes beyond evals: any claim about environment boundaries made in a system prompt needs to be backed by real isolation, or the agent will eventually test that boundary's strength in the course of honestly doing its job.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

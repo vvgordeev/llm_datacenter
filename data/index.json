@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-01",
+      "news_count": 3,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "DeepSeek переобучил V4-Flash — и он обгоняет собственный Pro на агентных бенчмарках",
+        "en": "DeepSeek retrains V4-Flash — and it beats its own Pro on agentic benchmarks"
+      }
+    },
+    {
       "date": "2026-07-31",
       "news_count": 3,
       "expert_count": 4,

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Stateless MCP has recaptured my interest» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-07-31</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-07-31</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Stateless MCP снова заинтересовал Willison — и довёл datasette-mcp до релиза</span>
+      <span data-lang="en">Stateless MCP has recaptured Willison's interest — and finally shipped datasette-mcp</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Jul/31/stateless-mcp/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Спецификация MCP 2026-07-28 (см. вчерашнюю новость про stateless-ядро протокола) убрала из MCP обязательный хендшейк и сессионное состояние, превратив его в обычную модель запрос/ответ поверх HTTP. Для Willison это не абстрактное архитектурное изменение: именно stateless-режим подтолкнул его наконец выпустить datasette-mcp — плагин, который он пытался сделать пригодным для релиза четыре раза, и получилось только сейчас.</span>
+      <span data-lang="en">The MCP 2026-07-28 spec (see yesterday's news item on the protocol's stateless core) dropped MCP's mandatory handshake and session state, turning it into an ordinary request/response model over HTTP. For Willison this isn't an abstract architecture change: the stateless mode is specifically what pushed him to finally ship datasette-mcp — a plugin he'd tried to get into releasable shape four times before, and only now got right.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: что стало проще без сессий</span><span data-lang="en">The method: what got simpler without sessions</span></h2>
+    <p>
+      <span data-lang="ru">Старый, stateful MCP требовал держать сессию между клиентом и сервером — это плохо сочеталось с серверлесс- и edge-развёртыванием, где нет постоянного процесса, которому можно доверить состояние соединения. Stateless-ядро убирает эту зависимость: каждый запрос самодостаточен, а значит MCP-сервер можно развернуть как обычную serverless-функцию. datasette-mcp даёт агенту три инструмента — list_databases() для списка баз, get_database_schema(database_name) для схемы конкретной базы и execute_sql(database_name, sql) для запроса к ней; последний пока read-only. Сам Willison гоняет этот сервер на datasette.simonwillison.net/-/mcp — той же базе, на примере которой он на прошлой неделе разбирал подключение кастомных MCP-серверов в Claude.ai и ChatGPT.</span>
+      <span data-lang="en">The old, stateful MCP required holding a session between client and server — a poor fit for serverless and edge deployment, where there's no long-running process you can trust to hold connection state. The stateless core removes that dependency: every request is self-contained, so an MCP server can now ship as an ordinary serverless function. datasette-mcp gives an agent three tools — list_databases() for the list of databases, get_database_schema(database_name) for a given database's schema, and execute_sql(database_name, sql) to query it; the last one is read-only for now. Willison runs this server himself at datasette.simonwillison.net/-/mcp — the same database he used last week to walk through wiring custom MCP servers into Claude.ai and ChatGPT.</span>
+    </p>
+
+    <h2><span data-lang="ru">Заодно — mcp-explorer, инструмент для отладки серверов</span><span data-lang="en">Alongside it — mcp-explorer, a server-debugging tool</span></h2>
+    <p>
+      <span data-lang="ru">Вместе с datasette-mcp 0.1a0 вышла версия mcp-explorer 0.3 — инструмент, который позволяет заглянуть внутрь произвольного MCP-сервера и посмотреть, какие инструменты он выставляет и что они возвращают, без необходимости подключать сервер к полноценному агенту, чтобы это проверить. Willison связывает удобство отладки с тем же архитектурным сдвигом: раз сервер не хранит состояние между вызовами, инспектировать его отдельными запросами становится тривиально — не нужно воссоздавать многошаговый хендшейк, чтобы получить осмысленный ответ.</span>
+      <span data-lang="en">Alongside datasette-mcp 0.1a0 came mcp-explorer 0.3 — a tool that lets you peek inside an arbitrary MCP server and see what tools it exposes and what they return, without having to wire the server into a full agent just to check. Willison ties this debugging convenience to the same architectural shift: since the server holds no state between calls, inspecting it with one-off requests becomes trivial — there's no multi-step handshake to recreate just to get a meaningful response.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это меняет практику, а не только протокол</span><span data-lang="en">Why this changes practice, not just the protocol</span></h2>
+    <p>
+      <span data-lang="ru">Willison прямо признаёт, что раньше редко пользовался MCP из-за «загрязнения контекста» — каждый подключённый сервер тащит в разговор лишние описания инструментов и промежуточные состояния, размывающие внимание модели. С его точки зрения, новая спецификация и связанные с ней инструменты снимают эту проблему настолько, что теперь нет причин не подключать к Claude Code десятки или даже сотни MCP-серверов одновременно. Это практический, а не теоретический сдвиг: он меняет, сколько внешних инструментов разработчик может себе позволить держать «под рукой» у агента без деградации качества ответов.</span>
+      <span data-lang="en">Willison openly admits he rarely used MCP before because of "context pollution" — every connected server drags extra tool descriptions and intermediate state into the conversation, diluting the model's attention. In his view, the new spec and its associated tooling solve this well enough that there's now no reason not to wire dozens or even hundreds of MCP servers into Claude Code at once. That's a practical shift, not a theoretical one: it changes how many external tools a developer can afford to keep "on hand" for an agent without degrading answer quality.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

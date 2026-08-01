@@ -1,0 +1,42 @@
+{
+  "date": "2026-08-01",
+  "generated_at": "2026-08-01T05:19:51Z",
+  "notes": "Перед началом прогона обнаружен и восстановлен осиротевший коммит 'digest: сводка за 2026-07-31' (был на detached HEAD, не слит в main и не запушен предыдущим прогоном) — смерджен fast-forward в main и запушен до начала сегодняшнего сбора.",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403, WebSearch не нашёл новых событий в окне 36ч кроме housekeeping (deprecations, гранты) — не продуктовые новости"},
+    {"source": "openai blog", "status": "ok", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл SynthID/провенанс для аудио GPT-Live (опубликовано)"},
+    {"source": "google/deepmind blog", "status": "ok", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл июльский Gemini Drop (опубликовано)"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch дал только устаревший материал про LlamaCon (апрель 2026) — не в окне"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch нашёл только анонсы будущих релизов (Grok 4.6/4.7, Voice Think Fast 2.0) — ещё не вышли, не в счёт"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch не дал новых событий в окне, кроме продолжения истории open-weight модели (без новых фактов)"},
+    {"source": "deepseek news", "status": "ok", "candidates": 1, "note": "WebFetch 403; WebSearch нашёл V4-Flash-0731 (публичная бета, сильная реакция HN) — опубликовано"},
+    {"source": "aggregators (smol.ai/TLDR/Willison linkblog)", "status": "ok", "candidates": 3, "note": "Использованы для обнаружения (не для ссылок в сводке); дали Willison x2 и наводку на Zvi Part 2"},
+    {"source": "Hacker News", "status": "ok", "candidates": 2, "note": "hn.algolia.com не пробовался (документированный 403 в облаке); WebSearch нашёл 2 топовых треда про DeepSeek V4-Flash-0731, использованы как opinions"},
+    {"source": "reddit/x community", "status": "empty", "candidates": 0, "note": "WebSearch не дал новых, отличных от HN, реакций в окне"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 2, "note": "2 материала: cybersecurity incidents (30 июля), stateless MCP (31 июля)"},
+    {"source": "experts: Andrej Karpathy (видео)", "status": "empty", "candidates": 0, "note": "RSS-фид youtube.com/feeds/videos.xml — 403 (как и в прошлых прогонах); WebSearch не нашёл видео с подтверждённой датой в окне 7 дней"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "Эпизод 217 (28 июля) подтверждён по дате, но точное содержание не найдено WebSearch — не включён, чтобы не выдумывать"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "RSS 403; последний подтверждённый эпизод — 22 июля, вне 7-дневного окна"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "empty", "candidates": 0, "note": "RSS 403; WebSearch не нашёл конкретный ролик с датой в окне"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост — 23 июля, вне 7-дневного окна"},
+    {"source": "experts: Nate Herk (видео)", "status": "empty", "candidates": 0, "note": "RSS 403; WebSearch не дал датированных роликов в окне"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "RSS 403; последний найденный ролик — 15 июля, вне окна"},
+    {"source": "расширенный поиск (WebSearch, другие авторы)", "status": "ok", "candidates": 3, "note": "Дал Zvi Mowshowitz (AI #179 Part 2, найден и подтверждён по дате) и AppleInsider (Gemini Mac voice mode); кандидат Nathan Lambert/Ross Taylor ОТКЛОНЁН — противоречивые данные о годе публикации (2025 vs 2026) в разных поисковых ответах, решил не рисковать выдуманной датой"}
+  ],
+  "totals": {
+    "candidates": 18,
+    "published": 3,
+    "rejected": {
+      "не в окне сбора (>36ч/>7дней)": 6,
+      "не продуктовая новость (housekeeping/регуляторика/анонс без релиза)": 5,
+      "не по теме LLM (видео-генерация MiniMax H3, LongCat вне окна)": 2,
+      "недостаточно подтверждённая дата источника": 1,
+      "видео не найдено при широком поиске": 5
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted — не найдено ни одного видео с подтверждённой датой публикации в пределах 7-дневного окна экспертной секции, несмотря на расширенный поиск по всем 5 видео-каналам из конфига",
+    "frames": "skipped — видео не выбрано"
+  },
+  "expert_content_shortfall": "Опубликовано 4 материала (все статьи) вместо min_expert_total=5. RSS-дискавери видео (youtube.com/feeds/videos.xml) вернул 403 для всех 5 конфигурированных видео-каналов; WebSearch как фолбэк не дал ни одного видео с надёжно подтверждённой датой публикации в 7-дневном окне (см. заметки по каждому видео-эксперту выше). Решил не публиковать материал с неопределённой/непроверенной датой, следуя правилу «не выдумывай»."
+}

@@ -154,7 +154,7 @@
     "https://every.to/vibe-check/opus-5": "2026-07-25",
     "https://stratechery.com/2026/openai-hacks-hugging-face-what-happened-alignment-and-paper-clips/": "2026-07-25",
     "https://thezvi.substack.com/p/ai-178-a-fire-alarm-for-general-intelligence": "2026-07-25",
-    "https://api-docs.deepseek.com/updates/": "2026-07-26",
+    "https://api-docs.deepseek.com/updates/": "2026-08-01",
     "https://workspace.google.com/marketplace/app/grok/660927092109": "2026-07-26",
     "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22": "2026-07-26",
     "notes/articles/mollick-opinionated-guide-summer-2026.html": "2026-07-26",
@@ -192,7 +192,17 @@
     "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/": "2026-07-31",
     "https://thezvi.substack.com/p/ai-179-part-1-a-louder-fire-alarm": "2026-07-31",
     "https://every.to/p/openai-infrastructure": "2026-07-31",
-    "https://x.com/ThePrimeagen/status/2081066227619836308": "2026-07-31"
+    "https://x.com/ThePrimeagen/status/2081066227619836308": "2026-07-31",
+    "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/": "2026-08-01",
+    "https://openai.com/index/advancing-content-provenance/": "2026-08-01",
+    "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/": "2026-08-01",
+    "notes/articles/willison-three-real-world-cyber-incidents.html": "2026-08-01",
+    "https://simonwillison.net/2026/Jul/31/stateless-mcp/": "2026-08-01",
+    "notes/articles/willison-stateless-mcp-datasette.html": "2026-08-01",
+    "https://thezvi.substack.com/p/ai-179-part-2-hearing-the-fire-alarm": "2026-08-01",
+    "notes/articles/zvi-ai-179-part2-fire-alarm.html": "2026-08-01",
+    "https://appleinsider.com/articles/26/07/29/ai-leaves-the-chat-window-behind-with-geminis-new-mac-voice-mode": "2026-08-01",
+    "notes/articles/appleinsider-gemini-mac-voice-chat-window.html": "2026-08-01"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -200,7 +210,7 @@
       "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna), brings Sol to Cerebras, teases Sol Ultra for Codex, gets US Commerce Dept approval to lift access restrictions, goes publicly live on July 9, draws benchmark skepticism and safety-card scrutiny ('lying problem') on July 10, then Sol Ultra claims a Cycle Double Cover Conjecture proof via 64 subagents (announced July 10) that mathematicians meet with unverified/unreviewed skepticism"
     },
     "openai-gpt-live": {
-      "last_date": "2026-07-09",
+      "last_date": "2026-08-01",
       "summary": "OpenAI ships GPT-Live, a full-duplex voice model for ChatGPT that delegates hard reasoning/search/code to GPT-5.5 in the background"
     },
     "openai-chatgpt-work": {
@@ -468,6 +478,20 @@
       "summary": {
         "ru": "OpenAI снижает цену GPT-5.6 Luna на 80% и Terra на 20% с 30 июля, ссылаясь на эффективность, найденную моделью при оптимизации собственного инференс-стека; цена Sol не изменилась",
         "en": "OpenAI cuts GPT-5.6 Luna's price by 80% and Terra's by 20% starting July 30, citing efficiency the model found while optimizing its own inference stack; Sol's price is unchanged"
+      }
+    },
+    "deepseek-v4-flash-0731": {
+      "last_date": "2026-08-01",
+      "summary": {
+        "ru": "DeepSeek выпускает V4-Flash-0731 в публичную бету: переобучённый чекпойнт той же архитектуры обгоняет собственный V4-Pro-Preview на всех 9 агентных бенчмарках, добавлена поддержка Responses API/Codex; два топовых треда на Hacker News",
+        "en": "DeepSeek ships V4-Flash-0731 to public beta: a retrained checkpoint of the same architecture beats its own V4-Pro-Preview on all nine published agentic benchmarks, adds Responses API/Codex support; two front-page Hacker News threads"
+      }
+    },
+    "google-gemini-drop-july-2026": {
+      "last_date": "2026-08-01",
+      "summary": {
+        "ru": "Июльский Gemini Drop: голосовой режим Speak to Gemini/Speak to Window на macOS убирает окно чата как посредника, Gemini Spark становится доступен по всему миру, плюс персонализация изображений и связка с внешними приложениями",
+        "en": "July's Gemini Drop: the Speak to Gemini/Speak to Window macOS voice mode removes the chat window as a middleman, Gemini Spark goes available worldwide, plus avatar image personalization and outside-app links"
       }
     }
   }

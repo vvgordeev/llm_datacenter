@@ -1,0 +1,235 @@
+{
+  "date": "2026-08-01",
+  "generated_at": "2026-08-01T05:19:51Z",
+  "news": [
+    {
+      "id": "2026-08-01-deepseek-v4-flash-0731-agentic",
+      "cluster_id": "deepseek-v4-flash-0731",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "DeepSeek переобучил V4-Flash — и он обгоняет собственный Pro на агентных бенчмарках",
+        "en": "DeepSeek retrains V4-Flash — and it beats its own Pro on agentic benchmarks"
+      },
+      "summary": {
+        "ru": "DeepSeek-V4-Flash-0731 выходит из превью в публичную бету API: та же архитектура (284B общих/13B активных параметров), но новый раунд переобучения поднял агентные результаты выше V4-Pro-Preview по всем девяти опубликованным бенчмаркам — Terminal-Bench 2.1: 82.7 против 72.1 у Pro и 61.8 у прежнего Flash; DeepSWE: 54.4 против 7.3. Модель получила поддержку формата Responses API и адаптацию под Codex; цена не изменилась ($0.14 / $0.28 за 1M входных/выходных токенов).",
+        "en": "DeepSeek-V4-Flash-0731 exits preview into API public beta: same architecture (284B total / 13B active parameters), but a new round of post-training pushed its agentic scores above V4-Pro-Preview on all nine published benchmarks — Terminal-Bench 2.1: 82.7 vs. 72.1 for Pro and 61.8 for the previous Flash; DeepSWE: 54.4 vs. 7.3. The model gained Responses API support and Codex compatibility; pricing is unchanged ($0.14 / $0.28 per 1M input/output tokens)."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметно меняет ценностное предложение дешёвых моделей для агентного кодинга — RL-переобучение обходит масштаб модели — при широкой применимости и сильной реакции разработчиков (два топовых треда на Hacker News), но не открывает принципиально новый класс сценариев, а усиливает существующий подход.",
+        "en": "Meaningfully shifts the value proposition of cheap models for agentic coding — RL post-training outruns raw scale — with broad applicability and strong developer reaction (two front-page Hacker News threads), but it doesn't open a genuinely new class of scenarios; it reinforces an existing approach."
+      },
+      "source_url": "https://api-docs.deepseek.com/updates/",
+      "opinions": [
+        {
+          "author": "kimmonismus (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Веса DeepSeek V4 Flash 0731 уже опубликованы — вместе с техническим отчётом и лицензией MIT; модель превосходит V4-Pro (Preview) на бенчмарках, несмотря на намного меньшее число активных параметров.",
+            "en": "DeepSeek v4 Flash 0731 weights were just published — plus a technical report and MIT license; it outperforms DeepSeek-V4-Pro (Preview) on the benchmarks despite its far smaller activated parameter count."
+          },
+          "url": "https://x.com/kimmonismus/status/2083177904616202470"
+        },
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Быстрые и дешёвые модели, которые продолжают становиться лучше, — это хорошо для сообщества: такая модель не исчезает по прихоти провайдера, а Flash можно запустить локально на железе дешевле $10 000 — то, что недоступно для GLM или K3.",
+            "en": "Fast, cheap models that keep getting better are good for the community — this kind of model doesn't disappear on a provider's whim, and Flash can be run locally on under $10k of hardware, which isn't feasible for GLM or K3."
+          },
+          "url": "https://news.ycombinator.com/item?id=49119559"
+        },
+        {
+          "author": "MarkTechPost",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Все цифры бенчмарков — от самого вендора и получены на невыпущенном харнессе; прежде чем на них полагаться, стоит прогнать собственные оценки.",
+            "en": "All benchmark numbers are vendor-reported on an unreleased harness — run your own evals before relying on them."
+          },
+          "url": "https://www.marktechpost.com/2026/07/31/deepseek-upgrades-deepseek-v4-flash-0731-with-major-agentic-and-coding-gains/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Локальный запуск V4-Flash на Mac с 128GB памяти для агентных задач кодинга без облачного API",
+            "en": "Running V4-Flash locally on a 128GB-RAM Mac for agentic coding tasks without a cloud API"
+          },
+          "url": "https://modelfit.io/blog/deepseek-v4-flash-0731-128gb-macbook/"
+        },
+        {
+          "text": {
+            "ru": "Подключение через формат Responses API к Codex и другим агентным средам для многошаговых кодинг-задач",
+            "en": "Wiring the model into Codex and other agent frameworks via the Responses API format for multi-step coding tasks"
+          },
+          "url": "https://explainx.ai/blog/deepseek-v4-flash-0731-codex-responses-api-july-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-01-google-gemini-drop-july-2026",
+      "cluster_id": "google-gemini-drop-july-2026",
+      "models": ["google"],
+      "title": {
+        "ru": "Gemini Drop за июль: голос заменяет окно чата на Mac, Spark выходит в мир",
+        "en": "July's Gemini Drop: voice replaces the chat window on Mac, Spark goes global"
+      },
+      "summary": {
+        "ru": "Google выпустил июльский Gemini Drop: «Speak to Gemini» на macOS позволяет диктовать, редактировать выделенный текст и генерировать изображения голосом прямо в любом активном окне (удержание клавиши Fn); Gemini Spark (фоновый агент, выполняющий задачи 24/7 даже после закрытия ноутбука) становится доступен по всему миру; добавлены персонализация изображений через аватар и связка с внешними приложениями (Dropbox, Zillow Rentals, Viator).",
+        "en": "Google shipped its July Gemini Drop: \"Speak to Gemini\" on macOS lets you dictate, edit selected text, and generate images by voice directly inside any active window (hold the Fn key); Gemini Spark (a background agent that keeps working 24/7 even after you close your laptop) goes available worldwide; the drop also adds avatar-based image personalization and links to outside apps (Dropbox, Zillow Rentals, Viator)."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Полезное развитие голосового и агентного взаимодействия в рамках существующего подхода, заметно снижающее трение использования на новых поверхностях (весь Mac, а не окно чата), но не меняющее парадигму и не открывающее принципиально новый класс сценариев.",
+        "en": "A useful advance in voice-driven and agentic interaction within an existing paradigm, meaningfully cutting usage friction on a new surface (the whole Mac, not a chat window), but it doesn't change the paradigm or open a genuinely new class of scenarios."
+      },
+      "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/",
+      "opinions": [
+        {
+          "author": "9to5Google",
+          "stance": "positive",
+          "quote": {
+            "ru": "Новый голосовой воркфлоу Gemini на практике убирает несколько шагов из типичной задачи с ИИ: вместо «открыть чат-бота, напечатать промпт, скопировать ответ, вернуться в документ» можно говорить прямо там, где курсор уже стоит.",
+            "en": "The new Gemini voice workflow makes practical sense because it removes several steps from a common AI task — instead of opening a chatbot, typing a prompt, copying the response, and returning to a document, you can just speak while the cursor is already where the finished text belongs."
+          },
+          "url": "https://9to5google.com/2026/07/29/gemini-mac-voice-control/"
+        },
+        {
+          "author": "Paul Monckton (Forbes)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "В тексте онбординга Gemini Spark есть предупреждение, что ассистент «может делать такие вещи, как делиться вашими данными или совершать покупки без запроса» — это прямо противоречит уверениям с презентации о строгой авторизации действий.",
+            "en": "Gemini Spark's onboarding text carries a warning that the assistant \"may do things like share your info or make purchases without asking\" — directly at odds with the keynote's assurance of strict action authorization."
+          },
+          "url": "https://www.forbes.com/sites/paulmonckton/2026/05/26/google-announced-gemini-spark-but-left-out-an-uncomfortable-warning/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Голосовая диктовка и правка текста прямо в любом приложении на Mac без переключения в отдельное окно чата",
+            "en": "Voice dictation and text editing directly inside any Mac app, without switching to a separate chat window"
+          },
+          "url": "https://www.macrumors.com/2026/07/29/gemini-for-mac-dictation/"
+        },
+        {
+          "text": {
+            "ru": "Gemini Spark выполняет фоновые многошаговые задачи 24/7, даже когда ноутбук закрыт",
+            "en": "Gemini Spark runs background multi-step tasks 24/7, even while the laptop is closed"
+          },
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-01-openai-gpt-live-synthid-audio",
+      "cluster_id": "openai-gpt-live",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI добавляет водяные знаки SynthID и проверку происхождения в аудио GPT-Live",
+        "en": "OpenAI adds SynthID watermarking and provenance verification to GPT-Live audio"
+      },
+      "summary": {
+        "ru": "Аудио, сгенерированное через GPT-Live (ChatGPT Voice и API), теперь несёт невидимый водяной знак SynthID вдобавок к метаданным C2PA; публичный инструмент верификации OpenAI расширен на аудиофайлы, добавлен API-доступ к проверке, чтобы разработчики могли встраивать проверку происхождения в свои пайплайны. Обновление подано вместе с материалами о соответствии OpenAI требованиям EU AI Act по прозрачности ИИ-контента.",
+        "en": "Audio generated through GPT-Live (ChatGPT Voice and the API) now carries an invisible SynthID watermark alongside C2PA metadata; OpenAI's public verification tool now covers audio files, and API access to verification lets developers build provenance checks into their own pipelines. The update was published alongside OpenAI's EU AI Act content-transparency compliance materials."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Инфраструктурная мера доверия и прозрачности, не меняющая способ использования модели пользователем; расширяет на аудио механизм происхождения контента, уже существующий для изображений с мая — инкрементальное улучшение с узкой прямой применимостью для конечных пользователей.",
+        "en": "A trust-and-transparency infrastructure measure that doesn't change how end users work with the model; it extends to audio a content-provenance mechanism that has existed for images since May — an incremental improvement with narrow direct relevance to end users."
+      },
+      "source_url": "https://openai.com/index/advancing-content-provenance/",
+      "opinions": [
+        {
+          "author": "C2PA Viewer",
+          "stance": "positive",
+          "quote": {
+            "ru": "Совместное принятие OpenAI и Google стандартов C2PA и SynthID — переломный момент для происхождения контента в индустрии.",
+            "en": "OpenAI and Google jointly adopting C2PA and SynthID marks a turning point for content provenance across the industry."
+          },
+          "url": "https://c2paviewer.com/articles/openai-google-c2pa-synthid-2026"
+        },
+        {
+          "author": "BuildMVPFast",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Ни одна из компаний не заявляет, что система защищена от всех случаев: цель — поднять цену злоупотребления, а не остановить целенаправленного злоумышленника.",
+            "en": "Neither company claims the system is foolproof: the goal is to raise the cost of misuse, not to defeat a determined adversary."
+          },
+          "url": "https://www.buildmvpfast.com/blog/synthid-content-provenance-c2pa-watermarking-ai-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Встраивание проверки происхождения аудио через API верификации в модерационные пайплайны сторонних сервисов",
+            "en": "Embedding audio-provenance checks via the verification API into third-party moderation pipelines"
+          },
+          "url": "https://openai.com/research/verify/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-01-willison-three-real-world-cyber-incidents",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Как «эта среда — симуляция без интернета» превратилась в настоящий доступ к сети",
+        "en": "How \"this environment is a simulation with no internet\" turned into real network access"
+      },
+      "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/",
+      "summary": {
+        "ru": "Willison разбирает отчёт Anthropic о трёх инцидентах с выходом Claude в реальные сети во время оценок: корень проблемы — не в модели, а в том, что промпт объявлял среду изолированной, хотя интернет был доступен из-за ошибки конфигурации с партнёром по оценке.",
+        "en": "Willison dissects Anthropic's report on three incidents where Claude reached real networks during evaluations: the root cause isn't the model — it's that the prompt declared the environment isolated while the internet was actually reachable due to a partner-configuration error."
+      },
+      "note_page": "notes/articles/willison-three-real-world-cyber-incidents.html"
+    },
+    {
+      "id": "2026-08-01-willison-stateless-mcp-datasette",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Stateless MCP снова заинтересовал Willison — и довёл datasette-mcp до релиза",
+        "en": "Stateless MCP has recaptured Willison's interest — and finally shipped datasette-mcp"
+      },
+      "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
+      "summary": {
+        "ru": "Новая stateless-спецификация MCP убрала сессионное состояние из протокола, что позволило Willison (на четвёртой попытке) выпустить datasette-mcp и инструмент отладки mcp-explorer 0.3 — и заодно снять проблему «загрязнения контекста», которая раньше отталкивала его от MCP.",
+        "en": "The new stateless MCP spec removed session state from the protocol, letting Willison (on his fourth attempt) finally ship datasette-mcp and the mcp-explorer 0.3 debugging tool — and along the way resolve the \"context pollution\" problem that used to keep him away from MCP."
+      },
+      "note_page": "notes/articles/willison-stateless-mcp-datasette.html"
+    },
+    {
+      "id": "2026-08-01-zvi-ai-179-part2-fire-alarm",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "Вторая половина «громкого пожарного сигнала»: политика, риторика и открытые веса",
+        "en": "The second half of the \"louder fire alarm\": policy, rhetoric, and open weights"
+      },
+      "url": "https://thezvi.substack.com/p/ai-179-part-2-hearing-the-fire-alarm",
+      "summary": {
+        "ru": "Part 2 еженедельного обзора переключается с технической стороны недели на политику: спор об открытых весах («нельзя исправить» против пользы для исследований), визит Альтмана в Вашингтон, Frontier Act и аргумент против запрета китайских роботов в США.",
+        "en": "Part 2 of the weekly roundup shifts from the week's technical side to policy: the open-weights dispute (\"nothing can fix this\" versus the value of independent research), Altman's trip to Washington, the Frontier Act, and an argument against banning Chinese robots in the US."
+      },
+      "note_page": "notes/articles/zvi-ai-179-part2-fire-alarm.html"
+    },
+    {
+      "id": "2026-08-01-appleinsider-gemini-mac-voice-chat-window",
+      "type": "article",
+      "author": "AppleInsider",
+      "title": {
+        "ru": "Голосовой режим Gemini для Mac: ИИ уходит из окна чата",
+        "en": "Gemini's new Mac voice mode: AI leaves the chat window behind"
+      },
+      "url": "https://appleinsider.com/articles/26/07/29/ai-leaves-the-chat-window-behind-with-geminis-new-mac-voice-mode",
+      "summary": {
+        "ru": "Статья трактует голосовой режим Gemini на macOS не как список фич, а как смену формы взаимодействия с ИИ: удержание клавиши Fn убирает необходимость открывать чат вообще, а сравнение с Apple Intelligence показывает, что у Google это один универсальный шорткат вместо нескольких разрозненных функций.",
+        "en": "The article frames Gemini's macOS voice mode not as a feature list but as a shift in the basic shape of AI interaction: holding the Fn key removes the need to open a chat window at all, and the comparison with Apple Intelligence shows Google shipping one universal shortcut instead of several separate features."
+      },
+      "note_page": "notes/articles/appleinsider-gemini-mac-voice-chat-window.html"
+    }
+  ]
+}
