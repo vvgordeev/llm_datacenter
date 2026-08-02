@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: Как выжать максимум из ИИ этим летом — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nathaniel Whittemore, The AI Daily Brief · 2026-07-26 · 16:39</span>
+      <span data-lang="en">Video digest · Nathaniel Whittemore, The AI Daily Brief · 2026-07-26 · 16:39</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как выжать максимум из ИИ этим летом</span>
+      <span data-lang="en">How to Get the Most from AI This Summer</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=kvmkj3dj_kw" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com на уровне CONNECT, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct CONNECT-level access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейтан Уиттемор разбирает свежее обновление гайда Итана Моллика «which AI to use to do stuff» <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=25">[00:25]</a> и использует его как повод сформулировать более общий тезис: работа с ИИ незаметно перестала быть «перепиской с чат-ботом» и превратилась в управление командой — моделью, которой делегируют часы автономной работы, а не задают вопрос и ждут ответа <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=87">[01:27]</a>. Для случайного, разового вопроса разница между моделями почти не имеет значения; но как только речь заходит об агентном делегировании, выбор модели, обвязки и границ доступа начинает решать исход задачи.</span>
+      <span data-lang="en">Nathaniel Whittemore walks through Ethan Mollick's freshly updated "which AI to use to do stuff" guide <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=25">[00:25]</a> and uses it to make a broader point: working with AI has quietly stopped being "chatting with a bot" and become managing a team — delegating hours of autonomous work to a system rather than asking a question and waiting for an answer <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=87">[01:27]</a>. For a one-off casual question, the choice of model barely matters; but the moment you delegate agentically, the model, its scaffolding, and its access boundaries start deciding the outcome.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: контекст и разрешения решают надёжность агента</span><span data-lang="en">The method: context and permissions decide how reliable the agent is</span></h2>
+    <p>
+      <span data-lang="ru">Центральная практическая мысль ролика: как только ИИ получает доступ к вашему компьютеру и начинает действовать самостоятельно <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=137">[02:17]</a>, надёжность результата определяют не столько возможности модели, сколько две вещи, которые задаёт сам пользователь. Во-первых — явный контекст: кто вы, какой у вас стиль работы, какие предпочтения и ограничения нужно учитывать, — без этого агент действует вслепую и подставляет собственные, часто неверные, предположения. Во-вторых — тщательно выставленные разрешения: к каким файлам, аккаунтам и действиям агент допущен, а что закрыто. Ведущий показывает записанное демо, где ИИ буквально берёт управление компьютером на себя для выполнения многошаговой задачи <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=268">[04:28]</a> — и именно на этом примере видно, что без чётко очерченных границ доступа такая автономность рискует пойти не туда, куда рассчитывал пользователь.</span>
+      <span data-lang="en">The video's central practical point: once AI gets access to your computer and starts acting on its own <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=137">[02:17]</a>, the reliability of the outcome is decided less by the model's raw capability than by two things the user themself sets up. First, explicit context: who you are, your working style, the preferences and constraints that matter — without it the agent acts blind and fills the gaps with its own, often wrong, assumptions. Second, carefully scoped permissions: which files, accounts, and actions the agent may touch, and which are off-limits. Whittemore shows a recorded demo of AI literally taking over a computer to execute a multi-step task <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=268">[04:28]</a> — and it's exactly this example that shows how, without clearly drawn access boundaries, that kind of autonomy risks going somewhere the user didn't intend.</span>
+    </p>
+
+    <h2><span data-lang="ru">Разрыв возможностей и «AI Summer Adventure»</span><span data-lang="en">The capability overhang and "AI Summer Adventure"</span></h2>
+    <p>
+      <span data-lang="ru">Отсюда вырастает вторая тема ролика — то, что автор называет «capability overhang»: разрыв между тем, что ИИ уже реально умеет, и тем, как его на практике используют большинство людей, застрявших на уровне разовых чатов <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=431">[07:11]</a>. Чтобы закрыть этот разрыв, команда AI Daily Brief запускает бесплатную программу «AI Summer Adventure» — набор из более чем 20 практических проектов, организованных по маршруту и уровню усилий: «Быстрые поездки» (Quick Trips) для тех, кто хочет за один присест получить конкретный результат, «Экскурсии» и «Экспедиции» — для более глубокого и продолжительного освоения агентных навыков <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=521">[08:41]</a>. В качестве примера «быстрой поездки» разбирается проект «Pack Your ID» <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=596">[09:56]</a> — небольшая, но законченная задача, которую можно выполнить с ИИ от начала до конца за один заход, чтобы на практике, а не в теории, почувствовать разницу между чат-ботом и агентом.</span>
+      <span data-lang="en">That sets up the video's second theme — what the host calls the "capability overhang": the gap between what AI can already do and how most people actually use it, stuck at one-off chat interactions <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=431">[07:11]</a>. To close that gap, the AI Daily Brief team is launching a free program called "AI Summer Adventure" — more than 20 hands-on projects organized by route and effort level: "Quick Trips" for a single-sitting concrete result, and "Excursions" and "Expeditions" for deeper, longer-running agentic skill-building <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=521">[08:41]</a>. As a Quick Trip example, the video walks through the "Pack Your ID" project <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=596">[09:56]</a> — a small but complete task you can run end-to-end with AI in a single sitting, to feel the difference between a chatbot and an agent in practice rather than in theory.</span>
+    </p>
+
+    <h2><span data-lang="ru">Экспедиции — не проект, а смена привычки</span><span data-lang="en">Expeditions — not a project, a change of habit</span></h2>
+    <p>
+      <span data-lang="ru">Ролик завершается тем, что «Экспедиции» — самый амбициозный уровень программы — представлены не как ещё один туториал, а как способ надолго изменить сам подход человека к работе с ИИ <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=744">[12:24]</a>: пройдя через них, пользователь должен перестать открывать чат ради разовых вопросов и начать по умолчанию делегировать агенту многошаговые задачи с чётко заданным контекстом и разрешениями. Это соответствует общей рамке видео: изменение происходит не из-за более сильной модели, а из-за того, что человек меняет собственную практику использования уже доступных инструментов.</span>
+      <span data-lang="en">The video closes by framing "Expeditions" — the program's most ambitious tier — not as another tutorial but as a way to durably change how a person approaches AI in general <a class="ts" href="https://www.youtube.com/watch?v=kvmkj3dj_kw&t=744">[12:24]</a>: having gone through them, a user should stop opening a chat window for one-off questions and instead default to delegating multi-step tasks to an agent with clearly set context and permissions. That matches the video's overall frame: the change comes not from a stronger model, but from a person changing their own practice with tools that already exist.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

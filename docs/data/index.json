@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-02",
+      "news_count": 1,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "OpenAI показывает Astra: внутренняя модель решает десять математических задач, открытых десятилетиями",
+        "en": "OpenAI unveils Astra: an internal model solves ten math problems open for decades"
+      }
+    },
+    {
       "date": "2026-08-01",
       "news_count": 3,
       "expert_count": 4,

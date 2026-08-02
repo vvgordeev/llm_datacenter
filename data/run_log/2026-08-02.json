@@ -1,0 +1,45 @@
+{
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T05:28:30Z",
+  "notes": "Перед началом прогона local main отставал на 2 коммита от origin/main (edc9833 '2026-08-01', 5982044 '2026-07-31' были на origin, но не были смерджены в локальную ветку сессии) — выполнен fast-forward merge origin/main -> main до начала сбора, коммиты не потеряны и не задвоены.",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403 (ожидаемо). WebSearch не дал ничего в окне 36ч: ближайшие материалы (Frontier Red Team отчёт о кибер-инцидентах 30 июля, криптоанализ Claude Mythos 28 июля) уже опубликованы в прошлых сводках (2026-07-31) и вне окна."},
+    {"source": "openai blog", "status": "ok", "candidates": 2, "note": "WebFetch 403. WebSearch нашёл 'Ten advances in mathematics' (Astra, 1 августа) — опубликовано; также нашёл SynthID/GPT-Live provenance API — это дубль уже опубликованной вчера новости (2026-08-01), отклонён"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403. WebSearch не дал ничего в окне 36ч — только устаревшие материалы (Gemini 4 pretraining с 21 июля, Muse Spark с 9 июля — тот вообще Meta) и нерелевантный шум (крипто-биржа Gemini)"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403. WebSearch не дал ничего в окне — самое свежее найденное (Muse Spark 1.1) датировано 9 июля, вне окна"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch 403. WebSearch нашёл только тизеры ещё не вышедших релизов (Grok 4.6 ожидается ~7 августа, voice-think-fast-2.0 с 5 августа) — не квалифицируются как готовые релизы"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch 403. WebSearch не дал ничего свежее конца июня/начала июля (Robostral Navigate, Small 4, OCR 4, Vibe) — вне окна 36ч"},
+    {"source": "deepseek news", "status": "ok", "candidates": 1, "note": "WebFetch 403. WebSearch трижды (основной + 2 расширенных прохода) находил только DeepSeek-V4-Flash-0731 — эта новость уже опубликована вчера (2026-08-01), подтверждено дублирование по data/daily/2026-08-01.json и state.json (seen_urls содержит api-docs.deepseek.com/updates/ с датой 2026-08-01); других новых фактов по этому сюжету не нашлось, отклонён как повтор без новизны"},
+    {"source": "aggregators (smol.ai/TLDR/Willison linkblog)", "status": "ok", "candidates": 1, "note": "WebFetch 403 на все три. WebSearch по smol.ai за 1 августа дал только упоминания уже отклонённых сюжетов (MiniMax H3, DeepSeek); нашёлся MiniMax H3 (видео-генерация с нативным аудио) — отклонён как не по теме LLM, по прецеденту вчерашнего дня (тот же H3 был отклонён 2026-08-01 по этой же причине)"},
+    {"source": "Hacker News", "status": "blocked", "candidates": 0, "note": "hn.algolia.com API — 403 через прокси, повтор не делался (документированное поведение). WebSearch по site:news.ycombinator.com не дал релевантных тредов о новых LLM-релизах в окне, кроме общих эссе"},
+    {"source": "reddit/x community", "status": "empty", "candidates": 0, "note": "site:reddit.com запросы для r/LocalLLaMA и r/ClaudeAI не проиндексировали конкретные посты за начало августа; официальный X-пост DeepSeek по V4-Flash найден, но относится к уже отклонённому дублю"},
+    {"source": "расширенный поиск (WebSearch, широкие запросы + другие компании)", "status": "ok", "candidates": 1, "note": "Повторно нашёл только DeepSeek-V4-Flash-0731 (дубль, отклонён); Qwen/Kimi/GLM — упоминания либо старше окна, либо анонсы будущих релизов"},
+    {"source": "experts: Simon Willison", "status": "empty", "candidates": 0, "note": "Единственный найденный кандидат в окне (stateless MCP, 31 июля) уже опубликован вчера (2026-08-01) — дубль, отклонён. Пост про Astra — это разбор чужой новости (не подход к использованию LLM), не подходит под формат экспертной секции"},
+    {"source": "experts: Andrej Karpathy (видео)", "status": "empty", "candidates": 0, "note": "RSS 403 (CONNECT-блок youtube.com, как и в прошлых прогонах). WebSearch дал только материалы март-июнь и одно видео с неподтверждённым каналом/содержанием — исключено по правилу 'не гадать'"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "WebFetch 403. Кандидат 'Reality: The Final Eval' (Andon Labs) сначала показался подходящим (28 июля по одному источнику), но при перепроверке второй источник дал дату 4 июня — конфликт дат, по правилу 'при разногласии — не гадать' исключён"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "RSS 403. Единственное свежее видео (~1 августа) — новостной дайджест-рерайт, не разбор подходов к использованию LLM, исключено по критерию формата"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "empty", "candidates": 0, "note": "RSS 403 (CONNECT-блок всего домена, подтверждено curl -v). WebSearch дал только упоминание еженедельного новостного дайджеста без подтверждённой даты/URL"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "Единственный кандидат в 7-дневном окне ('An opinionated guide to which AI to use', 27 июля) уже опубликован в сводке за 2026-07-26 (подтверждено grep по data/daily/) — дубль, отклонён"},
+    {"source": "experts: Nate Herk (видео)", "status": "empty", "candidates": 0, "note": "RSS 403. WebSearch нашёл только материалы с датой март 2026, вне окна"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "RSS 403. WebSearch нашёл материалы с датой ~9 июля (вне окна) и источники с неясной принадлежностью каналу/противоречивыми датами — исключены"},
+    {"source": "расширенный поиск экспертного контента (другие авторы: Zvi, Nathan Lambert, Dwarkesh Patel, ThePrimeagen, Ben Thompson, Hamel Husain/Eugene Yan, Every.to)", "status": "ok", "candidates": 1, "note": "Найден и подтверждён один новый материал вне конфига: видео Nathaniel Whittemore/AI Daily Brief 'How to Get the Most from AI This Summer' (26 июля, подтверждено по нескольким подкаст-платформам + YouTube). Остальные кандидаты (Zvi 'AI #180' — не найден/не существует на момент прогона; Nathan Lambert — последний пост 12 июля, вне окна; Dwarkesh Patel — 10 июля, вне окна; ThePrimeagen — дата не подтверждена; Ben Thompson — последняя профильная статья про агентов с марта) отклонены по несоответствию окну свежести или неподтверждённой дате"}
+  ],
+  "totals": {
+    "candidates": 14,
+    "published": 2,
+    "rejected": {
+      "дубль уже опубликованной новости/конспекта (сверено по data/daily + state.json)": 5,
+      "не в окне сбора (>36ч для новостей / >7 дней для экспертного контента)": 5,
+      "не по теме LLM (видео-генерация MiniMax H3)": 1,
+      "не подходит по формату (новостной рерайт вместо разбора подхода)": 1,
+      "конфликт дат между источниками — решено не гадать": 1,
+      "тизер ещё не вышедшего релиза": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — python scripts/gemini_video.py успешно проанализировал https://www.youtube.com/watch?v=kvmkj3dj_kw через generativelanguage.googleapis.com (YouTube для клиента при этом недоступен — см. ниже), получены тезисы и таймкоды",
+    "frames": "skipped: youtube.com заблокирован на уровне CONNECT прокси (yt-dlp: 'Unable to connect to proxy... Tunnel connection failed: 403 Forbidden'), извлечение кадров невозможно; конспект опубликован без кадров с пометкой на странице"
+  },
+  "expert_content_shortfall": "Опубликован 1 материал (видео) вместо min_expert_total=5. Причина: почти все кандидаты из конфигурации экспертов и первого раунда расширенного поиска либо уже были опубликованы в предыдущих сводках (Willison 'stateless MCP' — 2026-08-01, Mollick 'opinionated guide' — 2026-07-26, оба подтверждены прямым поиском по data/daily/*.json перед включением), либо оказались вне 7-дневного окна свежести, либо не прошли проверку по формату (новостной рерайт) или содержали конфликтующие даты источников (Latent Space/Andon Labs эпизод — 28 июля по одному источнику против 4 июня по другому, решено не рисковать). Расширенный поиск по другим заметным авторам (Zvi Mowshowitz, Nathan Lambert, Dwarkesh Patel, ThePrimeagen, Ben Thompson, Hamel Husain, Every.to) дал только материалы вне окна или неподтверждённые. Итог соответствует правилу 'не выдумывай': лучше 1 подтверждённый материал, чем добор до 5 сомнительными.",
+  "environment_degradation": "youtube.com заблокирован на уровне CONNECT для RSS/yt-dlp (как и в прогонах 2026-07-18 и других) — это не единичная ошибка, а системное ограничение egress-прокси в этом прогоне, из-за чего видео-дискавери по всем 5 видео-каналам конфигурации шло только через WebSearch (с задержкой индекса на 1-2 дня). Более трети источников (12 из ~20 в таблице выше) вернули blocked/error — degradation окружения, а не тихий день сам по себе; тем не менее итоговый список кандидатов после дедупа и фильтрации по формату/окну действительно оказался коротким."
+}

@@ -1,0 +1,78 @@
+{
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T05:28:30Z",
+  "news": [
+    {
+      "id": "2026-08-02-openai-astra-math-proofs",
+      "cluster_id": "openai-astra-math-proofs",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI показывает Astra: внутренняя модель решает десять математических задач, открытых десятилетиями",
+        "en": "OpenAI unveils Astra: an internal model solves ten math problems open for decades"
+      },
+      "summary": {
+        "ru": "OpenAI опубликовала десять решений задач по математике и теоретической информатике, остававшихся открытыми минимум десятилетие (а в большинстве случаев намного дольше) — от впервые построенной явной несофической группы (вопрос Громова, 1999) и опровержения гипотезы жёсткости Конна до улучшенной оценки плотнейшей упаковки сфер и доказательства гипотезы объёма Эрхарта. Все решения получены внутренней, ещё не выпущенной версией следующей флагманской модели компании — Astra, а каждое доказательство сопровождается машинопроверяемым сертификатом на Lean 4, опубликованным в открытом репозитории на GitHub вместе с разбором рассуждений модели. По оценке OpenAI, весь токен-бюджет на поиск решений обошёлся примерно в $2000.",
+        "en": "OpenAI published ten solutions to problems in mathematics and theoretical computer science that had been open for at least a decade, and in most cases far longer — including the first explicit construction of a non-sofic group (Gromov's 1999 question) and a disproof of Connes's rigidity conjecture, plus an improved general sphere-packing bound and a proof of Ehrhart's volume conjecture. All ten were produced by an internal, not-yet-released version of the company's next flagship model, Astra, and every proof ships with a machine-checkable Lean 4 certificate, published in an open GitHub repository alongside a walkthrough of the model's reasoning. OpenAI says the entire token budget for finding the solutions cost roughly $2,000."
+      },
+      "impact_score": 8,
+      "impact_reason": {
+        "ru": "Показывает качественно новый класс возможностей — LLM как самостоятельный участник открытых математических исследований с формально проверяемыми (Lean 4) доказательствами, а не просто ещё один решённый бенчмарк; при этом прямая применимость узкая (математики и теоретики CS), это не меняет повседневную практику массового пользователя LLM.",
+        "en": "Shows a qualitatively new capability class — an LLM as an independent contributor to open mathematical research with formally machine-checked (Lean 4) proofs, not just another benchmark solved — but direct applicability stays narrow (research mathematicians and theoretical CS), so it doesn't change everyday practice for the average LLM user."
+      },
+      "source_url": "https://openai.com/index/ten-advances-in-mathematics/",
+      "opinions": [
+        {
+          "author": "Thomas Bloom (математик, Университет Манчестера, автор erdosproblems.com)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Большая новость! (Не совсем моя область, но да, я бы поставил это выше контрпримера к гипотезе о единичных расстояниях. Может, не выше, чем было бы доказательство самой гипотезы, но с точки зрения конструкций — это очень много.)",
+            "en": "Big news! (And not really my area, but yes, I would rank this as bigger than the unit distance counterexample. Maybe not bigger than a proof of unit distance would have been, but in terms of constructions, this is big.)"
+          },
+          "url": "https://x.com/thomasfbloom/status/2083442290735902937"
+        },
+        {
+          "author": "The Decoder",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Astra — внутренняя, не выпущенная модель; независимые математики ещё не успели проработать аргументы с той же глубиной, с которой обычно разбирают такие гипотезы, а сама публикация не раскрывает, сколько человеческой постановки задачи предшествовало каждому прогону модели.",
+            "en": "Astra is an internal model; external mathematicians haven't had time to work through the arguments with the depth these conjectures usually attract, and the publication doesn't spell out how much human problem-shaping preceded each run."
+          },
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Независимая проверка: любой математик может скачать репозиторий openai/ten-proofs, пересобрать сертификаты на Lean 4.32 с mathlib и перепроверить их дополнительно инструментом Comparator с независимым от Lean ядром.",
+            "en": "Independent verification: any mathematician can download the openai/ten-proofs repository, recompile the certificates with Lean 4.32 and mathlib, and double-check them with the Comparator tool, which uses a kernel independent of Lean itself."
+          },
+          "url": "https://github.com/openai/ten-proofs"
+        },
+        {
+          "text": {
+            "ru": "Разбор опубликованных цепочек рассуждений модели, чтобы вычленить переиспользуемую технику доказательства и попытаться применить её к смежным открытым задачам — по этому пути уже прошли исследователи после майского результата OpenAI по гипотезе единичных расстояний.",
+            "en": "Studying the model's published chain-of-thought walkthroughs to extract a reusable proof technique and try adapting it to adjacent open problems — the path researchers already took after OpenAI's May result on the unit-distance conjecture."
+          },
+          "url": "https://the-decoder.com/ai-keeps-cracking-unsolved-math-problems-and-mathematicians-have-mixed-feelings/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-02-nlw-ai-summer-adventure",
+      "type": "video",
+      "author": "Nathaniel Whittemore (The AI Daily Brief)",
+      "title": {
+        "ru": "Как выжать максимум из ИИ этим летом",
+        "en": "How to Get the Most from AI This Summer"
+      },
+      "url": "https://www.youtube.com/watch?v=kvmkj3dj_kw",
+      "summary": {
+        "ru": "Нейтан Уиттемор разбирает обновлённый гайд Итана Моллика о выборе ИИ-инструментов и вводит понятие «capability overhang» — разрыва между тем, что ИИ уже умеет, и тем, как его реально используют; на этой основе он анонсирует бесплатную программу «AI Summer Adventure» с более чем 20 практическими проектами трёх уровней сложности.",
+        "en": "Nathaniel Whittemore walks through Ethan Mollick's updated guide to choosing AI tools and introduces the idea of a \"capability overhang\" — the gap between what AI can already do and how people actually use it — then uses it to launch a free \"AI Summer Adventure\" program with 20+ hands-on projects across three effort tiers."
+      },
+      "note_page": "notes/videos/how-to-get-the-most-from-ai-this-summer.html"
+    }
+  ]
+}

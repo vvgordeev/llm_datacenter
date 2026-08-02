@@ -202,7 +202,10 @@
     "https://thezvi.substack.com/p/ai-179-part-2-hearing-the-fire-alarm": "2026-08-01",
     "notes/articles/zvi-ai-179-part2-fire-alarm.html": "2026-08-01",
     "https://appleinsider.com/articles/26/07/29/ai-leaves-the-chat-window-behind-with-geminis-new-mac-voice-mode": "2026-08-01",
-    "notes/articles/appleinsider-gemini-mac-voice-chat-window.html": "2026-08-01"
+    "notes/articles/appleinsider-gemini-mac-voice-chat-window.html": "2026-08-01",
+    "https://openai.com/index/ten-advances-in-mathematics/": "2026-08-02",
+    "https://www.youtube.com/watch?v=kvmkj3dj_kw": "2026-08-02",
+    "notes/videos/how-to-get-the-most-from-ai-this-summer.html": "2026-08-02"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -492,6 +495,13 @@
       "summary": {
         "ru": "Июльский Gemini Drop: голосовой режим Speak to Gemini/Speak to Window на macOS убирает окно чата как посредника, Gemini Spark становится доступен по всему миру, плюс персонализация изображений и связка с внешними приложениями",
         "en": "July's Gemini Drop: the Speak to Gemini/Speak to Window macOS voice mode removes the chat window as a middleman, Gemini Spark goes available worldwide, plus avatar image personalization and outside-app links"
+      }
+    },
+    "openai-astra-math-proofs": {
+      "last_date": "2026-08-02",
+      "summary": {
+        "ru": "OpenAI показывает Astra: внутренняя, ещё не выпущенная модель решает десять открытых десятилетиями задач по математике и теоретической информатике, каждое доказательство — с машинопроверяемым сертификатом на Lean 4",
+        "en": "OpenAI unveils Astra: an internal, not-yet-released model solves ten math/theoretical-CS problems open for decades, each proof shipped with a machine-checked Lean 4 certificate"
       }
     }
   }
