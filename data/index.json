@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-03",
+      "news_count": 3,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "DeepSeek стал «мозгом» автономных кибератак — после того как Claude и OpenAI отказались",
+        "en": "DeepSeek becomes the \"brain\" of autonomous cyberattacks — after Claude and OpenAI refused"
+      }
+    },
+    {
       "date": "2026-08-02",
       "news_count": 1,
       "expert_count": 1,

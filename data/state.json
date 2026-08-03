@@ -205,7 +205,17 @@
     "notes/articles/appleinsider-gemini-mac-voice-chat-window.html": "2026-08-01",
     "https://openai.com/index/ten-advances-in-mathematics/": "2026-08-02",
     "https://www.youtube.com/watch?v=kvmkj3dj_kw": "2026-08-02",
-    "notes/videos/how-to-get-the-most-from-ai-this-summer.html": "2026-08-02"
+    "notes/videos/how-to-get-the-most-from-ai-this-summer.html": "2026-08-02",
+    "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/": "2026-08-03",
+    "https://9to5google.com/2026/07/31/gemini-ai-studio-app/": "2026-08-03",
+    "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold": "2026-08-03",
+    "https://simonwillison.net/2026/Aug/2/open-letters/": "2026-08-03",
+    "notes/articles/willison-open-letters-ai-development.html": "2026-08-03",
+    "https://www.latent.space/p/ontologies-agentic-systems": "2026-08-03",
+    "notes/articles/macmanus-ontologies-are-so-back.html": "2026-08-03",
+    "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html": "2026-08-03",
+    "notes/articles/stross-non-use-of-ai-writing.html": "2026-08-03",
+    "notes/articles/garymarcus-astra-oversold.html": "2026-08-03"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -498,10 +508,24 @@
       }
     },
     "openai-astra-math-proofs": {
-      "last_date": "2026-08-02",
+      "last_date": "2026-08-03",
       "summary": {
-        "ru": "OpenAI показывает Astra: внутренняя, ещё не выпущенная модель решает десять открытых десятилетиями задач по математике и теоретической информатике, каждое доказательство — с машинопроверяемым сертификатом на Lean 4",
-        "en": "OpenAI unveils Astra: an internal, not-yet-released model solves ten math/theoretical-CS problems open for decades, each proof shipped with a machine-checked Lean 4 certificate"
+        "ru": "OpenAI показывает Astra: внутренняя, ещё не выпущенная модель решает десять открытых десятилетиями задач по математике и теоретической информатике (каждое доказательство — с машинопроверяемым сертификатом на Lean 4); на следующий день реакция экспертов раскалывается — Филдсовский лауреат Тимоти Гауэрс одобряет одно из доказательств для Annals of Mathematics, а Гэри Маркус называет анонс «маркетингом, а не наукой» и указывает на уже оспоренное доказательство",
+        "en": "OpenAI unveils Astra: an internal, not-yet-released model solves ten math/theoretical-CS problems open for decades, each proof shipped with a machine-checked Lean 4 certificate; a day later expert reaction splits — Fields Medalist Timothy Gowers endorses one proof for Annals of Mathematics, while Gary Marcus calls the announcement \"marketing, not science\" and flags an already-challenged proof"
+      }
+    },
+    "deepseek-hermes-autonomous-cyberattack": {
+      "last_date": "2026-08-03",
+      "summary": {
+        "ru": "Unit 42 (Palo Alto Networks) раскрывает кампанию, в которой китайский хакер вживил DeepSeek в опенсорсный фреймворк Hermes Agent для автономных кибератак через Telegram — после того как Claude и OpenAI отказали в офенсивном использовании из-за guardrails; более 460 целей, 3 подтверждённые компрометации",
+        "en": "Unit 42 (Palo Alto Networks) discloses a campaign where a Chinese hacker wired DeepSeek into the open-source Hermes Agent framework for Telegram-orchestrated autonomous cyberattacks — after Claude and OpenAI refused offensive use due to guardrails; 460+ targets, 3 confirmed compromises"
+      }
+    },
+    "google-ai-studio-app-cancelled": {
+      "last_date": "2026-08-03",
+      "summary": {
+        "ru": "Google отменяет мобильное приложение AI Studio (анонсированное на I/O 2026, ~800000 предзаказов), перенося генерацию приложений прямо в Gemini на телефоне и десктопе; веб-версия AI Studio продолжает жить отдельно",
+        "en": "Google cancels the AI Studio mobile app (teased at I/O 2026, ~800,000 preorders), moving app generation directly into Gemini on phone and desktop; the AI Studio web version continues separately"
       }
     }
   }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Потрясающая — но сильно переоцененная — Astra» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Gary Marcus · 2026-08-02</span>
+      <span data-lang="en">Article digest · Gary Marcus · 2026-08-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Потрясающая — но сильно переоцененная — новая модель Astra от OpenAI</span>
+      <span data-lang="en">OpenAI's amazing — but vastly oversold — new model Astra</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Когнитивист и постоянный критик ИИ-хайпа Гэри Маркус реагирует на десять доказательств Astra не отрицанием — он прямо называет результаты впечатляющими, — а разбором того, почему их не стоит читать как сигнал общего прорыва к «модели, решающей за людей открытую науку». Его метод: не спорить с математикой, а показать, чем математика как область принципиально отличается от большинства реальных задач, которые СМИ и сама OpenAI подразумевают, экстраполируя успех.</span>
+      <span data-lang="en">Cognitive scientist and longtime AI-hype critic Gary Marcus doesn't respond to Astra's ten proofs with denial — he says outright the results are impressive — but with an argument for why they shouldn't be read as a signal of a general breakthrough toward "a model that does open science for humans." His method: don't argue with the math, show how math as a field is fundamentally unlike most of the real-world tasks the press, and OpenAI itself, imply by extrapolating the success.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: почему математика — особый случай</span><span data-lang="en">The method: why math is a special case</span></h2>
+    <p>
+      <span data-lang="ru">Центральный аргумент Маркуса — экспертиза в одной области не гарантирует экспертизу в большинстве других, и у этого есть принципиальная причина, а не просто наблюдение. Математика (как и код) обладает двумя редкими свойствами: результат в ней можно проверить символьными инструментами (в случае Astra — формальными сертификатами на Lean 4), и для неё можно дёшево сгенерировать огромный объём синтетических обучающих примеров с гарантированно правильными ответами. Ни то, ни другое не работает для открытых, неверифицируемых по своей природе задач — Маркус приводит в пример военную стратегию: там нельзя ни в промышленных масштабах наштамповать заведомо верные учебные примеры, ни формально проверить предложенное решение так, как это делает Lean с доказательством теоремы.</span>
+      <span data-lang="en">Marcus's central argument is that expertise in one domain doesn't guarantee expertise in most others, and there's a principled reason for that, not just an observation. Math (like code) has two rare properties: its results can be checked with symbolic tools (in Astra's case, formal Lean 4 certificates), and it lends itself to cheaply generating huge volumes of synthetic training examples with guaranteed-correct answers. Neither holds for open-ended domains that are inherently unverifiable — Marcus's example is military strategy: you can't mass-produce guaranteed-correct training examples for it, nor formally check a proposed solution the way Lean checks a theorem's proof.</span>
+    </p>
+
+    <h2><span data-lang="ru">Претензия к прозрачности — и уже найденная трещина</span><span data-lang="en">The transparency complaint — and a crack already found</span></h2>
+    <p>
+      <span data-lang="ru">Вторая линия критики — методологическая: ни твит, ни блог-пост, ни сама 249-страничная статья не объясняют, как именно внутренняя версия Astra пришла к решениям, как проверялись промежуточные шаги, и какую роль в постановке и разборе задач сыграли люди-математики до и после прогона модели. Маркус подкрепляет эту претензию не только рассуждением: вскоре после публикации он же указал, что как минимум одно из десяти заявленных доказательств уже поставлено сообществом под сомнение — то есть формальная верификация Lean (нулевое число «sorry», по заявлению OpenAI) не отменяет необходимости содержательной проверки математиками.</span>
+      <span data-lang="en">The second line of criticism is methodological: neither the tweet, the blog post, nor the 249-page paper itself explains how the internal version of Astra actually arrived at the solutions, how intermediate steps were verified, or what role human mathematicians played in framing and reviewing the problems before and after the model's run. Marcus backs this complaint with more than argument: shortly after publication, he himself flagged that at least one of the ten claimed proofs has already been challenged by the community — meaning Lean's formal verification (zero "sorry" count, per OpenAI's claim) doesn't remove the need for substantive review by mathematicians.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение материала</span><span data-lang="en">The piece's limitation</span></h2>
+    <p>
+      <span data-lang="ru">Сам жанр — быстрая реакция в блоге автора, известного скептическим отношением к анонсам крупных лабораторий, а не независимый математический аудит. Маркус подкрепляет позицию конкретными и проверяемыми фактами (отсутствие методологии, оспоренное доказательство), но структурная часть его критики («математика — не показатель для остального») — это его собственная интерпретационная рамка, а не эмпирический результат: значимость и масштаб границ переноса математических способностей Astra на другие домены ещё предстоит показать на практике, а не только продоказать логически.</span>
+      <span data-lang="en">The genre itself is a fast blog reaction from a writer known for a skeptical stance toward big-lab announcements, not an independent mathematical audit. Marcus backs his position with concrete, checkable facts (the missing methodology, the challenged proof), but the structural core of his critique — "math isn't a proxy for everything else" — is his own interpretive frame, not an empirical finding: how far, and how significantly, Astra's mathematical abilities transfer to other domains still has to be shown in practice, not just argued for logically.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

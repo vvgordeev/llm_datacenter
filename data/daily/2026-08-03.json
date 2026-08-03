@@ -1,0 +1,217 @@
+{
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T05:20:46Z",
+  "news": [
+    {
+      "id": "2026-08-03-deepseek-hermes-autonomous-cyberattack",
+      "cluster_id": "deepseek-hermes-autonomous-cyberattack",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "DeepSeek стал «мозгом» автономных кибератак — после того как Claude и OpenAI отказались",
+        "en": "DeepSeek becomes the \"brain\" of autonomous cyberattacks — after Claude and OpenAI refused"
+      },
+      "summary": {
+        "ru": "Palo Alto Networks Unit 42 опубликовала отчёт (30 июля) о том, как китайский хакер под псевдонимами knaithe/KnYuan вживил DeepSeek в опенсорсный фреймворк Hermes Agent в роли «мозга рассуждений» для автономных кибератак, управляемых через Telegram. По данным Unit 42, оператор сперва пытался использовать для той же цели Claude и OpenAI, но их провайдерские защитные механизмы заблокировали офенсивное применение — тогда он переключился на DeepSeek, у которого таких ограничений не оказалось. Агент самостоятельно перебирал более 460 целей, искал эксплойты на GitHub и запускал атаки практически без участия оператора; кампанию раскрыли только потому, что Hermes случайно поднял файловый веб-сервер из рабочей директории оператора, обнажив его API-ключи, списки целей и журналы атак.",
+        "en": "Palo Alto Networks' Unit 42 published a report (July 30) on how a Chinese-speaking hacker operating as \"knaithe\"/\"KnYuan\" wired DeepSeek into the open-source Hermes Agent framework as the \"reasoning brain\" for autonomous, Telegram-orchestrated cyberattacks. Per Unit 42, the operator first tried Claude and OpenAI for the same job, but their provider-side safety controls blocked offensive use — so he switched to DeepSeek, which carried no such restriction. The agent independently enumerated more than 460 targets, sourced exploits from GitHub, and launched attacks with almost no operator involvement; the campaign was only uncovered because Hermes accidentally spun up a file web server from the operator's home directory, exposing his API keys, target lists, and attack logs."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Впервые в реальных условиях документально подтверждено, что провайдерские защитные механизмы одних LLM реально меняют выбор атакующего в пользу модели без таких ограничений — конкретный новый довод в споре об ответственности слаборегулируемых моделей, хотя фактический вред остался ограниченным (3 подтверждённые компрометации из 460+ попыток).",
+        "en": "For the first time in the wild, it's documented that one provider's safety controls measurably steer an attacker toward a model without them — a concrete new data point in the debate over lightly-guardrailed models' responsibility, even though real-world harm stayed limited (3 confirmed compromises out of 460+ attempts)."
+      },
+      "source_url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/",
+      "opinions": [
+        {
+          "author": "Unit 42 (Palo Alto Networks), отчёт об инциденте",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Хотя у наблюдаемой кампании было ограниченное воздействие, сам процесс работы подтверждает функциональную, полностью автономную офенсивную возможность.",
+            "en": "While the observed campaign had limited impacts, the workflow confirms a functional, end-to-end autonomous offensive capability."
+          },
+          "url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/"
+        },
+        {
+          "author": "Andy Piazza, руководитель направления threat intelligence в Unit 42",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "[ИИ-усиленные офенсивные возможности] позволили им радикально увеличить скорость и масштаб своих кампаний.",
+            "en": "[AI-augmented offensive capabilities] enabled them to dramatically increase the speed and scale of their campaigns."
+          },
+          "url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разбор утёкших логов оператора (изученных Unit 42) как готового чертежа полного цикла recon→exploit на LLM-агенте — материал для построения детект-правил против автономных офенсивных пайплайнов в SOC",
+            "en": "Studying the leaked operator logs (analyzed by Unit 42) as a ready-made blueprint of a full LLM-agent recon-to-exploit cycle — material for building SOC detection rules against autonomous offensive pipelines"
+          },
+          "url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/"
+        },
+        {
+          "text": {
+            "ru": "Учёт устойчивости провайдерских guardrails к офенсивному злоупотреблению как отдельного критерия при выборе LLM для агентных фреймворков (в т.ч. открытых, вроде Hermes) — наравне с ценой и качеством",
+            "en": "Weighing how well provider guardrails resist offensive misuse as a distinct criterion when choosing an LLM for agent frameworks (including open ones like Hermes) — alongside price and quality"
+          },
+          "url": "https://cybersecuritynews.com/deepseek-powered-hermes-agent/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-03-google-ai-studio-app-cancelled",
+      "cluster_id": "google-ai-studio-app-cancelled",
+      "models": ["google"],
+      "title": {
+        "ru": "Google отменяет мобильное приложение AI Studio, несмотря на 800 000 предзаказов",
+        "en": "Google cancels the AI Studio mobile app despite 800,000 preorders"
+      },
+      "summary": {
+        "ru": "31 июля Google объявил, что не выпустит отдельное мобильное приложение AI Studio для iOS и Android, анонсированное на I/O 2026 и собравшее около 800 000 предзаказов. Вместо отдельного приложения инструменты создания приложений (генерация прототипов из разговора) переносятся прямо в мобильный и десктопный Gemini — по формулировке компании, «приложения должны появляться естественно, в ходе обычного разговора с Gemini», без установки ещё одного приложения. Веб-версия AI Studio продолжит развиваться отдельно — для разработчиков, доводящих прототип до продакшена.",
+        "en": "On July 31, Google announced it won't ship the standalone AI Studio mobile app for iOS and Android that it teased at I/O 2026 and that had drawn roughly 800,000 preorders. Instead of a separate app, the app-creation tools (generating prototypes from conversation) are moving directly into the mobile and desktop Gemini app — in the company's words, apps should \"emerge naturally, in the course of your everyday conversations with Gemini,\" without installing yet another app. The AI Studio web version keeps developing separately, for developers taking a prototype to production."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Продуктовое решение о дистрибуции, а не о новых возможностях модели: меняет, где пользователь встречает генерацию приложений (внутри Gemini вместо отдельного приложения), но не открывает нового класса сценариев и не затрагивает тех, кто уже пользуется веб-версией или другими продуктами Google.",
+        "en": "A distribution decision, not a new model capability: it changes where users encounter app generation (inside Gemini instead of a separate app) but doesn't open a new class of scenarios and doesn't affect people who already use the web version or Google's other products."
+      },
+      "source_url": "https://9to5google.com/2026/07/31/gemini-ai-studio-app/",
+      "opinions": [
+        {
+          "author": "9to5Google",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Google, выпустив более полноценный мобильный опыт AI Studio, поступил бы неплохо — похоже, ресурсы для этого у компании были. Тем не менее, PWA (веб-приложение) и сегодня работает отлично.",
+            "en": "Google releasing a more dedicated mobile experience for AI Studio would have been fine, and seems like something the company should have the resources to also do. That said, the Progressive Web App works perfectly today."
+          },
+          "url": "https://9to5google.com/2026/07/31/gemini-ai-studio-app/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Веб-версия AI Studio остаётся отдельным инструментом для разработчиков, доводящих прототип до продакшн-приложения, — тогда как случайным пользователям генерация прототипов теперь доступна прямо в диалоге с Gemini на телефоне или десктопе",
+            "en": "The AI Studio web version remains a separate tool for developers taking a prototype to a production app — while casual users now get prototype generation directly inside a Gemini conversation on phone or desktop"
+          },
+          "url": "https://www.digitaltrends.com/cool-tech/google-just-canceled-its-ai-studio-mobile-app-and-its-not-all-bad-news/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-03-openai-astra-reaction-gowers-marcus",
+      "cluster_id": "openai-astra-math-proofs",
+      "models": ["openai"],
+      "title": {
+        "ru": "Филдсовский лауреат одобряет доказательство Astra для Annals of Mathematics — критики зовут это «маркетингом, а не наукой»",
+        "en": "A Fields Medalist endorses an Astra proof for Annals of Mathematics — critics call it \"marketing, not science\""
+      },
+      "summary": {
+        "ru": "Через день после публикации десяти доказательств Astra реакция экспертного сообщества разделилась. Филдсовский лауреат Тимоти Гауэрс заявил, что без колебаний рекомендовал бы одно из представленных доказательств к публикации в Annals of Mathematics — один из самых престижных математических журналов. Одновременно когнитивист и критик ИИ-хайпа Гэри Маркус назвал анонс «маркетингом, а не наукой»: ни твит, ни блог-пост, ни 249-страничная статья не объясняют, как именно работала модель, как проверялись доказательства и какую роль в процессе играли люди; Маркус также указал, что как минимум одно из заявленных доказательств уже поставлено под сомнение сообществом.",
+        "en": "A day after Astra's ten proofs were published, expert reaction split. Fields Medalist Timothy Gowers said he would recommend one of the submitted proofs for publication in Annals of Mathematics, one of mathematics' most prestigious journals, without hesitation. At the same time, cognitive scientist and AI-hype critic Gary Marcus called the announcement \"marketing, not science\": neither the tweet, the blog post, nor the 249-page paper explain how the model actually worked, how the proofs were verified, or what role humans played in the process; Marcus also noted that at least one of the claimed proofs has already been challenged by the community."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Не меняет саму заявленную способность модели, но заметно меняет то, как индустрия и научное сообщество должны её интерпретировать: публичное одобрение результата математиком уровня Филдсовской медали — сильный сигнал доверия, а системная критика методологии публикации — не менее сильный сигнал об отсутствии устоявшегося стандарта проверки подобных заявлений.",
+        "en": "It doesn't change the model's claimed capability itself, but it meaningfully changes how the industry and the research community should interpret it: public endorsement from a Fields-Medal-level mathematician is a strong trust signal, while systematic criticism of the publication's methodology is an equally strong signal that there's still no settled verification standard for claims like this."
+      },
+      "source_url": "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold",
+      "opinions": [
+        {
+          "author": "Timothy Gowers (Филдсовский лауреат), процитирован Nathan Calvin на X",
+          "stance": "positive",
+          "quote": {
+            "ru": "Без колебаний [рекомендовал бы] это доказательство для публикации в Annals of Mathematics.",
+            "en": "[would recommend] that proof for the Annals of Mathematics without hesitation."
+          },
+          "url": "https://x.com/_NathanCalvin/status/2057310835358547968"
+        },
+        {
+          "author": "Gary Marcus",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Вчерашние твит и блог-пост были маркетингом, а не наукой.",
+            "en": "Yesterday's tweet and blog were marketing, not science."
+          },
+          "url": "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Независимая перепроверка началась почти сразу: Гэри Маркус указывает как минимум на одно из десяти доказательств Astra, уже поставленное сообществом под сомнение, — прецедент того, как быстро формальная (Lean) проверка может разойтись с содержательной математической экспертизой",
+            "en": "Independent re-verification began almost immediately: Gary Marcus flags at least one of Astra's ten proofs as already challenged by the community — a precedent for how quickly formal (Lean) verification can diverge from substantive mathematical review"
+          },
+          "url": "https://x.com/GaryMarcus/status/2083635594421494037"
+        },
+        {
+          "text": {
+            "ru": "Стоимость в $2000 токен-бюджета на десять открытых задач стала отдельной темой обсуждения — сравнения со стоимостью традиционного математического исследования и споры о том, как оценивать вклад людей в постановку и разбор задач",
+            "en": "The $2,000 token budget for ten open problems became its own talking point — comparisons to the cost of traditional mathematical research and debate over how to value the human effort that went into framing and reviewing the problems"
+          },
+          "url": "https://x.com/Ric_RTP/status/2083911012932091906"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-03-willison-open-letters-ai-development",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Открытые письма об ИИ-разработке",
+        "en": "Open letters about AI development"
+      },
+      "url": "https://simonwillison.net/2026/Aug/2/open-letters/",
+      "summary": {
+        "ru": "Willison разбирает два открытых письма об ИИ-регулировании, вышедшие в конце июля: «Open Weights and American AI Leadership» (кураторство Microsoft, 235 подписантов от Nvidia до OpenAI, против запрета открытых весов) и «Pacing the Frontier» (1324 подписи сотрудников фронтир-лабораторий, включая Дарио Амодеи, за международную координацию сознательного замедления гонки).",
+        "en": "Willison reviews two late-July open letters on AI governance: \"Open Weights and American AI Leadership\" (Microsoft-shepherded, 235 signatories from Nvidia to OpenAI, arguing against banning open-weight models) and \"Pacing the Frontier\" (1,324 signatures from frontier-lab employees, including Dario Amodei, calling for international coordination to deliberately pace the race)."
+      },
+      "note_page": "notes/articles/willison-open-letters-ai-development.html"
+    },
+    {
+      "id": "2026-08-03-macmanus-ontologies-are-so-back",
+      "type": "article",
+      "author": "Richard MacManus (Latent Space)",
+      "title": {
+        "ru": "Онтологии снова в моде: как ИИ-агенты возрождают семантический веб",
+        "en": "Ontologies Are So Back: Why AI Agents Are Reviving the Semantic Web"
+      },
+      "url": "https://www.latent.space/p/ontologies-agentic-systems",
+      "summary": {
+        "ru": "MacManus объясняет, почему онтологии — структурированные словари понятий и связей из проекта Semantic Web 2000-х — переживают второе рождение: они дисциплинируют своевольные вероятностные ИИ-агенты, а разработчик Прасенджит Саркар показывает, как агент, сам обновляющий свою онтологию по ходу работы, снимает проблему ручного сопровождения, погубившую первую волну.",
+        "en": "MacManus explains why ontologies — the structured concept-and-relationship vocabularies from the 2000s Semantic Web project — are having a second act: they discipline wayward, probabilistic AI agents, and developer Prasenjit Sarkar shows how an agent that updates its own ontology as it works removes the manual-maintenance burden that killed the first wave."
+      },
+      "note_page": "notes/articles/macmanus-ontologies-are-so-back.html"
+    },
+    {
+      "id": "2026-08-03-stross-non-use-of-ai-writing",
+      "type": "article",
+      "author": "Charlie Stross",
+      "title": {
+        "ru": "О неиспользовании ИИ в моём писательском процессе",
+        "en": "On the non-use of AI in my writing process"
+      },
+      "url": "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html",
+      "summary": {
+        "ru": "Писатель-фантаст Чарльз Стросс объясняет, почему не использует LLM в художественной прозе, критикует продажу этих инструментов как замены проверяемому поиску информации, и предлагает шкалу доверия: устоявшимся авторам с историей до 2022 года — презумпция невиновности, новым — больше скепсиса; отдельно признаёт, что осторожно применяет LLM для кода.",
+        "en": "Science-fiction author Charlie Stross explains why he doesn't use LLMs in his fiction writing, criticizes selling these tools as a replacement for verifiable research, and proposes a trust scale: established authors with a pre-2022 track record get the benefit of the doubt, newer ones more scrutiny; he separately admits to cautiously using LLMs for coding."
+      },
+      "note_page": "notes/articles/stross-non-use-of-ai-writing.html"
+    },
+    {
+      "id": "2026-08-03-garymarcus-astra-oversold",
+      "type": "article",
+      "author": "Gary Marcus",
+      "title": {
+        "ru": "Потрясающая — но сильно переоцененная — новая модель Astra от OpenAI",
+        "en": "OpenAI's amazing — but vastly oversold — new model Astra"
+      },
+      "url": "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold",
+      "summary": {
+        "ru": "Маркус признаёт результаты Astra впечатляющими, но раскладывает по пунктам, почему успех в математике не обещает такого же успеха в других областях: математика уникально устроена для проверки символьными инструментами и для генерации огромных объёмов синтетических данных с гарантированно верными ответами — то, чего нет у открытых, неверифицируемых задач вроде военной стратегии.",
+        "en": "Marcus grants that Astra's results are impressive but breaks down why success at math doesn't promise the same success elsewhere: math is uniquely suited to symbolic verification and to generating huge volumes of synthetic data with guaranteed-correct answers — something open-ended, unverifiable domains like military strategy simply lack."
+      },
+      "note_page": "notes/articles/garymarcus-astra-oversold.html"
+    }
+  ]
+}

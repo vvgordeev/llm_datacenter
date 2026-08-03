@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Онтологии снова в моде» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Richard MacManus · Latent Space · 2026-08-01</span>
+      <span data-lang="en">Article digest · Richard MacManus · Latent Space · 2026-08-01</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Онтологии снова в моде: как ИИ-агенты возрождают семантический веб</span>
+      <span data-lang="en">Ontologies Are So Back: Why AI Agents Are Reviving the Semantic Web</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/ontologies-agentic-systems" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">MacManus фиксирует неожиданный поворот: онтологии — формальные словари понятий и связей между ними, на которых в 2000-х пытались построить «семантический веб» (RDF, OWL и подобные стандарты) — возвращаются в инструментарий инженеров, но теперь не веб-страниц, а ИИ-агентов. Отправная точка статьи — доклад на 20 минут разработчика Фрэнка Койла, показывающий, как онтологии заново открывают для себя те, кто строит агентные системы поверх LLM.</span>
+      <span data-lang="en">MacManus flags an unexpected turn: ontologies — the formal vocabularies of concepts and relationships that the 2000s "semantic web" (RDF, OWL, and similar standards) tried to build the web on — are back in engineers' toolkits, only now for AI agents rather than web pages. The article's starting point is a 20-minute talk by developer Frank Coyle showing how today's AI engineers building agentic systems on top of LLMs are rediscovering ontologies.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: зачем вероятностному агенту жёсткая структура</span><span data-lang="en">The method: why a probabilistic agent needs a rigid structure</span></h2>
+    <p>
+      <span data-lang="ru">Идея статьи в том, что структурная негибкость онтологии — как раз то, чего не хватает своевольным, вероятностным по своей природе LLM-агентам. Онтология фиксирует, какие понятия существуют в предметной области, как они связаны и какие утверждения о них допустимы; агент, работающий поверх такой структуры, не может «додумать» несуществующую связь или спутать два похожих понятия — онтология действует как рельсы, удерживающие его в рамках проверяемой логики, вместо того чтобы полагаться только на то, что модель угадает нужную структуру из свободного текста заново в каждом диалоге.</span>
+      <span data-lang="en">The article's core idea is that an ontology's structural rigidity is exactly what wayward, inherently probabilistic LLM agents lack. An ontology fixes which concepts exist in a domain, how they relate, and which statements about them are valid; an agent working on top of that structure can't invent a nonexistent relationship or conflate two similar concepts — the ontology acts as rails keeping it within checkable logic, instead of relying on the model to re-guess the right structure from free text in every conversation.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что убивало семантический веб — и что изменилось</span><span data-lang="en">What killed the semantic web — and what changed</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой ход статьи — цитата разработчика Прасенджита Саркара о том, что именно мешало онтологиям взлететь двадцать лет назад: их нужно было вручную поддерживать в актуальном состоянии, а этого почти никогда не происходило в промышленных масштабах — онтология устаревала быстрее, чем люди успевали её обновлять. Саркар утверждает, что агентные системы меняют характер этой проблемы: если агент сам поддерживает онтологию как часть своей рабочей рутины, обновляя определения по мере того как встречает пограничные случаи, сопровождение перестаёт быть отдельной, вечно недофинансированной задачей и становится побочным продуктом обычной работы агента.</span>
+      <span data-lang="en">The article's key move is a quote from developer Prasenjit Sarkar on exactly what stopped ontologies from taking off two decades ago: they had to be manually kept up to date, and that almost never happened at industrial scale — an ontology went stale faster than people could update it. Sarkar argues agentic systems change the character of this problem: when an agent maintains the ontology itself as part of its normal operation, updating definitions as it encounters edge cases, maintenance stops being a separate, chronically underfunded task and becomes a byproduct of the agent's regular work.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это уместно применять — и в чём ограничение</span><span data-lang="en">When this is worth applying, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод для тех, кто строит агентные системы: там, где агенту нужно принимать надёжные, проверяемые решения на структурированных данных (а не просто генерировать связный текст), явная онтология поверх LLM может быть дешевле в поддержке, чем казалось раньше, — именно потому что поддерживать её теперь может сам агент. Ограничение материала в том, что это пока аргумент и один доклад, а не устоявшийся инженерный паттерн с широкой практикой применения: статья не приводит количественных данных о том, насколько хорошо агенты в реальности справляются с самостоятельным обновлением онтологий и не накапливают ли они при этом собственный дрейф ошибок.</span>
+      <span data-lang="en">The practical takeaway for anyone building agentic systems: where an agent needs to make reliable, checkable decisions over structured data — not just generate coherent prose — an explicit ontology layered on top of an LLM may be cheaper to maintain than it used to look, precisely because the agent itself can now maintain it. The piece's limitation is that this is still an argument plus one talk, not an established engineering pattern with a track record: it offers no quantitative evidence on how well agents actually do at self-updating ontologies, or whether that process accumulates its own drift of errors over time.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

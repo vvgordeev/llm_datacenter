@@ -1,0 +1,44 @@
+{
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T05:20:46Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403 (ожидаемо). WebSearch не дал ничего нового в окне 36ч: находки либо про капaсити/цены (продление usage-буста Claude Code до 19 августа, конец промо-цены Sonnet 5 31 августа, вывод legacy Workbench 17 августа) — не продуктовые фичи, либо уже опубликованы в прошлых сводках (Opus 5 — 2026-07-25)"},
+    {"source": "openai blog", "status": "ok", "candidates": 3, "note": "WebFetch 403. WebSearch подтвердил продолжение сюжета Astra (публикация на GitHub openai/ten-proofs 1 августа, реакция сообщества 1-2 августа) и нашёл 'Sign in with ChatGPT' (29 июля, отклонён — не удалось найти вторую точную цитату с атрибуцией для баланса мнений, решено не публиковать слабо подтверждённый материал)"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 1, "note": "WebFetch 403. WebSearch нашёл отмену мобильного приложения AI Studio (31 июля) — опубликовано; Gemini 3.6 Flash/3.5 Flash-Lite GA (21 июля) — вне окна и уже отражено в кластере google-gemini-3-6-flash-family (2026-07-22)"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403. WebSearch не дал ничего новее Muse Spark 1.1 (9 июля) — вне окна"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch 403. WebSearch нашёл только Grok Voice Think Fast 2.0 (анонс 29 июля, роутинг с 5 августа — ещё не наступил) и Grok Build changelog v0.2.117 без подтверждённой даты публикации — оба вне надёжного окна, отклонены"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch 403. WebSearch не дал ничего новее конца июля (Vibe/industrial engineering, Les Ulis дата-центр) — вне окна"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch 403. WebSearch подтвердил только уже опубликованный V4-Flash-0731 (2026-08-01) — дубль по data/daily/2026-08-01.json"},
+    {"source": "aggregators (smol.ai/TLDR/Willison linkblog)", "status": "ok", "candidates": 2, "note": "WebFetch 403 на все три. WebSearch по smol.ai/AI Weekly за 2 августа дал ключевые для дня факты (DeepSeek/Hermes, отмена AI Studio, Astra) — оба уже учтены выше как самостоятельные новости"},
+    {"source": "Hacker News", "status": "blocked", "candidates": 1, "note": "hn.algolia.com API — 403, повтор не делался. WebSearch по site:news.ycombinator.com подтвердил тред об Astra (id=49143688, критика 'shock and awe' релиза) — использован как контекст для новости-реакции; отдельного нового сюжета не дал"},
+    {"source": "reddit/x community", "status": "empty", "candidates": 0, "note": "site:reddit.com запросы для r/LocalLLaMA не проиндексировали конкретные посты за 2-3 августа; релевантные реакции по теме дня нашлись через X (Gowers/Nathan Calvin, Gary Marcus) — использованы как мнения в новостях"},
+    {"source": "расширенный поиск (WebSearch, широкие запросы + другие компании)", "status": "ok", "candidates": 0, "note": "China MIIT/Claude Code 'backdoor' спор — вне окна (8-12 июля, старый сюжет). Qwen3.7 Flash (27 июля, Alibaba) — модель отключена (enabled: false) в config/sources.yaml, пропущена по правилу"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "'Open letters about AI development' (2 августа) — опубликовано. 'July 2026 newsletter' (2 августа) — отклонён как месячный дайджест уже освещённых сюжетов, не самостоятельный материал"},
+    {"source": "experts: Latent Space", "status": "ok", "candidates": 1, "note": "'Ontologies Are So Back' (Richard MacManus, 1 августа) — опубликовано"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "Последний найденный пост — 'The Summer 2026 Edition' (23 июля), уже опубликован в сводке 2026-07-26 — вне 7-дневного окна для повторной публикации"},
+    {"source": "experts: Andrej Karpathy (видео)", "status": "empty", "candidates": 0, "note": "RSS 403 (CONNECT-блок youtube.com, подтверждено также прямым WebFetch на watch-страницу — тот же 403). WebSearch не дал видео с датой в пределах 7 дней"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "RSS 403. WebSearch не нашёл конкретного видео с подтверждённой датой публикации в окне"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "empty", "candidates": 0, "note": "RSS 403. WebSearch находил только общие описания канала и видео без даты в пределах недели"},
+    {"source": "experts: Nate Herk (видео)", "status": "empty", "candidates": 0, "note": "RSS 403. WebSearch вернул только материалы 2024-2025 годов, вне окна"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "RSS 403. WebSearch не дал новых видео с подтверждённой датой"},
+    {"source": "расширенный поиск экспертного контента (Gary Marcus, Charlie Stross, Zvi, Nathan Lambert, Cole Medin, David Ondrej, AI Jason, Two Minute Papers, Fireship, ThePrimeagen)", "status": "ok", "candidates": 2, "note": "Найдены и опубликованы 2 материала вне конфига: Gary Marcus 'OpenAI's amazing — but vastly oversold — new model Astra' (2 августа) и Charlie Stross 'On the non-use of AI in my writing process' (1 августа, 100+ комментариев на HN за 5 часов). Zvi — последний пост уже в сводке 2026-08-01; Nathan Lambert — последний пост июнь, вне окна; Cole Medin/David Ondrej/AI Jason/Two Minute Papers/Fireship/ThePrimeagen — ни одного видео с подтверждённой датой в окне не найдено"}
+  ],
+  "totals": {
+    "candidates": 11,
+    "published": 7,
+    "rejected": {
+      "не капасити/цены, не продуктовая фича (Anthropic)": 3,
+      "дубль уже опубликованной новости (DeepSeek V4-Flash, Gemini 3.6 Flash GA, Opus 5)": 3,
+      "слабая атрибуция мнений — решено не публиковать (Sign in with ChatGPT)": 1,
+      "вне окна 36ч для новостей / 7 дней для экспертного контента": 3,
+      "модель отключена в конфиге (Qwen)": 1,
+      "старый сюжет вне окна (China MIIT/Claude Code)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted — ни одного видеокандидата с подтверждённой (не старше 7 дней) датой публикации найти не удалось, см. expert_content_shortfall",
+    "frames": "not attempted — по той же причине"
+  },
+  "expert_content_shortfall": "Опубликовано 4 материала (все — статьи) вместо min_expert_total=5, видео — 0. Причина: youtube.com заблокирован на уровне CONNECT прокси и для RSS-фидов, и для прямого WebFetch watch-страницы (проверено на конкретном URL — тот же 403, что и в прошлых прогонах); единственный оставшийся канал — WebSearch — по всем 5 видео-экспертам конфигурации и по широкому кругу незаконфигурированных YouTube-каналов (Two Minute Papers, Fireship, ThePrimeagen, Cole Medin, David Ondrej, AI Jason) не дал ни одного видео с проверяемой датой публикации внутри 7-дневного окна свежести — только описания каналов общего характера или видео с датами в марте-июне. Дополнительный articles-кандидат сверх четырёх найден не был (max_articles_per_day=4 всё равно ограничил бы публикацию четырьмя), так что добор до 5 требовал именно видео. Решено не рисковать и не приписывать видео недостоверную дату — по правилу 'не выдумывай новости, цитаты и ссылки'.",
+  "environment_degradation": "youtube.com недоступен для WebFetch (RSS и watch-страницы одинаково дают 403 на CONNECT) — подтверждает системную деградацию видео-дискавери в облачном окружении, наблюдавшуюся в предыдущих прогонах (2026-07-18, 2026-08-02). Более трети источников в таблице выше (9 из ~20) вернули blocked/error на прямой WebFetch — ожидаемо для этой песочницы, WebSearch как основной канал отработал штатно и дал материал для всех трёх новостей и всех четырёх статей."
+}
