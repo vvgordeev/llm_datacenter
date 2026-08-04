@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Не будь мясным прокси» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-03</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-03</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Не будь мясным прокси</span>
+      <span data-lang="en">Don't be a meat proxy</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Willison подхватывает и разворачивает термин «мясной прокси» (meat proxy), который придумал разработчик Никлас Грун: так называют человека, который бездумно копирует вывод ИИ-системы и передаёт его дальше коллегам, не читая и не проверяя. Речь не о критике использования ИИ как такового — сам Willison активно пользуется языковыми моделями и не скрывает этого. Речь о конкретном паттерне поведения, который обесценивает роль человека в цепочке, оставляя ему функцию простого передаточного звена между двумя ИИ-системами или между ИИ и другим человеком.</span>
+      <span data-lang="en">Willison picks up and expands on a term coined by developer Niklas Gruhn: "meat proxy" — someone who blindly copies an AI system's output and relays it to colleagues without reading or checking it. This isn't a critique of using AI itself — Willison actively uses language models and says so openly. It's about a specific behavior pattern that hollows out the human's role in the chain, reducing them to a passive relay between two AI systems, or between an AI and another person.</span>
+    </p>
+
+    <h2><span data-lang="ru">Сценарий, который узнают многие</span><span data-lang="en">A scenario many will recognize</span></h2>
+    <p>
+      <span data-lang="ru">Разбираемый пример прост и от этого узнаваем: коллега поручает Claude Code реализовать фичу, получает готовый код и отправляет его на ревью, даже не открыв дифф. Ревьюер оставляет замечания — и тот же коллега, опять не вчитываясь, вставляет их обратно в чат с моделью как есть. Получается замкнутый цикл «ИИ → человек-прокси → ревьюер → человек-прокси → ИИ», в котором единственный человек в петле не добавляет вообще никакой ценности: он не читает код, не формулирует своими словами, что не так, не принимает ни одного содержательного решения.</span>
+      <span data-lang="en">The example Willison walks through is simple and, for that reason, recognizable: a colleague asks Claude Code to implement a feature, gets back working code, and sends it for review without ever opening the diff. The reviewer leaves comments — and the same colleague, again without reading them, pastes them back into the chat with the model verbatim. The result is a closed loop — AI → human proxy → reviewer → human proxy → AI — in which the one human in the loop adds no value whatsoever: they don't read the code, don't restate what's wrong in their own words, don't make a single substantive judgment call.</span>
+    </p>
+
+    <h2><span data-lang="ru">Где проходит граница</span><span data-lang="en">Where the line actually is</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой тезис статьи — не «меньше ИИ», а «добавляй ценность после ИИ». Willison формулирует практическое правило: прежде чем переслать вывод модели дальше — коллеге, ревьюеру, в тикет, в письмо клиенту — прочитай его, пойми, проверь на правдоподобность и, если нужно, перепиши своими словами. Именно это усилие и есть та работа, за которую человеку платят: не генерация текста (это теперь дёшево и быстро), а суждение о том, что из сгенерированного корректно, уместно и стоит внимания получателя.</span>
+      <span data-lang="en">The article's core claim isn't "use less AI" — it's "add value after the AI." Willison spells out a practical rule: before forwarding a model's output — to a colleague, a reviewer, a ticket, a client email — read it, understand it, sanity-check it, and rewrite it in your own words if needed. That effort is exactly the work a human is paid for: not generating the text (that's now cheap and fast), but judging what's correct, relevant, and worth the recipient's attention.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно — и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Ценность заметки в том, что она даёт короткое, запоминающееся имя для повседневной проблемы, с которой сталкивается почти любая команда, активно использующая агентные инструменты для кода и переписки: соблазн пропустить шаг проверки нарастает ровно тогда, когда модель начинает выдавать правдоподобный, хорошо оформленный результат почти всегда. Ограничение — статья описывает симптом и даёт эвристику, а не системное решение: она не предлагает, как организационно проверять и отслеживать случаи «мясного прокси» в командах, где давление скорости делает пропуск проверки рациональным личным выбором даже при иррациональности для команды в целом.</span>
+      <span data-lang="en">The note's value is giving a short, memorable name to an everyday problem that almost any team leaning on agentic coding and messaging tools runs into: the temptation to skip the verification step grows exactly as the model starts producing plausible, well-formatted output almost all the time. Its limit is that it names the symptom and offers a heuristic, not a systemic fix — it doesn't address how to organizationally catch and track "meat proxy" behavior on teams where speed pressure makes skipping verification a rational individual choice even when it's irrational for the team as a whole.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

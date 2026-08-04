@@ -1,0 +1,166 @@
+{
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T05:20:47Z",
+  "news": [
+    {
+      "id": "2026-08-04-microsoft-project-perception",
+      "cluster_id": "microsoft-project-perception",
+      "models": ["microsoft"],
+      "title": {
+        "ru": "Microsoft открывает публичное превью Project Perception — агентную систему безопасности на собственной модели",
+        "en": "Microsoft opens public preview of Project Perception, an agentic security platform built on its own model"
+      },
+      "summary": {
+        "ru": "Project Perception координирует три группы ИИ-агентов — «красных» (ищут пути атаки), «синих» (оценивают, какие риски реально важны) и «зелёных» (пишут и разворачивают патчи), — замыкая цикл «найти → приоритизировать → исправить» без ожидания человека на каждом шаге. В основе — MAI-Cyber-1-Flash, первая модель Microsoft, обученная специально для кибербезопасности; в связке с GPT-5.4 внутри харнесса MDASH компания заявляет 95,95% на бенчмарке CyberGym при половине стоимости прежней конфигурации. Платформа открылась для публичного превью 3 августа 2026 года.",
+        "en": "Project Perception coordinates three groups of AI agents — red (hunting for attack paths), blue (deciding which risks actually matter) and green (writing and deploying fixes) — closing the find-triage-fix loop without waiting on a human at every step. It's built on MAI-Cyber-1-Flash, Microsoft's first model trained specifically for cybersecurity; combined with GPT-5.4 inside the MDASH harness, the company claims 95.95% on the CyberGym benchmark at half the cost of its prior configuration. The platform opened to public preview on August 3, 2026."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Не меняет парадигму использования LLM в целом, но закрепляет новый класс сценария — автономный цикл поиска, приоритизации и исправления уязвимостей с минимумом участия человека — как рабочий стандарт в крупной enterprise-платформе; схожие ставки уже делают Anthropic, AWS и Google, так что это скорее гонка вдогонку, чем первый шаг.",
+        "en": "It doesn't change the overall paradigm of LLM use, but it cements a new class of scenario — an autonomous find-triage-fix loop for vulnerabilities with minimal human involvement — as a working standard inside a major enterprise platform; Anthropic, AWS and Google are making similar bets already, so this is catching up more than a first move."
+      },
+      "source_url": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+      "opinions": [
+        {
+          "author": "David Weston (Microsoft, CVP AI Security)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Мы не собираемся отдавать атакующим весь выигрыш в производительности.",
+            "en": "We're not going to let the attackers have all the productivity increase."
+          },
+          "url": "https://www.axios.com/2026/07/27/microsoft-unveils-new-cyber-model-agentic-security-tools-to-fight-hackers"
+        },
+        {
+          "author": "Implicator.ai",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Модель не передавали независимым тестировщикам до релиза, а заявленные 95,95% на публичном лидерборде на следующий день уже не подтвердились — при этом Microsoft говорит, что модель независимо оценивалась третьей стороной, чью личность компания не раскрывает.",
+            "en": "The model wasn't given to independent testers before release, and the claimed 95.95% didn't hold up on the public leaderboard the next day — yet Microsoft says the model was independently assessed by a third party whose identity it hasn't disclosed."
+          },
+          "url": "https://www.implicator.ai/microsoft-launches-first-in-house-cyber-model-without-independent-testers/"
+        },
+        {
+          "author": "Fernando Montenegro (Futurum)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Подлинное новшество здесь — переход от простого отображения информации к реальному действию.",
+            "en": "The genuine advance is the move from surfacing information to taking action."
+          },
+          "url": "https://futurumgroup.com/insights/microsofts-project-perception-bets-on-agents-that-act-not-just-alert/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Замкнутый цикл red/blue/green агентов для непрерывного поиска, приоритизации и исправления уязвимостей в enterprise-инфраструктуре без ручного цикла триажа",
+            "en": "A closed red/blue/green agent loop for continuously finding, prioritizing and fixing vulnerabilities in enterprise infrastructure without a manual triage cycle"
+          },
+          "url": "https://www.microsoft.com/en-us/security/business/ai-powered-cybersecurity/project-perception-agentic-system"
+        },
+        {
+          "text": {
+            "ru": "Маршрутизация большинства задач анализа уязвимостей на дешёвую специализированную модель и эскалация только сложных случаев на более крупную модель — способ удержать стоимость агентной security-операции",
+            "en": "Routing most vulnerability-analysis work to a cheap specialized model and escalating only the hardest cases to a larger model — a way to keep the cost of an agentic security operation under control"
+          },
+          "url": "https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-04-thinking-machines-inkling-small",
+      "cluster_id": "thinking-machines-inkling",
+      "models": ["thinking-machines"],
+      "title": {
+        "ru": "Thinking Machines сжимает Inkling до четверти размера — и та обгоняет учителя в кодинге",
+        "en": "Thinking Machines distills Inkling down to a quarter the size — and it beats its own teacher on coding"
+      },
+      "summary": {
+        "ru": "Thinking Machines Lab выпустила Inkling-Small: 276 млрд параметров всего / 12 млрд активных против 975 млрд / 41 млрд у исходной Inkling. Модель получена дистилляцией «на политике» (on-policy distillation) с Inkling в роли учителя и по ряду метрик обгоняет саму себя-учителя: 31,6% против 29,7% на Humanity's Last Exam и 80,2% против 77,6% на SWE-bench Verified. Плата за это — резкое падение фактологической точности (SimpleQA Verified падает с 43,9% до 20,6%). Веса Apache 2.0 выложены на Hugging Face, доступна дообучаемость через Tinker.",
+        "en": "Thinking Machines Lab released Inkling-Small: 276B total / 12B active parameters versus the original Inkling's 975B / 41B. The model was produced via on-policy distillation with Inkling as the teacher, and on several metrics it beats its own teacher: 31.6% vs. 29.7% on Humanity's Last Exam, and 80.2% vs. 77.6% on SWE-bench Verified. The trade-off is a sharp drop in factual accuracy (SimpleQA Verified falls from 43.9% to 20.6%). Apache 2.0 weights are on Hugging Face, with fine-tuning available through Tinker."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Полезное развитие в рамках текущего подхода «выложить веса, продавать инструментарий»: показывает рабочий путь к дешёвой, самостоятельно хостируемой модели для узких агентных задач ценой фактологии — но аудитория узкая (команды, готовые самостоятельно разворачивать открытые веса), и подходы к использованию LLM в целом это не меняет.",
+        "en": "A useful development within the existing 'give away weights, sell the tooling' approach: it demonstrates a working path to a cheap, self-hostable model for narrow agentic tasks at the cost of factuality — but the audience is narrow (teams willing to self-host open weights), and it doesn't change how LLMs are used more broadly."
+      },
+      "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+      "opinions": [
+        {
+          "author": "Digital Applied",
+          "stance": "positive",
+          "quote": {
+            "ru": "Inkling-Small обгоняет собственную родительскую модель в кодинге — при четверти её размера.",
+            "en": "Inkling-Small beats its own parent model on coding — at a quarter of its size."
+          },
+          "url": "https://www.digitalapplied.com/blog/inkling-small-open-weights-agentic-coding-efficiency-2026"
+        },
+        {
+          "author": "Kingy AI",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Таблица бенчмарков показывает и то, чем пришлось пожертвовать: фактологическая точность падает примерно вдвое, а без явного превосходства над конкурирующими открытыми моделями вроде GLM-5.2 широкое принятие Inkling под вопросом.",
+            "en": "The benchmark table also shows what was given up: factuality roughly halves, and without a clear edge over competing open models like GLM-5.2, broad adoption of Inkling is an open question."
+          },
+          "url": "https://kingy.ai/news/inkling-small-benchmarks-pricing-hardware/"
+        },
+        {
+          "author": "MarkTechPost",
+          "stance": "neutral",
+          "quote": {
+            "ru": "276 млрд параметров всего при 12 млрд активных — открытая мультимодальная MoE-модель, сопоставимая по части задач с гораздо большим предшественником.",
+            "en": "A 276B total, 12B active open-weights multimodal MoE model, comparable on several tasks to a much larger predecessor."
+          },
+          "url": "https://www.marktechpost.com/2026/08/02/thinking-machines-lab-releases-inkling-small-276b-open-weights-multimodal-moe-model/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Дообучение через Tinker под конкретную узкую агентную задачу вместо аренды дорогой фронтир-модели общего назначения",
+            "en": "Fine-tuning through Tinker for a specific narrow agentic task instead of renting an expensive general-purpose frontier model"
+          },
+          "url": "https://huggingface.co/blog/thinkingmachines-inkling"
+        },
+        {
+          "text": {
+            "ru": "Дистилляционная цель для команд, которые уже платят цены фронтир-моделей за задачу, повторяющуюся тысячи раз в день, и хотят сократить издержки без потери качества на этой конкретной задаче",
+            "en": "A distillation target for teams already paying frontier-model prices for a task they run thousands of times a day and want to cut costs without losing quality on that specific task"
+          },
+          "url": "https://thinkingmachines.ai/news/inkling-small/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-04-willison-dont-be-a-meat-proxy",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Не будь мясным прокси",
+        "en": "Don't be a meat proxy"
+      },
+      "url": "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/",
+      "summary": {
+        "ru": "Разбор термина «мясной прокси» (Никлас Грун): человек, который бездумно пересылает вывод ИИ дальше, не читая и не проверяя. Willison формулирует практическое правило — прежде чем переслать ответ модели, прочитай, пойми, проверь и при необходимости перепиши своими словами; именно это и есть работа, за которую человеку платят.",
+        "en": "A look at the term 'meat proxy' (coined by Niklas Gruhn): someone who blindly relays AI output without reading or checking it. Willison lays out a practical rule — read, understand, verify and, if needed, rewrite a model's answer in your own words before forwarding it; that effort is exactly the work a human is paid for."
+      },
+      "note_page": "notes/articles/willison-dont-be-a-meat-proxy.html"
+    },
+    {
+      "id": "2026-08-04-willison-astra-ten-proofs",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Десять достижений в математике и теоретической информатике",
+        "en": "Ten advances in mathematics and theoretical computer science"
+      },
+      "url": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/",
+      "summary": {
+        "ru": "Не пересказ математики за Astra, а разбор методологии публикации: Lean-сертификаты закрывают вопрос корректности доказательств, но ничего не говорят о процессе их получения. Willison прямо просит: «Хочу видеть промпты, которые они использовали!» — формальная проверка и прозрачность процесса, по его мысли, разные, не взаимозаменяемые вещи.",
+        "en": "Not a recap of Astra's math but a read on the publication's methodology: Lean certificates settle the correctness question but say nothing about the process behind the proofs. Willison asks directly, 'I want to see the prompts they used!' — formal verification and process transparency, in his view, are different, non-interchangeable things."
+      },
+      "note_page": "notes/articles/willison-astra-ten-proofs.html"
+    }
+  ]
+}

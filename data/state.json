@@ -215,7 +215,11 @@
     "notes/articles/macmanus-ontologies-are-so-back.html": "2026-08-03",
     "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html": "2026-08-03",
     "notes/articles/stross-non-use-of-ai-writing.html": "2026-08-03",
-    "notes/articles/garymarcus-astra-oversold.html": "2026-08-03"
+    "notes/articles/garymarcus-astra-oversold.html": "2026-08-03",
+    "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/": "2026-08-04",
+    "https://thinkingmachines.ai/news/inkling-small/": "2026-08-04",
+    "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/": "2026-08-04",
+    "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/": "2026-08-04"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -333,10 +337,10 @@
       }
     },
     "thinking-machines-inkling": {
-      "last_date": "2026-07-17",
+      "last_date": "2026-08-04",
       "summary": {
-        "ru": "Thinking Machines Lab выпускает Inkling — первую открытую модель (975B MoE) с самонастройкой через Tinker",
-        "en": "Thinking Machines Lab ships Inkling — its first open model (975B MoE) with self-tuning via Tinker"
+        "ru": "Thinking Machines Lab выпускает Inkling (975B MoE, самонастройка через Tinker), затем дистиллирует до Inkling-Small (276B/12B), которая обгоняет учителя в кодинге и рассуждениях ценой резкого падения фактологии",
+        "en": "Thinking Machines Lab ships Inkling (975B MoE, self-tuning via Tinker), then distills it into Inkling-Small (276B/12B), which beats its teacher on coding and reasoning at the cost of a sharp factuality drop"
       }
     },
     "google-bioresilience-program": {
@@ -526,6 +530,13 @@
       "summary": {
         "ru": "Google отменяет мобильное приложение AI Studio (анонсированное на I/O 2026, ~800000 предзаказов), перенося генерацию приложений прямо в Gemini на телефоне и десктопе; веб-версия AI Studio продолжает жить отдельно",
         "en": "Google cancels the AI Studio mobile app (teased at I/O 2026, ~800,000 preorders), moving app generation directly into Gemini on phone and desktop; the AI Studio web version continues separately"
+      }
+    },
+    "microsoft-project-perception": {
+      "last_date": "2026-08-04",
+      "summary": {
+        "ru": "Microsoft открывает публичное превью Project Perception — агентной системы безопасности (red/blue/green агенты) на модели MAI-Cyber-1-Flash, заявляя 95,95% на CyberGym в связке с GPT-5.4 при половине прежней стоимости",
+        "en": "Microsoft opens public preview of Project Perception, an agentic security platform (red/blue/green agents) built on MAI-Cyber-1-Flash, claiming 95.95% on CyberGym combined with GPT-5.4 at half the prior cost"
       }
     }
   }

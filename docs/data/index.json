@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-04",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Microsoft открывает публичное превью Project Perception — агентную систему безопасности на собственной модели",
+        "en": "Microsoft opens public preview of Project Perception, an agentic security platform built on its own model"
+      }
+    },
+    {
       "date": "2026-08-03",
       "news_count": 3,
       "expert_count": 4,

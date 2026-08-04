@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Десять достижений в математике» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-01</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-01</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Десять достижений в математике и теоретической информатике</span>
+      <span data-lang="en">Ten advances in mathematics and theoretical computer science</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В тот же день, когда OpenAI опубликовала десять доказательств от внутренней версии Astra, Simon Willison написал разбор не столько самих математических результатов (в них он не специалист и честно об этом говорит), сколько того, как устроена сама публикация — что именно OpenAI показала, а что оставила за кадром. Это тот случай, когда ценность конспекта не в пересказе новости (она уже разобрана в дневной сводке), а в методологическом взгляде опытного практика на то, как проверять подобные заявления.</span>
+      <span data-lang="en">On the same day OpenAI published ten proofs from an internal version of Astra, Simon Willison wrote up not so much the mathematical results themselves — he's upfront that he's not qualified to judge those — but how the publication itself is put together: what OpenAI actually showed, and what it left out. This is a case where the note's value isn't retelling the news (already covered in the daily digest) but an experienced practitioner's methodological read on how to scrutinize claims like this.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что именно опубликовано</span><span data-lang="en">What was actually published</span></h2>
+    <p>
+      <span data-lang="ru">Willison раскладывает пакет публикации на составные части: репозиторий <code>openai/ten-proofs</code> с формализациями на Lean 4 для каждого из десяти результатов, 249-страничная рукопись с изложением решений и — отдельно — LLM-сгенерированный PDF, в котором модель «реконструирует», как именно доказательство складывалось у неё в процессе, опираясь на неопубликованные трассы рассуждений. Он подчёркивает, что заявленная стоимость — около $2000 в токенах Sol на каждую решённую задачу — говорит только об успешных прогонах: «нет информации о том, на сколько задач потратили $2000 и решения не получили».</span>
+      <span data-lang="en">Willison breaks the release down into its parts: the <code>openai/ten-proofs</code> repository with Lean 4 formalizations for each of the ten results, a 249-page manuscript describing the solutions, and — separately — an LLM-generated PDF in which the model "reconstructs" how the proof came together for it, based on unpublished reasoning traces. He notes that the claimed cost — around $2,000 in Sol tokens per solved problem — only tells you about the successful runs: "no news on how many problems they spent $2,000 on without reaching a solution."</span>
+    </p>
+
+    <h2><span data-lang="ru">Формальная проверка ≠ прозрачность процесса</span><span data-lang="en">Formal verification ≠ process transparency</span></h2>
+    <p>
+      <span data-lang="ru">Центральный ход рассуждения: Lean-сертификаты действительно устраняют вопрос «а точно ли доказательство корректно?» — формальный верификатор либо принимает вывод, либо нет, здесь нечего оспаривать. Но это не то же самое, что понимание того, как модель пришла к решению. Willison прямо пишет: «Это неплохой уровень прозрачности, но я хочу видеть промпты, которые они использовали!» — то есть сам процесс поиска доказательства, включая неудачные ветки, конкретные затравки и, возможно, участие людей на промежуточных шагах, остаётся вне пакета публикации.</span>
+      <span data-lang="en">The central argument: Lean certificates genuinely settle the question of "is the proof actually correct?" — a formal verifier either accepts the derivation or it doesn't, and there's nothing to dispute there. But that's not the same as understanding how the model got to the answer. Willison writes plainly: "That's a decent level of transparency, but I want to see the prompts they used!" — meaning the search process itself, including failed branches, the specific prompts, and possibly human involvement at intermediate steps, stays outside the published package.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно — и в чём ограничение</span><span data-lang="en">Why this matters, and where it's limited</span></h2>
+    <p>
+      <span data-lang="ru">Разбор полезен как повторяемый шаблон для оценки будущих заявлений такого рода от любой лаборатории: разделять «формально проверено» и «полностью прозрачно и воспроизводимо» — два разных, не взаимозаменяемых свойства. Формальная проверка отвечает на вопрос корректности результата, но ничего не говорит о методологии его получения, роли людей в процессе и о том, сколько попыток не увенчалось успехом. Ограничение самой заметки — она не идёт дальше констатации этого разрыва: Willison не предлагает, какой именно стандарт раскрытия промптов и трасс рассуждений индустрии стоило бы принять, оставляя вопрос открытым.</span>
+      <span data-lang="en">The write-up is useful as a repeatable template for judging future claims of this kind from any lab: "formally verified" and "fully transparent and reproducible" are two different, non-interchangeable properties. Formal verification answers the correctness question but says nothing about the methodology behind it, the human role in the process, or how many attempts failed. The note's own limit is that it stops at naming this gap — Willison doesn't propose what standard of prompt and reasoning-trace disclosure the industry should actually adopt, leaving the question open.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
