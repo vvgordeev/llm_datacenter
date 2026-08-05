@@ -1,0 +1,102 @@
+{
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T05:20:00Z",
+  "news": [
+    {
+      "id": "2026-08-05-xai-grok-voice-think-fast-2",
+      "cluster_id": "xai-grok-voice-think-fast-2",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI переключает голосовой алиас по умолчанию на Grok Voice Think Fast 2.0",
+        "en": "xAI switches its default voice alias to Grok Voice Think Fast 2.0"
+      },
+      "summary": {
+        "ru": "5 августа 2026 года алиас `grok-voice-latest` автоматически переключился с Grok Voice Think Fast 1.0 на Think Fast 2.0 — новую speech-to-speech модель, объявленную ещё 29 июля. Think Fast 2.0 архитектурно слушает, рассуждает и говорит одновременно, без пауз на обработку: время до первого звука ответа сокращено с 1,25 до 0,70 секунды. На индексе Artificial Analysis Speech-to-Speech модель набрала 82,9% (против 75,7% у версии 1.0), обгоняя GPT-Realtime-2.1 (79,1%) и Gemini 3.1 Flash (69,5%); на агентном бенчмарке Tau Voice — 56,5%, первое место в индексе. Цена API выросла на 60%, до $0,08 за минуту.",
+        "en": "On August 5, 2026, the `grok-voice-latest` alias automatically switched from Grok Voice Think Fast 1.0 to Think Fast 2.0 — a new speech-to-speech model first announced on July 29. Think Fast 2.0 listens, reasons and speaks simultaneously with no processing pause; time to first audio dropped from 1.25 to 0.70 seconds. On the Artificial Analysis Speech-to-Speech Index it scores 82.9% (versus 75.7% for version 1.0), ahead of GPT-Realtime-2.1 (79.1%) and Gemini 3.1 Flash (69.5%); on the agentic Tau Voice benchmark it scores 56.5%, ranking first in the index. API pricing rose 60% to $0.08/minute."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметное улучшение внутри уже существующего подхода (speech-to-speech голосовые агенты): не открывает новый класс сценариев, но двигает планку задержки и точности в шумных условиях и сразу становится дефолтом по всей платформе — широкая применимость для всех, кто строит голосовых агентов на Grok API.",
+        "en": "A notable improvement within an existing approach (speech-to-speech voice agents): it doesn't open a new class of scenario, but it moves the bar on latency and noisy-condition accuracy and becomes the platform-wide default immediately — broadly applicable to anyone building voice agents on the Grok API."
+      },
+      "source_url": "https://x.ai/news/grok-voice-think-fast-2",
+      "opinions": [
+        {
+          "author": "Elon Musk (@elonmusk)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Grok Voice теперь №1 по агентной производительности.",
+            "en": "Grok Voice is now #1 in agentic performance."
+          },
+          "url": "https://x.com/elonmusk/status/2082559894264430870"
+        },
+        {
+          "author": "Artificial Analysis (@ArtificialAnlys)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Think Fast 2.0 дебютирует на #2 в Speech to Speech Index (82,9%) и на #1 по агентной производительности в Tau Voice (56,5%) — при времени до первого звука 0,70с это единственная модель топ-5 индекса с этим показателем ниже секунды.",
+            "en": "Think Fast 2.0 debuts at #2 on the Speech to Speech Index (82.9%) and #1 on Tau Voice for Agentic Performance (56.5%) — at 0.70s time to first audio, it's the only model in the index's top five with that figure under one second."
+          },
+          "url": "https://x.com/ArtificialAnlys/status/2082528987272957960"
+        },
+        {
+          "author": "RuntimeWire",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "60%-й рост цены означает, что командам придётся пересчитывать юнит-экономику по $0,08/мин вместо прежних $0,05 — и не все готовы переходить на 2.0, пока это не оправдано конкретным сценарием.",
+            "en": "The 60% price hike means teams need to re-cost at $0.08/min versus the prior $0.05 assumption — not everyone is ready to move to 2.0 until it's justified for their specific use case."
+          },
+          "url": "https://runtimewire.com/article/spacexai-grok-voice-think-fast-2-price-api-migration"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Голосовые агенты для реальных, шумных условий (колл-центры, IVR) через Voice Agent Builder — 10-кратное улучшение точности транскрипции на зашумлённом/сжатом телефонном аудио относительно ведущих speech-to-text моделей",
+            "en": "Voice agents for real-world, noisy conditions (call centers, IVR) via Voice Agent Builder — a 10x improvement in transcription accuracy on noisy or compressed phone audio versus leading speech-to-text models"
+          },
+          "url": "https://x.ai/news/grok-voice-think-fast-2"
+        },
+        {
+          "text": {
+            "ru": "Разработчики, которых не устраивает рост цены или смена поведения, могут закрепить версию `grok-voice-think-fast-1.0` явно вместо алиаса `grok-voice-latest`, чтобы не переходить на 2.0 автоматически",
+            "en": "Developers unhappy with the price increase or a behavior change can pin the explicit `grok-voice-think-fast-1.0` version instead of the `grok-voice-latest` alias, avoiding an automatic move to 2.0"
+          },
+          "url": "https://runtimewire.com/article/spacexai-grok-voice-think-fast-2-price-api-migration"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-05-willison-llm-032-release",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "LLM 0.32: reasoning-трейсы, OpenAI Responses API и серверные инструменты",
+        "en": "LLM 0.32: reasoning traces, the OpenAI Responses API, and server-side tools"
+      },
+      "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/",
+      "summary": {
+        "ru": "Самый значимый релиз CLI-утилиты `llm` со времён её первого запуска: рассуждения reasoning-моделей теперь пишутся в stderr отдельно от финального ответа, большинство OpenAI-моделей переведено на `/v1/responses` (сквозное состояние рассуждений между вызовами инструментов), логи — на контент-адресуемую SQLite-схему, добавлена поддержка серверных инструментов провайдера и семейства GPT-5.6.",
+        "en": "The most significant release of the `llm` CLI tool since its initial launch: reasoning-model output now goes to stderr separately from the final answer, most OpenAI models moved to `/v1/responses` (carrying reasoning state across tool calls), logs moved to a content-addressed SQLite schema, and it adds support for provider server-side tools and the GPT-5.6 family."
+      },
+      "note_page": "notes/articles/willison-llm-032-release.html"
+    },
+    {
+      "id": "2026-08-05-garymarcus-astra-tao-proof-indigestion",
+      "type": "article",
+      "author": "Gary Marcus",
+      "title": {
+        "ru": "Два критических дополнения: Astra и математика",
+        "en": "Two critical updates re: Astra and mathematics"
+      },
+      "url": "https://garymarcus.substack.com/p/two-critical-updates-re-astra-and",
+      "summary": {
+        "ru": "Маркус подкрепляет свою критику Astra лекцией математика Теренса Тао о «переваривании доказательств» (proof indigestion) — риске того, что модель, штампующая формально верные доказательства, производит массу содержательно бесполезных результатов; лекция написана до анонса Astra, но независимо приходит к тем же ограничениям.",
+        "en": "Marcus backs his Astra critique with mathematician Terence Tao's lecture on 'proof indigestion' — the risk that a model mass-producing formally valid proofs generates a mass of substantively useless results; the lecture predates Astra's announcement yet independently arrives at the same limitations."
+      },
+      "note_page": "notes/articles/garymarcus-astra-tao-proof-indigestion.html"
+    }
+  ]
+}

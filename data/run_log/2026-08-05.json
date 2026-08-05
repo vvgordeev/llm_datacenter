@@ -1,0 +1,33 @@
+{
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T05:20:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403 (proxy); WebSearch 2+ запроса — только уже опубликованное ранее (Opus 5, Cowork mobile/web, usage-boost promo продлён до 5 авг, что не новое событие)"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — GPT-5.6 pricing/Auto-review upgrade и Astra уже в архиве; 'Astra cost ~$2000' (4 авг) рассмотрено, отклонено как слишком тонкое дополнение без первичного URL с точной атрибуцией"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — Gemini 3.6 Flash GA (21 июля, старое), Computer Use preview (24 июня, старое), видео-трайл до 4 авг — промо, не новая функция"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — только рекламные/бизнес-инструменты (Business Agent, Instant Forms), не LLM-фича"},
+    {"source": "xai news", "status": "ok", "candidates": 1, "note": "WebFetch 403 на docs.x.ai; WebSearch нашёл переключение grok-voice-latest на Think Fast 2.0 именно 5 августа — включено"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch — ничего нового за окно, только контекст EU AI Act"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; V4-Pro GA всё ещё 'скоро', не выпущен"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "403 на CONNECT; WebSearch по site:news.ycombinator.com не дал релевантных новых тредов"},
+    {"source": "aggregators (smol.ai, tldr.tech, willison linkblog)", "status": "blocked", "candidates": 0, "note": "прямой fetch 403; WebSearch-обход не вскрыл сюжетов сверх уже найденного"},
+    {"source": "community (reddit, x)", "status": "ok", "candidates": 1, "note": "реакции на Grok Voice Think Fast 2.0 (X: Musk, Artificial Analysis) собраны для opinions"},
+    {"source": "broad discovery (Qwen3.8-Max, Microsoft Copilot, Cowork Aug4 слух, AI coding agent security roundup)", "status": "empty", "candidates": 0, "note": "Qwen — модель с enabled:false в конфиге, сознательно пропущена; 'Cowork запущен 4 авг' — недостоверно (низкокачественный агрегатор), проверено — это лишь продление уже известного usage-промо; security-roundup инструментов кодинга — не событие конкретного вендора с точной атрибуцией, отклонено"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 2, "note": "проверены все посты за 29 июля — 5 авг; 'Don't be a meat proxy' и 'Ten advances in mathematics' уже в архиве (2026-08-03/04); новый — 'New release of LLM' (4 авг) — конспект написан"},
+    {"source": "experts: Gary Marcus", "status": "ok", "candidates": 1, "note": "'Two critical updates re: Astra and mathematics' (5 авг, за несколько часов до сборки) — конспект написан"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "эпизод с Databricks, который поначалу казался новым (Data+AI Summit), при проверке оказался уже опубликован 2026-07-11 — не дубль не добавлен"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост в архиве — 23 июля; новых материалов за окно нет"},
+    {"source": "experts: Charlie Stross / MacManus", "status": "empty", "candidates": 0, "note": "эссе Stross 'On the non-use of AI in my writing' (1 авг) уже в архиве; у MacManus новых постов на latent.space за окно не найдено"},
+    {"source": "experts: Karpathy/AI Explained/Matt Wolfe/Matt Pocock/Nate Herk (видео)", "status": "blocked", "candidates": 0, "note": "YouTube RSS и WebFetch каналов — 403 на CONNECT; WebSearch не нашёл ни одного видео этих каналов, датированного последними 7 днями и ещё не опубликованного (Karpathy 'Vibe Coding' — старое, май; Matt Wolfe 'This Week in AI' Ep.1 (3 авг) — формат новостного пересказа, а не разбор подхода, отклонён по правилу skill'а)"}
+  ],
+  "totals": {
+    "candidates": 5,
+    "published": 3,
+    "rejected": {"уже покрыто ранее": 6, "промо/не новая функция": 2, "модель отключена в конфиге": 1, "недостоверный источник": 1, "новостной пересказ, не подход": 1}
+  },
+  "video_pipeline": {
+    "gemini": "not used — не найдено ни одного подходящего, ещё не опубликованного видеокандидата за 7-дневное окно",
+    "frames": "not used"
+  },
+  "notes": "Широкий проход по всем 7 включённым моделям, агрегаторам, HN API, community и всем экспертам. ≥1/3 источников вернули blocked (прокси 403 на прямой fetch блогов, HN API и YouTube — та же деградация окружения, что и в прошлых прогонах, не признак пустого дня). WebSearch как основной канал сработал: нашёл 1 полноценную новость (переключение xAI grok-voice-latest на Think Fast 2.0, ровно датированное 5 августа, с тремя реакциями с разными позициями) и 2 экспертных статьи (релиз LLM 0.32 от Willison, разбор Astra/Tao от Gary Marcus). Экспертная секция вышла ниже целевого минимума (limits.min_expert_total=5): 2 статьи вместо 5+, видео — 0, так как YouTube полностью недоступен для RSS/канальных страниц по CONNECT 403, а WebSearch не проиндексировал подходящих свежих роликов у видео-экспертов (Karpathy — последнее релевантное интервью старше 3 месяцев; остальные каналы без датированных за неделю кандидатов). Демо-файлов с demo:true в data/daily и docs/data/daily не найдено — чистка не требовалась (уже выполнена в одном из прошлых прогонов)."
+}

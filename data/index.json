@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-05",
+      "news_count": 1,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "xAI переключает голосовой алиас по умолчанию на Grok Voice Think Fast 2.0",
+        "en": "xAI switches its default voice alias to Grok Voice Think Fast 2.0"
+      }
+    },
+    {
       "date": "2026-08-04",
       "news_count": 2,
       "expert_count": 2,

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «LLM 0.32: reasoning traces, Responses API, server-side tools» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-04</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-04</span>
+    </p>
+    <h1>
+      <span data-lang="ru">LLM 0.32: видимые reasoning-трейсы, Responses API и серверные инструменты</span>
+      <span data-lang="en">LLM 0.32: visible reasoning traces, the Responses API, and server-side tools</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/4/new-release-of-llm/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон выпустил LLM 0.32 — по его собственной оценке, самое значимое обновление одноимённой CLI-утилиты и Python-библиотеки со времён первого релиза проекта. Речь не о косметике: релиз меняет сразу три вещи, которые определяют, насколько удобно работать с моделями через терминал и скрипты — что видно от рассуждающей модели, как устроены логи и на каком API-эндпоинте вообще работает большинство OpenAI-совместимых reasoning-моделей.</span>
+      <span data-lang="en">Simon Willison shipped LLM 0.32 — by his own account, the most significant update to the CLI tool and Python library of the same name since the project's initial launch. It's not cosmetic: the release changes three things at once that define how comfortable it is to work with models from a terminal and from scripts — what you can see from a reasoning model, how the logs are structured, and which API endpoint most OpenAI-compatible reasoning models actually run on.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: рассуждения — в stderr, а не в вывод</span><span data-lang="en">The method: reasoning goes to stderr, not to output</span></h2>
+    <p>
+      <span data-lang="ru">Раньше запуск reasoning-модели через `llm` либо скрывал её внутренние рассуждения полностью, либо примешивал их к финальному ответу, что ломало пайплайны вида `llm prompt | другая_команда`. В 0.32 рассуждения выводятся отдельно — в stderr, — так что в стандартный вывод, который можно смело передавать по конвейеру дальше, попадает только финальный ответ модели. Это меняет практику: разработчик получает возможность видеть, «о чём думает» модель, в реальном времени в терминале, но при этом не обязан парсить и вычищать эти трейсы из результата, если пишет автоматизацию поверх `llm`.</span>
+      <span data-lang="en">Previously, running a reasoning model through `llm` either hid its internal reasoning entirely or mixed it into the final answer, which broke pipelines shaped like `llm prompt | some_other_command`. In 0.32, reasoning is emitted separately — to stderr — so standard output, the part you can safely pipe onward, carries only the model's final answer. That's a practical shift: a developer can watch the model "think" live in the terminal without having to parse and strip those traces out of the result when scripting automation on top of `llm`.</span>
+    </p>
+
+    <h2><span data-lang="ru">Under the hood: OpenAI Responses API вместо Chat Completions</span><span data-lang="en">Under the hood: the OpenAI Responses API instead of Chat Completions</span></h2>
+    <p>
+      <span data-lang="ru">Вторая перемена — инфраструктурная: большинство reasoning-моделей OpenAI (класс GPT-5 и новее) в 0.32 обращаются к эндпоинту `/v1/responses`, а не к привычному `/v1/chat/completions`. Responses API умеет передавать состояние рассуждений между последовательными вызовами инструментов внутри одного «хода» модели — то есть модель не «забывает», как она рассуждала на предыдущем шаге вызова тулов, что раньше требовало от клиента вручную пересобирать контекст. LLM 0.32 также добавляет из коробки поддержку семейства GPT-5.6 и переключает модель по умолчанию для `llm prompt` на GPT-5.6 Luna — недорогую, но по факту достаточно способную для большинства задач.</span>
+      <span data-lang="en">The second change is infrastructural: most of OpenAI's reasoning models (GPT-5 class and newer) now talk to the `/v1/responses` endpoint in 0.32, instead of the familiar `/v1/chat/completions`. The Responses API can carry reasoning state across consecutive tool calls within a single model "turn" — so the model doesn't "forget" how it reasoned at the previous tool-call step, something that previously required the client to manually reassemble context. LLM 0.32 also ships out-of-the-box support for the GPT-5.6 family and switches the default model for `llm prompt` to GPT-5.6 Luna — cheap, but in practice capable enough for most tasks.</span>
+    </p>
+
+    <h2><span data-lang="ru">Серверные инструменты и переработанные логи</span><span data-lang="en">Server-side tools and redesigned logging</span></h2>
+    <p>
+      <span data-lang="ru">Отдельная новая возможность — вызовы `llm` теперь умеют использовать серверные инструменты провайдера (например, встроенный веб-поиск или выполнение кода на стороне API), а не только локальные функции, которые разработчик регистрирует сам. Логи при этом переведены на новую, контент-адресуемую схему SQLite — записи хранятся по хешу содержимого, что упрощает дедупликацию при повторных прогонах одних и тех же промптов. Ограничение материала: это заметки о релизе от самого автора инструмента, а не независимый обзор — но именно поэтому в них есть точные технические детали (какой ровно эндпоинт, какая модель по умолчанию), которых не будет в стороннем пересказе.</span>
+      <span data-lang="en">A separate new capability: `llm` calls can now use a provider's server-side tools (built-in web search or server-side code execution, say), not just local functions a developer registers themselves. Logging has also moved to a new, content-addressed SQLite schema — entries are stored by a hash of their content, which simplifies deduplication across repeated runs of the same prompts. A limit on the source: these are release notes from the tool's own author, not an independent review — but that's exactly why they carry precise technical detail (the exact endpoint, the exact default model) that a third-party summary wouldn't.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
