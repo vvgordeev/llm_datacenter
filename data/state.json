@@ -228,7 +228,12 @@
     "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2": "2026-08-06",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06",
     "https://www.medianews4u.com/anthropic-expands-india-presence-with-in-country-claude-inference-strengthens-enterprise-partnerships/": "2026-08-06",
-    "https://simonwillison.net/2026/Aug/5/raccoon-heist/": "2026-08-06"
+    "https://simonwillison.net/2026/Aug/5/raccoon-heist/": "2026-08-06",
+    "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/": "2026-08-07",
+    "https://mistral.ai/news/shieldstral/": "2026-08-07",
+    "https://technode.com/2026/08/06/deepseek-plans-significant-api-price-increases/": "2026-08-07",
+    "https://thezvi.substack.com/p/ai-180-no-longer-in-charge": "2026-08-07",
+    "notes/articles/zvi-ai-180-no-longer-in-charge.html": "2026-08-07"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -581,6 +586,27 @@
       "summary": {
         "ru": "Anthropic запускает локальный инференс Claude в Индии через Amazon Bedrock для регулируемых отраслей (Axis Bank, NPCI, IndusInd Bank, Godrej), уравниваясь с OpenAI и Google",
         "en": "Anthropic launches in-country Claude inference in India via Amazon Bedrock for regulated industries (Axis Bank, NPCI, IndusInd Bank, Godrej), matching OpenAI and Google"
+      }
+    },
+    "openai-chatgpt-free-luna-default": {
+      "last_date": "2026-08-07",
+      "summary": {
+        "ru": "OpenAI делает GPT-5.6 Luna дефолтом для бесплатных пользователей ChatGPT с безлимитным текстом (с недели 10 августа) и обновляет GPT-5.6 Sol для Plus/Pro — более прямые ответы и на 68% меньше фактических ошибок",
+        "en": "OpenAI makes GPT-5.6 Luna the default for free ChatGPT users with unlimited text (from the week of August 10) and upgrades GPT-5.6 Sol for Plus/Pro — more direct answers and 68% fewer factual errors"
+      }
+    },
+    "mistral-shieldstral-safety": {
+      "last_date": "2026-08-07",
+      "summary": {
+        "ru": "Mistral выпускает Shieldstral — открытый 3B мультимодальный классификатор безопасности с политиками модерации на естественном языке, задаваемыми во время запроса",
+        "en": "Mistral ships Shieldstral, an open 3B multimodal safety classifier that takes plain-language moderation policies at inference time"
+      }
+    },
+    "deepseek-price-hike-2026-08": {
+      "last_date": "2026-08-07",
+      "summary": {
+        "ru": "DeepSeek предупреждает о «существенном» повышении цен API (6 августа) — второе изменение тарифов за месяц на фоне резкого роста нагрузки на V4-Flash",
+        "en": "DeepSeek warns of a 'significant' API price increase (August 6) — the second pricing change in a month amid surging V4-Flash load"
       }
     }
   }

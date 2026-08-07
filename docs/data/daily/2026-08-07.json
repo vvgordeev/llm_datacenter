@@ -1,0 +1,166 @@
+{
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T06:40:00Z",
+  "news": [
+    {
+      "id": "2026-08-07-openai-chatgpt-free-luna-unlimited",
+      "cluster_id": "openai-chatgpt-free-luna-default",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI делает GPT-5.6 Luna бесплатным дефолтом ChatGPT с безлимитным текстом и обновляет Sol для платных",
+        "en": "OpenAI makes GPT-5.6 Luna the free ChatGPT default with unlimited text chats, upgrades Sol for paid users"
+      },
+      "summary": {
+        "ru": "6 августа OpenAI сделала GPT-5.6 Luna моделью по умолчанию для бесплатных пользователей ChatGPT (Free и Go) на этой неделе, полностью убрав суточный лимит на текстовые сообщения (лимиты на изображения, файлы и голос остаются); безлимитные чаты и кнопка «Think» у Luna для сложных вопросов появятся на неделе 10 августа. Подписчикам Plus/Pro досталась переработанная GPT-5.6 Sol для повседневного общения — более прямые ответы, меньше лишнего форматирования и, по собственной оценке OpenAI на финансовых/медицинских/юридических запросах, примерно на 68% меньше фактических ошибок, чем у GPT-5.5 Instant; версия Sol в Work и Codex не изменилась.",
+        "en": "On August 6, OpenAI made GPT-5.6 Luna the default model for ChatGPT Free and Go users this week, removing the daily text-chat cap entirely (image, file and voice limits stay); unlimited chats plus a Luna \"Think\" button for harder questions roll out the week of August 10. Plus/Pro subscribers get a retuned GPT-5.6 Sol for everyday chat — more direct, less unnecessary formatting, and about 68% fewer factual errors than GPT-5.5 Instant on OpenAI's own financial/medical/legal-accuracy evaluation; Sol inside Work and Codex is unchanged."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Широкий охват — убирает реальное ограничение для сотен миллионов бесплатных пользователей и заметно улучшает качество модели по умолчанию для платных — но это инкрементальное улучшение доступа/качества в рамках существующей парадигмы чата, а не новый подход к использованию LLM.",
+        "en": "Broad reach — removes a real usage friction for hundreds of millions of free users and measurably improves the default paid chat model — but it's an incremental access/quality upgrade within the existing chat paradigm, not a new way of using LLMs."
+      },
+      "source_url": "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Если Luna настолько хороша и дешева, почему бесплатным пользователям ChatGPT всё равно достаётся младшая модель, а не «настоящая» — безлимитное количество не компенсирует потолок возможностей.",
+            "en": "If Luna is so good and cheap, why do free ChatGPT users still only get access to a smaller model instead of the real thing — unlimited quantity doesn't make up for a capability ceiling."
+          },
+          "url": "https://news.ycombinator.com/item?id=49114609"
+        },
+        {
+          "author": "MacRumors",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Пользователи Free и Go получают GPT-5.6 Luna как модель по умолчанию на этой неделе, безлимитные текстовые чаты и кнопка Think появятся на неделе 10 августа — лимиты на изображения, файлы и другие инструменты не меняются.",
+            "en": "Free and Go users get GPT-5.6 Luna as their default model this week, with unlimited text chats and the Think button following the week of August 10 — limits on images, files and other tools remain unchanged."
+          },
+          "url": "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Бесплатные пользователи теперь могут вести длинные многошаговые текстовые диалоги (учёба, черновики, итеративные вопросы) без суточного лимита — при условии, что не переходят на изображения или файлы.",
+            "en": "Free users can now hold long multi-turn text conversations (studying, drafting, iterative Q&A) without hitting a daily cap, as long as they stay in text (no images or files)."
+          },
+          "url": "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-07-mistral-shieldstral",
+      "cluster_id": "mistral-shieldstral-safety",
+      "models": ["mistral"],
+      "title": {
+        "ru": "Mistral выпускает Shieldstral — открытый 3B-классификатор безопасности с политиками на естественном языке",
+        "en": "Mistral releases Shieldstral, a 3B open-weight safety classifier with plain-language policies"
+      },
+      "summary": {
+        "ru": "Mistral выпустила Shieldstral — открытый (Apache 2.0) мультимодальный классификатор безопасности на 3 млрд параметров, построенный на Ministral-3-3B с визуальным энкодером Pixtral. Вместо фиксированных категорий вреда, заданных при обучении, модель принимает политику модерации на естественном языке прямо во время запроса и возвращает калиброванную вероятность «да/нет» для текста или изображений — по качеству (84,9% F1 на текстовой безопасности, 83,8% на мультимодальной) не уступая моделям в 7 раз крупнее, при этом работает на одной GPU с 16 ГБ памяти.",
+        "en": "Mistral released Shieldstral, a 3-billion-parameter open-weight (Apache 2.0) multimodal safety classifier built on Ministral-3-3B with a Pixtral vision encoder. Instead of fixed harm categories baked in during training, it takes a plain-language moderation policy at inference time and returns a calibrated yes/no probability for text or images, matching guard models up to 7x its size (84.9% F1 on text safety, 83.8% on multimodal safety) while running on a single 16GB GPU."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметно, но не меняет парадигму: способ задания политик модерации меняется (промптом, а не переобучением) и модель универсально переиспользуема как «сайдкар», но это специализированный компонент безопасности, а не новый общий подход к использованию LLM.",
+        "en": "Notable, not paradigm-shifting: it changes how moderation policies are authored (prompted, not retrained) and is broadly reusable as a sidecar, but it's a specialized safety component rather than a new general way of using LLMs."
+      },
+      "source_url": "https://mistral.ai/news/shieldstral/",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Формат «политика как вопрос» можно обойти: контент, который буквально отвечает «нет» на вопрос о безопасности, может при этом оставаться вредным — вежливо сформулированный злой умысел проскальзывает.",
+            "en": "Policy-as-QA can be gamed by content that literally answers \"no\" to the safety question while still being harmful — malicious intent phrased politely can slip through."
+          },
+          "url": "https://news.ycombinator.com/item?id=49171268"
+        },
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "При 3 млрд параметров модель помещается «сайдкаром» на той же GPU, что и основная модель — можно не разворачивать отдельную инфраструктуру модерации; калиброванная оценка позволяет задавать свои пороги вместо одной жёсткой границы.",
+            "en": "At 3B parameters it fits as a sidecar on the same GPU already serving the main model, so you can skip standing up separate moderation infrastructure — and the calibrated score lets you set your own thresholds instead of one hard cutoff."
+          },
+          "url": "https://news.ycombinator.com/item?id=49171268"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Площадки формулируют новое правило модерации как вопрос на естественном языке (например, «безопасно ли это изображение для детского продукта?») вместо переобучения или файнтюна классификатора.",
+            "en": "Platforms write a new moderation rule as a plain-language question (e.g. \"does this image show content unsafe for a children's product?\") instead of retraining or fine-tuning a classifier."
+          },
+          "url": "https://www.qwe.edu.pl/tutorial/shieldstral-mistral-multimodal-moderation-tutorial/"
+        },
+        {
+          "text": {
+            "ru": "Самостоятельно хостящаяся альтернатива Llama Guard или OpenAI Moderation API для команд, которым нужно держать модерацию на своей инфраструктуре.",
+            "en": "A self-hosted alternative to Llama Guard or the OpenAI Moderation API for teams that want to keep moderation on their own infrastructure."
+          },
+          "url": "https://af.net/realtime/shieldstral-vs-llama-guard-vs-openai-moderation-api-a-self-hosted-solution-for-text-safety/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-07-deepseek-price-increase",
+      "cluster_id": "deepseek-price-hike-2026-08",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "DeepSeek предупреждает о «существенном» повышении цен API — конец эры сверхдешёвых токенов",
+        "en": "DeepSeek warns of a 'significant' API price increase, ending its ultra-cheap pricing era"
+      },
+      "summary": {
+        "ru": "6 августа DeepSeek Open Platform уведомил пользователей о планах «существенно» повысить цены API в ближайшее время — без конкретных новых тарифов и даты, призвав разработчиков заранее скорректировать планы использования. Это второе изменение цен за месяц (в середине июля уже вводились пиковые/внепиковые тарифы); причина — нагрузка на инфраструктуру из-за резкого роста спроса: V4-Flash, по имеющимся данным, обрабатывала до 8 триллионов токенов в сутки при текущем тарифе $0,14/$0,28 за миллион входных/выходных токенов.",
+        "en": "On August 6, DeepSeek's Open Platform notified users it will raise API pricing 'significantly' in the near term, without disclosing new rates or a date, and urged developers to plan usage accordingly. It's the second pricing change in under a month, after mid-July peak/off-peak rates; DeepSeek points to capacity strain from surging demand — V4-Flash reportedly processed up to 8 trillion tokens in a single day, at the current $0.14/$0.28 per million input/output tokens."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Значимый сигнал для индустрии, меняющий экономику для всех, кто строит продукты на самом дешёвом близком-к-фронтиру API, но это изменение цены, а не возможностей или подхода к использованию.",
+        "en": "A notable industry signal that reshuffles the cost calculus for anyone building on the cheapest near-frontier API, but it's a pricing change, not a shift in capability or usage pattern."
+      },
+      "source_url": "https://technode.com/2026/08/06/deepseek-plans-significant-api-price-increases/",
+      "opinions": [
+        {
+          "author": "Rohan Paul (@rohanpaul_ai)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "DeepSeek официально объявила о «существенном» росте цен API — самая дешёвая близкая-к-фронтиру модель на рынке, стоившая около 3 центов за задачу, скоро станет заметно дороже. Новость пришла через неделю после релиза DeepSeek-V4-Flash-0731.",
+            "en": "DeepSeek officially announced API pricing is going up 'significantly' — the cheapest near-frontier model on the market, at roughly 3 cents a task, is about to cost a lot more. It landed a week after DeepSeek-V4-Flash-0731 shipped."
+          },
+          "url": "https://x.com/rohanpaul_ai/status/2085338471812722818"
+        },
+        {
+          "author": "Ricky Ho (@rickyho_1989)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Повышение цен DeepSeek — это конец экономики захвата пользователей, а не конец ценовой войны в ИИ: сверхнизкие цены компании изначально вряд ли были устойчивым равновесием для индустрии.",
+            "en": "DeepSeek's price increase is the end of customer-acquisition economics, not the end of the AI price war — its ultra-low pricing was never likely to represent a sustainable industry equilibrium."
+          },
+          "url": "https://x.com/rickyho_1989/status/2085302367256494560"
+        }
+      ],
+      "use_cases": []
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-07-zvi-ai-180-no-longer-in-charge",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #180: больше не главные",
+        "en": "AI #180: No Longer In Charge"
+      },
+      "url": "https://thezvi.substack.com/p/ai-180-no-longer-in-charge",
+      "summary": {
+        "ru": "Еженедельный обзор: продолжение истории о песочницах для киберпроверок и координации агентов между собой, вступление в силу высокорисковых требований EU AI Act, рамка «три таблетки ИИ» для спора о будущих возможностях и письмо «Pacing the Frontier» от 1100+ сотрудников фронтир-лабораторий.",
+        "en": "Weekly roundup: continuing fallout from the cyber-eval sandbox incidents and agent-to-agent coordination, the EU AI Act's high-risk provisions taking effect, a 'Three AI Pills' frame for arguing about future capabilities, and the 'Pacing the Frontier' letter from 1,100+ frontier-lab employees."
+      },
+      "note_page": "notes/articles/zvi-ai-180-no-longer-in-charge.html"
+    }
+  ]
+}

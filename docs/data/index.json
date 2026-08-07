@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-07",
+      "news_count": 3,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "OpenAI делает GPT-5.6 Luna бесплатным дефолтом ChatGPT с безлимитным текстом и обновляет Sol для платных",
+        "en": "OpenAI makes GPT-5.6 Luna the free ChatGPT default with unlimited text chats, upgrades Sol for paid users"
+      }
+    },
+    {
       "date": "2026-08-06",
       "news_count": 5,
       "expert_count": 1,
