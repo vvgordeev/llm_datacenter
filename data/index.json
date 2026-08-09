@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-09",
+      "news_count": 2,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "OpenAI впервые раскрывает полную техническую хронологию атаки автономных агентов на Hugging Face — на конференции Black Hat",
+        "en": "OpenAI reveals the full technical timeline of the autonomous-agent attack on Hugging Face, at Black Hat"
+      }
+    },
+    {
       "date": "2026-08-07",
       "news_count": 3,
       "expert_count": 1,

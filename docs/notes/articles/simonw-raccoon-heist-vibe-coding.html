@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Raccoon Heist — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-05 (обновление 2026-08-07)</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-05 (updated 2026-08-07)</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Один промпт, целая игра: Claude Fable 5 и GPT-5.6 Sol строят Raccoon Heist с нуля</span>
+      <span data-lang="en">One prompt, one whole game: Claude Fable 5 and GPT-5.6 Sol build Raccoon Heist from scratch</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/5/raccoon-heist/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В 2022 году Уиллисон опубликовал твит-эксперимент: попросил GPT-3 в режиме дозаполнения текста написать описание игры про воришек-енотов, а DALL-E — нарисовать к ней скриншот. Четыре года спустя, в годовщину того твита, он решил проверить: сможет ли современная модель построить по этим двум артефактам — тексту и картинке — полноценную играбельную 3D-игру для браузера, без единой дополнительной подсказки. Это не тест конкретной техники промптинга, а демонстрация того, что такое «vibe coding» на практике: скормить модели минимум контекста, отпустить её работать самостоятельно и посмотреть, что получится.</span>
+      <span data-lang="en">Back in 2022 Willison ran a tweet experiment: he asked GPT-3, in text-completion mode, to write a game pitch about thieving raccoons, and DALL-E to sketch a screenshot for it. Four years later, on the tweet's anniversary, he decided to test whether a current model could take those two artifacts — text and image — and build a fully playable 3D browser game from them, with no further guidance. This isn't a test of one specific prompting trick; it's a demonstration of what "vibe coding" looks like in practice: feed the model minimal context, let it work unsupervised, and see what comes out.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: телефон, GitHub Pages и полная автономия</span><span data-lang="en">The method: a phone, GitHub Pages, and full autonomy</span></h2>
+    <p>
+      <span data-lang="ru">Весь эксперимент был проведён с телефона через Claude Code for web. Прежде чем писать промпт, Уиллисон решил проблему живого предпросмотра: Claude Code for web работает в отдельной git-ветке, и трудно смотреть, что агент строит, пока он ещё не закончил. Решение — завести пустой репозиторий на GitHub, включить в его настройках GitHub Pages с деплоем из нужной ветки (Settings → Pages → «Deploy from a branch»), и тогда каждый пуш агента через ~30 секунд появляется на живой странице вида <code>yourname.github.io/repo</code>. Этот приём работает и с приватными репозиториями и универсален для любого агента, пишущего в git-ветку, а не только для этой игры.</span>
+      <span data-lang="en">The whole experiment ran from a phone via Claude Code for web. Before writing the prompt, Willison solved the live-preview problem: Claude Code for web works in its own git branch, making it hard to see what the agent is building while it's still working. His fix: create an empty GitHub repository, enable GitHub Pages in its settings with "Deploy from a branch" pointed at that branch, and every agent push shows up roughly 30 seconds later on a live page at <code>yourname.github.io/repo</code>. The trick works with private repos too and generalizes to any agent that commits to a git branch, not just this game.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Промпт Claude Fable 5 был написан в заметках на телефоне и сопровождался теми же двумя картинками из 2022 года. Ключевые инструкции: сборка в браузере, мобильные тач-контролы, доступ к API генерации изображений OpenAI (<code>gpt-image-2</code>) для текстур, «работай самостоятельно, не задавай больше вопросов о дизайне», «коммить и пуш как можно чаще, чтобы я видел прогресс», и вести файл <code>notes.md</code> с журналом изменений при каждом коммите. Модель сама, без подсказки, выбрала Three.js для 3D-рендеринга — по прошлому опыту автора это ожидаемый выбор для подобных задач.</span>
+      <span data-lang="en">The Claude Fable 5 prompt was written in the phone's notes app and came with the same two images from 2022. The key instructions: build it for the browser, make it mobile-friendly with touch controls, use OpenAI's image-generation API (<code>gpt-image-2</code>) for textures, "work independently — do not ask me to make any further design decisions," "commit and push as often as possible so I can preview your work," and keep a <code>notes.md</code> changelog updated with every commit. The model chose Three.js for 3D rendering entirely on its own — an expected pick, based on the author's past experiments with similar tasks.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что построил Fable 5 — и как сам себя проверял</span><span data-lang="en">What Fable 5 built — and how it checked its own work</span></h2>
+    <p>
+      <span data-lang="ru">За семь коммитов агент собрал игру: масштабируемая до мобильных экранов 3D-сцена, генерация текстур и обложки через <code>gpt-image-2</code>, процедурная музыка на WebAudio без единого аудиофайла, три уровня сложности с патрулирующими охранниками и — самое интересное решение модели — собакой на третью ночь, которая преследует игрока по запаху, игнорируя линию видимости. Важная деталь метода: агент сам подключил Playwright, чтобы делать скриншоты своей работы на разных ширинах экрана и «на глаз» проверять результат — так он поймал и исправил баг с невидимым енотом на мобильной раскладке ещё до сдачи. Тестирование поймало и более тонкие баги: на реальном телефоне canvas рендерился в двойном размере из-за перезаписи inline-стилей Three.js — ошибку маскировали десктопные тесты с DPR=1.</span>
+      <span data-lang="en">Across seven commits, the agent built: a 3D scene that scales down to mobile screens, texture and title-art generation via <code>gpt-image-2</code>, a procedural WebAudio soundtrack with zero audio files, three difficulty tiers with patrolling guards, and — its most interesting own design decision — a dog on the third night that tracks the player by scent, ignoring line of sight entirely. A notable part of the method: the agent wired up Playwright itself to screenshot its own work at different screen widths and visually inspect the result — that's how it caught and fixed an invisible-raccoon bug on mobile before calling the game done. Testing also caught subtler bugs: on a real phone the canvas rendered at 2x size because an inline style assignment was clobbering Three.js's own sizing, an issue masked by desktop tests running at DPR 1.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Итоговая оценка автора честная и приземлённая: это «впечатляющая отправная точка, но не хорошая игра» — нет командной механики (два других енота просто стоят у тайника), сложность почти не растёт, и после сбора всех предметов на локации нечего делать до рассвета. Уиллисон подчёркивает общий вывод по опыту нескольких подобных экспериментов: спроектировать по-настоящему увлекательный игровой процесс остаётся уникально человеческим навыком, которым ни модель, ни он сам как «однопромптный» гейм-дизайнер пока не владеют — но как способ за один присест исследовать возможности агента вайб-кодинг игр отлично работает.</span>
+      <span data-lang="en">The author's own verdict is honest and grounded: it's "an impressive starting point, but not a good game" — there's no team mechanic (the other two raccoons just stand decoratively by the hideout), difficulty barely ramps up, and once you've collected everything on a level there's nothing left to do before dawn. Willison draws a broader conclusion from several similar experiments: designing genuinely fun gameplay remains a uniquely human skill that neither the model nor he, as a one-shot-prompt game designer, currently has — but as a way to explore an agent's capabilities in a single sitting, vibe-coding games works great.</span>
+    </p>
+
+    <h2><span data-lang="ru">Раунд два: тот же промпт, GPT-5.6 Sol Ultra через Codex</span><span data-lang="en">Round two: the same prompt, GPT-5.6 Sol Ultra via Codex</span></h2>
+    <p>
+      <span data-lang="ru">Два дня спустя Уиллисон дал ровно тот же промпт Codex Desktop на GPT-5.6 Sol Ultra — режиму, где Sol агрессивно делегирует работу суб-агентам. Результат оказался геймдизайнерски интереснее: вместо одного енота, собирающего монетки во дворе, Sol понял из исходного твита именно идею «команды» воришек и построил игру про музей, где нужно спасти двух товарищей по команде и вместе взгромоздиться друг на друга, чтобы дотянуться до золотой сардины в витрине. При этом у одноразовой сборки был собственный баг — у енотов на голове рендерились гигантские чёрные сферы вместо глаз, — который Codex не заметил даже просматривая скриншоты; баг устранился двумя репликами: «почему у енотов на голове огромные чёрные сферы?» → «почини». Codex потратил на проект 52 минуты; по оценке AgentsView, при оплате по полной цене API (а не по месячной подписке) сессия обошлась бы примерно в $23 — 700 тыс. токенов на входе плюс 32,5 млн закешированных и 148 тыс. на выходе.</span>
+      <span data-lang="en">Two days later Willison gave the exact same prompt to Codex Desktop running GPT-5.6 Sol Ultra — the mode where Sol makes aggressive use of sub-agents. The result was more interesting from a game-design angle: instead of one raccoon collecting coins in a yard, Sol picked up on the "crew" idea from the original tweet and built a museum heist where you rescue two crewmates and stack on top of each other to reach a golden sardine in a display case. The one-shot build had its own bug, though — the raccoons rendered with giant black spheres for eyes — which Codex failed to catch even while reviewing its own screenshots; it took two follow-up prompts to fix: "why do the raccoons have huge black spheres on them?" then "fix it." Codex spent 52 minutes on the project; at full API pricing rather than a monthly subscription, AgentsView estimated the session's cost at about $23 — 700K input tokens plus 32.5M cached tokens and 148K output tokens.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Практический вывод для тех, кто использует LLM для быстрого прототипирования: результат «одного и того же» промпта сильно зависит не только от модели, но и от того, как агентная обвязка вокруг неё распоряжается суб-агентами и бюджетом токенов — а автоматическое визуальное самотестирование через Playwright снижает число очевидных багов, но не гарантирует, что модель заметит визуально странный результат, если не спросить её об этом напрямую.</span>
+      <span data-lang="en">The practical takeaway for anyone using LLMs for rapid prototyping: the outcome of "the same" prompt depends heavily not just on the model but on how the agent harness around it manages sub-agents and token budget — and automated visual self-testing via Playwright cuts down on obvious bugs, but doesn't guarantee the model will notice a visually odd result unless you ask it about that directly.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
