@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Токенапокалипсис и PDF — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-07</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-07</span>
+    </p>
+    <h1>
+      <span data-lang="ru">PDF — ужасный носитель информации: откуда на самом деле берётся «токенапокалипсис»</span>
+      <span data-lang="en">PDFs are a terrible medium for information: where the "tokenpocalypse" actually comes from</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Отправная точка — материал 404 Media о том, как крупные компании спешно сокращают расходы на ИИ (авторы называют это «токенапокалипсисом»). Уиллисон цепляется за один конкретный эпизод из утечки аудиозаписи внутреннего совещания в Accenture: руководитель agentic AI-направления компании Джастис Квак говорит, что, по внутренним данным, основной расход токенов создают вовсе не инженеры, а сотрудники без техбэкграунда, — и когда коллега в шутку спрашивает, не связано ли это с конвертацией PDF в изображения, а затем в markdown, Квак подтверждает: именно так показывают их собственные данные.</span>
+      <span data-lang="en">The starting point is a 404 Media piece about how large companies are scrambling to cut AI spending — the authors call it the "tokenpocalypse." Willison latches onto one specific anecdote from a leaked recording of an internal Accenture meeting: Justice Kwak, the company's agentic AI strategy lead, says internal data shows the biggest driver of token consumption isn't engineers at all, it's non-engineers — and when a colleague jokingly asks whether that's from converting PDFs into images and then into markdown, Kwak confirms that's exactly what their own numbers show.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это про подход к использованию LLM, а не просто курьёз</span><span data-lang="en">Why this is about how people use LLMs, not just a funny anecdote</span></h2>
+    <p>
+      <span data-lang="ru">Конвертация PDF в изображения, а затем скармливание этих изображений модели для превращения в markdown — распространённый паттерн у нетехнических сотрудников, которые хотят «просто дать ИИ файл и получить текст». Проблема в том, что это один из самых дорогих по токенам способов извлечь информацию из документа: обработка каждой страницы как картинки обходится многократно дороже, чем работа с уже присутствующим в PDF текстовым слоем или его нормальным извлечением инструментами вроде <code>pdftotext</code>. Именно поэтому расход токенов у неинженеров оказывается неожиданно велик — они не пишут длинные промпты, они просто гоняют через модель тяжёлые по токенам изображения там, где хватило бы обычного текстового экстрактора.</span>
+      <span data-lang="en">Converting a PDF into images and then feeding those images to a model to turn into markdown is a common pattern among non-technical staff who just want to "hand the AI a file and get text back." The problem is that it's one of the most token-expensive ways to extract information from a document: processing every page as an image costs many times more than working with the text layer already inside the PDF, or extracting it normally with a tool like <code>pdftotext</code>. That's exactly why non-engineers' token spend turns out to be surprisingly high — they aren't writing long prompts, they're just routing token-heavy images through the model in places where a plain text extractor would have done the job.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Вывод Уиллисона резкий и практичный: если Accenture (и, вероятно, весь остальной корпоративный мир) осознает, что PDF — «ужасный носитель для передачи информации», это само по себе способно ощутимо снизить расходы компаний на ИИ, без единого изменения в моделях или тарифах. Для тех, кто выстраивает LLM-пайплайны — это конкретная, проверяемая рекомендация: перед тем как отправлять документ в модель, стоит проверить, нет ли в нём уже готового текстового слоя, и не превращать PDF в картинку по умолчанию просто потому, что так проще для пользователя.</span>
+      <span data-lang="en">Willison's takeaway is blunt and practical: if Accenture (and probably the rest of the corporate world) internalizes that PDFs are "a terrible medium for communicating information," that realization alone could meaningfully cut companies' AI bills, without a single change to models or pricing. For anyone building LLM pipelines, it's a concrete, checkable recommendation: before sending a document to a model, check whether it already has an extractable text layer, and don't default to rendering a PDF as an image just because that's the path of least resistance for the end user.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

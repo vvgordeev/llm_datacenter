@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Закон Завински для мультиагентов — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (AINews, swyx) · 2026-08-07</span>
+      <span data-lang="en">Article digest · Latent Space (AINews, swyx) · 2026-08-07</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Закон Завински для мультиагентов»: почему любой агент рано или поздно учится звать на помощь другого</span>
+      <span data-lang="en">"Zawinski's Law of MultiAgents": why every agent eventually learns to call another agent for help</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/ainews-zawinskis-law-of-multiagents" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ежедневная сводка Latent Space AINews формулирует шутливый, но точный принцип, отсылающий к старому «Закону Завински» из мира софта 90-х («любая программа расширяется, пока не научится читать почту, а те, что не могут — вытесняются теми, что могут»): «каждый агент стремится расшириться до тех пор, пока не научится отправлять сообщения другим агентам, а агенты, неспособные на такое расширение, вытесняются теми, что способны». Наблюдение подкреплено анонсом того же дня — Claude Code получил прямой обмен сообщениями между независимыми сессиями (инструменты <code>ListAgents</code> и <code>SendMessage</code>): по словам авторов, апдейт привлёк непропорционально много внимания именно потому, что он формализует паттерн мультиагентной координации, который многие команды и так уже приближённо воспроизводят вручную — через копипаст между терминалами или самодельные скрипты.</span>
+      <span data-lang="en">Latent Space's daily AINews roundup coins a joking-but-precise principle, riffing on the old 1990s "Zawinski's Law" from the software world ("every program expands until it can read mail; those that cannot are replaced by ones that can"): "every agent attempts to expand until it can message other agents, and those agents which cannot so expand are replaced by ones which can." The observation is anchored to that same day's news — Claude Code shipping direct messaging between independent sessions (the <code>ListAgents</code> and <code>SendMessage</code> tools): per the writeup, the update drew outsized attention precisely because it operationalizes a multi-agent coordination pattern many teams already approximate by hand, via copy-pasting between terminals or ad hoc scripts.</span>
+    </p>
+
+    <h2><span data-lang="ru">Второй сюжет дня: OpenAI признаёт Astra «критической» по кибербезопасности</span><span data-lang="en">The day's other thread: OpenAI calls Astra "critical" for cybersecurity</span></h2>
+    <p>
+      <span data-lang="ru">Тем же днём OpenAI объявила, что не может исключить, что готовящаяся модель Astra достигла уровня Critical по кибербезопасности в собственном Preparedness Framework — впервые для компании. По формулировке роундапа, это самый значимый продуктовый/safety-пост дня: OpenAI приостанавливает часть внутренней работы, не отвечающую усиленным требованиям, ужесточает контроль сетевого и инструментального доступа и защиту весов модели. Рядом с этим авторы отмечают переход Anthropic к classifier-based Auto Mode как дефолтному режиму разрешений в Claude Code — тоже как заметную продуктовую ставку на безопасность/UX, подкреплённую количественными данными о детекции опасных команд.</span>
+      <span data-lang="en">The same day, OpenAI announced it couldn't rule out its upcoming Astra model reaching the Critical cybersecurity threshold under its own Preparedness Framework — a first for the company. Per the roundup's framing, this was the day's most consequential product/safety post: OpenAI is pausing internal work that doesn't meet strengthened requirements and tightening network/tool-access controls and model-weight security. Alongside it, the writeup flags Anthropic's move to classifier-mediated Auto Mode as the default permission path in Claude Code as another notable product-level safety/UX bet, backed by quantified detection claims.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Общая рамка роундапа: оба сюжета — про то, что координация и контроль внутри агентных систем становятся отдельной, всё более заметной областью продуктовой работы у лабораторий, наравне с самими моделями. Практический вывод для тех, кто строит на LLM: если ваша команда уже вручную реализует паттерн «один агент сообщает другому о найденном», встроенная поддержка такого обмена в инструменте — это не новая возможность в вакууме, а признание того, что мультиагентные воркфлоу стали достаточно массовыми, чтобы их стоило формализовать на уровне продукта.</span>
+      <span data-lang="en">The roundup's broader frame: both threads are about coordination and control inside agentic systems becoming their own, increasingly visible area of product work at the labs, alongside the models themselves. The practical takeaway for anyone building on LLMs: if your team is already manually implementing the "one agent tells another what it found" pattern, built-in support for that exchange in the tool isn't a capability appearing out of nowhere — it's an acknowledgment that multi-agent workflows have become common enough to be worth formalizing at the product level.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

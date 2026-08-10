@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: GitHub Models закрыт — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-09</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">GitHub Models закрылся — и что делать тем, чей пайплайн на нём держался</span>
+      <span data-lang="en">GitHub Models is retired — what to do if your pipeline depended on it</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уиллисон узнал об отключении GitHub Models постфактум: у его репозитория <code>simonw/research</code> упал GitHub Actions с ошибкой «GitHub Models is temporarily unavailable as part of a scheduled retirement brownout» — а к моменту, когда он это заметил, отключение уже полностью завершилось. GitHub не объяснил причину закрытия, но Уиллисон предполагает очевидное: паттерны использования агентных кодинг-инструментов сделали бесплатные или субсидированные токены неподъёмно дорогими для сервиса, который изначально задумывался как витрина возможностей, а не как продакшн-инфраструктура.</span>
+      <span data-lang="en">Willison found out about the GitHub Models shutdown after the fact: a GitHub Actions run for his <code>simonw/research</code> repository failed with "GitHub Models is temporarily unavailable as part of a scheduled retirement brownout" — and by the time he noticed, the retirement was already complete. GitHub didn't explain the shutdown, but Willison's guess is the obvious one: coding-agent usage patterns made free or subsidized tokens prohibitively expensive for a service that was originally meant as a capability showcase, not production infrastructure.</span>
+    </p>
+
+    <h2><span data-lang="ru">Чем был полезен именно этот сервис</span><span data-lang="en">What made this particular service useful</span></h2>
+    <p>
+      <span data-lang="ru">GitHub Models был, по выражению автора, «странной уткой»: playground и единый API поверх нескольких LLM-провайдеров, главное преимущество которого было не в самих моделях, а в том, что код, выполняющийся внутри GitHub Actions, мог обращаться к нему через уже присутствующий в окружении GitHub API-ключ — без отдельной настройки секретов. Это идеально ложилось на концепцию GitHub Next «Continuous AI»: автоматизации, встроенные прямо в CI/CD, которые вызывают LLM как рутинный шаг пайплайна, а не как отдельный внешний сервис.</span>
+      <span data-lang="en">GitHub Models was, in the author's words, "an odd-shaped duck": a playground and a unified API across several LLM providers, whose real advantage wasn't the models themselves but that code running inside GitHub Actions could call it using the GitHub API key already present in that environment — no separate secret to configure. That fit neatly into GitHub Next's "Continuous AI" concept: automations built directly into CI/CD that call an LLM as a routine pipeline step rather than as a separate external service.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Практический пример из собственного пайплайна автора: один из шагов генерирует сводки по папкам для README репозитория, вызывая LLM прямо из workflow-скрипта. После отключения GitHub Models Уиллисон просто заменил вызов на OpenAI API-ключ с месячным лимитом расходов и переключил генерацию сводок на GPT-5.6 Luna — правка заняла один параметр конфигурации, без изменения логики пайплайна. Практический урок для тех, кто встраивает LLM-вызовы в CI/CD: не завязываться на бесплатные/дотируемые шлюзы как на постоянную часть архитектуры и держать переключение провайдера как можно более дешёвой правкой на случай, если сервис отключат без предупреждения.</span>
+      <span data-lang="en">A concrete example from the author's own pipeline: one step generates per-folder summaries for the repository's README by calling an LLM directly from a workflow script. After GitHub Models shut down, Willison simply swapped the call for an OpenAI API key with a monthly spending cap and switched summary generation to GPT-5.6 Luna — the fix took one config value, no change to the pipeline's logic. The practical lesson for anyone wiring LLM calls into CI/CD: don't treat a free or subsidized gateway as a permanent part of your architecture, and keep swapping providers as cheap an edit as possible in case the service disappears without warning.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
