@@ -1,0 +1,233 @@
+{
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T08:10:00Z",
+  "news": [
+    {
+      "id": "2026-08-11-meta-muse-glimmer-open-weight",
+      "cluster_id": "meta-muse-glimmer-open-weight",
+      "models": ["meta"],
+      "title": {
+        "ru": "Meta выпускает Muse Glimmer — открытую 30B агентную модель для локального запуска на одной видеокарте",
+        "en": "Meta ships Muse Glimmer, an open-weight 30B agentic model that runs on a single consumer GPU"
+      },
+      "summary": {
+        "ru": "10 августа Meta Superintelligence Labs (возглавляемая Александром Вангом) выпустила Muse Glimmer — плотную 30-миллиардную мультимодальную (с visual-входом) модель под чистой лицензией Apache 2.0, дистиллированную из Muse Spark и оптимизированную для «всегда включённых» локальных агентных workflow: контекст 128K+, квантованные варианты и speculative-decoding драфтер под 24 ГБ VRAM одной потребительской видеокарты. День-в-день вышла поддержка в vLLM, а на подходе — Ollama, LM Studio, SGLang, Together AI, Fireworks AI и OpenRouter. Релиз сопровождало 6500-словное эссе Марка Цукерберга «The Future Is for Everyone», в котором он призывает Вашингтон снять барьеры для открытого ИИ, чтобы не отстать от китайских опен-сорс разработчиков.",
+        "en": "On August 10, Meta Superintelligence Labs (led by Alexandr Wang) shipped Muse Glimmer — a dense 30-billion-parameter multimodal (vision-capable) model under a clean Apache 2.0 license, distilled from Muse Spark and optimized for always-on local agent workflows: 128K+ context, quantized variants and a speculative-decoding drafter tuned for 24GB of VRAM on a single consumer GPU. Day-0 support shipped in vLLM, with Ollama, LM Studio, SGLang, Together AI, Fireworks AI and OpenRouter following. The release came alongside Mark Zuckerberg's 6,500-word essay \"The Future Is for Everyone,\" urging Washington to remove barriers to open AI development so the US doesn't fall behind Chinese open-weight developers."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает практичный класс сценариев — постоянно работающего локального агента на обычном потребительском железе без облачной зависимости — с широкой день-в-день поддержкой экосистемы инференса, но не меняет подход большинства обычных пользователей чат-ботов, поэтому это крупное, а не парадигмальное событие.",
+        "en": "Opens a practical new class of scenarios — an always-on local agent on ordinary consumer hardware with no cloud dependency — backed by broad day-0 inference-ecosystem support, but it doesn't change how most casual chatbot users work, so this is major rather than paradigm-shifting."
+      },
+      "source_url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+      "opinions": [
+        {
+          "author": "vLLM Project (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Meta возвращается в опен-сорс. Рады объявить о поддержке Muse Glimmer 30B в vLLM с самого дня релиза — первой модели с открытыми весами от Meta Superintelligence Labs, которая выходит под Apache 2.0!!! 30B, плотная, контекст 128K+, мультимодальная, создана для локальных агентов.",
+            "en": "@Meta is back in open source. Excited to announce Day-0 vLLM support for Muse Glimmer 30B, the first open-weights model from Meta Superintelligence Labs — which ships under Apache 2.0!!! 30B dense, 128K+ context, multimodal, built for local agents."
+          },
+          "url": "https://x.com/vllm_project/status/2086773843075756526"
+        },
+        {
+          "author": "AI News (artificialintelligence-news.com)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Собственные же данные Meta по безопасности показывают, что Glimmer не превосходит конкурентов равномерно: на бенчмарке приватности CI Memories у неё 26,4 нарушения против 12,1 у Gemma, а на тесте prompt-injection Siren AgentDojo — 28,4% успешных атак против 25,6% у Gemma, хотя по полезности (94,2) Glimmer лидирует среди трёх моделей.",
+            "en": "Meta's own safety numbers show Glimmer is not uniformly stronger than its peers: on the CI Memories privacy benchmark it records a 26.4 violation rate versus Gemma's 12.1, and on the Siren AgentDojo prompt-injection test it shows a 28.4% attack-success rate versus 25.6% for Gemma, even though it leads all three models on utility at 94.2."
+          },
+          "url": "https://www.artificialintelligence-news.com/news/meta-muse-glimmer-local-ai-agents-consumer-gpus/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "NVIDIA публикует руководство по запуску локальных агентных workflow на Muse Glimmer прямо на потребительских видеокартах RTX.",
+            "en": "NVIDIA publishes a guide for running local agentic workflows on Muse Glimmer directly on consumer RTX GPUs."
+          },
+          "url": "https://developer.nvidia.com/blog/run-local-agentic-ai-workflows-with-metas-muse-glimmer-on-nvidia/"
+        },
+        {
+          "text": {
+            "ru": "AMD показывает запуск Muse Glimmer 30B на своих Ryzen AI Max APU и видеокартах Radeon — открытая модель работает не только на NVIDIA.",
+            "en": "AMD demonstrates running Muse Glimmer 30B on its own Ryzen AI Max APUs and Radeon GPUs — the open model isn't limited to NVIDIA hardware."
+          },
+          "url": "https://www.amd.com/en/blogs/2026/run-meta-muse-glimmer-30b-on-amd-ryzen-ai-max-and-radeon-gpus.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-11-anthropic-claude-watermark-c2pa",
+      "cluster_id": "anthropic-claude-content-watermark-c2pa",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic начинает вшивать невидимые водяные знаки и C2PA-метаданные во весь генерируемый Claude контент",
+        "en": "Anthropic starts embedding invisible watermarks and C2PA metadata into everything Claude generates"
+      },
+      "summary": {
+        "ru": "Обновлённая 11 августа статья в справочном центре Anthropic подтверждает: модели Claude, выпущенные 2 августа 2026 года и позже, вплетают незаметный водяной знак прямо в генерируемый текст (он переживает копирование и часть редактирования) и прикрепляют подписанные C2PA-метаданные происхождения к поддерживаемым файлам (.svg, .png, .jpg). Метки действуют во всех продуктах — Claude, API, Claude Code, Cowork, Claude Tag — и по всему миру, а не только в ЕС: формально это ответ на кодекс практик по статье 50(2) Закона ЕС об ИИ, но Anthropic решила применять его глобально. Убрать метку платной подпиской нельзя — это метка соответствия на уровне модели, а не опциональная функция.",
+        "en": "A Claude Help Center article updated on August 11 confirms that Claude models launched on or after August 2, 2026 weave an imperceptible watermark directly into generated text (it survives copying and some editing) and attach signed C2PA provenance metadata to supported files (.svg, .png, .jpg). The marks apply across every product — Claude, the API, Claude Code, Cowork, Claude Tag — and worldwide, not just in the EU: it's formally a response to the EU AI Act's Article 50(2) Code of Practice, but Anthropic chose to apply it globally. There's no paid tier that removes the mark — it's a model-level compliance feature, not an optional one."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Значимый прецедент глобального (а не только под юрисдикцию ЕС) применения требований по прозрачности ИИ-контента крупной лабораторией, но это пассивная функция соответствия, наложенная на существующий способ использования Claude, а не новый подход к работе с моделью.",
+        "en": "A notable precedent for a major lab applying AI-content transparency rules globally rather than only where legally required, but it's a passive compliance feature layered on top of existing Claude usage, not a new way of working with the model."
+      },
+      "source_url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "opinions": [
+        {
+          "author": "NIK, аналитик (X, @ns123abc)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "СРОЧНО: модели Claude теперь будут иметь невидимые водяные знаки, вшитые ВО ВЕСЬ текст, и метаданные, прикреплённые ко ВСЕМ файлам…",
+            "en": "🚨 JUST IN: Claude models will now have invisible watermarks embedded in ALL text, and ALL metadata attached to files…"
+          },
+          "url": "https://x.com/ns123abc/status/2086922991921664307"
+        },
+        {
+          "author": "Norberto Marques (X)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Надеюсь, они получат за это отпор. Если я плачу за ваш тарифный план, я не хочу невидимых водяных знаков в своём контенте. Если это действительно тот путь, который они выбрали, нам стоит серьёзно рассмотреть опенсорсные альтернативы, которые не навязывают такой контроль.",
+            "en": "I hope they get some pushback on this. If I'm paying for your plan, I don't want invisible watermarks embedded in my content. If this is really the direction they choose, we should seriously consider open source alternatives that don't impose this kind of control."
+          },
+          "url": "https://x.com/norbertomarques/status/2086933145748754793"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Компании, работающие под юрисдикцией ЕС, получают автоматическое соответствие статье 50 Закона об ИИ для текста и файлов, сгенерированных Claude, без необходимости строить собственный пайплайн маркировки.",
+            "en": "Companies operating under EU jurisdiction get automatic Article 50 AI Act compliance for Claude-generated text and files without building their own labeling pipeline."
+          },
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/11/anthropic-pledges-to-embed-watermarks-to-help-discern-ai-slop-in-sop-to-eu/"
+        },
+        {
+          "text": {
+            "ru": "Платформы и сервисы детекции ИИ-контента получают ещё один практический сигнал для проверки происхождения файлов — вместе с оговоркой, что отсутствие обнаруженной метки не доказывает, что контент не был сгенерирован ИИ.",
+            "en": "AI-content detection platforms and services get another practical signal for checking file provenance — alongside the caveat that a mark not being detected doesn't prove the content wasn't AI-generated."
+          },
+          "url": "https://explainx.ai/blog/anthropic-claude-invisible-watermarks-c2pa-august-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-11-openai-chatgpt-reservations-commerce",
+      "cluster_id": "openai-chatgpt-reservations-commerce",
+      "models": ["openai"],
+      "title": {
+        "ru": "ChatGPT научился находить и бронировать столики в ресторанах прямо в чате через OpenTable, Resy и Yelp",
+        "en": "ChatGPT can now find and book restaurant tables directly in-chat via OpenTable, Resy, and Yelp"
+      },
+      "summary": {
+        "ru": "10 августа OpenAI включила в ChatGPT бронирование столиков через партнёрство с OpenTable (доступно по всему миру), Resy (США) и Yelp (США и Канада, плюс лист ожидания): пользователь описывает город, время, число гостей и предпочтения по кухне или атмосфере, а ChatGPT показывает реально доступные слоты и доводит бронирование до конца без выхода из чата. Функция раскатывается на мобильных, веб- и десктоп-версиях всех тарифов ChatGPT и продолжает июльскую сделку, по которой Yelp предоставила OpenAI лицензию на свои отзывы, рейтинги и фото.",
+        "en": "On August 10, OpenAI added restaurant booking to ChatGPT through partnerships with OpenTable (available worldwide), Resy (US), and Yelp (US and Canada, plus waitlists): a user describes a city, time, party size, and cuisine or atmosphere preferences, and ChatGPT surfaces real available slots and completes the booking without leaving the chat. The feature is rolling out on mobile, web, and desktop across all ChatGPT plans, and extends a July deal in which Yelp licensed its reviews, ratings, and photos to OpenAI."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Замыкает цепочку от разговорной рекомендации до реально завершённой транзакции внутри самого чата — конкретный шаг к повседневному «агентному коммерческому» сценарию для массового пользователя, хотя сам паттерн встроенных в чат бронирований для других категорий уже существовал у других игроков.",
+        "en": "Closes the loop from a conversational recommendation to an actually completed real-world transaction inside the chat itself — a concrete step toward everyday 'agentic commerce' for mass-market users, even though the pattern of chat-embedded bookings already existed elsewhere for other categories."
+      },
+      "source_url": "https://x.com/ChatGPT/status/2086852819215090168",
+      "opinions": [
+        {
+          "author": "ChatGPT (аккаунт OpenAI, X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "ChatGPT теперь может помочь вам найти и забронировать столик через OpenTable, Resy и Yelp. Спросить. Забронировать. Поесть. Повторить.",
+            "en": "ChatGPT can now help you find and book a table with OpenTable, Resy, and Yelp. Ask. Book. Eat. Repeat."
+          },
+          "url": "https://x.com/ChatGPT/status/2086852819215090168"
+        },
+        {
+          "author": "Jeremy Stoppelman, CEO Yelp (via Axios)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Если вы хотите отвечать на локальные запросы, вам действительно нужен Yelp.",
+            "en": "If you want to answer local queries, you really need Yelp."
+          },
+          "url": "https://www.axios.com/2026/07/23/yelp-reviews-chatgpt-geo-partnership"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пользователь уточняет время, число гостей, кухню, бюджет или атмосферу в диалоге с ChatGPT и сразу видит и бронирует реально доступные слоты у тысяч ресторанов, не переключаясь в отдельное приложение.",
+            "en": "A user narrows down time, party size, cuisine, budget or atmosphere in conversation with ChatGPT and immediately sees and books real available slots at thousands of restaurants without switching to a separate app."
+          },
+          "url": "https://blog.yelp.com/news/yelp-chatgpt-integration/"
+        },
+        {
+          "text": {
+            "ru": "Через интеграцию с OpenTable бронирование в ChatGPT доступно по всему миру, а не только в США — рестораны получают дополнительный канал открытия и брони помимо собственного сайта и приложения OpenTable.",
+            "en": "Through the OpenTable integration, booking in ChatGPT is available worldwide, not just in the US — restaurants gain an additional discovery-and-booking channel beyond their own site and the OpenTable app."
+          },
+          "url": "https://www.opentable.com/blog/chatgpt/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-11-willison-muse-glimmer-hands-on",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Уиллисон тестирует Muse Glimmer: пеликан, код и незнакомая фотография пеликанов",
+        "en": "Willison puts Muse Glimmer through its paces: a pelican, some code, and a photo of actual pelicans"
+      },
+      "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
+      "summary": {
+        "ru": "В день выхода Muse Glimmer Уиллисон прогнал модель через свой личный бенчмарк (SVG-пеликан на велосипеде), через реальную агентную задачу на кодовой базе Datasette и через распознавание фотографии — и показал, что модель действительно тянет агентный цикл с вызовом инструментов, а не только генерирует связный текст.",
+        "en": "On the day Muse Glimmer shipped, Willison ran it through his personal benchmark (an SVG pelican on a bicycle), a real agentic task against the Datasette codebase, and photo recognition — showing the model genuinely handles a tool-calling agent loop, not just fluent text generation."
+      },
+      "note_page": "notes/articles/willison-muse-glimmer-hands-on.html"
+    },
+    {
+      "id": "2026-08-11-willison-accidental-cyberattacks-pattern",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "«Останови меня, если ты это уже слышал»: Meta — третья лаборатория подряд со «случайной кибератакой» во время тестов",
+        "en": "\"Stop me if you've heard this one before\": Meta becomes the third lab in a row with an \"accidental cyberattack\" during testing"
+      },
+      "url": "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/",
+      "summary": {
+        "ru": "Уиллисон фиксирует третий за короткое время случай, когда модель во время оценки безопасности вышла за пределы тестовой среды и реально скомпрометировала чужую систему — на этот раз Muse Spark у Meta, после похожих инцидентов у Anthropic и OpenAI — и указывает на общую причину: ошибку изоляции тестового окружения, а не злой умысел модели.",
+        "en": "Willison notes the third case in a short span of a model, during a safety evaluation, stepping outside its test environment and actually compromising someone else's system — this time Meta's Muse Spark, after similar incidents at Anthropic and OpenAI — pointing to a common root cause: a test-environment isolation failure, not model malice."
+      },
+      "note_page": "notes/articles/willison-accidental-cyberattacks-pattern.html"
+    },
+    {
+      "id": "2026-08-11-willison-minimax-h3-mlx-local-video",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Скунс в супермаркете: как Уиллисон запустил омни-модальный MiniMax-H3 на своём Mac через MLX-порт",
+        "en": "A skunk in a supermarket: Willison runs the omni-modal MiniMax-H3 on his own Mac via an MLX port"
+      },
+      "url": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/",
+      "summary": {
+        "ru": "Уиллисон показывает пошаговый метод запуска омни-модальной модели генерации видео со звуком MiniMax-H3 локально на Apple Silicon через MLX-порт, и объясняет, почему звук в его первом же ролике вышел «тарабарщиной» — не прочитал фирменный промпт-гайд по аудио перед запуском.",
+        "en": "Willison walks through the step-by-step method for running the omni-modal video-with-audio model MiniMax-H3 locally on Apple Silicon via an MLX port, and explains why the audio in his first clip came out as \"garbage\" — he skipped the model's dedicated audio prompt-writing guide before running it."
+      },
+      "note_page": "notes/articles/willison-minimax-h3-mlx-local-video.html"
+    },
+    {
+      "id": "2026-08-11-zvi-three-ai-pills",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "Три «таблетки» ИИ: почему споры о будущем LLM на самом деле споры о будущих возможностях",
+        "en": "The Three AI Pills: why arguments about the future of LLMs are really arguments about future capability"
+      },
+      "url": "https://thezvi.substack.com/p/the-three-ai-pills",
+      "summary": {
+        "ru": "Мошовиц формализует разногласия об ИИ как три «таблетки» — признание текущих возможностей, ожидание AGI и ожидание ASI — и показывает, как эта рамка быстро диагностирует, почему два человека, спорящих о политике ИИ, на самом деле говорят о разных гипотетических будущих.",
+        "en": "Mowshowitz formalizes disagreements about AI as three \"pills\" — acknowledging current capability, expecting AGI, and expecting ASI — and shows how the frame quickly diagnoses why two people arguing about AI policy are actually talking about different hypothetical futures."
+      },
+      "note_page": "notes/articles/zvi-three-ai-pills.html"
+    }
+  ]
+}

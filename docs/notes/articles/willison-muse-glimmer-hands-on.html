@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Уиллисон тестирует Muse Glimmer — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-10</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-10</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Уиллисон тестирует Muse Glimmer: пеликан, код и незнакомая фотография пеликанов</span>
+      <span data-lang="en">Willison puts Muse Glimmer through its paces: a pelican, some code, and a photo of actual pelicans</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В день выхода Muse Glimmer — новой открытой 30-миллиардной модели от Meta Superintelligence Labs — Саймон Уиллисон не ограничился пересказом пресс-релиза, а сразу поставил модель на свой рабочий Mac и прогнал через неё три типичные для себя проверки. Он отмечает главное отличие от прежних релизов Llama: чистая лицензия Apache 2.0 без «драконовских» ограничений, которые были у Llama.</span>
+      <span data-lang="en">On the day Muse Glimmer — Meta Superintelligence Labs' new open 30-billion-parameter model — shipped, Simon Willison didn't just summarize the press release; he put it on his own Mac and ran it through three checks he applies to every new local model. He flags the headline difference from earlier Llama releases up front: a clean Apache 2.0 license, without the restrictive terms that came with Llama.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пеликан на велосипеде — личный бенчмарк Уиллисона</span><span data-lang="en">A pelican riding a bicycle — Willison's personal benchmark</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон давно просит каждую новую модель нарисовать SVG-пеликана на велосипеде — не потому что это практическая задача, а потому что она хорошо показывает, насколько модель способна превращать абстрактную пространственную идею в конкретные координаты фигур. Через LM Studio (18,16 ГБ версия модели) Glimmer справился с задачей узнаваемо, но с оговоркой: «все детали на месте, но они прилично перемешаны» — то есть велосипед, пеликан и его частоты присутствуют, но собраны не совсем аккуратно. Для модели такого размера, рассчитанной на локальный запуск, а не на топовое качество генерации изображений, это ожидаемый и приемлемый результат.</span>
+      <span data-lang="en">Willison has long asked every new model to draw an SVG pelican riding a bicycle — not because it's a practical task, but because it's a good stress test of whether a model can turn an abstract spatial idea into concrete shape coordinates. Through LM Studio (the 18.16 GB build of the model), Glimmer produced something recognizable, with a caveat: "all the pieces are there but they are pretty jumbled together" — the bicycle, the pelican and its parts are all present, just not assembled cleanly. For a model this size, built for local use rather than best-in-class image generation, that's an expected and acceptable result.</span>
+    </p>
+
+    <h2><span data-lang="ru">Агентный кодинг: «как здесь работает авторизация?»</span><span data-lang="en">Agentic coding: "how does auth work?"</span></h2>
+    <p>
+      <span data-lang="ru">Более серьёзная проверка — реальная агентная задача на своём же плагине <code>llm-coding-agent</code>, направленном на свежий чекаут проекта Datasette с вопросом «как здесь работает авторизация?». Модель самостоятельно прошла по кодовой базе, вызывая инструменты для чтения файлов и поиска, и в конце дала связный ответ, основанный на реально найденном коде — то есть справилась именно с тем сценарием, под который её и оптимизировала Meta: работа внутри агентного «скаффолда», а не просто чат по одному вопросу. Уиллисон запускал это через <code>llm-lmstudio</code> с патчем для совместимости с LLM 0.32.</span>
+      <span data-lang="en">A more serious test was a real agentic task using his own <code>llm-coding-agent</code> plugin, pointed at a fresh checkout of the Datasette project with the question "how does auth work?" The model worked through the codebase on its own, calling tools to read files and search, and produced a coherent final answer grounded in code it had actually found — exactly the scenario Meta optimized it for: operating inside an agent scaffold, not just answering a single chat question. Willison ran this through <code>llm-lmstudio</code> with a compatibility patch for LLM 0.32.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем локальная модель на 32+ ГБ памяти, и что она увидела на фотографии</span><span data-lang="en">Why a local model in the 32GB+ range, and what it saw in a photo</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон объясняет, почему именно этот размер модели ему интересен: на машине с 32 ГБ памяти и больше (у него самого — 128 ГБ) Glimmer оставляет достаточно ресурсов, чтобы параллельно держать открытыми другие приложения — то есть модель можно использовать как фоновый локальный инструмент, а не единственную задачу для всей машины. Поскольку Glimmer — визуальная модель, он попросил её описать фотографию двух пеликанов на камнях; модель верно распознала вид (<em>Pelecanus occidentalis</em>), каменистый берег на фоне пасмурного дня и размытый пирс в глубине кадра — то есть распознавание сцены и деталей у модели работает достоверно, а не только генерация текста и кода.</span>
+      <span data-lang="en">Willison explains why this exact model size matters to him: on a machine with 32GB of RAM or more (his has 128GB), Glimmer leaves plenty of headroom to keep other applications running at the same time — meaning it can serve as a background local tool rather than monopolizing the whole machine for one task. Since Glimmer is a vision model, he asked it to describe a photo of two pelicans on rocks; it correctly identified the species (<em>Pelecanus occidentalis</em>), the rocky shoreline on an overcast day, and a blurred pier in the background — showing that scene and detail recognition works reliably, not just text and code generation.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Итог для тех, кто выбирает локальную модель под агентную работу: Glimmer — редкий случай модели среднего размера с чистой лицензией, вменяемыми требованиями к памяти и подтверждённой (а не только заявленной производителем) способностью реально работать внутри агентного цикла — читать код, вызывать инструменты и понимать изображения, а не только генерировать связный текст.</span>
+      <span data-lang="en">The takeaway for anyone picking a local model for agentic work: Glimmer is a rare mid-size model with a clean license, reasonable memory requirements, and a confirmed — not just vendor-claimed — ability to actually operate inside an agent loop: reading code, calling tools, and understanding images, not merely producing fluent text.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

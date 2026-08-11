@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: локальная генерация видео на MiniMax-H3 — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-04</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-04</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Скунс в супермаркете: как Уиллисон запустил омни-модальный MiniMax-H3 на своём Mac через MLX-порт</span>
+      <span data-lang="en">A skunk in a supermarket: Willison runs the omni-modal MiniMax-H3 on his own Mac via an MLX port</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">MiniMax выпустила MiniMax-H3 как «универсальную омни-модальную генеративную систему»: модель принимает на входе текст, изображения, аудио и видео и на основе этого умеет генерировать видеоролики длиной до 15 секунд со встроенным звуком. Через два дня после релиза появился Python-пакет <code>PipeNetwork/minimax-h3-mlx</code>, портирующий модель на MLX — фреймворк Apple для запуска моделей на собственных чипах Apple Silicon без облака. Уиллисон, у которого есть MacBook Pro на чипе M5 Max, не удержался и опробовал порт лично, вместо того чтобы просто пересказать анонс.</span>
+      <span data-lang="en">MiniMax shipped MiniMax-H3 describing it as "a general-purpose, omni-modal generative system": it takes text, images, audio and video as input and can use them to generate up to 15-second video clips with sound built in. Two days after release, a Python package called <code>PipeNetwork/minimax-h3-mlx</code> appeared, porting the model to MLX — Apple's framework for running models on its own Apple Silicon chips without the cloud. Willison, who owns an M5 Max MacBook Pro, couldn't resist trying the port himself instead of just relaying the announcement.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что нужно, чтобы это заработало локально</span><span data-lang="en">What it actually takes to run this locally</span></h2>
+    <p>
+      <span data-lang="ru">Метод, который он показывает пошагово: скачать веса модели и отдельно 8-битный MLX-порт через <code>uvx --from huggingface_hub hf download</code>, а затем запустить генерацию одной командой <code>uv run --with mlx-vlm</code> с текстовым промптом и путями к обеим моделям. Это заняло скачивание около 115 ГБ файлов модели и порядка 45 минут на саму генерацию — цифры, которые важны для любого, кто планирует повторить эксперимент дома: без быстрого интернета и терпения к времени ожидания задача не имеет смысла на потребительском железе.</span>
+      <span data-lang="en">The method he walks through step by step: download the model weights and, separately, the 8-bit MLX port via <code>uvx --from huggingface_hub hf download</code>, then run generation with a single <code>uv run --with mlx-vlm</code> command, passing a text prompt and paths to both models. That meant downloading roughly 115GB of model files and about 45 minutes for the generation itself — numbers that matter to anyone planning to reproduce this at home: without fast internet and patience for the wait, the exercise doesn't make sense on consumer hardware.</span>
+    </p>
+
+    <h2><span data-lang="ru">Результат и главное ограничение метода</span><span data-lang="en">The result, and the method's key limitation</span></h2>
+    <p>
+      <span data-lang="ru">Промпт «радужный скунс перепрыгивает через замшелое бревно в супермаркете» дал впечатляющее по картинке видео, но со «странной, похожей на речь тарабарщиной» вместо реального звука. Причина — не в качестве модели, а в том, что Уиллисон не задал промпт для аудио и не изучил документацию заранее: у MiniMax-H3 есть отдельное «руководство по написанию промптов для видео», объясняющее, как конкретно формулировать запрос, чтобы получить связный звук, а не шум.</span>
+      <span data-lang="en">The prompt "a rainbow colored skunk leaps over a mossy log in a supermarket" produced a video that looked impressive, but with "weird speech-like garbage" instead of real sound. The cause wasn't the model's quality but the fact that Willison didn't supply audio-specific prompt guidance and hadn't read the docs beforehand: MiniMax-H3 ships a dedicated "prompt writing guide" for video that explains exactly how to phrase a request to get coherent audio instead of noise.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Практический вывод для тех, кто пробует омни-модальные генераторы видео локально: сам факт, что топовая модель для генерации видео со звуком уже через пару дней после релиза портируется энтузиастами на потребительские Mac — признак того, насколько быстро экосистема локального инференса (MLX, llama.cpp и аналоги) догоняет облачные API. Но результат «из коробки» без прочтения промпт-гайда предсказуемо хуже заявленного качества — это не баг модели, а типичная ошибка пользователя, которую легко избежать, потратив пять минут на документацию перед первым запуском.</span>
+      <span data-lang="en">The practical takeaway for anyone trying omni-modal video generators locally: the fact that a top-tier video-with-audio model gets ported by enthusiasts to consumer Macs within days of release shows how fast the local-inference ecosystem (MLX, llama.cpp and similar) is catching up to cloud APIs. But an out-of-the-box result without reading the prompt guide predictably falls short of the model's stated quality — that's not a model bug, it's a common user mistake that's easy to avoid by spending five minutes on the docs before the first run.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -250,7 +250,14 @@
     "https://thezvi.substack.com/p/what-happened-openai-and-huggingface": "2026-08-10",
     "notes/articles/zvi-what-happened-openai-huggingface.html": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
-    "notes/articles/willison-github-models-retired.html": "2026-08-10"
+    "notes/articles/willison-github-models-retired.html": "2026-08-10",
+    "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model": "2026-08-11",
+    "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content": "2026-08-11",
+    "https://x.com/ChatGPT/status/2086852819215090168": "2026-08-11",
+    "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/": "2026-08-11",
+    "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/": "2026-08-11",
+    "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/": "2026-08-11",
+    "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -659,6 +666,27 @@
       "summary": {
         "ru": "Anthropic делает Auto Mode дефолтным режимом разрешений в Claude Code для Pro/Max/Team с 14 августа",
         "en": "Anthropic makes Auto Mode the default permission mode in Claude Code for Pro/Max/Team starting August 14"
+      }
+    },
+    "meta-muse-glimmer-open-weight": {
+      "last_date": "2026-08-11",
+      "summary": {
+        "ru": "10 августа Meta Superintelligence Labs (возглавляемая Александром Вангом) выпустила Muse Glimmer — плотную 30-миллиардную мультимодальную (с visual-входом) модель под чистой лицензией Apache 2.0, дистиллированную из Muse Spark и оптимизированную для «всегда включённых» локальных агентных workflow: к",
+        "en": "On August 10, Meta Superintelligence Labs (led by Alexandr Wang) shipped Muse Glimmer — a dense 30-billion-parameter multimodal (vision-capable) model under a clean Apache 2.0 license, distilled from Muse Spark and optimized for always-on local agent workflows: 128K+ context, quantized variants and "
+      }
+    },
+    "anthropic-claude-content-watermark-c2pa": {
+      "last_date": "2026-08-11",
+      "summary": {
+        "ru": "Обновлённая 11 августа статья в справочном центре Anthropic подтверждает: модели Claude, выпущенные 2 августа 2026 года и позже, вплетают незаметный водяной знак прямо в генерируемый текст (он переживает копирование и часть редактирования) и прикрепляют подписанные C2PA-метаданные происхождения к по",
+        "en": "A Claude Help Center article updated on August 11 confirms that Claude models launched on or after August 2, 2026 weave an imperceptible watermark directly into generated text (it survives copying and some editing) and attach signed C2PA provenance metadata to supported files (.svg, .png, .jpg). The"
+      }
+    },
+    "openai-chatgpt-reservations-commerce": {
+      "last_date": "2026-08-11",
+      "summary": {
+        "ru": "10 августа OpenAI включила в ChatGPT бронирование столиков через партнёрство с OpenTable (доступно по всему миру), Resy (США) и Yelp (США и Канада, плюс лист ожидания): пользователь описывает город, время, число гостей и предпочтения по кухне или атмосфере, а ChatGPT показывает реально доступные сло",
+        "en": "On August 10, OpenAI added restaurant booking to ChatGPT through partnerships with OpenTable (available worldwide), Resy (US), and Yelp (US and Canada, plus waitlists): a user describes a city, time, party size, and cuisine or atmosphere preferences, and ChatGPT surfaces real available slots and com"
       }
     }
   }

@@ -1,0 +1,47 @@
+{
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T08:10:00Z",
+  "sources": [
+    {"source": "anthropic blog (www.anthropic.com/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED"},
+    {"source": "openai blog (openai.com/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED"},
+    {"source": "google/deepmind blog (blog.google)", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED"},
+    {"source": "meta ai blog (ai.meta.com/blog)", "status": "blocked", "candidates": 1, "note": "WebFetch: EGRESS_BLOCKED; найдено через WebSearch — Muse Glimmer"},
+    {"source": "xai news (x.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED; WebSearch не дал ничего свежего за 36ч сверх уже опубликованного (voice think-fast 2.0, 05.08)"},
+    {"source": "mistral news (mistral.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED; WebSearch не дал новых событий за окно"},
+    {"source": "deepseek news (api-docs.deepseek.com/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED; WebSearch — только продолжение уже опубликованного повышения цен (06.08)"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED (hn.algolia.com); WebSearch site:news.ycombinator.com сработал как замена"},
+    {"source": "hacker news (websearch fallback)", "status": "ok", "candidates": 2, "note": "найдены треды по Muse Glimmer (id=49241679) и по Claude watermarking (id=49250109) через site:news.ycombinator.com; сам news.ycombinator.com для WebFetch блокирован"},
+    {"source": "aggregator: smol.ai AI News", "status": "empty", "candidates": 0, "note": "WebFetch блокирован; WebSearch не нашёл выпуск за 11.08, последний найденный — за 07.08"},
+    {"source": "aggregator: TLDR AI", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл конкретный выпуск за 11.08"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI, X", "status": "ok", "candidates": 3, "note": "через WebSearch: реакции на Muse Glimmer и на watermarking (X-посты с прямыми цитатами)"},
+    {"source": "расширенный проход (AI news digest / model release / coding agent update)", "status": "ok", "candidates": 4, "note": "подтвердил отсутствие новых событий у xAI/Mistral/DeepSeek/Qwen(disabled) за окно, помог найти реакции"},
+    {"source": "simonwillisonblog-backup (git clone, ndjson)", "status": "ok", "candidates": 4, "note": "обходной канал по инструкции SKILL.md; дал 4 непроиндексированных ранее материала Уиллисона за 04-10.08 (minimax-h3-mlx, an-ai-model-from-meta, technical-blogging [не использован — не про LLM-подход], introducing-muse-glimmer)"},
+    {"source": "expert: Simon Willison (simonwillison.net)", "status": "ok", "candidates": 3, "note": "через backup-дамп"},
+    {"source": "expert: Andrej Karpathy (youtube)", "status": "blocked", "candidates": 0, "note": "youtube.com WebFetch EGRESS_BLOCKED (нестабильность подтверждена в SKILL.md); WebSearch дал только старый ролик (Sequoia Ascent, апрель/май) — не включён"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "последний непроиндексированный материал (podcast ep.218) — 03.08, за пределами использованного; свежих статей за 04-11.08 не найдено"},
+    {"source": "expert: AI Explained (youtube)", "status": "blocked", "candidates": 0, "note": "youtube.com EGRESS_BLOCKED, WebSearch не дал конкретного свежего видео с датой"},
+    {"source": "expert: Matt Wolfe (youtube)", "status": "blocked", "candidates": 0, "note": "youtube.com EGRESS_BLOCKED; WebSearch нашёл упоминание свежего ролика (по контенту недели), но не подтверждённый URL/дату — не включён во избежание ошибки"},
+    {"source": "expert: Ethan Mollick (oneusefulthing.org)", "status": "empty", "candidates": 0, "note": "WebFetch не блокирован явно, но WebSearch не нашёл новый пост за окно; найденный текст про агентов оказался статьёй 2025 года"},
+    {"source": "expert: Nate Herk (youtube)", "status": "blocked", "candidates": 0, "note": "youtube.com EGRESS_BLOCKED, WebSearch не дал конкретики по датам"},
+    {"source": "expert: Matt Pocock (youtube)", "status": "blocked", "candidates": 0, "note": "youtube.com EGRESS_BLOCKED, WebSearch не дал конкретики по датам"},
+    {"source": "expert: Zvi Mowshowitz (не в конфиге, через расширенный поиск)", "status": "ok", "candidates": 1, "note": "\"The Three AI Pills\" (05.08), ранее неопубликован"}
+  ],
+  "totals": {
+    "candidates": 22,
+    "published": 3,
+    "rejected": {
+      "уже опубликовано ранее / продолжение без новизны": 8,
+      "не удалось подтвердить дату/первоисточник (видео)": 4,
+      "не найдено новых событий у источника за окно": 7
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — не найдено ни одного видео с надёжно подтверждённым URL и датой за окно (youtube.com egress заблокирован для WebFetch/RSS, WebSearch не даёт точных ID роликов у настроенных каналов)",
+    "frames": "not used — см. выше; yt-dlp и imageio-ffmpeg установлены через pip и доступны, но не потребовались"
+  },
+  "notes": [
+    "Деградация окружения: прямой WebFetch блокирован на ВСЕХ проверенных доменах (блоги моделей, hn.algolia.com, news.ycombinator.com, support.claude.com, venturebeat.com, thezvi.substack.com, fintechbrainfood.com, kingy.ai, youtube.com, yewtu.be, google.com) — это более 1/3 источников, требует внимания пользователя к сети песочницы.",
+    "expert_content содержит 4 материала вместо целевого минимума 5 (limits.min_expert_total) — все видео-эксперты из конфига недоступны для discovery в этом прогоне из-за блокировки youtube.com; статейный контент добран через simonwillisonblog-backup и расширенный поиск (Zvi Mowshowitz), но качественных свежих видео с проверяемым URL/датой не нашлось. Решено не включать неподтверждённые видео, чтобы не выдумывать факты.",
+    "Willison представлен 3 из 4 материалов expert_content — это следствие использования его блог-дампа как единственного надёжного канала в условиях блокировки остальных источников, а не намеренного перекоса."
+  ]
+}
