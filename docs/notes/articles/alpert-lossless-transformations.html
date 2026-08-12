@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: без потерь текст не переписать — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Sophie Alpert · через линкблог Simon Willison, 2026-08-11</span>
+      <span data-lang="en">Article digest · Sophie Alpert · via Simon Willison's linkblog, 2026-08-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Без потерь текст переписать нельзя — и что из этого следует для правил использования ИИ в письме</span>
+      <span data-lang="en">There are no lossless rewrites — and what that means for AI-writing policy</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://sophiebits.com/2026/06/25/there-are-no-lossless-transformations-of-natural-language-text" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Софи Альперт опубликовала текст 25 июня 2026, но в дайджест он попал 11 августа — через ссылку с комментарием в линкблоге Simon Willison, который назвал материал «коротким и действительно хорошим чтением».</span>
+      <span data-lang="en">Sophie Alpert published this on June 25, 2026, but it reaches this digest via Simon Willison's linkblog post on August 11, where he called it "a short read... and really good."</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Отправная точка у Альперт — простое наблюдение, вынесенное в заголовок: у естественного языка не существует преобразований без потерь. Любой рефразинг или переписывание меняет смысл текста, и если этим занимается сущность, у которой нет максимально точного представления о том, что именно автор пытался сообщить, часть информации теряется безвозвратно. Отсюда прямое следствие для ИИ-переписывания: чем меньше у модели контекста о намерении автора, тем больше искажений она вносит, даже когда результат читается гладко и грамматически безупречно.</span>
+      <span data-lang="en">Alpert's starting point is the simple observation baked into the title: there are no lossless transformations of natural-language text. Every rewrite or rephrase changes the meaning of the original, and when that's done by an entity that doesn't hold the most detailed possible model of what the author was actually trying to say, some information is lost for good. The direct consequence for AI-assisted rewriting: the less context a model has about the author's intent, the more it distorts — even when the output reads smoothly and grammatically clean.</span>
+    </p>
+
+    <h2><span data-lang="ru">Правило: вы отвечаете за каждое предложение</span><span data-lang="en">The rule: you own every sentence</span></h2>
+    <p>
+      <span data-lang="ru">Из этого наблюдения Альперт выводит короткую внутреннюю политику допустимого использования ИИ инженерами при написании документов — и формулирует её главное правило прямо: автор обязан отвечать за каждую мысль и каждое предложение в своём тексте, независимо от того, кто физически подобрал слова. Если рецензент спрашивает «что ты имел в виду вот этой строкой», ответ «извини, это написал ИИ, просто пропусти» не годится — если документ выдаётся за представление мыслей автора, а на деле не представляет их, читатель обманут, а его время потрачено впустую на попытки понять то, что автор сам до конца не продумал.</span>
+      <span data-lang="en">From this she derives a short internal policy on acceptable AI use for engineers writing documents — and states its central rule directly: you must stand behind every idea and every sentence in your document, no matter who physically chose the words. If a reviewer asks "what did you mean by this line?", the answer "oh sorry, AI wrote that, just ignore it" doesn't fly — if a document is presented as representing the author's thinking but doesn't actually do so, the reader has been misled and their time wasted trying to understand something the author never fully thought through themselves.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Практическое применение правила: ИИ можно использовать, чтобы «причесать» формулировку, сократить многословный черновик или подобрать более точное слово, — но перед отправкой автор обязан построчно перечитать результат и убедиться, что каждая фраза действительно передаёт именно то, что он хотел сказать, а не просто звучит правдоподобно. Это превращает проверку ИИ-текста в отдельный, обязательный шаг рабочего процесса, а не в формальность, которую можно пропустить, если текст «выглядит нормально».</span>
+      <span data-lang="en">The practical application: it's fine to use AI to polish a phrasing, trim a wordy draft, or find a more precise word — but before sending, the author has to re-read the result line by line and confirm each phrase actually conveys what they meant, not just that it sounds plausible. That turns checking AI-touched text into a distinct, mandatory step in the workflow, not a formality you can skip because the text "looks fine."</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение метода: правило требует дисциплины, которую не проверить автоматически</span><span data-lang="en">The method's limit: a rule that discipline alone must enforce</span></h2>
+    <p>
+      <span data-lang="ru">Слабое место самой политики Альперт признаёт открыто: правило «отвечай за каждое предложение» невозможно проверить автоматически — соответствие ему целиком держится на добросовестности автора, перечитавшего текст перед публикацией. Никакой линтер не отличит документ, который автор реально перепроверил построчно, от документа, где он бегло пролистал результат ИИ и понадеялся, что смысл сохранился. Из этого следует, что политика работает только в культуре, где такая перепроверка считается частью написания текста, а не необязательной надстройкой над «настоящей» работой — если её выпустить, письмо, полностью прогнанное через ИИ без сверки, будет неотличимо от письма, прошедшего эту сверку, пока ошибка не всплывёт в разговоре с читателем.</span>
+      <span data-lang="en">Alpert openly admits the weak spot in her own policy: "stand behind every sentence" can't be checked automatically — compliance rests entirely on the author's honesty about having actually re-read the text before publishing. No linter can tell a document the author genuinely re-checked line by line apart from one where they skimmed the AI's output and hoped the meaning held up. Which means the policy only works inside a culture that treats that re-check as part of writing, not an optional add-on to the "real" work — skip it, and AI-run text with no verification looks identical to text that got verified, right up until the gap surfaces in conversation with a reader.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

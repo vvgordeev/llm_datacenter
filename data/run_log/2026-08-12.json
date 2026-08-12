@@ -1,0 +1,179 @@
+{
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T05:25:45Z",
+  "sources": [
+    {
+      "source": "anthropic blog (www.anthropic.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch за 36ч не дал новых событий сверх уже опубликованного (watermarking/Compliance API — оба от 11.08, уже в дайджесте вчера)"
+    },
+    {
+      "source": "openai blog (openai.com/news)",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch нашёл GPT-5.6-Cyber/Daybreak (10-11.08) — опубликовано"
+    },
+    {
+      "source": "google/deepmind blog (blog.google)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch дал только DeepMind org-реструктуризацию (Hassabis/Dean) — организационная новость без функции продукта, отклонена; Gemini 3.6 Flash GA и Vids-аватары — продолжение уже опубликованных сюжетов без новизны"
+    },
+    {
+      "source": "meta ai blog (ai.meta.com/blog)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch — только обещание открыть веса Muse Spark 1.2 «в ближайшие недели» (веса ещё не вышли, часть уже опубликованного 10.08 анонса Muse Glimmer) — отклонено как не-событие"
+    },
+    {
+      "source": "xai news (x.ai/news)",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch нашёл Grok Bot (публичная бета, 11.08) — опубликовано"
+    },
+    {
+      "source": "mistral news (mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch нашёл региональный инференс/Priority Tier/хостинг GLM-5.2 (11.08) — опубликовано"
+    },
+    {
+      "source": "deepseek news (api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch — только финансовая новость (раунд на $8B) и продолжение уже опубликованного повышения цен — отклонено по правилам (финансы без продуктовой части)"
+    },
+    {
+      "source": "hn algolia api",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED на hn.algolia.com"
+    },
+    {
+      "source": "hacker news (websearch/сообщество)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "WebFetch news.ycombinator.com тоже блокирован (в отличие от прошлого прогона, где site:-поиск давал доступ к содержимому) — цитата по треду Grok Bot получена только через пересказ WebSearch, не через прямое чтение треда"
+    },
+    {
+      "source": "aggregator: smol.ai AI News",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebFetch блокирован; WebSearch не дал выпуска именно за 11-12.08"
+    },
+    {
+      "source": "aggregator: TLDR AI",
+      "status": "ok",
+      "candidates": 2,
+      "note": "через WebSearch: ChatGPT desktop для Linux (public preview) и NVIDIA NeMo Switchyard — минорные, не набрали приоритет против 4 выбранных новостей"
+    },
+    {
+      "source": "aggregator: Simon Willison linkblog",
+      "status": "ok",
+      "candidates": 2,
+      "note": "через git-clone simonwillisonblog-backup (WebFetch simonwillison.net заблокирован) — 2 блогмарка за 11.08: 'Stealing Reasoning Traces' (стал новостью) и репост Sophie Alpert про lossless-переписывание (стал экспертной статьёй)"
+    },
+    {
+      "source": "reddit r/LocalLLaMA, r/ClaudeAI, X",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch не дал конкретных датированных тредов сверх уже использованных источников (HN, вторичные статьи)"
+    },
+    {
+      "source": "расширенный проход (AI news digest / model release / coding agent update)",
+      "status": "ok",
+      "candidates": 3,
+      "note": "подтвердил отсутствие дополнительных крупных событий сверх 4 выбранных; помог найти детали Daybreak/Grok Bot/Mistral"
+    },
+    {
+      "source": "simonwillisonblog-backup (git clone, ndjson)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "обходной канал по инструкции SKILL.md; git clone отработал нормально несмотря на полную блокировку WebFetch — дал точный, непроиндексированный ранее полный текст 2 материалов (blog_blogmark) с точными датами"
+    },
+    {
+      "source": "expert: Simon Willison (simonwillison.net)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "через backup-дамп; статья Sophie Alpert (репост Уиллисона) использована с раскрытием реальной даты оригинала (25.06) в самой карточке конспекта"
+    },
+    {
+      "source": "expert: Andrej Karpathy (youtube)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "видео 'AI Warning: Don't Outsource Your Understanding' (~06.08) найдено через WebSearch; ПРЯМОЙ доступ к youtube.com (WebFetch, yt-dlp) заблокирован на уровне CONNECT (403), НО scripts/gemini_video.py отработал успешно — Gemini API скачивает видео на своей стороне, минуя блокировку прокси. Конспект построен на реальном содержимом видео."
+    },
+    {
+      "source": "expert: Latent Space",
+      "status": "empty",
+      "candidates": 0,
+      "note": "последний найденный материал — эпизод с Baseten от 03.08, за пределами 7-дневного окна; свежих статей 05-12.08 не найдено"
+    },
+    {
+      "source": "expert: AI Explained (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch не дал видео с этого канала за окно"
+    },
+    {
+      "source": "expert: Matt Wolfe (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch подтвердил активность канала, но не дал конкретного видео с проверяемым ID/датой в пределах окна — не включён во избежание ошибки атрибуции"
+    },
+    {
+      "source": "expert: Ethan Mollick (oneusefulthing.org)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch не нашёл пост за окно; последний найденный ('Choosing to Stay Human') — от 26.05, далеко за пределами недели"
+    },
+    {
+      "source": "expert: Nate Herk (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch подтвердил недавнюю активность канала, но не дал конкретного видео с ID/датой"
+    },
+    {
+      "source": "expert: Matt Pocock (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch не дал видео за окно (последнее подтверждённое — разбор 51 skill, ~5 дней назад, но без точного ID/URL)"
+    },
+    {
+      "source": "expert: расширение за пределы конфига (Gary Marcus, Nathan Lambert/interconnects, Zvi Mowshowitz)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "проверены все трое: Marcus 11.08 — только не-LLM темы (data-центры, финансирование Nvidia); Lambert — последний найденный пост от 17.06 (вне окна); Zvi — следующий выпуск ожидается позже на неделе, новых материалов нет"
+    },
+    {
+      "source": "видео-кандидат без confirmed авторства (id=n7BpBCCCOWA, про OpenAI Astra)",
+      "status": "rejected",
+      "candidates": 0,
+      "note": "gemini_video.py дал содержательный конспект, но канал/автора не удалось надёжно подтвердить через WebSearch (несколько похожих видео разных каналов) — не включён, чтобы не приписать материал неверному автору"
+    }
+  ],
+  "totals": {
+    "candidates": 15,
+    "published": 6,
+    "rejected": {
+      "организационная новость без функции продукта (DeepMind реструктуризация)": 1,
+      "не событие / обещание без релиза (Muse Spark 1.2 open weights)": 1,
+      "финансовая новость без продуктовой части (DeepSeek раунд $8B)": 1,
+      "продолжение без новизны (Gemini 3.6 Flash GA, Vids-аватары, DeepSeek price hike)": 3,
+      "не удалось подтвердить авторство/дату видео": 1,
+      "минорные платформенные новости, не прошли порог значимости (ChatGPT Linux desktop, NeMo Switchyard)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — 2 видео обработаны через generativelanguage.googleapis.com (Karpathy опубликован, Astra-видео отклонён по авторству); GEMINI_API_KEY доступен",
+    "frames": "skipped — extract_frames.py требует yt-dlp с прямым доступом к youtube.com, который заблокирован на уровне CONNECT (403 Forbidden через egress-прокси), несмотря на pip-установку yt-dlp/imageio-ffmpeg; конспект видео опубликован без кадров с пометкой в note.css .note-hint"
+  },
+  "notes": [
+    "Деградация окружения СИЛЬНЕЕ обычной: в этом прогоне WebFetch блокирован АБСОЛЮТНО на всех проверенных доменах без исключения, включая простейшие статические (en.wikipedia.org, simonwillison.net) — это выходит за рамки прежних наблюдений (обычно блокировались только блоги вендоров и агрегаторы). Более 1/3 источников имеют статус blocked — по правилу SKILL.md это отмечено явно и в финальном отчёте пользователю.",
+    "Рабочий обход: WebSearch остаётся полностью функциональным и был единственным каналом обнаружения для новостей; git clone (простой https, не через WebFetch) тоже работает — простой clone https://github.com/... прошёл без ошибок и дал точный, непарсенный WebSearch'ем текст 2 материалов Уиллисона.",
+    "Важное открытие для будущих прогонов: scripts/gemini_video.py РАБОТАЕТ даже при блокировке youtube.com для WebFetch/yt-dlp, потому что Gemini API скачивает видео на своей стороне (generativelanguage.googleapis.com), а не через наш egress-прокси. yt-dlp и extract_frames.py, наоборot, полностью зависят от прямого доступа и в этом прогоне не работали (ProxyError 403 Forbidden на CONNECT) — кадры не извлечены ни для одного видео.",
+    "expert_content содержит 2 материала вместо целевого минимума 5 (limits.min_expert_total): проверены ВСЕ 8 экспертов из конфига (Willison, Karpathy, Latent Space, AI Explained, Matt Wolfe, Mollick, Nate Herk, Matt Pocock) плюс 3 сверх конфига (Marcus, Lambert, Zvi) — почти все либо молчали в 7-дневном окне, либо WebSearch не давал видео с проверяемым ID/датой/каналом. Решено не выдумывать и не гадать атрибуцию (видео про Astra отклонено именно по этой причине), а честно опубликовать меньше материалов, чем взятый минимум.",
+    "Один из двух опубликованных новостных источников (arXiv 2608.09867, 'Stealing Reasoning Traces') обнаружен через нестандартный для новостного раздела канал — блогмарк Simon Willison — но по содержанию это событие о технике/уязвимости, затрагивающей все три ведущие модели, а не 'подход к использованию', поэтому классифицировано как новость, а не как экспертный контент."
+  ]
+}

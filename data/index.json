@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-12",
+      "news_count": 4,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "OpenAI выпускает GPT-5.6-Cyber — модель для «одобрённых» офенсивных кибератак с урезанными отказами",
+        "en": "OpenAI ships GPT-5.6-Cyber, a model with fewer refusals for vetted offensive-security work"
+      }
+    },
+    {
       "date": "2026-08-11",
       "news_count": 3,
       "expert_count": 4,

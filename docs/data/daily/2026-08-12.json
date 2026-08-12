@@ -1,0 +1,215 @@
+{
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T05:25:45Z",
+  "news": [
+    {
+      "id": "2026-08-12-openai-gpt-5-6-cyber-daybreak",
+      "cluster_id": "openai-daybreak-gpt-5-6-cyber",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "OpenAI выпускает GPT-5.6-Cyber — модель для «одобрённых» офенсивных кибератак с урезанными отказами",
+        "en": "OpenAI ships GPT-5.6-Cyber, a model with fewer refusals for vetted offensive-security work"
+      },
+      "summary": {
+        "ru": "OpenAI расширила программу Daybreak до двух уровней доступа — Blue (GPT-5.6 Sol со смягчёнными защитами для защитной работы) и Red (специализированные модели, включая новый GPT-5.6-Cyber) — и представила GPT-5.6-Cyber: версию GPT-5.6 Sol, обученную реже отказывать в задачах двойного назначения — поиске zero-day и построении цепочек эксплойтов. На внутреннем тесте модель выполняет 95% продвинутых кибербезопасных запросов против 1,5% у обычного Sol и 57,3% у предыдущей GPT-5.5-Cyber; с её помощью нашли две неизвестные ранее уязвимости в V8 (движок Chrome), которые Google закрыла как CVE-2026-15903. Доступ к Daybreak Red ограничен проверенными партнёрами (Cisco, CrowdStrike, Palo Alto Networks и др.), а с 1 сентября 2026 для всех аккаунтов Daybreak становятся обязательными аппаратные ключи безопасности.",
+        "en": "OpenAI split its Daybreak program into two access tiers — Blue (GPT-5.6 Sol with safeguards loosened for defensive work) and Red (specialized models, including the new GPT-5.6-Cyber) — and introduced GPT-5.6-Cyber, a version of GPT-5.6 Sol trained to refuse less often on dual-use tasks like zero-day discovery and exploit-chain construction. On OpenAI's internal benchmark it completes 95% of advanced cybersecurity requests versus 1.5% for standard Sol and 57.3% for its predecessor GPT-5.5-Cyber; it was used to find two previously unknown V8 (Chrome's JS engine) vulnerabilities, which Google patched as CVE-2026-15903. Daybreak Red access is limited to vetted partners (Cisco, CrowdStrike, Palo Alto Networks, and others), and hardware security keys become mandatory for all Daybreak accounts starting September 1, 2026."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает контролируемый, но по сути новый класс сценариев — «одобрённый» ИИ для офенсивной кибербезопасности со специально урезанными отказами — и это уже принесло реальные находки (V8 zero-day), но доступ жёстко ограничен проверенными партнёрами, а не всеми пользователями LLM, поэтому это крупное, а не парадигмальное событие.",
+        "en": "Opens a controlled but genuinely new class of scenarios — an 'approved' AI for offensive cybersecurity with refusals specifically dialed down — and it has already produced real findings (a V8 zero-day), but access stays tightly gated to vetted partners rather than open to ordinary LLM users, so this is major rather than paradigm-shifting."
+      },
+      "source_url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+      "opinions": [
+        {
+          "author": "Jared Atkinson, CTO SpecterOps",
+          "stance": "positive",
+          "quote": {
+            "ru": "Модель ощутимо улучшает работу наших специалистов по поиску уязвимостей — с её помощью мы закрыли за день задачу, которая до этого неделями не давалась предыдущим моделям.",
+            "en": "The model is materially improving our specialist vulnerability-research workflows — it completed in under a day work that previous models had failed to resolve after weeks of intermittent effort."
+          },
+          "url": "https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "SpecterOps использует GPT-5.6-Cyber в специализированных workflow по поиску уязвимостей, где модель точнее прежних версий оценивает реальные ограничения эксплойта.",
+            "en": "SpecterOps uses GPT-5.6-Cyber in specialist vulnerability-research workflows, where it judges real-world exploit constraints more accurately than earlier models."
+          },
+          "url": "https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/"
+        },
+        {
+          "text": {
+            "ru": "OpenAI применила модель для поиска уязвимостей в собственной инфраструктуре и нашла две неизвестные ранее дыры в V8 (движок JavaScript в Chrome), закрытые Google как CVE-2026-15903.",
+            "en": "OpenAI used the model to hunt for vulnerabilities and found two previously unknown flaws in V8, Chrome's JavaScript engine, patched by Google as CVE-2026-15903."
+          },
+          "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-12-stealing-reasoning-traces-llm-apis",
+      "cluster_id": "security-reasoning-trace-leak",
+      "models": [
+        "openai",
+        "anthropic",
+        "google"
+      ],
+      "title": {
+        "ru": "Исследователи научились извлекать скрытые цепочки рассуждений из зашифрованных ответов API OpenAI, Anthropic и Google",
+        "en": "Researchers extract hidden chain-of-thought reasoning from OpenAI, Anthropic and Google's encrypted API blocks"
+      },
+      "summary": {
+        "ru": "Команда из ELLIS Institute Tübingen и Max Planck (препринт «Stealing Reasoning Traces from Proprietary LLM APIs», arXiv 2608.09867, 10 августа) показала: OpenAI, Anthropic и Google возвращают клиенту зашифрованные блоки цепочки рассуждений, которые можно переиспользовать между сессиями, пользователями и даже моделями одной линейки. Авторы брали зашифрованный блок рассуждений сильной модели и «кормили» его более слабой и менее защищённой модели того же провайдера с просьбой расшифровать — та послушно печатала исходные рассуждения в открытом виде (Claude Haiku 4.5 расшифровывался легче всех). Из публичных логов таким способом извлекли 315 320 блоков рассуждений, а в них — 367 фрагментов персональных данных и 182 реальных учётных данных, доступных любому вызывающему API. Все три вендора подтвердили получение отчёта, и после этого воспроизвести атаку не удаётся — они привязали блоки к конкретной модели и сессии и провели ротацию ключей.",
+        "en": "A team from the ELLIS Institute Tübingen and Max Planck (preprint \"Stealing Reasoning Traces from Proprietary LLM APIs,\" arXiv 2608.09867, published August 10) showed that OpenAI, Anthropic and Google all return encrypted chain-of-thought blocks to API clients that turn out to be replayable across sessions, users, and even sibling models. The researchers took a strong model's encrypted reasoning block and fed it to a weaker, less-safeguarded model from the same provider, asking it to decode the block — which it obligingly printed back in plaintext (Claude Haiku 4.5 was the easiest to crack). Scanning public logs this way surfaced 315,320 reasoning blocks, containing 367 PII fragments and 182 live credentials that any API caller could already retrieve. All three vendors acknowledged the report, and the original cross-model replay no longer reproduces after they bound blocks to a specific model/session and rotated keys."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Раскрывает архитектурный изъян, общий для трёх ведущих провайдеров API рассуждающих моделей, а не баг одного вендора — впервые показано, что «скрытые» цепочки размышлений на практике не были ни приватными, ни защищёнными для клиентов, использующих reasoning API; уязвимость уже устранена, поэтому речь о крупном, а не о продолжающемся системном риске.",
+        "en": "Exposes an architectural flaw shared across three leading reasoning-model API providers rather than a single vendor's bug — the first demonstration that 'hidden' chain-of-thought was in practice neither private nor secure for clients using reasoning APIs; the flaw is already fixed, so this is major rather than an ongoing systemic risk."
+      },
+      "source_url": "https://arxiv.org/abs/2608.09867",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Модели относятся к собственным цепочкам рассуждений как к чему-то неприкосновенному и намного охотнее выполняют инструкции, которые каким-то образом попадают именно в эти блоки.",
+            "en": "Models appear to treat their own reasoning traces as sacrosanct, and are much more likely to follow instructions that somehow make it into those chunks."
+          },
+          "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Авторы показали и обратный вектор атаки: спрятать в зашифрованном блоке рассуждений инструкцию на утечку данных и передать её другой модели — та выполнит её охотнее, чем прямой запрос той же инструкции.",
+            "en": "The authors also demonstrated the reverse vector: hiding a data-exfiltration instruction inside an encrypted reasoning block and feeding it to another model, which follows it more readily than the same instruction sent as a direct prompt."
+          },
+          "url": "https://stolen-thoughts.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-12-xai-grok-bot-persistent-agent",
+      "cluster_id": "xai-grok-bot",
+      "models": [
+        "xai"
+      ],
+      "title": {
+        "ru": "xAI выпускает Grok Bot — постоянно работающего облачного ИИ-«коллегу», управляющего приложениями за вас",
+        "en": "xAI launches Grok Bot, an always-on cloud AI 'coworker' that operates your apps for you"
+      },
+      "summary": {
+        "ru": "11 августа xAI и Cursor открыли публичную бету Grok Bot — агента, которому выделяется собственный компьютер в облаке: он входит в веб-приложения, CRM, почту и сайты без API или MCP и работает над задачей, даже когда пользователь отошёл, а затем возвращается с готовым результатом. Bot умеет один раз «посмотреть», как пользователь выполняет задачу вручную, сохранить это как рутину и повторять её самостоятельно. Доступен на macOS, Windows, Linux и iOS (Android — скоро) для подписчиков SuperGrok Heavy и Cursor Ultra/Teams Premium ($200/мес индивидуально, $120/место для команд); для крупных организаций есть лист ожидания.",
+        "en": "On August 11, xAI and Cursor opened a public beta of Grok Bot, an agent that gets its own dedicated computer in the cloud: it signs into web apps, CRMs, inboxes and websites with no API or MCP required, keeps working on a task even after the user steps away, and comes back with the job done. A Bot can watch a user perform a task once, save it as a routine, and repeat it unattended afterward. It ships for macOS, Windows, Linux and iOS (Android coming soon) for SuperGrok Heavy and Cursor Ultra/Teams Premium subscribers ($200/month individually, $120/seat for teams), with a waitlist for larger organizations."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Продолжает уже начатый переход от чат-бота к постоянно работающему агенту, который управляет обычными сайтами и приложениями через интерфейс, а не через API, — это расширяет применимость таких агентов (Claude Cowork, ChatGPT-агенты) на любой сервис без готовой интеграции, но сам подход не нов, поэтому это заметное, а не парадигмальное изменение.",
+        "en": "Continues an already-underway shift from chatbot to always-on agent that operates ordinary websites and apps through their interface rather than an API — widening what such agents (Claude Cowork, ChatGPT agents) can reach to any service with no ready-made integration, but the approach itself isn't new, so this is notable rather than paradigm-shifting."
+      },
+      "source_url": "https://x.ai/news/introducing-grok-bot",
+      "opinions": [
+        {
+          "author": "Hacker News, тред «Grok Bot»",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Идея интересная, но не уверен, что многие компании готовы дать SpaceXAI доступ ко всем своим файлам и данным.",
+            "en": "This is an interesting idea although I'm not sure how many companies are comfortable with giving SpaceXAI access to all your files and data."
+          },
+          "url": "https://news.ycombinator.com/item?id=49261532"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Ранние пользователи поручают Bot переговоры с поставщиками, поддержку клиентов e-commerce и постоянное обновление CRM.",
+            "en": "Early users are putting Bots on vendor negotiations, e-commerce customer support, and continuously updating CRM records."
+          },
+          "url": "https://www.unite.ai/xai-launches-grok-bot-always-on-ai-teammates-with-their-own-cloud-computers/"
+        },
+        {
+          "text": {
+            "ru": "Сотрудники xAI используют Bot для обработки счетов, приходящих по почте, и для воспроизведения багов, о которых сообщают тестировщики.",
+            "en": "xAI employees use Bots to process invoices arriving by email and to reproduce bugs reported by testers."
+          },
+          "url": "https://venturebeat.com/orchestration/spacexais-grok-bot-turns-agents-into-persistent-digital-coworkers-that-can-operate-your-apps-for-120-per-month"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-12-mistral-regional-inference-sovereignty",
+      "cluster_id": "mistral-regional-inference-sovereignty",
+      "models": [
+        "mistral"
+      ],
+      "title": {
+        "ru": "Mistral запускает региональный инференс, платный SLA-уровень Priority Tier и начинает хостить сторонние открытые модели",
+        "en": "Mistral launches regional inference, a paid Priority Tier SLA, and starts hosting third-party open models"
+      },
+      "summary": {
+        "ru": "11 августа Mistral объявила о трёхчастном расширении инфраструктуры: региональные точки инференса, позволяющие клиентам выбирать, где обрабатываются их запросы — в Европе или США; публичное превью платного Priority Tier с гарантированным SLA по времени отклика и выделенными лимитами для критичных нагрузок; и коалицию европейских компаний, которые многолетними контрактами на вычисления профинансируют 200 МВт инфраструктуры к концу 2027 года и 1 ГВт — к 2030-му. Отдельно Mistral начинает хостить сторонние открытые модели на своей платформе — первой стала GLM-5.2 от китайской Z.ai (753B MoE, ~40B активных параметров, контекст 1M токенов, лицензия MIT) без модификаций Mistral, на той же региональной и SLA-инфраструктуре.",
+        "en": "On August 11, Mistral announced a three-part infrastructure expansion: regional inference endpoints letting customers choose whether requests are processed in Europe or the US; a public preview of a paid Priority Tier with a guaranteed response-time SLA and dedicated limits for mission-critical workloads; and a coalition of European enterprises whose multi-year compute commitments will fund 200MW of infrastructure by the end of 2027 and a full gigawatt by 2030. Separately, Mistral begins hosting third-party open models on its own platform, starting with Z.ai's GLM-5.2 (a 753B MoE model, ~40B active parameters, 1M-token context, MIT license) served unmodified, on the same regional and SLA infrastructure."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Значимый шаг для суверенной ИИ-инфраструктуры и выбора моделей в Европе, но это в первую очередь корпоративная/инфраструктурная новость об условиях обслуживания, а не новый способ использования самих LLM — подход к работе с моделями не меняется.",
+        "en": "A meaningful step for European AI sovereignty and model choice, but it's primarily a corporate/infrastructure story about service terms rather than a new way of using LLMs themselves — the underlying approach to working with models doesn't change."
+      },
+      "source_url": "https://mistral.ai/news/regional-inference-open-models-new-compute/",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Регулируемые европейские организации теперь могут держать инференс Mistral физически в ЕС, не отказываясь при этом от доступа к моделям, размещённым в США.",
+            "en": "Regulated European organizations can now keep Mistral inference physically inside the EU without giving up access to US-hosted models."
+          },
+          "url": "https://mistral.ai/news/regional-inference-open-models-new-compute/"
+        },
+        {
+          "text": {
+            "ru": "Компании, которым нужна китайская открытая модель GLM-5.2, но не хочется самостоятельно поднимать инфраструктуру под 753B MoE, могут получить её через Mistral с тем же SLA, что и у собственных моделей вендора.",
+            "en": "Companies that want the Chinese open model GLM-5.2 but don't want to stand up their own infrastructure for a 753B MoE can get it through Mistral under the same SLA as Mistral's own models."
+          },
+          "url": "https://docs.mistral.ai/models/zai-glm-5-2"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-12-karpathy-outsource-understanding",
+      "type": "video",
+      "author": "Andrej Karpathy",
+      "title": {
+        "ru": "Карпаты: мышление можно передать на аутсорс, понимание — нельзя",
+        "en": "Karpathy: you can outsource your thinking, but not your understanding"
+      },
+      "url": "https://www.youtube.com/watch?v=73UdQGgF1q8",
+      "summary": {
+        "ru": "Карпаты объясняет, почему ИИ одновременно строит целые приложения и совершает нелепые ошибки там, где не хватает простого контекста или здравого суждения, — и что с этим делать разработчику: делегировать легко проверяемые задачи целиком, а суждение оставлять за собой.",
+        "en": "Karpathy explains why AI can build entire applications yet still make absurd mistakes wherever plain context or judgment is missing — and what that means for how developers should work with it: delegate easily-checkable tasks wholesale, keep judgment for yourself."
+      },
+      "note_page": "notes/videos/karpathy-outsource-understanding.html"
+    },
+    {
+      "id": "2026-08-12-alpert-lossless-transformations",
+      "type": "article",
+      "author": "Sophie Alpert",
+      "title": {
+        "ru": "Софи Альперт: без потерь текст переписать нельзя — политика допустимого использования ИИ в письме",
+        "en": "Sophie Alpert: there are no lossless rewrites — a policy for acceptable AI use in writing"
+      },
+      "url": "https://sophiebits.com/2026/06/25/there-are-no-lossless-transformations-of-natural-language-text",
+      "summary": {
+        "ru": "Софи Альперт формулирует короткую внутреннюю политику допустимого использования ИИ в письменных текстах инженеров с центральным правилом: автор обязан отвечать за каждую мысль и каждое предложение в своём документе, кто бы физически ни подобрал слова.",
+        "en": "Sophie Alpert lays out a short internal policy on acceptable AI use in engineers' writing, anchored by one rule: the author must stand behind every idea and sentence in their document, no matter who physically chose the words."
+      },
+      "note_page": "notes/articles/alpert-lossless-transformations.html"
+    }
+  ]
+}

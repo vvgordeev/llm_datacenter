@@ -257,7 +257,13 @@
     "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/": "2026-08-11",
     "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/": "2026-08-11",
     "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/": "2026-08-11",
-    "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11"
+    "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11",
+    "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/": "2026-08-12",
+    "https://arxiv.org/abs/2608.09867": "2026-08-12",
+    "https://x.ai/news/introducing-grok-bot": "2026-08-12",
+    "https://mistral.ai/news/regional-inference-open-models-new-compute/": "2026-08-12",
+    "notes/videos/karpathy-outsource-understanding.html": "2026-08-12",
+    "notes/articles/alpert-lossless-transformations.html": "2026-08-12"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -687,6 +693,34 @@
       "summary": {
         "ru": "10 августа OpenAI включила в ChatGPT бронирование столиков через партнёрство с OpenTable (доступно по всему миру), Resy (США) и Yelp (США и Канада, плюс лист ожидания): пользователь описывает город, время, число гостей и предпочтения по кухне или атмосфере, а ChatGPT показывает реально доступные сло",
         "en": "On August 10, OpenAI added restaurant booking to ChatGPT through partnerships with OpenTable (available worldwide), Resy (US), and Yelp (US and Canada, plus waitlists): a user describes a city, time, party size, and cuisine or atmosphere preferences, and ChatGPT surfaces real available slots and com"
+      }
+    },
+    "openai-daybreak-gpt-5-6-cyber": {
+      "last_date": "2026-08-12",
+      "summary": {
+        "ru": "OpenAI расширяет Daybreak до тиров Blue/Red и выпускает GPT-5.6-Cyber — модель с урезанными отказами для одобрённой офенсивной кибербезопасности, уже нашедшую zero-day в V8",
+        "en": "OpenAI expands Daybreak into Blue/Red tiers and ships GPT-5.6-Cyber, a fewer-refusals model for vetted offensive cybersecurity that already found a V8 zero-day"
+      }
+    },
+    "security-reasoning-trace-leak": {
+      "last_date": "2026-08-12",
+      "summary": {
+        "ru": "Исследователи ELLIS/Max Planck извлекают открытые цепочки рассуждений из зашифрованных блоков API OpenAI/Anthropic/Google через replay в более слабые модели; все три вендора закрыли уязвимость",
+        "en": "ELLIS/Max Planck researchers extract plaintext reasoning traces from OpenAI/Anthropic/Google's encrypted API blocks via cross-model replay into weaker siblings; all three vendors have patched it"
+      }
+    },
+    "xai-grok-bot": {
+      "last_date": "2026-08-12",
+      "summary": {
+        "ru": "xAI и Cursor запускают публичную бету Grok Bot — постоянно работающего облачного агента, управляющего сайтами и приложениями без API/MCP",
+        "en": "xAI and Cursor launch a public beta of Grok Bot, an always-on cloud agent that operates websites and apps with no API/MCP required"
+      }
+    },
+    "mistral-regional-inference-sovereignty": {
+      "last_date": "2026-08-12",
+      "summary": {
+        "ru": "Mistral запускает региональный инференс (ЕС/США), платный Priority Tier SLA и начинает хостить сторонние открытые модели (GLM-5.2 от Z.ai)",
+        "en": "Mistral launches regional inference (EU/US), a paid Priority Tier SLA, and starts hosting third-party open models (Z.ai's GLM-5.2)"
       }
     }
   }

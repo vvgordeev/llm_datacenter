@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: Карпаты про аутсорс мышления — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Andrej Karpathy · 2026-08-06 · 09:09</span>
+      <span data-lang="en">Video digest · Andrej Karpathy · 2026-08-06 · 09:09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Карпаты: мышление можно передать на аутсорс, понимание — нельзя</span>
+      <span data-lang="en">Karpathy: you can outsource your thinking, but not your understanding</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=73UdQGgF1q8" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Карпаты начинает с личного наблюдения <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=8">[00:08]</a>: несмотря на то что он сам стоял у истоков современного глубокого обучения, ощущение отставания как программиста не проходит — код, который раньше писался руками, теперь всё чаще получается описать на естественном языке, а модель берёт на себя исполнение и самокоррекцию. Это и есть переход к «Software 3.0» <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=119">[01:59]</a>: программа не столько пишется, сколько формулируется. В качестве иллюстрации он приводит собственный пример MenuGen — небольшое приложение, которое сегодня можно целиком заменить связкой промптов и агентных вызовов, без единой строки написанного человеком кода <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=166">[02:46]</a>.</span>
+      <span data-lang="en">Karpathy opens with a personal observation <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=8">[00:08]</a>: despite having helped start modern deep learning, the feeling of falling behind as a programmer never really goes away — code that used to be typed by hand can increasingly be described in natural language instead, with the model handling execution and self-correction. That's what he means by "Software 3.0" <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=119">[01:59]</a>: a program gets specified rather than written. As an illustration he brings up his own MenuGen app — a small tool that today could be entirely replaced by a chain of prompts and agent calls, with not a single line of human-written code <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=166">[02:46]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Неровный» интеллект и почему проверяемость решает всё</span><span data-lang="en">"Jagged" intelligence, and why verifiability decides everything</span></h2>
+    <p>
+      <span data-lang="ru">Дальше — центральная мысль видео: интеллект современных моделей «неровный» <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=249">[04:09]</a> — модель способна выдать блестящее по глубине рассуждение и в следующей же реплике совершить, по формулировке Карпаты, «невероятно глупую ошибку» там, где человеку хватило бы элементарного контекста или здравого смысла. Причина неровности — не случайность, а то, чему модель может научиться быстрее: задачи с чётким, легко проверяемым правильным ответом (код компилируется и проходит тесты, число сходится) прогрессируют куда быстрее задач, где ответ зависит от вкуса, контекста конкретной ситуации или суждения — а именно такие задачи и труднее всего формализовать в тренировочный сигнал <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=335">[05:35]</a>. Практический вывод для того, кто выбирает, на какую задачу ставить агента: чем легче автоматически проверить результат, тем безопаснее делегировать её целиком; чем больше в задаче именно суждения, тем выше цена ошибки при делегировании.</span>
+      <span data-lang="en">Then the video's central idea: modern models have "jagged" intelligence <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=249">[04:09]</a> — a model can produce a brilliant piece of reasoning and, in the very next reply, make what Karpathy calls an "unbelievably stupid mistake" in a spot where a human would only have needed basic context or common sense. The unevenness isn't random: it tracks what a model can learn fastest. Tasks with a clear, easily checkable correct answer (code compiles and passes tests, a number checks out) improve far faster than tasks where the answer depends on taste, situational context, or judgment — precisely the kind of task that's hardest to turn into a training signal <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=335">[05:35]</a>. The practical takeaway for deciding what to hand an agent: the more automatically checkable the outcome, the safer it is to delegate entirely; the more a task hinges on judgment, the higher the cost of delegating it away.</span>
+    </p>
+
+    <h2><span data-lang="ru">От вайб-кодинга к агентной инженерии</span><span data-lang="en">From vibe coding to agentic engineering</span></h2>
+    <p>
+      <span data-lang="ru">Отсюда следует смена роли программиста <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=373">[06:13]</a>: «вайб-кодинг» — состояние, в котором достаточно убедиться, что решение просто работает, — уступает место «агентной инженерии»: нужно осознанно задавать вопросы о безопасности, граничных случаях и масштабируемости решения, которые модель сама не поднимет, если её явно не заставить. Роль смещается вверх по стеку абстракции <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=460">[07:40]</a> — от написания кода к направлению и проверке того, что написал агент.</span>
+      <span data-lang="en">This implies a shift in the programmer's role <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=373">[06:13]</a>: "vibe coding" — where it's enough to confirm a solution just works — gives way to "agentic engineering," where someone has to deliberately raise questions about security, edge cases and scalability that a model won't surface on its own unless explicitly pushed to. The role moves up the abstraction stack <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=460">[07:40]</a> — from writing code to directing and checking what an agent wrote.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Карпаты закрывает видео формулировкой, которая и дала ему заголовок: генерировать ответы становится дёшево, но умение понять, правильный ли это ответ и уместен ли он именно здесь, становится только дороже <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=508">[08:28]</a>. «Вы можете передать своё мышление на аутсорс, но не можете передать своё понимание». Ограничение, которое он тут же признаёт: этот совет не говорит, КАК быстро нарастить это понимание, если человек начинает с нуля в новой для себя области, — он лишь называет понимание тем ресурсом, который в эпоху дешёвой генерации текста становится дефицитным.</span>
+      <span data-lang="en">Karpathy closes with the line that gives the video its title: producing answers gets cheap, but knowing whether an answer is correct and appropriate for this specific situation only gets more valuable <a class="ts" href="https://www.youtube.com/watch?v=73UdQGgF1q8&t=508">[08:28]</a>. "You can outsource your thinking, but you can't outsource your understanding." The limitation he immediately concedes: the line doesn't say HOW to build that understanding quickly if someone is starting from zero in an unfamiliar area — it only names understanding as the resource that gets scarce once text generation itself is cheap.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
