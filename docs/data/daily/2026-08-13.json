@@ -1,0 +1,281 @@
+{
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T05:35:00Z",
+  "news": [
+    {
+      "id": "2026-08-13-litellm-supply-chain-breach",
+      "cluster_id": "litellm-supply-chain-breach",
+      "models": [],
+      "title": {
+        "ru": "Крупнейшая в 2026 году атака на цепочку поставок ИИ-инфраструктуры: скомпрометированный LiteLLM затронул 2500+ компаний",
+        "en": "The largest AI supply-chain breach of 2026: a compromised LiteLLM release hit 2,500+ companies"
+      },
+      "summary": {
+        "ru": "11 августа компания CloudSEK опубликовала анализ мартовской атаки на LiteLLM — популярный опенсорсный шлюз/прокси для вызова API разных LLM-провайдеров из единого интерфейса. 24 марта злоумышленники (группа TeamPCP) через скомпрометированный сканер безопасности Trivy в CI/CD-пайплайне LiteLLM опубликовали на PyPI вредоносные версии 1.82.7 и 1.82.8 — они провисели всего около 40 минут, но с многоступенчатым payload, крадущим API-ключи, облачные учётные данные, SSH-ключи и Kubernetes-токены. CloudSEK реконструировала около 434 000 потенциально затронутых CI/CD-пайплайнов и насчитала 2500+ организаций с высокой степенью уверенности — включая NVIDIA, Samsung, Cisco и Siemens. После инцидента LiteLLM наняла внешних аудиторов Veria Labs, перешла на scrypt для хранения паролей и запустила программу bug bounty.",
+        "en": "On August 11, security firm CloudSEK published its analysis of a March supply-chain attack on LiteLLM, a popular open-source gateway/proxy for calling multiple LLM providers' APIs through one interface. On March 24, threat group TeamPCP exploited a compromised Trivy security scanner inside LiteLLM's CI/CD pipeline to publish malicious PyPI releases 1.82.7 and 1.82.8 — live for only about 40 minutes but carrying a multi-stage payload that stole API keys, cloud credentials, SSH keys, and Kubernetes tokens. CloudSEK reconstructed roughly 434,000 potentially affected CI/CD pipelines and identified 2,500+ organizations with high confidence, including NVIDIA, Samsung, Cisco, and Siemens. In response, LiteLLM brought in external auditors Veria Labs, moved password storage to scrypt, and launched a bug-bounty program."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Показывает системный риск нового рода: скомпрометирован не сам LLM, а популярный инфраструктурный слой, через который тысячи компаний вызывают модели разных вендоров, — единая точка отказа для учётных данных всей ИИ-экосистемы; уязвимость уже закрыта, и атака не создаёт нового способа использования LLM, поэтому это крупное, а не парадигмальное событие.",
+        "en": "Demonstrates a new kind of systemic risk: not an LLM itself but the popular infrastructure layer through which thousands of companies call multiple vendors' models was compromised — a single point of failure for credentials across the whole AI ecosystem; the flaw is already patched and the incident doesn't introduce a new way of using LLMs, so this is major rather than paradigm-shifting."
+      },
+      "source_url": "https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines",
+      "opinions": [
+        {
+          "author": "CloudSEK",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Инцидент был не просто атакой на цепочку поставок ПО, которая случайно затронула ИИ-продукт. Он показал, что компрометация контрольной точки ИИ-инфраструктуры способна раскрыть личности и системы вокруг неё. Будущие атаки, скорее всего, будут целиться именно в ИИ-слой — потому что он связан со всем остальным.",
+            "en": "The incident was not only a software supply chain breach that happened to involve an AI product. It demonstrated that compromising an AI control point can expose the identities and systems around it. Future attacks are likely to target the AI layer precisely because it is connected to everything else."
+          },
+          "url": "https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines"
+        },
+        {
+          "author": "CodiLime (CTO perspective)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Более глубокая проблема — это проблема инженерной дисциплины, в экосистеме, которая движется слишком быстро, чтобы проверять, что она вообще запускает.",
+            "en": "one of engineering discipline, in an ecosystem that is moving too fast to check what it's running."
+          },
+          "url": "https://codilime.com/blog/litellm-breach-cto-perspective/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Компаниям, использовавшим LiteLLM в марте 2026 года, рекомендовано провести аудит использования учётных данных и полностью ротировать секреты — независимо от того, обнаружены ли признаки компрометации.",
+            "en": "Companies that ran LiteLLM in March 2026 are advised to audit credential usage and fully rotate secrets regardless of whether signs of compromise were detected."
+          },
+          "url": "https://www.securityweek.com/over-2500-organizations-impacted-by-litellm-supply-chain-attack/"
+        },
+        {
+          "text": {
+            "ru": "Сам проект LiteLLM в ответ на инцидент нанял внешних аудиторов Veria Labs, перевёл хранение паролей на scrypt со случайной солью и запустил программу bug bounty за уязвимости класса supply-chain и unauthenticated proxy access.",
+            "en": "In response, the LiteLLM project itself brought in external auditors Veria Labs, moved password storage to scrypt with random salts, and launched a bug-bounty program covering supply-chain and unauthenticated-proxy-access vulnerabilities."
+          },
+          "url": "https://docs.litellm.ai/blog/security-hardening-april-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-13-google-pixel-11-gemini-agentic-actions",
+      "cluster_id": "google-pixel-11-gemini-agentic-actions",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "ru": "Google встраивает агентную Gemini в Pixel 11: заказ еды, такси и звонки в заведения без интеграций",
+        "en": "Google bakes agentic Gemini into the Pixel 11: ordering food, booking rides, and calling businesses with no app integrations"
+      },
+      "summary": {
+        "ru": "12 августа на презентации Made by Google компания представила линейку Pixel 11 с самой агентной версией Gemini на сегодняшний день. Gemini Intelligence распознаёт содержимое экрана в любом приложении — включая банковские, мессенджеры и магазины, — без встроенной интеграции с Gemini, и может заказать продукты, вызвать такси или кофе, а также самостоятельно позвонить в заведение, чтобы забронировать столик или записаться на приём. Перед выполнением любого действия система требует подтверждающего нажатия, пользователь может в любой момент перехватить или остановить задачу и посмотреть транскрипт звонка, сделанного ИИ. Функция пока доступна только пользователям в США.",
+        "en": "At its August 12 Made by Google event, the company unveiled the Pixel 11 lineup with its most agentic version of Gemini yet. Gemini Intelligence can read the on-screen content of any app — including banking apps, messaging, and shopping — with no built-in Gemini integration required, and can order groceries, book a ride or coffee, or call a business itself to make a reservation or appointment. The system requires a confirmation tap before any action executes, users can take over or stop a task at any point, and they can review the transcript of any AI-placed call. The feature is currently available to US-based users only."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Переносит уже начатый другими (бронирования в ChatGPT, Grok Bot) подход «агент управляет обычными приложениями через интерфейс, а не через API» на дефолтный ассистент флагманского массового устройства — резко расширяет число обычных пользователей, для которых это станет повседневной функцией, а не нишевым инструментом для разработчиков; сам подход не Google придумала первой, поэтому это крупное, а не парадигмальное событие.",
+        "en": "Brings the 'agent operates ordinary apps through the interface rather than an API' approach — already underway via ChatGPT's booking feature and Grok Bot — to the default assistant on a mass-market flagship device, sharply widening the number of everyday users for whom this becomes a routine feature rather than a developer-niche tool; the approach itself wasn't pioneered by Google, so this is major rather than paradigm-shifting."
+      },
+      "source_url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/",
+      "opinions": [
+        {
+          "author": "Rick Osterloh, Google devices chief (CNBC)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Думаю, очевидно, что Pixel и iPhone двигаются в очень разных направлениях.",
+            "en": "I think obviously Pixel and iPhone are going in very different directions."
+          },
+          "url": "https://www.cnbc.com/2026/08/12/google-pixel-11-gemini-ai-phone-apple.html"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Ранний доступ ограничен пользователями в США: Gemini может забронировать столик в ресторане или записать на приём, самостоятельно позвонив в заведение и озвучив запрос вместо человека.",
+            "en": "Early access is limited to US-based users: Gemini can book a restaurant table or an appointment by calling the business itself and voicing the request instead of the human."
+          },
+          "url": "https://www.techtimes.com/articles/324165/20260812/google-pixel-11-launches-gemini-ai-books-rides-orders-groceries-now.htm"
+        },
+        {
+          "text": {
+            "ru": "Gemini Intelligence на Pixel 11 обрабатывает многошаговые задачи «через любимые приложения» — например, Google Сообщения сами подтягивают детали рейса, карточки Google Maps и напоминания календаря без ручного переключения между приложениями.",
+            "en": "Gemini Intelligence on the Pixel 11 handles multi-step tasks 'across your favorite apps' — for example, Google Messages automatically surfaces flight details, Google Maps listings, and Calendar prompts without manually switching between apps."
+          },
+          "url": "https://9to5google.com/2026/08/12/made-by-google-2026-announcements/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-13-xai-grok-4-6",
+      "cluster_id": "xai-grok-4-6",
+      "models": [
+        "xai"
+      ],
+      "title": {
+        "ru": "xAI выпускает Grok 4.6 — флагманскую модель для длительных агентных задач",
+        "en": "xAI ships Grok 4.6, a flagship model built for long-running agent tasks"
+      },
+      "summary": {
+        "ru": "12 августа xAI выпустила Grok 4.6 — обновление Grok 4.5, сфокусированное на устойчивости в длинных агентных сессиях: модель стала чаще делать паузы, чтобы проверить, действительно ли предыдущий шаг сработал, прежде чем продолжать. Модель доступна сразу в Cursor, собственном Grok Build и по API по прежней цене $2/$6 за млн входных/выходных токенов. На индексе Artificial Analysis Intelligence Grok 4.6 набирает 61 балл, повторяя результат GPT-5.6 Sol и уступая только Claude Fable 5 Max (62).",
+        "en": "On August 12, xAI shipped Grok 4.6, an update to Grok 4.5 focused on staying reliable across long agentic sessions: the model now pauses more often to check whether the previous step actually held up before continuing. It's available immediately in Cursor, xAI's own Grok Build, and the API at the same $2/$6 per million input/output tokens as 4.5. On the Artificial Analysis Intelligence Index it scores 61, tying GPT-5.6 Sol and trailing only Claude Fable 5 Max (62)."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметное обновление флагманской модели для агентного кодинга и работы со знаниями, повторяющее уровень GPT-5.6 Sol, — но подход (долгие агентные сессии с самопроверкой) продолжает уже устоявшийся тренд, а не открывает новый класс сценариев.",
+        "en": "A solid flagship refresh for agentic coding and knowledge work that matches GPT-5.6 Sol, but the approach — long agent sessions with self-checking — continues an already-established trend rather than opening a new class of scenarios."
+      },
+      "source_url": "https://x.ai/news/grok-4-6",
+      "opinions": [
+        {
+          "author": "Michael Truell, CEO Cursor (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Рады выпустить Grok 4.6. С каждым релизом Grok становится всё более способным цифровым коллегой. 4.6 заметно лучше справляется со сложными задачами и работой со знаниями — сочетает интеллект уровня Opus с низкой стоимостью и высокой скоростью.",
+            "en": "Excited to release Grok 4.6. With each release, Grok is becoming a more capable digital colleague. 4.6 is significantly better at difficult tasks and knowledge work. It combines Opus-class intelligence and polish with very low cost and high speed."
+          },
+          "url": "https://x.com/mntruell/status/2087565040677454327"
+        },
+        {
+          "author": "tobi lutke, CEO Shopify (X)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Понятия не имею почему, но Grok-4.6 просто впал в панику при рутинных задачах по обслуживанию, увидев мой маленький по номеру аккаунт на GitHub.",
+            "en": "I have no idea why but Grok-4.6 just totally freaked out doing some maintenance tasks when it saw my low github id."
+          },
+          "url": "https://x.com/tobi/status/2087704273438052632"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Cursor интегрировала Grok 4.6 как один из вариантов модели прямо со дня релиза — с двойным лимитом использования в первую неделю — для сборки продукта с нуля и рефакторинга по кодовой базе.",
+            "en": "Cursor integrated Grok 4.6 as a model option from day one — with double included usage for the first week — for building a product from scratch and refactoring across a codebase."
+          },
+          "url": "https://cursor.com/blog/grok-4-6"
+        },
+        {
+          "text": {
+            "ru": "Разработчик Эрик Закариассон опубликовал разбор своих находок и советов по использованию модели после нескольких дней тестирования на реальных задачах.",
+            "en": "Developer Eric Zakariasson published a write-up of his findings and tips after using the model on real work for several days."
+          },
+          "url": "https://x.com/ericzakariasson/status/2087566447178547494"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-13-deepseek-v4-pro-0813",
+      "cluster_id": "deepseek-v4-pro-0813",
+      "models": [
+        "deepseek"
+      ],
+      "title": {
+        "ru": "DeepSeek тихо выкатывает V4 Pro 0813 — большой скачок в агентных бенчмарках без единого анонса",
+        "en": "DeepSeek quietly ships V4 Pro 0813 — a big jump on agentic benchmarks with zero announcement"
+      },
+      "summary": {
+        "ru": "12 августа DeepSeek обновила бэкенд эндпоинта deepseek-v4-pro до сборки V4-Pro-0813 — без блог-поста, твита или записи в changelog: единственным подтверждением стала смена номера версии в таблице цен API. Сама модель — MoE на 1,6 трлн параметров (~49 млрд активных) с контекстным окном 1M токенов — не изменила ни цену ($0,435/$0,87 за млн входных/выходных токенов), ни имя эндпоинта, ни описание на сайте DeepSeek; весов 0813 на Hugging Face пока нет. При этом, по данным сторонних бенчмарков, новая сборка резко прибавила именно в агентных задачах по сравнению с апрельским V4 Pro Preview — на уровне, близком к Claude Fable 5, при на порядки более низкой цене.",
+        "en": "On August 12, DeepSeek quietly swapped the backend behind its deepseek-v4-pro endpoint for a new V4-Pro-0813 build — with no blog post, tweet, or changelog entry; the only confirmation was a version-number change in the API's pricing table. The model itself — a 1.6T-parameter MoE with ~49B active parameters and a 1M-token context window — kept the same price ($0.435/$0.87 per million input/output tokens), the same endpoint name, and an unchanged description on DeepSeek's own site; no -0813 weights have appeared on Hugging Face yet. Third-party benchmarks nonetheless show the new build jumping sharply on agentic tasks compared to April's V4 Pro Preview — landing close to Claude Fable 5 on several of them, at a fraction of the price."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Значимый прирост качества на агентных задачах у уже широко используемой дешёвой линейки моделей — расширяет практический выбор для агентного кодинга по низкой цене, — но это тихое инкрементальное обновление существующей модели без анонса, а не новый подход к использованию LLM.",
+        "en": "A meaningful quality jump on agentic tasks for an already widely-used, cheap model line — it expands the practical low-cost options for agentic coding — but it's a quiet, incremental update to an existing model with no announcement, not a new way of using LLMs."
+      },
+      "source_url": "https://www.unite.ai/deepseek-ships-v4-pro-as-its-flagship-model-leaves-preview/",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Дифф каталога, а не пресс-релиз: номер версии в таблице цен сменился, один чекбокс возможностей переключился, все цены остались прежними, changelog молчит, весов -0813 на Hugging Face нет, а собственная страница DeepSeek всё ещё утверждает, что V4-Pro не менялся.",
+            "en": "A pricing table's version field now reads DeepSeek-V4-Pro-0813, one capability checkbox flipped, every price held still, the changelog is silent, no -0813 weights exist on Hugging Face, and DeepSeek's own homepage still says V4-Pro is unchanged."
+          },
+          "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/"
+        },
+        {
+          "author": "Nano-GPT (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "DeepSeek V4 Pro 0813 уже доступна! Новая модель @deepseek_ai показывает гораздо более высокие результаты в бенчмарках, особенно в кодинге и агентных задачах. Включена в подписку!",
+            "en": "Deepseek V4 Pro 0813 is live! @deepseek_ai's new model scores much higher on benchmarks, especially related to coding and agentic usage. Included in the subscription!"
+          },
+          "url": "https://x.com/NanoGPTcom/status/2087582742233968716"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Сервис Nano-GPT сразу включил DeepSeek V4 Pro 0813 в существующую подписку — пользователи получили прирост качества на кодинге и агентных задачах без доплаты.",
+            "en": "Nano-GPT immediately added DeepSeek V4 Pro 0813 to its existing subscription, giving users the coding and agentic-task quality jump at no extra cost."
+          },
+          "url": "https://x.com/NanoGPTcom/status/2087582742233968716"
+        },
+        {
+          "text": {
+            "ru": "Поскольку изменился только бэкенд под тем же именем эндпоинта deepseek-v4-pro, существующие интеграции получают новую модель автоматически, без изменения кода или параметра model.",
+            "en": "Since only the backend behind the same deepseek-v4-pro endpoint name changed, existing integrations pick up the new model automatically, with no code change or model-parameter update needed."
+          },
+          "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-13-anthropic-watermark-backlash",
+      "cluster_id": "anthropic-claude-content-watermark-c2pa",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Пользователи Claude возмущены новыми водяными знаками — опасаются, что их обвинят в использовании ИИ на работе и учёбе",
+        "en": "Claude users are angry about the new watermarks, fearing they'll be accused of using AI at work and school"
+      },
+      "summary": {
+        "ru": "12 августа TechCrunch собрал волну недовольства, поднявшуюся после того, как 11 августа Anthropic подтвердила: с 2 августа Claude вшивает невидимые водяные знаки в весь генерируемый текст без возможности отключения. Часть пользователей — особенно те, кто, по их словам, использует Claude только для вычитки собственных текстов или кода, — опасаются, что метка ложно свяжет их работу с ИИ перед работодателем или преподавателем. Другие комментаторы возражают: метка не «приписывает авторство» ИИ, а помогает распознавать ИИ-контент из-за рисков, которые он создаёт. Отдельная статья на EGamers описала раскол как разделивший саму аудиторию Anthropic — от разработчиков до случайных пользователей.",
+        "en": "On August 12, TechCrunch documented a backlash that followed Anthropic's August 11 confirmation that, starting August 2, Claude weaves invisible watermarks into all generated text with no way to opt out. Some users — particularly those who say they only use Claude to proofread text or code they wrote themselves — worry the mark will falsely tie their work to AI in front of an employer or teacher. Other commenters pushed back, arguing the mark isn't 'claiming credit' for AI but helps detect AI-generated content given the risks it can pose. A separate EGamers piece described the split as dividing Anthropic's own user base — from developers to casual users."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Реальная и измеримая волна недовольства уже объявленной (11 августа) политикой маркировки, но сама по себе она не меняет функциональность Claude и не открывает новых сценариев использования — это реакция сообщества на уже оценённое ранее событие.",
+        "en": "A real, measurable backlash to an already-announced (August 11) labeling policy, but it doesn't change Claude's functionality or open new usage scenarios by itself — it's a community reaction to an event already scored on its own merits."
+      },
+      "source_url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/",
+      "opinions": [
+        {
+          "author": "Reddit-пользователь (цит. по TechCrunch)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Я давал инструкции, контекст, принимал решения и вносил бесчисленные правки — Claude был лишь инструментом. Если Claude начнёт маркировать код или что угодно ещё как сгенерированное им, на что именно он претендует?",
+            "en": "I gave the instructions, context, decisions, and countless refinements, claude was the tool. If Claude starts watermarking the code or anything else it generates, what exactly is it claiming credit for?"
+          },
+          "url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/"
+        },
+        {
+          "author": "Reddit-пользователь, ответ в том же треде (цит. по TechCrunch)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Дело не в присвоении авторства. Это про возможность обнаруживать сгенерированный ИИ контент — из-за рисков, которые он может создавать.",
+            "en": "It's not claiming credit though... It's about being able to detect AI generated outputs because of the risks AI generated outputs can cause."
+          },
+          "url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Кодеры, использующие Claude только для автодополнения и рефакторинга без содержательного участия ИИ в логике, оказываются в той же категории риска, что и полностью сгенерированные тексты — метка не различает степень вклада ИИ.",
+            "en": "Coders who use Claude only for autocomplete and refactoring, with no substantive AI input into the logic, end up in the same risk bucket as fully AI-generated text — the mark doesn't distinguish degree of AI contribution."
+          },
+          "url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/"
+        },
+        {
+          "text": {
+            "ru": "Материал EGamers описал, как раскол вокруг маркировки прошёл через само ядро аудитории Anthropic — от разработчиков до случайных пользователей, использующих Claude для учёбы.",
+            "en": "An EGamers piece described how the split over watermarking cut through Anthropic's own core user base — from developers to casual users relying on Claude for schoolwork."
+          },
+          "url": "https://egamers.io/get-a-load-of-this-guy-claudes-watermarking-rollout-is-splitting-anthropics-own-userbase/"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

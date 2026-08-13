@@ -263,7 +263,12 @@
     "https://x.ai/news/introducing-grok-bot": "2026-08-12",
     "https://mistral.ai/news/regional-inference-open-models-new-compute/": "2026-08-12",
     "notes/videos/karpathy-outsource-understanding.html": "2026-08-12",
-    "notes/articles/alpert-lossless-transformations.html": "2026-08-12"
+    "notes/articles/alpert-lossless-transformations.html": "2026-08-12",
+    "https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines": "2026-08-13",
+    "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/": "2026-08-13",
+    "https://x.ai/news/grok-4-6": "2026-08-13",
+    "https://www.unite.ai/deepseek-ships-v4-pro-as-its-flagship-model-leaves-preview/": "2026-08-13",
+    "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/": "2026-08-13"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -416,10 +421,10 @@
       }
     },
     "xai-grok-4-6": {
-      "last_date": "2026-07-21",
+      "last_date": "2026-08-13",
       "summary": {
-        "ru": "Маск подтверждает 2-триллионный Grok 4.6, нацеленный обойти Kimi K3 при скорости/цене уровня Grok 4.5; обучение завершается «на следующей неделе», релиза пока нет",
-        "en": "Musk confirms a 2-trillion-parameter Grok 4.6 aimed at beating Kimi K3 while keeping Grok 4.5-level speed/price; training finishes 'next week', no release yet"
+        "ru": "xAI выпускает Grok 4.6 — обновление для длительных агентных сессий, доступное в Cursor/Grok Build/API по цене 4.5, на уровне GPT-5.6 Sol по AA Intelligence Index",
+        "en": "xAI ships Grok 4.6, an update for long agentic sessions, available in Cursor/Grok Build/API at 4.5 pricing, matching GPT-5.6 Sol on the AA Intelligence Index"
       }
     },
     "openai-long-horizon-sandbox-safety": {
@@ -682,10 +687,10 @@
       }
     },
     "anthropic-claude-content-watermark-c2pa": {
-      "last_date": "2026-08-11",
+      "last_date": "2026-08-13",
       "summary": {
-        "ru": "Обновлённая 11 августа статья в справочном центре Anthropic подтверждает: модели Claude, выпущенные 2 августа 2026 года и позже, вплетают незаметный водяной знак прямо в генерируемый текст (он переживает копирование и часть редактирования) и прикрепляют подписанные C2PA-метаданные происхождения к по",
-        "en": "A Claude Help Center article updated on August 11 confirms that Claude models launched on or after August 2, 2026 weave an imperceptible watermark directly into generated text (it survives copying and some editing) and attach signed C2PA provenance metadata to supported files (.svg, .png, .jpg). The"
+        "ru": "Anthropic вшивает невидимые водяные знаки и C2PA-метаданные во весь контент Claude без возможности отключения (с 11 августа); 12 августа — волна пользовательского недовольства и раскол сообщества",
+        "en": "Anthropic embeds invisible watermarks and C2PA metadata into all Claude content with no opt-out (from August 11); August 12 saw a user backlash and community split"
       }
     },
     "openai-chatgpt-reservations-commerce": {
@@ -721,6 +726,27 @@
       "summary": {
         "ru": "Mistral запускает региональный инференс (ЕС/США), платный Priority Tier SLA и начинает хостить сторонние открытые модели (GLM-5.2 от Z.ai)",
         "en": "Mistral launches regional inference (EU/US), a paid Priority Tier SLA, and starts hosting third-party open models (Z.ai's GLM-5.2)"
+      }
+    },
+    "litellm-supply-chain-breach": {
+      "last_date": "2026-08-13",
+      "summary": {
+        "ru": "CloudSEK раскрывает мартовскую атаку на цепочку поставок LiteLLM (популярный опенсорсный шлюз к LLM API) через скомпрометированный сканер Trivy — 2500+ организаций и ~434000 CI/CD-пайплайнов потенциально затронуты кражей учётных данных",
+        "en": "CloudSEK discloses a March supply-chain attack on LiteLLM (a popular open-source LLM API gateway) via a compromised Trivy scanner — 2,500+ organizations and ~434,000 CI/CD pipelines potentially exposed to credential theft"
+      }
+    },
+    "google-pixel-11-gemini-agentic-actions": {
+      "last_date": "2026-08-13",
+      "summary": {
+        "ru": "Google запускает Pixel 11 с самой агентной Gemini на сегодня: заказ еды и такси, звонки в заведения через screen-parsing без интеграций, с обязательным подтверждением действий",
+        "en": "Google launches the Pixel 11 with its most agentic Gemini yet: ordering food and rides, calling businesses via screen-parsing with no integrations required, with mandatory action confirmation"
+      }
+    },
+    "deepseek-v4-pro-0813": {
+      "last_date": "2026-08-13",
+      "summary": {
+        "ru": "DeepSeek тихо (без анонса) обновляет бэкенд deepseek-v4-pro до сборки 0813 с резким приростом на агентных бенчмарках",
+        "en": "DeepSeek quietly (no announcement) updates the deepseek-v4-pro backend to the 0813 build with a sharp jump on agentic benchmarks"
       }
     }
   }

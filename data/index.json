@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-13",
+      "news_count": 5,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Крупнейшая в 2026 году атака на цепочку поставок ИИ-инфраструктуры: скомпрометированный LiteLLM затронул 2500+ компаний",
+        "en": "The largest AI supply-chain breach of 2026: a compromised LiteLLM release hit 2,500+ companies"
+      }
+    },
+    {
       "date": "2026-08-12",
       "news_count": 4,
       "expert_count": 2,

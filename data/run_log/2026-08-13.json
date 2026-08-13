@@ -1,0 +1,170 @@
+{
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T05:35:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (www.anthropic.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch за 36ч не дал новых событий сверх уже опубликованного (self-hosted runner, Compliance API, watermark — всё раньше 11.08); backlash к watermark стал отдельной новостью-продолжением"
+    },
+    {
+      "source": "openai blog (openai.com/news)",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch дал только 'Astra не участвовала в атаке на Hugging Face' — уточнение уже опубликованного (10.08) сюжета без значимой новизны, отклонено"
+    },
+    {
+      "source": "google/deepmind blog (blog.google)",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch нашёл официальный анонс Pixel 11 + агентная Gemini Intelligence (12.08) — опубликовано. Реструктуризация DeepMind (Kavukcuoglu/Hassabis) и 1 млрд MAU Gemini — организационная новость/веха без функции продукта, отклонено"
+    },
+    {
+      "source": "meta ai blog (ai.meta.com/blog)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch — только продолжение уже опубликованного Muse Glimmer (10-11.08) без новых фактов за 12-13.08, отклонено как не-событие"
+    },
+    {
+      "source": "xai news (x.ai/news)",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch нашёл Grok 4.6 (12.08) — опубликовано"
+    },
+    {
+      "source": "mistral news (mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED; WebSearch не дал новых событий сверх уже опубликованного 12.08 (региональный инференс/Priority Tier/GLM-5.2)"
+    },
+    {
+      "source": "deepseek news (api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: EGRESS_BLOCKED; сам DeepSeek анонса не публиковал (тихий релиз) — кандидат найден не через блог, а через блогмарк Simon Willison (см. ниже); опубликовано"
+    },
+    {
+      "source": "hn algolia api",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: EGRESS_BLOCKED на hn.algolia.com, как и в прошлых прогонах"
+    },
+    {
+      "source": "hacker news (websearch/сообщество)",
+      "status": "ok",
+      "candidates": 3,
+      "note": "WebFetch news.ycombinator.com тоже блокирован; через WebSearch подтверждены и процитированы треды по Grok 4.6 и DeepSeek V4 Pro 0813 (пересказ, не прямое чтение)"
+    },
+    {
+      "source": "aggregator: smol.ai AI News",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebFetch блокирован; WebSearch не дал выпуска именно за 12-13.08"
+    },
+    {
+      "source": "aggregator: TLDR AI",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch не дал содержания конкретного выпуска за 12.08"
+    },
+    {
+      "source": "aggregator: Simon Willison linkblog",
+      "status": "ok",
+      "candidates": 1,
+      "note": "через git-clone simonwillisonblog-backup (WebFetch simonwillison.net заблокирован) — блогмарк за 12.08 'DeepSeek V4 Pro 0813 (on OpenRouter)' стал основным discovery-каналом для новости о тихом релизе DeepSeek"
+    },
+    {
+      "source": "reddit r/LocalLLaMA, r/ClaudeAI, X",
+      "status": "ok",
+      "candidates": 2,
+      "note": "через WebSearch: X-реакции на Grok 4.6 (Truell, tobi lutke, Musk) и на watermark backlash — использованы как цитаты с проверяемыми URL"
+    },
+    {
+      "source": "расширенный проход (AI news digest / model release / coding agent update)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "подтвердил отсутствие дополнительных крупных событий сверх 5 выбранных; techstartups.com round-up навёл на LiteLLM breach и Pixel 11"
+    },
+    {
+      "source": "simonwillisonblog-backup (git clone, ndjson)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "обходной канал по инструкции SKILL.md; blog_blogmark.ndjson дал точную дату и заголовок для DeepSeek V4 Pro 0813 (12.08), не проиндексированные WebSearch как отдельное событие"
+    },
+    {
+      "source": "expert: Simon Willison (simonwillison.net)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "через backup-дамп проверены blog_entry и blog_blogmark за 7 дней: новых полноформатных статей после уже опубликованных (raccoon-heist, openai-timeline — 09.08) нет; 'Simon Willison on Technical Blogging' (06.08, интервью для стороннего блога) — не о подходах к использованию LLM, отклонено"
+    },
+    {
+      "source": "expert: Andrej Karpathy (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "RSS заблокирован (CONNECT 403, как и в прошлых прогонах); WebSearch не дал видео новее уже опубликованного 12.08 ('AI Warning: Don't Outsource Your Understanding')"
+    },
+    {
+      "source": "expert: Latent Space",
+      "status": "empty",
+      "candidates": 0,
+      "note": "последний эпизод/статья — 03.08 (Baseten) и 23.01 ('Scaling without Slop'), оба за пределами 7-дневного окна"
+    },
+    {
+      "source": "expert: AI Explained (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch не дал видео с этого канала с проверяемым ID/датой в пределах окна"
+    },
+    {
+      "source": "expert: Matt Wolfe (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch подтвердил активность канала (еженедельные AI-новости), но без проверяемого ID/даты конкретного ролика в окне"
+    },
+    {
+      "source": "expert: Ethan Mollick (oneusefulthing.org)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "последний найденный пост — 23.07 ('Summer 2026 Edition'), за пределами недельного окна"
+    },
+    {
+      "source": "expert: Nate Herk (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "последние подтверждённые видео с точными датами — 11-12.07 (Claude Code course, GPT-5.6 Sol vs Fable 5), за пределами недельного окна"
+    },
+    {
+      "source": "expert: Matt Pocock (youtube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch не дал видео с проверяемым ID/датой в пределах окна; последнее найденное — май 2026"
+    },
+    {
+      "source": "expert: расширение за пределы конфига (Zvi Mowshowitz, Nathan Lambert/interconnects, Gary Marcus)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Zvi: 'Monthly Roundup #45' свеж (12.08), но это личный лайфстайл-раунд-ап, не эссе о подходах к LLM; его отдельная еженедельная 'AI #NNN' серия не удалось надёжно датировать/пронумеровать через WebSearch — не включена во избежание ошибки атрибуции. Lambert: последний найденный пост — июнь 2026. Marcus: свежих материалов об LLM-подходах за окно не найдено."
+    }
+  ],
+  "totals": {
+    "candidates": 16,
+    "published": 5,
+    "rejected": {
+      "продолжение без новизны (Astra-уточнение, Muse Spark 1.2 tease, Muse Glimmer повтор)": 3,
+      "организационная новость/веха без функции продукта (DeepMind реструктуризация, Gemini 1 млрд MAU)": 1,
+      "не удалось надёжно атрибутировать (Zvi weekly AI-series)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — не найдено ни одного нового видео с проверяемым авторством/датой в пределах 7-дневного окна ни у одного из 8 экспертов конфига, GEMINI_API_KEY доступен",
+    "frames": "not used — см. выше, видео-конспектов в этом прогоне нет"
+  },
+  "notes": [
+    "expert_content пуст впервые за отслеживаемый период: проверены все 8 экспертов из конфига (Willison, Karpathy, Latent Space, AI Explained, Matt Wolfe, Mollick, Nate Herk, Matt Pocock) плюс 3 сверх конфига (Zvi Mowshowitz, Nathan Lambert, Gary Marcus) — ни один не дал материала и внутри 7-дневного окна свежести, и с надёжно проверяемым авторством/URL/датой. Решено не выдумывать и не гадать атрибуцию (как и в прошлых прогонах), а честно опубликовать 0 материалов вместо целевого минимума 5 (limits.min_expert_total).",
+    "WebFetch заблокирован на всех проверенных доменах-вендорах и агрегаторах без исключения — паттерн совпадает с прошлыми прогонами (news.ycombinator.com, hn.algolia.com, youtube.com, simonwillison.net, все 7 блогов моделей). WebSearch и git clone (simonwillisonblog-backup) остаются единственными рабочими каналами discovery.",
+    "Новость о LiteLLM (litellm-supply-chain-breach) — про инфраструктурный слой (опенсорсный шлюз к разным LLM API), а не про конкретного вендора: поле models оставлено пустым, так как ни один тег из sources.yaml не описывает событие точно.",
+    "Новость о водяных знаках Anthropic — продолжение кластера anthropic-claude-content-watermark-c2pa (первая публикация 11.08, impact_score 4): 12.08 появилась измеримая волна пользовательской реакции (TechCrunch, EGamers) с новыми цитатами — включена как отдельная запись с тем же cluster_id согласно правилу SKILL.md о волнах реакций.",
+    "Кандидат 'DeepSeek V4 Pro 0813' обнаружен не через блог DeepSeek (анонса не было вовсе — тихий релиз), а через блогмарк Simon Willison в бэкап-дампе — рабочий обходной канал discovery, описанный в SKILL.md, сработал и для новостного (не только экспертного) контента."
+  ]
+}
