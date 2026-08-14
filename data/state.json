@@ -234,7 +234,7 @@
     "https://technode.com/2026/08/06/deepseek-plans-significant-api-price-increases/": "2026-08-07",
     "https://thezvi.substack.com/p/ai-180-no-longer-in-charge": "2026-08-07",
     "notes/articles/zvi-ai-180-no-longer-in-charge.html": "2026-08-07",
-    "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-09",
+    "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-14",
     "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "notes/articles/simonw-raccoon-heist-vibe-coding.html": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/": "2026-08-09",
@@ -268,7 +268,15 @@
     "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/": "2026-08-13",
     "https://x.ai/news/grok-4-6": "2026-08-13",
     "https://www.unite.ai/deepseek-ships-v4-pro-as-its-flagship-model-leaves-preview/": "2026-08-13",
-    "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/": "2026-08-13"
+    "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/": "2026-08-13",
+    "https://openai.com/index/previewing-ultrafast/": "2026-08-14",
+    "https://x.com/deepseek_ai/status/2087864589895798968": "2026-08-14",
+    "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/": "2026-08-14",
+    "notes/articles/willison-stealing-reasoning-traces.html": "2026-08-14",
+    "https://thezvi.substack.com/p/ai-181-astra-goes-cyber-critical": "2026-08-14",
+    "notes/articles/zvi-astra-cyber-critical.html": "2026-08-14",
+    "https://www.elastic.co/search-labs/blog/context-engineering-vs-prompt-engineering": "2026-08-14",
+    "notes/articles/elastic-context-vs-prompt-engineering.html": "2026-08-14"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -673,10 +681,10 @@
       }
     },
     "anthropic-claude-code-auto-mode-default": {
-      "last_date": "2026-08-09",
+      "last_date": "2026-08-14",
       "summary": {
-        "ru": "Anthropic делает Auto Mode дефолтным режимом разрешений в Claude Code для Pro/Max/Team с 14 августа",
-        "en": "Anthropic makes Auto Mode the default permission mode in Claude Code for Pro/Max/Team starting August 14"
+        "ru": "Anthropic делает Auto Mode дефолтным режимом разрешений в Claude Code для Pro/Max/Team с 14 августа; live-раскатка подтверждена новыми данными о продакшн-инцидентах (6,3% vs 2,4%) и пилотом Apollo Research (7% пропусков на редтиме)",
+        "en": "Anthropic makes Auto Mode the default permission mode in Claude Code for Pro/Max/Team starting August 14; the live rollout is confirmed with new production-incident data (6.3% vs 2.4%) and an Apollo Research red-team pilot (7% miss rate)"
       }
     },
     "meta-muse-glimmer-open-weight": {
@@ -747,6 +755,20 @@
       "summary": {
         "ru": "DeepSeek тихо (без анонса) обновляет бэкенд deepseek-v4-pro до сборки 0813 с резким приростом на агентных бенчмарках",
         "en": "DeepSeek quietly (no announcement) updates the deepseek-v4-pro backend to the 0813 build with a sharp jump on agentic benchmarks"
+      }
+    },
+    "openai-gpt-5-6-sol-ultrafast": {
+      "last_date": "2026-08-14",
+      "summary": {
+        "ru": "OpenAI и Cerebras выпускают Ultrafast — тир API на 750 tok/s (до 14x) для GPT-5.6 Sol без потери качества; ограниченный превью-доступ, цена как у обычного Sol",
+        "en": "OpenAI and Cerebras ship Ultrafast, a 750 tok/s (up to 14x) API tier for GPT-5.6 Sol with no quality loss; limited preview access, standard Sol pricing"
+      }
+    },
+    "deepseek-v4-price-hike": {
+      "last_date": "2026-08-14",
+      "summary": {
+        "ru": "DeepSeek повышает цены API на V4-Flash/V4-Pro на 50-1100% с 16 августа, вводит пиковую/внепиковую тарификацию на фоне резкого роста трафика и сбоя мощностей",
+        "en": "DeepSeek hikes V4-Flash/V4-Pro API prices by 50-1,100% effective August 16, introducing peak/off-peak pricing amid a sharp traffic surge and a capacity outage"
       }
     }
   }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: контекст-инжиниринг против промпт-инжиниринга — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Elasticsearch Labs · 2026-08-11</span>
+      <span data-lang="en">Article digest · Elasticsearch Labs · 2026-08-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Контекст-инжиниринг против промпт-инжиниринга: где заканчивается один навык и начинается другой</span>
+      <span data-lang="en">Context engineering vs. prompt engineering: where one skill ends and the other begins</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.elastic.co/search-labs/blog/context-engineering-vs-prompt-engineering" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Команда Elasticsearch Labs разбирает путаницу, которая всё чаще встречается у команд, строящих продакшн-агентов: промпт-инжиниринг и контекст-инжиниринг — не синонимы и не конкурирующие подходы, а два разных уровня одной и той же задачи. Промпт-инжиниринг отвечает на вопрос «как именно сформулировать инструкцию модели», а контекст-инжиниринг — на вопрос «какая информация вообще должна оказаться в окне контекста, прежде чем модель начнёт отвечать». Первый навык управляет тем, ЧТО написано внутри окна контекста; второй — тем, ЧТО в это окно вообще попадает.</span>
+      <span data-lang="en">The Elasticsearch Labs team untangles a confusion that's increasingly common among teams building production agents: prompt engineering and context engineering aren't synonyms or competing approaches — they're two different layers of the same task. Prompt engineering answers "how exactly should the instruction to the model be worded," while context engineering answers "what information should even land inside the context window before the model starts responding." The first skill controls what's written inside the context window; the second controls what makes it into that window at all.</span>
+    </p>
+
+    <h2><span data-lang="ru">Из чего состоит метод: промпт как подмножество контекста</span><span data-lang="en">What the method consists of: prompt as a subset of context</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой тезис статьи: промпт-инжиниринг — это частный случай контекст-инжиниринга, а не отдельная дисциплина рядом с ним. Для простых вопросно-ответных сценариев без внешних данных умения формулировать инструкцию действительно достаточно. Но как только система обрастает поиском по базе знаний (RAG), вызовом инструментов и многошаговым рассуждением, именно управление контекстом — какие документы туда попадут, в каком порядке, насколько релевантно они отобраны, — становится доминирующей проблемой, а формулировка самой инструкции отходит на второй план. Авторы иллюстрируют это на примере агента-рекомендателя книг: агент выполняет прицельные запросы к поиску и retrieval, подтягивая релевантные тайтлы («Возвращение короля», «Дюна: Дом Коррино», «Далёкие горизонты») — качество ответа здесь определяется не хитростью формулировки вопроса, а точностью и релевантностью того, что подтянул retrieval-слой.</span>
+      <span data-lang="en">The article's central claim: prompt engineering is a special case of context engineering, not a separate discipline alongside it. For simple question-answering scenarios with no external data, wording skill really is enough. But once a system grows a knowledge-base retrieval layer (RAG), tool calls, and multi-step reasoning, managing context — which documents make it in, in what order, how relevant the retrieval was — becomes the dominant problem, and the wording of the instruction itself becomes secondary. The authors illustrate this with a book-recommendation agent: it runs targeted search and retrieval queries, pulling in relevant titles (The Return of the King, Dune: House Corrino, Far Horizons) — answer quality here is driven not by clever question phrasing but by how precise and relevant what the retrieval layer pulled in actually was.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда и зачем применять это разделение</span><span data-lang="en">When and why this distinction matters in practice</span></h2>
+    <p>
+      <span data-lang="ru">Практическая польза разделения — не терминологическая, а диагностическая: когда продакшн-агент отвечает плохо, это разделение помогает быстро понять, где искать причину. Если модель получила верный, полный и хорошо структурированный контекст, но всё равно отвечает мимо цели — проблема в промпте, и её решает переформулировка инструкции. Но если модель рассуждает логично, а ответ всё равно неверен или неполон — почти всегда проблема в контексте: в базу для retrieval попал не тот документ, порядок кусков контекста запутал модель, или важные данные вообще не были туда включены. Авторы формулируют это резко: даже самая способная модель не может компенсировать плохо структурированный, неполный или нерелевантный контекст — no amount of prompt polish чинит эту проблему.</span>
+      <span data-lang="en">The practical value of the distinction isn't terminological — it's diagnostic: when a production agent answers poorly, the split helps you quickly locate the cause. If the model received accurate, complete, well-structured context but still misses the mark, the problem is the prompt, and rewording the instruction fixes it. But if the model reasons soundly and the answer is still wrong or incomplete, the problem is almost always context: the wrong document made it into retrieval, the ordering of context chunks confused the model, or important data was never included at all. The authors put it bluntly: even the most capable model cannot compensate for poorly structured, incomplete, or irrelevant context — no amount of prompt polish fixes that.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ограничение подхода, которое статья признаёт: чёткую границу между «это ещё промпт» и «это уже контекст» на практике провести сложнее, чем в теории — оба слоя влияют друг на друга, и хорошо продуманный контекст всё равно требует промпта, который объяснит модели, как этим контекстом пользоваться. Вывод авторов не «выберите один навык», а «командам, строящим продакшн-агентов, нужны оба, и всё больше нужны специалисты, понимающие, как эти два слоя взаимодействуют между собой», — то есть разделение служит для распределения внимания и ролей в команде, а не для замены одного подхода другим.</span>
+      <span data-lang="en">The limitation the article itself acknowledges: drawing a clean line between "this is still prompt" and "this is already context" is harder in practice than in theory — the two layers affect each other, and even well-designed context still needs a prompt that tells the model how to use it. The authors' conclusion isn't "pick one skill" but "teams building production agents need both, and increasingly need practitioners who understand how the two layers interact" — the distinction is meant to allocate attention and roles within a team, not to replace one approach with the other.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: кража цепочек рассуждений через API — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (со ссылкой на статью Панфилова и соавторов) · 2026-08-11</span>
+      <span data-lang="en">Article digest · Simon Willison (linking a paper by Panfilov et al.) · 2026-08-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Кража цепочек рассуждений из проприетарных API: как зашифрованный «след мыслей» одной модели заставляет говорить другую</span>
+      <span data-lang="en">Stealing reasoning traces from proprietary LLM APIs: how one model's encrypted "thought trail" makes another model talk</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/" target="_blank" rel="noopener">
+        <span data-lang="ru">Пост Willison со ссылкой на препринт ↗</span><span data-lang="en">Willison's post linking the preprint ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">11 августа Simon Willison обратил внимание на препринт (Панфилов и семь соавторов, arXiv 2608.09867, сайт-компаньон stolen-thoughts.com) о новой уязвимости в том, как крупные провайдеры — Anthropic, OpenAI и Google — реализуют «рассуждающие» модели через API. Все трое, чтобы не раскрывать конкурентам сырую цепочку рассуждений модели (это же и есть основной актив, который дистилляторы пытаются скопировать), возвращают её клиенту не открытым текстом, а в виде непрозрачного зашифрованного блока. Клиентское приложение обязано отправить этот блок обратно на следующем шаге диалога, чтобы модель «помнила» ход своих мыслей — так поддерживается многошаговый агентный контекст без повторной дорогой генерации рассуждений с нуля.</span>
+      <span data-lang="en">On August 11, Simon Willison flagged a preprint (Panfilov and seven co-authors, arXiv 2608.09867, companion site stolen-thoughts.com) about a new vulnerability in how the major providers — Anthropic, OpenAI, and Google — implement "reasoning" models over their APIs. All three, to avoid exposing a model's raw chain of thought to competitors (that chain is precisely the asset distillation attacks try to copy), return it to the client not as plain text but as an opaque encrypted block. The client application is required to send that block back on the next turn so the model "remembers" its own train of thought — this is how multi-step agentic context gets maintained without regenerating the reasoning from scratch at great expense.</span>
+    </p>
+
+    <h2><span data-lang="ru">В чём метод: блоки взаимозаменяемы там, где не должны быть</span><span data-lang="en">The method: blocks are interchangeable where they shouldn't be</span></h2>
+    <p>
+      <span data-lang="ru">Авторы показывают, что зашифрованные блоки рассуждений у всех трёх провайдеров полностью взаимозаменяемы между разными сессиями, разными пользователями и — что особенно важно — разными моделями одного и того же провайдера. Из этого следует прямая атака в два шага. Шаг первый: получить блок рассуждений от мощной модели (например, флагманской) на нужную тему — сам блок остаётся зашифрованным и нечитаемым напрямую. Шаг второй: подсунуть этот же блок в сессию с более слабой и хуже защищённой моделью того же провайдера, представив его как «свою предыдущую мысль» этой слабой модели. Слабая модель, для которой блок выглядит как её собственный legitimate контекст, декодирует и дословно воспроизводит содержимое в виде обычного текста в ответе — то есть служит своего рода бесплатным дешифратором для чужого, более защищённого рассуждения. Ни разу не потребовалось напрямую «взламывать» саму мощную модель.</span>
+      <span data-lang="en">The authors show that the encrypted reasoning blocks are fully interchangeable across different sessions, different users, and — crucially — different models from the same provider. That yields a direct two-step attack. Step one: obtain a reasoning block from a powerful model (say, the flagship one) on the topic of interest — the block itself stays encrypted and unreadable directly. Step two: feed that same block into a session with a weaker, less-guarded model from the same provider, presenting it as that weaker model's own "prior thought." The weaker model, for which the block looks like its own legitimate context, decodes and reproduces the contents verbatim as ordinary text in its reply — acting as a free decryption oracle for someone else's, better-protected reasoning. At no point does the attack need to jailbreak the powerful model directly.</span>
+    </p>
+    <p>
+      <span data-lang="ru">У метода есть и вторая, более тревожная разновидность: поскольку блок воспринимается моделью как её собственное прошлое рассуждение, а не как внешние данные, в него можно спрятать вредоносную инструкцию. Атакующий формирует блок с встроенной command-инъекцией, зашифровывает его и распространяет как часть публичного workflow, промпт-шаблона или сохранённой сессии. Жертва, повторно используя этот блок в своём диалоге, невольно заставляет модель выполнить чужую инструкцию, которую та воспринимает как «свою же более раннюю мысль» — классический prompt injection, но спрятанный там, куда обычные фильтры контента не заглядывают, потому что блок непрозрачен даже для системы безопасности провайдера.</span>
+      <span data-lang="en">There's a second, more worrying variant: because the model treats the block as its own past reasoning rather than as external data, an attacker can hide a malicious instruction inside it. The attacker crafts a block with an embedded prompt injection, encrypts it, and distributes it as part of a public workflow, prompt template, or shared session. A victim who reuses that block in their own conversation unwittingly gets the model to execute someone else's instruction, which it perceives as "its own earlier thought" — a classic prompt injection, but hidden where ordinary content filters don't look, because the block is opaque even to the provider's own safety systems.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это важно и что делать</span><span data-lang="en">When this matters and what to do about it</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод авторов и Willison сформулирован жёстко: разработчикам стоит по умолчанию считать, что цепочка рассуждений читаема — до тех пор, пока провайдер не привяжет блок криптографически к конкретной сессии и конкретному пользователю. Это должно менять как минимум три вещи: что логировать (не хранить чужие блоки рассуждений как «безопасные» данные), что кэшировать (не переиспользовать блоки между пользователями ради экономии) и что вообще позволять модели обдумывать в сессиях, где блок мог прийти из внешнего, не полностью доверенного источника — например, из вставленного пользователем шаблона промпта. Авторы предлагают провайдерам конкретное системное исправление — криптографическую привязку блока к сессии/пользователю (session/user binding) — что не даёт использовать чужой блок как «предзаписанный» контекст.</span>
+      <span data-lang="en">The practical takeaway from the authors and from Willison is blunt: developers should assume by default that a chain of thought is readable — until the provider cryptographically binds the block to a specific session and user. That should change at least three things: what you log (don't store other people's reasoning blocks as "safe" data), what you cache (don't reuse blocks across users to save cost), and what you let the model reason about in sessions where a block might have arrived from an external, not-fully-trusted source — a user-supplied prompt template, for instance. The authors propose a concrete system-level fix for providers — cryptographic session/user binding for the block — which would prevent someone else's block from being reused as "pre-baked" context.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ограничение находки: она не даёт прямого доступа к сырым весам или скрытым слоям модели — извлекается только конкретный сгенерированный след рассуждений, а не сама архитектура; и провайдеры теоретически могут закрыть дыру относительно быстро именно за счёт session/user binding, не меняя сам подход «рассуждение как оплачиваемый, но скрытый токен-поток». Тем не менее это первая публично задокументированная демонстрация того, что «непрозрачность» цепочки рассуждений у всех трёх крупных лабораторий — Anthropic, OpenAI и Google — держится на организационном соглашении не читать чужой блок, а не на криптографической гарантии.</span>
+      <span data-lang="en">The finding's limitation: it doesn't give direct access to raw weights or hidden layers — only a specific generated reasoning trace is extracted, not the architecture itself; and providers can plausibly close the hole fairly quickly via session/user binding without changing the underlying "reasoning as a billed but hidden token stream" approach. Still, this is the first publicly documented demonstration that the "opacity" of the reasoning chain at all three major labs — Anthropic, OpenAI, and Google — rested on an organizational convention not to read someone else's block, rather than on a cryptographic guarantee.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

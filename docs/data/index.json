@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-14",
+      "news_count": 3,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "OpenAI и Cerebras выпускают Ultrafast: GPT-5.6 Sol работает в 14 раз быстрее",
+        "en": "OpenAI and Cerebras launch Ultrafast: GPT-5.6 Sol runs up to 14x faster"
+      }
+    },
+    {
       "date": "2026-08-13",
       "news_count": 5,
       "expert_count": 0,

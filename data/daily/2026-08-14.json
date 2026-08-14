@@ -1,0 +1,235 @@
+{
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T05:40:00Z",
+  "news": [
+    {
+      "id": "2026-08-14-openai-gpt-5-6-sol-ultrafast",
+      "cluster_id": "openai-gpt-5-6-sol-ultrafast",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "OpenAI и Cerebras выпускают Ultrafast: GPT-5.6 Sol работает в 14 раз быстрее",
+        "en": "OpenAI and Cerebras launch Ultrafast: GPT-5.6 Sol runs up to 14x faster"
+      },
+      "summary": {
+        "ru": "13 августа OpenAI совместно с Cerebras открыла ограниченный превью-доступ к новому тиру API Ultrafast для флагманской модели GPT-5.6 Sol: он выдаёт до 750 токенов в секунду — в среднем в 14 раз быстрее обычной обработки — без потери качества ответов. На бенчмарке GDP-Val (экономически значимые задачи умственного труда) Ultrafast даёт 5,6-кратное ускорение целиком по конвейеру; на HLE (2500 вопросов) Sol на Ultrafast прошёл весь набор за 11 часов 11 минут против 78 часов 27 минут у Claude Fable 5. Цена осталась на уровне обычного Sol ($5/$30 за млн токенов), но отдельного тарифа, лимитов и списка регионов для Ultrafast пока не публиковали — доступ ограничен избранными клиентами, будет расширяться по мере роста мощностей Cerebras.",
+        "en": "On August 13, OpenAI and Cerebras opened a limited preview of Ultrafast, a new API service tier for the flagship GPT-5.6 Sol model: it generates up to 750 tokens per second — on average 14x faster than standard processing — without sacrificing answer quality. On the GDP-Val benchmark (economically valuable knowledge work) Ultrafast delivers a 5.6x end-to-end speedup; on HLE (2,500 questions) Sol on Ultrafast finished the whole set in 11 hours 11 minutes versus 78 hours 27 minutes for Claude Fable 5. Pricing stays at standard Sol rates ($5/$30 per million tokens), but OpenAI hasn't published a separate Ultrafast rate, quota, or region list yet — access is limited to select customers and will expand as Cerebras capacity grows."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Снимает давнее противоречие «быстро или умно» для флагманской модели — открывает частично новый класс сценариев (голос, реагирование на инциденты в реальном времени, фрод-мониторинг) с интеллектом уровня фронтира там, где раньше приходилось жертвовать качеством ради скорости; но это ускорение инференса на конкретном железе, а не новый способ работы с LLM как таковой, и доступ пока сильно ограничен — поэтому крупное, а не парадигмальное событие.",
+        "en": "Removes the long-standing 'fast or smart' tradeoff for a flagship model — it partially opens a new class of scenarios (voice, real-time incident response, fraud monitoring) with frontier-level intelligence where quality previously had to be sacrificed for speed; but it's an inference-speed jump on specific hardware rather than a new way of working with LLMs as such, and access is still tightly limited — so this is major rather than paradigm-shifting."
+      },
+      "source_url": "https://openai.com/index/previewing-ultrafast/",
+      "opinions": [
+        {
+          "author": "Участник обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Это реально безумие. Надеюсь, ultrafast-версии Terra и Luna тоже выпустят.",
+            "en": "This is actually insane · Hopefully the release ultrafast of Terra and Luna too"
+          },
+          "url": "https://news.ycombinator.com/item?id=49289844"
+        },
+        {
+          "author": "Ashutosh Shrivastava (@ai_for_success, X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Speedmaxing... OpenAI выпустила GPT-5.6 Sol на скорости до 14x, до 750 токенов в секунду. На базе Cerebras.",
+            "en": "Speedmaxing... OpenAI dropped GPT-5.6 Sol at up to 14x the speed, reaching 750 tokens per second. Powered by Cerebras."
+          },
+          "url": "https://x.com/ai_for_success/status/2087948856818590010"
+        },
+        {
+          "author": "Разработчики (по данным обзора eesel AI)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Цифры бенчмарков даны самим вендором, поэтому к ним относятся скептически; самый частый комментарий сообщества — «подождём реальных тестов».",
+            "en": "The benchmarks are vendor-reported and people are skeptical, with the loudest community note being 'wait for real-world tests.'"
+          },
+          "url": "https://www.eesel.ai/blog/gpt-5-6-sol-review"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Реагирование на инциденты: пока авария ещё не устранена, Ultrafast успевает проанализировать логи приложения, недавние изменения кода и отчёты инженеров и подготовить фикс.",
+            "en": "Incident response: while an outage is still unfolding, Ultrafast can analyze application logs, recent code changes, and engineer reports to help prepare a fix in time."
+          },
+          "url": "https://openai.com/index/previewing-ultrafast/"
+        },
+        {
+          "text": {
+            "ru": "Финансовые сервисы получают возможность анализировать рыночные сигналы и подозрительные транзакции с интеллектом фронтир-модели, пока ситуация ещё меняется, а не постфактум.",
+            "en": "Financial services can analyze market signals and flag suspicious transactions with frontier-model intelligence while conditions are still changing, instead of after the fact."
+          },
+          "url": "https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-14-claude-code-auto-mode-live",
+      "cluster_id": "anthropic-claude-code-auto-mode-default",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Auto Mode в Claude Code реально включился: новые данные о продакшн-сессиях и первый независимый редтим",
+        "en": "Auto Mode in Claude Code actually goes live: new production-session data and an independent red team"
+      },
+      "summary": {
+        "ru": "14 августа — день, когда объявленный ещё 7-8 августа переход на Auto Mode по умолчанию для Pro/Max/Team реально вступил в силу. К дате раскатки добавились новые данные: по анализу реальных продакшн-сессий за май-июнь, в сессиях с ручным подтверждением серьёзный непреднамеренный вред встречался в 6,3% случаев против 2,4% при Auto Mode — более чем вдвое реже. Anthropic также опубликовала результаты двухнедельного пилота с независимой красной командой Apollo Research: на специально сконструированных обходных атаках classifier пропустил около 7% попыток (против 12% на более раннем срезе) — то есть защита снижает, но не устраняет риск полностью. На Hacker News развернулась дискуссия: часть разработчиков ценит меньше прерываний, часть возражает, что ручное подтверждение было их «последней линией обороны» против нежелательного, но не «опасного» поведения агента.",
+        "en": "August 14 is the day the Auto Mode default switch for Pro/Max/Team — announced back on August 7-8 — actually took effect. New data accompanied the rollout: analysis of real production sessions from May-June found serious unintended harm in 6.3% of manually-approved sessions versus 2.4% under Auto Mode — more than twice as often. Anthropic also published results from a two-week pilot with independent red team Apollo Research: on purpose-built adversarial bypass attempts, the classifier's miss rate was about 7% (down from 12% in an earlier pass) — meaning the safeguard reduces but doesn't eliminate the risk. A Hacker News discussion followed: some developers welcome fewer interruptions, while others argue manual approval was their 'last line of defense' against behavior that's unwanted but not technically 'dangerous.'"
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Подтверждает и усиливает уже оценённое 9 августа изменение независимыми данными (продакшн-инциденты, внешний редтим) — это укрепляет доверие к уже анонсированному сдвигу дефолта, но не меняет сам подход к использованию LLM и не открывает нового сценария, поэтому оценка ниже, чем у исходного анонса.",
+        "en": "Confirms and reinforces the change already scored on August 9 with independent data (production incidents, an external red team) — this strengthens confidence in an already-announced default shift, but doesn't change the underlying approach to using LLMs or open a new scenario, hence a lower score than the original announcement."
+      },
+      "source_url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+      "opinions": [
+        {
+          "author": "Участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Помимо спора о том, безопаснее ли это ручной проверки человеком, у меня другая проблема: в ручном режиме Claude пытается делать вещи, которые не «опасны», но не совпадают с тем, что я хочу. Ручная проверка — моя последняя линия обороны для вещей, которые я не хочу вносить в чёрный список.",
+            "en": "Besides the debate about whether this is 'safer' than manual human review, I have a different problem: in manual mode Claude will attempt things which aren't 'dangerous' but are misaligned with what I want. Manual review is my last line of defense for stuff I don't want to blacklist."
+          },
+          "url": "https://news.ycombinator.com/item?id=49240431"
+        },
+        {
+          "author": "Apollo Research × Anthropic (отчёт о пилоте)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Эти атаки синтетические и специально сконструированы, чтобы найти слабые места классификатора — они злонамереннее всего, что Claude сделал бы без подсказки; итоговые 7% пропусков нельзя воспринимать как показатель для реального трафика.",
+            "en": "These attacks are synthetic and adversarial by design, built to find where the classifier fails, and more malicious than anything Claude would do unprompted; the resulting 7% miss rate should not be taken as the miss rate on real traffic."
+          },
+          "url": "https://claude.com/blog/auto-mode-default-in-claude-code"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды, оркестрирующие несколько агентов, отмечают побочный эффект ручного режима: Claude в нём становится излишне директивным — расписывает субагентам, какие именно файлы редактировать и что именно не делать, — тогда как часть этой ручной оркестрации отпадает при переходе на Auto Mode.",
+            "en": "Teams orchestrating multiple agents note a side effect of manual mode: Claude becomes overly prescriptive, spelling out to subagents exactly which files to touch and what not to do — some of that manual choreography goes away under Auto Mode."
+          },
+          "url": "https://news.ycombinator.com/item?id=49240431"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-14-deepseek-v4-price-hike",
+      "cluster_id": "deepseek-v4-price-hike",
+      "models": [
+        "deepseek"
+      ],
+      "title": {
+        "ru": "DeepSeek повышает цены на V4 на 50–1100%: эра сверхдешёвого API заканчивается",
+        "en": "DeepSeek hikes V4 API prices by 50-1,100%: the era of ultra-cheap access ends"
+      },
+      "summary": {
+        "ru": "13 августа DeepSeek объявила о повышении цен на API для линейки V4-Flash и V4-Pro с 16:00 UTC 16 августа — в зависимости от модели, типа токенов и времени суток рост составит от 50% до более чем 1100%. Введена пиковая/непиковая тарификация: пиковые часы — 01:00–04:00 и 06:00–10:00 UTC, внепиковая ставка — вдвое ниже пиковой. Выходные токены V4-Pro дорожают с $0,87 до $3,96 за млн в пик; V4-Flash — с $0,28 до $1,32 за млн в пик. Официальная причина — «более рациональное распределение ресурсов» на фоне резко выросшего трафика (по данным OpenRouter, 1 августа V4-Flash обработала 8 трлн токенов за день) и сбоя мощностей 4 августа. Даже по новым ценам DeepSeek остаётся дешевле некоторых конкурентов, но разрыв заметно сузился.",
+        "en": "On August 13, DeepSeek announced API price increases for its V4-Flash and V4-Pro lineup effective 16:00 UTC on August 16 — ranging from 50% to over 1,100% depending on model, token type, and time of day. A peak/off-peak pricing structure was introduced: peak hours are 01:00-04:00 and 06:00-10:00 UTC, with off-peak rates at half the peak price. V4-Pro output tokens rise from $0.87 to $3.96 per million at peak; V4-Flash from $0.28 to $1.32 per million at peak. The official reason is 'allocating resources more reasonably' amid a sharp traffic surge (V4-Flash reportedly processed 8 trillion tokens in a single day on August 1) and an August 4 capacity outage. Even at the new rates DeepSeek remains cheaper than some rivals, but the gap has narrowed noticeably."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Существенно меняет расчёт стоимости для одной из самых массово используемых дешёвых моделей и сужает её ключевое конкурентное преимущество, но это бизнес-решение о тарифах, а не изменение возможностей или подхода к использованию LLM.",
+        "en": "Materially changes the cost calculus for one of the most widely used cheap models and narrows its key competitive edge, but it's a pricing/business decision, not a change in capability or in how LLMs are used."
+      },
+      "source_url": "https://x.com/deepseek_ai/status/2087864589895798968",
+      "opinions": [
+        {
+          "author": "DeepSeek (официальное объявление)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Обновление тарифов вводится, чтобы более рационально распределять ресурсы.",
+            "en": "The updated pricing is introduced to allocate resources more reasonably."
+          },
+          "url": "https://x.com/deepseek_ai/status/2087864589895798968"
+        },
+        {
+          "author": "Sanchit Vir Gogia, главный аналитик Greyhound Research",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "На бумаге, в пиковые часы, при правильном сравнении ценовое преимущество DeepSeek исчезает, а местами и разворачивается в обратную сторону.",
+            "en": "On paper, at peak, against the right comparator, DeepSeek's price advantage does disappear, and in places inverts."
+          },
+          "url": "https://www.infoworld.com/article/4209439/deepseek-raises-some-v4-prices-by-more-than-10x-as-ai-demand-strains-capacity.html"
+        },
+        {
+          "author": "Mark Tauschek, VP Info-Tech Research Group",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Повышение цен убирает ценовое преимущество V4-Flash перед GPT-5.6 Luna в пиковые часы, но не во внепиковые.",
+            "en": "The increase does eliminate the price advantage that V4 Flash has over GPT-5.6 Luna at peak pricing, but not at off-peak pricing."
+          },
+          "url": "https://www.computerworld.com/article/4209468/deepseek-raises-some-v4-prices-by-more-than-10x-as-ai-demand-strains-capacity-2.html"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчики на Reddit и Hacker News массово закупают API-кредиты по старым ценам впрок до вступления повышения в силу 16 августа.",
+            "en": "Developers on Reddit and Hacker News are stockpiling API credits at the old prices before the increase takes effect on August 16."
+          },
+          "url": "https://news.ycombinator.com/item?id=49287881"
+        },
+        {
+          "text": {
+            "ru": "Команды с гибкой нагрузкой переносят батчевые задачи (обучение, массовую разметку, офлайн-агентные прогоны) на внепиковые часы, где ставка вдвое ниже пиковой.",
+            "en": "Teams with flexible workloads are shifting batch jobs (training, bulk labeling, offline agent runs) to off-peak hours, where the rate is half the peak price."
+          },
+          "url": "https://www.infoworld.com/article/4209439/deepseek-raises-some-v4-prices-by-more-than-10x-as-ai-demand-strains-capacity.html"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-14-willison-stealing-reasoning-traces",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Кража цепочек рассуждений из проприетарных LLM API",
+        "en": "Stealing Reasoning Traces from Proprietary LLM APIs"
+      },
+      "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/",
+      "summary": {
+        "ru": "Willison указывает на препринт (Панфилов и соавторы), показывающий, что зашифрованные блоки цепочки рассуждений у Anthropic, OpenAI и Google взаимозаменяемы между сессиями, пользователями и моделями одного провайдера: подсунув блок от мощной модели более слабой, атакующий заставляет её продекодировать и выдать рассуждение открытым текстом — без прямого джейлбрейка мощной модели. Тот же механизм открывает скрытый prompt injection: вредоносная инструкция, спрятанная внутри блока-«воспоминания», воспринимается моделью как её собственная более ранняя мысль.",
+        "en": "Willison flags a preprint (Panfilov et al.) showing that encrypted chain-of-thought blocks at Anthropic, OpenAI, and Google are interchangeable across sessions, users, and models from the same provider: feeding a block from a strong model into a weaker one makes the weaker model decode and output the reasoning as plain text — without directly jailbreaking the strong model. The same mechanism enables hidden prompt injection: a malicious instruction hidden inside a 'memory' block reads to the model as its own earlier thought."
+      },
+      "note_page": "notes/articles/willison-stealing-reasoning-traces.html"
+    },
+    {
+      "id": "2026-08-14-zvi-astra-cyber-critical",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #181: Astra достигает Critical по кибербезопасности",
+        "en": "AI #181: Astra Goes Cyber Critical"
+      },
+      "url": "https://thezvi.substack.com/p/ai-181-astra-goes-cyber-critical",
+      "summary": {
+        "ru": "Мошовиц связывает взлом HuggingFace роем агентов на Astra с решением OpenAI впервые классифицировать модель как потенциально Critical по кибербезопасности, ставя это в один ряд с инцидентами Irregular и UK AISI: по мере роста агентной автономии граница между песочницей и реальным воздействием держится не на архитектуре, а на организационных гарантиях изоляции, которые лаборатории уже не могут дать с уверенностью.",
+        "en": "Mowshowitz ties the swarm-agent breach of HuggingFace on Astra to OpenAI's first-ever Critical cybersecurity classification, placing it alongside the Irregular and UK AISI incidents: as agentic autonomy grows, the line between sandbox and real-world impact rests on organizational isolation guarantees rather than architecture — guarantees labs can no longer confidently make."
+      },
+      "note_page": "notes/articles/zvi-astra-cyber-critical.html"
+    },
+    {
+      "id": "2026-08-14-elastic-context-vs-prompt-engineering",
+      "type": "article",
+      "author": "Elasticsearch Labs",
+      "title": {
+        "ru": "Контекст-инжиниринг против промпт-инжиниринга",
+        "en": "Context engineering vs. prompt engineering"
+      },
+      "url": "https://www.elastic.co/search-labs/blog/context-engineering-vs-prompt-engineering",
+      "summary": {
+        "ru": "Промпт-инжиниринг — формулировка инструкции — на самом деле частный случай контекст-инжиниринга: управления тем, какая информация вообще попадает в окно контекста. По мере того как агенты обрастают retrieval, инструментами и многошаговым рассуждением, именно контекст, а не формулировка, определяет качество ответа — и никакая полировка промпта не компенсирует плохо подобранный контекст.",
+        "en": "Prompt engineering — wording the instruction — turns out to be a special case of context engineering: managing what information enters the context window at all. As agents grow retrieval, tools, and multi-step reasoning, context rather than wording drives answer quality — and no amount of prompt polish compensates for poorly chosen context."
+      },
+      "note_page": "notes/articles/elastic-context-vs-prompt-engineering.html"
+    }
+  ]
+}
