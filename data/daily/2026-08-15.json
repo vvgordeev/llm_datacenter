@@ -1,0 +1,170 @@
+{
+  "date": "2026-08-15",
+  "generated_at": "2026-08-15T05:22:56Z",
+  "news": [
+    {
+      "id": "2026-08-15-gemini-3-7-flash",
+      "cluster_id": "google-gemini-3-7-flash",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "ru": "Google выпускает Gemini 3.7 Flash — самую способную «рабочую лошадку» для кода и агентов, всего через три недели после 3.6 Flash",
+        "en": "Google ships Gemini 3.7 Flash, its most capable coding-and-agent workhorse yet, just three weeks after 3.6 Flash"
+      },
+      "summary": {
+        "ru": "Google представила Gemini 3.7 Flash — модель для кода, агентных сценариев и веб-разработки с заметным ростом на бенчмарках отладки, точности кода с первой попытки и планирования вызовов инструментов. Вводная цена ($0.75 / $3.75 за млн токенов) вдвое ниже цены запуска 3.6 Flash, модель уже доступна в GitHub Copilot.",
+        "en": "Google introduced Gemini 3.7 Flash, a model for coding, agentic work and web development with notable gains on debugging, first-pass code accuracy and tool-calling benchmarks. Its introductory price ($0.75 / $3.75 per million tokens) is half of 3.6 Flash's launch price, and it's already rolling out in GitHub Copilot."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметное развитие для агентного кодинга — резкое снижение цены и охват через GitHub Copilot, но релиз спустя всего 3 недели после 3.6 Flash — это ускорение существующего цикла, а не смена подхода.",
+        "en": "A notable step for agentic coding — a sharp price cut plus reach via GitHub Copilot — but shipping just 3 weeks after 3.6 Flash makes this an accelerated iteration of an existing cycle, not a change of approach."
+      },
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "opinions": [
+        {
+          "author": "Sundar Pichai (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Наши модели Flash — рабочие лошадки, которые дают производительность по отличной цене. Мы стараемся быстро поставлять обновления в руки разработчиков. И вот всего через 3 недели после запуска 3.6 Flash модель 3.7 Flash показывает значительный рост, включая код и агентную работу.",
+            "en": "Our Flash models are workhorses that offer performance at a great price. So, we're shipping updates fast to get them in developers' hands. And now just 3 weeks after launching 3.6 Flash, 3.7 Flash shows significant gains including in coding and agentic work."
+          },
+          "url": "https://x.com/sundarpichai/status/2087948583890985263"
+        },
+        {
+          "author": "Chubby (@kimmonismus, X)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Неожиданно солидный скачок относительно 3.6: FrontierCode 43.6% против 34.4%, DeepSWE 65.3% против 49.0%, AutomationBench 30.4% против 17.0%, WebDev Arena 1588 против 1538 Elo.",
+            "en": "Surprisingly solid jump over 3.6! FrontierCode: 43.6% vs. 34.4%, DeepSWE: 65.3% vs. 49.0%, AutomationBench: 30.4% vs. 17.0%, WebDev Arena: 1588 vs. 1538 Elo."
+          },
+          "url": "https://x.com/kimmonismus/status/2087953482493923477"
+        },
+        {
+          "author": "eesel AI (обзор)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это совсем неплохая модель, но я не понимаю, в какой ситуации в первую очередь потянулся бы именно к 3.7 Flash. Google действительно нужен дифференциатор — особенно с учётом того, как сложно у них вообще получить API-ключ.",
+            "en": "It's not a bad model by any means, but I just don't know what situation I'd reach for 3.7 Flash first for. Google really needs a differentiator, especially given how hard it is to get an API key from them."
+          },
+          "url": "https://www.eesel.ai/blog/gemini-3-7-flash-review"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Генерация полноценных сайтов и интерактивных веб-приложений прямо из текстового промпта или референс-изображения, с более точным следованием дизайну",
+            "en": "Generating full websites and interactive web apps directly from a text prompt or a visual reference, with improved design fidelity"
+          },
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        },
+        {
+          "text": {
+            "ru": "Уже доступна в GitHub Copilot (Pro, Pro+, Business, Enterprise) как модель для агентных задач кодинга",
+            "en": "Already available in GitHub Copilot (Pro, Pro+, Business, Enterprise) as a model option for agentic coding tasks"
+          },
+          "url": "https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-15-glm-5-3-emergent-cyber",
+      "cluster_id": "zai-glm-5-3",
+      "models": [
+        "zai"
+      ],
+      "title": {
+        "ru": "Z.ai выпускает GLM-5.3: тот же базовый вес, что у GLM-5.2, но с внезапно возникшей способностью строить цепочки эксплойтов",
+        "en": "Z.ai ships GLM-5.3: same base weights as GLM-5.2, but with an emergent ability to chain exploits"
+      },
+      "summary": {
+        "ru": "Z.ai выпустила GLM-5.3 без переобучения базовой модели — весь прирост получен масштабированием пост-тренинга. Компания заявляет лидерство среди открытых моделей в кодинге и резкий скачок в кибербезопасности: модель самостоятельно научилась выстраивать цепочки эксплойтов и нашла 1097 критических уязвимостей в Linux, WebKit и FreeBSD. Из-за этого публикацию весов отложили на две недели для дополнительной проверки безопасности.",
+        "en": "Z.ai shipped GLM-5.3 without retraining the base model — all gains come from scaled post-training. The company claims the top spot among open-weights coding models plus a sharp jump in cybersecurity: the model learned on its own to chain exploits and found 1,097 critical vulnerabilities in Linux, WebKit and FreeBSD. Because of this, the weight release was delayed two weeks for extra safety evaluation."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "SOTA среди открытых кодинг-моделей за счёт одного лишь пост-тренинга, плюс первый случай, когда китайская лаборатория добровольно задерживает веса именно из-за возникшей опасной способности — важный прецедент безопасности, хотя сам метод (масштабирование пост-тренинга) не меняет подход к тренировке моделей.",
+        "en": "SOTA among open-weights coding models from post-training scale alone, plus the first time a Chinese lab has voluntarily delayed weights specifically because of an emergent dangerous capability — a meaningful safety precedent, even though the underlying method (scaled post-training) doesn't change how models are trained."
+      },
+      "source_url": "https://z.ai/blog/glm-5.3",
+      "opinions": [
+        {
+          "author": "Участник обсуждения на Hacker News",
+          "stance": "positive",
+          "quote": {
+            "ru": "Я понимаю, что такие модели можно использовать во вред, но справедливо, что она доступна публично (и может сыграть на твоей стороне в чрезвычайной ситуации). Именно это меняет мир к лучшему, а не гардрейлы.",
+            "en": "I understand that such models can be used by malicious actors, but it's fair to have it publicly available (and play on your side in case of emergency). This is what changes the world in a better way, I think, not the guardrails."
+          },
+          "url": "https://news.ycombinator.com/item?id=49294997"
+        },
+        {
+          "author": "VentureBeat",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Те же способности к долгим агентным цепочкам, что делают GLM-5.3 полезнее в разработке ПО, делают её и более способным исследователем безопасности — а потенциально и более способным атакующим оператором.",
+            "en": "The same long-horizon agent capabilities that make models more useful for software engineering can also make them more capable security researchers — and potentially more capable offensive operators."
+          },
+          "url": "https://venturebeat.com/technology/glm-5-3-is-here-with-advanced-cyber-capabilities-and-reportedly-already-found-a-serious-vulnerability-in-cursor"
+        },
+        {
+          "author": "Tech Times",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Добровольная задержка — первый случай, когда китайская лаборатория, работающая на переднем крае ИИ, называет причиной ограничения сроков релиза именно конкретную возникшую способность, а не экспортные ограничения или политику платформы.",
+            "en": "The voluntary delay is the first time a Chinese frontier AI lab has cited a specific emergent capability concern — rather than export pressure or platform policy — as the reason for restricting release timing."
+          },
+          "url": "https://www.techtimes.com/articles/324426/20260814/glm-53-post-training-produced-exploit-chains-zai-never-planned-finds-1097-critical-bugs.htm"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Уже доступна через GLM Coding Plan в связке с Claude Code, Cline, OpenCode и Codex — бесплатное обновление для существующих подписчиков плана",
+            "en": "Already available through the GLM Coding Plan alongside Claude Code, Cline, OpenCode and Codex — a free upgrade for existing plan subscribers"
+          },
+          "url": "https://felloai.com/glm-5-3/"
+        },
+        {
+          "text": {
+            "ru": "Автоматический аудит кода и поиск уязвимостей в больших кодовых базах — уже нашла 1097 критических уязвимостей в Linux, WebKit и FreeBSD",
+            "en": "Automated code auditing and vulnerability discovery across large codebases — already found 1,097 critical vulnerabilities in Linux, WebKit and FreeBSD"
+          },
+          "url": "https://www.techtimes.com/articles/324426/20260814/glm-53-post-training-produced-exploit-chains-zai-never-planned-finds-1097-critical-bugs.htm"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-15-turnbull-dont-classify-hallucinate",
+      "type": "article",
+      "author": "Doug Turnbull",
+      "title": {
+        "ru": "Не классифицируй. Галлюцинируй!",
+        "en": "Don't classify. Hallucinate!"
+      },
+      "url": "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
+      "summary": {
+        "ru": "Приём для классификации контента по огромному словарю категорий: вместо того чтобы показывать LLM весь список тегов, ей дают только пример их формы и просят «галлюцинировать» правдоподобную категорию, а затем через векторные эмбеддинги находят ближайший реальный тег. Работает даже с дешёвыми моделями, потому что вся сложность переносится на этап векторного поиска.",
+        "en": "A technique for classifying content against a huge category vocabulary: instead of showing the LLM the whole tag list, you give it only an example of the tags' shape and ask it to 'hallucinate' a plausible category, then use vector embeddings to find the nearest real tag. Works even with cheap models, since the hard part moves to the vector-search step."
+      },
+      "note_page": "notes/articles/turnbull-dont-classify-hallucinate.html"
+    },
+    {
+      "id": "2026-08-15-ai-explained-model-landscape-mid-2026",
+      "type": "video",
+      "author": "AI Explained",
+      "title": {
+        "ru": "Каждая модель ИИ середины 2026 года",
+        "en": "Every AI Model Explained (Mid-2026)"
+      },
+      "url": "https://www.youtube.com/watch?v=--8pJvYNcX4",
+      "summary": {
+        "ru": "Практическая карта рынка LLM середины 2026 года: модели делятся не по вендору, а по роли — флагманские, «рабочие лошадки», лёгкие и узкоспециализированные, — а выбор конкретной модели строится по четырём осям: способности, цена, скорость и специфические требования вроде локального запуска.",
+        "en": "A practical map of the mid-2026 LLM market: models are sorted not by vendor but by role — flagship, workhorse, light, and specialized — and picking a specific model comes down to four axes: capability, price, speed, and specific requirements like running locally."
+      },
+      "note_page": "notes/videos/ai-explained-model-landscape-mid-2026.html"
+    }
+  ]
+}

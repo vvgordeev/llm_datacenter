@@ -276,7 +276,13 @@
     "https://thezvi.substack.com/p/ai-181-astra-goes-cyber-critical": "2026-08-14",
     "notes/articles/zvi-astra-cyber-critical.html": "2026-08-14",
     "https://www.elastic.co/search-labs/blog/context-engineering-vs-prompt-engineering": "2026-08-14",
-    "notes/articles/elastic-context-vs-prompt-engineering.html": "2026-08-14"
+    "notes/articles/elastic-context-vs-prompt-engineering.html": "2026-08-14",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/": "2026-08-15",
+    "https://z.ai/blog/glm-5.3": "2026-08-15",
+    "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications": "2026-08-15",
+    "notes/articles/turnbull-dont-classify-hallucinate.html": "2026-08-15",
+    "https://www.youtube.com/watch?v=--8pJvYNcX4": "2026-08-15",
+    "notes/videos/ai-explained-model-landscape-mid-2026.html": "2026-08-15"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -769,6 +775,20 @@
       "summary": {
         "ru": "DeepSeek повышает цены API на V4-Flash/V4-Pro на 50-1100% с 16 августа, вводит пиковую/внепиковую тарификацию на фоне резкого роста трафика и сбоя мощностей",
         "en": "DeepSeek hikes V4-Flash/V4-Pro API prices by 50-1,100% effective August 16, introducing peak/off-peak pricing amid a sharp traffic surge and a capacity outage"
+      }
+    },
+    "google-gemini-3-7-flash": {
+      "last_date": "2026-08-15",
+      "summary": {
+        "ru": "Google выпускает Gemini 3.7 Flash — рабочую лошадку для кода и агентов с ростом на бенчмарках и вдвое ниже ценой, всего через 3 недели после 3.6 Flash",
+        "en": "Google ships Gemini 3.7 Flash, a coding/agent workhorse with benchmark gains and half the price, just 3 weeks after 3.6 Flash"
+      }
+    },
+    "zai-glm-5-3": {
+      "last_date": "2026-08-15",
+      "summary": {
+        "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели",
+        "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks"
       }
     }
   }

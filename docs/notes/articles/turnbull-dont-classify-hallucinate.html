@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: не классифицируй, галлюцинируй — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Doug Turnbull · 2026-08-10</span>
+      <span data-lang="en">Article digest · Doug Turnbull · 2026-08-10</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Не классифицируй. Галлюцинируй! Как заставить LLM расставлять теги из огромного словаря, не показывая ей этот словарь</span>
+      <span data-lang="en">Don't classify. Hallucinate! Getting an LLM to tag content against a huge vocabulary without ever showing it that vocabulary</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Найдено через линк-блог Simon Willison (simonwillison.net, запись от 2026-08-14) — сам материал принадлежит Дагу Тёрнбуллу, инженеру по поисковой релевантности (соавтор книг «Relevant Search» и «AI-Powered Search», ранее — Reddit, Shopify, OpenSource Connections).</span>
+      <span data-lang="en">Discovered via Simon Willison's linkblog (simonwillison.net, entry dated 2026-08-14) — the underlying piece is by Doug Turnbull, a search-relevance engineer (co-author of "Relevant Search" and "AI-Powered Search"; previously at Reddit, Shopify, OpenSource Connections).</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Тёрнбулл описывает практическую задачу, знакомую любому, кто пытался заставить LLM классифицировать контент по большому контролируемому словарю: у Willison на блоге накопилось 1856 тегов, и просто «скормить» модели весь список с вопросом «какой из этих тегов подходит записи» — плохая идея. Список слишком велик для промпта, а модель либо теряется в объёме вариантов, либо выбирает неточный тег просто потому, что он есть в списке. Та же проблема стоит перед любым e-commerce каталогом: у Wayfair, например, тысячи вложенных категорий товаров, и явно перечислить их все в промпте для каждого запроса нереалистично.</span>
+      <span data-lang="en">Turnbull describes a practical problem familiar to anyone who's tried to get an LLM to classify content against a large controlled vocabulary: Willison's blog has accumulated 1,856 tags, and simply feeding the model the whole list with "which of these tags fits this post" is a bad idea. The list is too large for a prompt, and the model either gets lost in the sheer number of options or picks an imprecise tag just because it happens to be on the list. The same problem faces any e-commerce catalog — Wayfair, for instance, has thousands of nested product categories, and listing them all in every classification prompt isn't realistic.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: придумать несуществующий ярлык, затем найти его ближайший реальный аналог</span><span data-lang="en">The method: invent a label that doesn't exist, then find its closest real match</span></h2>
+    <p>
+      <span data-lang="ru">Решение переворачивает задачу. Вместо того чтобы показывать модели реальный словарь и просить выбрать из него, ей вообще не показывают словарь. Модели дают только пример ФОРМЫ, в которой должны выглядеть категории (например, иерархию через «/»), и просят придумать — «галлюцинировать» — классификацию для конкретного запроса, которая выглядела бы правдоподобно, даже если такой категории в реальности не существует. Дальше вступает второй шаг: придуманный моделью ярлык переводят в векторное представление (embedding) и через косинусное сходство/скалярное произведение ищут ближайшие по смыслу РЕАЛЬНЫЕ категории из контролируемого словаря, эмбеддинги которого посчитаны заранее один раз. Модель не обязана знать точный словарь — ей достаточно уловить общий смысл и формат категорий, а сопоставление с реальным списком делает не LLM, а поиск по векторам.</span>
+      <span data-lang="en">The fix flips the task around. Instead of showing the model the real vocabulary and asking it to pick from it, you never show it the vocabulary at all. The model is given only an example of the SHAPE categories should take (say, a "/"-delimited hierarchy) and is asked to invent — "hallucinate" — a classification for the specific query that looks plausible, even if that exact category doesn't really exist. The second step is where it pays off: the model's invented label is turned into a vector embedding, and cosine similarity / dot product is used to find the closest REAL categories in the controlled vocabulary, whose embeddings were computed once, ahead of time. The model never needs to know the exact vocabulary — it only needs to grasp the general meaning and shape of the categories, while matching against the real list is done by vector search, not by the LLM itself.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Пример из статьи (промпт для категоризации товаров), который Тёрнбулл приводит как иллюстрацию формата, а Willison процитировал целиком:</span>
+      <span data-lang="en">The example from the article (a product-categorization prompt), which Turnbull gives to illustrate the format, and which Willison quoted in full:</span>
+    </p>
+    <p>
+      <em>
+        <span data-lang="ru">«Твоя задача — придумать новую, никогда ранее не встречавшуюся классификацию мебели, товаров для дома или инструментов, которая лучше всего подходит для поискового запроса». Дальше идут примеры формата вроде «Мебель / Мебель для гостиной / Журнальные и приставные столики / Журнальные столики» — и сам запрос, для которого нужно придумать классификацию: «коричневый журнальный столик».</span>
+        <span data-lang="en">"Your task is to create novel, never seen before, furniture, home goods, or hardware classification that best fit a search query." Then come shape examples like "Furniture / Living Room Furniture / Coffee Tables & End Tables / Coffee Tables" — and the query itself to generate a classification for: "brown coffee table."</span>
+      </em>
+    </p>
+
+    <h2><span data-lang="ru">Когда это применять и в чём ограничение</span><span data-lang="en">When to use it, and where it breaks</span></h2>
+    <p>
+      <span data-lang="ru">Приём выгоден именно там, где реальный словарь категорий слишком велик или слишком часто меняется, чтобы каждый раз пересылать его модели целиком: большие теговые системы, глубокие каталоги e-commerce, маршрутизация тикетов по десяткам отделов. Побочный эффект, который Тёрнбулл отдельно отмечает как практический плюс: раз модели не нужно удерживать в контексте весь словарь и «запоминать» его вид, для самого шага галлюцинации годится дешёвая и не самая умная модель — тяжесть задачи переносится на этап векторного поиска, а не на LLM.</span>
+      <span data-lang="en">The trick pays off exactly where the real category vocabulary is too large or changes too often to resend in full on every call: large tagging systems, deep e-commerce catalogs, ticket routing across dozens of departments. A side effect Turnbull calls out as a practical win: since the model never has to hold the whole vocabulary in context or "memorize" its shape, the hallucination step itself can run on a cheap, not-especially-smart model — the hard part of the task moves to the vector-search step, not the LLM.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ограничение, которое статья явно не решает: качество результата целиком зависит от того, насколько эмбеддинг-модель кладёт «выдуманный» и реальный ярлыки близко друг к другу в векторном пространстве. Если галлюцинация модели получилась слишком нетипичной или расплывчатой, ближайший реальный сосед может оказаться случайным совпадением, а не точной категорией — так что для продакшена нужен порог схожести и понятный fallback на случай, когда ни один реальный тег не подходит достаточно близко. Сам Тёрнбулл описывает это как приём, который сработал у него на практике, а не как метод с доказанными гарантиями точности.</span>
+      <span data-lang="en">The limitation the article doesn't resolve: result quality depends entirely on the embedding model placing the "hallucinated" and real labels close together in vector space. If the model's hallucination comes out too atypical or vague, the nearest real neighbor could be a coincidental match rather than the correct category — so production use needs a similarity threshold and a clear fallback for when no real tag is close enough. Turnbull himself frames this as a trick that worked for him in practice, not a method with proven accuracy guarantees.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

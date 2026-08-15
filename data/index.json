@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-15",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Google выпускает Gemini 3.7 Flash — самую способную «рабочую лошадку» для кода и агентов, всего через три недели после 3.6 Flash",
+        "en": "Google ships Gemini 3.7 Flash, its most capable coding-and-agent workhorse yet, just three weeks after 3.6 Flash"
+      }
+    },
+    {
       "date": "2026-08-14",
       "news_count": 3,
       "expert_count": 3,

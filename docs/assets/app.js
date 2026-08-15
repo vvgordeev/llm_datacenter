@@ -50,7 +50,8 @@ const VENDORS = {
   deepseek: ["DeepSeek", "var(--vendor-deepseek)"], qwen: ["Qwen", "var(--vendor-qwen)"],
   tencent: ["Tencent", "var(--vendor-tencent)"],
   moonshot: ["Moonshot AI", "var(--vendor-moonshot)"],
-  "thinking-machines": ["Thinking Machines", "var(--vendor-thinking-machines)"]
+  "thinking-machines": ["Thinking Machines", "var(--vendor-thinking-machines)"],
+  zai: ["Z.ai", "var(--vendor-zai)"]
 };
 const TOP_N = { week: 10, month: 15 };
 
