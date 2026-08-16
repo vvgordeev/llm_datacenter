@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: инженерия инференса по Baseten — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект подкаста · Latent Space (swyx и Vibhu, гости — Philip Kiely и Ali Taha, Baseten) · 2026-08-11</span>
+      <span data-lang="en">Podcast digest · Latent Space (swyx and Vibhu, guests — Philip Kiely and Ali Taha, Baseten) · 2026-08-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Мастер-класс по инженерии инференса: что происходит между «модель выложена на Hugging Face» и «продакшн-API держит запросы на 200 000 токенов»</span>
+      <span data-lang="en">The inference engineering masterclass: what happens between "model dropped on Hugging Face" and "production API serving 200,000-token requests"</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/inference-eng" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Инженеры Baseten — компании, которая продаёт доступ к открытым моделям по токену, — сели с ведущими Latent Space, чтобы разложить по полочкам путь модели от веса на диске до быстрого и надёжного продакшн-API. Их центральный тезис: «инференс — это новый трейнинг» — то есть львиная доля инженерной работы в 2026 году сместилась с обучения моделей на их обслуживание, а прирост в скорости и стоимости запроса теперь чаще всего даёт не более крупная модель, а более грамотная подача уже существующей.</span>
+      <span data-lang="en">Baseten's engineers — the company sells per-token access to open-weight models — sat down with the Latent Space hosts to walk through what it actually takes to get from a weight file on disk to a fast, reliable production API. Their central claim: "inference is the new training" — that in 2026 the bulk of engineering effort has shifted from training models to serving them, and gains in per-request speed and cost now usually come not from a bigger model but from smarter serving of the model you already have.</span>
+    </p>
+
+    <h2><span data-lang="ru">Квантование, спекулятивное декодирование, разделение prefill/decode</span><span data-lang="en">Quantization, speculative decoding, prefill/decode disaggregation</span></h2>
+    <p>
+      <span data-lang="ru">Разбор идёт по трём приёмам, которые в сумме дают ускорение в 4–10 раз. Квантование (в разговоре речь о формате NVFP4) снижает точность весов и вычислений, чтобы уместить больше параметров в ту же память и пропускную способность GPU — и, по наблюдению гостей, ошибки квантования на разных слоях модели иногда компенсируют друг друга, а не складываются, поэтому реальная деградация качества часто меньше, чем можно ожидать по формуле. Спекулятивное декодирование ставит рядом с основной моделью маленький «черновой» предиктор: он предлагает несколько токенов вперёд, а основная модель проверяет их за один проход вместо генерации по одному токену — выигрыш тем больше, чем чаще черновик угадывает верно. Третий приём — разнесение фаз prefill (обработка входного промпта, требовательная к вычислениям) и decode (пошаговая генерация ответа, требовательная к памяти и пропускной способности) на разное железо с разными настройками рантайма, вместо того чтобы держать обе фазы на одних и тех же GPU с одним и тем же профилем производительности.</span>
+      <span data-lang="en">The walkthrough centers on three techniques that combine for a 4–10x speedup. Quantization (the conversation focuses on the NVFP4 format) lowers the precision of weights and computation to fit more parameters into the same memory and GPU bandwidth — and, per the guests, quantization errors on different layers of the model sometimes cancel each other out rather than stacking, so real-world quality loss is often smaller than the arithmetic would suggest. Speculative decoding pairs the main model with a small "draft" predictor: it proposes several tokens ahead, and the main model verifies them in a single pass instead of generating one token at a time — the payoff grows with how often the draft guesses right. The third technique is splitting prefill (processing the input prompt, compute-heavy) from decode (step-by-step response generation, memory- and bandwidth-heavy) onto separate hardware with separate runtime tuning, instead of holding both phases on the same GPUs with one performance profile.</span>
+    </p>
+
+    <h2><span data-lang="ru">Где узкое место на самом деле</span><span data-lang="en">Where the real bottleneck is</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой контринтуитивный тезис эпизода: узким местом всё чаще оказывается не сырая вычислительная мощность GPU, а перемещение KV-кэша (промежуточного состояния внимания модели) и связь между чипами при разнесении модели на несколько ускорителей. Наивная раздача триллион-параметрной модели на GPU поколения Hopper без этих приёмов даёт 30–50 токенов в секунду; та же модель на продакшн-стеке — с NVFP4-квантованием, обученным спекулятором, разделением prefill/decode и настроенным рантаймом — выдаёт 300–400 токенов в секунду. Гости отдельно подчёркивают, что одинаковые веса модели могут вести себя по-разному на разных кластерах железа: сеть, топология чипов и версия рантайма меняют итоговую производительность не меньше, чем сама архитектура модели.</span>
+      <span data-lang="en">The episode's key counterintuitive claim: the bottleneck increasingly isn't raw GPU compute but moving the KV cache (the model's intermediate attention state) around and inter-chip communication when a model is split across multiple accelerators. Naively serving a trillion-parameter model on Hopper-generation GPUs without these techniques gets 30–50 tokens per second; the same model on a production stack — NVFP4 quantization, a trained speculator, prefill/decode disaggregation, and a tuned runtime — reaches 300–400 tokens per second. The guests separately stress that identical model weights can behave differently across different hardware clusters: networking, chip topology, and runtime version move the final throughput as much as the model's own architecture does.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это применимо — и когда не стоит браться</span><span data-lang="en">When this applies — and when it isn't worth it</span></h2>
+    <p>
+      <span data-lang="ru">Гости приводят пример, как Baseten приладили визуальный энкодер от модели Kimi к языковой модели GLM-5.2, не трогая саму языковую часть, — иллюстрация того, что серьёзная инженерия инференса открывает и композиционные трюки, а не только скорость. Но авторы честны в ограничениях: весь этот арсенал — квантование, спекулятивное декодирование, дизагрегация, тонкая настройка рантайма под конкретный кластер — имеет смысл только на масштабе, где экономят реальные деньги: команде, которая обслуживает один открытый чекпойнт для внутреннего чат-бота на паре GPU, разумнее один раз выбрать разумные дефолтные настройки хостинга, чем воспроизводить у себя стек уровня инференс-провайдера. Разбор адресован в первую очередь тем, кто сам держит инференс открытых моделей или платформу поверх них — обычному пользователю API это скорее объясняет, почему цена и скорость у разных провайдеров одной и той же модели так сильно различаются.</span>
+      <span data-lang="en">The guests give an example of Baseten grafting a vision encoder from the Kimi model onto the GLM-5.2 language model without touching the language side — an illustration that serious inference engineering also unlocks compositional tricks, not just speed. But the guests are candid about the limits: this whole toolbox — quantization, speculative decoding, disaggregation, runtime tuning for a specific cluster — only pays off at a scale where it saves real money; a team serving one open checkpoint for an internal chatbot on a couple of GPUs is better off picking sane default hosting settings once than trying to reproduce an inference-provider-grade stack in house. The walkthrough is aimed mainly at people who actually run inference for open models or a platform on top of them — for a regular API user, it mostly explains why price and speed for the same model differ so much between providers.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

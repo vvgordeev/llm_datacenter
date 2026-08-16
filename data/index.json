@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-16",
+      "news_count": 3,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "ChatGPT для Mac получил Computer History — память об активности на компьютере вместо только истории чата",
+        "en": "ChatGPT for Mac gets Computer History — memory of computer activity, not just chat history"
+      }
+    },
+    {
       "date": "2026-08-15",
       "news_count": 2,
       "expert_count": 2,

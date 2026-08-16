@@ -1,0 +1,167 @@
+{
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T05:18:59Z",
+  "news": [
+    {
+      "id": "2026-08-16-openai-chatgpt-computer-history",
+      "cluster_id": "openai-chatgpt-computer-history",
+      "models": ["openai"],
+      "title": {
+        "ru": "ChatGPT для Mac получил Computer History — память об активности на компьютере вместо только истории чата",
+        "en": "ChatGPT for Mac gets Computer History — memory of computer activity, not just chat history"
+      },
+      "summary": {
+        "ru": "13 августа OpenAI выкатила в десктоп-приложении ChatGPT для Mac функцию Computer History, сменившую исследовательский предпросмотр Chronicle. Вместо скриншотов система записывает события взаимодействия — клики, ввод текста, горячие клавиши, переключение между приложениями — по выбранным пользователем приложениям и сайтам, строя из них таймлайн, к которому могут обращаться ChatGPT и Codex, чтобы продолжать прерванную задачу без повторного объяснения контекста. Функция выключена по умолчанию и доступна только на Pro/Business/Enterprise-планах.",
+        "en": "On August 13, OpenAI shipped Computer History in the ChatGPT desktop app for Mac, replacing the Chronicle research preview. Instead of screenshots, the system records interaction events — clicks, typing, keyboard shortcuts, app switching — across apps and websites the user allows, building a timeline that ChatGPT and Codex can draw on to resume an interrupted task without re-explaining context. The feature is off by default and limited to Pro/Business/Enterprise plans."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценария — память агента о работе за компьютером, а не только о переписке в чате, — но пока узко (Mac, платные планы) и уже вызывает предметную дискуссию о безопасности (расширение поверхности prompt injection, нешифрованное хранение), поэтому это заметное, но не парадигмальное развитие.",
+        "en": "Opens a new class of scenario — agent memory of what you did on your computer, not just chat history — but it's narrow for now (Mac, paid plans only) and already drawing substantive security pushback (wider prompt-injection surface, unencrypted storage), so this is notable rather than paradigm-shifting."
+      },
+      "source_url": "https://x.com/OpenAI/status/2087996496088297746",
+      "opinions": [
+        {
+          "author": "Rohan Paul (X)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Новая функция Computer History в ChatGPT теперь может помнить, что вы делали на Mac, без скриншотов — даёт ChatGPT и Codex слой памяти, построенный на активности в разрешённых приложениях и сайтах, а не только на истории чата. То есть вместо скриншот-подхода Chronicle...",
+            "en": "The new Computer History in ChatGPT can now remember what you did on your Mac, without screenshots. Gives ChatGPT and Codex a memory layer built from activity across allowed apps and websites rather than chat history alone. So instead of Chronicle's screenshot-based approach..."
+          },
+          "url": "https://x.com/rohanpaul_ai/status/2088011057134813476"
+        },
+        {
+          "author": "Windows Central",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Функция, которая сильно напоминает нашумевший и раскритикованный инструмент Recall из Windows 11.",
+            "en": "A feature that looks a lot like Windows 11's controversial Recall tool."
+          },
+          "url": "https://www.windowscentral.com/artificial-intelligence/openai-chatgpt/chatgpt-computer-history-recall-hated-windows-11"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пользователь может попросить ChatGPT продолжить утреннюю задачу — например, доработать документ или доследовать за веб-исследованием, — сославшись на активность в приложениях и браузере из Computer History, вместо того чтобы заново пересказывать контекст в чате.",
+            "en": "A user can ask ChatGPT to pick up a task from earlier in the day — finishing a document, continuing web research — by referencing app and browser activity captured in Computer History, instead of re-explaining the context in chat."
+          },
+          "url": "https://learn.chatgpt.com/docs/customization/computer-history"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-16-anthropic-sonnet-5-pricing-permanent",
+      "cluster_id": "anthropic-sonnet-5-pricing-permanent",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic делает вводную цену Claude Sonnet 5 постоянной — повышения 1 сентября не будет",
+        "en": "Anthropic makes Claude Sonnet 5's introductory pricing permanent — no September 1 increase"
+      },
+      "summary": {
+        "ru": "11 августа Anthropic объявила, что вводная цена Claude Sonnet 5 — $2 за млн входных и $10 за млн выходных токенов, действовавшая с июньского запуска «по 31 августа» — становится постоянной; ранее подразумевавшееся повышение до $3/$15 с 1 сентября отменено. Пост собрал около 1,5 млн просмотров за первые часы, но за похвалой быстро последовали комментарии с подсчётами: из-за нового токенизатора Sonnet 5 то же самое содержимое может превращаться в заметно больше токенов (примерно в 1.0–1.35 раза в зависимости от типа контента), чем у предыдущей модели, так что реальная выгода от «постоянной» цены не так однозначна, как кажется на первый взгляд.",
+        "en": "On August 11, Anthropic announced that Claude Sonnet 5's introductory rate — $2 per million input tokens and $10 per million output tokens, in effect since the June launch \"through August 31\" — is now permanent; the previously implied step-up to $3/$15 on September 1 is cancelled. The post drew roughly 1.5 million views within hours, but praise was quickly followed by arithmetic: Sonnet 5's new tokenizer can turn the same content into noticeably more tokens (roughly 1.0–1.35x depending on content type) than the prior model, so the real-world benefit of the \"permanent\" price isn't as clear-cut as it first looks."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Чисто ценовое/бюджетное решение без изменения возможностей модели или подхода к её использованию; влияет на бюджеты большого числа пользователей API, но это продолжение уже известной механики (вводная цена + токенизатор), а не новый сценарий.",
+        "en": "A purely pricing/budgeting decision with no change to the model's capabilities or how it's used; it affects budgets for a large API user base, but it continues an already-known mechanic (introductory pricing plus the new tokenizer) rather than opening a new scenario."
+      },
+      "source_url": "https://x.com/claudeai/status/2086891169217122586",
+      "opinions": [
+        {
+          "author": "Joe Njenga (Medium)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Anthropic только что сделала цену предложения Claude Sonnet 5 постоянной.",
+            "en": "Anthropic Just Made Claude Sonnet 5 Offer Pricing Permanent."
+          },
+          "url": "https://medium.com/ai-software-engineer/anthropic-just-made-claude-sonnet-5-offer-pricing-permanent-c51d293bb3e8"
+        },
+        {
+          "author": "ai-checker.webcoda.com.au",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "«Скидка» Claude Sonnet 5 на самом деле не скидка, и Anthropic это признаёт.",
+            "en": "Claude Sonnet 5's 'discount' isn't really a discount, and Anthropic admits it."
+          },
+          "url": "https://ai-checker.webcoda.com.au/articles/claude-sonnet-5-tokenizer-pricing-reality-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды, планирующие бюджет на Claude Code и агентные пайплайны на Sonnet 5, пересчитывают ожидаемые расходы на сентябрь с учётом того, что цена за токен не вырастет, но фактическое число токенов на тот же запрос может быть выше, чем на предыдущей модели.",
+            "en": "Teams budgeting for Claude Code and agentic pipelines on Sonnet 5 are recalculating September spend now that the per-token price won't rise, while the actual token count for the same request may run higher than on the prior model."
+          },
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-16-deepseek-v4-peak-off-peak-pricing-live",
+      "cluster_id": "deepseek-v4-price-hike",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "Пиковые тарифы DeepSeek V4 вступают в силу — цены выросли до 1100%",
+        "en": "DeepSeek V4's peak/off-peak pricing goes live — prices up as much as 1,100%"
+      },
+      "summary": {
+        "ru": "16 августа в 16:00 UTC для V4-Flash и V4-Pro вступает в силу анонсированная ранее (14 августа) новая тарифная сетка DeepSeek с разделением на пиковые (01:00–04:00 и 06:00–10:00 UTC) и внепиковые часы: рост цен по разным моделям и типам токенов составляет от 50% до более чем 1100%, а внепиковый тариф установлен на уровне половины пикового. Для V4-Pro выходной токен на пике будет стоить $3.96 за млн — более чем в 4 раза дороже прежних $0.87. Официальная причина — «более рациональное распределение ресурсов» и стимулирование смещения нагрузки на менее загруженные часы.",
+        "en": "At 16:00 UTC on August 16, the new tiered pricing DeepSeek announced on August 14 for V4-Flash and V4-Pro takes effect, splitting peak hours (01:00–04:00 and 06:00–10:00 UTC) from off-peak: increases range from 50% to over 1,100% depending on model and token type, with off-peak rates set at half the peak rate. For V4-Pro, peak output tokens will cost $3.96 per million — more than 4x the prior $0.87. The stated reason is to \"allocate resources more reasonably\" and push load toward less congested hours."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Существенно меняет экономику самой дешёвой из околофронтирных моделей — заметно для широкого круга разработчиков и вызвало волну обсуждения (HN, крупные СМИ), но это ценовая корректировка, а не изменение возможностей или подхода к использованию модели.",
+        "en": "Materially changes the economics of the cheapest near-frontier model — noticeable for a broad developer base and drew a real reaction wave (HN, major outlets) — but it's a pricing adjustment, not a change in capability or how the model is used."
+      },
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "opinions": [
+        {
+          "author": "Rohan Paul (X)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "DeepSeek официально объявила о «значительном» повышении цен API. Самая дешёвая близкая к фронтиру модель на рынке, стоившая около 3 центов за задачу, скоро станет заметно дороже. Это случилось спустя неделю после выхода DeepSeek-V4-Flash-0731.",
+            "en": "DeepSeek officially announced API pricing is going up \"significantly\" — that the cheapest near-frontier model on the market, at roughly 3 cents a task, is about to cost a lot more. It landed a week after DeepSeek-V4-Flash-0731 shipped."
+          },
+          "url": "https://x.com/rohanpaul_ai/status/2085338471812722818"
+        },
+        {
+          "author": "Sanchit Vir Gogia, chief analyst, Greyhound Research (via InfoWorld)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "На бумаге, на пике, при правильном сравнении ценовое преимущество DeepSeek действительно исчезает, а местами и переворачивается — но собственное расписание тарифов и механика кэширования возвращают большую часть этого преимущества любому покупателю, который внимательно считает.",
+            "en": "On paper, at peak, against the right comparator, DeepSeek's price advantage does disappear, and in places inverts — but the schedule's own clock and cache hand most of it back to any buyer paying attention."
+          },
+          "url": "https://www.infoworld.com/article/4209439/deepseek-raises-some-v4-prices-by-more-than-10x-as-ai-demand-strains-capacity.html"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды, использующие V4-Pro/V4-Flash для пакетной обработки и агентных задач без жёсткого требования к задержке, переносят такие нагрузки на внепиковые окна (01:00–04:00 и 06:00–10:00 UTC), чтобы платить вдвое меньше пикового тарифа.",
+            "en": "Teams running V4-Pro/V4-Flash for batch processing and agentic workloads without hard latency requirements are shifting that work into the off-peak windows (01:00–04:00 and 06:00–10:00 UTC) to pay half the peak rate."
+          },
+          "url": "https://www.verdent.ai/guides/deepseek-v4-pricing-api-migration-2026"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-16-latentspace-baseten-inference-engineering-masterclass",
+      "type": "article",
+      "author": "Latent Space (swyx and Vibhu, guests: Philip Kiely and Ali Taha, Baseten)",
+      "title": {
+        "ru": "Мастер-класс по инженерии инференса от Baseten",
+        "en": "The Inference Engineering Masterclass, with Baseten"
+      },
+      "url": "https://www.latent.space/p/inference-eng",
+      "summary": {
+        "ru": "Инженеры Baseten разбирают с ведущими Latent Space путь модели от веса на диске до продакшн-API: квантование (NVFP4), спекулятивное декодирование и разделение фаз prefill/decode вместе дают ускорение в 4–10 раз, при этом реальным узким местом всё чаще оказывается перемещение KV-кэша и связь между чипами, а не сырая мощность GPU. Наивная раздача триллион-параметрной модели даёт 30–50 токенов/сек, продакшн-стек с этими приёмами — 300–400 токенов/сек.",
+        "en": "Baseten's engineers walk Latent Space's hosts through what it takes to turn a downloaded model weight into a production API: quantization (NVFP4), speculative decoding, and prefill/decode disaggregation together yield a 4–10x speedup, while the real bottleneck is increasingly KV-cache movement and inter-chip communication rather than raw GPU compute. A naive setup serves a trillion-parameter model at 30–50 tokens/sec; a production stack using these techniques reaches 300–400 tokens/sec."
+      },
+      "note_page": "notes/articles/latentspace-baseten-inference-engineering-masterclass.html"
+    }
+  ]
+}

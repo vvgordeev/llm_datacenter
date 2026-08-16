@@ -1,0 +1,52 @@
+{
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T05:18:59Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED www.anthropic.com; fallback to WebSearch"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 3, "note": "Sonnet 5 pricing permanent (Aug11, new); Fable 5 biology safeguards (Aug7, too stale, skipped); Claude Code misc patch notes (routine, skipped)"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED openai.com; fallback to WebSearch"},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 4, "note": "Computer History (Aug13, new); ChatGPT quizzes (Aug14, minor, skipped); o3/DALL-E retirement (routine, skipped); Ultrafast/Astra already covered Aug14/Aug10"},
+    {"source": "google deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED blog.google; fallback to WebSearch"},
+    {"source": "google (WebSearch)", "status": "empty", "candidates": 0, "note": "Gemini 3.7 Flash already covered Aug15; no new item found for Aug16"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED ai.meta.com; fallback to WebSearch"},
+    {"source": "meta (WebSearch)", "status": "empty", "candidates": 0, "note": "Muse Glimmer already covered Aug11; Muse Code is Aug5, stale"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED x.ai; fallback to WebSearch"},
+    {"source": "xai (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok 4.6 already covered Aug13; no new item"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED mistral.ai; fallback to WebSearch"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "regional inference/GLM-5.2 hosting already covered Aug12"},
+    {"source": "deepseek changelog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED api-docs.deepseek.com; fallback to WebSearch"},
+    {"source": "deepseek (WebSearch)", "status": "ok", "candidates": 1, "note": "V4 peak/off-peak pricing taking effect today (Aug16 16:00 UTC) — continuation of deepseek-v4-price-hike cluster (announced Aug14) with new figures and reaction wave"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "curl to hn.algolia.com timed out / EGRESS_BLOCKED; fallback to WebSearch site: queries"},
+    {"source": "hn (WebSearch)", "status": "ok", "candidates": 0, "note": "found reaction threads for DeepSeek pricing (used as opinion), no standalone HN-sourced news item"},
+    {"source": "reddit (WebSearch)", "status": "ok", "candidates": 0, "note": "r/ClaudeAI cost-comparison thread found and used as opinion for Sonnet 5 pricing story; no standalone news item"},
+    {"source": "aggregators: smol.ai / TLDR AI / simonwillison linkblog", "status": "ok", "candidates": 0, "note": "checked via WebSearch, all surfaced items already covered on prior days or already used"},
+    {"source": "extended pass (broad queries)", "status": "ok", "candidates": 0, "note": "~10 additional broad WebSearch queries ('AI news digest Aug16', '\"August 16, 2026\"', etc.) run to confirm thin day before accepting 3 news items"},
+    {"source": "expert: Simon Willison (simonwillisonblog-backup clone)", "status": "empty", "candidates": 0, "note": "backup repo confirmed fresh as of 2026-08-16 02:47 UTC (git log); no blog_entry/blogmark newer than Aug14, which was already published Aug15"},
+    {"source": "expert: Latent Space", "status": "ok", "candidates": 1, "note": "found unused Aug11 episode 'Inference Engineering Masterclass' (Baseten) via WebSearch; used"},
+    {"source": "expert: Ethan Mollick / oneusefulthing.org", "status": "empty", "candidates": 0, "note": "WebFetch blocked; WebSearch found no post newer than late July / stale items only"},
+    {"source": "expert video: Andrej Karpathy (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED www.youtube.com (RSS + WebFetch); yt-dlp also failed with 'Tunnel connection failed: 403 Forbidden' at proxy CONNECT level — youtube.com wholesale blocked today"},
+    {"source": "expert video: AI Explained (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "same youtube.com CONNECT block; WebSearch fallback only surfaced a ~2-week-old video (math breakthroughs), too stale, and Aug15 video already used"},
+    {"source": "expert video: Matt Wolfe (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "same youtube.com CONNECT block; WebSearch fallback found no dated recent upload"},
+    {"source": "expert video: Nate Herk (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "same youtube.com CONNECT block; WebSearch fallback found no dated recent upload"},
+    {"source": "expert video: Matt Pocock (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "same youtube.com CONNECT block; WebSearch fallback found no dated recent upload"},
+    {"source": "yt-dlp / imageio-ffmpeg tooling", "status": "installed", "candidates": 0, "note": "pip install succeeded (yt_dlp import OK, ffmpeg binary present) but unusable today since youtube.com is blocked at the network egress proxy CONNECT level (confirmed via yt-dlp --flat-playlist error), not just an anti-bot block on individual pages"}
+  ],
+  "totals": {
+    "candidates": 8,
+    "published": 3,
+    "rejected": {
+      "уже освещено в предыдущие дни (Grok 4.6, Gemini 3.7 Flash, GPT-5.6 Ultrafast, Muse Glimmer, Astra math proofs, Mistral regional inference, Claude Code auto-mode)": 7,
+      "устарело (Fable 5 biology safeguards Aug7, Meta Muse Code Aug5, AI Explained math video ~2 weeks old)": 3,
+      "рутинное/некрупное (ChatGPT quizzes, o3/DALL-E retirement, Claude Code patch notes)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted — no candidate video URL discovered (youtube.com blocked for RSS/yt-dlp discovery, WebSearch fallback found nothing within the 7-day freshness window that wasn't already stale or already used)",
+    "frames": "skipped for the same reason",
+    "tooling_status": "yt-dlp and imageio-ffmpeg installed successfully via pip as instructed for the cloud environment, but youtube.com itself is blocked at the egress proxy CONNECT level today (confirmed both via WebFetch EGRESS_BLOCKED and yt-dlp ProxyError 403), unlike some prior runs where YouTube was reachable"
+  },
+  "notes": {
+    "expert_content_shortfall": "Only 1 of the target min_expert_total=5 expert items was found today. This is flagged as environment degradation, not a quiet week: YouTube (all 5 configured video experts) was unreachable at the network level for the entire run, and the simonwillisonblog-backup mirror — confirmed freshly updated as of today 02:47 UTC — shows Simon Willison genuinely has not posted since Aug 14 (already published in the Aug15 digest). Latent Space, Ethan Mollick, and general 'resonant article of the week' expansion searches were also run but did not surface additional unused, sufficiently-recent, well-attributed material.",
+    "news_count_note": "3 published news items after an extensive multi-round search (14 initial model/aggregator/HN queries + ~15 follow-up targeted queries) confirmed a genuinely thin news day: most discoverable stories were continuations of already-covered clusters. Per skill guidance, chose 3 real items over padding with stale or routine items."
+  }
+}
