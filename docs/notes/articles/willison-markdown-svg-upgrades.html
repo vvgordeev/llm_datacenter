@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: обновления markdown-svg-renderer — как удобно делиться SVG, которые рисуют LLM — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект заметки · Simon Willison · 2026-08-16</span>
+      <span data-lang="en">Note digest · Simon Willison · 2026-08-16</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Обновления markdown-svg-renderer: удобный способ делиться SVG, которые рисуют LLM</span>
+      <span data-lang="en">Markdown SVG upgrades: a better way to share SVGs that LLMs draw</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон рассказывает об очередном витке доработок своего инструмента <a href="https://tools.simonwillison.net/markdown-svg-renderer" target="_blank" rel="noopener">markdown-svg-renderer</a>, который он начал делать ещё в мае и с тех пор регулярно расширяет. Задача инструмента простая и узкая, но у самого Уиллисона — регулярная: он постоянно тестирует модели своим фирменным запросом «нарисуй пеликана на велосипеде в формате SVG» и ему нужен удобный способ показывать читателям результат — Markdown-текст с embedded SVG-кодом внутри, который браузер сам по себе не отрендерит.</span>
+      <span data-lang="en">Simon Willison writes about another round of improvements to his <a href="https://tools.simonwillison.net/markdown-svg-renderer" target="_blank" rel="noopener">markdown-svg-renderer</a> tool, which he started building back in May and has kept extending since. The tool solves a narrow but, for Willison, recurring problem: he regularly benchmarks models with his signature "draw a pelican riding a bicycle in SVG" prompt, and needs an easy way to show readers the result — a Markdown document with raw SVG code embedded in it, which a browser won't render on its own.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как это работает</span><span data-lang="en">How it works</span></h2>
+    <p>
+      <span data-lang="ru">Инструмент устроен просто: на странице <code>markdown-svg-renderer</code> можно вставить Markdown-текст напрямую в браузере, либо сохранить его по CORS-совместимому URL или в GitHub Gist и передать инструменту только ссылку. Второй вариант даёт закладку-URL вида <code>markdown-svg-renderer#url=...</code>, в которую «запечён» адрес исходного документа, — такую ссылку удобно один раз сгенерировать и потом просто пересылать. Сырой SVG-код внутри исходного документа инструмент превращает в блок с несколькими вкладками, а не просто в статичную картинку.</span>
+      <span data-lang="en">The tool itself is simple: on the <code>markdown-svg-renderer</code> page you can paste Markdown directly in the browser, or save it to a CORS-friendly URL or a GitHub Gist and hand the tool just the link. The second option produces a bookmarkable URL of the form <code>markdown-svg-renderer#url=...</code>, with the source document's address baked into it — generate it once and just forward the link from then on. The raw SVG code inside the source document gets turned into a multi-tab block, not just a static image.</span>
+    </p>
+
+    <h2><span data-lang="ru">Новое: экспорт анимированного SVG в MP4 прямо в браузере</span><span data-lang="en">What's new: exporting animated SVG to MP4, right in the browser</span></h2>
+    <p>
+      <span data-lang="ru">До этого обновления инструмент уже умел показывать рендер SVG рядом с исходным кодом и отдавать его в виде PNG или JPEG — это полезно для площадок, которые не поддерживают вставку SVG напрямую. Главное новое в этой заметке — вкладка MP4: инструмент анализирует SVG на наличие анимации, сам оценивает разумную длительность зацикленного видео, рендерит по кадрам всю анимацию и подгружает в браузер библиотеку <a href="https://github.com/ffmpegwasm/ffmpeg.wasm" target="_blank" rel="noopener">ffmpeg.wasm</a> (около 30 МБ) — полноценный FFmpeg, скомпилированный в WebAssembly, — чтобы собрать эти кадры в MP4-видео, не отправляя ничего на сервер.</span>
+      <span data-lang="en">Before this update, the tool could already show the rendered SVG next to the source code and export it as PNG or JPEG — useful for platforms that don't support embedding SVG directly. The main new thing in this post is the MP4 tab: the tool inspects the SVG for animation, estimates a sensible loop duration itself, renders the animation out frame by frame, and loads <a href="https://github.com/ffmpegwasm/ffmpeg.wasm" target="_blank" rel="noopener">ffmpeg.wasm</a> (about 30MB) into the browser — a full build of FFmpeg compiled to WebAssembly — to compile those frames into an MP4 video without sending anything to a server.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это нужно</span><span data-lang="en">Why it's useful</span></h2>
+    <p>
+      <span data-lang="ru">Практическая причина проста: многие площадки, где Уиллисон и другие делятся результатами тестирования моделей (соцсети, форумы, некоторые CMS), либо вообще не поддерживают SVG, либо не поддерживают именно анимированный SVG. Возможность одним кликом получить MP4-версию той же анимации снимает эту проблему — не нужно вручную записывать экран или искать отдельный конвертер. Это не переворот в подходах к использованию LLM, а скорее пример того, как небольшой самодельный инструмент вокруг регулярного бенчмарка модели постепенно обрастает практичными фичами, снижающими трение при демонстрации результатов.</span>
+      <span data-lang="en">The practical reason is simple: many of the places Willison and others share model-benchmarking results (social platforms, forums, some CMSes) either don't support SVG at all, or don't support animated SVG specifically. Getting an MP4 version of the same animation in one click removes that friction — no need to manually screen-record or hunt for a separate converter. It's not a shift in how people use LLMs, more an example of how a small homegrown tool built around a recurring model benchmark gradually accumulates practical features that lower the friction of showing results.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

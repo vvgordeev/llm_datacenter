@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Qwen3.8-27B отлично работает, но по умолчанию «переосмысливает» задачи — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-16</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-16</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Qwen3.8-27B отлично работает, но по умолчанию «переосмысливает» задачи</span>
+      <span data-lang="en">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон опробовал свежевышедшую Qwen3.8-27B от Alibaba — открытую (Apache 2.0), способную работать с изображениями модель — локально: сначала через LM Studio на MacBook с чипом M5 Max, затем на NVIDIA DGX Spark. Модель ему в целом понравилась: по его оценке, она сейчас выдаёт лучший результат в его стандартном тесте «нарисуй пеликана на велосипеде в SVG» среди всех моделей, которые можно запустить локально. Но именно на этом тесте всплыла проблема, ради которой стоит читать заметку: генерация заняла 21 минуту и 22 276 токенов рассуждений — на тривиальный, в общем-то, запрос.</span>
+      <span data-lang="en">Simon Willison tried Alibaba's freshly released Qwen3.8-27B — an open-weight (Apache 2.0), vision-capable model — locally: first through LM Studio on an M5 Max MacBook, then on an NVIDIA DGX Spark. He came away impressed with the model itself, calling it currently the best locally-runnable performer on his standard "draw a pelican riding a bicycle in SVG" test. But that same test is what surfaced the problem worth reading the post for: the generation took 21 minutes and 22,276 reasoning tokens for what is, in the end, a trivial prompt.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему модель «пережёвывает» простые запросы</span><span data-lang="en">Why the model chews through simple prompts</span></h2>
+    <p>
+      <span data-lang="ru">Причина — не баг, а настройка по умолчанию: согласно собственной документации Qwen, модель по умолчанию запускается с параметром <code>reasoning_effort: xhigh</code> — максимальным уровнем «усилия» на рассуждения. Для сложных агентных задач это может быть оправдано, но для простого творческого запроса вроде рисования SVG модель тратит на обдумывание в разы больше токенов, чем нужно было бы при среднем или низком уровне. Уиллисон явно показывает это не как гипотезу, а как наблюдение из собственного прогона: одна и та же на вид простая просьба выливается в десятки тысяч «внутренних» токенов, прежде чем модель вообще начинает писать SVG-код.</span>
+      <span data-lang="en">The cause isn't a bug — it's the default configuration: per Qwen's own documentation, the model ships with <code>reasoning_effort: xhigh</code> as its out-of-the-box setting, the maximum reasoning-effort tier. That may be justified for hard agentic tasks, but for a simple creative prompt like drawing an SVG, the model burns many times more tokens thinking than a medium or low setting would need. Willison presents this not as a hypothesis but as a direct observation from his own run: an outwardly simple request turns into tens of thousands of "internal" tokens before the model even starts writing SVG code.</span>
+    </p>
+
+    <h2><span data-lang="ru">Побочный эффект: обычный лимит контекста лопается от одних только рассуждений</span><span data-lang="en">Side effect: a normal context limit blows out from reasoning alone</span></h2>
+    <p>
+      <span data-lang="ru">Из-за объёма рассуждений всплыла вторая, менее очевидная проблема: стандартный лимит контекста LM Studio в 8192 токена оказался исчерпан одними только «мыслями» модели, не оставив места для собственно ответа. Практическое решение, которое нашёл и применил Уиллисон, — вручную поднять лимит контекста до полных 262 144 токенов, заявленных для модели. Это конкретный, воспроизводимый совет для любого, кто разворачивает Qwen3.8-27B локально: дефолтные настройки инструмента для запуска модели (LM Studio, Ollama и подобные) рассчитаны на модели с более скромным аппетитом к рассуждениям и без ручной правки просто не дадут получить ответ.</span>
+      <span data-lang="en">The volume of reasoning surfaced a second, less obvious problem: LM Studio's default 8,192-token context limit got exhausted by the model's "thinking" alone, leaving no room for the actual answer. The practical fix Willison found and applied was to manually raise the context limit to the model's full advertised 262,144 tokens. That's a concrete, reproducible tip for anyone deploying Qwen3.8-27B locally: a serving tool's default context settings (LM Studio, Ollama, and similar) are tuned for models with a more modest reasoning appetite, and without a manual adjustment the model simply won't produce an answer at all.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что это значит на практике</span><span data-lang="en">What this means in practice</span></h2>
+    <p>
+      <span data-lang="ru">Несмотря на неудобства, итоговая оценка Уиллисона положительная: даже ценой 21 минуты ожидания модель весом около 17 ГБ в квантовании Q4_K_M выдала лучший результат среди локальных моделей на его тесте. Практический вывод для тех, кто разворачивает модель у себя: перед использованием стоит явно понизить <code>reasoning_effort</code> для несложных задач (сведя расход токенов и время ожидания к разумным величинам) и заранее увеличить лимит контекста в раздающем инструменте — иначе результата можно не дождаться вовсе, а не просто получить его медленнее, чем хотелось бы.</span>
+      <span data-lang="en">Despite the friction, Willison's bottom line is positive: even at the cost of a 21-minute wait, the roughly 17GB Q4_K_M-quantized model produced the best result among local models on his test. The practical takeaway for anyone self-hosting the model: explicitly lower <code>reasoning_effort</code> for simple tasks before running them (to keep token spend and wait times sane), and raise the serving tool's context limit ahead of time — otherwise you may not get an answer at all, rather than just getting one more slowly than you'd like.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

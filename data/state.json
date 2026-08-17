@@ -287,7 +287,16 @@
     "https://x.com/claudeai/status/2086891169217122586": "2026-08-16",
     "https://api-docs.deepseek.com/quick_start/pricing/": "2026-08-16",
     "https://www.latent.space/p/inference-eng": "2026-08-16",
-    "notes/articles/latentspace-baseten-inference-engineering-masterclass.html": "2026-08-16"
+    "notes/articles/latentspace-baseten-inference-engineering-masterclass.html": "2026-08-16",
+    "https://9to5mac.com/2026/08/14/chatgpt-subscribers-can-now-open-and-edit-google-drive-files-from-inside-the-chat/": "2026-08-17",
+    "https://x.com/OpenAI/status/2087231350134980830": "2026-08-17",
+    "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html": "2026-08-17",
+    "https://simonwillison.net/2026/Aug/16/qwen-38-27b/": "2026-08-17",
+    "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro/": "2026-08-17",
+    "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/": "2026-08-17",
+    "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
+    "notes/articles/willison-deepseek-v4-pro-reasoning-swing.html": "2026-08-17",
+    "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -800,6 +809,27 @@
     "anthropic-sonnet-5-pricing-permanent": {
       "last_date": "2026-08-16",
       "summary": "Claude Sonnet 5 introductory pricing made permanent, tokenizer inflation debate"
+    },
+    "openai-chatgpt-drive-library": {
+      "last_date": "2026-08-17",
+      "summary": {
+        "ru": "ChatGPT научился открывать и редактировать файлы Google Drive/Docs/Sheets/Slides прямо в чате (Библиотека, @-упоминания)",
+        "en": "ChatGPT can open and edit Google Drive/Docs/Sheets/Slides files inline in chat (Library, @-mentions)"
+      }
+    },
+    "openai-chatgpt-linux-desktop": {
+      "last_date": "2026-08-17",
+      "summary": {
+        "ru": "OpenAI выпускает официальное десктоп-приложение ChatGPT для Linux (превью) с Codex, догоняя Claude на этой платформе",
+        "en": "OpenAI ships an official ChatGPT desktop app for Linux (preview) with Codex, reaching parity with Claude on this platform"
+      }
+    },
+    "google-gemini-classroom-all-ages": {
+      "last_date": "2026-08-17",
+      "summary": {
+        "ru": "Gemini в Google Classroom снимает возрастное ограничение 18+ и полностью раскатывается на мобильные приложения",
+        "en": "Gemini in Google Classroom lifts its 18+ default gate and fully reaches mobile apps"
+      }
     }
   }
 }

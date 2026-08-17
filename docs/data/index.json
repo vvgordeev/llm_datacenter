@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-17",
+      "news_count": 3,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "ChatGPT научился открывать и редактировать файлы Google Drive прямо в чате",
+        "en": "ChatGPT can now open and edit Google Drive files directly inside the chat"
+      }
+    },
+    {
       "date": "2026-08-16",
       "news_count": 3,
       "expert_count": 1,

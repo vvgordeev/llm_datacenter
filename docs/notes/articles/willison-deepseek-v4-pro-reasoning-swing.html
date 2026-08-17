@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: DeepSeek V4 Pro 0813 — насколько сильно параметр «усилия рассуждений» меняет результат — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект заметки · Simon Willison · 2026-08-12</span>
+      <span data-lang="en">Note digest · Simon Willison · 2026-08-12</span>
+    </p>
+    <h1>
+      <span data-lang="ru">DeepSeek V4 Pro 0813: насколько сильно параметр «усилия рассуждений» меняет результат</span>
+      <span data-lang="en">DeepSeek V4 Pro 0813: just how much the reasoning-effort knob can change the output</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/12/deepseek-v4-pro/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон опробовал через OpenRouter новую сборку DeepSeek V4 Pro 0813 — модель на 1,7 трлн параметров, веса которой позже были выложены на Hugging Face одним архивом на 893 ГБ. Формальные характеристики модели интересны сами по себе, но заметка в первую очередь не про них, а про наблюдение, сделанное во время обычного для Уиллисона теста: он прогнал один и тот же запрос — нарисовать пеликана на велосипеде в формате SVG — трижды, меняя только параметр <code>reasoning_effort</code>: low, medium и high.</span>
+      <span data-lang="en">Simon Willison tried the new DeepSeek V4 Pro 0813 build via OpenRouter — a 1.7-trillion-parameter model whose weights were later published on Hugging Face as a single 893GB archive. The model's raw specs are interesting on their own, but the note isn't really about them — it's about an observation from Willison's usual benchmark: he ran the same prompt, drawing a pelican on a bicycle as an SVG, three times, changing only the <code>reasoning_effort</code> parameter — low, medium, and high.</span>
+    </p>
+
+    <h2><span data-lang="ru">Один и тот же запрос, три разных рисунка</span><span data-lang="en">Same prompt, three different drawings</span></h2>
+    <p>
+      <span data-lang="ru">Результат оказался неожиданно резким: три уровня <code>reasoning_effort</code> дали визуально совершенно разные изображения — не просто чуть более аккуратные или чуть более детальные версии одного и того же рисунка, а по сути разные интерпретации задачи. По собственным словам Уиллисона, такого сильного разброса от изменения одного параметра «усилия рассуждений» он не видел ни у одной другой модели. Это важное наблюдение именно потому, что параметр reasoning_effort обычно преподносится вендорами как способ управлять балансом «скорость/цена против качества», а не как рычаг, меняющий сам характер результата.</span>
+      <span data-lang="en">The result turned out to be unexpectedly stark: the three reasoning-effort levels produced visually completely different images — not just tidier or more detailed versions of the same drawing, but essentially different interpretations of the task. In Willison's own words, he hasn't seen this large a swing from changing a single reasoning-effort parameter in any other model. That's worth noting because vendors usually pitch reasoning_effort as a way to trade off speed/cost against quality — not as a lever that changes the character of the output itself.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что это значит для тех, кто строит поверх модели</span><span data-lang="en">What this means for anyone building on top of the model</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод для инженеров, использующих DeepSeek V4 Pro в продакшне: нельзя относиться к <code>reasoning_effort</code> как к чисто количественной ручке экономии токенов — переключение уровня стоит тестировать отдельно на своих задачах, поскольку оно способно ощутимо изменить сам результат, а не только его подробность или скорость получения. Уиллисон не даёт универсальной рекомендации, какой уровень «правильный» — сам факт большого разброса он подаёт как сигнал для тех, кто проектирует промпты и пайплайны вокруг этой модели, проверять поведение на всех трёх уровнях, а не выбирать один по умолчанию и считать его репрезентативным для остальных.</span>
+      <span data-lang="en">The practical takeaway for engineers running DeepSeek V4 Pro in production: don't treat <code>reasoning_effort</code> as a purely quantitative token-savings dial — switching levels is worth testing separately against your own tasks, since it can meaningfully change the output itself, not just its verbosity or how fast it arrives. Willison doesn't offer a universal recommendation on which level is "correct" — he presents the size of the swing itself as a signal for anyone designing prompts and pipelines around this model to check behavior at all three levels, rather than picking one as the default and assuming it's representative of the others.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

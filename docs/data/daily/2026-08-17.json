@@ -1,0 +1,188 @@
+{
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T06:40:00Z",
+  "news": [
+    {
+      "id": "2026-08-17-openai-chatgpt-drive-library",
+      "cluster_id": "openai-chatgpt-drive-library",
+      "models": ["openai"],
+      "title": {
+        "ru": "ChatGPT научился открывать и редактировать файлы Google Drive прямо в чате",
+        "en": "ChatGPT can now open and edit Google Drive files directly inside the chat"
+      },
+      "summary": {
+        "ru": "13–14 августа OpenAI раскатала для платных планов ChatGPT возможность держать открытым рядом с диалогом документ, таблицу или презентацию из Google Docs/Sheets/Slides и редактировать его прямо в чате, не переключаясь в другое окно и не загружая файл заново. Файлы и папки из подключённого Google Drive появляются в разделе «Библиотека» ChatGPT, их можно вызвать через кнопку «+» у поля ввода или упоминанием по имени (@) прямо в переписке.",
+        "en": "On August 13–14, OpenAI rolled out a feature for paid ChatGPT plans that keeps a Google Docs/Sheets/Slides file open alongside the conversation and lets you edit it inline, without switching windows or re-uploading it. Files and folders from a connected Google Drive show up in ChatGPT's Library and can be pulled into a chat via the composer's \"+\" button or an @-mention."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Меняет привычный паттерн работы с документами — вместо цикла «скачать → вставить в чат → скопировать правку обратно» правка идёт прямо в самом файле — и это применимо к широкому кругу пользователей платных планов ChatGPT, а не к нишевому сценарию; но это развитие уже существующего у OpenAI паттерна коннекторов, а не принципиально новый класс использования, и сопровождается реальными опасениями по поводу доступа к общим дискам.",
+        "en": "Changes a familiar document workflow — instead of download → paste into chat → copy the edit back, the edit happens in the file itself — and it applies broadly across paid ChatGPT users rather than a niche scenario; but it extends OpenAI's existing connector pattern rather than opening a fundamentally new usage class, and comes with real concerns about shared-drive access."
+      },
+      "source_url": "https://9to5mac.com/2026/08/14/chatgpt-subscribers-can-now-open-and-edit-google-drive-files-from-inside-the-chat/",
+      "opinions": [
+        {
+          "author": "Nudge Security",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Подключение ChatGPT к Google Drive даёт доступ ко всему общему диску, а не только к личным файлам, — это создаёт серьёзный риск утечки чувствительных корпоративных данных.",
+            "en": "Connecting ChatGPT to Google Drive grants access to your entire shared drive, not just personal files, creating serious exposure for sensitive organizational data."
+          },
+          "url": "https://www.nudgesecurity.com/post/the-hidden-dangers-of-chatgpts-integrations-with-google-drive-and-microsoft-onedrive"
+        },
+        {
+          "author": "9to5Mac",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Подписчики ChatGPT теперь могут открывать и редактировать файлы Google Drive прямо в чате, вместо того чтобы переключаться в другое окно.",
+            "en": "ChatGPT subscribers can now open and edit Google Drive files directly in the chat, instead of having to switch to another window."
+          },
+          "url": "https://9to5mac.com/2026/08/14/chatgpt-subscribers-can-now-open-and-edit-google-drive-files-from-inside-the-chat/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Сотрудник упоминает нужную таблицу Google Sheets по имени прямо в переписке с ChatGPT и просит пересчитать и переформатировать столбец, получая изменения сразу в самом файле на Drive — без экспорта и повторной загрузки.",
+            "en": "An employee @-mentions a specific Google Sheets file inside a ChatGPT conversation and asks it to recalculate and reformat a column, getting the change applied directly in the file on Drive — no export or re-upload needed."
+          },
+          "url": "https://9to5mac.com/2026/08/14/chatgpt-subscribers-can-now-open-and-edit-google-drive-files-from-inside-the-chat/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-17-openai-chatgpt-linux-desktop",
+      "cluster_id": "openai-chatgpt-linux-desktop",
+      "models": ["openai"],
+      "title": {
+        "ru": "ChatGPT для Linux — OpenAI выпускает официальное десктоп-приложение в превью",
+        "en": "ChatGPT for Linux — OpenAI ships an official desktop app in preview"
+      },
+      "summary": {
+        "ru": "11 августа OpenAI выпустила официальное десктоп-приложение ChatGPT для Linux в статусе публичного превью — deb/rpm-пакеты для x64 и ARM64, проверенные на Ubuntu 24.04/26.04 LTS, Debian 13 и Fedora 43/44. Приложение объединяет ChatGPT, ChatGPT Work и агента Codex в одном клиенте: Codex может работать прямо с локальными репозиториями, минуя браузер. Так ChatGPT догоняет десктоп-клиент Claude, вышедший на Linux примерно на месяц раньше.",
+        "en": "On August 11, OpenAI released an official ChatGPT desktop app for Linux in public preview — deb/rpm packages for x64 and ARM64, validated on Ubuntu 24.04/26.04 LTS, Debian 13, and Fedora 43/44. The app bundles ChatGPT, ChatGPT Work, and the Codex agent into one client, letting Codex work directly against local repositories instead of through a browser tab. It brings ChatGPT to parity with Claude's desktop app, which reached Linux roughly a month earlier."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Расширяет платформенный охват основного агента для разработки (Codex) на широкую аудиторию Linux-разработчиков, закрывая разрыв с конкурентами, — но сама модель и возможности не меняются, это вопрос доступности клиента, а первые отзывы о самом приложении смешанные.",
+        "en": "Extends the platform reach of a major dev-facing agent (Codex) to a broad Linux developer audience, closing a competitive gap — but the underlying model and capabilities are unchanged, it's a client-availability story, and early reviews of the app itself are mixed."
+      },
+      "source_url": "https://x.com/OpenAI/status/2087231350134980830",
+      "opinions": [
+        {
+          "author": "участник обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это было так близко к тому, что мне нужно, — и всё же так далеко для тех, кто хочет держать чувствительные данные отдельно.",
+            "en": "So close to what I wanted and yet so far for anyone that wants to keep sensitive data separated."
+          },
+          "url": "https://news.ycombinator.com/item?id=49264334"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчик на Linux ставит .deb-пакет и запускает Codex прямо на локальном репозитории через десктоп-приложение, вместо того чтобы держать вкладку браузера — тот же паттерн работы, что уже был доступен пользователям Mac и Windows.",
+            "en": "A Linux developer installs the .deb package and runs Codex directly against a local repository through the desktop app instead of keeping a browser tab open — the same workflow already available to Mac and Windows users."
+          },
+          "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-17-google-gemini-classroom-all-ages",
+      "cluster_id": "google-gemini-classroom-all-ages",
+      "models": ["google"],
+      "title": {
+        "ru": "Gemini в Google Classroom открывается для учеников любого возраста на мобильных устройствах",
+        "en": "Gemini in Google Classroom expands to students of all ages on mobile"
+      },
+      "summary": {
+        "ru": "Google завершает начатый 10 августа раскат Gemini в Google Classroom на учеников любого возраста (ранее доступ по умолчанию получали только совершеннолетние): 17 августа функция полностью доходит до мобильных приложений, вслед за вебом. Для младших школьников появляются контекстные стартовые подсказки, помогающие превращать заданные учителем материалы в карточки для повторения и тренировочные тесты; доступ по-прежнему включается администратором школы, а не самим учеником.",
+        "en": "Google is completing the rollout of Gemini in Google Classroom to students of all ages (previously enabled by default only for adults) that began August 10: on August 17, the feature fully reaches mobile apps, following the web. Younger students get contextualized starter prompts that help turn teacher-assigned material into flashcards and practice quizzes; access is still switched on by a school admin, not the student themselves."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Резко расширяет охват (Classroom используют более 150 млн учеников и учителей), но по существу снимает возрастное ограничение с уже существующей функции, а не вводит новый подход к использованию LLM; вертикаль узкая (K-12/образование), и рассылка уже вызвала конкретные вопросы о недостаточной возрастной дифференциации и давление родительских групп на школы.",
+        "en": "Reaches a huge audience (Classroom has 150M+ students and teachers) but substantively lifts an age gate on an already-existing feature rather than introducing a new way of using an LLM; the vertical is narrow (K-12/education), and the rollout has already drawn concrete concerns about insufficient age differentiation and pressure from parent groups on schools."
+      },
+      "source_url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html",
+      "opinions": [
+        {
+          "author": "Common Sense Media, Youth AI Safety Institute (via techjournal.org)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Бинарное деление на «младше 18» и «старше 18» не учитывает разницу в развитии: шестилетний и семнадцатилетний ребёнок, оба помеченные как «младше 18», получают одинаковые ответы.",
+            "en": "The binary under-18/over-18 age designation doesn't account for developmental differences — a six-year-old and a seventeen-year-old, both marked 'under 18,' get identical responses."
+          },
+          "url": "https://techjournal.org/gemini-in-classroom-students"
+        },
+        {
+          "author": "Chrome Unboxed",
+          "stance": "positive",
+          "quote": {
+            "ru": "Расширение доступа для младших школьников — это большой сдвиг, но по-настоящему интересно не само снятие возрастного ограничения, а то, насколько глубоко Google встраивает ИИ в сам процесс выполнения домашних заданий.",
+            "en": "Allowing younger students to now have access to Gemini within Google Classroom is a huge shift, but what really catches my attention isn't just the age expansion — it's how deeply Google is integrating the AI into the actual homework experience."
+          },
+          "url": "https://chromeunboxed.com/google-is-officially-bringing-gemini-in-classroom-to-students-of-all-ages/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Учитель средней школы, уже включивший Gemini в Classroom у администратора, предлагает ученику превратить заданный параграф учебника в набор карточек для самопроверки перед контрольной — материалом остаётся то, что выдал учитель, а не открытый чат-бот.",
+            "en": "A middle-school teacher who already has Gemini in Classroom enabled by their admin has a student turn an assigned textbook passage into a set of self-check flashcards ahead of a test — the material stays limited to what the teacher provided, not an open-ended chatbot."
+          },
+          "url": "https://techjournal.org/gemini-in-classroom-students"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-17-willison-qwen-38-overthinking",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Qwen3.8-27B отлично работает, но по умолчанию «переосмысливает» задачи",
+        "en": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things"
+      },
+      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+      "summary": {
+        "ru": "Уиллисон запускает Qwen3.8-27B локально через LM Studio и на DGX Spark: модель выдаёт лучший локальный результат в его тесте «пеликан на велосипеде», но из-за дефолтного reasoning_effort: xhigh тратит на простой запрос 21 минуту и 22 276 токенов рассуждений, из-за чего типовой лимит контекста в 8192 токена приходится вручную поднимать до 262 144.",
+        "en": "Willison runs Qwen3.8-27B locally via LM Studio and on a DGX Spark: the model delivers the best local result on his pelican-on-a-bicycle test, but its default reasoning_effort: xhigh burns 21 minutes and 22,276 reasoning tokens on a simple prompt, forcing a manual bump of the typical 8,192-token context limit up to 262,144."
+      },
+      "note_page": "notes/articles/willison-qwen-38-overthinking.html"
+    },
+    {
+      "id": "2026-08-17-willison-deepseek-v4-pro-reasoning-swing",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "DeepSeek V4 Pro 0813: насколько сильно параметр «усилия рассуждений» меняет результат",
+        "en": "DeepSeek V4 Pro 0813: just how much the reasoning-effort knob can change the output"
+      },
+      "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro/",
+      "summary": {
+        "ru": "На одном и том же запросе-пеликане DeepSeek V4 Pro 0813 выдаёт визуально совершенно разные рисунки на уровнях reasoning_effort low/medium/high — по словам Уиллисона, такого сильного разброса от одного параметра он не видел ни у одной другой модели, и это повод тестировать поведение модели на всех уровнях, а не полагаться на один дефолтный.",
+        "en": "On the same pelican prompt, DeepSeek V4 Pro 0813 produces visually completely different drawings across reasoning_effort low/medium/high — per Willison, he hasn't seen this large a swing from one parameter in any other model, which is reason enough to test a model's behavior at every level rather than trust a single default."
+      },
+      "note_page": "notes/articles/willison-deepseek-v4-pro-reasoning-swing.html"
+    },
+    {
+      "id": "2026-08-17-willison-markdown-svg-upgrades",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Обновления markdown-svg-renderer: удобный способ делиться SVG, которые рисуют LLM",
+        "en": "Markdown SVG upgrades: a better way to share SVGs that LLMs draw"
+      },
+      "url": "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/",
+      "summary": {
+        "ru": "Очередное обновление личного инструмента Уиллисона markdown-svg-renderer добавляет вкладку MP4: если встроенный SVG анимирован, инструмент сам оценивает длительность цикла, рендерит кадры и собирает их в MP4 через ffmpeg.wasm прямо в браузере — чтобы делиться анимацией на площадках, не поддерживающих анимированный SVG.",
+        "en": "The latest update to Willison's personal markdown-svg-renderer tool adds an MP4 tab: if the embedded SVG is animated, the tool estimates a loop duration, renders it frame by frame, and compiles the frames into an MP4 via ffmpeg.wasm right in the browser — so the animation can be shared on platforms that don't support animated SVG."
+      },
+      "note_page": "notes/articles/willison-markdown-svg-upgrades.html"
+    }
+  ]
+}

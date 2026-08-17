@@ -1,0 +1,54 @@
+{
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T06:40:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED www.anthropic.com; fallback to WebSearch"},
+    {"source": "anthropic (WebSearch)", "status": "empty", "candidates": 0, "note": "Only aggregator-only (releasebot.io, no primary anthropic.com URL confirmed) items surfaced: Claude Code auto-continue checkbox (~Aug14), Fable 5 biology-safeguard tuning (date unclear), Compliance API expansion, Claude Code subagent-forking/GitLab support — all low-confidence secondary sourcing, rejected for lack of a verifiable primary link. Also found: major Claude.ai/Code/Cowork outage Aug16 21:58-22:40 UTC (service incident, not a feature, excluded)"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED openai.com; fallback to WebSearch"},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 2, "note": "ChatGPT desktop app for Linux (Aug11, primary source x.com/OpenAI, published); ChatGPT Google Drive/Docs/Sheets/Slides Library integration (Aug13-14, published); GPT-5.6 Ultrafast API tier and quizzes/project-memory-toggle release-notes items rejected as already covered (Aug16 log) or too minor/routine"},
+    {"source": "google deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED blog.google; fallback to WebSearch"},
+    {"source": "google (WebSearch)", "status": "ok", "candidates": 1, "note": "Gemini in Google Classroom expands to all ages, mobile rollout completing today Aug17 (primary source workspaceupdates.googleblog.com, published); Gemini 3.7 Flash launch/GA-to-Enterprise-mobile and 'new connected apps' already covered Aug12/Aug15"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED ai.meta.com; fallback to WebSearch"},
+    {"source": "meta (WebSearch)", "status": "empty", "candidates": 0, "note": "Muse Glimmer already covered Aug11; Muse Code (Aug5, based on Muse Spark 1.2) still not actually shipped as of this search per broader coverage; SAM Audio/PE-AV and Meta Ads MCP server found but with unclear/unverifiable dates, not confirmed in-window"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED x.ai; fallback to WebSearch"},
+    {"source": "xai (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok 4.6 already covered Aug13 (cluster xai-grok-4-6); Grok Bot already covered Aug12 (cluster xai-grok-bot); nothing new found dated Aug15-17"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED mistral.ai; fallback to WebSearch"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "regional inference / Priority Tier / GLM-5.2 hosting already covered Aug12 (cluster mistral-regional-inference-sovereignty); Shieldstral and Medium 3.5 are older spillover with unclear dates, not newly confirmed"},
+    {"source": "deepseek changelog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED api-docs.deepseek.com; fallback to WebSearch"},
+    {"source": "deepseek (WebSearch)", "status": "empty", "candidates": 0, "note": "V4-Pro-0813 GA already covered Aug13 (cluster deepseek-v4-pro-0813); peak/off-peak repricing already covered Aug16 (cluster deepseek-v4-price-hike); no new Aug17 reaction wave found beyond what's already published"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED hn.algolia.com; fallback to WebSearch site: queries"},
+    {"source": "hn (WebSearch)", "status": "ok", "candidates": 0, "note": "found real HN threads reacting to OpenAI's ChatGPT Linux app (item 49264334, 49281916) used as opinion source; no standalone HN-sourced news item beyond what vendors already surfaced. Caution: one search result conflated a third-party 'Show HN: Linux client that doesn't suck' post with OpenAI's official app — verified they are different projects and did not use that quote"},
+    {"source": "reddit / community.openai.com (WebSearch)", "status": "ok", "candidates": 0, "note": "found OpenAI dev-forum thread with named users discussing distro support (Arch/NixOS) and IME/Wayland issues on the Linux app, but WebFetch to community.openai.com was EGRESS_BLOCKED so no verbatim quote could be confirmed — not used as an opinion to avoid inventing quotes; used HN quote instead which was confirmed via search snippet in quotation marks"},
+    {"source": "aggregators: smol.ai / TLDR AI / simonwillison linkblog", "status": "ok", "candidates": 0, "note": "checked via WebSearch; smol.ai surfaced Qwen3.8-Max (Alibaba, sources.yaml has qwen tag disabled — skipped per config) and Black Forest Labs FLUX 3 (out of scope, not a configured vendor); nothing else new for Aug15-17"},
+    {"source": "extended pass (broad queries)", "status": "ok", "candidates": 0, "note": "~6 additional broad WebSearch queries ('AI news August 17 2026', '\"August 17, 2026\" LLM announcement', 'AI coding agent update this week', etc.) run to confirm a thin day; surfaced only non-LLM items (DARPA autonomous F-16 flight, Google Imagen 4 endpoint deprecation) or already-covered/disabled-vendor items (Qwen3.8-Max)"},
+    {"source": "expert: Simon Willison (simonwillisonblog-backup clone)", "status": "ok", "candidates": 3, "note": "cloned simonw/simonwillisonblog-backup, queried blog_entry/blog_note ndjson directly by created date; found 6 posts from the 7-day window, but 3 were already published in prior digests (dont-classify-hallucinate -> Aug15, no-lossless-transformations -> Aug12, stealing-reasoning-traces -> Aug14, confirmed via docs/notes/articles/ and data/state.json before use) — published only the 3 genuinely unused: qwen-38-27b overthinking (Aug16), deepseek-v4-pro reasoning-effort swing (Aug12, previously missed), markdown-svg-upgrades (Aug16, verified against full post body in the backup DB, not just search snippets)"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "www.latent.space EGRESS_BLOCKED; WebSearch found nothing newer than the Aug11 Baseten episode already published Aug16"},
+    {"source": "expert: Ethan Mollick / oneusefulthing.org", "status": "empty", "candidates": 0, "note": "oneusefulthing.org EGRESS_BLOCKED; WebSearch found nothing newer than ~Jul31, outside the 7-day window"},
+    {"source": "expert video: Andrej Karpathy (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED youtube.com confirmed at all paths (RSS feed, channel page, /watch) via direct WebFetch test; WebSearch fallback found nothing newer than an Apr30-May1 fireside chat"},
+    {"source": "expert video: AI Explained (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "same youtube.com wholesale block; WebSearch fallback found no dated upload in window"},
+    {"source": "expert video: Matt Wolfe (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "same youtube.com wholesale block; channel confirmed active but no dated upload surfaced, and format is explicitly a news-recap show (excluded by brief anyway)"},
+    {"source": "expert video: Nate Herk (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "same youtube.com wholesale block; WebSearch fallback found only older generic course content"},
+    {"source": "expert video: Matt Pocock (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "same youtube.com wholesale block; WebSearch fallback found nothing newer than ~May10"},
+    {"source": "yt-dlp / imageio-ffmpeg tooling", "status": "installed", "candidates": 0, "note": "pip install succeeded, but moot: youtube.com blocked at the network egress proxy CONNECT level today, same as observed on 2026-08-16"}
+  ],
+  "totals": {
+    "candidates": 21,
+    "published": 3,
+    "rejected": {
+      "уже освещено в предыдущие дни (Gemini 3.7 Flash GA/connected apps, Grok 4.6, Grok Bot, DeepSeek V4-Pro-0813/price hike, Muse Glimmer, Mistral regional inference, 3 из 6 найденных постов Willison)": 12,
+      "низкая уверенность / нет первичного источника (Claude Code auto-continue, Fable 5 biology tuning, Compliance API expansion — только через releasebot.io без подтверждения на anthropic.com)": 3,
+      "не по теме LLM или вне охвата конфига (DARPA F-16, Google Imagen 4 deprecation, Qwen3.8-Max — тег qwen отключён в sources.yaml)": 3,
+      "рутинный сервисный инцидент, не функция (Anthropic Aug16 outage)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted — no candidate video URL discovered (all 5 configured YouTube channels blocked at egress-proxy CONNECT level for RSS/channel-page/watch-page access; WebSearch fallback found nothing dated inside the 7-day freshness window)",
+    "frames": "skipped for the same reason",
+    "tooling_status": "yt-dlp and imageio-ffmpeg installed via pip per cloud-environment instructions, but unusable today since youtube.com itself is blocked at the egress proxy level, consistent with 2026-08-16"
+  },
+  "notes": {
+    "expert_content_shortfall": "Published 3 of the target min_expert_total=5 expert items, all articles/notes from Simon Willison. This is environment degradation, not a quiet week: all 5 video experts were blocked at the network level for the entire run, and Latent Space / Ethan Mollick's own sites were also EGRESS_BLOCKED with WebSearch fallback finding nothing inside the freshness window. Simon Willison's blog-backup mirror did yield 6 candidate posts from the last 7 days, but half of them (dont-classify-hallucinate, no-lossless-transformations, stealing-reasoning-traces) were already published in the Aug12/14/15 digests — checked against data/state.json and docs/notes/articles/ before use to avoid duplicating already-published content. Only the 3 genuinely unpublished posts were used.",
+    "news_count_note": "3 published news items after an extensive multi-round search (7 vendor blogs x >=2 queries each, HN, aggregators, community, plus ~6 broad confirmation queries) found a thin day: most discoverable vendor stories were continuations of clusters already covered on prior days (Aug11-16), and a batch of Anthropic-related items could only be traced to a secondary aggregator (releasebot.io) without a verifiable anthropic.com source, so they were excluded rather than published on unconfirmed sourcing. Chose 3 genuine, well-sourced items over padding with stale/unconfirmed ones, per skill guidance.",
+    "caution_flagged": "One WebSearch result conflated a third-party 'Show HN: I built a Linux desktop client for ChatGPT that doesn't suck' post (a different, user-built Rust/GTK4 project) with OpenAI's official Linux app launch thread. Caught and excluded before use — did not attribute that quote to reactions on OpenAI's app."
+  }
+}
