@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-18",
+  "generated_at": "2026-08-18T05:13:45Z",
+  "news": [
+    {
+      "id": "2026-08-18-claude-code-2-1-234-auto-continue",
+      "cluster_id": "anthropic-claude-code-2-1-234",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Code 2.1.234: автопродолжение сессии при сбросе лимита и бейдж GitLab MR",
+        "en": "Claude Code 2.1.234: auto-continue at usage-limit reset and a GitLab MR badge"
+      },
+      "summary": {
+        "ru": "Claude Code 2.1.234 добавляет автопродолжение сессии, упёршейся в лимит использования: как только лимит claude.ai сбрасывается, сессия сама возобновляет работу без ручного повторного запроса (отключается в /config). Релиз также добавляет бейдж GitLab merge request в футер и статусбар для репозиториев с настроенным glab CLI, показывающий состояние MR (draft/pending/готово).",
+        "en": "Claude Code 2.1.234 adds automatic continuation for sessions that hit a usage limit: once the claude.ai limit window resets, the session resumes on its own without a manual re-prompt (toggle in /config). The release also adds a GitLab merge-request badge to the footer and statusline for repos with an authenticated glab CLI, showing MR state (draft/pending/green)."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Полезное, но узкое улучшение качества жизни: избавляет от ручного перезапуска сессий после сброса лимита, но не меняет ни подход к использованию Claude Code, ни круг решаемых задач.",
+        "en": "A useful but narrow quality-of-life fix — it removes the need to manually re-kick a session after a limit reset, but changes neither the approach to using Claude Code nor the range of tasks it covers."
+      },
+      "source_url": "https://code.claude.com/docs/en/changelog",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчики, регулярно упирающиеся в дневной лимит на длинных агентных задачах, раньше вручную ждали сброса и заново формулировали промпт — теперь достаточно один раз включить опцию.",
+            "en": "Developers who routinely hit the daily limit on long agentic tasks used to wait for the reset and manually restate the prompt — now enabling the option once does that automatically."
+          },
+          "url": "https://x.com/ClaudeDevs/status/2088014831605702937"
+        },
+        {
+          "text": {
+            "ru": "Команды, ведущие merge request'ы в GitLab, а не pull request'ы в GitHub, теперь видят статус MR прямо в статусбаре Claude Code — раньше такой индикатор был только для GitHub PR.",
+            "en": "Teams running merge requests on GitLab rather than pull requests on GitHub now see MR status right in the Claude Code statusline — previously that indicator existed only for GitHub PRs."
+          },
+          "url": "https://code.claude.com/docs/en/changelog"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

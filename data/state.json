@@ -296,7 +296,8 @@
     "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/": "2026-08-17",
     "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
     "notes/articles/willison-deepseek-v4-pro-reasoning-swing.html": "2026-08-17",
-    "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17"
+    "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17",
+    "https://code.claude.com/docs/en/changelog": "2026-08-18"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -829,6 +830,13 @@
       "summary": {
         "ru": "Gemini в Google Classroom снимает возрастное ограничение 18+ и полностью раскатывается на мобильные приложения",
         "en": "Gemini in Google Classroom lifts its 18+ default gate and fully reaches mobile apps"
+      }
+    },
+    "anthropic-claude-code-2-1-234": {
+      "last_date": "2026-08-18",
+      "summary": {
+        "ru": "Claude Code 2.1.234 (18 августа): автопродолжение сессии при сбросе лимита использования, бейдж GitLab MR в статусбаре",
+        "en": "Claude Code 2.1.234 (August 18): auto-continue at usage-limit reset, GitLab MR badge in the statusline"
       }
     }
   }

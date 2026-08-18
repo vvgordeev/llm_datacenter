@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-18",
+      "news_count": 1,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Claude Code 2.1.234: автопродолжение сессии при сбросе лимита и бейдж GitLab MR",
+        "en": "Claude Code 2.1.234: auto-continue at usage-limit reset and a GitLab MR badge"
+      }
+    },
+    {
       "date": "2026-08-17",
       "news_count": 3,
       "expert_count": 3,
