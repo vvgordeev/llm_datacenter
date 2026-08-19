@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-19",
+      "news_count": 3,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "OpenAI выпускает Appshots для Codex: агент читает окно приложения без единого слова описания",
+        "en": "OpenAI ships Appshots for Codex: the agent reads an app window without a word of description"
+      }
+    },
+    {
       "date": "2026-08-18",
       "news_count": 1,
       "expert_count": 0,

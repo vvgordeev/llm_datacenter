@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Mojo🔥 is now open source» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (по материалам Modular) · 2026-08-18</span>
+      <span data-lang="en">Article digest · Simon Willison (on Modular's announcement) · 2026-08-18</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Mojo стал open source: язык для GPU-ядер, на которых уже работает инференс ИИ</span>
+      <span data-lang="en">Mojo goes open source: the GPU-kernel language already running AI inference</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+      ·
+      <a href="https://www.modular.com/blog/mojo-open-source" target="_blank" rel="noopener">
+        <span data-lang="ru">анонс Modular ↗</span><span data-lang="en">Modular's announcement ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Willison фиксирует хронологию: неделю назад Modular выпустила Mojo 1.0, а теперь открыла исходники компилятора, тулинга и всего остального, что нужно для сборки языка — под Apache 2.0 с исключениями LLVM. Для читателя дайджеста про LLM это не просто «ещё один язык программирования»: Mojo с самого начала строился как способ писать GPU/CPU-ядра для ИИ-нагрузок, и именно на нём уже работает часть инференс-платформы Modular (MAX). Открытие исходников означает, что теперь можно посмотреть, как устроены эти ядра, изнутри.</span>
+      <span data-lang="en">Willison lays out the timeline: a week ago Modular shipped Mojo 1.0, and now it has open-sourced the compiler, tooling, and everything else needed to build the language — under Apache 2.0 with LLVM exceptions. For a reader of an LLM digest this isn't just "another programming language": Mojo was built from day one as a way to write GPU/CPU kernels for AI workloads, and part of Modular's own inference platform (MAX) already runs on it. Open-sourcing it means the kernels behind that platform are now inspectable from the inside.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что именно открыли и зачем язык вообще нужен</span><span data-lang="en">What was actually opened, and why the language exists</span></h2>
+    <p>
+      <span data-lang="ru">Mojo сочетает синтаксис, близкий к Python, с производительностью системного языка и памятью в духе Rust, компилируясь через MLIR на разнородное железо — GPU, CPU, TPU и ASIC. Задача, которую он решает: сегодня, чтобы выжать максимум из ускорителя (условно, ядра для матричного умножения или attention), приходится писать низкоуровневый код отдельно под CUDA (NVIDIA), ROCm (AMD) и так далее — Mojo нацелен на то, чтобы такой код писался один раз и переносился между вендорами. Открытый репозиторий — больше 450 000 строк кода от свыше 6000 контрибьюторов — Modular описывает как, вероятно, крупнейший в мире открытый набор CPU/GPU-ядер, включая готовые к продакшену референсные реализации.</span>
+      <span data-lang="en">Mojo pairs Python-like syntax with systems-language performance and Rust-style memory safety, compiling through MLIR to heterogeneous hardware — GPUs, CPUs, TPUs, and ASICs. The problem it targets: today, squeezing full performance out of an accelerator (say, a matmul or attention kernel) usually means writing separate low-level code for CUDA (NVIDIA), ROCm (AMD), and so on — Mojo aims to let that code be written once and ported across vendors. Modular describes the newly opened repository — 450,000+ lines of code from over 6,000 contributors — as likely the world's largest open collection of CPU/GPU kernels, including production-grade reference implementations.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно именно сейчас — версия 1.0 и стабильность API</span><span data-lang="en">Why now matters — the 1.0 milestone and API stability</span></h2>
+    <p>
+      <span data-lang="ru">До версии 1.0 у Mojo не было гарантий обратной совместимости — использовать его в продакшен-коде означало мириться с тем, что API языка ещё может поменяться под ногами. 1.0 фиксирует это: будущие релизы 1.x обещаны преимущественно аддитивными (то есть без ломающих изменений), а в очереди — асинхронное программирование, паттерн-матчинг и объединения типов, не успевшие войти в первый стабильный релиз. Именно сочетание «стабильный API» плюс «открытые исходники» и делает момент значимым для инфраструктурных инженеров: раньше писать критичный для продакшена GPU-код на Mojo было рискованно вдвойне — из-за закрытости и из-за нестабильности; теперь остаётся только обычный риск смены языка.</span>
+      <span data-lang="en">Before 1.0, Mojo offered no backward-compatibility guarantees — using it in production code meant accepting that the language's API could still shift under you. 1.0 locks that down: future 1.x releases are promised to be mostly additive (no breaking changes), with async programming, pattern matching, and type unions queued up for later since they didn't make the first stable cut. It's the combination of "stable API" plus "open source" that makes this moment matter for infrastructure engineers: writing production-critical GPU code in Mojo used to carry double risk — closed source and an unstable API; now only the ordinary risk of adopting a new language remains.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

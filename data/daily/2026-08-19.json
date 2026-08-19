@@ -1,0 +1,199 @@
+{
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T05:15:32Z",
+  "news": [
+    {
+      "id": "2026-08-19-openai-codex-for-almost-everything",
+      "cluster_id": "openai-codex-appshots-computer-use",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI выпускает Appshots для Codex: агент читает окно приложения без единого слова описания",
+        "en": "OpenAI ships Appshots for Codex: the agent reads an app window without a word of description"
+      },
+      "summary": {
+        "ru": "OpenAI обновило приложение Codex для macOS и Windows («Codex for (almost) everything»): агент получил computer use, обзор в приложении, генерацию изображений, память и плагины. Флагманская новинка — Appshots: двойное нажатие Command прикрепляет к треду Codex скриншот и текст активного окна Mac-приложения, так что агенту не нужно ничего описывать вручную — например, документацию API, открытую в Safari, или макет в Figma.",
+        "en": "OpenAI updated the Codex app for macOS and Windows (\"Codex for (almost) everything\"), adding computer use, in-app browsing, image generation, memory, and plugins. The headline feature is Appshots: a double-tap of Command attaches a screenshot and text of the active Mac app window to a Codex thread, so the agent needs nothing described by hand — API docs open in Safari, or a Figma mockup, for instance."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Меняет типичный подход к передаче контекста кодинг-агенту — от долгого текстового описания к прямому захвату состояния экрана; полезно для большой аудитории разработчиков Codex, но пока ограничено macOS.",
+        "en": "Changes the default way developers hand context to a coding agent — from typing out a description to directly capturing screen state; useful to a large Codex developer base, though currently macOS-only."
+      },
+      "source_url": "https://openai.com/index/codex-for-almost-everything/",
+      "opinions": [
+        {
+          "author": "Kingy AI",
+          "stance": "positive",
+          "quote": {
+            "ru": "Appshots — это ставка OpenAI на конкретный паттерн передачи контекста человек→ИИ на десктопе, с реальными последствиями для того, как Codex позиционируется против computer use у Claude, GitHub Copilot и Cursor.",
+            "en": "Appshots is OpenAI's bet on a very particular pattern of human-AI handoff on the desktop, and it has real consequences for how the Codex app positions itself against Anthropic's Claude computer use, GitHub Copilot, and Cursor."
+          },
+          "url": "https://kingy.ai/news/appshots-inside-openai-codexs-new-command-command-trick-for-macos/"
+        },
+        {
+          "author": "пользователь форума OpenAI Developer Community",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Во время сессии Codex инструмент захвата скриншота окна поймал таймаут — вместо остановки Codex откатился к скриншоту всего рабочего стола на уровне ОС, без запроса согласия и без уведомления.",
+            "en": "During a Codex session, the in-app/window screenshot tool timed out, and instead of stopping, Codex fell back to an OS-level full-desktop screenshot — with no consent prompt and no notification."
+          },
+          "url": "https://community.openai.com/t/privacy-incident-exposes-risks-in-screen-capable-agents/1383634"
+        },
+        {
+          "author": "The Decoder",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Для ИТ- и служб безопасности вопрос в том, можно ли действия агента на десктопах, в браузерах, коде, почте, календарях, документах и мессенджерах управлять, логировать, согласовывать и откатывать — новые функции Codex делают его полезнее, но управлять им становится сложнее.",
+            "en": "For enterprise IT and security teams, the issue is whether agent actions across desktops, browsers, codebases, email, calendars, documents, and messaging tools can be governed, logged, approved, and reversed — the new Codex features make it more useful, but harder to govern."
+          },
+          "url": "https://the-decoder.com/openai-appshots-turn-any-mac-window-into-context-for-codex/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчик, интегрирующий стороннее API, открывает документацию в Safari, нажимает двойной Command — и Codex читает всю справочную страницу целиком (включая то, что за пределами экрана) для генерации согласованного клиентского кода.",
+            "en": "A developer integrating a third-party API opens the docs in Safari, double-taps Command, and Codex reads the entire reference page — including content beyond the visible scroll — to generate consistent client code."
+          },
+          "url": "https://pasqualepillitteri.it/en/news/3135/codex-appshots-command-command-mac"
+        },
+        {
+          "text": {
+            "ru": "Фронтенд- и продуктовые команды используют Appshots для передачи агенту состояния макета в Figma или живого прототипа в браузере, чтобы он сопоставил визуальную проблему с кодом, тестами и ограничениями интерфейса.",
+            "en": "Frontend and product teams use Appshots to hand the agent a Figma mockup's state or a live browser prototype, so it can map a visual issue to code, tests, and UI constraints."
+          },
+          "url": "https://kingy.ai/news/appshots-inside-openai-codexs-new-command-command-trick-for-macos/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-19-openai-chatgpt-for-teens",
+      "cluster_id": "openai-chatgpt-for-teens",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI запускает «ChatGPT для подростков» — отдельный обучающий режим со Study Mode и родительским контролем",
+        "en": "OpenAI launches 'ChatGPT for Teens' — a separate learning-focused mode with Study Mode and parental controls"
+      },
+      "summary": {
+        "ru": "OpenAI выпустила отдельную версию ChatGPT для пользователей 13–17 лет: она включается автоматически, если система оценивает возраст ниже 18 или пользователь указывает 13–17 лет, и добавляет более строгие ограничения на темы вроде самоповреждения, расстройств пищевого поведения и сексуального контента. Ключевая новая функция — Study Mode и «напоминания об ответственном выполнении домашних заданий», которые подталкивают подростка разбираться в теме вместо получения готового ответа; родители получают возможность привязать аккаунт ребёнка и настраивать уведомления о моментах острого дистресса.",
+        "en": "OpenAI shipped a separate version of ChatGPT for 13-to-17-year-olds: it kicks in automatically when the system estimates a user is under 18 or the user states an age of 13-17, adding stricter limits around topics like self-harm, eating disorders, and sexual content. The headline new feature is Study Mode plus 'responsible homework reminders' that nudge a teen toward understanding material instead of getting a ready-made answer; parents can link their teen's account and set up alerts for moments of acute distress."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Не меняет подходы к использованию LLM в целом, но создаёт отдельный, широко применимый продуктовый сегмент для миллионов несовершеннолетних пользователей на фоне исков и регуляторного давления — заметное развитие с сильной реакцией сообщества.",
+        "en": "Doesn't change how LLMs are used broadly, but carves out a separate, widely applicable product segment for millions of minor users amid lawsuits and regulatory pressure — a notable development with a strong community reaction."
+      },
+      "source_url": "https://openai.com/index/chatgpt-for-teens/",
+      "opinions": [
+        {
+          "author": "Racquel Gibson, учительница математики старшей школы (Майами)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Не у каждого ученика дома есть кому помочь, когда он застрял или у него есть вопросы по домашнему заданию. При правильных ограничениях ИИ может закрыть этот пробел. Инструменты вроде Responsible Homework Reminder могут вести ученика шаг за шагом, помогая понять свои ошибки, обрести уверенность и продолжать учиться — а не просто выдавать ответ.",
+            "en": "Not every student has someone at home who can help when they get stuck or have questions with their homework. With the right guardrails, AI can help fill that gap. Tools like Responsible Homework Reminder can guide students step by step, helping them understand their mistakes, build confidence, and keep learning — not simply hand them an answer."
+          },
+          "url": "https://www.edtechinnovationhub.com/news/openai-introduces-chatgpt-for-teens-with-study-hours-and-stronger-safeguards"
+        },
+        {
+          "author": "Robbie Torney, Common Sense Media",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "ChatGPT добился заметного прогресса в безопасности для подростков, и он может быть полезен для учёбы и творчества — но у нас остаются серьёзные опасения по поводу использования ChatGPT подростками для общения и советов по ментальному здоровью на этом ключевом этапе развития.",
+            "en": "ChatGPT has made meaningful progress in becoming safer for teens, and it can be valuable for learning and creativity — but we have significant concerns about teens using ChatGPT for companionship and mental-health advice at this key developmental stage."
+          },
+          "url": "https://www.commonsensemedia.org/press-releases/common-sense-media-report-finds-chatgpt-and-sora-pose-risks-to-teens-despite-safety-features"
+        },
+        {
+          "author": "Shelby Knox / Bouffard, Fairplay (через AP)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Подобные анонсы можно расценивать как шаг в правильном направлении — но важно предостеречь родителей от ложного чувства безопасности из-за одного лишь анонса: например, ограничение долговременной памяти ChatGPT по умолчанию не включено в подростковых аккаунтах, а это серьёзный пробел в безопасности.",
+            "en": "Announcements like these can be seen as a step in the right direction — but it's important to caution parents against being lured into a false sense of safety based on the announcement alone: for instance, restricting ChatGPT's long-term memory isn't on by default in teen accounts, which is a major gap in safety."
+          },
+          "url": "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Ученик, готовящийся к экзамену без помощи дома, открывает Study Mode: вместо готового решения получает наводящие вопросы и пошаговую поддержку, которые предполагаемо повышают успеваемость по внутренним рандомизированным испытаниям OpenAI.",
+            "en": "A student preparing for an exam without help at home opens Study Mode: instead of a ready answer, they get guiding questions and step-by-step support, which OpenAI says showed performance gains in its own randomized controlled trials."
+          },
+          "url": "https://www.edtechinnovationhub.com/news/openai-introduces-chatgpt-for-teens-with-study-hours-and-stronger-safeguards"
+        },
+        {
+          "text": {
+            "ru": "Родитель привязывает свой аккаунт к аккаунту подростка и включает уведомления на случай обсуждения острых кризисных ситуаций — оповещения проходят через модерацию человеком, при этом конкретные детали переписки скрываются для сохранения приватности подростка.",
+            "en": "A parent links their account to their teen's and turns on alerts for discussions of acute crisis situations — alerts are reviewed by human moderators, while specific chat-log details are withheld to protect the teen's privacy."
+          },
+          "url": "https://openai.com/index/chatgpt-for-teens/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-19-anthropic-cowork-chrome-mobile-ga",
+      "cluster_id": "anthropic-cowork-mobile",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Cowork приходит в боковую панель Chrome и полностью раскатан на мобильных для всех платных тарифов",
+        "en": "Claude Cowork comes to the Chrome side panel and fully rolls out to mobile on all paid plans"
+      },
+      "summary": {
+        "ru": "Боковая панель Claude в Chrome стала полноценной сессией Cowork: диалоги сохраняются в историю, навыки (Skills) и коннекторы работают прямо в браузере, а задачу, начатую во вкладке, можно доделать в десктопном, веб- или мобильном приложении Claude. Сейчас доступно на тарифах Max и Team, для Pro раскатка идёт постепенно; параллельно Anthropic объявила, что Cowork на мобильных устройствах полностью раскатан на все платные тарифы, а не только на самый дорогой, с которого начинался запуск в июле.",
+        "en": "Claude's Chrome side panel is now a full Cowork session: conversations are saved to history, Skills and connectors work directly in the browser, and a task started in a tab can be finished on Claude's desktop, web, or mobile app. It's available today on Max and Team plans, with a gradual Pro rollout under way; alongside it, Anthropic said Cowork on mobile has now fully rolled out to all paid plans, not just the top tier it launched on back in July."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Расширяет распределение и непрерывность уже существующей возможности (Cowork) на новую поверхность и более широкий круг тарифов, но не вводит принципиально новый класс задач для агента.",
+        "en": "Extends the distribution and cross-device continuity of an already-existing capability (Cowork) to a new surface and a wider set of plans, but doesn't introduce a fundamentally new class of agent tasks."
+      },
+      "source_url": "https://claude.com/blog/cowork-chrome-side-panel",
+      "opinions": [
+        {
+          "author": "TechRadar",
+          "stance": "positive",
+          "quote": {
+            "ru": "Claude Cowork приходит в ваш браузер Chrome, и, кажется, я наконец начну им пользоваться.",
+            "en": "Claude Cowork is coming to your Chrome browser, and I might finally use it now."
+          },
+          "url": "https://www.techradar.com/pro/claude-cowork-is-coming-to-your-chrome-browser-and-i-might-finally-use-it-now"
+        },
+        {
+          "author": "AI Tool Analysis",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Самая частая жалоба: «почему я не могу использовать Sonnet на тарифе Pro для Chrome-расширения?» — подписчики Pro застряли на Haiku 4.5, а доступ к Sonnet или Opus означает переход на тариф Max от $100 в месяц.",
+            "en": "The most common complaint: 'Why can't I use Sonnet on Pro for the Chrome extension?' — Pro subscribers are stuck with Haiku 4.5, and getting Sonnet or Opus means jumping to a Max plan starting at $100/month."
+          },
+          "url": "https://aitoolanalysis.com/claude-in-chrome-review/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пользователь начинает сложную задачу на десктопе через Claude Code, переключается в Chrome для веб-исследования или заполнения форм — и Claude сохраняет всю историю разговора и настроенные инструменты между поверхностями.",
+            "en": "A user starts a complex task on desktop via Claude Code, switches to Chrome for web research or form-filling — and Claude retains the full conversation history and configured tools across surfaces."
+          },
+          "url": "https://www.macobserver.com/news/claude-in-chrome-is-now-a-full-cowork-session-across-all-claude-apps/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-19-willison-mojo-open-source",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Mojo стал open source",
+        "en": "Mojo🔥 is now open source"
+      },
+      "url": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/",
+      "summary": {
+        "ru": "Через неделю после релиза 1.0 язык Mojo — созданный специально для написания переносимых GPU/CPU-ядер под ИИ-нагрузки — полностью открыт под Apache 2.0. Репозиторий (450 000+ строк от 6000+ контрибьюторов) Modular называет крупнейшим открытым набором ИИ-ядер в мире.",
+        "en": "A week after its 1.0 release, Mojo — a language purpose-built for writing portable GPU/CPU kernels for AI workloads — is now fully open source under Apache 2.0. Modular calls the repository (450,000+ lines from 6,000+ contributors) the world's largest open collection of AI kernels."
+      },
+      "note_page": "notes/articles/willison-mojo-open-source.html"
+    }
+  ]
+}

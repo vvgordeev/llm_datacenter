@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T05:15:32Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED www.anthropic.com; fallback to WebSearch"},
+    {"source": "anthropic (WebSearch, 2+ queries)", "status": "ok", "candidates": 2, "note": "Found: Claude Cowork Chrome side panel GA + mobile-all-paid-plans rollout (continuation of anthropic-cowork-mobile cluster, published). 'Claude for Government / Claude Code+Cowork to government' surfaced but verified via WebSearch to actually date to 2026-07-07 (stale, not today's news) — excluded. Claude Code 2.1.234 already published 2026-08-18."},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED openai.com; fallback to WebSearch"},
+    {"source": "openai (WebSearch, 2+ queries)", "status": "ok", "candidates": 2, "note": "Found: ChatGPT for Teens (openai.com/index/chatgpt-for-teens/, Aug 18, published) and Codex 'for (almost) everything' update — Appshots + computer use + memory + plugins (openai.com/index/codex-for-almost-everything/, Aug 18, published). Note: 'Goal mode GA' mentioned in some secondary coverage is actually stale (shipped May 21) — only Appshots/computer-use framed as new."},
+    {"source": "google deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED blog.google; fallback to WebSearch"},
+    {"source": "google (WebSearch, 2+ queries)", "status": "empty", "candidates": 0, "note": "Gemini 3.7 Flash (Aug13, already covered Aug15) and Classroom connected-apps rollout are stale/already-covered; nothing new and in-window found"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED ai.meta.com; fallback to WebSearch"},
+    {"source": "meta (WebSearch, 2+ queries)", "status": "empty", "candidates": 0, "note": "Muse Code (Aug5), Muse Glimmer (Aug10), Muse Spark 1.2 (Aug6) all already covered in earlier dailies; nothing new"},
+    {"source": "xai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED x.ai; fallback to WebSearch"},
+    {"source": "xai (WebSearch, 2+ queries)", "status": "empty", "candidates": 0, "note": "Grok 4.6 (Aug12) and Grok Bot (Aug11) already covered Aug12/13; nothing new"},
+    {"source": "mistral blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED mistral.ai; fallback to WebSearch"},
+    {"source": "mistral (WebSearch, 2+ queries)", "status": "empty", "candidates": 0, "note": "Regional inference / Priority Tier (Aug11) already covered Aug12; nothing new"},
+    {"source": "deepseek blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED api-docs.deepseek.com; fallback to WebSearch"},
+    {"source": "deepseek (WebSearch, 2+ queries)", "status": "empty", "candidates": 0, "note": "V4 Pro 0813 and price hikes already covered Aug13/14/16; nothing new"},
+    {"source": "aggregators (news.smol.ai, TLDR AI)", "status": "ok", "candidates": 1, "note": "Surfaced Kimi K3/Moonshot chatter and Cursor Origin — both stale (Kimi K3 exhaustively covered in July archive); no new primary sources found via aggregators today"},
+    {"source": "HN Algolia API", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED hn.algolia.com (CONNECT-level, unlike 2026-07-09 when this endpoint worked); fallback to WebSearch site: queries, mostly returned syndicated/old HN threads about ChatGPT-teen-safety history rather than today's launch thread specifically"},
+    {"source": "community (Reddit/X via WebSearch)", "status": "empty", "candidates": 0, "note": "No distinctly new Reddit/X-sourced candidates beyond what news outlets already covered for the 3 published items"},
+    {"source": "experts: Simon Willison (git backup clone, simonwillisonblog-backup)", "status": "ok", "candidates": 1, "note": "Cloned ndjson backup since simonwillison.net direct fetch is 403. Most recent full essay (Aug16, Qwen 3.8 27B) was already published Aug17 — excluded as duplicate. Initially also drafted Doug Turnbull's hallucinate-classification technique (Aug14 blogmark, Aug10 original) as a second article, but a state.json diff review caught that it was ALREADY published on 2026-08-15 (id 2026-08-15-turnbull-dont-classify-hallucinate) — removed before commit to avoid a duplicate. Published only the Mojo open-source blogmark (Aug18) as an expert article."},
+    {"source": "experts: Andrej Karpathy / AI Explained / Matt Wolfe / Nate Herk / Matt Pocock (video, YouTube RSS + WebSearch)", "status": "blocked", "candidates": 0, "note": "YouTube fully blocked at proxy CONNECT level today (RSS feeds, WebFetch watch pages, and yt-dlp metadata calls all failed with 'Unable to connect to proxy... 403'), matching the 2026-07-18 precedent noted in SKILL.md. Confirmed the Gemini video pipeline itself still works (gemini_video.py successfully analyzed a test URL via generativelanguage.googleapis.com, which is not proxied), but without a way to discover this week's actual upload URLs/dates for our 5 tracked video channels, no candidate video could be verified as genuinely this week's upload — WebSearch results for all 5 channels returned stale (weeks/months old) or ambiguous (third-party reaction videos, not the tracked channel's own upload) results. Zero videos published today; see below."},
+    {"source": "experts: Latent Space / Ethan Mollick / other article experts", "status": "empty", "candidates": 0, "note": "oneusefulthing.org and latent.space direct fetch both EGRESS_BLOCKED; WebSearch found only stale posts (Mollick's most recent dated posts are Jul23/Jul26, oneusefulthing.org 'archive' page itself blocked so could not verify anything more recent exists) or generic SEO-farm 'workflow guide' listicles that don't meet the resonant-material bar"}
+  ],
+  "totals": {
+    "candidates": 21,
+    "published": 4,
+    "rejected": {
+      "уже опубликовано / устарело (stale, already covered)": 15,
+      "не по теме / инфраструктурная новость без прямой связи с использованием LLM": 2,
+      "недостаточно проверено (не удалось подтвердить точную дату/канал)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok (verified reachable via generativelanguage.googleapis.com on a test URL)",
+    "frames": "not attempted: no video candidates found",
+    "note": "0 of 4 required videos published today — see expert-content source notes above. Expert section published only 1 of min_expert_total=5 (one article, Mojo open-source; the second draft, Doug Turnbull's hallucinate-classification piece, was caught as an already-published duplicate from 2026-08-15 and dropped). This is a genuine shortfall caused by environment degradation (total YouTube CONNECT-level block + broad blog/aggregator egress blocking + WebSearch index lag on fresh video uploads for all 5 tracked channels) compounded by most fresh Willison material this week already being covered by prior runs, not a lack of effort: all 8 configured experts plus widened searches (interconnects.ai, thezvi, Latent Space, Ethan Mollick) were checked."
+  }
+}

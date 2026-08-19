@@ -297,7 +297,24 @@
     "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
     "notes/articles/willison-deepseek-v4-pro-reasoning-swing.html": "2026-08-17",
     "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17",
-    "https://code.claude.com/docs/en/changelog": "2026-08-18"
+    "https://code.claude.com/docs/en/changelog": "2026-08-18",
+    "https://openai.com/index/codex-for-almost-everything/": "2026-08-19",
+    "https://kingy.ai/news/appshots-inside-openai-codexs-new-command-command-trick-for-macos/": "2026-08-19",
+    "https://community.openai.com/t/privacy-incident-exposes-risks-in-screen-capable-agents/1383634": "2026-08-19",
+    "https://the-decoder.com/openai-appshots-turn-any-mac-window-into-context-for-codex/": "2026-08-19",
+    "https://pasqualepillitteri.it/en/news/3135/codex-appshots-command-command-mac": "2026-08-19",
+    "https://openai.com/index/chatgpt-for-teens/": "2026-08-19",
+    "https://www.edtechinnovationhub.com/news/openai-introduces-chatgpt-for-teens-with-study-hours-and-stronger-safeguards": "2026-08-19",
+    "https://www.commonsensemedia.org/press-releases/common-sense-media-report-finds-chatgpt-and-sora-pose-risks-to-teens-despite-safety-features": "2026-08-19",
+    "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html": "2026-08-19",
+    "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-19",
+    "https://www.techradar.com/pro/claude-cowork-is-coming-to-your-chrome-browser-and-i-might-finally-use-it-now": "2026-08-19",
+    "https://aitoolanalysis.com/claude-in-chrome-review/": "2026-08-19",
+    "https://www.macobserver.com/news/claude-in-chrome-is-now-a-full-cowork-session-across-all-claude-apps/": "2026-08-19",
+    "https://9to5mac.com/2026/08/18/anthropic-says-claude-cowork-is-now-available-on-mobile-for-all-paid-plans/": "2026-08-19",
+    "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/": "2026-08-19",
+    "https://www.modular.com/blog/mojo-open-source": "2026-08-19",
+    "notes/articles/willison-mojo-open-source.html": "2026-08-19"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -333,8 +350,11 @@
       "summary": "Mistral's new robotics division ships Robostral Navigate, a single-camera navigation model beating LiDAR-based systems"
     },
     "anthropic-cowork-mobile": {
-      "last_date": "2026-07-08",
-      "summary": "Claude Cowork expands from desktop to web and mobile with cloud-first sessions; usage data shows most sessions aren't software development"
+      "last_date": "2026-08-19",
+      "summary": {
+        "ru": "Claude Cowork: от бета-запуска веб/мобайл (июль) до боковой панели Chrome и полной раскатки на все платные тарифы на мобильных (август)",
+        "en": "Claude Cowork: from the web/mobile beta launch (July) to a Chrome side panel and full GA to all paid mobile plans (August)"
+      }
     },
     "google-gemini-omni-flash": {
       "last_date": "2026-07-05",
@@ -837,6 +857,20 @@
       "summary": {
         "ru": "Claude Code 2.1.234 (18 августа): автопродолжение сессии при сбросе лимита использования, бейдж GitLab MR в статусбаре",
         "en": "Claude Code 2.1.234 (August 18): auto-continue at usage-limit reset, GitLab MR badge in the statusline"
+      }
+    },
+    "openai-codex-appshots-computer-use": {
+      "last_date": "2026-08-19",
+      "summary": {
+        "ru": "OpenAI выпускает Appshots для Codex (macOS/Windows): захват состояния окна приложения по горячей клавише вместо ручного описания контекста, плюс computer use, память и плагины",
+        "en": "OpenAI ships Appshots for Codex (macOS/Windows): hotkey-driven app-window context capture instead of manual description, plus computer use, memory, and plugins"
+      }
+    },
+    "openai-chatgpt-for-teens": {
+      "last_date": "2026-08-19",
+      "summary": {
+        "ru": "OpenAI запускает отдельный режим ChatGPT для подростков 13-17 лет со Study Mode и родительским контролем на фоне исков о безопасности",
+        "en": "OpenAI launches a separate ChatGPT mode for 13-17 year-olds with Study Mode and parental controls amid safety lawsuits"
       }
     }
   }
