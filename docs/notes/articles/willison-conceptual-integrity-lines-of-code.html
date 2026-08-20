@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Conceptual integrity and counting lines of code» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-19</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-19</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Концептуальная целостность и подсчёт строк кода</span>
+      <span data-lang="en">Conceptual integrity and counting lines of code</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+      ·
+      <a href="https://talkingpostgres.com/episodes/how-ai-is-changing-software-development-with-simon-willison" target="_blank" rel="noopener">
+        <span data-lang="ru">эпизод Talking Postgres ↗</span><span data-lang="en">Talking Postgres episode ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Пост собран из выдержек интервью, которое Уиллисон дал подкасту Talking Postgres (ведущая — Клэр Джордано) на тему «как ИИ меняет разработку ПО». Внутри — два тесно связанных тезиса о работе с кодинг-агентами: зачем всё-таки считать строки кода как метрику продуктивности, и почему рост производительности одного инженера не отменяет команду, а меняет то, что эту команду ограничивает.</span>
+      <span data-lang="en">The post is built from excerpts of an interview Willison gave to the Talking Postgres podcast (host Claire Giordano) on how AI is changing software development. It threads together two closely related points about working with coding agents: why counting lines of code as a productivity metric still makes sense, and why one engineer getting far more productive doesn't eliminate the need for a team — it just changes what limits that team.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: почему строки кода — не бессмысленная метрика</span><span data-lang="en">The method: why lines of code isn't a meaningless metric</span></h2>
+    <p>
+      <span data-lang="ru">Стандартное возражение — «продуктивность нельзя мерить строками кода» — Уиллисон не принимает целиком. Его аргумент: у человека есть жёсткий физический потолок. Очень хороший день инженера «до агентов» — это пара сотен строк отлаженного, готового к продакшену кода; чаще выходит 50-60. Если агент позволяет получать тысячу строк такого же качества — маintainable, покрытого тестами — в день, это реальный, измеримый скачок, а не иллюзия. Ограничение метода: она работает только пока сохраняется «то же качество» — иначе сравнение бессмысленно, а держать качество на месте как раз и есть самая трудная часть работы с агентами, требующая опыта уровня синьора.</span>
+      <span data-lang="en">Willison doesn't fully accept the standard objection that "productivity can't be measured in lines of code." His argument: a human has a hard physical ceiling. A very good pre-agent day for an engineer is a couple hundred lines of debugged, production-ready code; most days it's 50-60. If an agent gets you a thousand lines of the same quality — maintainable, tested — in a day, that's a real, measurable jump, not an illusion. The method's limit: it only holds as long as "the same quality" holds — otherwise the comparison is meaningless, and keeping quality constant is precisely the hardest part of working with agents, requiring senior-level skill and experience.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Отсюда следует контринтуитивный вывод о команде: если один инженер с агентом может писать в сто раз больше кода, значит ли это, что компании достаточно одного инженера? Уиллисон отвечает — нет, и не только из-за «bus factor» (команда из одного человека — плохо спроектированная команда). Новое узкое место — не скорость письма кода, а когнитивная способность удерживать в голове весь объём написанного. Написать код в сто раз быстрее реально; удерживать в голове в сто раз больше кода — нет. Отсюда команда нужна не для скорости, а чтобы распределить эту когнитивную нагрузку между несколькими людьми.</span>
+      <span data-lang="en">That produces a counterintuitive conclusion about teams: if one engineer with an agent can write a hundred times more code, does a company only need one engineer? Willison says no — and not just because of the bus factor (a team of one is a badly designed team). The new bottleneck isn't writing speed, it's the cognitive capacity to keep track of everything that's been written. Churning out code a hundred times faster is achievable; holding a hundred times more code in your head is not. So the team's job shifts from producing speed to load-balancing that cognitive capacity across several people.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение метода: концептуальная целостность разваливается первой</span><span data-lang="en">The method's limitation: conceptual integrity is the first casualty</span></h2>
+    <p>
+      <span data-lang="ru">Второй тезис — про понятие «концептуальной целостности» из классической книги Фредерика Брукса «Мифический человеко-месяц»: хорошо спроектированное ПО не содержит сюрпризов, точно покрывает нужную предметную область, и всё в нём согласуется друг с другом. С агентами это выдержать гораздо труднее: придумал фичу, запустил промпт — и через пять минут фича готова. В результате софт «обрастает странными комнатами в разных направлениях» — Клэр Джордано сравнила это с Домом-загадкой Уинчестер (Winchester Mystery House), к которому вдова изобретателя винтовки 40 лет пристраивала комнаты, потому что медиум предсказал ей проклятие духов убитых из этой винтовки, если строительство остановится.</span>
+      <span data-lang="en">The second point concerns "conceptual integrity," a term from Frederick Brooks' classic The Mythical Man-Month: well-designed software has no surprises, covers exactly the right domain, and everything in it fits together and makes sense. That's much harder to hold onto with agents: you get an idea for a feature, run a prompt, and five minutes later the feature exists. The software ends up "growing weird bumps in different directions" — Claire Giordano compared it to the Winchester Mystery House, to which the widow of the rifle's inventor kept adding rooms for 40 years because a psychic told her she'd be haunted by the ghosts of everyone killed by that rifle if she ever stopped building.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Вывод, зачем это раскрывать в дайджесте про подходы к использованию LLM: дисциплину, которую раньше навязывало время («это займёт неделю — забудь про эту сумасшедшую идею»), при агентах приходится навязывать себе сознательно, потому что цена реализации любой прихоти упала до часа работы. Уиллисон не даёт готового рецепта «как не превратить кодовую базу в Дом Уинчестер», но чётко называет проблему: конкретно то, что раньше решалось само собой (нехваткой времени), теперь требует отдельного, явного решения на каждом шаге.</span>
+      <span data-lang="en">The point of surfacing this in a digest about approaches to using LLMs: the discipline that time used to enforce ("that would take a week — forget that crazy idea") now has to be imposed deliberately with agents, because the cost of acting on any whim has dropped to about an hour of work. Willison doesn't offer a ready recipe for keeping a codebase from becoming a Winchester Mystery House, but he names the problem precisely: what used to be solved automatically, by a lack of time, now needs an explicit decision at every step.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

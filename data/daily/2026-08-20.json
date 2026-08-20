@@ -1,0 +1,276 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T05:22:00Z",
+  "news": [
+    {
+      "id": "2026-08-20-openai-astra-training-pause",
+      "cluster_id": "openai-astra-math-proofs",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "OpenAI приостановила часть frontier RL-обучения, признав «разные степени рассогласования» у Astra",
+        "en": "OpenAI paused part of its frontier RL training, citing 'various degrees of misalignment' in Astra"
+      },
+      "summary": {
+        "ru": "Сэм Альтман подтвердил журналу Time, что обучение внутренней модели Astra было приостановлено на две недели, а более крупный frontier-прогон остаётся замороженным: причиной названы не единичный инцидент, а серия исследовательских наблюдений о рассогласовании по мере роста возможностей моделей, а также утечка Hugging Face и предварительные признаки того, что Astra может достичь порога Critical по кибербезопасности.",
+        "en": "Sam Altman confirmed to Time that training of the internal Astra model was paused for two weeks and a larger frontier run remains frozen, citing not a single incident but a collection of research observations showing misalignment as capabilities grow, plus the Hugging Face breach and preliminary signs Astra may hit the Critical cybersecurity threshold."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Впервые ведущая лаборатория публично останавливает обучение флагманской модели из-за рассогласования, а не только тестового инцидента — меняет ожидания по темпу релизов и практике безопасности во всей индустрии",
+        "en": "First time a leading lab publicly halts flagship training over misalignment rather than just a test incident — resets industry expectations on release pace and safety practice"
+      },
+      "source_url": "https://time.com/article/2026/08/18/openai-slowing-training/",
+      "opinions": [
+        {
+          "author": "Boaz Barak (исследователь безопасности OpenAI, X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Горжусь тем, что мы перестраховываемся и делаем шаги, которые позволят ответственно и безопасно разработать Astra и поделиться ей с защитниками",
+            "en": "Proud that we are erring on the side of caution and taking the steps so we can responsibly and safely develop Astra and share it with defenders"
+          },
+          "url": "https://x.com/boazbaraktcs/status/2085772335844556810"
+        },
+        {
+          "author": "Matt Sayar, ArmorCode (Infosecurity Magazine)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Хорошо, что крупные лаборатории вроде OpenAI учитывают риск выпуска моделей, способных эксплуатировать пробелы в кибербезопасности организации",
+            "en": "It's good to see large labs like OpenAI take into account the risk of releasing models that are capable of exploiting cybersecurity gaps in an organization's environment"
+          },
+          "url": "https://www.infosecurity-magazine.com/news/openai-pauses-development-astra/"
+        },
+        {
+          "author": "Axios",
+          "stance": "neutral",
+          "quote": {
+            "ru": "OpenAI дрогнула первой в противостоянии по безопасности ИИ — пауза наступила через несколько дней после того, как конкурент Anthropic настаивал, что его защитные меры и так достаточны и замедляться не нужно",
+            "en": "OpenAI blinks first in AI safety standoff — the pause came days after rival Anthropic doubled down on insisting its own safety measures were solid enough that it didn't need to slow down"
+          },
+          "url": "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic"
+        }
+      ],
+      "use_cases": []
+    },
+    {
+      "id": "2026-08-20-anthropic-claude-protein-design",
+      "cluster_id": "anthropic-claude-protein-design",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Claude самостоятельно спроектировал рабочие белковые связыватели для 14 из 15 мишеней",
+        "en": "Claude autonomously designed working protein binders for 14 of 15 targets"
+      },
+      "summary": {
+        "ru": "Anthropic и Adaptyv Bio протестировали de novo дизайн белков моделями Claude Mythos Preview и Opus 4.8 в реальной мокрой лаборатории: из 1320 сгенерированных кандидатов 26,8% реально связались с мишенью (типичный показатель для таких кампаний — 10-15%), причём по 6 мишеням получены высокоаффинные связыватели. Отдельно Anthropic показала, что Claude обрабатывает сырые данные ЯМР и ЖХ-МС лаборатории за 20-25 минут с точностью, близкой к экспертной.",
+        "en": "Anthropic and Adaptyv Bio benchmarked de novo protein design by Claude Mythos Preview and Opus 4.8 in a real wet lab: of 1,320 generated candidates, 26.8% actually bound their target (versus a typical 10-15% for such campaigns), with high-affinity binders produced for 6 targets. Separately, Anthropic showed Claude processing a lab's raw NMR and LC-MS data in 20-25 minutes at near-expert accuracy."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — модель как автономный участник цикла лабораторных экспериментов, а не просто текстовый помощник; результат пока не прошёл независимое рецензирование и требует лабораторной валидации",
+        "en": "Opens a new class of usage — the model as an autonomous participant in the experimental lab loop rather than just a text assistant; the result isn't yet independently peer-reviewed and needs lab validation"
+      },
+      "source_url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "opinions": [
+        {
+          "author": "Martin Shkreli (через Stocktwits)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это не впечатляющая работа",
+            "en": "This is not impressive work"
+          },
+          "url": "https://stocktwits.com/news-articles/markets/equity/martin-shkreli-anthropic-claude-drug-discovery-claims/cZYdE2tRJkJ"
+        },
+        {
+          "author": "The Decoder",
+          "stance": "positive",
+          "quote": {
+            "ru": "Anthropic заявляет, что теперь любая лаборатория может доверить агенту на основе языковой модели весь стек дизайна белка",
+            "en": "Anthropic says any lab can now let a language model agent run the whole protein design stack"
+          },
+          "url": "https://the-decoder.com/anthropic-says-any-lab-can-now-let-a-language-model-agent-run-the-whole-protein-design-stack/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Adaptyv Bio и Twist Bioscience независимо произвели и протестировали спроектированные Claude белки в автоматизированной мокрой лаборатории и опубликовали данные на открытой платформе Proteinbase",
+            "en": "Adaptyv Bio and Twist Bioscience independently produced and tested Claude's designs in an automated wet lab and published the data on the open Proteinbase platform"
+          },
+          "url": "https://www.adaptyvbio.com/blog/anthropic-1"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-20-openai-zdr-private-safety-processing",
+      "cluster_id": "openai-zdr-private-safety-processing",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "OpenAI обещает нулевое хранение данных для frontier-моделей и тестирует «приватную обработку безопасности»",
+        "en": "OpenAI commits to zero data retention for frontier models and previews 'Private Safety Processing'"
+      },
+      "summary": {
+        "ru": "OpenAI подтвердила, что продолжит предлагать нулевое хранение данных (ZDR) для подходящих API-клиентов, и анонсировала превью Private Safety Processing — системы, которая ищет признаки риска в связанных сессиях по мере того, как агенты берут на себя более долгие и автономные задачи, но не даёт сотрудникам компании доступа к содержимому запросов и ответов; полноценный запуск и технический white paper запланированы на сентябрь.",
+        "en": "OpenAI confirmed it will keep offering Zero Data Retention (ZDR) for eligible API customers and announced a preview of Private Safety Processing — a system that looks for risk patterns across related sessions as agents take on longer, more autonomous work, without giving OpenAI staff access to prompt/response content; a full rollout and technical white paper are planned for September."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Новый подход к балансу приватности и безопасности для долгоживущих агентных сессий — полезное развитие практики enterprise-безопасности, но пока это превью без деталей реализации",
+        "en": "A new approach to balancing privacy and safety for long-running agent sessions — a useful development in enterprise security practice, but still a preview without implementation details"
+      },
+      "source_url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/",
+      "opinions": [
+        {
+          "author": "Axios",
+          "stance": "neutral",
+          "quote": {
+            "ru": "OpenAI анонсирует систему безопасности с нулевым хранением данных ровно тогда, когда Anthropic требует хранить логи",
+            "en": "OpenAI previews zero-retention safety system as Anthropic requires data logs"
+          },
+          "url": "https://www.axios.com/2026/08/19/openai-previews-zero-retention-safety-system-as-anthropic-requires-data-logs"
+        },
+        {
+          "author": "TechCrunch",
+          "stance": "positive",
+          "quote": {
+            "ru": "OpenAI стремится превзойти Anthropic новыми мерами приватности для клиентов",
+            "en": "OpenAI seeks to one-up Anthropic with new customer privacy protections"
+          },
+          "url": "https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Компании с юридическими или комплаенс-требованиями к ZDR смогут использовать долгоживущих агентов, не опасаясь, что расширенный мониторинг раскроет содержимое их данных сотрудникам OpenAI",
+            "en": "Companies with legal or compliance requirements for ZDR can use long-running agents without extended monitoring exposing their data content to OpenAI staff"
+          },
+          "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-20-openai-replit-free-mode",
+      "cluster_id": "openai-replit-free-mode",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "Replit делает дешёвую GPT-5.6 Luna движком бесплатного по токенам режима для платных подписчиков",
+        "en": "Replit makes cheap GPT-5.6 Luna the engine behind a token-free mode for paying subscribers"
+      },
+      "summary": {
+        "ru": "Replit включила Free Mode на базе дешёвой модели OpenAI GPT-5.6 Luna по умолчанию для тарифов Core ($20) и Pro ($100): чат, брейнсторминг и простые агентные задачи не тратят кредиты, а агент сам переключается на более мощную модель для сложных шагов и возвращается обратно. По оценке Replit, это даёт подписчикам Core до 30 раз больше возможностей создавать проекты за те же деньги.",
+        "en": "Replit turned on Free Mode, powered by OpenAI's cheap GPT-5.6 Luna, by default for its Core ($20) and Pro ($100) tiers: chat, brainstorming and simple agent tasks no longer burn credits, and the agent auto-escalates to a stronger model for hard steps before returning. Replit says this gives Core subscribers up to 30x more building power for the same price."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Изменение цены и продукта на основе уже существующей дешёвой модели, а не новая возможность LLM",
+        "en": "A pricing/product change built on an already-existing cheap model, not a new LLM capability"
+      },
+      "source_url": "https://openai.com/index/replit/",
+      "opinions": [
+        {
+          "author": "Dataconomy",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Replit делает Free Mode тарифом по умолчанию для Core и Pro, называя это «радикальным» подходом",
+            "en": "Replit makes Free Mode the default for Core and Pro, calling it a 'radical' approach"
+          },
+          "url": "https://dataconomy.com/2026/08/19/replit-free-mode-openai-gpt-5-6-luna/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Подписчики Core получают до 30 часов чата в месяц, не тратя кредиты на рутинные задачи и брейнсторминг",
+            "en": "Core subscribers get up to 30 hours of chat per month without spending credits on routine tasks and brainstorming"
+          },
+          "url": "https://replit.com/blog/replit-introduces-free-mode"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-20-claude-code-2-1-236-237",
+      "cluster_id": "anthropic-claude-code-2-1-236-237",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Claude Code получил кросс-сессионные уведомления о простое, ANTHROPIC_DEFAULT_MODEL и стиль вывода «Concise»",
+        "en": "Claude Code adds cross-session idle notifications, ANTHROPIC_DEFAULT_MODEL, and a 'Concise' output style"
+      },
+      "summary": {
+        "ru": "В релизах 2.1.236 (19 августа) и 2.1.237 (20 августа) Claude Code добавил notify_when_idle для SendMessage — одна сессия может попросить другую на той же машине прислать разовое уведомление, когда та освободится, без поллинга; переменную окружения ANTHROPIC_DEFAULT_MODEL для выбора модели по умолчанию для новых сессий; и встроенный стиль вывода Concise, где Claude сразу даёт результат без преамбул и нарратива.",
+        "en": "In releases 2.1.236 (August 19) and 2.1.237 (August 20), Claude Code added notify_when_idle for SendMessage — one session can ask another on the same machine to send a one-shot notice when it goes idle, with no polling; an ANTHROPIC_DEFAULT_MODEL environment variable for picking the default model for new sessions; and a built-in Concise output style where Claude leads with results, skipping preamble and narration."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Полезное развитие уже существующей кросс-сессионной оркестрации нескольких агентов — расширяет практику, но не меняет подход",
+        "en": "A useful development within the already-existing cross-session multi-agent orchestration feature — extends the practice without changing the approach"
+      },
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Одна фоновая сессия Claude Code может доделывать долгую задачу и уведомить другую сессию (или другого агента), когда освободится, — без постоянного опроса статуса",
+            "en": "One background Claude Code session can finish a long task and notify another session (or agent) once it's idle — without constant status polling"
+          },
+          "url": "https://code.claude.com/docs/en/cross-session-messaging"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-20-willison-conceptual-integrity-loc",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Концептуальная целостность и подсчёт строк кода",
+        "en": "Conceptual integrity and counting lines of code"
+      },
+      "url": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
+      "summary": {
+        "ru": "По мотивам подкаста Talking Postgres Уиллисон объясняет, почему подсчёт строк кода как метрика продуктивности не бессмысленен при агентах, но предупреждает: «концептуальная целостность» кодовой базы быстро разваливается без дисциплины, которую раньше навязывало время разработки.",
+        "en": "Drawing on the Talking Postgres podcast, Willison explains why counting lines of code as a productivity metric isn't meaningless with agents, but warns that a codebase's 'conceptual integrity' falls apart fast without the discipline development time used to enforce."
+      },
+      "note_page": "notes/articles/willison-conceptual-integrity-lines-of-code.html"
+    },
+    {
+      "id": "2026-08-20-zvi-anthropic-risk-report-august",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "Отчёт о рисках Anthropic: август 2026",
+        "en": "Anthropic Risk Report: August 2026"
+      },
+      "url": "https://thezvi.substack.com/p/anthropic-risk-report-august-2026",
+      "summary": {
+        "ru": "Zvi разбирает 186-страничный Risk Report Anthropic: категория риска рассогласования поднята с «очень низкой» до «низкой», внутренняя Model 2 существенно опережает Mythos 5 и 5 Preview в замещении труда исследователя — и объясняет, почему сам факт такого раскрытия стоит читать как умеренно позитивный сигнал добросовестности.",
+        "en": "Zvi works through Anthropic's 186-page Risk Report: the misalignment risk category was raised from 'very low' to 'low', an internal Model 2 substantially outperforms Mythos 5 and 5 Preview at substituting for researcher labor — and he explains why the disclosure itself counts as a moderately positive signal of good faith."
+      },
+      "note_page": "notes/articles/zvi-anthropic-risk-report-august-2026.html"
+    },
+    {
+      "id": "2026-08-20-garymarcus-openai-unraveling",
+      "type": "article",
+      "author": "Gary Marcus",
+      "title": {
+        "ru": "Начался разлад OpenAI",
+        "en": "OpenAI's unraveling has begun"
+      },
+      "url": "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun",
+      "summary": {
+        "ru": "Марcus разбирает признание Альтмана о паузе обучения Astra как метод: отделять формулировку лаборатории («проактивная предосторожность») от того, что реально означает та же последовательность фактов, и проверять предсказания автора на согласованность во времени, а не на разовое совпадение.",
+        "en": "Marcus works through Altman's Astra-pause admission as a method: separating a lab's framing ('proactive caution') from what the same sequence of facts could actually mean, and checking an author's predictions for consistency over time rather than one-off coincidence."
+      },
+      "note_page": "notes/articles/garymarcus-openai-unraveling-astra-pause.html"
+    }
+  ]
+}

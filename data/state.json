@@ -314,7 +314,18 @@
     "https://9to5mac.com/2026/08/18/anthropic-says-claude-cowork-is-now-available-on-mobile-for-all-paid-plans/": "2026-08-19",
     "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/": "2026-08-19",
     "https://www.modular.com/blog/mojo-open-source": "2026-08-19",
-    "notes/articles/willison-mojo-open-source.html": "2026-08-19"
+    "notes/articles/willison-mojo-open-source.html": "2026-08-19",
+    "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
+    "https://www.anthropic.com/research/Claude-accelerates-protein-design": "2026-08-20",
+    "https://openai.com/index/offering-zero-data-retention-for-frontier-models/": "2026-08-20",
+    "https://openai.com/index/replit/": "2026-08-20",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.236": "2026-08-20",
+    "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/": "2026-08-20",
+    "notes/articles/willison-conceptual-integrity-lines-of-code.html": "2026-08-20",
+    "https://thezvi.substack.com/p/anthropic-risk-report-august-2026": "2026-08-20",
+    "notes/articles/zvi-anthropic-risk-report-august-2026.html": "2026-08-20",
+    "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
+    "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -610,10 +621,10 @@
       }
     },
     "openai-astra-math-proofs": {
-      "last_date": "2026-08-10",
+      "last_date": "2026-08-20",
       "summary": {
-        "ru": "OpenAI показывает Astra: внутренняя, ещё не выпущенная модель решает десять открытых десятилетиями задач по математике (доказательства встречают раскол экспертов — от одобрения Гауэрса до критики Маркуса); 7 августа OpenAI объявляет, что не может исключить достижение Astra уровня Critical по кибербезопасности в Preparedness Framework — впервые для компании — и приостанавливает часть внутренней работы для усиления защит",
-        "en": "OpenAI unveils Astra: an internal, not-yet-released model solves ten decades-old math problems (proofs meet split expert reaction, from Gowers' endorsement to Marcus's criticism); on August 7 OpenAI announces it can't rule out Astra reaching the Critical cybersecurity threshold under its Preparedness Framework — a first for the company — and pauses internal work to add safeguards"
+        "ru": "OpenAI показывает Astra: внутренняя, ещё не выпущенная модель решает десять открытых десятилетиями задач по математике (доказательства встречают раскол экспертов — от одобрения Гауэрса до критики Маркуса); 7 августа OpenAI объявляет, что не может исключить достижение Astra уровня Critical по кибербезопасности в Preparedness Framework — впервые для компании — и приостанавливает часть внутренней работы для усиления защит; 18 августа Альтман подтверждает Time, что пауза продлилась две недели, называет причиной «разные степени рассогласования», а не только кибер-порог, и держит более крупный frontier-прогон замороженным",
+        "en": "OpenAI unveils Astra: an internal, not-yet-released model solves ten decades-old math problems (proofs meet split expert reaction, from Gowers' endorsement to Marcus's criticism); on August 7 OpenAI announces it can't rule out Astra reaching the Critical cybersecurity threshold under its Preparedness Framework — a first for the company — and pauses internal work to add safeguards; on August 18 Altman confirms to Time the pause lasted two weeks, cites 'various degrees of misalignment' rather than just the cyber threshold as the cause, and keeps a larger frontier run frozen"
       }
     },
     "openclaw-agent-autonomous-incidents": {
@@ -871,6 +882,34 @@
       "summary": {
         "ru": "OpenAI запускает отдельный режим ChatGPT для подростков 13-17 лет со Study Mode и родительским контролем на фоне исков о безопасности",
         "en": "OpenAI launches a separate ChatGPT mode for 13-17 year-olds with Study Mode and parental controls amid safety lawsuits"
+      }
+    },
+    "anthropic-claude-protein-design": {
+      "last_date": "2026-08-20",
+      "summary": {
+        "ru": "Anthropic и Adaptyv Bio показывают, что Claude Mythos Preview/Opus 4.8 самостоятельно спроектировали рабочие белковые связыватели для 14 из 15 мишеней (26,8% хитрейт против типичных 10-15%) и обрабатывают сырые лабораторные данные ЯМР/ЖХ-МС за 20-25 минут",
+        "en": "Anthropic and Adaptyv Bio show Claude Mythos Preview/Opus 4.8 autonomously designing working protein binders for 14 of 15 targets (26.8% hit rate vs. a typical 10-15%) and processing raw lab NMR/LC-MS data in 20-25 minutes"
+      }
+    },
+    "openai-zdr-private-safety-processing": {
+      "last_date": "2026-08-20",
+      "summary": {
+        "ru": "OpenAI подтверждает нулевое хранение данных для frontier-моделей и анонсирует превью Private Safety Processing — мониторинг риска в долгих агентных сессиях без доступа сотрудников к содержимому запросов; полный запуск и white paper — в сентябре",
+        "en": "OpenAI reaffirms zero data retention for frontier models and previews Private Safety Processing — risk monitoring across long agent sessions without staff access to prompt content; full rollout and a white paper are due in September"
+      }
+    },
+    "openai-replit-free-mode": {
+      "last_date": "2026-08-20",
+      "summary": {
+        "ru": "Replit включает по умолчанию Free Mode на GPT-5.6 Luna для тарифов Core/Pro — рутинные задачи и чат не тратят кредиты, агент эскалирует на более мощную модель по необходимости",
+        "en": "Replit turns on Free Mode (GPT-5.6 Luna) by default for its Core/Pro tiers — routine tasks and chat no longer burn credits, with the agent escalating to a stronger model as needed"
+      }
+    },
+    "anthropic-claude-code-2-1-236-237": {
+      "last_date": "2026-08-20",
+      "summary": {
+        "ru": "Claude Code 2.1.236-237 (19-20 августа): notify_when_idle для кросс-сессионного SendMessage, переменная ANTHROPIC_DEFAULT_MODEL, стиль вывода Concise",
+        "en": "Claude Code 2.1.236-237 (Aug 19-20): notify_when_idle for cross-session SendMessage, the ANTHROPIC_DEFAULT_MODEL env var, and the Concise output style"
       }
     }
   }

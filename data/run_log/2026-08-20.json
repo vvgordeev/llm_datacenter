@@ -1,0 +1,50 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T05:22:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "www.anthropic.com — EGRESS_BLOCKED через прокси, известное ограничение облачной песочницы"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 2, "note": "protein-design research post (18 авг), Claude Code changelog v2.1.236/237 через github.com/anthropics/claude-code/releases"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "openai.com — EGRESS_BLOCKED"},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 4, "note": "Astra training-pause disclosure (Time interview 18 авг), Zero Data Retention/Private Safety Processing (19 авг), Replit Free Mode (19 авг), ChatGPT restaurant reservations (уже покрыто ранее, пропущено как дубль по теме)"},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "blog.google — EGRESS_BLOCKED"},
+    {"source": "google (WebSearch)", "status": "ok", "candidates": 0, "note": "Back to School 2026 (промо для студентов, отклонено как маркетинг без продуктовой сути); Pixel 11 — не по теме LLM-функций"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "ai.meta.com — EGRESS_BLOCKED"},
+    {"source": "meta (WebSearch)", "status": "ok", "candidates": 0, "note": "Muse Code/Glimmer/Spark 1.2 — все уже опубликованы ранее (5-11 авг), новых событий за 18-20 авг не найдено"},
+    {"source": "xai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "x.ai — EGRESS_BLOCKED"},
+    {"source": "xai (WebSearch)", "status": "ok", "candidates": 1, "note": "Grok 4.6 на Amazon Bedrock (19-20 авг) — отклонено: дистрибуция уже анонсированной модели, не новая возможность"},
+    {"source": "mistral blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "mistral.ai — EGRESS_BLOCKED"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "последнее событие — региональный инференс 12 авг, новых новостей за 18-20 авг не найдено"},
+    {"source": "deepseek changelog (direct fetch)", "status": "blocked", "candidates": 0, "note": "api-docs.deepseek.com — EGRESS_BLOCKED"},
+    {"source": "deepseek (WebSearch)", "status": "empty", "candidates": 0, "note": "последнее событие — V4-Pro GA 13 авг, уже покрыто ранее"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "hn.algolia.com — EGRESS_BLOCKED на уровне прокси (подтверждено повторно)"},
+    {"source": "hacker news (WebSearch site:news.ycombinator.com)", "status": "ok", "candidates": 0, "note": "профильных новых тредов о релизах за 19-20 авг не найдено сверх уже учтённого"},
+    {"source": "aggregator: smol.ai (direct fetch)", "status": "blocked", "candidates": 0, "note": "news.smol.ai — EGRESS_BLOCKED"},
+    {"source": "aggregator: tldr.tech (direct fetch)", "status": "blocked", "candidates": 0, "note": "tldr.tech — EGRESS_BLOCKED"},
+    {"source": "aggregator: simonwillison.net linkblog (github backup вместо WebFetch)", "status": "ok", "candidates": 1, "note": "клонирован simonw/simonwillisonblog-backup; blog_entry/blog_blogmark ndjson дали точные даты; новый пост 19 авг найден этим путём"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI (WebSearch)", "status": "empty", "candidates": 0, "note": "поиск не вернул конкретных постов за 19-20 авг с реальными ссылками"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "«Conceptual integrity and counting lines of code» (19 авг) — через github-бэкап блога"},
+    {"source": "experts: Andrej Karpathy (видео, RSS/WebSearch)", "status": "empty", "candidates": 0, "note": "youtube.com — EGRESS_BLOCKED сегодня (CONNECT), RSS недоступен; WebSearch нашёл только уже опубликованное ранее видео (12 авг)"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "новых постов/эпизодов за 13-20 авг не найдено WebSearch'ем"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "youtube.com заблокирован; WebSearch вернул только уже опубликованное видео (15 авг)"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "empty", "candidates": 0, "note": "youtube.com заблокирован; WebSearch не нашёл конкретного нового видео с датой в окне"},
+    {"source": "experts: Ethan Mollick (One Useful Thing)", "status": "empty", "candidates": 0, "note": "последний найденный пост — конец июля, новых за 7 дней не найдено"},
+    {"source": "experts: Nate Herk (видео)", "status": "empty", "candidates": 0, "note": "youtube.com заблокирован; WebSearch не дал конкретного видео с датой"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "youtube.com заблокирован; WebSearch не дал конкретного видео с датой"},
+    {"source": "расширенный поиск экспертов (Zvi Mowshowitz, Gary Marcus — не из конфига)", "status": "ok", "candidates": 2, "note": "«Anthropic Risk Report: August 2026» (Zvi, ~19-20 авг), «BREAKING: OpenAI's unraveling has begun» (Marcus, 19 авг) — резонансные материалы недели по теме дня"}
+  ],
+  "totals": {
+    "candidates": 18,
+    "published": 5,
+    "rejected": {
+      "уже опубликовано ранее (дубль сюжета без новизны)": 6,
+      "не по теме / маркетинг без продуктовой сути": 2,
+      "нет independent-подтверждения даты или содержания": 2,
+      "минорная дистрибуция уже анонсированной модели": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — видео-кандидатов не найдено (youtube.com CONNECT заблокирован сегодня, RSS/WebSearch не дали новых роликов в окне свежести)",
+    "frames": "skipped: no video content this run"
+  },
+  "notes": "Сеть: прямой WebFetch заблокирован (EGRESS_BLOCKED) почти на все основные домены — блоги вендоров, hn.algolia.com, youtube.com, агрегаторы (smol.ai, tldr.tech), а также anthropic.com/openai.com/adaptyvbio.com/explainx.ai. WebSearch — единственный рабочий канал discovery, как и в прошлых прогонах. Обход для Simon Willison сработал (github.com/simonw/simonwillisonblog-backup). Экспертный раздел вышел ниже min_expert_total=5 (3 статьи вместо 5) несмотря на полный обход всех экспертов конфига + расширенный поиск (Zvi Mowshowitz, Gary Marcus, 404 Media, Latent Space, Chip Huyen, stratechery.com и др.) — видео-каналы (Karpathy, AI Explained, Matt Wolfe, Nate Herk, Matt Pocock) не дали новых роликов в окне из-за блокировки youtube.com и отставания поискового индекса; повторить попытку видео-discovery в следующем прогоне."
+}
