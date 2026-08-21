@@ -1,0 +1,164 @@
+{
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21T10:00:00Z",
+  "news": [
+    {
+      "id": "2026-08-21-openai-chatgpt-apple-messages",
+      "cluster_id": "openai-chatgpt-apple-messages",
+      "models": ["openai"],
+      "title": {
+        "ru": "ChatGPT научился читать, писать и отправлять iMessage на Mac — и это встревожило защитников приватности Apple",
+        "en": "ChatGPT can now read, draft, and send iMessages on Mac — and Apple privacy watchers are uneasy"
+      },
+      "summary": {
+        "ru": "Новый плагин Apple Messages для десктопного приложения ChatGPT (только Apple Silicon) даёт ChatGPT Work и Codex доступ к переписке iMessage/SMS/RCS: искать сообщения, составлять ответы и отправлять их — с подтверждением на каждое сообщение или разово на всю беседу. Одновременно вышли смежные обновления: смена URL у ChatGPT Sites без передеплоя, расширенная macOS Computer History, read-only снепшоты чатов Codex и синхронизация закреплённых чатов между устройствами.",
+        "en": "A new Apple Messages plugin for the ChatGPT desktop app (Apple Silicon only) gives ChatGPT Work and Codex access to iMessage/SMS/RCS conversations: searching messages, drafting replies, and sending them — with approval required per message or, once granted, per conversation. It shipped alongside related updates: editable ChatGPT Sites URLs without redeploying, expanded macOS Computer History, read-only Codex chat snapshots, and pinned-chat sync across devices."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Расширяет ассистента на новую, крайне чувствительную область личных данных (переписку) с реальным правом действовать за пользователя — раздвигает границы агентного доступа, но пока ограничено Mac на Apple Silicon внутри ChatGPT Work/Codex, а не обычным чатом",
+        "en": "Extends the assistant into a new, highly sensitive personal-data surface (private messages) with real ability to act on the user's behalf — broadens the agentic-access frontier, but for now is scoped to Apple Silicon Macs inside ChatGPT Work/Codex, not everyday chat"
+      },
+      "source_url": "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/",
+      "opinions": [
+        {
+          "author": "Mark Gurman (Bloomberg)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "ChatGPT теперь может управлять iMessage на Mac — то же самое, что умеет Siri AI, но на стероидах. Но Apple, вероятно, тоже считает это нарушением приватности. Вмешается ли Купертино?",
+            "en": "OpenAI's ChatGPT can now control iMessage on your Mac. It's the same thing Siri AI can do but on steroids. But Apple also probably thinks it's a privacy violation. Will Cupertino intervene?"
+          },
+          "url": "https://x.com/markgurman/status/2090580272433832177"
+        },
+        {
+          "author": "9to5Mac",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Функция работает только в arm64-сборке десктопного приложения (Intel Mac остаются за бортом) и доступна внутри Codex и ChatGPT Work, а не в обычных чатах ChatGPT — это осознанно узкий, а не массовый релиз.",
+            "en": "The feature ships only in the Apple Silicon (arm64) build of the desktop app — Intel Macs are excluded — and works inside Codex and ChatGPT Work rather than in ordinary ChatGPT chats, making this a deliberately narrow rollout rather than a mass one."
+          },
+          "url": "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/"
+        },
+        {
+          "author": "iTechPost",
+          "stance": "positive",
+          "quote": {
+            "ru": "Пользователи получают практичный инструмент: анализировать переписку, получать сводки и генерировать ответы на основе реального контекста разговора, а не переписывать его вручную.",
+            "en": "Users get a practical tool: analyze conversations, get summaries, and generate replies grounded in the actual conversation context instead of retyping it by hand."
+          },
+          "url": "https://www.itechpost.com/articles/237090/20260820/chatgpt-gets-apple-messages-integration-mac-analyze-summarize-info-generate-replies-using-ai.htm"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Проверить в переписке предложенное время встречи и сразу ответить со свободными слотами из календаря",
+            "en": "Check a proposed meeting time in a message thread and reply with open calendar slots right away"
+          },
+          "url": "https://www.neowin.net/news/chatgpt-can-now-read-and-send-apple-messages-from-your-mac/"
+        },
+        {
+          "text": {
+            "ru": "Просмотреть вчерашние сообщения и получить предложенные варианты продолжения разговора",
+            "en": "Review yesterday's messages and get suggested follow-ups to continue the conversation"
+          },
+          "url": "https://www.neowin.net/news/chatgpt-can-now-read-and-send-apple-messages-from-your-mac/"
+        },
+        {
+          "text": {
+            "ru": "Найти упомянутые в переписке дни рождения и добавить их в календарь",
+            "en": "Find birthdays mentioned across message threads and add them to a calendar"
+          },
+          "url": "https://www.neowin.net/news/chatgpt-can-now-read-and-send-apple-messages-from-your-mac/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-21-claude-code-2-1-238",
+      "cluster_id": "anthropic-claude-code-2-1-238",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Code 2.1.238: исправлена неограниченная утечка памяти в длинных сессиях, новые флаги для self-hosted runner",
+        "en": "Claude Code 2.1.238: unbounded memory growth in long sessions fixed, new self-hosted runner flags"
+      },
+      "summary": {
+        "ru": "Релиз 2.1.238 (20 августа) закрывает утечку памяти в длинных интерактивных сессиях (результаты работы саб-агентов теперь освобождаются), добавляет настройку keybindingFlavor (readline-режим для Ctrl+W), headersHelper для плагин-маркетплейсов (получение свежих HTTP-заголовков/токенов) и флаги --defer-shutdown-max-min, --proxy-authorization-command/-file для self-hosted runner. Также поправлены дрейф пользовательских output style, поведение MCP-элайсит-диалогов на длинных URL и ряд более мелких багов терминала и permission-промптов.",
+        "en": "Release 2.1.238 (August 20) fixes unbounded memory growth in long interactive sessions (subagent tool results are now released), adds a keybindingFlavor setting (readline-style Ctrl+W), a headersHelper for plugin marketplaces (minting fresh HTTP headers/tokens), and --defer-shutdown-max-min / --proxy-authorization-command/-file flags for the self-hosted runner. It also fixes custom output styles drifting to default, MCP elicitation dialogs breaking on long URLs, and several smaller terminal and permission-prompt bugs."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Полезное развитие в рамках уже существующих self-hosted runner и настроек CLI — закрывает реальные операционные боли (утечка памяти, ротация токенов egress-прокси), но подход к использованию Claude Code не меняет",
+        "en": "A useful development within the already-existing self-hosted runner and CLI settings — closes real operational pain points (memory leak, egress-proxy token rotation) without changing the approach to using Claude Code"
+      },
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+      "opinions": [
+        {
+          "author": "nerdx86, GitHub issue #33735",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "После долгой сессии разработки (несколько часов, одна компакция контекста) процесс claude накапливает огромный объём приватной памяти — до 18,2 ГБ, хотя история диалога занимает всего 10–20 МБ.",
+            "en": "After a long development session (several hours, one context compaction), the claude process accumulates massive private memory — up to 18.2GB — despite the actual conversation history being only 10-20MB."
+          },
+          "url": "https://github.com/anthropics/claude-code/issues/33735"
+        },
+        {
+          "author": "реакции на странице релиза GitHub",
+          "stance": "positive",
+          "quote": {
+            "ru": "Релиз получил только положительные emoji-реакции (👍🎉🚀❤️😄👀, суммарно порядка десятка) — без единой отрицательной.",
+            "en": "The release drew only positive emoji reactions (👍🎉🚀❤️😄👀, roughly a dozen total) — with no negative reactions."
+          },
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Держать self-hosted runner на спот-инстансах: --defer-shutdown-max-min даёт время корректно освободить активные сессии перед вытеснением вместо их обрыва",
+            "en": "Run the self-hosted runner on spot instances: --defer-shutdown-max-min gives active sessions time to release cleanly before reclamation instead of being cut off"
+          },
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
+        },
+        {
+          "text": {
+            "ru": "Подключать плагин-маркетплейсы за egress-прокси, требующим короткоживущих токенов: headersHelper сам получает свежий заголовок Proxy-Authorization на каждый запрос",
+            "en": "Connect plugin marketplaces behind an egress proxy that requires short-lived tokens: headersHelper mints a fresh Proxy-Authorization header on each fetch"
+          },
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-21-willison-chatgpt-site-operator",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Как ChatGPT Search тихо начал массово использовать оператор site:",
+        "en": "How ChatGPT Search quietly started using the site: operator at scale"
+      },
+      "url": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
+      "summary": {
+        "ru": "По данным независимого трекера Promptwatch, доля fanout-запросов ChatGPT Search с оператором site: подскочила с ~0,3% до 16–17% 8 августа — сразу после расплывчатого анонса обновления GPT-5.6 Sol. Willison реконструирует, что могло измениться в поисковом инструменте, и разбирает второй сигнал от того же трекера: заметное снижение обращений к Reddit как источнику.",
+        "en": "According to independent tracker Promptwatch, the share of ChatGPT Search fanout queries containing the site: operator jumped from ~0.3% to 16-17% on August 8 — right after a vague announcement about a GPT-5.6 Sol update. Willison reconstructs what likely changed in the search tool and covers a second signal from the same tracker: a marked drop in ChatGPT pulling from Reddit as a source."
+      },
+      "note_page": "notes/articles/willison-chatgpt-site-operator-fanouts.html"
+    },
+    {
+      "id": "2026-08-21-404media-amazon-rare-books",
+      "type": "article",
+      "author": "404 Media",
+      "title": {
+        "ru": "Мы проследили за партией редких книг. Она закончилась на цеху Amazon по обучению ИИ",
+        "en": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility"
+      },
+      "url": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/",
+      "summary": {
+        "ru": "404 Media вложили Apple AirTag в заказ на ~1000 книг у букиниста и проследили его до корпуса VGT3 на складе Amazon в Лас-Вегасе, где, по подтверждённым словам сотрудников, книги деструктивно сканируют (срезая переплёт) и уничтожают — первое физическое подтверждение конечной точки для книг, скупаемых под обучение ИИ-моделей.",
+        "en": "404 Media placed an Apple AirTag inside a ~1,000-book order from a bookseller and tracked it to the VGT3 wing of an Amazon warehouse in Las Vegas, where workers confirmed books are destructively scanned (bindings cut off) and destroyed — the first physically confirmed endpoint for books bought up to train AI models."
+      },
+      "note_page": "notes/articles/404media-amazon-rare-books-ai-training.html"
+    }
+  ]
+}

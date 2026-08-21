@@ -325,7 +325,13 @@
     "https://thezvi.substack.com/p/anthropic-risk-report-august-2026": "2026-08-20",
     "notes/articles/zvi-anthropic-risk-report-august-2026.html": "2026-08-20",
     "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
-    "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20"
+    "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
+    "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/": "2026-08-21",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.238": "2026-08-21",
+    "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/": "2026-08-21",
+    "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/": "2026-08-21",
+    "notes/articles/willison-chatgpt-site-operator-fanouts.html": "2026-08-21",
+    "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -910,6 +916,20 @@
       "summary": {
         "ru": "Claude Code 2.1.236-237 (19-20 августа): notify_when_idle для кросс-сессионного SendMessage, переменная ANTHROPIC_DEFAULT_MODEL, стиль вывода Concise",
         "en": "Claude Code 2.1.236-237 (Aug 19-20): notify_when_idle for cross-session SendMessage, the ANTHROPIC_DEFAULT_MODEL env var, and the Concise output style"
+      }
+    },
+    "openai-chatgpt-apple-messages": {
+      "last_date": "2026-08-21",
+      "summary": {
+        "ru": "ChatGPT (desktop, Apple Silicon) получает плагин Apple Messages: поиск, чтение и отправка iMessage/SMS/RCS внутри ChatGPT Work и Codex, с подтверждением на сообщение или на беседу",
+        "en": "ChatGPT (desktop, Apple Silicon) gets an Apple Messages plugin: searching, reading, and sending iMessage/SMS/RCS inside ChatGPT Work and Codex, with per-message or per-conversation approval"
+      }
+    },
+    "anthropic-claude-code-2-1-238": {
+      "last_date": "2026-08-21",
+      "summary": {
+        "ru": "Claude Code 2.1.238 (20 августа): исправлена утечка памяти в длинных сессиях, keybindingFlavor, headersHelper для маркетплейсов, флаги self-hosted runner для spot-инстансов и egress-прокси",
+        "en": "Claude Code 2.1.238 (August 20): fixed memory leak in long sessions, keybindingFlavor, headersHelper for marketplaces, self-hosted runner flags for spot instances and egress proxies"
       }
     }
   }

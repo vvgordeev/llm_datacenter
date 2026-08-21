@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «ChatGPT search now uses the site: operator at scale» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (по данным Promptwatch) · 2026-08-20</span>
+      <span data-lang="en">Article digest · Simon Willison (via Promptwatch data) · 2026-08-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как ChatGPT Search тихо начал массово использовать оператор site: — и что это говорит об устройстве поиска в чат-ботах</span>
+      <span data-lang="en">How ChatGPT Search quietly started using the site: operator at scale — and what that reveals about chatbot search internals</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+      ·
+      <a href="https://promptwatch.com/data/chatgpt-site-operator-fanouts" target="_blank" rel="noopener">
+        <span data-lang="ru">данные Promptwatch ↗</span><span data-lang="en">Promptwatch's data ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">OpenAI не публикует, как устроен поисковый инструмент внутри ChatGPT — какие запросы он реально отправляет, когда решает «поискать в интернете». Willison пересказывает находку компании Promptwatch, которая занимается GEO (Generative Engine Optimization — версией SEO для чат-ботов) и в рамках своего продукта автоматически прогоняет промпты через ChatGPT, Claude и Gemini, отслеживая, как те формулируют подзапросы. Их агрегированные отчёты о таких невидимых изменениях — часть контент-маркетинга Promptwatch, но, по наблюдению Willison, они дают достоверные подсказки о том, что на самом деле меняется под капотом продуктов, которые сами об этом не рассказывают.</span>
+      <span data-lang="en">OpenAI doesn't publish how the search tool inside ChatGPT actually works — what queries it fires off once it decides to "search the web." Willison relays a finding from Promptwatch, a company in the GEO space (Generative Engine Optimization — the chatbot version of SEO) whose product automatically runs prompts through ChatGPT, Claude, and Gemini and tracks how each one phrases its sub-queries. Their aggregate reports on these invisible changes are part of Promptwatch's own content-marketing strategy, but Willison notes they do seem to provide credible hints about otherwise-invisible design shifts in products that don't document themselves.</span>
+    </p>
+
+    <h2><span data-lang="ru">Сам сигнал: доля запросов с site: подскочила с 0,3% до 17%</span><span data-lang="en">The signal itself: site: queries jumped from 0.3% to 17%</span></h2>
+    <p>
+      <span data-lang="ru">Promptwatch считает долю всех «fanout»-запросов ChatGPT Search (подзапросов, которые модель генерирует сама, чтобы закрыть исходный вопрос пользователя), содержащих оператор <code>site:</code>. Эта доля держалась в районе 0,3–0,5% неделями, кратко провалилась до 0,15% 3–5 августа — что похоже на постепенный роллаут или предпусковой эксперимент — а затем 8 августа скачком выросла до 16–17%. Важная оговорка: цифры отражают только те промпты, для которых у Promptwatch включено автоматическое отслеживание, то есть это не абсолютная статистика по всем пользователям ChatGPT, а срез по их собственной выборке.</span>
+      <span data-lang="en">Promptwatch tracks the share of all ChatGPT Search "fanout" queries — the sub-queries the model generates on its own to answer the user's original question — that contain the <code>site:</code> operator. That share hovered between 0.3% and 0.5% for weeks, dipped briefly to 0.15% on August 3–5 (consistent with a staged rollout or a pre-launch experiment), then jumped to 16–17% on August 8. The important caveat: these numbers only reflect the prompts for which Promptwatch has automated tracking enabled — it's not absolute statistics across all ChatGPT users, just a slice from their own sample.</span>
+    </p>
+
+    <h2><span data-lang="ru">Совпадение по времени с релизом GPT-5.6 Sol — и что это может значить</span><span data-lang="en">The timing lines up with the GPT-5.6 Sol rollout — and what that might mean</span></h2>
+    <p>
+      <span data-lang="ru">Скачок совпадает с расплывчатым анонсом OpenAI от 6 августа: «для пользователей Plus и Pro мы обновляем GPT-5.6 Sol в чате, чтобы он был более надёжен в фактах и давал более сфокусированные ответы». Willison признаёт, что упирается в привычную стену — OpenAI намеренно не раскрывает системные промпты, — но, поэкспериментировав с ChatGPT напрямую, предполагает: новый поисковый инструмент устроен скорее как вызов функции вида <code>search(query, recency, domains)</code>, где домен передаётся отдельным параметром, а не выражен буквальным оператором <code>site:</code> внутри текста запроса — то есть рост доли <code>site:</code>-запросов может быть побочным эффектом того, как теперь формируется поисковый запрос, а не намеренным «поощрением» модели использовать этот синтаксис.</span>
+      <span data-lang="en">The jump coincides with OpenAI's somewhat vague August 6th announcement: "for Plus and Pro users, we're updating GPT-5.6 Sol in Chat to be more reliable with facts and provide more focused answers." Willison admits he runs into the usual wall — OpenAI deliberately doesn't expose its system prompts — but after poking at ChatGPT directly, he suspects the new search tool is shaped more like a function call along the lines of <code>search(query, recency, domains)</code>, where a domain is passed as a separate parameter rather than spelled out as a literal <code>site:</code> operator in the query text — meaning the rise in site:-flavored queries could be a side effect of how the search call is now assembled, not a deliberate nudge toward that syntax.</span>
+    </p>
+
+    <h2><span data-lang="ru">Второй сигнал: Reddit как источник в ответах ChatGPT тоже меняется</span><span data-lang="en">A second signal: Reddit as a source in ChatGPT's answers is shifting too</span></h2>
+    <p>
+      <span data-lang="ru">В отчёте от 18 августа Promptwatch зафиксировала ещё одно изменение: похоже, что вероятность обращения ChatGPT к Reddit при поиске заметно снизилась. Willison пытался понять, не поменялся ли системный промпт так, чтобы явно обесценивать Reddit как источник, но не нашёл подтверждения: самая полная известная ему коллекция утечек системных промптов OpenAI на GitHub пока не показывает релевантных изменений. Итог получается методологически честным и характерным для всей этой темы: два независимых, косвенных наблюдения о поведении закрытого продукта, которые совпадают по времени с публичным анонсом, но не могут быть окончательно объяснены без доступа к самому механизму.</span>
+      <span data-lang="en">In an August 18th follow-up report, Promptwatch flagged another change: ChatGPT appears to have grown markedly less likely to pull from Reddit when searching. Willison tried to determine whether the system prompt had been updated to explicitly discourage Reddit as a source, but came up empty — the most thorough leaked-system-prompt collection for OpenAI that he knows of, on GitHub, doesn't yet show any relevant change. The whole piece lands on a methodologically honest, and fairly representative, note for this genre: two independent, indirect observations about a closed product's behavior that line up in time with a public announcement, but can't be conclusively explained without access to the mechanism itself.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
