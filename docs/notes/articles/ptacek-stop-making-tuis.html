@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Stop Making TUIs» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Thomas Ptacek (через ссылку Simon Willison) · 2026-08-20</span>
+      <span data-lang="en">Article digest · Thomas Ptacek (via Simon Willison's linkblog) · 2026-08-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Хватит писать TUI — агенты сделали native-интерфейс дешевле терминального</span>
+      <span data-lang="en">Stop Making TUIs — agents made native UIs cheaper than terminal ones</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+      ·
+      <a href="https://simonwillison.net/2026/Aug/21/stop-making-tuis/" target="_blank" rel="noopener">
+        <span data-lang="ru">заметка Simon Willison ↗</span><span data-lang="en">Simon Willison's note ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Томас Птачек (sockpuppet.org) выворачивает привычную иерархию: раньше CLI почти всегда была хорошей идеей, а TUI — почти никогда, потому что стоимость нормального GUI была намного выше стоимости текстового интерфейса в терминале. Его тезис на 2026 год: это неравенство стоимости исчезло. Агент кодирования умеет надёжно собрать разумный native-интерфейс на macOS средствами SwiftUI — просто следуя тому, как это рекомендует делать Apple — и Птачек уверен, что то же самое получится и на Windows, и на Linux. Раз строить GUI стало почти бесплатно, дефолтный выбор в пользу TUI для мелкой личной утилиты перестаёт быть рациональным.</span>
+      <span data-lang="en">Thomas Ptacek (sockpuppet.org) flips the usual hierarchy: building a CLI used to be almost always a good idea, and a TUI almost never, because a decent GUI cost far more than a terminal text interface. His 2026 claim is that this cost gap has closed. A coding agent can reliably build a reasonable native macOS interface just by following the SwiftUI conventions Apple already documents — and Ptacek is confident the same now holds on Windows and Linux. Once building a GUI is nearly free, defaulting to a TUI for a small personal tool stops being the rational choice.</span>
+    </p>
+
+    <h2><span data-lang="ru">Разбор аргументов в пользу TUI — один за другим</span><span data-lang="en">Taking the pro-TUI arguments apart one by one</span></h2>
+    <p>
+      <span data-lang="ru">Статья методично проходит по стандартным доводам за терминальные интерфейсы и показывает, где они не выдерживают проверки в мире, где агент пишет UI-код бесплатно. Кросс-платформенность — да, TUI переносится между Linux-машинами почти без изменений, но того же самого агент теперь достигает и для native-кода. Доступность для скринридеров — Птачек не видит в этом причины предпочитать TUI: построчное озвучивание «хрома» интерфейса — это не то же самое, что нормальная поддержка accessibility, которую нативные UI-фреймворки уже умеют из коробки. Экономичность и скорость — раньше главный аргумент, но именно она обесценилась первой, поскольку это была разница именно в стоимости разработки, а не в чём-то, что нужно конечному пользователю.</span>
+      <span data-lang="en">The piece works methodically through the standard case for terminal interfaces and shows where each one stops holding up once an agent can write UI code for free. Cross-platform reach — yes, a TUI ports across Linux machines with little change, but an agent now gets the same result for native code too. Screen-reader accessibility — Ptacek doesn't see this as a reason to prefer TUIs: reading a TUI's "chrome" line by line isn't the same thing as the accessibility support native UI frameworks already ship with. Economy and speed — previously the strongest argument, and the first one to lose its force, since it was always a gap in development cost, not something the end user actually needed.</span>
+    </p>
+
+    <h2><span data-lang="ru">Личный опыт: от «500 одноразовых CLI» до реальных приложений</span><span data-lang="en">Personal precedent: from "500 throwaway CLIs" to real apps</span></h2>
+    <p>
+      <span data-lang="ru">Птачек описывает себя как systems-программиста, десятилетиями считавшего, что интерфейсный код — не его работа, и признаёт: пора это пересмотреть. Призыв прямой: «если вы ещё не пробовали превратить одну из своих 500 одноразовых утилит-CLI в native-приложение — вы себя обделяете. Идите и постройте native UI. Это, вероятно, изменит ваш образ мышления». Willison, комментируя ссылку у себя в блоге, подтверждает это собственным опытом: он и сам с марта пользуется двумя vibe-coded macOS-приложениями в строке меню (мониторинг сети и GPU) на ежедневной основе и признаёт, что «выдохся с отговорками» не делать то же самое для остальных своих утилит.</span>
+      <span data-lang="en">Ptacek describes himself as a systems programmer who spent decades assuming UI code wasn't his job, and admits it's time to recalibrate. His call to action is direct: "if you haven't tried your hand at turning one of your 500 throwaway CLIs into a native app, you're doing yourself a disservice. Go build a native UI. It'll probably change the way you think." Commenting on the link on his own blog, Willison backs this with his own experience: he's used two vibe-coded macOS menu-bar apps (bandwidth and GPU monitors) daily since March, and admits he's "running out of excuses" not to do the same for his other tools.</span>
+    </p>
+
+    <h2><span data-lang="ru">Реакция: терминал и SSH-доступ так просто не сдаются</span><span data-lang="en">Pushback: the terminal and SSH access don't give up that easily</span></h2>
+    <p>
+      <span data-lang="ru">Обсуждение на Hacker News не приняло тезис безоговорочно. Часть комментаторов настаивает на сценариях, где у TUI нет native-альтернативы: доставка приложения по SSH без локальной установки — ключевое преимущество для серверных и embedded-сценариев, где нужно посмотреть статус системы прямо с консоли, без графического стека вообще. Ограничение метода Птачека в этом и состоит: он говорит именно о персональных инструментах на собственной машине разработчика, а не о софте, которому по своей природе нужен доступ по сети без GUI-окружения — там расчёт стоимости остаётся прежним.</span>
+      <span data-lang="en">The Hacker News discussion didn't accept the thesis unconditionally. Several commenters pushed back with scenarios where a TUI has no native substitute: shipping an app over SSH with no local install remains the killer feature for server and embedded use cases, where you need to check system status straight from a console with no graphical stack at all. That's the real limit of Ptacek's argument: it's specifically about personal tools on a developer's own machine, not about software that by its nature needs network access with no GUI environment available — there the old cost calculation still holds.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

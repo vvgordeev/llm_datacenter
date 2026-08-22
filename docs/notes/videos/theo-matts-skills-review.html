@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «So I tried Matt's skills...» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Theo (t3.gg) · 2026-08-19 · 38:20</span>
+      <span data-lang="en">Video digest · Theo (t3.gg) · 2026-08-19 · 38:20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Я попробовал скиллы Мэтта: как выбирать агентские skills, а не копировать чужой набор</span>
+      <span data-lang="en">So I Tried Matt's Skills: how to pick agent skills instead of copying someone else's set</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=0oXOOlqVu5M" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Theo, создатель T3 Chat и открытого инструмента T3 Code (GUI-надстройки для управления агентами — Claude Code, Codex, Cursor, Grok Build, OpenCode — с одного экрана), разбирает два популярных набора «скиллов» для кодинг-агентов: репозиторий Мэтта Покока (200 000+ звёзд на GitHub) и Pstack Лорен «Potato» Тан <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=21">[00:21]</a>. Но заявленная в заголовке тема — не обзор конкретных файлов, а метод: как решить, какие скиллы вообще стоит себе ставить.</span>
+      <span data-lang="en">Theo, creator of T3 Chat and the open-source T3 Code (a GUI layer for driving coding agents — Claude Code, Codex, Cursor, Grok Build, OpenCode — from one screen), works through two popular agent-skill collections: Matt Pocock's repo (200,000+ GitHub stars) and Lauren "Potato" Tan's Pstack <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=21">[00:21]</a>. But the video's real subject isn't a tour of specific files — it's a method for deciding which skills are worth installing at all.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: аудит собственной истории вместо копирования чужого репозитория</span><span data-lang="en">The method: audit your own history instead of copying someone else's repo</span></h2>
+    <p>
+      <span data-lang="ru">Центральный тезис видео звучит явно уже в первые минуты: настраивать инструменты ИИ под свой рабочий процесс нужно осознанно, а не слепо перенимать чужую конфигурацию <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=194">[03:14]</a>. Практический приём для этого — прогнать через T3 Code реальную историю личного использования агентов на трёх своих машинах и попросить Opus 5 составить рейтинг соответствия между этой историей и списком скиллов из обоих репозиториев, с одной строкой обоснования на каждый пункт <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=256">[04:16]</a>. Скиллы, которые действительно совпадают с тем, чем вы уже занимаетесь, поднимаются в верх списка — и именно их стоит ставить первыми, а не читать README сверху вниз и угадывать.</span>
+      <span data-lang="en">The video's central claim lands within the first few minutes: customizing AI tools for your own workflow has to be a deliberate choice, not blind adoption of someone else's config <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=194">[03:14]</a>. The practical technique: feed T3 Code your actual agent-usage history across your own machines and have Opus 5 produce a fit ranking between that history and the skill lists in both repos, with one line of justification per entry <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=256">[04:16]</a>. Skills that genuinely match what you already do rise to the top of that list — and those are the ones worth installing first, instead of reading the README top to bottom and guessing.</span>
+    </p>
+
+    <h2><span data-lang="ru">/unslop: живое до/после против «признаков ИИ» в тексте</span><span data-lang="en">/unslop: a live before/after against "AI tells" in text</span></h2>
+    <p>
+      <span data-lang="ru">Больше всего экранного времени уходит на скилл /unslop, который переписывает сгенерированный ИИ текст, убирая типичные словесные штампы и многословные конструкции <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=311">[05:11]</a>. Theo показывает прямое сравнение одного и того же куска текста до и после применения скилла: разница в ясности и лаконичности заметна невооружённым глазом <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=641">[10:41]</a>. Дальше — короткий обзор ещё нескольких скиллов из набора Покока, включая diagnosing-bugs (структурированная диагностика багов) и wizard (пошаговый интерактивный помощник) <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=796">[13:16]</a>.</span>
+      <span data-lang="en">Most screen time goes to /unslop, which rewrites AI-generated text to strip out the typical verbal tics and wordy constructions <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=311">[05:11]</a>. Theo runs a direct comparison of the same passage before and after the skill: the gap in clarity and concision is visible at a glance <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=641">[10:41]</a>. From there, a shorter tour of other skills in Pocock's set, including diagnosing-bugs (structured bug diagnosis) and wizard (a step-by-step interactive helper) <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=796">[13:16]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Grilling: структурированное интервью вместо расплывчатого брифа</span><span data-lang="en">Grilling: a structured interview instead of a vague brief</span></h2>
+    <p>
+      <span data-lang="ru">Последняя разобранная в конспекте часть — живая демонстрация скилла grilling: агент проводит структурированное интервью о проекте, задавая уточняющие вопросы по одному, а не просит сразу сформулировать полное задание <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=952">[15:52]</a>. Это тот же самый паттерн «grill», который в наборе Мэтта Покока лежит в основе всего цикла разработки (см. конспект релиза v1.1 skills-репозитория за июль) — здесь он показан не как часть большого пайплайна, а как самостоятельный приём, который можно перенять по отдельности.</span>
+      <span data-lang="en">The last section covered here is a live demo of the grilling skill: the agent runs a structured interview about the project, asking clarifying questions one at a time instead of asking you to state the whole brief up front <a class="ts" href="https://www.youtube.com/watch?v=0oXOOlqVu5M&t=952">[15:52]</a>. This is the same "grill" pattern that anchors Matt Pocock's whole development cycle in his skills repo (see July's digest of the v1.1 release) — shown here not as part of a larger pipeline, but as a standalone technique worth adopting on its own.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Видео длится 38:20; этот конспект покрывает первую половину (до ~16 минуты), где сосредоточен метод и основные демонстрации.</span>
+      <span data-lang="en">The video runs 38:20; this digest covers the first half (up to ~16 minutes), where the method and the main demonstrations are concentrated.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

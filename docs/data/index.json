@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-22",
+      "news_count": 3,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Anthropic перезапускает бесплатную «Claude Academy» — 26 курсов от нуля до API",
+        "en": "Anthropic relaunches its free Claude Academy with 26 courses, from zero to the API"
+      }
+    },
+    {
       "date": "2026-08-21",
       "news_count": 2,
       "expert_count": 2,

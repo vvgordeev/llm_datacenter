@@ -1,0 +1,45 @@
+{
+  "date": "2026-08-22",
+  "generated_at": "2026-08-22T05:23:42Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 2, "note": "WebFetch www.anthropic.com -> EGRESS_BLOCKED; WebSearch surfaced Claude Academy relaunch (Aug 20, used) and Claude Code 2.1.239 (Aug 21, used) via third-party changelog aggregators, not the blog itself"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch openai.com -> EGRESS_BLOCKED; WebSearch found only already-covered items (ChatGPT for Teens Aug 18-19, Apple Messages plugin Aug 20-21) — no new candidate inside the 36h lookback"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch blog.google -> EGRESS_BLOCKED; WebSearch found only enterprise/Workspace items (Gemini DLP rollout, Chat usage metrics, Ask Gemini in Chat scheduled Aug 26) — too niche or outside lookback"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ai.meta.com -> EGRESS_BLOCKED; WebSearch found nothing newer than Muse Glimmer (Aug 10), outside lookback"},
+    {"source": "xai news", "status": "blocked", "candidates": 1, "note": "WebFetch x.ai -> EGRESS_BLOCKED; WebSearch found Grok Bot's plan expansion (Aug 21, used, continuation of xai-grok-bot cluster)"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch mistral.ai -> EGRESS_BLOCKED; WebSearch found only OCR 4 / AI Now Summit items already older than the lookback window"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch api-docs.deepseek.com -> EGRESS_BLOCKED; WebSearch found nothing newer than V4-Pro GA (Aug 13), outside lookback"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "WebFetch hn.algolia.com -> EGRESS_BLOCKED (unlike some earlier runs where this API worked); fell back to WebSearch site:news.ycombinator.com queries for community reactions"},
+    {"source": "smol.ai news digest", "status": "blocked", "candidates": 0, "note": "WebFetch news.smol.ai -> EGRESS_BLOCKED; WebSearch surfaced the Aug 20 \"not much happened today\" issue's contents second-hand, nothing new beyond already-covered stories"},
+    {"source": "tldr.tech", "status": "blocked", "candidates": 0, "note": "WebFetch tldr.tech -> EGRESS_BLOCKED; not pursued further via WebSearch, aggregator coverage handled via smol.ai and direct model-blog searches instead"},
+    {"source": "reddit (r/LocalLLaMA, r/ClaudeAI)", "status": "empty", "candidates": 0, "note": "WebSearch site:reddit.com queries for Claude Academy / Grok Bot turned up nothing usable; used X and blog reactions instead"},
+    {"source": "X (Twitter)", "status": "ok", "candidates": 3, "note": "Found official Grok Bot announcement tweet and Chubby/kimmonismus reaction to Claude Academy via WebSearch"},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 2, "note": "Cloned simonwillisonblog-backup (ndjson dump) directly since simonwillison.net itself 403s over WebFetch; found the Aug 21 blogmark on Ptacek's 'Stop Making TUIs' and the Aug 21 quotation on Matt Webb's 'Galactic Compass 2' post — both used as expert content, attributed to the primary authors per the skill's discovery guidance"},
+    {"source": "expert: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "youtube.com RSS/WebFetch and yt-dlp both hit proxy-level 403 (CONNECT), consistent with prior runs; WebSearch only surfaced an April 2026 Sequoia Ascent video, outside the 7-day window"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "WebSearch found only a March 2026 guest post ('How to Kill the Code Review') recirculating — nothing inside the 7-day window"},
+    {"source": "expert: AI Explained (video)", "status": "empty", "candidates": 0, "note": "youtube.com blocked as above; WebSearch couldn't surface a specific recent video title/date for this channel"},
+    {"source": "expert: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "youtube.com blocked as above; WebSearch returned channel pages, no dated recent upload"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "WebSearch found only July 2026 posts ('The Twilight of the Chatbots', 'An opinionated guide...') — nothing inside the 7-day window"},
+    {"source": "expert: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "youtube.com blocked as above; WebSearch surfaced only undated/older automation videos"},
+    {"source": "expert: Matt Pocock (video)", "status": "ok", "candidates": 1, "note": "youtube.com blocked for discovery, but WebSearch surfaced a third-party video reviewing Pocock's skills repo (Theo/t3.gg, published ~Aug 19) — used as expert content, attributed to Theo, not Pocock"},
+    {"source": "expanded search: best article/video this week", "status": "ok", "candidates": 2, "note": "Surfaced Zvi Mowshowitz's 'AI #182: Pause For Reflection' (Aug 20) and confirmed no other unused candidate within window"},
+    {"source": "gemini_video.py", "status": "ok", "note": "Ran successfully against the Theo video URL — generativelanguage.googleapis.com downloads YouTube server-side and was reachable even though the local yt-dlp/proxy path to youtube.com was not"}
+  ],
+  "totals": {
+    "candidates": 15,
+    "published": 3,
+    "rejected": {"вне окна 36ч": 8, "нишевые/enterprise": 3, "недостаточно первоисточников для мнений": 1}
+  },
+  "video_pipeline": {
+    "gemini": "ok",
+    "frames": "skipped: youtube.com blocked at the egress-proxy CONNECT level for yt-dlp, same failure mode as several prior runs (confirmed via `yt-dlp --skip-download` -> 403 on the CONNECT tunnel); note page marked accordingly"
+  },
+  "notes": [
+    "min_expert_total (5) not met: 4 expert_content items published (3 articles + 1 video) despite an expanded pass across all 8 configured experts plus ~15 additional broadened WebSearch queries. Root cause: youtube.com is fully blocked for WebFetch/RSS/yt-dlp in this run, which removed the primary discovery channel for 5 of the 8 configured experts (all video channels except via lucky WebSearch hits), and Latent Space / Ethan Mollick had no dated content inside the 7-day window per WebSearch.",
+    "≥1/3 of enumerated sources came back blocked or empty (14 of 21 rows) — same environment-egress degradation pattern as prior runs (2026-07-09, 2026-07-18, 2026-08-21): almost every direct WebFetch to a vendor/aggregator domain returns EGRESS_BLOCKED, and youtube.com is blocked at the proxy CONNECT level rather than just the page level. WebSearch remains the only reliable discovery channel.",
+    "Two of today's three news items (Grok Bot plan expansion, Claude Code 2.1.239) are minor/incremental (impact 3-4) rather than major; this is a genuinely quiet 36h window per multiple independent aggregators (smol.ai's own Aug 20 issue was headlined 'not much happened today').",
+    "Claude Code 2.1.239 has no opinions listed — no dated reactions to this specific patch release were found via WebSearch; left empty per the skill's rule against inventing quotes.",
+    "Considered but rejected as out-of-window for today's News section: the Taiwan autonomous-AI-cyberattack story (Dream/Israeli firm, event early July, reported Aug 12-13) — genuinely major but ~10 days outside the 36h lookback and never previously published in data/daily/, so it was left uncovered rather than backdated into today's file; flagging here in case a future digest wants to pick it up as a standalone historical item.",
+    "SpaceXAI: several sources refer to xAI/x.ai news as 'SpaceXAI' following an apparent xAI-Cursor/Anysphere consolidation reported around Aug 14; source_url for the Grok Bot item still resolves under x.ai/news, consistent with prior runs."
+  ]
+}

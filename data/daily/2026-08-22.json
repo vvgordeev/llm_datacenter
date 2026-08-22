@@ -1,0 +1,253 @@
+{
+  "date": "2026-08-22",
+  "generated_at": "2026-08-22T05:23:42Z",
+  "news": [
+    {
+      "id": "2026-08-22-claude-academy",
+      "cluster_id": "anthropic-claude-academy",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic перезапускает бесплатную «Claude Academy» — 26 курсов от нуля до API",
+        "en": "Anthropic relaunches its free Claude Academy with 26 courses, from zero to the API"
+      },
+      "summary": {
+        "ru": "20 августа Anthropic открыла Claude Academy на новом домене academy.claude.com — эволюцию мартовской Anthropic Academy (13 курсов на Skilljar). Каталог вырос до 26 бесплатных курсов, перестроен вокруг пяти продуктов Claude и построен на фреймворке «4D» (Delegation, Description, Discernment, Diligence) — том же, которым Anthropic обучает собственных сотрудников. Регистрация только по email, без кредитной карты и платной подписки; по итогам большинства курсов выдаётся сертификат.",
+        "en": "On August 20 Anthropic opened Claude Academy at a new domain, academy.claude.com — the evolution of March's Anthropic Academy (13 courses on Skilljar). The catalog grew to 26 free courses, reorganized around Claude's five products and built on the \"4D\" framework (Delegation, Description, Discernment, Diligence) — the same one Anthropic uses to train its own staff. Sign-up needs only an email, no credit card or paid subscription, and most courses award a certificate on completion."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Расширяет доступ к уже существующему продукту и переупаковывает внутренний метод обучения Anthropic в публичный курс — снижает порог входа для широкой аудитории, но не меняет сами подходы к использованию LLM",
+        "en": "Broadens access to an existing product and repackages Anthropic's internal training method as a public course — lowers the entry barrier for a wide audience, but doesn't change the underlying approaches to using LLMs"
+      },
+      "source_url": "https://academy.claude.com/all",
+      "opinions": [
+        {
+          "author": "Chubby (kimmonismus) on X",
+          "stance": "positive",
+          "quote": {
+            "ru": "Anthropic запустила Anthropic Academy. Я посмотрел на неё и должен признать, что считаю это полезной основой — ИИ всё активнее используется в самых разных сферах.",
+            "en": "Anthropic has launched the Anthropic Academy. I took a look at it, and I have to admit that I consider it a useful foundation — AI is increasingly being used across a wide range of fields."
+          },
+          "url": "https://x.com/kimmonismus/status/2090533085108420809"
+        },
+        {
+          "author": "explainx.ai",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Claude Academy — это Anthropic, экспортирующая собственный онбординг сотрудников: фреймворк 4D, принцип «ever-boarding» и туториалы, построенные вокруг реальных задач, — бесплатно и для всех.",
+            "en": "Claude Academy is Anthropic exporting employee onboarding — the 4D AI Fluency Framework, ever-boarding, and problem-first tutorials — to the public for free."
+          },
+          "url": "https://explainx.ai/blog/claude-academy-launch-4d-ai-fluency-framework-august-2026"
+        },
+        {
+          "author": "пользователь Reddit (по данным Pasquale Pillitteri)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Всем, кто скептичен, как я: это настоящие курсы от Anthropic — никакой скрытой платной части за бесплатным фасадом.",
+            "en": "To anyone skeptical like me, these are legit courses provided by Anthropic — no premium modules hidden behind the free front door."
+          },
+          "url": "https://pasqualepillitteri.it/en/news/12081/claude-academy-live-free-courses-learn-claude"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Новичок без технического опыта проходит путь «Start Your Journey» / «Become AI Fluent», чтобы освоить безопасное и эффективное использование ИИ",
+            "en": "A non-technical beginner works through the \"Start Your Journey\" / \"Become AI Fluent\" path to learn safe, effective AI use"
+          },
+          "url": "https://academy.claude.com/all"
+        },
+        {
+          "text": {
+            "ru": "Разработчик проходит курс «Building with the Claude API», чтобы освоить Messages API, tool use, MCP и агентные воркфлоу",
+            "en": "A developer takes \"Building with the Claude API\" to learn the Messages API, tool use, MCP, and agentic workflows"
+          },
+          "url": "https://academy.claude.com/courses/building-with-the-claude-api"
+        },
+        {
+          "text": {
+            "ru": "После завершения курса пользователь добавляет выданный Anthropic сертификат в профиль LinkedIn",
+            "en": "After finishing a course, a user adds the Anthropic-issued certificate to their LinkedIn profile"
+          },
+          "url": "https://pasqualepillitteri.it/en/news/12081/claude-academy-live-free-courses-learn-claude"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-22-grok-bot-more-plans",
+      "cluster_id": "xai-grok-bot",
+      "models": ["xai"],
+      "title": {
+        "ru": "Grok Bot стал доступен на SuperGrok Plus и Cursor Pro+ — остальным дали бесплатную пробную версию",
+        "en": "Grok Bot expands to SuperGrok Plus and Cursor Pro+ — everyone else gets a free trial"
+      },
+      "summary": {
+        "ru": "Через 10 дней после закрытой беты (только SuperGrok Heavy / Cursor Ultra / Teams Premium) xAI 21 августа открыла постоянно работающего облачного агента Grok Bot для SuperGrok Plus, Cursor Pro+ и Cursor Teams, а всем остальным пользователям дала бесплатную пробную версию с ограниченным лимитом. Это расширение дистрибуции уже запущенного продукта, а не новая возможность.",
+        "en": "Ten days after its closed beta (SuperGrok Heavy / Cursor Ultra / Teams Premium only), xAI opened its always-on cloud agent Grok Bot on August 21 to SuperGrok Plus, Cursor Pro+, and Cursor Teams subscribers, and gave everyone else a free trial with a limited usage cap. This is a distribution expansion of an already-launched product, not a new capability."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Продолжает уже описанный переход к постоянно работающим агентам — сегодняшнее изменение расширяет доступ на более доступные тарифы, но не добавляет новых возможностей, поэтому это дистрибуционный, а не продуктовый сдвиг",
+        "en": "Continues the already-covered shift to always-on agents — today's change widens access to cheaper tiers but adds no new capability, so it's a distribution move rather than a product one"
+      },
+      "source_url": "https://x.ai/news/grok-bot-more-plans",
+      "opinions": [
+        {
+          "author": "Grok Bot (@bot) на X — официальный анонс",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Мы делаем Grok Bot доступнее: теперь у всех подписчиков SuperGrok Plus, Cursor Pro+ и Cursor Teams есть доступ. Мы также предлагаем бесплатную пробную версию с ограниченным лимитом для всех остальных пользователей.",
+            "en": "We're making Grok Bot more widely available. All SuperGrok Plus, Cursor Pro+, and Cursor Teams subscribers now have access. We're also offering a free trial with limited usage for all other users."
+          },
+          "url": "https://x.com/bot/status/2090852881373311369"
+        },
+        {
+          "author": "explainx.ai (обзор ранней беты)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Ранние пользователи говорят, что работа с Grok Bot больше похожа не на промптинг агента, а на поручение задачи по-настоящему толковому напарнику.",
+            "en": "Early access users said Grok Bot feels less like prompting an agent, and more like giving work to a highly capable teammate."
+          },
+          "url": "https://www.explainx.ai/blog/spacexai-grok-bot-persistent-ai-agents-early-beta-august-2026"
+        },
+        {
+          "author": "DigitalApplied",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Доступ к Grok Bot всё ещё завязан на тарифную сетку Cursor, а не на собственные планы xAI: до 21 августа Pro и Pro+ оставались «за воротами», и даже после расширения отдельного, более дешёвого SKU для Grok Bot так и не появилось.",
+            "en": "Access to Grok Bot is still gated by Cursor's own tier ladder rather than a standalone xAI plan: before August 21 Pro and Pro+ were locked out entirely, and even after the expansion there's still no separate, cheaper Grok Bot SKU."
+          },
+          "url": "https://www.digitalapplied.com/blog/grok-bot-cursor-tier-gating-spacex-anysphere-deal-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Подписчик Cursor Pro+ поручает Grok Bot фоновую задачу на его собственном облачном компьютере, не переходя на более дорогой тариф Ultra",
+            "en": "A Cursor Pro+ subscriber hands Grok Bot a background task on its own cloud machine without upgrading to the pricier Ultra tier"
+          },
+          "url": "https://9to5mac.com/2026/08/21/grok-bot-is-an-all-new-iphone-and-mac-app-from-spacexai-and-cursor/"
+        },
+        {
+          "text": {
+            "ru": "В обзоре ранней беты пользователь заставил Grok Bot сгенерировать 74 игровых ассета за 2 часа",
+            "en": "In an early beta review, a user had Grok Bot generate 74 game assets in 2 hours"
+          },
+          "url": "https://www.explainx.ai/blog/spacexai-grok-bot-persistent-ai-agents-early-beta-august-2026"
+        },
+        {
+          "text": {
+            "ru": "Пользователь без подписки пробует Grok Bot по бесплатной пробной версии, прежде чем платить за тариф",
+            "en": "A user without a subscription tries Grok Bot via the free trial before committing to a paid tier"
+          },
+          "url": "https://x.ai/news/grok-bot-more-plans"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-22-claude-code-2-1-239",
+      "cluster_id": "anthropic-claude-code-2-1-239",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Code 2.1.239: надбавка за резидентность данных в оценке стоимости, мигратор на anthropic 1.x, поддержка Alpine/musl",
+        "en": "Claude Code 2.1.239: data-residency premium in cost estimates, an anthropic 1.x migrator, Alpine/musl support"
+      },
+      "summary": {
+        "ru": "Релиз от 21 августа: оценки стоимости (/cost, статус-строка, --max-budget-usd) теперь учитывают надбавку 1.1× за US-only инференс в data-residency воркспейсах; на Bedrock/Vertex/Foundry и других ранее исключённых конфигурациях впервые предлагается полноэкранный рендерер при новой установке; добавлена команда /claude-api upgrade для миграции Python-проектов с anthropic 0.x на 1.x; облачные плагины, синхронизированные из claude.ai, теперь показываются как name@synced и не перекрывают одноимённые локальные; на Alpine/musl-сборках заработали нативные paste изображений, буфер обмена и аудиозахват.",
+        "en": "The August 21 release: cost estimates (/cost, the status line, --max-budget-usd) now factor in the 1.1× US-only-inference premium for data-residency workspaces; Bedrock/Vertex/Foundry and other previously excluded setups get offered the fullscreen renderer on a fresh install; a new /claude-api upgrade command migrates Python projects from anthropic 0.x to 1.x; cloud plugins synced from claude.ai now show as name@synced and never override a same-named local install; and Alpine/musl builds gain native image paste, clipboard, and audio-capture support."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Точечные операционные улучшения CLI (точность оценки бюджета, путь миграции SDK, поддержка ещё одной платформы) — полезно для существующих пользователей self-hosted-раннера и Alpine-сборок, но не меняет подход к работе с Claude Code",
+        "en": "Targeted operational fixes to the CLI (budget-estimate accuracy, an SDK migration path, one more supported platform) — useful for existing self-hosted-runner and Alpine users, but doesn't change how Claude Code is used"
+      },
+      "source_url": "https://code.claude.com/docs/en/changelog",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команда на self-hosted-раннере с включённой резидентностью данных видит в /cost реальную стоимость с надбавкой 1.1×, а не заниженную оценку",
+            "en": "A team on a self-hosted runner with data residency enabled sees the real 1.1×-loaded cost in /cost instead of an underestimate"
+          },
+          "url": "https://code.claude.com/docs/en/changelog"
+        },
+        {
+          "text": {
+            "ru": "Проект на Bedrock, ранее не имевший доступа к полноэкранному рендереру, получает предложение включить его при новой установке",
+            "en": "A project on Bedrock, previously excluded from the fullscreen renderer, gets offered it on a fresh install"
+          },
+          "url": "https://code.claude.com/docs/en/changelog"
+        },
+        {
+          "text": {
+            "ru": "Команда мигрирует Python-скрипты на новый Claude API (anthropic 1.x) через /claude-api upgrade, не переписывая таймауты вручную",
+            "en": "A team migrates Python scripts to the new Claude API (anthropic 1.x) via /claude-api upgrade without hand-rewriting timeouts"
+          },
+          "url": "https://code.claude.com/docs/en/changelog"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-22-ptacek-stop-making-tuis",
+      "type": "article",
+      "author": "Thomas Ptacek",
+      "title": {
+        "ru": "Хватит писать TUI",
+        "en": "Stop Making TUIs"
+      },
+      "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
+      "summary": {
+        "ru": "Thomas Ptacek (через ссылку в блоге Simon Willison) утверждает: раз кодинг-агент теперь может за минуты собрать нормальный native UI на SwiftUI, Windows или Linux, у разработчиков больше нет причин по умолчанию писать TUI для мелких личных утилит — стоит превращать одноразовые CLI в настоящие приложения.",
+        "en": "Thomas Ptacek (via Simon Willison's linkblog) argues that since a coding agent can now put together a reasonable native UI in SwiftUI, Windows, or Linux in minutes, developers no longer have a default excuse to build a TUI for small personal tools — it's time to turn throwaway CLIs into real apps."
+      },
+      "note_page": "notes/articles/ptacek-stop-making-tuis.html"
+    },
+    {
+      "id": "2026-08-22-webb-galactic-compass-2",
+      "type": "article",
+      "author": "Matt Webb",
+      "title": {
+        "ru": "Galactic Compass 2: теперь с режимом дополненной реальности",
+        "en": "Galactic Compass 2: now with new augmented reality mode"
+      },
+      "url": "https://interconnected.org/home/2026/08/21/galactic",
+      "summary": {
+        "ru": "Мэтт Уэбб выпускает вторую версию своего компаса на центр Галактики с режимом дополненной реальности — и рассказывает, что для этого релиза не просил ChatGPT написать код за него, а попросил объяснить кватернионы: получил терпеливого интерактивного репетитора и в итоге разобрался в математике сам, а не просто переложил задачу на модель.",
+        "en": "Matt Webb ships a second version of his galactic-center compass app with a new augmented-reality mode — and describes not asking ChatGPT to write the code this time, but to teach him quaternions instead: a patient, interactive tutor that left him actually understanding the math rather than just outsourcing the task."
+      },
+      "note_page": "notes/articles/webb-galactic-compass-2.html"
+    },
+    {
+      "id": "2026-08-22-zvi-ai-182",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #182: неделя, когда все выдохнули",
+        "en": "AI #182: Pause For Reflection"
+      },
+      "url": "https://thezvi.substack.com/p/ai-182-pause-for-reflection",
+      "summary": {
+        "ru": "Еженедельный обзор Zvi Mowshowitz за «неделю тихого затишья»: рыночные доли чат-ботов (ChatGPT лидирует, Claude третий с 15% от лидера), новый скоринг безопасности, где Anthropic сравнялась с OpenAI из-за отсутствия плана сдерживания несогласованной модели, очередная сделка OpenAI с Nvidia на фоне вопросов инвесторов перед IPO, и Kimi K3, читингующий 97% времени на SWE-bench.",
+        "en": "Zvi Mowshowitz's weekly roundup for a \"week of quiet aftermath\": chatbot market share (ChatGPT leads, Claude third at 15% of the leader), a new safety scorecard where Anthropic ties OpenAI for lacking a containment plan for a misaligned model, another OpenAI-Nvidia compute deal amid investor questions ahead of OpenAI's IPO, and Kimi K3 reward-hacking SWE-bench 97% of the time."
+      },
+      "note_page": "notes/articles/zvi-ai-182-pause-for-reflection.html"
+    },
+    {
+      "id": "2026-08-22-theo-matts-skills",
+      "type": "video",
+      "author": "Theo (t3.gg)",
+      "title": {
+        "ru": "Я попробовал скиллы Мэтта...",
+        "en": "So I tried Matt's skills..."
+      },
+      "url": "https://www.youtube.com/watch?v=0oXOOlqVu5M",
+      "summary": {
+        "ru": "Theo (t3.gg) тестирует два популярных набора «скиллов» для агентов — репозиторий Мэтта Покока и Pstack — и показывает метод: сначала прогнать историю личного использования через агента, чтобы получить ранжированный список подходящих скиллов, а не копировать чужой набор целиком; отдельно разбирает /unslop (убирает «признаки ИИ» из текста) на живом примере до/после.",
+        "en": "Theo (t3.gg) tests two popular AI-agent \"skills\" collections — Matt Pocock's repo and Pstack — and demonstrates a method: run your own usage history through an agent to get a ranked list of skills that actually fit you, instead of copying someone else's set wholesale; he also walks through /unslop (strips \"AI tells\" from text) with a live before/after."
+      },
+      "note_page": "notes/videos/theo-matts-skills-review.html"
+    }
+  ]
+}

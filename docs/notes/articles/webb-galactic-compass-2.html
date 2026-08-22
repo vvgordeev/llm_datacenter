@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Galactic Compass 2» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Matt Webb (упомянуто в блоге Simon Willison) · 2026-08-21</span>
+      <span data-lang="en">Article digest · Matt Webb (flagged in Simon Willison's blog) · 2026-08-21</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Galactic Compass 2: как ChatGPT научил автора кватернионам, а не просто написал код</span>
+      <span data-lang="en">Galactic Compass 2: how ChatGPT taught the author quaternions instead of just writing the code</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://interconnected.org/home/2026/08/21/galactic" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В 2024 году Мэтт Уэбб выпустил Galactic Compass — приложение для iPhone, которое всегда показывает направление на центр Галактики (Стрелец A*), где бы на Земле вы ни находились. Тот релиз был ранним примером «vibe coding» до того, как это стало общим термином: Уэбб не умел писать iOS-приложения и буквально копировал код между ChatGPT и Xcode, пошагово прося модель объяснить следующий шаг — «это не как “ИИ, сделай мне приложение”, а больше похоже на очень-очень хороший предиктивный ввод текста». Приложение неожиданно попало в топ бесплатных приложений категории Travel в App Store.</span>
+      <span data-lang="en">In 2024 Matt Webb shipped Galactic Compass, an iPhone app that always points toward the center of the galaxy (Sagittarius A*) no matter where on Earth you stand. That release was an early example of "vibe coding" before the term existed: Webb didn't know how to write iOS apps and literally copy-pasted code between ChatGPT and Xcode, asking the model to explain each next step — "it's not like 'hey AI, make me an app,' you go step by step and treat it more like really really good predictive text." The app unexpectedly landed in the App Store's top free Travel apps.</span>
+    </p>
+
+    <h2><span data-lang="ru">Версия 2: режим дополненной реальности потребовал кватернионов</span><span data-lang="en">Version 2: an augmented-reality mode required quaternions</span></h2>
+    <p>
+      <span data-lang="ru">Спустя два года Уэбб выпускает Galactic Compass 2 с новым режимом дополненной реальности: приложение показывает направление на центр Галактики прямо через камеру телефона, поверх реального изображения. Для этого понадобилась математика вращений в 3D-пространстве — кватернионы, — с которой у автора не было опыта. Здесь и происходит смена метода по сравнению с первой версией: вместо того чтобы, как раньше, просить ChatGPT сразу написать рабочий код и копировать его в проект, Уэбб в этот раз попросил модель научить его самой математике.</span>
+      <span data-lang="en">Two years later Webb ships Galactic Compass 2 with a new augmented-reality mode: the app points toward the galactic center directly through the phone's camera, overlaid on the live view. That required 3D rotation math — quaternions — which the author had no background in. This is where the method shifts from the first version: instead of asking ChatGPT to just write working code to copy in, the way he did before, Webb this time asked the model to teach him the underlying math itself.</span>
+    </p>
+
+    <h2><span data-lang="ru">Терпеливый репетитор вместо генератора кода</span><span data-lang="en">A patient tutor instead of a code generator</span></h2>
+    <p>
+      <span data-lang="ru">По описанию автора, после релиза версии 1.0 он думал, что вращения придётся реализовывать самостоятельно — и вместо того, чтобы читать учебники или спрашивать друзей-математиков (что не помогло раньше), он сел с ChatGPT не для написания кода, а как с интерактивным репетитором. Итог, который он подчёркивает отдельно: обучение не останавливается просто потому, что часть мышления передана ИИ — наоборот, в его случае это подтолкнуло разобраться глубже, и именно этот исход ему нравится. Мысль резонирует с общей темой сегодняшних материалов о «4D» подходе к работе с ИИ (осознанная делегация против бездумного делегирования): один и тот же инструмент можно использовать и чтобы избежать понимания задачи, и чтобы в неё наконец вникнуть — выбор остаётся за тем, как именно вы формулируете запрос.</span>
+      <span data-lang="en">By his own account, after shipping version 1.0 he assumed he'd have to implement the rotations himself — and rather than read textbooks or ask mathematician friends (which hadn't worked before), he sat down with ChatGPT not to get code written, but as an interactive tutor. The outcome he calls out specifically: learning doesn't stop just because you've outsourced part of the thinking to AI — if anything, in his case it pushed him to understand more, and that's the outcome he says he likes. It's a thought that echoes today's broader theme around deliberate "4D"-style delegation versus thoughtless offloading: the same tool can be used either to avoid understanding a problem or to finally get to grips with it — the difference is in how you frame the ask.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
