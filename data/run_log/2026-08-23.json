@@ -1,0 +1,159 @@
+{
+  "date": "2026-08-23",
+  "generated_at": "2026-08-23T05:25:55Z",
+  "sources": [
+    {
+      "source": "anthropic blog",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch на anthropic.com/news — EGRESS_BLOCKED; найдено через WebSearch: Claude Mythos 5 в Claude Security + Defender Advantage Fund (опубликовано)"
+    },
+    {
+      "source": "openai blog",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch на openai.com/news — EGRESS_BLOCKED; через WebSearch — снижение цены GPT-5.6 Sol >20% (маргинальный кандидат, ценовое, не продуктовое; опубликовано с низким impact_score)"
+    },
+    {
+      "source": "google blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch на blog.google — EGRESS_BLOCKED; широкий WebSearch не нашёл ничего нового в окне 36ч"
+    },
+    {
+      "source": "meta blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch на ai.meta.com/blog — EGRESS_BLOCKED; ничего нового в окне"
+    },
+    {
+      "source": "xai blog",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch на x.ai/news — EGRESS_BLOCKED; найденный кандидат (Grok Bot — ещё больше тарифов) — дубль URL, уже опубликован 2026-08-22"
+    },
+    {
+      "source": "mistral blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch на mistral.ai/news — EGRESS_BLOCKED; ничего нового в окне"
+    },
+    {
+      "source": "deepseek blog",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch на api-docs.deepseek.com — EGRESS_BLOCKED; через WebSearch — DeepSeek-V4-Flash-Vision-Exp (опубликовано, самый сильный кандидат дня)"
+    },
+    {
+      "source": "aggregator: AI News (smol.ai)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebFetch EGRESS_BLOCKED; WebSearch не нашёл выпуска, датированного 21-23 августа"
+    },
+    {
+      "source": "aggregator: TLDR AI",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebFetch EGRESS_BLOCKED; выпуск за целевые даты не проиндексирован"
+    },
+    {
+      "source": "aggregator: Simon Willison linkblog",
+      "status": "ok",
+      "candidates": 6,
+      "note": "WebFetch EGRESS_BLOCKED; через WebSearch по архиву simonwillison.net нашли 6 постов 19-22 августа, из них новый и не дублирующий — только «More than just code review» (опубликован); остальные — дубли уже опубликованного или слишком короткие заметки"
+    },
+    {
+      "source": "Hacker News API (algolia)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "hn.algolia.com — EGRESS_BLOCKED на все запросы; полностью на WebSearch-фолбэк (site:news.ycombinator.com)"
+    },
+    {
+      "source": "Hacker News (через WebSearch)",
+      "status": "ok",
+      "candidates": 4,
+      "note": "нашли треды о цене GPT-5.6 Sol (2 шт, один — про промо OpenRouter, не про сам OpenAI) и об Astra/Codex — использованы как контекст, отдельным кандидатом не стали"
+    },
+    {
+      "source": "community: Reddit (r/LocalLLaMA, r/ClaudeAI)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "поиск по WebSearch не дал конкретных цитируемых тредов за окно — Reddit слабо индексируется этим инструментом в песочнице"
+    },
+    {
+      "source": "community: X/Twitter",
+      "status": "ok",
+      "candidates": 7,
+      "note": "через WebSearch нашли реальные посты с авторами и URL — использованы как мнения к DeepSeek Vision-Exp, Ox Alpha, GPT-5.6 pricing"
+    },
+    {
+      "source": "expert: Simon Willison (simonwillison.net)",
+      "status": "ok",
+      "candidates": 6,
+      "note": "см. выше — опубликован 1 материал"
+    },
+    {
+      "source": "expert: Andrej Karpathy (YouTube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "RSS youtube.com — EGRESS_BLOCKED; WebSearch нашёл только видео ~2 недели назад (вне окна 7 дней)"
+    },
+    {
+      "source": "expert: Latent Space",
+      "status": "empty",
+      "candidates": 0,
+      "note": "найденные материалы недели — формат AINews (новостной агрегатор), не подходит как экспертный технический материал; собственный неновостной пост в окне не найден"
+    },
+    {
+      "source": "expert: AI Explained (YouTube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "RSS EGRESS_BLOCKED; WebSearch не подтвердил ни одного видео в окне 16-23 августа"
+    },
+    {
+      "source": "expert: Matt Wolfe (YouTube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "RSS EGRESS_BLOCKED; найденное видео датируется ~3 недели назад (вне окна)"
+    },
+    {
+      "source": "expert: Ethan Mollick (oneusefulthing.org)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "site:-поиск не вернул постов за 16-23 августа"
+    },
+    {
+      "source": "expert: Nate Herk (YouTube)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "RSS EGRESS_BLOCKED; 2 кандидатных заголовка найдены, но точную дату публикации в окне подтвердить не удалось — не включены"
+    },
+    {
+      "source": "expert: Matt Pocock (YouTube)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "RSS EGRESS_BLOCKED; через WebSearch + сторонние статьи подтверждена публикация в окне — опубликован конспект"
+    },
+    {
+      "source": "расширенный проход (widening search)",
+      "status": "ok",
+      "candidates": 3,
+      "note": "дополнительные WebSearch по «другим заметным авторам» (Ptacek/Willison-conceptual-integrity/Zvi AI#182/Hamel Husain/Nate B Jones) — все либо дубли уже опубликованного, либо без подтверждённой даты в окне; не добавили новых материалов сверх двух опубликованных"
+    }
+  ],
+  "totals": {
+    "candidates": 24,
+    "published": 6,
+    "rejected": {
+      "дубль URL/сюжета (уже опубликовано ранее)": 10,
+      "не подтверждена дата в окне 7 дней": 4,
+      "слишком тонкий материал (release note/короткая заметка)": 3,
+      "чисто ценовое/финансовое без продуктовой части (слишком слабо, не включено)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok: gemini_video.py на https://www.youtube.com/watch?v=LMpMmOWTtVk — тезисы и таймкоды получены без ошибок (GEMINI_API_KEY доступен)",
+    "frames": "skipped: yt-dlp пробовал получить прямой поток — 403 Forbidden при туннелировании через egress-прокси на уровне CONNECT к youtube.com; extract_frames.py упал с той же ошибкой, как и в предыдущих прогонах (2026-07-18 и позже). Конспект видео опубликован без кадров с пометкой на странице."
+  },
+  "environment_note": "yt-dlp и imageio-ffmpeg отсутствовали в окружении на старте прогона — установлены через 'pip install --quiet yt-dlp imageio-ffmpeg' согласно инструкции SKILL.md. Все 7 блогов вендоров и 3 из 4 инфраструктурных API (hn.algolia.com, simonwillison.net WebFetch, youtube.com RSS/yt-dlp) блокируются egress-прокси на уровне EGRESS_BLOCKED/403 CONNECT — WebSearch остаётся единственным стабильно рабочим каналом обнаружения в этом облачном прогоне, как и в предыдущих (см. предыдущие run_log)."
+}

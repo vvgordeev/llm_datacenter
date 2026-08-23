@@ -1,0 +1,328 @@
+{
+  "date": "2026-08-23",
+  "generated_at": "2026-08-23T05:25:55Z",
+  "news": [
+    {
+      "id": "2026-08-23-deepseek-v4-flash-vision-exp",
+      "cluster_id": "deepseek-v4-flash-vision-exp",
+      "models": [
+        "deepseek"
+      ],
+      "title": {
+        "ru": "DeepSeek добавляет зрение в V4-Flash — экспериментальная модель приближается к Opus 4.8 на агентных бенчмарках",
+        "en": "DeepSeek adds vision to V4-Flash — an experimental model closes in on Opus 4.8 on agent benchmarks"
+      },
+      "summary": {
+        "ru": "21 августа DeepSeek выпустила DeepSeek-V4-Flash-Vision-Exp — экспериментальный мультимодальный вариант V4-Flash (MoE, 13B активных параметров из 284B) с пониманием изображений. Модель сохраняет текстовые результаты V4-Flash, но заметно продвигается на визуальных агентных бенчмарках: приближается к Claude Opus 4.8 и обгоняет его на части тестов (DeepSWE, Agents' Last Exam, ZeroBench Pass@5). Доступна через Chat Completions/Messages/Responses по цене V4-Flash (изображение — до 384 токенов), а Files API для загрузки изображений открыт бесплатно.",
+        "en": "On August 21 DeepSeek shipped DeepSeek-V4-Flash-Vision-Exp, an experimental multimodal variant of V4-Flash (a mixture-of-experts model, 13B active of 284B total parameters) with image understanding. It keeps V4-Flash's text performance while making a real jump on vision-agent benchmarks, closing in on Claude Opus 4.8 and beating it on some of them (DeepSWE, Agents' Last Exam, ZeroBench Pass@5). It's available via Chat Completions/Messages/Responses at V4-Flash pricing (images cost up to 384 tokens each), and DeepSeek opened its image Files API for free."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Реальный прирост возможностей (мультимодальность в агентном контуре) в бесплатном/дешёвом тире, приближающемся к дорогой frontier-модели на части бенчмарков — расширяет класс задач, доступных недорогим агентам, хотя статус «Exp» и узкий отрыв (победа лишь в части тестов) не позволяют говорить о смене парадигмы",
+        "en": "A genuine capability jump (multimodal agent understanding) in a cheap/free-ish tier that closes in on an expensive frontier model on some benchmarks — widens the range of tasks affordable agents can tackle, though the \"Exp\" label and the narrow margin (winning only some tests) fall short of a paradigm shift"
+      },
+      "source_url": "https://api-docs.deepseek.com/news/news260821/",
+      "opinions": [
+        {
+          "author": "DeepSeek (@deepseek_ai) на X — официальный анонс",
+          "stance": "neutral",
+          "quote": {
+            "ru": "DeepSeek-V4-Flash-Vision-Exp уже доступна на платформе DeepSeek API! Эта экспериментальная мультимодальная модель соответствует DeepSeek-V4-Flash по текстовым возможностям — включая агентов, рассуждения и знания о мире. На мультимодальных агентных бенчмарках V4-Flash-Vision-Exp делает большой скачок.",
+            "en": "DeepSeek-V4-Flash-Vision-Exp is now live on the DeepSeek API Platform! This experimental multimodal model matches DeepSeek-V4-Flash on text capabilities — including agents, reasoning, and world knowledge. On multimodal agent benchmarks, V4-Flash-Vision-Exp makes a major leap."
+          },
+          "url": "https://x.com/deepseek_ai/status/2090730032574631962"
+        },
+        {
+          "author": "Cline (@cline) на X",
+          "stance": "positive",
+          "quote": {
+            "ru": "Новая V4-Flash-Vision-Exp от DeepSeek соответствует бенчмаркам V4-Flash, но добавляет возможности зрения с производительностью, похожей на Opus 4.8.",
+            "en": "DeepSeek's new V4-Flash-Vision-Exp matches V4-Flash benchmarks, but adds vision capabilities with performance similar to Opus 4.8."
+          },
+          "url": "https://x.com/cline/status/2090894920269853120"
+        },
+        {
+          "author": "XenoSpectrum",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Новая модель DeepSeek Vision Exp разделила счёт 2:2 с Claude Opus 4.8 на визуальных бенчмарках",
+            "en": "DeepSeek's new Vision Exp model splits 2-2 against Claude Opus 4.8 on visual benchmarks"
+          },
+          "url": "https://xenospectrum.com/en/deepseek-v4-flash-vision-exp-api/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчик подключает модель в Cline (`npm i -g cline`, id модели `deepseek/deepseek-v4-flash-vision-exp`), чтобы добавить понимание изображений в уже существующий агентный воркфлоу",
+            "en": "A developer wires the model into Cline (`npm i -g cline`, model id `deepseek/deepseek-v4-flash-vision-exp`) to add image understanding to an existing agent workflow"
+          },
+          "url": "https://x.com/cline/status/2090894920269853120"
+        },
+        {
+          "text": {
+            "ru": "Агент читает скриншот дашборда или диаграмму перед тем, как принять решение о следующем шаге в длинной задаче",
+            "en": "An agent reads a dashboard screenshot or a diagram before deciding on the next step in a longer task"
+          },
+          "url": "https://officechai.com/ai/deepseek-releases-v4-flash-vision-exp-matches-opus-4-8-on-some-multimodal-benchmarks/"
+        },
+        {
+          "text": {
+            "ru": "Команда использует бесплатный Files API для загрузки изображения один раз и повторного обращения к нему по file_id в последующих запросах",
+            "en": "A team uses the free Files API to upload an image once and reference it later via file_id in subsequent requests"
+          },
+          "url": "https://api-docs.deepseek.com/news/news260821/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-23-claude-mythos-5-security",
+      "cluster_id": "anthropic-claude-security-mythos-5",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Anthropic открывает Claude Security на Mythos 5 всем Enterprise-клиентам и запускает фонд на $35M для защитников open source",
+        "en": "Anthropic opens Mythos-5-powered Claude Security to all Enterprise customers, launches a $35M open-source defender fund"
+      },
+      "summary": {
+        "ru": "21 августа Anthropic перевела сканирование в Claude Security на свою самую мощную модель, Claude Mythos 5, и открыла публичную бету всем клиентам плана Claude Enterprise. Сервис подключается к репозиторию на GitHub, прослеживает потоки данных между файлами и возвращает не диалоговое окно, а готовый результат: категорию CWE, оценку уверенности и серьёзности находки и предложенный патч — то есть модель, которая находит уязвимости, нельзя перевести в режим написания эксплойта. Одновременно Anthropic запустила Defender Advantage Fund (0xDAF) — $35M в кредитах Claude для организаций, которые патчат уязвимости в open-source проектах и автоматизируют сканирование и патчинг.",
+        "en": "On August 21 Anthropic moved Claude Security's scans onto its most capable model, Claude Mythos 5, opening the feature in public beta to every Claude Enterprise customer. It connects to a GitHub repository, traces data flows across files, and hands back a finished result rather than a prompt box: a CWE category, confidence and severity ratings, and a suggested patch — so the same model that finds a vulnerability can't be steered into writing an exploit for it. Alongside this, Anthropic launched the Defender Advantage Fund (0xDAF): $35M in Claude credits for organizations patching open-source vulnerabilities and automating scanning/patching workflows."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Даёт защитникам безопасности прямой контролируемый доступ к самой мощной модели Anthropic в сценарии, спроектированном так, чтобы не превращаться в инструмент атаки, плюс материальное финансирование экосистемы патчинга open source — заметное расширение применимости, но специализированное (security-команды), не меняющее общий подход к использованию LLM",
+        "en": "Gives security teams direct, guardrailed access to Anthropic's most capable model in a use case designed not to double as an attack tool, plus real funding for the open-source patching ecosystem — a meaningful expansion of reach, but a specialist (security-team) one that doesn't change how LLMs are used more broadly"
+      },
+      "source_url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+      "opinions": [
+        {
+          "author": "Isaac Evans, CEO Semgrep",
+          "stance": "positive",
+          "quote": {
+            "ru": "Отбросив шумиху, Mythos — значительный шаг вперёд, и его не так просто повторить существующими бесплатными или флагманскими моделями сегодня.",
+            "en": "Hype aside, Mythos is a significant advance and it's not easily replicable with existing free/flagship models today."
+          },
+          "url": "https://semgrep.dev/blog/2026/mythos-bad-takes-facts-and-fear/"
+        },
+        {
+          "author": "Anthony Grieco, Chief Security and Trust Officer, Cisco",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Cisco добилась доли ложных срабатываний ниже 3%, но только в сочетании моделей с человеческим контролем — за счёт вложенных в harness экспертных знаний и проверки каждой находки человеком.",
+            "en": "Cisco achieved a false-positive rate below 3% when the models were paired with human guidance — by embedding domain expertise into the harness and validating every finding through human review."
+          },
+          "url": "https://cybernews.com/ai-news/anthropic-mythos-hack-apocalypse-government-panick/"
+        },
+        {
+          "author": "Cynthia Kaiser, ex-FBI Cyber Division, теперь Halcyon",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Наши противники и без ИИ научились действовать очень хорошо.",
+            "en": "Our adversaries have gotten really good without AI."
+          },
+          "url": "https://cybernews.com/ai-news/anthropic-mythos-hack-apocalypse-government-panick/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команда безопасности Enterprise-плана подключает Claude Security к репозиторию на GitHub и получает оценённый по CWE отчёт с готовым патчем вместо открытого доступа к диалогу с Mythos 5",
+            "en": "An Enterprise-plan security team connects Claude Security to a GitHub repository and gets back a CWE-scored report with a ready patch, instead of open chat access to Mythos 5"
+          },
+          "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders"
+        },
+        {
+          "text": {
+            "ru": "Мейнтейнер open-source проекта подаёт заявку на кредиты Defender Advantage Fund, чтобы автоматизировать сканирование и патчинг уязвимостей в своём репозитории",
+            "en": "An open-source maintainer applies for Defender Advantage Fund credits to automate vulnerability scanning and patching in their repository"
+          },
+          "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders"
+        },
+        {
+          "text": {
+            "ru": "Служба безопасности Cisco сканирует 1,8 млрд строк кода портфеля продуктов с помощью Mythos за восемь недель — задача, которая вручную заняла бы у команды восемь лет",
+            "en": "Cisco's security team scans 1.8 billion lines of code across its product portfolio with Mythos in eight weeks — a task that would have taken its team eight years by hand"
+          },
+          "url": "https://app.dealroom.co/news/feed/cisco-scans-1-8b-lines-of-code-with-anthropic-s-mythos-ai-but-won-t-reveal-bug-count"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-23-ox-alpha-stealth-model",
+      "cluster_id": "openrouter-ox-alpha-stealth",
+      "models": [],
+      "title": {
+        "ru": "На OpenRouter появилась загадочная модель Ox Alpha — бесплатный доступ и гонка за идентификацией автора",
+        "en": "A mystery model called Ox Alpha appears on OpenRouter — free access and a scramble to identify its maker"
+      },
+      "summary": {
+        "ru": "20 августа OpenRouter и OpenCode без объявления автора выложили Ox Alpha — «стелс»-модель с окном контекста 1,05M токенов, максимальным выводом 131 072 токена и полной мультимодальностью (текст, изображение, видео), бесплатную на время недельного превью и заявленную для кодинга и длительной агентной работы. Один неаудированный тест на 10 задачах утверждает, что модель обходит GPT-5.6 Sol и Claude Fable 5 на бенчмарке DeepSWE, но в публичный лидерборд BenchSift по состоянию на 21 августа модель не попала. По следам предыдущих «стелс»-релизов OpenRouter (Hunter Alpha и Healer Alpha впоследствии оказались моделями Xiaomi MiMo) сообщество занялось идентификацией по стеку ошибок и совпадению токенизатора — на 22 августа основная версия указывает на Zhipu AI (вариант GLM-5.3).",
+        "en": "On August 20, OpenRouter and OpenCode quietly listed Ox Alpha — an unnamed \"stealth\" model with a 1.05M-token context window, a 131,072-token max output, and full multimodal input (text, image, video), free for a week-long preview and pitched at coding and sustained agentic work. One unaudited 10-task benchmark claims it beats GPT-5.6 Sol and Claude Fable 5 on the DeepSWE coding benchmark, but as of August 21 it hadn't appeared on the public BenchSift leaderboard. Following OpenRouter's past stealth releases (Hunter Alpha and Healer Alpha both later turned out to be Xiaomi MiMo models), the community turned to serving-stack forensics and tokenizer matching — as of August 22 the leading theory points to Zhipu AI (a GLM-5.3 variant)."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Событие реальное (появилась работающая модель с новыми характеристиками), но заявленное превосходство держится на одном неаудированном тесте, а личность автора не подтверждена — оценивать возможности всерьёз до раскрытия и независимой проверки бенчмарков преждевременно",
+        "en": "The event itself is real (a working model with new specs appeared), but the claimed edge rests on one unaudited benchmark and the maker is unconfirmed — taking its capabilities at face value before an identity reveal and independent benchmark verification would be premature"
+      },
+      "source_url": "https://openrouter.ai/stealth",
+      "opinions": [
+        {
+          "author": "Chubby (@kimmonismus) на X",
+          "stance": "positive",
+          "quote": {
+            "ru": "Появилась загадочная новая ИИ-модель. Ox Alpha предлагает окно контекста 1M, мультимодальность, нулевое хранение данных и почти неограниченное использование на целую неделю. OpenCode говорит, что у них есть мощность на 100 триллионов токенов в день. Это 1,16 млрд токенов в секунду.",
+            "en": "A mysterious new AI model just appeared. Ox Alpha offers a 1M context window, multimodal capabilities, zero data retention, and nearly unlimited usage for an entire week. OpenCode says it has capacity for 100 trillion tokens per day. That's 1.16b tokens per second."
+          },
+          "url": "https://x.com/kimmonismus/status/2090714694826787229"
+        },
+        {
+          "author": "jacky (@jjacky) на X",
+          "stance": "neutral",
+          "quote": {
+            "ru": "ox alpha становится вирусной в китайском ИИ-твиттере из-за сходства с niulai",
+            "en": "ox alpha is going viral on chinese ai twitter due to being similar to niulai"
+          },
+          "url": "https://x.com/jjacky/status/2090832257107800128"
+        },
+        {
+          "author": "Evan Otero (@EvanOtero) на X",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "А что если Ox Alpha — это просто друзья, которых мы обрели по пути",
+            "en": "What if the Ox Alpha was the friends we made along the way"
+          },
+          "url": "https://x.com/EvanOtero/status/2090998729637511301"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчик с бесплатным превью-доступом прогоняет большую кодинг-задачу через окно контекста в 1M токенов перед тем, как платить за другую модель",
+            "en": "A developer with free preview access runs a large coding task through the 1M-token context window before paying for another model"
+          },
+          "url": "https://openrouter.ai/stealth"
+        },
+        {
+          "text": {
+            "ru": "Независимый тестировщик прогоняет 10 задач из DeepSWE через Ox Alpha в качестве неформального бенчмарка и сообщает о 8 успешных решениях из 10",
+            "en": "An independent tester runs 10 DeepSWE tasks against Ox Alpha as an informal benchmark and reports 8 successful solves out of 10"
+          },
+          "url": "https://www.kucoin.com/news/flash/mysterious-ox-alpha-ai-model-sparks-speculation-on-openrouter"
+        },
+        {
+          "text": {
+            "ru": "Участники сообщества сверяют стек ошибок и совпадение токенизатора модели, чтобы угадать разработчика до конца превью-окна",
+            "en": "Community members compare error stack traces and tokenizer matches to guess the model's maker before the preview window ends"
+          },
+          "url": "https://officechai.com/ai/which-lab-is-behind-the-viral-ox-alpha-model-these-are-the-theories/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-23-gpt-5-6-sol-price-cut",
+      "cluster_id": "openai-gpt-5-6-pricing",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "OpenAI снижает цену GPT-5.6 Sol в API более чем на 20% на фоне конкуренции",
+        "en": "OpenAI cuts GPT-5.6 Sol API pricing by more than 20% amid competitive pressure"
+      },
+      "summary": {
+        "ru": "21 августа OpenAI объявила снижение цены GPT-5.6 Sol в API, кредитах Codex и ChatGPT Work более чем на 20% на ближайшие три месяца: входные токены — с $5 до $4 за миллион, выходные — с $30 до $20, кэшированные входные — с $0.50 до $0.40. После снижения Sol становится дешевле Claude Opus 5 по обоим показателям; цена подписок ChatGPT Plus/Pro/Business не меняется. Это не первое ценовое движение вокруг Sol за месяц (после тира Ultrafast от Cerebras 14 августа) — конкуренция с Anthropic и китайскими лабораториями продолжает давить на цену, а не на возможности модели.",
+        "en": "On August 21 OpenAI announced a more-than-20% price cut on GPT-5.6 Sol across the API, Codex credits, and ChatGPT Work, running for the next three months: input tokens drop from $5 to $4 per million, output from $30 to $20, cached input from $0.50 to $0.40. Post-cut, Sol undercuts Claude Opus 5 on both counts; ChatGPT Plus/Pro/Business subscription pricing is unchanged. It's not the first pricing move around Sol this month (after the Cerebras-powered Ultrafast tier on August 14) — competition from Anthropic and Chinese labs keeps pushing the price down, not the model's capabilities."
+      },
+      "impact_score": 2,
+      "impact_reason": {
+        "ru": "Чисто ценовое изменение без новых возможностей — продолжение уже описанной ценовой войны вокруг Sol; влияет на выбор модели по цене, но не меняет подходы к использованию LLM",
+        "en": "A pure pricing change with no new capability — continues the already-covered Sol pricing war; affects which model is cheapest to pick, but doesn't change how LLMs are actually used"
+      },
+      "source_url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726",
+      "opinions": [
+        {
+          "author": "pasqualepillitteri.it",
+          "stance": "neutral",
+          "quote": {
+            "ru": "OpenAI объявляет о снижении цены GPT-5.6 Sol более чем на 20%, обходя по цене Claude Opus 5",
+            "en": "OpenAI Announces Over 20% GPT-5.6 Sol Price Cut, Undercutting Claude Opus 5"
+          },
+          "url": "https://pasqualepillitteri.it/en/news/12263/openai-cuts-gpt-5-6-sol-api-prices"
+        },
+        {
+          "author": "Storyboard18",
+          "stance": "positive",
+          "quote": {
+            "ru": "OpenAI снижает цены API GPT-5.6 Sol более чем на 20% на фоне конкуренции",
+            "en": "OpenAI slashes GPT-5.6 Sol API prices by more than 20% amid competition"
+          },
+          "url": "https://www.storyboard18.com/amp/brand-marketing/openai-slashes-gpt-5-6-sol-api-prices-by-more-than-20-amid-competition-108453.htm"
+        },
+        {
+          "author": "explainx.ai",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "«Скидка 50% на GPT-5.6 Sol» — это промо-акция OpenRouter, а не изменение цены от самой OpenAI",
+            "en": "GPT-5.6 Sol '50% Off': OpenRouter promo, not a price cut"
+          },
+          "url": "https://www.explainx.ai/blog/openrouter-gpt-5-6-sol-50-percent-off-promo-not-price-cut-august-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команда, выбирающая модель по цене за токен, переводит задачи синтеза и поиска на Sol теперь, когда он дешевле Opus 5 по обоим показателям",
+            "en": "A team choosing models by per-token price moves retrieval/synthesis tasks to Sol now that it's cheaper than Opus 5 on both input and output"
+          },
+          "url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
+        },
+        {
+          "text": {
+            "ru": "Пользователь Codex/ChatGPT Work замечает более низкий расход кредитов на задачах, использующих Sol, в течение следующих трёх месяцев",
+            "en": "A Codex/ChatGPT Work user notices lower credit consumption on Sol-backed tasks over the next three months"
+          },
+          "url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
+        },
+        {
+          "text": {
+            "ru": "Разработчик, увидев разницу между промо-ценой на OpenRouter и официальной страницей цен OpenAI, сверяется с openai.com, прежде чем считать, что применяется более крупная скидка",
+            "en": "A developer, spotting a mismatch between OpenRouter's promo price and OpenAI's own pricing page, checks openai.com directly before assuming the bigger discount applies"
+          },
+          "url": "https://www.explainx.ai/blog/openrouter-gpt-5-6-sol-50-percent-off-promo-not-price-cut-august-2026"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-23-willison-more-than-just-code-review",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Больше, чем просмотр кода",
+        "en": "More than just code review"
+      },
+      "url": "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/",
+      "summary": {
+        "ru": "Willison формулирует тезис: ключевой навык для продуктивной работы с кодинг-агентом — не умение просмотреть код, а способность уверенно поставить агенту задачу и затем уверенно убедиться, что изменение применено правильно; построчное вычитывание всего написанного агентом, по его словам, никогда не было лучшим способом это проверить.",
+        "en": "Willison's thesis: the key skill for productive work with a coding agent isn't the ability to review code, but the ability to confidently instruct it and then confidently verify the change was applied correctly; eyeballing every line an agent wrote, he argues, was never the best way to check that."
+      },
+      "note_page": "notes/articles/willison-more-than-just-code-review.html"
+    },
+    {
+      "id": "2026-08-23-pocock-skills-repo-walkthrough",
+      "type": "video",
+      "author": "Matt Pocock",
+      "title": {
+        "ru": "Matt Pocock Built the Skills Repo Every AI Coder Is Using",
+        "en": "Matt Pocock Built the Skills Repo Every AI Coder Is Using"
+      },
+      "url": "https://www.youtube.com/watch?v=LMpMmOWTtVk",
+      "summary": {
+        "ru": "Мэтт Покок показывает вживую свой цикл «от идеи до кода» на собственном репозитории agent-skills: текстовый «гриллинг» задачи до начала работы (/grill-with-docs, /grill-me), разбитый на отдельные проверяемые скиллы цикл разработки («Main Flow»), оркестрация нескольких агентов и финальная чистка документации для агентов от «no-ops» через /writing-for-agents.",
+        "en": "Matt Pocock live-demos his own idea-to-code cycle on his agent-skills repo: text-only \"grilling\" of a task before work starts (/grill-with-docs, /grill-me), a dev cycle broken into separate checkable skills (\"Main Flow\"), multi-agent orchestration, and a final pass stripping \"no-ops\" from agent-facing docs via /writing-for-agents."
+      },
+      "note_page": "notes/videos/pocock-skills-repo-walkthrough.html"
+    }
+  ]
+}

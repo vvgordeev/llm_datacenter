@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-23",
+      "news_count": 4,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "DeepSeek добавляет зрение в V4-Flash — экспериментальная модель приближается к Opus 4.8 на агентных бенчмарках",
+        "en": "DeepSeek adds vision to V4-Flash — an experimental model closes in on Opus 4.8 on agent benchmarks"
+      }
+    },
+    {
       "date": "2026-08-22",
       "news_count": 3,
       "expert_count": 4,

@@ -337,7 +337,13 @@
     "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/": "2026-08-22",
     "https://interconnected.org/home/2026/08/21/galactic": "2026-08-22",
     "https://thezvi.substack.com/p/ai-182-pause-for-reflection": "2026-08-22",
-    "https://www.youtube.com/watch?v=0oXOOlqVu5M": "2026-08-22"
+    "https://www.youtube.com/watch?v=0oXOOlqVu5M": "2026-08-22",
+    "https://api-docs.deepseek.com/news/news260821/": "2026-08-23",
+    "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-23",
+    "https://openrouter.ai/stealth": "2026-08-23",
+    "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726": "2026-08-23",
+    "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/": "2026-08-23",
+    "https://www.youtube.com/watch?v=LMpMmOWTtVk": "2026-08-23"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -612,10 +618,10 @@
       }
     },
     "openai-gpt-5-6-pricing": {
-      "last_date": "2026-07-31",
+      "last_date": "2026-08-23",
       "summary": {
-        "ru": "OpenAI снижает цену GPT-5.6 Luna на 80% и Terra на 20% с 30 июля, ссылаясь на эффективность, найденную моделью при оптимизации собственного инференс-стека; цена Sol не изменилась",
-        "en": "OpenAI cuts GPT-5.6 Luna's price by 80% and Terra's by 20% starting July 30, citing efficiency the model found while optimizing its own inference stack; Sol's price is unchanged"
+        "ru": "21 августа OpenAI объявила снижение цены GPT-5.6 Sol в API, кредитах Codex и ChatGPT Work более чем на 20% на ближайшие три месяца: входные токены — с $5 до $4 за миллион, выходные — с $30 до $20, кэшированные входные — с $0.50 до $0.40. После снижения Sol становится дешевле Claude Opus 5 по обоим показателям; цена подписок ChatGPT Plus/Pro/Business не меняется. Это не первое ценовое движение вокруг Sol за месяц (после тира Ultrafast от Cerebras 14 августа) — конкуренция с Anthropic и китайскими лабораториями продолжает давить на цену, а не на возможности модели.",
+        "en": "On August 21 OpenAI announced a more-than-20% price cut on GPT-5.6 Sol across the API, Codex credits, and ChatGPT Work, running for the next three months: input tokens drop from $5 to $4 per million, output from $30 to $20, cached input from $0.50 to $0.40. Post-cut, Sol undercuts Claude Opus 5 on both counts; ChatGPT Plus/Pro/Business subscription pricing is unchanged. It's not the first pricing move around Sol this month (after the Cerebras-powered Ultrafast tier on August 14) — competition from Anthropic and Chinese labs keeps pushing the price down, not the model's capabilities."
       }
     },
     "deepseek-v4-flash-0731": {
@@ -950,6 +956,27 @@
       "summary": {
         "ru": "Claude Code 2.1.239 (21 авг): надбавка 1.1x за data residency в /cost, /claude-api upgrade на anthropic 1.x, Alpine/musl paste и clipboard",
         "en": "Claude Code 2.1.239 (Aug 21): 1.1x data-residency premium in /cost, /claude-api upgrade to anthropic 1.x, Alpine/musl paste and clipboard support"
+      }
+    },
+    "deepseek-v4-flash-vision-exp": {
+      "last_date": "2026-08-23",
+      "summary": {
+        "ru": "21 августа DeepSeek выпустила DeepSeek-V4-Flash-Vision-Exp — экспериментальный мультимодальный вариант V4-Flash (MoE, 13B активных параметров из 284B) с пониманием изображений. Модель сохраняет текстовые результаты V4-Flash, но заметно продвигается на визуальных агентных бенчмарках: приближается к Claude Opus 4.8 и обгоняет его на части тестов (DeepSWE, Agents' Last Exam, ZeroBench Pass@5). Доступна через Chat Completions/Messages/Responses по цене V4-Flash (изображение — до 384 токенов), а Files API для загрузки изображений открыт бесплатно.",
+        "en": "On August 21 DeepSeek shipped DeepSeek-V4-Flash-Vision-Exp, an experimental multimodal variant of V4-Flash (a mixture-of-experts model, 13B active of 284B total parameters) with image understanding. It keeps V4-Flash's text performance while making a real jump on vision-agent benchmarks, closing in on Claude Opus 4.8 and beating it on some of them (DeepSWE, Agents' Last Exam, ZeroBench Pass@5). It's available via Chat Completions/Messages/Responses at V4-Flash pricing (images cost up to 384 tokens each), and DeepSeek opened its image Files API for free."
+      }
+    },
+    "anthropic-claude-security-mythos-5": {
+      "last_date": "2026-08-23",
+      "summary": {
+        "ru": "21 августа Anthropic перевела сканирование в Claude Security на свою самую мощную модель, Claude Mythos 5, и открыла публичную бету всем клиентам плана Claude Enterprise. Сервис подключается к репозиторию на GitHub, прослеживает потоки данных между файлами и возвращает не диалоговое окно, а готовый результат: категорию CWE, оценку уверенности и серьёзности находки и предложенный патч — то есть модель, которая находит уязвимости, нельзя перевести в режим написания эксплойта. Одновременно Anthropic запустила Defender Advantage Fund (0xDAF) — $35M в кредитах Claude для организаций, которые патчат уязвимости в open-source проектах и автоматизируют сканирование и патчинг.",
+        "en": "On August 21 Anthropic moved Claude Security's scans onto its most capable model, Claude Mythos 5, opening the feature in public beta to every Claude Enterprise customer. It connects to a GitHub repository, traces data flows across files, and hands back a finished result rather than a prompt box: a CWE category, confidence and severity ratings, and a suggested patch — so the same model that finds a vulnerability can't be steered into writing an exploit for it. Alongside this, Anthropic launched the Defender Advantage Fund (0xDAF): $35M in Claude credits for organizations patching open-source vulnerabilities and automating scanning/patching workflows."
+      }
+    },
+    "openrouter-ox-alpha-stealth": {
+      "last_date": "2026-08-23",
+      "summary": {
+        "ru": "20 августа OpenRouter и OpenCode без объявления автора выложили Ox Alpha — «стелс»-модель с окном контекста 1,05M токенов, максимальным выводом 131 072 токена и полной мультимодальностью (текст, изображение, видео), бесплатную на время недельного превью и заявленную для кодинга и длительной агентной работы. Один неаудированный тест на 10 задачах утверждает, что модель обходит GPT-5.6 Sol и Claude Fable 5 на бенчмарке DeepSWE, но в публичный лидерборд BenchSift по состоянию на 21 августа модель не попала. По следам предыдущих «стелс»-релизов OpenRouter (Hunter Alpha и Healer Alpha впоследствии оказались моделями Xiaomi MiMo) сообщество занялось идентификацией по стеку ошибок и совпадению токенизатора — на 22 августа основная версия указывает на Zhipu AI (вариант GLM-5.3).",
+        "en": "On August 20, OpenRouter and OpenCode quietly listed Ox Alpha — an unnamed \"stealth\" model with a 1.05M-token context window, a 131,072-token max output, and full multimodal input (text, image, video), free for a week-long preview and pitched at coding and sustained agentic work. One unaudited 10-task benchmark claims it beats GPT-5.6 Sol and Claude Fable 5 on the DeepSWE coding benchmark, but as of August 21 it hadn't appeared on the public BenchSift leaderboard. Following OpenRouter's past stealth releases (Hunter Alpha and Healer Alpha both later turned out to be Xiaomi MiMo models), the community turned to serving-stack forensics and tokenizer matching — as of August 22 the leading theory points to Zhipu AI (a GLM-5.3 variant)."
       }
     }
   }

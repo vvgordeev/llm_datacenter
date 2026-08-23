@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «More than just code review» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-22</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-22</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Больше, чем просмотр кода: как проверять правки агента, не читая каждую строку</span>
+      <span data-lang="en">More than just code review: verifying an agent's changes without reading every line</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/22/more-than-just-code-review/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Это короткая заметка (не long-form эссе) — конспект соответственно компактен и держится ближе к дословной формулировке тезиса, чем к развёрнутому пересказу.</span>
+      <span data-lang="en">This is a short note rather than a long-form essay — the digest below stays compact and close to the literal claim rather than a padded-out retelling.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Willison формулирует тезис прямо: ключевой навык для продуктивной работы с кодинг-агентом — не умение просмотреть код, а способность уверенно поставить агенту задачу на изменение и затем уверенно убедиться, что изменение применено правильно. Просмотр кода — лишь один из способов добиться этой уверенности, причём далеко не самый эффективный: построчное вычитывание всего, что написал агент, по его словам, никогда не было лучшим способом проверить корректность правки — ни до появления кодинг-агентов, ни тем более сейчас, когда объём генерируемого кода вырос настолько, что вычитывать его целиком просто не успеваешь.</span>
+      <span data-lang="en">Willison states the claim directly: the key skill for productive work with a coding agent isn't the ability to review code — it's the ability to confidently instruct the agent to make a change and then confidently verify that the change was applied correctly. Reading the code is only one way to reach that confidence, and by his account it was never the most effective one: eyeballing every line an agent wrote has never been the best way to validate a change — not before coding agents existed, and certainly not now that the sheer volume of agent-generated code has outpaced anyone's ability to read all of it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Смещение центра тяжести: с «как написано» на «что подтверждено»</span><span data-lang="en">The shift: from "how it's written" to "what's been confirmed"</span></h2>
+    <p>
+      <span data-lang="ru">Заметка — продолжение линии, которую Willison развивает в своих недавних постах об агентном кодинге: узкое место сместилось от скорости генерации кода к способности человека удерживать в голове, что вообще происходит в проекте. Отсюда и практический вывод — искать проверку не в чтении диффа, а в других источниках уверенности: в поведении программы (запустилась, прошли тесты, воспроизведён нужный сценарий), в структуре задачи, которая изначально была поставлена достаточно узко и однозначно, чтобы её результат было легко сверить. Код-ревью остаётся одним из инструментов, но не единственным и не главным.</span>
+      <span data-lang="en">The note continues a thread Willison has been pulling on in his recent posts about agentic coding: the bottleneck has moved from how fast code gets generated to how much a human can actually hold in their head about what's happening in a project. The practical conclusion follows — look for confidence not in reading a diff, but in other sources of it: the program's behavior (it runs, the tests pass, the scenario reproduces), or a task framed narrowly and unambiguously enough from the start that its result is easy to check. Code review stays one tool among several, not the only or the primary one.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

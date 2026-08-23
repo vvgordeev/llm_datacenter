@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Matt Pocock Built the Skills Repo Every AI Coder Is Using» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Matt Pocock · ~2026-08-18 · 29:44</span>
+      <span data-lang="en">Video digest · Matt Pocock · ~2026-08-18 · 29:44</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Мэтт Покок показывает свой репозиторий скиллов: от «гриллинга» задачи до готового кода</span>
+      <span data-lang="en">Matt Pocock walks through his skills repo: from "grilling" a task to shipped code</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=LMpMmOWTtVk" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует yt-dlp на уровне доступа к youtube.com (403 на туннель через прокси). Точная дата публикации не подтверждена официальным фидом канала (RSS youtube.com в этом прогоне тоже блокирован) — ориентировочно middle of the week, по независимым упоминаниям в статьях от 2026-08-22.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's network policy blocks yt-dlp's access to youtube.com (403 on the proxy tunnel). The exact publish date isn't confirmed by the channel's own RSS feed (also blocked this run) — approximate, based on independent articles referencing it as of 2026-08-22.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Мэтт Покок, автор публичного репозитория agent-skills для инженерной работы (mattpocock/skills, 40+ файлов SKILL.md, формат совместим с Claude Code, Cursor, Codex CLI, Windsurf и любым MCP-совместимым агентом), в этом видео не столько рекламирует репозиторий, сколько показывает вживую, как устроен его собственный рабочий цикл «от идеи до кода». Открывает видео скилл <code>/grill-with-docs</code> <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=0">[00:00]</a>: вместо того чтобы сразу поручить агенту задачу, Покок сначала запускает нестрогий, текстовый аудит безопасности без какой-либо структуры <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=22">[00:22]</a>, а затем повторяет тот же аудит через <code>/grill-me</code> — скилл, который перед началом работы задаёт агенту серию уточняющих вопросов о целях, контексте и рисках <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=99">[01:39]</a>.</span>
+      <span data-lang="en">Matt Pocock, author of a public agent-skills repo for engineering work (mattpocock/skills, 40+ SKILL.md files, compatible with Claude Code, Cursor, Codex CLI, Windsurf, and any MCP-compatible agent), spends this video less on pitching the repo and more on live-demoing his own idea-to-code workflow. The video opens with the <code>/grill-with-docs</code> skill <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=0">[00:00]</a>: rather than handing the agent a task outright, Pocock first runs a loose, unstructured text security audit <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=22">[00:22]</a>, then reruns the same audit through <code>/grill-me</code> — a skill that asks the agent to fire off a round of clarifying questions about goals, context, and risk before it starts work <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=99">[01:39]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Низкая точность на входе — дешевле, чем чинить готовый код</span><span data-lang="en">Low fidelity going in is cheaper than fixing finished code</span></h2>
+    <p>
+      <span data-lang="ru">Разница результатов между обычным запросом и «гриллированным» наглядно сравнивается на экране <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=329">[05:29]</a>: Покок объясняет, что текстовый диалог-«гриллинг» на раннем этапе — самый дешёвый способ выявить и устранить фундаментальную проблему в постановке задачи, потому что стоимость правки растёт по мере продвижения к готовому коду. Дешевле поймать неверную предпосылку в текстовом вопросе, чем в уже написанном и, возможно, слитом в прод коде. Далее видео подробно разбирает внутреннее устройство самих скиллов <code>/grill-me</code> и <code>/grilling</code> — как они закодированы как серия связанных LLM-инструкций, а не как один монолитный промпт <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=559">[09:19]</a>.</span>
+      <span data-lang="en">A side-by-side of a plain request versus a "grilled" one makes the gap concrete on screen <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=329">[05:29]</a>: Pocock's point is that a cheap, text-only "grilling" conversation up front is the cheapest place to catch a broken premise in a task, because the cost of fixing it only grows the closer you get to finished code. Catching a bad assumption in a text question is cheaper than catching it in code that's already written — and possibly already shipped. The video then walks through how the <code>/grill-me</code> and <code>/grilling</code> skills themselves are built — as a series of linked LLM instructions rather than one monolithic prompt <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=559">[09:19]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Main Flow»: весь цикл разработки как цепочка скиллов</span><span data-lang="en">The "Main Flow": the whole dev cycle as a chain of skills</span></h2>
+    <p>
+      <span data-lang="ru">С 13-й минуты Покок даёт обзор набора скиллов «Main Flow» <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=792">[13:12]</a> — идея в том, что весь жизненный цикл фичи (написание спецификации, создание тикета, реализация, код-ревью) можно разбить на отдельные, явно закодированные шаги, а не поручать агенту всё сразу одним расплывчатым промптом. Каждый шаг — это отдельный воспроизводимый и проверяемый скилл со своим входом и выходом, а не свободная генерация «как получится». Для параллельного запуска нескольких таких цепочек или агентов на разных задачах Покок упоминает оркестрирующие инструменты вроде Sandcastle, которые позволяют вести несколько кодинг-агентов одновременно в разных контекстах.</span>
+      <span data-lang="en">From the 13-minute mark, Pocock walks through the "Main Flow" skill set <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=792">[13:12]</a> — the idea being that a feature's whole lifecycle (writing a spec, filing a ticket, implementation, code review) can be broken into separate, explicitly encoded steps instead of being handed to an agent as one vague, do-everything prompt. Each step is its own reproducible, checkable skill with a defined input and output, rather than free-form "however it comes out" generation. For running several such chains or agents in parallel across different tasks, Pocock points to orchestration tools like Sandcastle, which let you drive multiple coding agents at once across separate contexts.</span>
+    </p>
+
+    <h2><span data-lang="ru">/writing-for-agents: убрать «no-ops» из документации для агента</span><span data-lang="en">/writing-for-agents: cutting "no-ops" out of agent-facing docs</span></h2>
+    <p>
+      <span data-lang="ru">Ближе к концу видео (21:37) разбирается скилл <code>/writing-for-agents</code> <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=1297">[21:37]</a>: он редактирует инструкции, адресованные агентам (README, SKILL.md, системные промпты), выявляя и удаляя «no-ops» — формулировки, которые ничего не меняют в поведении агента, но добавляют когнитивную нагрузку и увеличивают шанс, что важная часть инструкции потеряется среди воды. Итог, который Покок формулирует как общий принцип всего репозитория: скиллы — это не разовые промпты, а среда, которая может накапливать состояние между сессиями (отслеживать, что агент уже узнал, что уже сделано), и именно поэтому к текстам для агентов стоит применять ту же строгость редактирования, что и к обычной технической документации для людей.</span>
+      <span data-lang="en">Near the end (21:37), the video covers the <code>/writing-for-agents</code> skill <a class="ts" href="https://www.youtube.com/watch?v=LMpMmOWTtVk&t=1297">[21:37]</a>: it edits instructions meant for agents (READMEs, SKILL.md files, system prompts), finding and cutting "no-ops" — wording that doesn't change agent behavior at all but adds cognitive load and raises the odds that the one instruction that matters gets lost in the noise. Pocock frames this as the repo's underlying principle: skills aren't one-off prompts but an environment that can carry state across sessions (what the agent has already learned, what's already done) — which is exactly why agent-facing text deserves the same editorial rigor as ordinary technical docs written for humans.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
