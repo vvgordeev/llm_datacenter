@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-24",
+  "generated_at": "2026-08-24T05:17:55Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-08-24-garymarcus-anthropic-revenue-doubts",
+      "type": "article",
+      "author": "Gary Marcus",
+      "title": {
+        "ru": "Ещё плохие новости для фронтир-компаний",
+        "en": "More bad news for the frontier AI companies"
+      },
+      "url": "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier",
+      "summary": {
+        "ru": "Опираясь на репортаж Financial Times о том, что модели Anthropic с трудом привлекают пользователей на фоне более дешёвых альтернатив, Маркус показывает арифметику, которая ставит под вопрос прогноз Дваркеша Пателя о выручке Anthropic $100–150 млрд за год: компании нужно более чем удвоить квартальную выручку ($11,5 млрд в Q2) на фоне спада «токенмаксинга», падения цен и роста конкуренции с китайскими моделями.",
+        "en": "Building on an FT report that Anthropic's models are struggling to attract users against cheaper alternatives, Marcus lays out the arithmetic that undercuts Dwarkesh Patel's prediction of $100-150B annualized Anthropic revenue: the company would need to more than double its $11.5B Q2 revenue amid declining tokenmaxxing, falling prices, and rising competition from Chinese models."
+      },
+      "note_page": "notes/articles/garymarcus-anthropic-revenue-doubts.html"
+    }
+  ]
+}
