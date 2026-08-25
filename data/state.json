@@ -345,7 +345,8 @@
     "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/": "2026-08-23",
     "https://www.youtube.com/watch?v=LMpMmOWTtVk": "2026-08-23",
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
-    "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24"
+    "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
+    "https://mistral.ai/news/mistral-x-humain/": "2026-08-25"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -979,6 +980,13 @@
       "summary": {
         "ru": "20 августа OpenRouter и OpenCode без объявления автора выложили Ox Alpha — «стелс»-модель с окном контекста 1,05M токенов, максимальным выводом 131 072 токена и полной мультимодальностью (текст, изображение, видео), бесплатную на время недельного превью и заявленную для кодинга и длительной агентной работы. Один неаудированный тест на 10 задачах утверждает, что модель обходит GPT-5.6 Sol и Claude Fable 5 на бенчмарке DeepSWE, но в публичный лидерборд BenchSift по состоянию на 21 августа модель не попала. По следам предыдущих «стелс»-релизов OpenRouter (Hunter Alpha и Healer Alpha впоследствии оказались моделями Xiaomi MiMo) сообщество занялось идентификацией по стеку ошибок и совпадению токенизатора — на 22 августа основная версия указывает на Zhipu AI (вариант GLM-5.3).",
         "en": "On August 20, OpenRouter and OpenCode quietly listed Ox Alpha — an unnamed \"stealth\" model with a 1.05M-token context window, a 131,072-token max output, and full multimodal input (text, image, video), free for a week-long preview and pitched at coding and sustained agentic work. One unaudited 10-task benchmark claims it beats GPT-5.6 Sol and Claude Fable 5 on the DeepSWE coding benchmark, but as of August 21 it hadn't appeared on the public BenchSift leaderboard. Following OpenRouter's past stealth releases (Hunter Alpha and Healer Alpha both later turned out to be Xiaomi MiMo models), the community turned to serving-stack forensics and tokenizer matching — as of August 22 the leading theory points to Zhipu AI (a GLM-5.3 variant)."
+      }
+    },
+    "mistral-humain-saudi": {
+      "last_date": "2026-08-25",
+      "summary": {
+        "ru": "Mistral и саудовская HUMAIN объявляют стратегическое партнёрство по AI-инфраструктуре и локализованным frontier-моделям (кибербезопасность, голос, арабский язык)",
+        "en": "Mistral and Saudi HUMAIN announce a strategic partnership on AI infrastructure and localized frontier models (cybersecurity, voice, Arabic language)"
       }
     }
   }

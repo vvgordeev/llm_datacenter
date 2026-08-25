@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-25",
+      "news_count": 1,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Mistral и саудовская HUMAIN объявляют стратегическое партнёрство по локализованным frontier-моделям",
+        "en": "Mistral and Saudi Arabia's HUMAIN announce a strategic partnership for localized frontier models"
+      }
+    },
+    {
       "date": "2026-08-24",
       "news_count": 0,
       "expert_count": 1,

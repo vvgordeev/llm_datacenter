@@ -1,0 +1,44 @@
+{
+  "date": "2026-08-25",
+  "generated_at": "2026-08-25T05:20:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch на www.anthropic.com/news — EGRESS_BLOCKED; 2 WebSearch-запроса нашли только уже опубликованные темы (Claude Academy, Sonnet 5 pricing permanent, Developer Platform updates) — все дубли, вне окна 36ч"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch на openai.com/news — EGRESS_BLOCKED; WebSearch нашёл GPT-5.3-Codex, GPT-5.6 Sol price cut (21 авг), Codex 20M users (21 авг) — все дубли (опубликовано 2026-08-19/23) или вне окна"},
+    {"source": "google blog", "status": "blocked", "candidates": 0, "note": "WebFetch на blog.google — EGRESS_BLOCKED; WebSearch не нашёл конкретного события с датой 24-25 августа — только общие обзоры и старые релизы (Gemini Robotics 2, Gemini 3.7 Flash — вне окна)"},
+    {"source": "meta blog", "status": "blocked", "candidates": 0, "note": "WebFetch на ai.meta.com/blog — EGRESS_BLOCKED; WebSearch не нашёл ничего в окне 36ч — только старые релизы (Muse Spark/Code/Glimmer, LlamaCon)"},
+    {"source": "xai blog", "status": "blocked", "candidates": 0, "note": "WebFetch на x.ai/news — EGRESS_BLOCKED; WebSearch нашёл Grok Bot (дубль, опубликован 2026-08-22 как xai-grok-bot), Grok 4.6 на AWS/Google Enterprise (уже опубликовано ранее) — все дубли или вне окна"},
+    {"source": "mistral blog", "status": "ok", "candidates": 1, "note": "WebFetch на mistral.ai/news — EGRESS_BLOCKED; WebSearch нашёл новое: партнёрство Mistral x HUMAIN (Саудовская Аравия), объявлено 24 августа во время визита наследного принца в Париж — опубликовано"},
+    {"source": "deepseek blog", "status": "blocked", "candidates": 0, "note": "WebFetch на api-docs.deepseek.com — EGRESS_BLOCKED; WebSearch нашёл только повышение цен (17 авг) и V4-Pro GA (13 авг) — оба уже опубликованы ранее"},
+    {"source": "aggregator: AI News (smol.ai)", "status": "ok", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED; WebSearch-пересказ дайджеста за 24 августа (AT&T routing, Ox Alpha/GLM-5.3, DeepSeek Vision-Exp, Codex 20M) — все уже опубликованы ранее или касаются моделей вне трекинга (Qwen выключен, GLM/Zhipu не отслеживается)"},
+    {"source": "aggregator: TLDR AI", "status": "blocked", "candidates": 0, "note": "WebFetch на tldr.tech/ai — EGRESS_BLOCKED; WebSearch не даёт содержимого конкретного выпуска"},
+    {"source": "aggregator: unrot.co (widening)", "status": "ok", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED; WebSearch-пересказ обзора за 24 августа (15 историй: DeepSeek Vision, GLM-5.3, Qwen3.8-27B, Gemini 3.7 Flash, Meta Muse Spark, ценовые изменения OpenAI/Anthropic) — все дубли или вне трекинга (Qwen отключён, GLM/Meta Muse Spark/Gemini Flash не в окне)"},
+    {"source": "Hacker News API (algolia)", "status": "blocked", "candidates": 0, "note": "hn.algolia.com — EGRESS_BLOCKED; полностью на WebSearch-фолбэк"},
+    {"source": "Hacker News (через WebSearch)", "status": "empty", "candidates": 0, "note": "site: запросы и общие запросы нашли только старые треды (Qwen 3.8 27B локальный запуск, Anthropic Risk Report — оба вне окна/дубли) — ничего нового по теме функций/релизов LLM"},
+    {"source": "community: Reddit (r/LocalLLaMA, r/ClaudeAI)", "status": "empty", "candidates": 0, "note": "site:reddit.com запросы за 24-25 августа не вернули релевантных индексированных постов"},
+    {"source": "community: X/Twitter", "status": "empty", "candidates": 0, "note": "WebSearch по аккаунтам вендоров не вернул конкретных свежих постов с содержанием, кроме уже найденного анонса Mistral x HUMAIN"},
+    {"source": "расширенный проход (widening search)", "status": "ok", "candidates": 0, "note": "доп. WebSearch: «LLM news 25 августа», «AI model release 25 августа», «AI coding agent update неделя» — нашли Google A2A → Agentic AI Foundation (17-20 августа, вне окна 36ч, не в seen_urls, но старше недели для новостного раздела — не публикуется как новость дня), остальное — дубли"},
+    {"source": "expert: Simon Willison (git-бэкап simonwillisonblog-backup)", "status": "empty", "candidates": 0, "note": "Клонирован ndjson-дамп, обновлён сегодня (commit 2026-08-24 20:39 UTC). Самый новый blogmark (24 августа, «Your executable is a SQLite database») не об LLM-подходах — не публикуется. Остальные blogmark/entry за 7 дней (Stop Making TUIs, FT про выручку Anthropic и др.) — уже дубли (опубликованы 2026-08-21/24)"},
+    {"source": "expert: Andrej Karpathy (YouTube)", "status": "empty", "candidates": 0, "note": "RSS EGRESS_BLOCKED; WebSearch не нашёл видео с подтверждённой датой в окне 7 дней (последнее найденное — Sequoia Ascent, апрель)"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED; WebSearch нашёл только эссе от 18 августа (открытие книги swyx) — вне окна 7 дней, и AINews-агрегацию (не подходит как экспертный контент)"},
+    {"source": "expert: AI Explained (YouTube)", "status": "empty", "candidates": 0, "note": "RSS EGRESS_BLOCKED; WebSearch не подтвердил ни одного видео с точной датой в окне 7 дней"},
+    {"source": "expert: Matt Wolfe (YouTube)", "status": "empty", "candidates": 0, "note": "RSS EGRESS_BLOCKED; WebSearch вернул только общие сведения о канале, без даты"},
+    {"source": "expert: Ethan Mollick (oneusefulthing.org)", "status": "empty", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED; WebSearch нашёл только «Summer 2026 Edition» (23 июля) — вне окна 7 дней"},
+    {"source": "expert: Nate Herk (YouTube)", "status": "empty", "candidates": 0, "note": "RSS EGRESS_BLOCKED; WebSearch вернул только общие/рекламные видео без даты в окне"},
+    {"source": "expert: Matt Pocock (YouTube)", "status": "empty", "candidates": 0, "note": "RSS EGRESS_BLOCKED; WebSearch не подтвердил новое видео с датой в окне 7 дней"},
+    {"source": "расширенный проход по экспертам (widening)", "status": "empty", "candidates": 0, "note": "Проверены Zvi (архив до AI #182, опубликован 2026-08-22 — AI #183 ещё не найден в индексе), Nathan Lambert/interconnects.ai (нет постов в окне), Gary Marcus (новейший пост — 23 августа, уже опубликован 2026-08-24) — новых, неопубликованных материалов в окне 7 дней не найдено"}
+  ],
+  "totals": {
+    "candidates": 2,
+    "published": 1,
+    "rejected": {
+      "дубль URL/сюжета (уже опубликовано ранее)": 6,
+      "вне трекируемых источников (Qwen отключён, GLM/Zhipu/ByteDance не в конфиге)": 4,
+      "старше окна 36ч/7 дней при подтверждённой дате": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not run: ни один видео-эксперт не дал кандидата с подтверждённой датой в окне 7 дней",
+    "frames": "not run: см. выше; yt-dlp/imageio-ffmpeg переустановлены и проверены (yt-dlp 2026.08.19, ffmpeg через imageio_ffmpeg) на случай появления кандидата, не потребовались"
+  },
+  "environment_note": "Третий день подряд (после 2026-08-23 и 2026-08-24) с сильной деградацией каналов обнаружения: прямой WebFetch на все 7 блогов вендоров, все агрегаторы, hn.algolia.com, YouTube RSS (5 каналов), latent.space, oneusefulthing.org, simonwillison.net, thezvi.substack.com, mistral.ai дал EGRESS_BLOCKED — WebSearch остался единственным рабочим каналом. Git-клон simonwillisonblog-backup сработал (обновлён сегодня), но не дал новых материалов по теме. Единственная подтверждённая новая новость дня — партнёрство Mistral x HUMAIN (Саудовская Аравия), найденное через WebSearch с прямой ссылкой на mistral.ai и официальной цитатой из X; независимых реакций сообщества на неё пока нет (объявление слишком свежее) — оставлено одно официальное мнение вместо обычных 2-4. Экспертный раздел за сегодня пуст (min_expert_total=5 не выполнен третий день подряд) — не из-за нехватки усилий (пройдены все 8 экспертов конфига плюс расширенный поиск), а потому что все найденные материалы либо уже опубликованы в предыдущих сводках, либо вне окна свежести 7 дней с подтверждённой датой. Реальных, неопубликованных ранее событий о новых функциях/релизах LLM за последние 36 часов от отслеживаемых вендоров не найдено."
+}
