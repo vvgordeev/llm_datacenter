@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Galactic Compass 2» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Matt Webb · 2026-08-21</span>
+      <span data-lang="en">Article digest · Matt Webb · 2026-08-21</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Galactic Compass 2: как ChatGPT научил разработчика кватернионам, а не просто написал за него код</span>
+      <span data-lang="en">Galactic Compass 2: how ChatGPT taught a developer quaternions instead of just writing his code</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://interconnected.org/home/2026/08/21/galactic" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Мэтт Уэбб рассказывает историю обновления своего приложения Galactic Compass — стрелки, всегда указывающей на центр Млечного Пути, — до версии с режимом дополненной реальности. Идея приложения появилась у него ещё в 2021 году, но реализовать AR-режим он не мог долго: для поворота стрелки в трёхмерном пространстве телефона нужна математика вращений — кватернионы, — а LLM, по его наблюдению, на удивление плохо справляются именно с 3D-геометрией и системами координат «из коробки»: без телесного опыта вращения объектов в пространстве модель путается в осях и знаках так же, как путался бы человек, никогда не державший в руках гироскоп.</span>
+      <span data-lang="en">Matt Webb tells the story of upgrading his Galactic Compass app — an arrow that always points toward the center of the Milky Way — to a version with an augmented-reality mode. He'd had the idea back in 2021 but couldn't ship the AR mode for years: turning the arrow correctly in a phone's 3D space needs rotation math — quaternions — and LLMs, in his experience, are surprisingly bad at 3D geometry and reference frames out of the box: lacking any embodied sense of rotating objects in space, a model gets just as confused about axes and signs as a person who's never held a gyroscope would.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: не просить код, а просить объяснение</span><span data-lang="en">The method: don't ask for code, ask for an explanation</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой ход статьи — не в том, что Уэбб в итоге сделал приложение, а в том, КАК он это сделал. Вместо привычного «напиши мне код на кватернионах» он сознательно попросил ChatGPT не писать код, а обучить его — терпеливо, в интерактивном режиме, отвечая на уточняющие вопросы, — ровно настолько, чтобы он сам понял, как применить кватернионы именно в этой задаче. То, чего он не смог добиться за годы чтения книг и разговоров с друзьями-математиками, получилось за счёт формата диалога, подстроенного под его конкретное непонимание в реальном времени.</span>
+      <span data-lang="en">The article's real hinge isn't that Webb eventually shipped the app — it's HOW he got there. Instead of the default "write me the quaternion code," he deliberately asked ChatGPT not to write code but to teach him — patiently, interactively, answering his follow-up questions — just enough that he understood how to apply quaternions to this specific problem himself. What years of reading books and talking to mathematician friends hadn't gotten him, a dialogue format tuned in real time to his exact confusion did.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это не «аутсорсинг мышления»</span><span data-lang="en">Why this isn't "outsourcing your thinking"</span></h2>
+    <p>
+      <span data-lang="ru">Автор прямо возражает расхожему тезису о том, что LLM останавливают обучение, потому что избавляют от необходимости самому в чём-то разбираться. По его опыту вышло наоборот: раз задача (заставить AR-режим работать) требовала реального понимания, а не просто рабочего кода, использование ИИ как терпеливого репетитора не заменило обучение, а подтолкнуло к нему — он выучил ровно столько кватернионов, сколько нужно было для дела, и не больше, но и не меньше. Ограничение, которое он не скрывает: этот способ работает, когда у человека есть конкретная, узкая задача, требующая понимания, — а не абстрактное желание «выучить тему»; именно конкретность цели и не даёт диалогу с моделью превратиться в поверхностный пересказ учебника.</span>
+      <span data-lang="en">Webb pushes back directly on the common claim that LLMs stop people from learning because they remove the need to figure things out yourself. His experience ran the other way: because the task (making the AR mode actually work) demanded real understanding rather than merely working code, using the AI as a patient tutor didn't replace learning — it drove it. He learned exactly as much about quaternions as the job required, no more and no less. The limitation he's upfront about: this only works when someone has a specific, narrow problem that requires understanding — not a vague wish to "learn the topic" — it's that concreteness of goal that keeps a dialogue with the model from collapsing into a shallow textbook recap.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

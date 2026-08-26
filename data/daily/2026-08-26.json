@@ -1,0 +1,225 @@
+{
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T05:28:00Z",
+  "news": [
+    {
+      "id": "2026-08-26-claude-memory-unification",
+      "cluster_id": "anthropic-claude-memory-unification",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic объединяет память Claude в чате и Cowork, добавляет защиту чувствительных тем",
+        "en": "Anthropic unifies Claude's memory across chat and Cowork, adds sensitive-topic protections"
+      },
+      "summary": {
+        "ru": "25 августа Anthropic объединила память Claude между обычным чатом и Cowork: теперь контекст переносится между обоими режимами, а не привязан к отдельному проекту Cowork. Память обновляется прямо по ходу разговора (раньше — только по его завершении), каждый запомненный факт можно посмотреть, отредактировать или удалить в разделе Topics настроек памяти. По умолчанию Claude не сохраняет чувствительные темы (здоровье, раса, религия, политика, гендерная идентичность) — это можно включить отдельной настройкой.",
+        "en": "On August 25 Anthropic unified Claude's memory across regular chat and Cowork: context now carries between both instead of staying locked to a single Cowork project. Memory updates live as a conversation happens (previously only once it ended), and every remembered fact can be viewed, edited, or deleted under Topics in memory settings. By default Claude doesn't store sensitive topics (health, race, religion, politics, gender identity) — that's an opt-in setting."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметное улучшение качества жизни для всех пользователей Claude (меньше повторного объяснения контекста), закрывающее разрыв с памятью у ChatGPT/Gemini, но это развитие существующего UX-паттерна, а не новый подход к использованию LLM — и явное ограничение (нет способа развести память чата и Cowork, кроме разных аккаунтов) снижает практическую ценность для части сценариев",
+        "en": "A meaningful quality-of-life improvement for all Claude users (less re-explaining context), closing the gap with ChatGPT/Gemini memory, but it's an evolution of an existing UX pattern rather than a new approach to using LLMs — and a clear limitation (no way to separate chat and Cowork memory short of using different accounts) caps its practical value for some workflows"
+      },
+      "source_url": "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it",
+      "opinions": [
+        {
+          "author": "TechCrunch",
+          "stance": "positive",
+          "quote": {
+            "ru": "Заголовок материала — «Claude Cowork наконец-то помнит то, что вы рассказали приложению в чате» — фиксирует главную практическую пользу апдейта: Cowork годами работал в отрыве от того, что Claude уже знал о пользователе из обычного чата.",
+            "en": "The piece's headline — \"Claude Cowork finally remembers what you told the app in chat\" — captures the update's main practical win: for years Cowork operated cut off from what Claude already knew about the user from regular chat."
+          },
+          "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/"
+        },
+        {
+          "author": "The Register",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Материал отмечает практическое ограничение: разделить память чата и Cowork нельзя — это не переключаемая опция, а объединение по умолчанию для всех, кроме отдельных учётных записей; единственная альтернатива — приостановить память целиком, использовать инкогнито-чаты или вручную вычищать отдельные темы.",
+            "en": "The piece flags a practical limitation: chat and Cowork memory can't be kept separate — it's not a toggle, it's merged by default for everyone short of using separate accounts; the only alternatives are pausing memory entirely, using incognito chats, or manually pruning individual topics."
+          },
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/25/claude-and-cowork-now-share-what-they-know-about-you/5292412"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Попросить Cowork составить обновление для руководителя — и он уже знает, кто это и как ей нравится получать апдейты, без повторного объяснения в начале каждой сессии",
+            "en": "Ask Cowork to draft an update for your manager, and it already knows who that is and how she likes updates written — no need to re-explain at the start of every session"
+          },
+          "url": "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-26-claude-platform-agent-stack-ga",
+      "cluster_id": "anthropic-claude-platform-agent-stack-ga",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Computer use, browser use, Skills API и Files API выходят в GA на Claude Platform",
+        "en": "Computer use, browser use, the Skills API, and the Files API reach GA on the Claude Platform"
+      },
+      "summary": {
+        "ru": "Anthropic перевела в статус общей доступности (GA) четыре строительных блока Claude Platform для продакшен-агентов: обновлённый computer use (несколько действий за один ход модели вместо одного за вызов), новый инструмент browser use (работа с элементами страницы через её структуру, а не только по пикселям), Skills API (загрузка и версионирование скиллов) и Files API (управление документами агентов). По заявлению Anthropic, батчинг действий даёт 20–40% меньше раундтрипов на задачу за счёт объединения нескольких действий в один вызов модели.",
+        "en": "Anthropic moved four Claude Platform building blocks for production agents to general availability: an updated computer use tool (several actions per model turn instead of one per call), a new browser use tool (acting on page elements via page structure, not just pixels), the Skills API (uploading and versioning skills), and the Files API (document management for agents). Anthropic says batching actions cuts round trips per task by 20–40% by folding several actions into one model call."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев для продакшен-агентов: устойчивая к изменениям вёрстки автоматизация браузера (структура страницы вместо хрупких координат), версионируемые и переиспользуемые скиллы вместо промптов, вписанных в код, и заметное снижение стоимости/времени задачи за счёт батчинга действий — это меняет то, как разработчики строят агентный стек, а не просто улучшает отдельную модель",
+        "en": "Opens a new class of production-agent scenarios: browser automation robust to layout changes (page structure instead of brittle coordinates), versioned and reusable skills instead of prompts baked into code, and a real drop in task cost/time from batching actions — this changes how developers build the agent stack, not just a single model's quality"
+      },
+      "source_url": "https://claude.com/blog/computer-use-skills-api-files-api",
+      "opinions": [
+        {
+          "author": "oikon48 (X/Twitter)",
+          "stance": "positive",
+          "quote": {
+            "ru": "В посте пересказан основной технический факт релиза: инструменты Claude Platform, начиная с computer use, теперь выполняют несколько действий (клик, ввод текста, нажатие клавиши, скриншот) за один ход, что даёт на 20–40% меньше раундтрипов на задачу — а значит, задачи выполняются быстрее и дешевле.",
+            "en": "The post restates the release's core technical claim: Claude Platform tools, starting with computer use, now perform several actions (click, type, key, screenshot) per turn, yielding 20–40% fewer round trips per task — meaning tasks finish faster and at lower cost."
+          },
+          "url": "https://x.com/oikon48/status/2090694214447468649"
+        },
+        {
+          "author": "NxCode",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Материал под заголовком «Агентный стек Claude вышел в GA. Рантайм по-прежнему ваш» уточняет границу ответственности: Claude предлагает действия, но исполняет каждый клик, ввод и переход именно приложение разработчика, работающее в среде, которую контролирует он сам, — GA не превращает весь стек в единую доверенную коробку.",
+            "en": "The piece, headlined \"Claude's Agent Stack Is GA. The Runtime Is Still Yours,\" spells out where responsibility sits: Claude proposes actions, but the developer's own application — running in an environment they control — executes every click, keystroke, and navigation; GA doesn't collapse the stack into one trusted box."
+          },
+          "url": "https://www.nxcode.io/resources/news/claude-platform-agent-tools-ga-browser-skills-files-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Страховая компания сократила самый длинный конвейер обработки претензий с 32 до 13 минут и снизила стоимость задачи примерно на 30% после перехода на батчинг действий в computer use",
+            "en": "An insurance company cut its longest claims-processing workflow from 32 to 13 minutes and reduced task cost by about 30% after switching to batched computer-use actions"
+          },
+          "url": "https://claude.com/blog/computer-use-skills-api-files-api"
+        },
+        {
+          "text": {
+            "ru": "Для банка через Skills API оформили скилл с методологией кредитного анализа и утверждённым форматом меморандума — теперь агент применяет его при подготовке финансовых отчётов и сделочной документации",
+            "en": "For a bank, a Skills API skill captures the firm's credit methodology and approved memo format, so an agent applies it when preparing financial statements and deal documents"
+          },
+          "url": "https://claude.com/blog/computer-use-skills-api-files-api"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-26-google-ask-gemini-in-chat",
+      "cluster_id": "google-ask-gemini-in-chat",
+      "models": ["google"],
+      "title": {
+        "ru": "Google запускает Ask Gemini in Chat — единую командную строку поверх Google Chat",
+        "en": "Google launches Ask Gemini in Chat, a unified command line on top of Google Chat"
+      },
+      "summary": {
+        "ru": "С 26 августа Google заменяет боковую панель Gemini в Google Chat на Ask Gemini in Chat — единый интерфейс, объединяющий поиск по рабочим данным (Gmail, Drive, Calendar), генерацию изображений и черновиков прямо в переписке, планирование встреч и управление задачами, с отдельными сессиями для возврата к конкретным темам. Обновление пока доступно только при английском языке аккаунта и определённых тарифах Workspace; история переписки со старой боковой панели не переносится.",
+        "en": "Starting August 26, Google is replacing the Gemini side panel in Google Chat with Ask Gemini in Chat — a single interface that searches across Workspace data (Gmail, Drive, Calendar), drafts images and updates inline in a conversation, and handles meeting scheduling and task management, with separate sessions to revisit specific topics. The rollout is currently limited to English-language accounts and specific Workspace tiers; conversation history from the old side panel does not carry over."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Полезная консолидация существующих возможностей Gemini (поиск по Workspace, генерация, планирование) в единый интерфейс командной строки внутри Chat, повышающая кросс-приложенную осведомлённость ассистента — но это перекомпоновка уже имеющихся функций под новым UI, а не новая модель или принципиально новый сценарий использования LLM",
+        "en": "A useful consolidation of Gemini's existing capabilities (Workspace search, generation, scheduling) into a single command-line interface inside Chat, raising the assistant's cross-app awareness — but it's a repackaging of already-available features into a new UI, not a new model or a fundamentally new way of using an LLM"
+      },
+      "source_url": "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html",
+      "opinions": [
+        {
+          "author": "Neowin",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Материал фиксирует практическое ограничение перехода: привычная боковая панель Gemini в Chat отключается, а история переписки с ней не переносится в Ask Gemini — администраторы смогут выгрузить историю, конечные пользователи, если это разрешено организацией, тоже.",
+            "en": "The piece notes a practical rollout limitation: the familiar Gemini side panel in Chat is being retired, and its conversation history does not carry over to Ask Gemini — admins will be able to export the history, and end users too, if their organization allows it."
+          },
+          "url": "https://www.neowin.net/news/google-replaces-chat-side-panel-with-new-ask-gemini-integration/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Спросить «когда моя следующая встреча и что нужно подготовить?» — и Gemini сам проверит календарь, найдёт связанные документы в Drive и подтянет нужные письма, не выходя из чата",
+            "en": "Ask \"when's my next meeting and what do I need to prepare?\" and Gemini checks Calendar, finds related documents in Drive, and pulls relevant emails without leaving the chat"
+          },
+          "url": "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-26-willison-anthropic-revenue-ramp-index",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Что индекс расходов Ramp говорит о реальном спросе на модели Anthropic",
+        "en": "What the Ramp spend index says about real demand for Anthropic's models"
+      },
+      "url": "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/",
+      "summary": {
+        "ru": "Разбор цифр выручки Anthropic/OpenAI из статьи FT и открытие для себя индекса Ramp AI — прокси реального спроса по биллингу 70 000 компаний. Разбивка расходов на модели Anthropic за июль 2026 показывает: более дешёвая Opus 4.8 (28%) далеко опережает дорогую Fable 5 (8%) по фактическим тратам.",
+        "en": "A look at Anthropic/OpenAI revenue numbers from an FT piece, and a discovery of the Ramp AI Index — a real-demand proxy from 70,000 companies' billing data. The July 2026 Anthropic model spend breakdown shows cheaper Opus 4.8 (28%) far ahead of pricier Fable 5 (8%) in actual spend."
+      },
+      "note_page": "notes/articles/willison-anthropic-revenue-ramp-index.html"
+    },
+    {
+      "id": "2026-08-26-breunig-fable-end-of-free-lunch",
+      "type": "article",
+      "author": "Drew Breunig",
+      "title": {
+        "ru": "Fable и конец бесплатного обеда: маршрутизация задач между дорогой и дешёвой моделью",
+        "en": "Fable and the end of the free lunch: routing tasks between an expensive and a cheap model"
+      },
+      "url": "https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html",
+      "summary": {
+        "ru": "Аналогия с законом Мура: пока каждая новая модель была не хуже и не дороже, оптимизировать харнесс не имело смысла. Fable 5 разорвала эту логику ценой — и разработчики начали осознанно решать, какую задачу отдавать дорогой модели для дизайна, а какую дешёвой для исполнения.",
+        "en": "A Moore's Law analogy: as long as each new model was better or cheaper, optimizing your harness wasn't worth it. Fable 5 broke that logic on price — so developers started deliberately deciding which task goes to the expensive model for design, and which to a cheap one for execution."
+      },
+      "note_page": "notes/articles/breunig-fable-end-of-free-lunch.html"
+    },
+    {
+      "id": "2026-08-26-webb-galactic-compass-ai-tutor",
+      "type": "article",
+      "author": "Matt Webb",
+      "title": {
+        "ru": "Galactic Compass 2: ChatGPT как репетитор по кватернионам, а не автор кода",
+        "en": "Galactic Compass 2: ChatGPT as a quaternion tutor, not a code author"
+      },
+      "url": "https://interconnected.org/home/2026/08/21/galactic",
+      "summary": {
+        "ru": "Вместо просьбы написать код на кватернионах автор попросил ChatGPT научить его — терпеливо и интерактивно, — что позволило наконец реализовать AR-режим приложения, которое он задумал ещё в 2021 году. Обучение через LLM не заменило понимание, а стало способом его получить.",
+        "en": "Instead of asking for quaternion code, the author asked ChatGPT to teach him — patiently and interactively — finally letting him ship an app's AR mode he'd envisioned back in 2021. Learning via an LLM didn't replace understanding; it became the way to get it."
+      },
+      "note_page": "notes/articles/webb-galactic-compass-ai-tutor.html"
+    },
+    {
+      "id": "2026-08-26-morrell-extensible-software-llms",
+      "type": "article",
+      "author": "Jeremy Morrell",
+      "title": {
+        "ru": "Расширяемый софт в эпоху LLM: ядро у разработчика, расширения — у модели в песочнице",
+        "en": "Extensible software in the age of LLMs: the core stays with developers, extensions go to a sandboxed model"
+      },
+      "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
+      "summary": {
+        "ru": "LLM снижают стоимость написания расширений, а современные песочницы (например, Dynamic Workers Cloudflare) снижают риск их деплоя — вместе это возвращает практичность идее расширяемого софта в духе старых плагинных систем.",
+        "en": "LLMs cut the cost of writing extensions, and modern sandboxes (like Cloudflare's Dynamic Workers) cut the risk of deploying them — together that makes the old plugin-system idea of extensible software practical again."
+      },
+      "note_page": "notes/articles/morrell-extensible-software-llms.html"
+    },
+    {
+      "id": "2026-08-26-natherk-sell-claude-workflows",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Как продавать AI-решения внутри компании, не открывая агентство",
+        "en": "How to sell AI workflows inside a company without starting an agency"
+      },
+      "url": "https://www.youtube.com/watch?v=zpS6JGJNaGg",
+      "summary": {
+        "ru": "Трёхфазная карьерная карта: закрепиться как «AI-строитель» внутри компании, доказать ценность измеримыми результатами, стать незаменимым, устраняя главные узкие места бизнеса — вместо запуска отдельного AI-агентства.",
+        "en": "A three-phase career roadmap: position yourself as an in-house 'AI builder,' prove value with measurable results, become indispensable by removing the business's biggest bottlenecks — instead of launching a standalone AI agency."
+      },
+      "note_page": "notes/videos/natherk-sell-claude-workflows.html"
+    }
+  ]
+}

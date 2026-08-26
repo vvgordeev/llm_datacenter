@@ -335,7 +335,7 @@
     "https://academy.claude.com/all": "2026-08-22",
     "https://x.ai/news/grok-bot-more-plans": "2026-08-22",
     "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/": "2026-08-22",
-    "https://interconnected.org/home/2026/08/21/galactic": "2026-08-22",
+    "https://interconnected.org/home/2026/08/21/galactic": "2026-08-26",
     "https://thezvi.substack.com/p/ai-182-pause-for-reflection": "2026-08-22",
     "https://www.youtube.com/watch?v=0oXOOlqVu5M": "2026-08-22",
     "https://api-docs.deepseek.com/news/news260821/": "2026-08-23",
@@ -346,7 +346,24 @@
     "https://www.youtube.com/watch?v=LMpMmOWTtVk": "2026-08-23",
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
     "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
-    "https://mistral.ai/news/mistral-x-humain/": "2026-08-25"
+    "https://mistral.ai/news/mistral-x-humain/": "2026-08-25",
+    "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26",
+    "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/": "2026-08-26",
+    "https://www.theregister.com/ai-and-ml/2026/08/25/claude-and-cowork-now-share-what-they-know-about-you/5292412": "2026-08-26",
+    "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-26",
+    "https://x.com/oikon48/status/2090694214447468649": "2026-08-26",
+    "https://www.nxcode.io/resources/news/claude-platform-agent-tools-ga-browser-skills-files-2026": "2026-08-26",
+    "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html": "2026-08-26",
+    "https://www.neowin.net/news/google-replaces-chat-side-panel-with-new-ask-gemini-integration/": "2026-08-26",
+    "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/": "2026-08-26",
+    "notes/articles/willison-anthropic-revenue-ramp-index.html": "2026-08-26",
+    "https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html": "2026-08-26",
+    "notes/articles/breunig-fable-end-of-free-lunch.html": "2026-08-26",
+    "notes/articles/webb-galactic-compass-ai-tutor.html": "2026-08-26",
+    "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/": "2026-08-26",
+    "notes/articles/morrell-extensible-software-llms.html": "2026-08-26",
+    "https://www.youtube.com/watch?v=zpS6JGJNaGg": "2026-08-26",
+    "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -987,6 +1004,27 @@
       "summary": {
         "ru": "Mistral и саудовская HUMAIN объявляют стратегическое партнёрство по AI-инфраструктуре и локализованным frontier-моделям (кибербезопасность, голос, арабский язык)",
         "en": "Mistral and Saudi HUMAIN announce a strategic partnership on AI infrastructure and localized frontier models (cybersecurity, voice, Arabic language)"
+      }
+    },
+    "anthropic-claude-memory-unification": {
+      "last_date": "2026-08-26",
+      "summary": {
+        "ru": "Anthropic объединяет память Claude между чатом и Cowork (25 августа): контекст переносится между режимами, обновляется в реальном времени, чувствительные темы по умолчанию не сохраняются",
+        "en": "Anthropic unifies Claude's memory across chat and Cowork (August 25): context carries between modes, updates live, sensitive topics are not stored by default"
+      }
+    },
+    "anthropic-claude-platform-agent-stack-ga": {
+      "last_date": "2026-08-26",
+      "summary": {
+        "ru": "Computer use, browser use, Skills API и Files API выходят в GA на Claude Platform — батчинг действий даёт 20-40% меньше раундтрипов на задачу",
+        "en": "Computer use, browser use, the Skills API, and the Files API reach GA on the Claude Platform — batched actions cut round trips per task by 20-40%"
+      }
+    },
+    "google-ask-gemini-in-chat": {
+      "last_date": "2026-08-26",
+      "summary": {
+        "ru": "Google заменяет боковую панель Gemini в Google Chat на Ask Gemini in Chat — единую командную строку с поиском по Workspace, генерацией и планированием",
+        "en": "Google replaces the Gemini side panel in Google Chat with Ask Gemini in Chat, a unified command line with Workspace search, generation, and scheduling"
       }
     }
   }

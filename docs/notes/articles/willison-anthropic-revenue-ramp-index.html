@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: выручка Anthropic и индекс Ramp — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (по материалам FT и Ramp) · 2026-08-23</span>
+      <span data-lang="en">Article digest · Simon Willison (on FT and Ramp data) · 2026-08-23</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Что индекс расходов Ramp говорит о реальном, а не заявленном спросе на модели Anthropic</span>
+      <span data-lang="en">What the Ramp spend index says about real — not announced — demand for Anthropic's models</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/" target="_blank" rel="noopener">
+        <span data-lang="ru">Заметка Willison ↗</span><span data-lang="en">Willison's note ↗</span>
+      </a>
+      ·
+      <a href="https://simonwillison.net/2026/May/29/anthropic/" target="_blank" rel="noopener">
+        <span data-lang="ru">его же более ранние цифры по Anthropic ↗</span><span data-lang="en">his earlier Anthropic numbers ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Отталкиваясь от статьи Financial Times со ссылкой на «людей, знакомых с ситуацией», Саймон Уиллисон приводит несколько цифр по выручке Anthropic и OpenAI за июль 2026 года: у Anthropic «годовая выручка» выросла до $65 млрд (с $47 млрд в мае), компания рассчитывает на прибыльный третий квартал по той же модели, что использовалась для объявления о прибыльности второго, и у неё уже 6000 клиентов, тратящих от $100 000 в год. У OpenAI, по тем же данным, годовая выручка выросла на 35% за квартал и превысила $40 млрд — после «встряски» от запуска GPT-5.6 в июле, компенсировавшей вялое начало года.</span>
+      <span data-lang="en">Working from a Financial Times piece citing "people with knowledge of the matter," Simon Willison lays out a few July 2026 revenue numbers for Anthropic and OpenAI: Anthropic's "annualized revenue" is up to $65bn (from $47bn in May), the company expects a profitable Q3 using the same accounting it used to call Q2 profitable, and it already has 6,000 customers spending $100,000+ a year. OpenAI, per the same reporting, saw annualized revenue jump 35% quarter-to-date to over $40bn — after the launch of GPT-5.6 in July "jolted" a sluggish start to the year.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: смотреть не на пресс-релизы, а на биллинг реальных компаний</span><span data-lang="en">The method: look at real company billing, not press releases</span></h2>
+    <p>
+      <span data-lang="ru">Главная ценность заметки не в самих цифрах выручки (их источник — анонимные утечки в FT, а не собственная отчётность компаний), а в инструменте, который Willison через эту статью для себя открыл: индекс Ramp AI, построенный на данных биллинга 70 000 компаний, использующих корпоративные карты Ramp. В отличие от заявлений вендоров о собственной популярности, это прокси реального спроса — какие модели компании реально оплачивают через API, а не то, какие модели вендор считает флагманскими.</span>
+      <span data-lang="en">The real value of the note isn't the revenue figures themselves (sourced from anonymous FT leaks, not company-reported numbers) — it's the tool Willison discovered along the way: the Ramp AI Index, built from billing data across 70,000 companies using Ramp corporate cards. Unlike vendor claims about their own popularity, this is a proxy for actual demand — which models companies are actually paying for through the API, not which model a vendor calls its flagship.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что видно в разбивке по моделям Anthropic за июль</span><span data-lang="en">What the July breakdown of Anthropic models shows</span></h2>
+    <p>
+      <span data-lang="ru">Приведённая в заметке разбивка расходов на модели Anthropic за июль 2026 года выглядит так: Opus 4.8 — 28,0%, Sonnet 4.6 — 8,3%, Fable 5 — 8,0%, Opus 4.6 — 6,9%, Sonnet 5 — 3,6%, Opus 5 — 3,5%, далее более старые версии Opus и Sonnet с долями от 0,7% до 1,7%. Willison отмечает, что это разумно согласуется с тем, что Opus 5 вышел только 24 июля (у него просто не было времени набрать долю), и подтверждает тезис, обсуждавшийся в дайджесте ранее: высокая цена Fable 5 сделала её менее популярной моделью по факту оплаты, чем можно было бы предположить по резонансу вокруг неё — более старая и заведомо более дешёвая Opus 4.8 остаётся лидером по реальным тратам компаний почти в четыре раза с большим отрывом.</span>
+      <span data-lang="en">The Anthropic model spend breakdown for July 2026 quoted in the note: Opus 4.8 — 28.0%, Sonnet 4.6 — 8.3%, Fable 5 — 8.0%, Opus 4.6 — 6.9%, Sonnet 5 — 3.6%, Opus 5 — 3.5%, with older Opus/Sonnet versions trailing at 0.7%–1.7%. Willison notes this lines up sensibly with Opus 5 having launched only on July 24th (it simply hasn't had time to gain share), and it backs up a point this digest has covered before: Fable 5's high price has made it a less popular model by actual spend than its buzz would suggest — the older, deliberately cheaper Opus 4.8 remains the clear leader in real company spend, by a wide margin.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

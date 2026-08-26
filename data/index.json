@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-26",
+      "news_count": 3,
+      "expert_count": 5,
+      "top_title": {
+        "ru": "Computer use, browser use, Skills API и Files API выходят в GA на Claude Platform",
+        "en": "Computer use, browser use, the Skills API, and the Files API reach GA on the Claude Platform"
+      }
+    },
+    {
       "date": "2026-08-25",
       "news_count": 1,
       "expert_count": 0,

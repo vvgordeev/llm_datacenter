@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Extensible Software in the age of LLMs» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Jeremy Morrell · 2026-08-19</span>
+      <span data-lang="en">Article digest · Jeremy Morrell · 2026-08-19</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Расширяемый софт в эпоху LLM: ядро пишет разработчик, расширения — модель в песочнице</span>
+      <span data-lang="en">Extensible software in the age of LLMs: developers own the core, models write the extensions in a sandbox</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+      ·
+      <a href="https://news.ycombinator.com/item?id=49363668" target="_blank" rel="noopener">
+        <span data-lang="ru">обсуждение на Hacker News ↗</span><span data-lang="en">Hacker News discussion ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Джереми Моррелл (Cloudflare) формулирует гипотезу: у веб-разработки появилась новая возможность — «расширяемый софт» (extensible software) в духе старых плагинных систем Emacs или WordPress, но заново ставшая практичной благодаря LLM. Раньше писать систему расширений для приложения было дорого: нужно было продумывать публичный API, документировать его, а затем доверять стороннему коду, выполняющемуся внутри вашего приложения. По мысли автора, LLM резко снижают именно первую часть стоимости — написание самих расширений, — а современные примитивы песочниц снижают вторую — риск деплоя чужого, недоверенного кода.</span>
+      <span data-lang="en">Jeremy Morrell (Cloudflare) lays out a hypothesis: web development has a new opening for "extensible software" — in the spirit of old plugin systems like Emacs or WordPress, made practical again by LLMs. Building an extension system for an app used to be expensive: you had to design a public API, document it, and then trust third-party code running inside your application. Morrell's point is that LLMs sharply cut the first cost — writing the extensions themselves — while modern sandbox primitives cut the second — the risk of deploying someone else's, untrusted code.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: прочное ядро плюс LLM, дописывающая недостающие куски</span><span data-lang="en">The method: a solid core, plus an LLM filling in the missing pieces</span></h2>
+    <p>
+      <span data-lang="ru">Предлагаемая архитектура: приложение строится как «прочное, подотчётное ядро» с чётко очерченными границами — то, за что отвечает разработчик и что проходит обычный процесс тестирования и код-ревью, — а вокруг этого ядра пользователям разрешается безопасно расширять поведение во множестве направлений, поручая LLM дописывать недостающие куски логики под конкретную нужду конкретного пользователя. Ключевое отличие от классического плагина: расширение не устанавливается заранее автором приложения, а порождается по запросу — пользователь формулирует, чего ему не хватает, модель пишет код расширения, а песочница гарантирует, что этот код не может выйти за пределы предоставленных ему прав, даже если он ошибочен или недобросовестен.</span>
+      <span data-lang="en">The proposed architecture: build the application as a "solid, accountable core" with clearly drawn boundaries — the part the developer owns and that goes through normal testing and code review — and around that core, let users safely extend behavior in many directions by having an LLM fill in the missing bits of logic for their specific need. The key difference from a classic plugin: the extension isn't pre-installed by the app's author, it's generated on demand — the user states what's missing, the model writes the extension code, and the sandbox guarantees that code can't exceed the permissions it was granted, even if it's buggy or malicious.</span>
+    </p>
+
+    <h2><span data-lang="ru">Где физически исполняется расширение — и какие есть варианты</span><span data-lang="en">Where the extension actually runs — and what the options are</span></h2>
+    <p>
+      <span data-lang="ru">Автор рассматривает несколько вариантов реализации песочницы и отдельно выделяет Dynamic Workers Cloudflare (его собственное место работы, что он не скрывает) как особенно удачный вариант под эту задачу: они позволяют компилировать и запускать сгенерированный моделью код по запросу, изолированно, с собственным бюджетом ресурсов и правами доступа — то есть именно ту инфраструктуру, которая нужна для «расширения по требованию» без риска для остального приложения. Он также описывает альтернативы для тех, кто не на Cloudflare, но именно Dynamic Workers, по его словам, ближе всего к тому, что требуется концепции: быстрый холодный старт и жёсткая изоляция одновременно.</span>
+      <span data-lang="en">Morrell walks through several sandboxing options and singles out Cloudflare's Dynamic Workers (his own employer, which he doesn't hide) as a particularly good fit: they let model-generated code be compiled and run on demand, in isolation, with its own resource budget and access rights — exactly the infrastructure "extension on demand" needs without putting the rest of the app at risk. He also covers alternatives for people not on Cloudflare, but says Dynamic Workers come closest to what the concept actually needs: fast cold starts combined with hard isolation.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение, которое обсуждают на Hacker News</span><span data-lang="en">The limitation Hacker News is arguing about</span></h2>
+    <p>
+      <span data-lang="ru">В обсуждении на Hacker News комментаторы указывают на то, что сама статья формулирует как открытый вопрос, а не решённую проблему: песочница защищает от того, что чужой код «вырвется» за пределы прав, но не защищает от того, что сгенерированное моделью расширение сделает что-то нежелательное в рамках ЭТИХ прав — например, тихо испортит данные пользователя или предоставит вводящий в заблуждение результат. Иными словами, подход снимает проблему безопасности деплоя, но не снимает проблему доверия к качеству и корректности самого сгенерированного кода — она просто переносится на уровень отдельного расширения, а не всего приложения.</span>
+      <span data-lang="en">In the Hacker News discussion, commenters point at something the article itself frames as an open question rather than a solved one: the sandbox protects against foreign code escaping its granted permissions, but not against a model-generated extension doing something unwanted within those permissions — quietly corrupting a user's data, say, or producing a misleading result. In other words, the approach removes the deployment-security problem but not the trust-in-correctness problem for the generated code itself — it just moves that problem down to the level of a single extension instead of the whole application.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

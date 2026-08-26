@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Fable & The End of the Free Lunch» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Drew Breunig · 2026-08-23</span>
+      <span data-lang="en">Article digest · Drew Breunig · 2026-08-23</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Fable и конец бесплатного обеда: почему теперь важно, какую задачу какой модели отдавать</span>
+      <span data-lang="en">Fable and the end of the free lunch: why it now matters which model gets which task</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+      ·
+      <a href="https://news.ycombinator.com/item?id=49411468" target="_blank" rel="noopener">
+        <span data-lang="ru">обсуждение на Hacker News ↗</span><span data-lang="en">Hacker News discussion ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Дрю Бройниг выстраивает аналогию с классическим «бесплатным обедом» Херба Саттера из мира процессоров: пока частоты CPU росли сами по себе, не имело смысла жёстко оптимизировать код — через полтора года выйдет чип вдвое быстрее и сам скроет большинство проблем производительности. По мнению автора, ровно так же вело себя развитие LLM последние пару лет: новая модель выходила по той же цене или дешевле и просто «заклеивала» большинство недостатков харнесса и контекстных стратегий, так что вкладываться в их доводку казалось потерей времени.</span>
+      <span data-lang="en">Drew Breunig draws a direct line to Herb Sutter's classic "free lunch" from the CPU world: while clock speeds kept climbing on their own, it made little sense to ruthlessly optimize code — an 18-months-later chip would arrive twice as fast and paper over most performance problems anyway. Breunig argues LLM progress worked the same way for the last couple of years: a new model would show up at the same price or cheaper and simply cover up most flaws in your coding harness and context strategy, so investing in tuning them felt like wasted effort.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что изменилось с приходом Fable</span><span data-lang="en">What changed when Fable arrived</span></h2>
+    <p>
+      <span data-lang="ru">Fable, по описанию автора, оказалась «невероятной» моделью — и остаётся такой, — но её цена оказалась настолько высокой, что для большей части повседневного кода вполне хватало более дешёвых моделей: Opus, GPT-5.6, Kimi K3, даже GLM. Именно это, а не сам факт выхода мощной новой модели, и стало переломом: впервые за долгое время новая топ-модель НЕ обесценила экономику более дешёвых альтернатив, а разделила рынок на два слоя по цене и качеству. С этого момента, пишет Бройниг, «мы начали задумываться, какая работа куда идёт» — то есть какую часть работы поручать дорогой мощной модели, а какую отдавать дешёвой.</span>
+      <span data-lang="en">Fable, in Breunig's telling, turned out to be an "incredible" model — and still is — but its price was so high that cheaper models (Opus, GPT-5.6, Kimi K3, even GLM) remained good enough for most day-to-day code. That, rather than the mere existence of a powerful new model, is the actual break: for the first time in a while, a new top model did not simply devalue cheaper alternatives — it split the market into a price/quality ladder instead. From that point on, Breunig writes, "we started to think about what work went where" — which slice of work goes to the expensive, powerful model, and which gets handed to a cheap one.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: сначала думать дорогой моделью, затем исполнять дешёвой</span><span data-lang="en">The method: think with the expensive model, execute with the cheap one</span></h2>
+    <p>
+      <span data-lang="ru">Практический приём, который автор описывает на собственном опыте: сначала он подолгу «допрашивает» Fable, чтобы совместно проработать архитектуру решения — здесь ценится именно качество рассуждения дорогой модели, — а затем оформляет результат в чёткое техническое задание и передаёт его на исполнение более дешёвой модели, например GLM. Иными словами, дорогая модель отвечает за «дизайн» задачи, а дешёвая — за её механическое воплощение в код; экономия достигается не за счёт отказа от топ-модели, а за счёт того, что она тратится только там, где действительно нужна глубина рассуждения. Это и есть смысл заголовка: раз «бесплатный обед» кончился, разработчику приходится вручную заниматься тем, что раньше решала сама смена поколений моделей — распределением задач по уровню интеллекта, нужному именно этой задаче.</span>
+      <span data-lang="en">The concrete technique Breunig describes from his own workflow: he spends a long time "interrogating" Fable to work through a design together — that's where the expensive model's reasoning quality earns its keep — then turns the outcome into a precise brief and hands it off for execution to a cheaper model, such as GLM. In other words, the expensive model owns the "design" of a task, and the cheap model owns its mechanical implementation into code; the savings come not from dropping the top model but from spending it only where reasoning depth actually pays off. That's the point of the title: now that the free lunch is over, developers have to manually do what model-generation churn used to do for them — routing each task to the level of intelligence it actually needs.</span>
+    </p>
+
+    <h2><span data-lang="ru">Оговорка: «долг промпта» при переключении между моделями</span><span data-lang="en">The caveat: "prompt debt" when switching models</span></h2>
+    <p>
+      <span data-lang="ru">В сопутствующем посте в X Бройниг отмечает и обратную сторону такой маршрутизации: харнессы, скиллы и системные промпты, годами дописывавшиеся под особенности мышления одной конкретной модели (её склонность к определённым ошибкам, стиль рассуждения), плохо переносятся на другую модель без потери качества — он называет это «долгом промпта» (prompt debt). Раз теперь приходится осознанно комбинировать несколько моделей в одном проекте, встаёт вопрос версионирования и управления скиллами сразу под несколько разных «типов мышления», а не под одну модель — задача, для которой, по мнению автора, пока нет готовой практики.</span>
+      <span data-lang="en">In a companion post on X, Breunig also flags the downside of this kind of routing: harnesses, skills, and system prompts that get patched over months to fit one specific model's quirks (its typical failure modes, its reasoning style) don't transfer cleanly to a different model — he calls this "prompt debt." Now that combining several models in one project is a deliberate choice, versioning and managing skills across multiple distinct "thinking styles" — rather than for a single model — becomes its own open problem, one he says the field doesn't yet have settled practice for.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

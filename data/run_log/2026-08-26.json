@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T05:28:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED www.anthropic.com; found via WebSearch instead"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 2, "note": "Claude memory unification (Aug 25), Claude Platform GA computer/browser use + Skills/Files API (Aug 20, first seen today)"},
+    {"source": "openai blog/news (WebSearch)", "status": "empty", "candidates": 0, "note": "only model retirements (o3, DALL-E GPT) and Codex 5h-limit restoration, not new features; GPT-5.3-Codex candidate turned out to be Feb 2026, discarded"},
+    {"source": "google blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED workspaceupdates.googleblog.com; found via WebSearch"},
+    {"source": "google (WebSearch)", "status": "ok", "candidates": 1, "note": "Ask Gemini in Chat, replacing Gemini side panel in Google Chat, Aug 26"},
+    {"source": "meta ai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "most recent Muse items (Glimmer, Code) already published in prior digests, nothing new for the window"},
+    {"source": "xai news (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok Build GA-to-everyone (Aug 19) and Bedrock/Enterprise Agent Platform distribution too old / not a new capability"},
+    {"source": "mistral news (WebSearch)", "status": "empty", "candidates": 0, "note": "only mistral-x-humain, already published in 2026-08-25 digest"},
+    {"source": "deepseek news (WebSearch)", "status": "empty", "candidates": 0, "note": "V4-Pro GA and pricing already covered in prior digests"},
+    {"source": "qwen", "status": "skipped", "candidates": 0, "note": "enabled: false in sources.yaml"},
+    {"source": "hacker news API", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED hn.algolia.com; used WebSearch site: queries instead, low yield for exact today's-date threads"},
+    {"source": "AI News (smol.ai) aggregator", "status": "ok", "candidates": 0, "note": "WebSearch summary returned Aug 25 items (Nvidia Groq 3, physics-AI startup, developer-fatigue surveys) — not in-scope for LLM product news"},
+    {"source": "TLDR AI aggregator", "status": "empty", "candidates": 0, "note": "WebSearch could not surface the specific Aug 26 edition content"},
+    {"source": "Simon Willison linkblog (git backup)", "status": "ok", "candidates": 3, "note": "cloned simonwillisonblog-backup; used as discovery + expert-content source (Breunig, Webb, Morrell quotes; Ramp AI Index note)"},
+    {"source": "reddit r/LocalLLaMA / r/ClaudeAI (WebSearch)", "status": "empty", "candidates": 0, "note": "no thread-level results dated 2026-08-26 surfaced by search"},
+    {"source": "experts: Ethan Mollick / Latent Space (WebFetch+WebSearch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED oneusefulthing.org and latent.space; no fresh (since Aug 18) full posts found via WebSearch either"},
+    {"source": "experts: Andrej Karpathy videos", "status": "error", "candidates": 0, "note": "candidate long-form Stanford lecture (2 URLs found via search) exceeded Gemini's 1M-token video limit twice; a third search result (HSshsQCEPC0) turned out to be a third-party reaction video, not Karpathy's own channel — discarded to avoid misattribution"},
+    {"source": "experts: AI Explained / Matt Wolfe / Matt Pocock videos", "status": "empty", "candidates": 0, "note": "search results did not reliably confirm exact recent video URL/date/channel match; skipped rather than guess"},
+    {"source": "experts: Nate Herk video", "status": "ok", "candidates": 1, "note": "youtube.com/watch?v=zpS6JGJNaGg processed via Gemini API, ~1 week old, within 7-day expert window"}
+  ],
+  "totals": {"candidates": 8, "published_news": 3, "published_expert": 5, "rejected": {"слишком старое/уже опубликовано": 6, "не подтверждён источник/канал": 2, "не по теме (финансы без продукта)": 1}},
+  "video_pipeline": {"gemini": "ok (2/3 attempts succeeded; 1 Karpathy lecture exceeded 1M token video limit twice)", "frames": "skipped: yt-dlp gets 'Unable to connect to proxy... 403 Forbidden' on youtube.com in this run (egress proxy), consistent with prior runs' note that youtube.com access is unpredictable day to day"},
+  "notes": "5 of 19 tracked sources returned blocked/error (>1/4) — mainly direct WebFetch to vendor blogs, aggregator APIs (HN algolia), and several expert sites (oneusefulthing.org, latent.space, dbreunig.com, jeremymorrell.dev, interconnected.org, techcrunch.com, x.com, youtube.com) all gave EGRESS_BLOCKED on WebFetch; all content in this digest was recovered via WebSearch synthesis and the Simon Willison git-backup dataset. yt-dlp/YouTube direct access also blocked (403 at proxy), so no video frames were extracted this run despite yt-dlp/imageio-ffmpeg being installed."
+}
