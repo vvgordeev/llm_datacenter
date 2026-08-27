@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «конец программирования» Пола Дикса — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Пол Дикс (InfluxDB) · 2026-08-26</span>
+      <span data-lang="en">Article digest · Paul Dix (InfluxDB) · 2026-08-26</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Конец программирования»: почему верификация, а не ревью кода, становится настоящим фильтром качества</span>
+      <span data-lang="en">"The end of programming": why verification, not code review, becomes the real quality gate</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://pauldix.com/the-end-of-programming" target="_blank" rel="noopener">
+        <span data-lang="ru">Эссе Пола Дикса ↗</span><span data-lang="en">Paul Dix's essay ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Пол Дикс — основатель и технический директор InfluxData, автор InfluxDB — публикует эссе «The end of programming» с тезисом: писать код руками и отдавать его на ревью другим людям как способ получить надёжный софт уходит в прошлое. Поводом стал релиз Bun 1.4 — первой версии рантайма, бандлера и тест-раннера Bun, целиком переписанных с Zig на Rust.</span>
+      <span data-lang="en">Paul Dix — founder and CTO of InfluxData, creator of InfluxDB — publishes an essay titled "The end of programming" arguing that writing code by hand and handing it to other humans for review is on its way out as the method for producing reliable software. His trigger is the Bun 1.4 release — the first version where Bun's runtime, bundler, and test runner are all rewritten from Zig into Rust.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пример: как переписали Bun</span><span data-lang="en">The example: how Bun got rewritten</span></h2>
+    <p>
+      <span data-lang="ru">Создатель Bun Джарред Самнер (Jarred Sumner) использовал предрелизную версию Claude Fable 5: около 50 воркфлоу Claude Code, запущенных пачками параллельно в течение 11 дней, перелопатили 535 496 строк кода на Zig в 1448 файлах и слили в основную ветку 6755 коммитов. Результат — не просто «код компилируется»: 1517 новых тестов совместимости с Node.js стали проходить, размер бинарника снизился на 3–8 МБ, простаивающий процесс стал потреблять на порядок меньше CPU, HTTP-серверы — на 48% меньше памяти. У переписывания был чёткий «оракул» для сверки — старое Zig-поведение Bun как эталон правильности.</span>
+      <span data-lang="en">Bun's creator, Jarred Sumner, used a pre-release build of Claude Fable 5: roughly 50 Claude Code workflows, run a few at a time over 11 days, tore through 535,496 lines of Zig code across 1,448 files and merged 6,755 commits into main. The result wasn't just "it compiles": 1,517 new Node.js compatibility tests started passing, binary size dropped by 3–8 MB, idle CPU use fell sharply, and HTTP servers used 48% less memory. Crucially, the rewrite had a clean oracle to check against — Bun's existing Zig behavior as the reference for correctness.</span>
+    </p>
+
+    <h2><span data-lang="ru">Тезис Дикса: ревью смотрит на процесс, верификация — на результат</span><span data-lang="en">Dix's thesis: review inspects the process, verification inspects the outcome</span></h2>
+    <p>
+      <span data-lang="ru">Дикс формулирует главный вывод так: «То, что ИИ написал 1 млн строк кода, а затем на протяжении следующих нескольких месяцев дорабатывал их до надёжного софта, который сейчас работает на миллионах машин разработчиков — это абсолютно поразительно. И можно сказать: „ну это не так уж впечатляюще, ведь у них был оракул для сверки, так что перейти с одного языка на другой было просто“ — но я думаю, это сильно занижает масштаб происходящего. Если вы можете построить систему верификации и дать чёткое направление, ИИ способен создать очень сложный, очень изощрённый софт и продолжать дорабатывать его, пока тот просто не заработает».</span>
+      <span data-lang="en">Dix's core line: "The fact that AI wrote 1M LOC and then refined it over the course of the next couple of months to produce a reliable piece of software that is currently running on millions of developer machines is absolutely mind blowing. And you can say, 'well it's not that impressive because they had an oracle to compare against, so it was simple to go from one language to another', but I think that's selling this entire thing short. If you can build a verification system and give proper direction, AI can produce a highly complex, highly sophisticated piece of software and it can continue to refine it until it just works."</span>
+    </p>
+    <p>
+      <span data-lang="ru">Метод, который он описывает, требует не меньше инженерной дисциплины, чем прежний подход, — просто дисциплина смещается: вместо того чтобы читать и одобрять каждый diff построчно, человек (а) строит систему верификации — тесты, эталонное поведение, бенчмарки, метрики регрессий, и (б) даёт агенту чёткую, проверяемую цель, а затем оценивает не сам код, а то, проходит ли получившийся результат все проверки и ведёт ли себя как надо в реальном использовании. Ревью человека переносится с процесса написания на итоговый продукт.</span>
+      <span data-lang="en">The method he describes demands no less engineering discipline than the old approach — the discipline just shifts: instead of reading and approving every diff line by line, a human (a) builds a verification system — tests, reference behavior, benchmarks, regression metrics — and (b) gives the agent a clear, checkable goal, then judges not the code itself but whether the resulting output passes every check and behaves correctly in real use. Human review moves from the writing process to the finished product.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение, которое эссе не прячет</span><span data-lang="en">The limitation the essay doesn't hide</span></h2>
+    <p>
+      <span data-lang="ru">Дикс сам проговаривает главное возражение: пример с Bun настолько убедителен именно потому, что у переписывания был готовый оракул — старая версия на Zig, с которой можно было построчно сверять поведение. Для задач без такого эталона (новая фича, а не перенос существующей логики на другой язык) построить систему верификации сопоставимого качества намного сложнее — и именно там метод «доверяй верификации, а не ревью» проверяется на прочность.</span>
+      <span data-lang="en">Dix voices the main objection himself: the Bun example is compelling precisely because the rewrite had a ready-made oracle — the old Zig version, whose behavior the new code could be checked against line by line. For tasks without that kind of reference (a genuinely new feature, not porting existing logic to another language), building a verification system of comparable quality is much harder — and that's exactly where "trust verification, not review" gets tested.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

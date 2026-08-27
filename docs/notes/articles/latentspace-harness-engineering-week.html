@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: харнесс как новая поверхность оптимизации — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · AINews (Latent Space / smol.ai) · 2026-08-24</span>
+      <span data-lang="en">Article digest · AINews (Latent Space / smol.ai) · 2026-08-24</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Харнесс как новая поверхность оптимизации: почему качество агента всё меньше зависит от модели</span>
+      <span data-lang="en">The harness as the new optimization surface: why agent quality depends less and less on the model</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://news.smol.ai/issues/26-08-24-not-much" target="_blank" rel="noopener">
+        <span data-lang="ru">Выпуск AINews за 22–24 августа ↗</span><span data-lang="en">AINews issue for Aug 22–24 ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Дайджест AINews (проект smol.ai, теперь выходящий под крылом Latent Space) за 22–24 августа фиксирует сквозную тему нескольких независимых релизов недели: дизайн «харнеса» — обвязки вокруг модели (память, инструменты, циклы самопроверки, права доступа) — становится главной поверхностью, на которой сегодня оптимизируют качество агента, а не сама базовая модель. Иначе говоря, разница между посредственным и отличным агентным продуктом на одной и той же модели всё чаще объясняется именно инженерией харнеса.</span>
+      <span data-lang="en">The AINews digest (the smol.ai project, now published under Latent Space) for August 22–24 identifies a throughline across several independent releases that week: the design of the "harness" — the scaffolding around a model (memory, tools, self-check loops, permissions) — is becoming the main surface on which agent quality gets optimized today, not the base model itself. Put differently, the gap between a mediocre and an excellent agentic product built on the same underlying model increasingly comes down to harness engineering.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод оценки: «Skill Lift» вместо структурных проверок навыка</span><span data-lang="en">The evaluation method: "Skill Lift" instead of structural skill checks</span></h2>
+    <p>
+      <span data-lang="ru">Один из примеров — новая методика оценки от NVIDIA. Её тезис: структурные проверки агентных «навыков» (skills) — насколько аккуратно оформлен файл-инструкция, есть ли в нём нужные секции — почти не предсказывают, насколько навык реально полезен на практике. Вместо этого предлагается метрика Skill Lift: прогнать одну и ту же задачу дважды, с навыком и без него, при прочих равных условиях, и измерить разницу в доле реально выполненной работы. Метод простой и воспроизводимый, но требует парных прогонов на каждую задачу — то есть удваивает стоимость оценки по сравнению с проверкой одного лишь файла навыка.</span>
+      <span data-lang="en">One example is a new evaluation method from NVIDIA. Its claim: structural checks on agent "skills" — how well-formed the instruction file is, whether it has the right sections — barely predict how useful a skill actually is in practice. Instead it proposes Skill Lift: run the same task twice, with and without the skill, under otherwise identical conditions, and measure the delta in completed work. The method is simple and reproducible, but it requires paired runs per task — doubling evaluation cost compared to just inspecting the skill file.</span>
+    </p>
+
+    <h2><span data-lang="ru">Постоянно работающие агенты: Headlong и exo</span><span data-lang="en">Always-on agents: Headlong and exo</span></h2>
+    <p>
+      <span data-lang="ru">Второй пример — открытые реализации «постоянных» агентов, которые думают непрерывно, а не только в ответ на запрос. Headlong (@andykonwinski) — «микрохарнес» с самоуправляемым внутренним циклом: траектории работы хранятся как DAG из jsonl-файлов, что даёт откат к любому предыдущему шагу; по заявлению автора, система смогла самостоятельно продиагностировать и починить собственную ошибку за 48 минут без вмешательства человека. exo (@omarsar0) — харнес для рекурсивного самоулучшения с append-only логом событий, заменяемым исполнителем и песочницей с возможностью снимка состояния и отката, спроектированный так, чтобы агент мог переписывать собственные промпты, инструменты и память.</span>
+      <span data-lang="en">A second example is open-source implementations of "persistent" agents that think continuously rather than only on request. Headlong (@andykonwinski) is a "microharness" with a self-directed inner loop: work trajectories are stored as a DAG of jsonl files, giving rollback to any prior step; per the author, the system managed an unattended self-diagnosis-and-repair of its own bug in 48 minutes with no human involved. exo (@omarsar0) is a harness for recursive self-improvement with an append-only event log, a swappable executor, and a snapshot/rollback-capable sandbox, explicitly designed so the agent can rewrite its own prompts, tools, and memory.</span>
+    </p>
+
+    <h2><span data-lang="ru">Где здесь предел: ранжирование харнесов и что не проговаривается</span><span data-lang="en">The limit here: harness rankings, and what goes unsaid</span></h2>
+    <p>
+      <span data-lang="ru">В том же выпуске упоминается августовское ранжирование харнесов от CellCog: Claude Code — первое место по глубине хуков, субагентов и динамических воркфлоу для долгих автономных сессий кода, Codex CLI — для облачной автономности в духе pull request, Cursor — для агентных воркфлоу прямо в редакторе, далее Gemini CLI и GitHub Copilot. Ограничение, которое дайджест не подчёркивает явно: заявления о самостоятельном ремонте (Headlong) и рекурсивном самоулучшении (exo) пока держатся на демонстрациях и утверждениях авторов, а не на независимых воспроизведённых бенчмарках, — то есть это направление стоит читать как многообещающее раннее исследование, а не как готовый к продакшену результат.</span>
+      <span data-lang="en">The same issue mentions CellCog's August harness rankings: Claude Code first for depth of hooks, subagents, and dynamic workflows for long autonomous coding sessions, Codex CLI for cloud-based, pull-request-shaped autonomy, Cursor for in-editor agentic workflows, with Gemini CLI and GitHub Copilot rounding out the list. A limitation the digest doesn't spell out: the self-repair (Headlong) and recursive self-improvement (exo) claims currently rest on demos and author statements rather than independently reproduced benchmarks — this is best read as promising early-stage work, not a production-ready result.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

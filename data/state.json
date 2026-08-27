@@ -363,7 +363,13 @@
     "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/": "2026-08-26",
     "notes/articles/morrell-extensible-software-llms.html": "2026-08-26",
     "https://www.youtube.com/watch?v=zpS6JGJNaGg": "2026-08-26",
-    "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26"
+    "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
+    "https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted": "2026-08-27",
+    "https://x.com/bot/status/2092664183334846840": "2026-08-27",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.247": "2026-08-27",
+    "notes/articles/pauldix-end-of-programming.html": "2026-08-27",
+    "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",
+    "notes/articles/latentspace-harness-engineering-week.html": "2026-08-27"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -813,10 +819,10 @@
       }
     },
     "xai-grok-bot": {
-      "last_date": "2026-08-22",
+      "last_date": "2026-08-27",
       "summary": {
-        "ru": "Grok Bot: бета для SuperGrok Heavy/Cursor Ultra (11 авг) → расширение на SuperGrok Plus/Cursor Pro+/Teams + бесплатная пробная версия для всех (21 авг)",
-        "en": "Grok Bot: beta for SuperGrok Heavy/Cursor Ultra (Aug 11) -> expanded to SuperGrok Plus/Cursor Pro+/Teams + a free trial for everyone (Aug 21)"
+        "ru": "Grok Bot поэтапно расширяется с SuperGrok Heavy/Cursor Ultra (11 авг) на все планы SuperGrok и Cursor Pro (26 авг)",
+        "en": "Grok Bot access has stepped down from SuperGrok Heavy/Cursor Ultra (Aug 11) to all SuperGrok and Cursor Pro plans (Aug 26)"
       }
     },
     "mistral-regional-inference-sovereignty": {
@@ -1025,6 +1031,20 @@
       "summary": {
         "ru": "Google заменяет боковую панель Gemini в Google Chat на Ask Gemini in Chat — единую командную строку с поиском по Workspace, генерацией и планированием",
         "en": "Google replaces the Gemini side panel in Google Chat with Ask Gemini in Chat, a unified command line with Workspace search, generation, and scheduling"
+      }
+    },
+    "anthropic-claude-tag-full-context": {
+      "last_date": "2026-08-27",
+      "summary": {
+        "ru": "Anthropic убрала классификатор отдельных сообщений в Claude Tag: агент читает весь контекст Slack-канала и сам решает, когда включаться",
+        "en": "Anthropic removed the per-message classifier in Claude Tag: the agent reads full Slack channel context and decides on its own when to jump in"
+      }
+    },
+    "anthropic-claude-code-self-feedback": {
+      "last_date": "2026-08-27",
+      "summary": {
+        "ru": "Claude Code v2.1.247 добавил инструмент SendFeedback — модель сама черновит багрепорты о себе",
+        "en": "Claude Code v2.1.247 added a SendFeedback tool — the model drafts its own bug reports about itself"
       }
     }
   }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: пять уровней Карпати — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Andrej Karpathy · Stanford, ≈2026-08-24</span>
+      <span data-lang="en">Video digest · Andrej Karpathy · Stanford, ≈2026-08-24</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Удали всё, оставь граф»: пять уровней инженерии ИИ-систем от Андрея Карпати</span>
+      <span data-lang="en">"Delete everything, keep Graph": Andrej Karpathy's five levels of AI-system engineering</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=XdbpCM4yGyE" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Полноразмерная часовая лекция превышает лимит в 1 048 576 токенов на один вызов Gemini API (это отдельное ограничение, не связанное с сетевой блокировкой youtube.com), поэтому конспект построен по developer-пересказам лекции (включая тред очевидца в X с цитатами и структурой) — точных таймкодов и кадров у этого конспекта нет.</span>
+      <span data-lang="en">The full one-hour lecture exceeds the 1,048,576-token limit for a single Gemini API call (a separate limit, unrelated to the youtube.com network block), so this digest is built from developer write-ups of the talk (including an eyewitness X thread with quotes and structure) — this digest has no verified timestamps or frames.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">В часовой лекции для Стэнфорда (Карпати сейчас работает в команде претрейнинга Anthropic) он предлагает разбирать инженерию систем на базе LLM на пять уровней зрелости — от «просто вызвать модель» до «организовать граф взаимодействующих агентов», — причём каждый следующий уровень не отменяет предыдущий, а достраивается поверх него.</span>
+      <span data-lang="en">In a one-hour lecture for Stanford (Karpathy currently works on Anthropic's pretraining team), he lays out LLM-system engineering as five levels of maturity — from "just call the model" to "orchestrate a graph of interacting agents" — where each level builds on top of the previous one rather than replacing it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пять уровней метода</span><span data-lang="en">The five levels of the method</span></h2>
+    <p>
+      <span data-lang="ru">Первый уровень (по его условной оценке — «10% пути»), LLM: относиться к модели как к «компьютеру общего назначения», который можно перепрограммировать прямо во время выполнения — без обучения, одним лишь текстом на входе. Второй уровень («30%»), Prompt: этому компьютеру нужна программа, написанная на естественном языке, — промпт-инжиниринг как настоящее программирование, просто на другом языке исполнения. Третий уровень («50%»), Agent: вокруг модели выстраивается цель, контекст, память и набор инструментов, которые превращают предсказание следующего токена в действие в реальном мире. Четвёртый уровень («70%»), Loop: внутренний цикл, где модель учится на контексте по ходу диалога, явно отделяется от внешнего цикла, где веса меняются через обучение, — то есть «обучение на лету» через контекст и настоящее дообучение — разные механизмы, которые не стоит путать. Пятый уровень («100%»), Graph: коммуникация организуется как передача сообщений, зависящая от данных, по направленному графу — то есть не жёстко прописанный сценарий «кто кому что говорит», а структура, которая сама определяет маршрут информации между агентами в зависимости от того, что они друг другу передают.</span>
+      <span data-lang="en">Level one (his rough estimate: "10% of the way"), LLM: treat the model as a "general-purpose computer" that can be reprogrammed at runtime — no training required, just text in. Level two ("30%"), Prompt: that computer needs a program written in natural language — prompt engineering as genuine programming, just in a different execution language. Level three ("50%"), Agent: a goal, context, memory, and a set of tools get built around the model, turning next-token prediction into action in the real world. Level four ("70%"), Loop: the inner loop, where the model learns from context as a conversation unfolds, gets explicitly separated from the outer loop, where weights change through training — "learning on the fly" via context and actual fine-tuning are different mechanisms that shouldn't be conflated. Level five ("100%"), Graph: communication gets organized as data-dependent message passing over a directed graph — not a hardcoded script of "who says what to whom," but a structure that determines the route of information between agents based on what they actually pass to each other.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем нужен именно граф, а не жёсткий сценарий</span><span data-lang="en">Why a graph, not a hardcoded script</span></h2>
+    <p>
+      <span data-lang="ru">Название лекции — «удали всё, оставь граф» — фиксирует главный практический вывод: по мере роста системы большая часть специфичного кода на нижних уровнях (кастомные промпт-шаблоны, ручная склейка агентов) становится лишней и заменяемой, но структура графа сообщений — то, что определяет, кто с кем обменивается данными и в каком порядке, — остаётся тем каркасом, который нельзя удалить без потери работоспособности системы. Практический ориентир для тех, кто строит агентные системы: закладывать архитектуру не вокруг конкретного промпта или конкретной модели (они меняются каждые несколько месяцев), а вокруг графа зависимостей между шагами и агентами — тогда апгрейд модели или переписывание промпта не требует пересборки всей системы.</span>
+      <span data-lang="en">The lecture's title — "delete everything, keep Graph" — captures the main practical takeaway: as a system grows, most of the level-specific code at the lower levels (custom prompt templates, hand-wired agent glue) becomes disposable and replaceable, but the message-graph structure — what determines who exchanges data with whom, and in what order — is the one piece of scaffolding that can't be removed without breaking the system. The practical guidance for anyone building agentic systems: architect around the dependency graph between steps and agents, not around a specific prompt or a specific model (those change every few months) — that way a model upgrade or a prompt rewrite doesn't force a rebuild of the whole system.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ограничение этого конспекта стоит повторить прямо: без прогона через Gemini у нас нет ни точных цитат самого Карпати, ни таймкодов, ни кадров — изложение выше опирается на пересказы лекции разработчиками, следившими за трансляцией, и может неточно передавать формулировки и порядок аргументов оригинала.</span>
+      <span data-lang="en">Worth repeating this digest's limitation directly: without a Gemini pass, we have neither Karpathy's exact wording, nor timestamps, nor frames — the account above rests on developer write-ups of the talk and may not precisely capture the original's phrasing or argument order.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

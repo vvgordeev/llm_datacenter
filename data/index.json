@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-27",
+      "news_count": 3,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Claude Tag в Slack теперь читает весь контекст канала, а не отдельные сообщения",
+        "en": "Claude Tag in Slack now reads the whole channel context, not single messages"
+      }
+    },
+    {
       "date": "2026-08-26",
       "news_count": 3,
       "expert_count": 5,

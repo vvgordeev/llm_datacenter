@@ -1,0 +1,159 @@
+{
+  "date": "2026-08-27",
+  "generated_at": "2026-08-27T05:32:04Z",
+  "news": [
+    {
+      "id": "2026-08-27-claude-tag-full-context",
+      "cluster_id": "anthropic-claude-tag-full-context",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Tag в Slack теперь читает весь контекст канала, а не отдельные сообщения",
+        "en": "Claude Tag in Slack now reads the whole channel context, not single messages"
+      },
+      "summary": {
+        "ru": "Anthropic убрала лёгкий классификатор, который раньше оценивал каждое сообщение в Slack по отдельности и решал, отвечать ли Claude. Теперь Claude Tag читает полный контекст канала, свою память и постоянные инструкции и выбирает один из четырёх ходов: ответить в канале, начать более глубокую работу в отдельном треде, направить сообщение в существующий поток работы или промолчать. По заявлению Anthropic, это делает агента примерно на 30% точнее в решении, когда вмешиваться незвано, а когда — нет.",
+        "en": "Anthropic removed the lightweight classifier that used to judge each Slack message in isolation and decide whether Claude should respond. Claude Tag now reads the channel's full context, its memory, and standing instructions, then picks one of four moves: reply inline, start deeper work in a separate thread, route the message into an existing workstream, or say nothing. Per Anthropic's own claim, this makes the agent roughly 30% better at judging when to jump in unprompted — and when not to."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Меняет поведенческую модель ИИ-агента в командном чате — от «вызываемого по запросу инструмента» к «участнику, который сам решает, когда включиться»; применимо к любой команде на Slack, но сам подход (проактивный, а не только вызываемый агент) пока опробован в одном продукте",
+        "en": "Changes the agent's behavioral model inside team chat — from a \"summon-on-request tool\" to \"a participant that decides on its own when to jump in\"; applicable to any team on Slack, though the underlying approach (a proactive, not just summoned, agent) has so far only shipped in one product"
+      },
+      "source_url": "https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted",
+      "opinions": [
+        {
+          "author": "VentureBeat",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Материал подчёркивает, что различие носит поведенческий, а не архитектурный характер: агент, который участвует в разговоре, а не ждёт, пока его позовут, — и приводит пример Anthropic, как это работает на практике: два инженера гоняются за одним и тем же багом с разных концов, а Claude открывает тред, где расследование уже идёт.",
+            "en": "The piece frames the distinction as behavioral rather than architectural: an agent that participates in the conversation instead of waiting to be asked — and cites Anthropic's own example of it in practice: two engineers chasing the same bug from opposite ends, and Claude opens a thread with the investigation already running."
+          },
+          "url": "https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted"
+        },
+        {
+          "author": "Latent Space (AI News)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Материал фиксирует стоящую критику подхода Claude Tag в целом: превращение чат-инструментов совместной работы в шум от агентной оркестрации — и вопрос о философии Anthropic «один Claude везде», которая может запутывать пользователей, у которых нет естественного способа понять, как работать с одной и той же вездесущей сущностью в разных каналах.",
+            "en": "The piece records a standing critique of Claude Tag's broader approach: the risk of turning collaboration tools into agent-orchestration noise — plus the question over Anthropic's \"one Claude everywhere\" philosophy, which may confuse users who don't naturally know how to work with a single omnipresent entity across different channels."
+          },
+          "url": "https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Два инженера независимо расследуют один и тот же баг в разных ветках обсуждения; Claude замечает совпадение по контексту канала и сам открывает тред с уже начатым расследованием, вместо того чтобы ждать, пока кто-то из них его позовёт",
+            "en": "Two engineers independently investigate the same bug in different parts of a conversation; Claude spots the overlap from the channel's context and opens a thread with the investigation already under way, instead of waiting for either of them to summon it"
+          },
+          "url": "https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-27-grok-bot-all-plans",
+      "cluster_id": "xai-grok-bot",
+      "models": ["xai"],
+      "title": {
+        "ru": "Grok Bot открыли всем подписчикам SuperGrok и Cursor Pro, лимиты сбросили",
+        "en": "Grok Bot opens to all SuperGrok and Cursor Pro subscribers, usage limits reset"
+      },
+      "summary": {
+        "ru": "xAI и Cursor расширили доступ к Grok Bot — постоянно работающему ИИ-«напарнику» со своим облачным компьютером — с уровней SuperGrok Plus/Cursor Pro+ до всех подписчиков SuperGrok и Cursor Pro, и обнулили недельные лимиты использования для всех пользователей. Это уже третий шаг расширения доступа с момента бета-запуска 11 августа, когда доступ был только у SuperGrok Heavy и Cursor Ultra/Teams Premium.",
+        "en": "xAI and Cursor expanded Grok Bot — a persistent AI \"teammate\" with its own cloud computer — from SuperGrok Plus/Cursor Pro+ down to all SuperGrok and Cursor Pro subscribers, and reset everyone's weekly usage limits. It's the third access expansion since the August 11 beta launch, which was initially restricted to SuperGrok Heavy and Cursor Ultra/Teams Premium."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Расширяет доступ к уже существующему продукту тремя ступенями за две недели — не меняет сам подход к использованию LLM, но быстро снижает порог входа к постоянно работающим агентам",
+        "en": "Broadens access to an already-shipped product through three tiers in two weeks — doesn't change the underlying approach to using LLMs, but is quickly lowering the barrier to entry for persistent agents"
+      },
+      "source_url": "https://x.com/bot/status/2092664183334846840",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Агент с собственным постоянным облачным компьютером входит в уже используемые пользователем приложения и сервисы и вмешивает человека только для подтверждений — теперь доступен по обычной подписке SuperGrok или Cursor Pro, а не только на самом дорогом тарифе",
+            "en": "An agent with its own persistent cloud computer signs into the apps and services a user already relies on and only pulls a human in for approvals — now reachable on a standard SuperGrok or Cursor Pro subscription instead of only the top paid tier"
+          },
+          "url": "https://x.ai/bot"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-27-claude-code-send-feedback",
+      "cluster_id": "anthropic-claude-code-self-feedback",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Code теперь сам пишет черновики багрепортов о себе",
+        "en": "Claude Code now drafts its own bug reports about itself"
+      },
+      "summary": {
+        "ru": "В релизе v2.1.247 (26 августа) появился инструмент SendFeedback: когда какой-то инструмент раз за разом не срабатывает, Claude замечает собственную ошибку или пользователь прямо указывает на проблему, модель составляет черновик фидбека и кладёт его в локальную очередь ~/.claude/feedback/drafts/, откуда его можно просмотреть и отправить через /feedback. Функцию можно отключить настройкой feedbackDrafts.",
+        "en": "Release v2.1.247 (August 26) adds a SendFeedback tool: when a tool keeps failing, when Claude notices it made a mistake, or when the user calls it out directly, the model drafts a feedback report and queues it locally at ~/.claude/feedback/drafts/, where it can be reviewed and sent via /feedback. The feature can be turned off with the feedbackDrafts setting."
+      },
+      "impact_score": 2,
+      "impact_reason": {
+        "ru": "Удобство для одного инструмента разработки — ускоряет цикл обратной связи между пользователем и Anthropic, но не меняет ни подходы к использованию LLM, ни доступные пользователю возможности",
+        "en": "A convenience feature for one dev tool — speeds up the feedback loop between users and Anthropic, but changes neither approaches to using LLMs nor what capabilities are available to users"
+      },
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Bash-команда раз за разом падает в течение сессии; вместо того чтобы прерывать разработчика, Claude Code кладёт черновик багрепорта в локальную очередь, чтобы его можно было просмотреть и отправить позже, не теряя фокус",
+            "en": "A Bash command keeps failing across retries during a session; instead of interrupting the developer's flow, Claude Code queues a draft bug report locally so it can be reviewed and sent later without breaking focus"
+          },
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-27-pauldix-end-of-programming",
+      "type": "article",
+      "author": "Paul Dix",
+      "title": {
+        "ru": "«Конец программирования»: почему верификация, а не ревью кода, становится настоящим фильтром качества",
+        "en": "\"The end of programming\": why verification, not code review, becomes the real quality gate"
+      },
+      "url": "https://pauldix.com/the-end-of-programming",
+      "summary": {
+        "ru": "Основатель InfluxDB Пол Дикс утверждает, что писать код руками и отдавать его на ревью людям как способ получить надёжный софт уходит в прошлое. Поводом стал релиз Bun 1.4: около 50 воркфлоу Claude Code на предрелизной Claude Fable 5 за 11 дней переписали 535 496 строк Zig-кода в 1448 файлах на Rust, слив 6755 коммитов. Дикс формулирует метод: строишь систему верификации и даёшь чёткое направление — и ИИ доводит результат до рабочего состояния сам, а человек оценивает не код, а прошедший все проверки результат.",
+        "en": "InfluxDB founder Paul Dix argues that writing code by hand and handing it to humans for review is on its way out as the method for reliable software. His trigger: the Bun 1.4 release, where roughly 50 Claude Code workflows on a pre-release Claude Fable 5 rewrote 535,496 lines of Zig across 1,448 files into Rust in 11 days, merging 6,755 commits. Dix's method: build a verification system and give a clear goal — the AI drives the result to a working state on its own, and the human judges the outcome that passed every check, not the code itself."
+      },
+      "note_page": "notes/articles/pauldix-end-of-programming.html"
+    },
+    {
+      "id": "2026-08-27-karpathy-delete-everything-keep-graph",
+      "type": "video",
+      "author": "Andrej Karpathy",
+      "title": {
+        "ru": "«Удали всё, оставь граф»: пять уровней инженерии ИИ-систем",
+        "en": "\"Delete everything, keep Graph\": the five levels of AI-system engineering"
+      },
+      "url": "https://www.youtube.com/watch?v=XdbpCM4yGyE",
+      "summary": {
+        "ru": "В часовой лекции для Стэнфорда Андрей Карпати раскладывает инженерию LLM-систем на пять уровней: LLM (модель как перепрограммируемый компьютер), Prompt (программа на естественном языке), Agent (цель + контекст + память + инструменты), Loop (внутренний цикл обучения на контексте отдельно от внешнего цикла обучения весов) и Graph (маршрутизация сообщений между агентами как направленный граф, зависящий от данных). Главный вывод: по мере роста системы код нижних уровней становится заменяемым, а структура графа — тем единственным, что нельзя удалить, не сломав систему.",
+        "en": "In a one-hour Stanford lecture, Andrej Karpathy breaks LLM-system engineering into five levels: LLM (the model as a reprogrammable computer), Prompt (a program in natural language), Agent (goal + context + memory + tools), Loop (the in-context learning loop kept separate from the weight-training loop), and Graph (routing messages between agents as a data-dependent directed graph). The main takeaway: as a system grows, the lower levels' code becomes replaceable, while the graph structure is the one thing that can't be removed without breaking the system."
+      },
+      "note_page": "notes/videos/karpathy-delete-everything-keep-graph.html"
+    },
+    {
+      "id": "2026-08-27-latentspace-harness-engineering-week",
+      "type": "article",
+      "author": "AINews (Latent Space / smol.ai)",
+      "title": {
+        "ru": "Харнесс как новая поверхность оптимизации агентов",
+        "en": "The harness as the new agent-optimization surface"
+      },
+      "url": "https://news.smol.ai/issues/26-08-24-not-much",
+      "summary": {
+        "ru": "Выпуск AINews за 22–24 августа фиксирует общую тему нескольких релизов недели: дизайн обвязки вокруг модели (харнеса) всё больше определяет качество агента, а не сама базовая модель. Примеры: метрика Skill Lift от NVIDIA (парный прогон задачи с навыком и без него вместо структурной проверки файла-инструкции) и открытые «постоянные» агенты Headlong и exo с self-repair и рекурсивным самоулучшением — пока подтверждённые демонстрациями авторов, а не независимыми бенчмарками.",
+        "en": "The AINews issue for August 22–24 identifies a shared theme across several releases that week: the design of the scaffolding around a model — the harness — increasingly determines agent quality more than the base model itself. Examples: NVIDIA's Skill Lift metric (a paired run with and without a skill, instead of inspecting the instruction file's structure) and the open-source persistent agents Headlong and exo, with self-repair and recursive self-improvement claims so far backed by author demos rather than independent benchmarks."
+      },
+      "note_page": "notes/articles/latentspace-harness-engineering-week.html"
+    }
+  ]
+}
