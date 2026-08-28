@@ -1,0 +1,35 @@
+{
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T06:40:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch www.anthropic.com -> EGRESS_BLOCKED; WebSearch x2 нашёл только уже опубликованные ранее сюжеты (MCP 2026-07-28, shared memory, Claude Academy)"},
+    {"source": "openai blog", "status": "ok", "candidates": 3, "note": "WebFetch openai.com заблокирован, но WebSearch нашёл 2 новых сюжета: Hugging Face post-mortem (26.08) и WebMCP/Site tools (25.08); третий кандидат (DALL-E GPT retirement) отклонён как не по теме (снятие с поддержки, не новая функция)"},
+    {"source": "google/gemini blog", "status": "empty", "candidates": 0, "note": "WebSearch: единственный заметный кандидат (интерактивные визуализации в Gemini app) оказался репринтом анонса от апреля 2026 — отклонён"},
+    {"source": "meta/llama blog", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл ничего новее уже опубликованных Muse Code/Muse Spark 1.2"},
+    {"source": "xai/grok blog", "status": "empty", "candidates": 0, "note": "Grok 4.6, Grok Bot — всё старше lookback-окна и уже в seen_urls/архиве"},
+    {"source": "mistral blog", "status": "empty", "candidates": 0, "note": "HUMAIN (24.08), Agentic Search (20.08) — старше окна, вероятно уже устарели к следующему прогону"},
+    {"source": "deepseek blog", "status": "empty", "candidates": 0, "note": "V4-Pro GA (13.08) — старше окна"},
+    {"source": "aggregators (smol.ai, TLDR AI, Simon Willison linkblog)", "status": "blocked", "candidates": 0, "note": "WebFetch news.smol.ai и simonwillison.net -> EGRESS_BLOCKED; WebSearch по содержимому агрегаторов не дал специфичных для 27-28.08 сюжетов сверх найденного напрямую"},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "curl hn.algolia.com -> connection refused (000); WebFetch того же URL -> EGRESS_BLOCKED. Использован WebSearch site:news.ycombinator.com — нашёл релевантные треды для опор мнений (WebMCP), но не новые независимые сюжеты"},
+    {"source": "reddit/x community", "status": "ok", "candidates": 1, "note": "Через WebSearch найдены реакции Science Media Centre (Buckley, Gkoutzis) и METR X-пост — использованы как opinions"},
+    {"source": "experts: Simon Willison", "status": "empty", "candidates": 0, "note": "simonwillison.net заблокирован для WebFetch; git clone simonwillisonblog-backup не удался (github просит авторизацию в этом окружении); WebSearch индекс не показал ничего свежее 21.08 (уже в архиве)"},
+    {"source": "experts: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "YouTube RSS -> EGRESS_BLOCKED; WebSearch не нашёл ничего свежее видео от марта 2026"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "WebSearch не дал конкретного свежего выпуска с содержанием за 27-28.08"},
+    {"source": "experts: AI Explained (video)", "status": "empty", "candidates": 0, "note": "WebSearch: самое свежее видео ~3 недели назад — вне 7-дневного окна"},
+    {"source": "experts: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл конкретное свежее название/дату ролика"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "Архив oneusefulthing.org по WebSearch показывает последний пост от 23.07 — вне окна"},
+    {"source": "experts: Nate Herk (video)", "status": "ok", "candidates": 1, "note": "Найдено новое видео 'Sell These 5 Most In-Demand AI Automations in 2026' (~1 неделя назад), использовано"},
+    {"source": "experts: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл ничего свежее мая 2026"},
+    {"source": "widened search (LLM news <date>, AI model release <date>, best AI article/video this week)", "status": "ok", "candidates": 2, "note": "Дал основную новость (Hugging Face post-mortem) и статью Zvi 'AI #183: Pre Post Mortem' (~15 часов назад на момент поиска)"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 2,
+    "rejected": {"устарело/вне окна": 5, "репринт без новизны": 1, "не по теме (deprecation)": 1}
+  },
+  "video_pipeline": {
+    "gemini": "ok",
+    "frames": "error: yt-dlp -> 'Unable to connect to proxy' / Tunnel connection failed 403 Forbidden (egress-прокси блокирует youtube.com в этом прогоне); конспект опубликован без кадров с пометкой на странице"
+  },
+  "degradation_note": "Прямой WebFetch заблокирован (403/EGRESS_BLOCKED) практически для всех целевых доменов из sources.yaml (anthropic.com, openai.com, news.smol.ai, simonwillison.net, thezvi.substack.com, fortune.com, forbes.com, technologyreview.com, axios.com, sciencemediacentre.org, news.ycombinator.com, hn.algolia.com, youtube.com) — заметно больше 1/3 источников. WebSearch оставался единственным рабочим каналом обнаружения весь прогон, как и в предыдущих облачных прогонах."
+}

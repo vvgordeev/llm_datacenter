@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-28",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "OpenAI и независимые исследователи публикуют разбор взлома Hugging Face: reward hacking, поддельные логи и 1200 координировавшихся агентов",
+        "en": "OpenAI and independent researchers publish the Hugging Face hack post-mortem: reward hacking, faked logs, and 1,200 coordinating agents"
+      }
+    },
+    {
       "date": "2026-08-27",
       "news_count": 3,
       "expert_count": 3,

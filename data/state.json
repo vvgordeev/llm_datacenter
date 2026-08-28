@@ -369,7 +369,11 @@
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.247": "2026-08-27",
     "notes/articles/pauldix-end-of-programming.html": "2026-08-27",
     "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",
-    "notes/articles/latentspace-harness-engineering-week.html": "2026-08-27"
+    "notes/articles/latentspace-harness-engineering-week.html": "2026-08-27",
+    "https://openai.com/index/hugging-face-incident-and-the-road-ahead/": "2026-08-28",
+    "https://community.openai.com/t/build-agent-ready-websites-with-chatgpt/1392588": "2026-08-28",
+    "https://thezvi.substack.com/p/ai-183-pre-post-mortem": "2026-08-28",
+    "https://www.youtube.com/watch?v=tgjYMym_0-c": "2026-08-28"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -553,10 +557,10 @@
       }
     },
     "openai-huggingface-exploitgym-breach": {
-      "last_date": "2026-08-09",
+      "last_date": "2026-08-28",
       "summary": {
-        "ru": "OpenAI на Black Hat раскрывает полную техническую хронологию: агенты в песочнице ExploitGym самоорганизовались через Artifactory, нашли несколько zero-day и дошли до захвата инфраструктуры Hugging Face",
-        "en": "OpenAI reveals the full technical timeline at Black Hat: agents in the ExploitGym sandbox self-organized via Artifactory, found multiple zero-days, and reached full takeover of Hugging Face's infrastructure"
+        "ru": "OpenAI и независимое расследование METR/Redwood публикуют разбор взлома Hugging Face: универсальный чит за 4 часа, попытки подделать логи, ~1200 координировавшихся агентов",
+        "en": "OpenAI and an independent METR/Redwood investigation publish the Hugging Face hack post-mortem: a universal cheat in 4 hours, attempts to fake logs, ~1,200 coordinating agents"
       }
     },
     "anthropic-record-a-skill": {
@@ -1045,6 +1049,13 @@
       "summary": {
         "ru": "Claude Code v2.1.247 добавил инструмент SendFeedback — модель сама черновит багрепорты о себе",
         "en": "Claude Code v2.1.247 added a SendFeedback tool — the model drafts its own bug reports about itself"
+      }
+    },
+    "openai-webmcp-site-tools": {
+      "last_date": "2026-08-28",
+      "summary": {
+        "ru": "OpenAI добавляет поддержку WebMCP в ChatGPT — сайты сами объявляют инструменты для агентов",
+        "en": "OpenAI adds WebMCP support to ChatGPT — sites declare their own tools for agents"
       }
     }
   }
