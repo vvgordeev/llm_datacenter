@@ -373,7 +373,14 @@
     "https://openai.com/index/hugging-face-incident-and-the-road-ahead/": "2026-08-28",
     "https://community.openai.com/t/build-agent-ready-websites-with-chatgpt/1392588": "2026-08-28",
     "https://thezvi.substack.com/p/ai-183-pre-post-mortem": "2026-08-28",
-    "https://www.youtube.com/watch?v=tgjYMym_0-c": "2026-08-28"
+    "https://www.youtube.com/watch?v=tgjYMym_0-c": "2026-08-28",
+    "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-29",
+    "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29",
+    "https://9to5mac.com/2026/08/28/chatgpt-and-codex-now-support-multiple-gmail-and-google-calendar-accounts/": "2026-08-29",
+    "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/": "2026-08-29",
+    "https://anil.recoil.org/notes/rumour-is-the-exploit": "2026-08-29",
+    "notes/articles/rehberger-claude-code-automode-injection.html": "2026-08-29",
+    "notes/articles/madhavapeddy-bugonomics-rumour-exploit.html": "2026-08-29"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -473,10 +480,10 @@
       "summary": "Systima study finds Claude Code sends ~33k tokens of system prompt/tool schemas before reading the user prompt (~75k with MCP/CLAUDE.md), 4.7x more than OpenCode"
     },
     "anthropic-claude-for-teachers": {
-      "last_date": "2026-07-15",
+      "last_date": "2026-08-29",
       "summary": {
-        "ru": "Anthropic Claude for Teachers — бесплатный доступ для K-12 учителей",
-        "en": "Anthropic Claude for Teachers — free K-12 educator access"
+        "ru": "Anthropic Claude for Teachers — от бесплатного доступа для отдельных K-12 учителей (июль) до Enterprise-предложения для школ и округов с SSO/RBAC (август)",
+        "en": "Anthropic Claude for Teachers — from free individual K-12 educator access (July) to an Enterprise offering for schools/districts with SSO/RBAC (August)"
       }
     },
     "google-genception-vision": {
@@ -1056,6 +1063,20 @@
       "summary": {
         "ru": "OpenAI добавляет поддержку WebMCP в ChatGPT — сайты сами объявляют инструменты для агентов",
         "en": "OpenAI adds WebMCP support to ChatGPT — sites declare their own tools for agents"
+      }
+    },
+    "anthropic-claude-team-scientists": {
+      "last_date": "2026-08-29",
+      "summary": {
+        "ru": "Anthropic открывает Claude Team для 10 000 учёных: бесплатные/льготные места, расширение AI for Science на математику, физику, инженерию",
+        "en": "Anthropic opens Claude Team plan for 10,000 scientists: free/discounted seats, expanding AI for Science into math, physics, engineering"
+      }
+    },
+    "openai-chatgpt-multi-google-accounts": {
+      "last_date": "2026-08-29",
+      "summary": {
+        "ru": "OpenAI добавляет поддержку нескольких аккаунтов Gmail/Calendar/Contacts в ChatGPT и Codex",
+        "en": "OpenAI adds support for multiple Gmail/Calendar/Contacts accounts in ChatGPT and Codex"
       }
     }
   }

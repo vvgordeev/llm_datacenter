@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T05:15:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED www.anthropic.com; found via WebSearch instead"
+    },
+    {
+      "source": "anthropic (WebSearch x4+)",
+      "status": "ok",
+      "candidates": 3,
+      "note": "Claude Team plan for scientists (anthropic.com/news/expanding-support-for-scientists, Aug 27) published; Claude for Teachers now available for schools/districts (claude.com/blog, Aug 28) published as continuation of anthropic-claude-for-teachers cluster; Claude Developer Platform Sonnet 5 price-freeze (Aug 28) rejected as pricing news without product content, not a new feature"
+    },
+    {
+      "source": "openai blog/news (WebFetch blocked, WebSearch)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "ChatGPT/Codex multi-account Gmail/Calendar/Contacts (9to5mac, Aug 28) published; Jalapeno chip benchmark follow-up (TechCrunch/CNBC Aug 25-26) rejected as continuation without new facts beyond June unveiling; Hugging Face incident post-mortem and WebMCP/Site tools already published in the Aug 28 run (seen_urls)"
+    },
+    {
+      "source": "google/gemini blog (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Nothing newer than already-archived items (Gemini 3.7 Flash Aug 15, Ask Gemini in Chat Aug 26); Google DeepMind leadership reshuffle (Hassabis -> chairman) rejected as not a product feature"
+    },
+    {
+      "source": "meta/llama blog (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Nothing newer than already-archived Muse Glimmer/Muse Spark 1.2 items; no new release found for the lookback window"
+    },
+    {
+      "source": "xai/grok blog (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Grok 4.6 (Aug 12) and Grok Bot (Aug 11) already old/archived; nothing new this window"
+    },
+    {
+      "source": "mistral blog (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Mistral x HUMAIN (Aug 24-25) already published in the Aug 26 run (seen_urls); nothing newer found"
+    },
+    {
+      "source": "deepseek news (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "V4-Pro GA (Aug 12-13) and price hike (Aug 16) already old; nothing new this window"
+    },
+    {
+      "source": "hn algolia api",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED hn.algolia.com CONNECT; not retried, WebSearch used as fallback throughout"
+    },
+    {
+      "source": "aggregators (smol.ai/AINews, TLDR AI)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "Discovered GLM-5.3 (Z.ai) and Qwen3.8-Max (Alibaba) mentioned in Aug 28 AINews recap, but WebSearch cross-checks put GLM-5.3's real launch at Aug 14 (aggregator recap conflated dates) and Qwen is explicitly disabled in sources.yaml -> both rejected; Discovery Loop (Jeff Dean et al.) rejected as a startup-founding story from Aug 5-6, too old and not an LLM feature/release"
+    },
+    {
+      "source": "widened pass (LLM news <date>, AI model release <date>)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Ran because official-blog pass alone gave only 3 candidates; no additional verifiable same-window candidates surfaced beyond the 3 already published"
+    },
+    {
+      "source": "experts: Simon Willison (via simonwillisonblog-backup clone, blog_entry + blog_blogmark tables)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "blog_entry: only one full essay since Aug 19 (outside 7-day window). blog_blogmark scan Aug22-28 surfaced 'Breaking Claude Code Opus 5 Auto Mode' (Rehberger/Embrace The Red, Aug 27) and 'Just a rumour of a bug...' (Anil Madhavapeddy, Aug 28) via Simon's linkblog commentary -> both published as full article notes (primary sources fetched via WebSearch since WebFetch to embracethered.com/anil.recoil.org both EGRESS_BLOCKED)"
+    },
+    {
+      "source": "experts: Latent Space (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "No new Latent Space piece found for this window beyond 'Harness Engineering Week' already published in the Aug 27 run; 'How to Kill the Code Review' found via search but dated March 2026, too old"
+    },
+    {
+      "source": "experts: Ethan Mollick / One Useful Thing (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Latest identifiable post ('Choosing to Stay Human') dated May 26, outside the 7-day window; no fresher post surfaced"
+    },
+    {
+      "source": "experts: Andrej Karpathy (video, RSS blocked)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com RSS/WebFetch EGRESS_BLOCKED (CONNECT 403) today; WebSearch found only videos ~3+ weeks old, none confirmed within the 7-day window"
+    },
+    {
+      "source": "experts: AI Explained (video, RSS blocked)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com blocked; WebSearch surfaced a possible recent recap video but could not confirm an exact URL/date -> not included per no-fabrication rule"
+    },
+    {
+      "source": "experts: Matt Wolfe (video, RSS blocked)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com blocked; WebSearch found only his Future Tools newsletter issue list (Aug 26 'Connect'), no substantive single-video candidate confirmed"
+    },
+    {
+      "source": "experts: Nate Herk (video, RSS blocked)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com blocked; no dated recent video surfaced via WebSearch"
+    },
+    {
+      "source": "experts: Matt Pocock (video, RSS blocked)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com blocked; most recent Claude Code skills videos found are ~3 weeks old (early August), outside window"
+    }
+  ],
+  "totals": {
+    "candidates": 24,
+    "published": 3,
+    "rejected": {
+      "перепечатки/уже опубликовано": 4,
+      "не по теме (финансы/деприкейшн/оргизменения)": 3,
+      "неверифицируемая дата/источник": 2,
+      "вне окна свежести": 3,
+      "исключённый источник (Qwen disabled)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used: no video candidate cleared the discovery/verification bar this run",
+    "frames": "n/a",
+    "tools_check": "yt-dlp and imageio-ffmpeg installed via pip this run; youtube.com itself is EGRESS_BLOCKED at the proxy today (confirmed via both WebFetch RSS and yt-dlp CONNECT failures), consistent with SKILL.md's noted day-to-day instability of youtube.com access in this sandbox"
+  },
+  "note": "5 of 19 sources (~26%) came back blocked/empty due to egress restrictions (youtube.com fully blocked today, all direct vendor-blog WebFetch calls EGRESS_BLOCKED as usual) or genuinely quiet coverage; WebSearch carried all discovery. Expert section fell short of limits.min_expert_total=5 (delivered 2 articles, 0 videos) despite an expanded pass across all 8 configured experts plus general 'best article this week' queries -- video discovery in particular is blocked end-to-end today (yt-dlp CONNECT 403, WebFetch RSS EGRESS_BLOCKED, WebSearch index lag confirmed on multiple channels). No news or expert item was included without a directly verified source_url and date."
+}

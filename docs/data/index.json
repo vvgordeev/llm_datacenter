@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-29",
+      "news_count": 3,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Anthropic открывает Claude Team для 10 000 учёных",
+        "en": "Anthropic opens Claude Team plan for 10,000 scientists"
+      }
+    },
+    {
       "date": "2026-08-28",
       "news_count": 2,
       "expert_count": 2,

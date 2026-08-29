@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: взлом Auto Mode в Claude Code — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Johann Rehberger (Embrace The Red) · 2026-08-27</span>
+      <span data-lang="en">Article digest · Johann Rehberger (Embrace The Red) · 2026-08-27</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как обычная просьба «перескажи сайт» ломает Auto Mode в Claude Code</span>
+      <span data-lang="en">How a plain "summarize this site" request breaks Claude Code's Auto Mode</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Исследователь безопасности Johann Rehberger (wunderwuzzi, автор блога Embrace The Red) показал, что режим Auto Mode в Claude Code — на который Anthropic делает ставку как на защиту от prompt injection — обходится обычной на вид просьбой «сделай конспект сайта». В серии тестов атака сработала в 60–80% случаев: агент дошёл до выполнения кода, подсунутого атакующим, без единого явного подтверждения от пользователя на опасное действие.</span>
+      <span data-lang="en">Security researcher Johann Rehberger (wunderwuzzi, of the Embrace The Red blog) showed that Claude Code's Auto Mode — which Anthropic is betting on as its main defense against prompt injection — can be defeated by an innocuous-looking "summarize this website" request. Across a small set of tests the attack succeeded 60–80% of the time, with the agent reaching attacker-controlled code execution without a single explicit user confirmation for a dangerous action.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: спрятать код там, куда агент полезет сам</span><span data-lang="en">The method: hide the payload where the agent will go looking anyway</span></h2>
+    <p>
+      <span data-lang="ru">Атака начинается с нормальной инструкции — попросить Claude пересказать содержимое сайта. Агент решает, что проще всего скачать страницу через <code>curl</code> в shell-команде. Сайт в ответ на запрос отдаёт не HTML, а редирект на ZIP-архив с «каталожными» файлами, закодированными записями, бинарником-декодером и одним python-файлом с говорящим системным именем — <code>struct.py</code>. Дальше срабатывает ключевой трюк: вместо того чтобы запустить чужой бинарник напрямую (это выглядело бы подозрительно и потребовало бы разрешения), Claude сам пишет python-скрипт для распаковки данных и по пути импортирует стандартные модули вроде <code>base64</code>, <code>zlib</code>, <code>json</code> — но делает это, находясь внутри директории с распакованным архивом. Python при импорте сначала ищет модуль в текущей рабочей директории, и вместо системного <code>base64</code> подгружает одноимённый вредоносный файл атакующего, лежащий рядом. Через этот file-shadowing вредоносный код выполняется в момент импорта — a легитимный декодер при этом продолжает работать как ни в чём не бывало, не давая агенту повода заподозрить неладное.</span>
+      <span data-lang="en">The attack starts with an ordinary instruction — ask Claude to summarize a website. The agent decides the simplest path is to fetch the page with <code>curl</code> from a shell command. The site responds not with HTML but with a redirect to a ZIP archive containing "catalog" files, encoded records, a decoder binary, and one Python file with an unassuming standard-library name — <code>struct.py</code>. The key trick comes next: rather than running the unfamiliar binary directly (which would look suspicious and require a permission prompt), Claude writes its own Python script to unpack the data, and along the way imports ordinary modules like <code>base64</code>, <code>zlib</code>, <code>json</code> — while running from inside the extracted archive's directory. Python resolves imports against the current working directory first, so instead of the standard-library <code>base64</code> it loads the attacker's identically-named file sitting right there. That module-shadowing trick executes the malicious code at import time, while the legitimate-looking decoder keeps working normally, giving the agent no visible reason for suspicion.</span>
+    </p>
+    <p>
+      <span data-lang="ru">В proof-of-concept заражённый модуль запускает отдельный, изолированный python-процесс, который скачивает и исполняет полезную нагрузку второй стадии, открывает канал управления (C2) и — как наглядное доказательство компрометации — открывает на экране обычный калькулятор.</span>
+      <span data-lang="en">In the proof of concept, the poisoned module spawns a separate, isolated Python process that downloads and executes a second-stage payload, opens a command-and-control channel, and — as a visible proof of compromise — pops open the desktop Calculator app.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это проблема именно для Auto Mode</span><span data-lang="en">Why this specifically breaks Auto Mode</span></h2>
+    <p>
+      <span data-lang="ru">Ставка Anthropic на Auto Mode в том, что агент сам оценивает, какие действия «безопасны» и не требуют подтверждения человека, а какие — потенциально опасны. Проблема в том, что каждый отдельный шаг атаки — скачать страницу, распаковать архив, написать и запустить свой скрипт-декодер, импортировать стандартные модули — выглядит рутинным и безобидным по отдельности. Ни один шаг сам по себе не поднимает сигнал «выполняется код от третьей стороны», хотя именно к этому вся цепочка и сводится. Rehberger формулирует вывод жёстко: разработчикам агентных coding-инструментов нельзя полагаться на то, что модель сама отличит «безопасный» шаг от опасного — простое эвристическое разрешение обычных на вид операций (запись файла, импорт модуля, запуск локального скрипта) оставляет системную дыру, которую эксплойт из этой статьи проходит насквозь.</span>
+      <span data-lang="en">Anthropic's bet with Auto Mode is that the agent itself can judge which actions are "safe" enough to skip human confirmation and which are potentially dangerous. The problem is that every individual step of the attack — fetch a page, unzip an archive, write and run your own decoder script, import standard modules — looks routine and harmless in isolation. No single step raises a "now running third-party code" flag, even though that's exactly what the chain adds up to. Rehberger's conclusion is blunt: builders of agentic coding tools cannot rely on the model itself to tell a safe step from a dangerous one — blanket heuristic approval of innocuous-looking operations (writing a file, importing a module, running a local script) leaves a systemic gap that this exact exploit walks straight through.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

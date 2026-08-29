@@ -1,0 +1,160 @@
+{
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T05:15:00Z",
+  "news": [
+    {
+      "id": "2026-08-29-claude-team-scientists",
+      "cluster_id": "anthropic-claude-team-scientists",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic открывает Claude Team для 10 000 учёных",
+        "en": "Anthropic opens Claude Team plan for 10,000 scientists"
+      },
+      "summary": {
+        "ru": "Anthropic выделила 10 000 мест в новом плане Claude Team для учёных: стандартные места бесплатны, премиум-места с пятикратным лимитом использования стоят $15/мес — цена зафиксирована на год. Программа расширяет AI for Science с биологии на математику, физику и инженерию; проекты, которым не хватает лимитов, могут получить до $50 000 кредитов.",
+        "en": "Anthropic is releasing 10,000 seats in a new Claude Team plan for scientists: standard seats are free, premium seats with 5x usage limits cost $15/month, with pricing locked for a year. The program expands AI for Science from biology into math, physics and engineering; projects that outgrow their allocation can apply for up to $50,000 in credits."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметно расширяет доступ конкретному сегменту (научные PI) и снижает стоимость входа, но не меняет сами подходы к использованию LLM и не открывает новый класс сценариев.",
+        "en": "Meaningfully widens access and lowers cost for a specific segment (research PIs), but doesn't change the underlying approaches to using LLMs or open a new class of use cases."
+      },
+      "source_url": "https://www.anthropic.com/news/expanding-support-for-scientists",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Построение полной карты неба в ультрафиолете совмещением и калибровкой наблюдений с разных космических телескопов, с восстановлением пропущенных областей статистическими методами.",
+            "en": "Building a full-sky ultraviolet map by combining and calibrating observations from different space telescopes, filling in missing regions with statistical techniques."
+          },
+          "url": "https://www.anthropic.com/news/accelerating-scientific-research"
+        },
+        {
+          "text": {
+            "ru": "Анализ молекулярных датасетов (scRNA, WGS, ATAC, MS-Spec) — от сырых наборов признаков до биологически интерпретируемых результатов.",
+            "en": "Analyzing molecular datasets (scRNA, WGS, ATAC, MS-Spec) — from raw feature counts to biologically resolved results."
+          },
+          "url": "https://www.anthropic.com/news/accelerating-scientific-research"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-29-claude-for-teachers-districts",
+      "cluster_id": "anthropic-claude-for-teachers",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude for Teachers выходит на школьные округа",
+        "en": "Claude for Teachers expands to schools and districts"
+      },
+      "summary": {
+        "ru": "Программа Claude for Teachers, запущенная в июле для отдельных учителей, стала доступна школам и округам как бесплатное Enterprise-предложение: администраторы теперь могут объединить педагогов и персонал в одну организацию с единым SSO, ролевым доступом и подтверждением домена под общими K-12 Terms.",
+        "en": "Claude for Teachers, launched in July for individual educators, is now available to schools and districts as a free Enterprise offering: administrators can bring staff into one centrally managed organization with single sign-on, role-based access and domain claiming under a shared set of K-12 terms."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Расширение существующей программы на уровень организации (SSO, RBAC) полезно для внедрения, но это развитие в рамках уже известного продукта, а не новая функция или подход.",
+        "en": "Extending an existing program to org-level onboarding (SSO, RBAC) is useful for adoption, but it's an incremental step for an already-known product, not a new feature or approach."
+      },
+      "source_url": "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts",
+      "opinions": [
+        {
+          "author": "Randi Weingarten, American Federation of Teachers",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Важно, что Anthropic берёт на себя эти обязательства в своём новом Claude for Teachers — инструменте, созданном педагогами и для педагогов, чтобы помогать им в обучении и, будем надеяться, освобождать больше времени для человеческих отношений, лежащих в основе обучения».",
+            "en": "\"It's important that Anthropic is committing to these principles in their new Claude for Teachers — a tool designed by and for educators to assist them instructionally and hopefully give them more time for the human relationships at the heart of learning.\""
+          },
+          "url": "https://www.anthropic.com/news/claude-for-teachers"
+        },
+        {
+          "author": "The 74",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Условия использования требуют, чтобы учитель наделил Anthropic статусом «школьного чиновника» — а по FERPA это вправе делать только сам округ; кроме того, учитель обязан возместить Anthropic убытки по искам, возникшим из-за загруженных им материалов.",
+            "en": "The terms require the teacher to designate Anthropic as a \"school official\" — a designation FERPA says only the district can make — and require the teacher to indemnify Anthropic for claims arising from what they upload."
+          },
+          "url": "https://www.the74million.org/article/why-claude-for-teachers-might-be-a-student-privacy-trap-for-educators/"
+        },
+        {
+          "author": "GovTech",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Реакция педагогов смешанная: часть скептиков не впечатлена предложением Anthropic, у части есть опасения, что инструмент подталкивает к загрузке данных об учениках.",
+            "en": "Educator reaction is mixed: some skeptics aren't impressed by what Anthropic has to offer, and some educators worry the tool encourages uploading student data."
+          },
+          "url": "https://www.govtech.com/education/k-12/educators-share-mixed-reactions-to-claude-for-teachers"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пилот в Detroit Public Schools Community District: Anthropic обучает учителей в нескольких школах и изучает влияние на самочувствие и практику преподавания.",
+            "en": "A pilot in the Detroit Public Schools Community District: Anthropic trains teachers at a handful of schools and studies the impact on educator wellbeing and teaching practice."
+          },
+          "url": "https://www.anthropic.com/news/claude-for-teachers"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-29-chatgpt-multi-google-accounts",
+      "cluster_id": "openai-chatgpt-multi-google-accounts",
+      "models": ["openai"],
+      "title": {
+        "ru": "ChatGPT и Codex получили поддержку нескольких аккаунтов Google",
+        "en": "ChatGPT and Codex add support for multiple Google accounts"
+      },
+      "summary": {
+        "ru": "OpenAI раскатила поддержку нескольких аккаунтов Gmail, Google Calendar и Google Contacts в одном разговоре ChatGPT: подключить второй/третий аккаунт можно через шестерёнку у уже подключённого плагина. Раньше каждый плагин привязывался только к одному Google-аккаунту, что мешало вести личные и рабочие дела в одном ChatGPT/Codex.",
+        "en": "OpenAI rolled out support for multiple Gmail, Google Calendar and Google Contacts accounts within a single ChatGPT conversation: a second or third account can be added via the gear icon on an already-connected plugin. Previously each plugin could only be linked to one Google account, making it hard to handle personal and work matters in the same ChatGPT/Codex session."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Устраняет давнюю и часто запрашиваемую пользователями (в т.ч. в issues Codex) точку трения при работе с личными/рабочими аккаунтами, но это расширение существующей интеграции, а не новый подход к использованию модели.",
+        "en": "Removes a long-standing, frequently requested (including in Codex GitHub issues) friction point around personal/work accounts, but it's an extension of an existing integration, not a new approach to using the model."
+      },
+      "source_url": "https://9to5mac.com/2026/08/28/chatgpt-and-codex-now-support-multiple-gmail-and-google-calendar-accounts/",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Один и тот же диалог Codex работает то с личным, то с рабочим Gmail/Calendar: искать чек в личной почте, затем письмо клиента — в рабочей, без переключения аккаунтов и файлов авторизации вручную.",
+            "en": "One Codex session works with a personal and a work Gmail/Calendar in turn: search a personal inbox for a receipt, then a work inbox for a customer thread, without manually swapping accounts or auth files."
+          },
+          "url": "https://github.com/openai/codex/issues/20500"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-29-rehberger-claude-code-automode",
+      "type": "article",
+      "author": "Johann Rehberger (Embrace The Red)",
+      "title": {
+        "ru": "Как обычная просьба «перескажи сайт» ломает Auto Mode в Claude Code",
+        "en": "How a plain \"summarize this site\" request breaks Claude Code's Auto Mode"
+      },
+      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+      "summary": {
+        "ru": "Простой запрос на пересказ сайта заставляет Claude Code скачать и распаковать вредоносный ZIP; через подмену python-модуля (file-shadowing при импорте base64) код атакующего выполняется без единого подтверждения от Auto Mode — успех в 60–80% тестов.",
+        "en": "A plain request to summarize a website leads Claude Code to download and unpack a malicious ZIP; via Python module shadowing (a poisoned base64 import), the attacker's code runs without a single Auto Mode confirmation — a 60–80% success rate across tests."
+      },
+      "note_page": "notes/articles/rehberger-claude-code-automode-injection.html"
+    },
+    {
+      "id": "2026-08-29-madhavapeddy-bugonomics",
+      "type": "article",
+      "author": "Anil Madhavapeddy",
+      "title": {
+        "ru": "Достаточно слуха об ошибке — LLM-агенты сами доведут его до рабочего эксплойта",
+        "en": "Just a rumour of a bug is enough — LLM agents will finish the exploit for you"
+      },
+      "url": "https://anil.recoil.org/notes/rumour-is-the-exploit",
+      "summary": {
+        "ru": "Мейнтейнер OCaml описывает, как за минуты после открытия PR с фиксом получил в логах пробы той же атаки; свежие CVE показывают эксплуатацию через 9–20 часов после раскрытия — старая модель эмбарго на дни/недели больше не работает против LLM-агентов.",
+        "en": "An OCaml maintainer describes seeing matching attack probes in his logs minutes after opening a fix PR; recent CVEs show exploitation within 9–20 hours of disclosure — the old days/weeks embargo model no longer holds against LLM-driven agents."
+      },
+      "note_page": "notes/articles/madhavapeddy-bugonomics-rumour-exploit.html"
+    }
+  ]
+}
