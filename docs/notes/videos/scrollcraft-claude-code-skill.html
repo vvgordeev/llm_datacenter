@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: ScrollCraft — Claude Code скилл для scroll-driven сайтов — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk | AI Automation · 2026-08-23</span>
+      <span data-lang="en">Video digest · Nate Herk | AI Automation · 2026-08-23</span>
+    </p>
+    <h1>
+      <span data-lang="ru">ScrollCraft: скилл Claude Code, который проектирует сайт как сценарий, а не как шаблон</span>
+      <span data-lang="en">ScrollCraft: the Claude Code skill that designs a site like a script, not a template</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=QUI6Ug4cHnE" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует доступ yt-dlp к youtube.com (403 на уровне egress-прокси).</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's network policy blocks yt-dlp's access to youtube.com (403 at the egress proxy level).</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Херк представляет ScrollCraft — свободно распространяемый скилл для Claude Code, который превращает обычные лендинги в сайты с «прокруткой как таймлайном»: события и анимации на странице привязаны к движению колёсика мыши, а не к готовому шаблону <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=0">[00:00]</a>. Он сразу показывает разницу на собственном личном сайте: до — статичная страница с текстом сверху вниз, после — версия, где прокрутка последовательно раскрывает сцены <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=26">[00:26]</a>.</span>
+      <span data-lang="en">Nate Herk introduces ScrollCraft, a free Claude Code skill that turns ordinary landing pages into sites where "scroll is the timeline": on-page events and animations are tied to the mouse wheel rather than baked into a fixed template <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=0">[00:00]</a>. He opens with a before/after on his own personal site: before, a static top-to-bottom page of text; after, a version where scrolling sequentially reveals scenes <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=26">[00:26]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: интервью → активы → живая сборка → проверка</span><span data-lang="en">The method: interview → assets → live build → verification</span></h2>
+    <p>
+      <span data-lang="ru">Вместо того чтобы навязывать один визуальный шаблон, скилл строится вокруг принципов дизайна — интервалы, типографика, общая эстетика — и начинает работу с интерактивного интервью: что за бизнес, какой должен быть путь пользователя, какое настроение нужно передать <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=48">[00:48]</a>. Дальше Claude либо использует уже готовые активы заказчика, либо генерирует фото- и видео-материалы через интеграцию с <code>kie.ai</code>, закрывая пробелы там, где готовых изображений нет <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=48">[00:48]</a>. Получить и подключить скилл в Claude Code можно за несколько минут — Херк показывает установку прямо по ходу видео <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=150">[02:30]</a>.</span>
+      <span data-lang="en">Rather than forcing one visual template, the skill is built around design principles — spacing, typography, overall aesthetic — and opens with an interactive interview: what the business is, what the user journey should look like, what mood the site needs to convey <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=48">[00:48]</a>. From there, Claude either works with the client's existing assets or generates photo and video material through a <code>kie.ai</code> integration to fill gaps where none exist <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=48">[00:48]</a>. Getting the skill running in Claude Code takes a few minutes — Herk walks through the install live <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=150">[02:30]</a>.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Центральная демонстрация — прямой редизайн сайта AI Automation Society на глазах у зрителя: он даёт Claude бриф, тот генерирует активы через <code>kie.ai</code> и собирает первую версию сайта <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=224">[03:44]</a>. Ключевая часть метода — не первый результат, а цикл проверки: скилл сам делает скриншоты собранной страницы на разных этапах прокрутки и ищет дефекты (пустые зоны прокрутки, проблемы с контрастом, незагрузившиеся активы), после чего уточняет вёрстку по этой обратной связи, а не по единственному проходу генерации <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=552">[09:12]</a>.</span>
+      <span data-lang="en">The core demo is a live redesign of the AI Automation Society site: he gives Claude a brief, it generates assets via <code>kie.ai</code>, and assembles a first version of the site <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=224">[03:44]</a>. The key part of the method isn't the first output but the verification loop: the skill screenshots the built page at different scroll points itself and checks for defects — dead scroll zones, contrast problems, unloaded assets — then refines the layout from that feedback instead of a single generation pass <a class="ts" href="https://www.youtube.com/watch?v=QUI6Ug4cHnE&t=552">[09:12]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это применимо и что скилл сознательно ограничивает</span><span data-lang="en">When it applies, and what the skill deliberately constrains</span></h2>
+    <p>
+      <span data-lang="ru">Херк подчёркивает, что подход годится для одностраничных презентационных сайтов — услуг, продуктов, личных брендов, — там, где нужен эффект «премиального» впечатления, а не для сложных многостраничных веб-приложений. Ограничение вшито и в сам дизайн-процесс: набор из восьми «грамматик страницы» и жёсткий «список отказов» (типовые ИИ-клише в дизайне под запретом), максимум два шрифтовых семейства и правило одного главного визуального пика на странице — всё это сознательно сужает пространство решений, чтобы результат не выглядел типовым ИИ-лендингом, а не потому что инструмент не умеет больше.</span>
+      <span data-lang="en">Herk stresses the approach fits single-page presentation sites — services, products, personal brands — where the goal is a "premium" impression, not complex multi-page web applications. The constraint is built into the design process itself: a set of eight "page grammars" and a strict "refuse list" (common AI-design clichés are off-limits), a two-font-family cap, and a rule of one engineered visual peak per page — all of it deliberately narrows the solution space so the output doesn't read as a generic AI landing page, rather than the tool being unable to do more.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

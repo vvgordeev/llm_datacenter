@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-30",
+      "news_count": 3,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Anthropic открывает исследовательский препросмотр Model Hardware Standard — стандарта для управления физическим оборудованием через Claude",
+        "en": "Anthropic opens a research preview of the Model Hardware Standard for letting Claude operate physical hardware"
+      }
+    },
+    {
       "date": "2026-08-29",
       "news_count": 3,
       "expert_count": 2,

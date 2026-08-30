@@ -1,0 +1,168 @@
+{
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T05:21:24Z",
+  "news": [
+    {
+      "id": "2026-08-30-anthropic-model-hardware-standard",
+      "cluster_id": "anthropic-model-hardware-standard",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic открывает исследовательский препросмотр Model Hardware Standard — стандарта для управления физическим оборудованием через Claude",
+        "en": "Anthropic opens a research preview of the Model Hardware Standard for letting Claude operate physical hardware"
+      },
+      "summary": {
+        "ru": "27 августа Anthropic представила Model Hardware Standard (MHS) — модель-агностичную спецификацию, по которой ИИ-агенты обнаруживают, понимают и управляют физическим оборудованием (лабораторные приборы, роботизированные руки, производственные линии) через MCP или другие протоколы, без ручной интеграции под каждое устройство. Партнёры первой волны — AWS, Genentech, Universal Robots, Doosan Robotics и QIAGEN; в одном из кейсов Claude выполнил присланный учёным Genentech PDF с описанием эксперимента напрямую на оборудовании со спецификацией MHS, а партнёр QuEra сообщил о росте успешности задач лазерной релокации с 58% до 99,3%. Стандарт пока доступен по заявке в рамках препросмотра; Anthropic обещает открыть исходники после того, как вместе с партнёрами будут выработаны меры безопасности.",
+        "en": "On August 27, Anthropic introduced the Model Hardware Standard (MHS), a model-agnostic specification that lets AI agents discover, understand, and operate physical hardware — lab instruments, robotic arms, manufacturing lines — over MCP or other protocols, without bespoke per-device integration work. First-wave partners include AWS, Genentech, Universal Robots, Doosan Robotics, and QIAGEN; in one case a Genentech scientist sent Claude a PDF describing an experiment and it executed it directly on hardware carrying an MHS spec, while partner QuEra reported laser-relock task success climbing from 58% to 99.3%. The standard is currently gated behind a research-preview application; Anthropic says it plans to open-source it once safety safeguards are worked out with partners."
+      },
+      "impact_score": 8,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — агенты, напрямую управляющие физическим оборудованием лабораторий и производства, — но пока узкая ниша (наука, промышленность) с закрытым доступом на этапе препросмотра, а не массовый сценарий для всех пользователей LLM.",
+        "en": "Opens a genuinely new class of scenarios — agents directly operating physical lab and manufacturing hardware — but for now it's a narrow niche (science, industry) gated behind a closed preview, not yet a scenario that touches the average LLM user."
+      },
+      "source_url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "opinions": [
+        {
+          "author": "Vaibhav Sisinty (X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Это может оказаться крупнее любого релиза Fable 5.1 или Opus 5.1.",
+            "en": "This might be bigger than any Fable 5.1 or Opus 5.1 release."
+          },
+          "url": "https://x.com/VaibhavSisinty/status/2093059324872663458"
+        },
+        {
+          "author": "Kingy.ai (аналитический разбор)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Пилоты с партнёрами пока не доказывают, что MHS — это открытый, готовый к продакшену или независимо провалидированный отраслевой стандарт.",
+            "en": "Partner pilots do not yet establish MHS as an open, production-ready, or independently validated industry standard."
+          },
+          "url": "https://kingy.ai/blog/anthropic-model-hardware-standard-mhs/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Учёный Genentech присылает Claude PDF с описанием эксперимента — модель самостоятельно выполняет его на лабораторном оборудовании со спецификацией MHS.",
+            "en": "A Genentech scientist sends Claude a PDF describing an experiment, and the model executes it autonomously on lab hardware carrying an MHS spec."
+          },
+          "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+        },
+        {
+          "text": {
+            "ru": "QuEra применяет MHS для задач лазерной релокации: доля успешных попыток выросла с 58% до 99,3%.",
+            "en": "QuEra applies MHS to laser-relock tasks, raising the success rate from 58% to 99.3%."
+          },
+          "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-30-google-gemini-omni-1-1-flash",
+      "cluster_id": "google-gemini-omni-flash",
+      "models": ["google"],
+      "title": {
+        "ru": "Google выпускает Gemini Omni 1.1 Flash: сцены до 40 секунд, управление первым/последним кадром и апскейл до 4K",
+        "en": "Google ships Gemini Omni 1.1 Flash: up to 40-second scenes, first/last-frame control, and 4K upscaling"
+      },
+      "summary": {
+        "ru": "27 августа Google выпустила Gemini Omni 1.1 Flash — обновление видео-модели Gemini Omni с расширением сцены до совокупных 40 секунд (шагами по 10 секунд, с учётом до 10 секунд предыдущего контекста вместо одного последнего кадра), управлением первым и последним кадром для точной постановки камеры, дешёвыми 360p-черновиками для быстрой итерации и апскейлом готового ролика до 4K. Модель доступна в Google AI Studio, Gemini API, Flow и приложении Gemini; Adobe уже встроила Gemini Omni Flash в Firefly.",
+        "en": "On August 27, Google released Gemini Omni 1.1 Flash, an update to the Gemini Omni video model that extends scenes to a cumulative 40 seconds (in 10-second increments, reading up to 10 seconds of prior context instead of just the last frame), adds first/last-frame control for precise camera staging, cheap 360p drafts for fast iteration, and 4K upscaling for finished clips. The model is available in Google AI Studio, the Gemini API, Flow, and the Gemini app; Adobe has already integrated Gemini Omni Flash into Firefly."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметное развитие в рамках уже существующего подхода к генерации видео (более длинные, управляемые сцены, дешевле для итерации) — расширяет применимость для создателей контента, но не открывает принципиально новый класс сценариев.",
+        "en": "A notable advance within the existing video-generation paradigm (longer, more controllable scenes, cheaper to iterate) that broadens what creators can do, but it doesn't open a fundamentally new class of scenarios."
+      },
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Adobe встраивает Gemini Omni Flash в Firefly для генерации и редактирования видео в существующем креативном рабочем процессе.",
+            "en": "Adobe integrates Gemini Omni Flash into Firefly for video generation and editing inside an existing creative workflow."
+          },
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/"
+        },
+        {
+          "text": {
+            "ru": "Более 200 000 создателей контента и продакшн-команд используют модель для масштабирования видео-продакшена: черновик в 360p, затем апскейл до вещательного 1080p/4K.",
+            "en": "200,000+ creators and production teams use the model to scale video production: a 360p draft, then upscale to broadcast-ready 1080p/4K."
+          },
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-30-zai-glm-5-3-flash-reveal",
+      "cluster_id": "openrouter-ox-alpha-stealth",
+      "models": [],
+      "title": {
+        "ru": "Z.ai раскрывает: анонимная модель «Ox Alpha» на OpenRouter — это GLM-5.3-Flash с открытыми весами по лицензии MIT",
+        "en": "Z.ai reveals that the anonymous \"Ox Alpha\" model on OpenRouter was GLM-5.3-Flash, open-weighted under MIT"
+      },
+      "summary": {
+        "ru": "26 августа Z.ai подтвердила, что анонимная бесплатная модель «Ox Alpha», с 20 августа тестировавшаяся сообществом на OpenRouter и OpenCode (503 тыс. пользователей, 13,12 млн сессий, 44 трлн токенов), — это GLM-5.3-Flash: первая нативно мультимодальная модель линейки GLM-5, MoE на 320 млрд параметров (18 млрд активных на токен), контекст 1 млн токенов, лицензия MIT. Цена — $0,15 за млн входных и $0,50 за млн выходных токенов, что заметно ниже Gemini 3.7 Flash; на бенчмарке DeepSWE v1.1 модель набирает 63,4 против 46,2 у предыдущей GLM-5.2. Сообщество r/LocalLLaMA вычислило принадлежность модели к семейству GLM за счёт фингерпринтинга токенизатора ещё до официального подтверждения.",
+        "en": "On August 26, Z.ai confirmed that \"Ox Alpha\" — a free, anonymous model the community had been testing on OpenRouter and OpenCode since August 20 (503K users, 13.12M sessions, 44T tokens) — was GLM-5.3-Flash: the first natively multimodal model in the GLM-5 line, a 320B-parameter MoE (18B active per token) with a 1M-token context window, released under the MIT license. Pricing is $0.15 per million input tokens and $0.50 per million output tokens, well below Gemini 3.7 Flash; on the DeepSWE v1.1 benchmark it scores 63.4 versus 46.2 for the prior GLM-5.2. The r/LocalLLaMA community had already fingerprinted the model's tokenizer to trace it to the GLM family before the official confirmation."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открытые веса фронтир-уровня по MIT-лицензии при резком снижении цены сдвигают ожидания по соотношению цена/качество для целого класса пользователей (self-hosting, инференс-провайдеры), хотя это развитие существующего тренда открытых моделей, а не новый класс сценариев использования.",
+        "en": "Frontier-adjacent open weights under an MIT license at a steep price cut shift price/performance expectations for a whole class of users (self-hosters, inference providers), though it extends the existing open-weights trend rather than opening a new class of use cases."
+      },
+      "source_url": "https://openrouter.ai/z-ai/glm-5.3-flash",
+      "opinions": [
+        {
+          "author": "Patrick Collison, CEO Stripe (через Decrypt)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Очень впечатляюще.",
+            "en": "Very impressive."
+          },
+          "url": "https://decrypt.co/376396/mysterious-ai-model-ox-alpha"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "MIT-лицензия позволяет скачивать, дорабатывать и самостоятельно разворачивать модель; на день релиза уже доступна поддержка в SGLang, vLLM и Unsloth.",
+            "en": "The MIT license lets anyone download, modify, or self-host the model; day-zero support already shipped in SGLang, vLLM, and Unsloth."
+          },
+          "url": "https://openrouter.ai/z-ai/glm-5.3-flash"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-08-30-natherk-scrollcraft",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "ScrollCraft: скилл Claude Code, который проектирует сайт как сценарий, а не как шаблон",
+        "en": "ScrollCraft: the Claude Code skill that designs a site like a script, not a template"
+      },
+      "url": "https://www.youtube.com/watch?v=QUI6Ug4cHnE",
+      "summary": {
+        "ru": "Разбор ScrollCraft — бесплатного скилла Claude Code для scroll-driven сайтов: интерактивное интервью о бизнесе и пути пользователя, генерация недостающих активов через kie.ai, живой редизайн сайта AI Automation Society и цикл самопроверки по скриншотам на разных этапах прокрутки.",
+        "en": "A walkthrough of ScrollCraft, a free Claude Code skill for scroll-driven sites: an interactive interview about the business and user journey, generating missing assets via kie.ai, a live redesign of the AI Automation Society site, and a self-verification loop using screenshots at different scroll points."
+      },
+      "note_page": "notes/videos/scrollcraft-claude-code-skill.html"
+    },
+    {
+      "id": "2026-08-30-willison-stop-making-tuis",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "«Хватит делать TUI»: почему кодинг-агенты снимают главный аргумент за терминальные интерфейсы",
+        "en": "\"Stop Making TUIs\": why coding agents remove the main argument for terminal interfaces"
+      },
+      "url": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/",
+      "summary": {
+        "ru": "Уиллисон разбирает пост Томаса Птачека о том, что терминальные интерфейсы — наследие компромиссов 1970-х, а не осознанный выбор, и подкрепляет тезис собственной практикой: два vibe-coded macOS-приложения для мониторинга сети и GPU, которые он использует ежедневно с марта.",
+        "en": "Willison works through Thomas Ptacek's post arguing that terminal interfaces are a legacy of 1970s compromises rather than a deliberate choice, and backs it with his own practice: two vibe-coded macOS menu-bar apps for network and GPU monitoring that he's used daily since March."
+      },
+      "note_page": "notes/articles/stop-making-tuis.html"
+    }
+  ]
+}

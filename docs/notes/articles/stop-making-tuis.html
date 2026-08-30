@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Хватит делать TUI» — Simon Willison и Thomas Ptacek о нативных интерфейсах в эпоху агентов — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-21</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-21</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Хватит делать TUI»: почему кодинг-агенты снимают главный аргумент за терминальные интерфейсы</span>
+      <span data-lang="en">"Stop Making TUIs": why coding agents remove the main argument for terminal interfaces</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/21/stop-making-tuis/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Поводом стала статья Томаса Птачека (Thomas Ptacek) «Stop Making TUIs», которую Саймон Уиллисон разбирает в своём линкблоге, добавляя личный опыт. Тезис Птачека прямой: терминальные интерфейсы (TUI) — продукт компромиссов 1970-х (модемы и нежелание Unix-инженеров осваивать графические тулкиты вроде Motif), а не осознанный дизайн-выбор, и большая часть их романтизации в разработческой культуре сегодня устарела. Нативный GUI, по его словам, — давно решённая техническая задача; проблема всегда была в стоимости его сборки, а не в том, что терминал чем-то принципиально лучше.</span>
+      <span data-lang="en">The trigger is Thomas Ptacek's post "Stop Making TUIs," which Simon Willison works through on his linkblog, adding his own experience. Ptacek's thesis is blunt: terminal user interfaces are a product of 1970s compromises — modems, and Unix engineers not wanting to learn GUI toolkits like Motif — not a deliberate design choice, and most of their romanticization in developer culture today is outdated. A native GUI, in his view, has long been a solved technical problem; the obstacle was always the cost of building one, not any inherent virtue of the terminal.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что меняют агенты: стоимость нативного UI обнулилась</span><span data-lang="en">What agents change: the cost of a native UI has collapsed</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой сдвиг, который называют оба автора: кодинг-агент способен надёжно собрать нативный интерфейс на SwiftUI (или аналоге для другой платформы) почти с той же скоростью, с какой раньше набрасывали TUI на curses или Textual. Это меняет расчёт: если раньше «сделать по-быстрому» означало терминальный интерфейс, а «сделать по-человечески» — недели работы над GUI, то теперь оба варианта занимают сопоставимое время одной агентной сессии. Отсюда практический вывод статьи — если у разработчика накопились десятки одноразовых CLI-утилит, вокруг них больше нет причины не собрать нормальный интерфейс.</span>
+      <span data-lang="en">The key shift both authors name: a coding agent can reliably assemble a native SwiftUI interface (or the equivalent on another platform) at close to the speed it used to take to throw together a TUI with curses or Textual. That changes the calculus: where "quick" used to mean a terminal interface and "done properly" meant weeks of GUI work, both options now fit inside one comparable agent session. The practical takeaway: if a developer has accumulated dozens of one-off CLI utilities, there's no longer a reason not to give them a proper interface.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Уиллисон подкрепляет это не абстрактным аргументом, а собственной практикой: он рассказывает, что с марта ежедневно пользуется двумя vibe-coded macOS-приложениями для панели меню — <code>bandwidther</code> (мониторинг сети) и <code>gpuer</code> (загрузка GPU), — и что обе утилиты он собирал агентными сессиями примерно за то же время, что раньше ушло бы на текстовый вывод в терминал. Он прямо признаёт, что у него «заканчиваются оправдания» не делать то же самое для остальных своих инструментов, и предлагает читателю попробовать превратить хотя бы один свой одноразовый CLI в нативное приложение — по его словам, это ощутимо меняет то, как потом думаешь о таких инструментах.</span>
+      <span data-lang="en">Willison backs this with his own practice rather than an abstract argument: he's been daily-driving two vibe-coded macOS menu-bar apps since March — <code>bandwidther</code> (network monitoring) and <code>gpuer</code> (GPU load) — both built in agent sessions taking roughly the same time a text terminal dump used to. He admits he's "running out of excuses" not to do the same for his other tools, and suggests readers try turning at least one throwaway CLI into a native app — in his words, it noticeably changes how you think about such tools afterward.</span>
+    </p>
+
+    <h2><span data-lang="ru">Где метод не работает и что осталось за скобками</span><span data-lang="en">Where the method doesn't hold, and what's left unsaid</span></h2>
+    <p>
+      <span data-lang="ru">Ни один из авторов не утверждает, что TUI исчезнут полностью: аргумент касается личных инструментов и одноразовых утилит одного разработчика, а не серверных админ-панелей, инструментов для SSH-сессий без графики или CLI, которые по определению должны запускаться в pipeline без окна. Ограничение, которое статья не проговаривает явно: экономика меняется в первую очередь для платформ с зрелыми decl­arative UI-фреймворками (SwiftUI на macOS) — для линуксовых десктопов или кросс-платформенных агентных сборок GUI то же самое «почти бесплатно» пока не гарантировано в равной мере.</span>
+      <span data-lang="en">Neither author claims TUIs will disappear entirely: the argument is scoped to personal tools and one-off utilities for a single developer, not server admin panels, headless SSH-session tools, or CLIs that by design need to run in a pipeline with no window. A limitation the piece doesn't spell out: the economics shift first for platforms with mature declarative UI frameworks (SwiftUI on macOS) — for Linux desktops or cross-platform agent-built GUIs, the same "almost free" isn't yet guaranteed to the same degree.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

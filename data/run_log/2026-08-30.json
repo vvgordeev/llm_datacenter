@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T05:21:24Z",
+  "sources": [
+    {"source": "anthropic blog (Claude / Anthropic)", "status": "blocked", "candidates": 0, "note": "WebFetch на www.anthropic.com даёт EGRESS_BLOCKED; далее только WebSearch — найден MHS (27 авг)"},
+    {"source": "openai blog (GPT / OpenAI)", "status": "blocked", "candidates": 0, "note": "WebFetch на openai.com блокирован; WebSearch не дал ничего свежее известного (retire DALL-E GPT в ChatGPT 30 авг — не 'новая функция', отклонено; аутэдж 29 авг — не продуктовая новость)"},
+    {"source": "google blog (Gemini / Google DeepMind)", "status": "ok", "candidates": 3, "note": "WebSearch: Gemini Omni 1.1 Flash (27 авг) — опубликовано; Gemini 3.6/3.7 Flash и Ask Gemini в Chat — старше окна, не публиковались"},
+    {"source": "meta blog (Llama / Meta AI)", "status": "ok", "candidates": 0, "note": "WebSearch: последние релизы (Muse Glimmer, Spark 1.2) старше lookback_hours, уже отражены в предыдущих сводках"},
+    {"source": "xai blog (Grok / xAI)", "status": "ok", "candidates": 0, "note": "WebSearch: Grok Bot × Tesla — только тизер-твит 'stay tuned', отклонён как недостаточно подтверждённый; Grok 4.6 старше окна"},
+    {"source": "mistral blog", "status": "ok", "candidates": 0, "note": "WebSearch: релизы (Shieldstral, Agentic Search, Mistral Small 4) старше окна"},
+    {"source": "deepseek blog", "status": "ok", "candidates": 0, "note": "WebSearch: V4-Pro GA и V4-Flash-Vision старше окна"},
+    {"source": "qwen (Alibaba)", "status": "skipped", "candidates": 0, "note": "enabled: false в sources.yaml"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "прямой запрос к hn.algolia.com — EGRESS_BLOCKED; WebFetch на news.ycombinator.com также блокирован — не удалось получить дословные цитаты из обсуждений"},
+    {"source": "aggregator: smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch на news.smol.ai — EGRESS_BLOCKED; WebSearch подтвердил issue от 28 авг 'not much happened today' — косвенное подтверждение малособытийного дня"},
+    {"source": "aggregator: tldr.tech/ai", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл выпуск за целевую дату"},
+    {"source": "community: reddit r/LocalLLaMA, r/ClaudeAI, X", "status": "ok", "candidates": 0, "note": "WebSearch не дал новых кандидатов-новостей за 29-30 авг сверх найденного через модели"},
+    {"source": "discovery: другой класс событий (community fingerprinting GLM-5.3/Ox Alpha)", "status": "ok", "candidates": 1, "note": "продолжение известного кластера openrouter-ox-alpha-stealth — официальный релиз/раскрытие модели 26 авг, опубликовано"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "WebFetch на simonwillison.net блокирован; через WebSearch с URL-датировкой найден 'Stop Making TUIs' (21 авг, за пределами штатных 7 дней, но лучший верифицируемый материал автора) — опубликовано"},
+    {"source": "experts: Andrej Karpathy (видео)", "status": "empty", "candidates": 0, "note": "единственное найденное свежее видео (Sequoia Ascent fireside chat) при перепроверке оказалось от апреля 2026 — отклонено как неактуальное; RSS youtube.com/feeds заблокирован на уровне egress (403 на CONNECT)"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "последние найденные материалы старше недельного окна (21 авг подкаст, статьи начала года)"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "последнее найденное видео — около 3 недель назад, вне окна"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "empty", "candidates": 0, "note": "не удалось найти видео с надёжно подтверждённой датой в пределах недели — конкретный ролик, всплывший в поиске, оказался от декабря 2025"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "найденные посты ('Twilight of the chatbots', 'opinionated guide') старше недельного окна (1 и 23 июля)"},
+    {"source": "experts: Nate Herk (видео)", "status": "ok", "candidates": 2, "note": "ScrollCraft (23 авг, дата подтверждена несколькими независимыми запросами) обработан через Gemini и опубликован; второе видео ('Codex vs Claude Code: Winner Isn't Even Close') при перепроверке оказалось от октября 2025 — отклонено"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "не найдено видео с проверяемой свежей датой"}
+  ],
+  "totals": {
+    "candidates": 24,
+    "published": 3,
+    "rejected": {
+      "старше lookback_hours/окна экспертного контента": 15,
+      "недостаточно подтверждено (тизер без факта)": 1,
+      "не продуктовая новость (аутэдж/деприкация)": 2,
+      "дубль контента уже опубликованной темы (Willison 'rumour of a bug' = anil.recoil.org от 29.08)": 1,
+      "неверифицируемая дата после перепроверки (Karpathy Sequoia, Nate Herk Codex video)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — обработаны 3 видео (ScrollCraft, Codex-vs-Claude-Code strategic test, Karpathy Sequoia chat); последние два не опубликованы из-за неактуальной даты, обнаруженной уже после анализа контента",
+    "frames": "skipped: yt-dlp получает 403 от egress-прокси на уровне CONNECT к youtube.com (после установки yt-dlp/imageio-ffmpeg из pip) — конспект видео построен без кадров, помечено на странице"
+  },
+  "notes": "Экспертный контент за сегодня — 2 материала (1 видео + 1 статья), ниже min_expert_total=5 из sources.yaml. Причина: YouTube RSS-discovery (youtube.com/feeds/videos.xml) полностью заблокирован egress-прокси в этом прогоне (403 на CONNECT для всех проверенных каналов), а WebSearch систематически путал даты публикации у нескольких кандидатов (два видео и один блог-пост Willison, изначально показавшиеся свежими, при точной перепроверке по вторичным сигналам оказались от апреля 2026, октября 2025 и апреля 2026 соответственно). Решено не публиковать материалы с неподтверждённой свежестью вместо натягивания количества. ≥1/3 источников из основного списка (HN API, news.smol.ai, WebFetch на все блоги вендоров и на news.ycombinator.com) заблокированы egress-прокси — сигнал деградации сетевого окружения, а не малособытийного дня самого по себе."
+}
