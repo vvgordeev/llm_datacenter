@@ -385,7 +385,13 @@
     "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/": "2026-08-30",
     "https://openrouter.ai/z-ai/glm-5.3-flash": "2026-08-30",
     "https://simonwillison.net/2026/Aug/21/stop-making-tuis/": "2026-08-30",
-    "https://www.youtube.com/watch?v=QUI6Ug4cHnE": "2026-08-30"
+    "https://www.youtube.com/watch?v=QUI6Ug4cHnE": "2026-08-30",
+    "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/": "2026-08-31",
+    "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/": "2026-08-31",
+    "https://www.testingcatalog.com/grok-bot-to-get-templates-and-multi-account-support-soon/": "2026-08-31",
+    "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
+    "https://www.oneusefulthing.org/p/agency-and-agents": "2026-08-31",
+    "https://www.latent.space/p/attention-interface": "2026-08-31"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -1093,6 +1099,18 @@
         "ru": "27 августа Anthropic представила Model Hardware Standard (MHS) — модель-агностичную спецификацию для управления физическим оборудованием (лаборатории, роботы, производство) через MCP; препросмотр по заявке, партнёры — AWS, Genentech, Universal Robots, Doosan, QIAGEN.",
         "en": "On August 27, Anthropic introduced the Model Hardware Standard (MHS), a model-agnostic spec for operating physical hardware (labs, robots, manufacturing) over MCP; gated research preview, partners include AWS, Genentech, Universal Robots, Doosan, QIAGEN."
       }
+    },
+    "anthropic-infostealer-session-hijack": {
+      "last_date": "2026-08-31",
+      "summary": "Anthropic warns infostealer malware (Vidar, LummaC2, StealC, RedLine, Acreed, Atomic Stealer) is hijacking authenticated Claude sessions to drain usage; signs out affected accounts, wipes payment methods, refunds unauthorized charges"
+    },
+    "anthropic-salesforce-claudeforce": {
+      "last_date": "2026-08-31",
+      "summary": "Salesforce and Anthropic announce Claudeforce: Salesforce in Claude plugin with 37 prebuilt sales skills, pilot now, open beta September 2026, Salesforce committing ~$300M in Anthropic tokens in 2026"
+    },
+    "xai-grok-bot-templates": {
+      "last_date": "2026-08-31",
+      "summary": "Grok Bot adds shareable agent templates (shipped Aug 28), Chrome profile import, desktop egress routing to bypass datacenter IP blocks, and multi-account switching"
     }
   }
 }

@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-08-31",
+      "news_count": 3,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Salesforce и Anthropic объявляют Claudeforce: данные и workflow всего Salesforce CRM — прямо внутри Claude",
+        "en": "Salesforce and Anthropic announce Claudeforce, bringing Salesforce's CRM data and workflows into Claude"
+      }
+    },
+    {
       "date": "2026-08-30",
       "news_count": 3,
       "expert_count": 2,

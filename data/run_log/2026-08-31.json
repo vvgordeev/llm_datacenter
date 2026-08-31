@@ -1,0 +1,44 @@
+{
+  "date": "2026-08-31",
+  "generated_at": "2026-08-31T05:35:00Z",
+  "sources": [
+    {"source": "anthropic blog (Claude / Anthropic)", "status": "blocked", "candidates": 0, "note": "WebFetch на www.anthropic.com — EGRESS_BLOCKED; WebSearch x2 нашёл только уже опубликованное (MHS 27 авг, Claudeforce 26 авг — не в seen_urls, взято в сводку) и не-продуктовые новости (пересмотр цены Sonnet 5)"},
+    {"source": "openai blog (GPT / OpenAI)", "status": "blocked", "candidates": 0, "note": "WebFetch на openai.com — EGRESS_BLOCKED; WebSearch x2: Site tools/WebMCP (25 авг) и GPT-5.6 Sol slider (6 авг) уже отражены в прошлых сводках, ретайр DALL·E GPT (30 авг) отклонён как не-функциональная новость"},
+    {"source": "google blog (Gemini / Google DeepMind)", "status": "blocked", "candidates": 0, "note": "WebFetch на blog.google — EGRESS_BLOCKED; WebSearch x2: Gemini 3.7 Flash (13 авг) и интерактивные симуляции в приложении (апрель 2026, ошибочно всплыли как «новые» — перепроверены и отклонены) старше окна; Google Meet «Take notes for me» с хардверного пульта (31 авг) — отклонён как слишком нишевая функция для конференц-железа, не про LLM-возможности"},
+    {"source": "meta blog (Llama / Meta AI)", "status": "blocked", "candidates": 0, "note": "WebFetch на ai.meta.com — EGRESS_BLOCKED; WebSearch x2: последнее найденное (Mac-приложение с диктовкой) — от 20 авг, старше lookback_hours и уже могло быть в прошлых сводках"},
+    {"source": "xai blog (Grok / xAI)", "status": "ok", "candidates": 1, "note": "WebFetch на x.ai — EGRESS_BLOCKED; WebSearch нашёл Grok Bot templates (анонс 26 авг, отгрузка 28 авг) — не в seen_urls, взято в сводку"},
+    {"source": "mistral blog", "status": "blocked", "candidates": 0, "note": "WebFetch на mistral.ai — EGRESS_BLOCKED; WebSearch x2: HUMAIN-партнёрство (24 авг), Medium 3.5/OCR 4 — старше окна, уже отражены ранее"},
+    {"source": "deepseek blog", "status": "blocked", "candidates": 0, "note": "WebFetch на api-docs.deepseek.com — EGRESS_BLOCKED; WebSearch x2: V4-Pro GA и раунд финансирования $7.4B — финансовая новость без продуктовой части, отклонена по критерию"},
+    {"source": "qwen (Alibaba)", "status": "skipped", "candidates": 0, "note": "enabled: false в sources.yaml"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "прямой запрос к hn.algolia.com — EGRESS_BLOCKED; WebSearch по site:news.ycombinator.com не дал новых кандидатов сверх найденного через модели/агрегаторы"},
+    {"source": "aggregator: smol.ai / news.smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch на news.smol.ai — EGRESS_BLOCKED; WebSearch не дал конкретного выпуска за 30-31 авг с извлекаемым содержанием"},
+    {"source": "aggregator: tldr.tech/ai", "status": "blocked", "candidates": 0, "note": "WebFetch не пробовался (домен исторически блокируется); WebSearch нашёл только выпуск от 29 авг без новых по сравнению с уже найденным кандидатов"},
+    {"source": "aggregator: windflash.us daily report", "status": "blocked", "candidates": 0, "note": "WebFetch на windflash.us — EGRESS_BLOCKED; из WebSearch-сниппета извлечены Anthropic infostealer-предупреждение (уже найдено независимо) и financial/policy новости, отклонённые по критерию"},
+    {"source": "community: reddit r/LocalLLaMA, r/ClaudeAI, X", "status": "ok", "candidates": 0, "note": "WebSearch подтвердил обсуждение infostealer-инцидента на Reddit (используется как контекст, не как отдельный кандидат) и реакции на Grok Bot templates в X (использованы как opinions)"},
+    {"source": "discovery: security/trust story вне основного списка моделей", "status": "ok", "candidates": 1, "note": "Anthropic infostealer session hijack (bleepingcomputer, 30 авг) — не в seen_urls, взято в сводку как значимая trust/security-новость по прецеденту прошлых сводок (openai-huggingface-metr-investigation 28 авг)"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "git clone simonwillisonblog-backup (WebFetch на simonwillison.net блокирован) дал точную дату свежей полноценной статьи 'Understanding ChatGPT Work' (30 авг) — опубликовано. Проверены и ОТКЛОНЕНЫ как дубли уже опубликованного 29 авг: blogmark 'Breaking Claude Code Opus 5 Auto Mode' (Rehberger, 27 авг) и 'Just a rumour of a bug' (Madhavapeddy, 28 авг) — оба уже есть в data/daily/2026-08-29.json, изначально были ошибочно подготовлены повторно и удалены после сверки с архивом"},
+    {"source": "experts: Andrej Karpathy (видео)", "status": "empty", "candidates": 0, "note": "последняя подтверждённая загрузка на собственном канале — 'How I Use LLMs', вне недельного окна; более свежих загрузок не найдено"},
+    {"source": "experts: Latent Space", "status": "ok", "candidates": 1, "note": "WebFetch на latent.space — EGRESS_BLOCKED; через WebSearch найдена статья Dan McAteer 'The Evolution of the Agent Harness' (~1 неделя назад от 31 авг, дата приблизительная — точную публикацию подтвердить не удалось из-за блокировки WebFetch) — опубликовано с пометкой приблизительной даты"},
+    {"source": "experts: AI Explained (видео)", "status": "empty", "candidates": 0, "note": "не найдено видео с надёжно подтверждённой датой в пределах недели"},
+    {"source": "experts: Matt Wolfe (видео)", "status": "empty", "candidates": 0, "note": "найденные ролики ('AI Agent Race', 'Google Updates') — без проверяемой точной даты публикации (только относительные пометки вроде '2 недели назад'), отклонены во избежание ошибки датировки"},
+    {"source": "experts: Ethan Mollick", "status": "ok", "candidates": 1, "note": "WebFetch на oneusefulthing.org — EGRESS_BLOCKED; WebSearch подтвердил точную дату 'Agency and Agents' (31 авг, сегодня) с достаточным содержанием для конспекта — опубликовано"},
+    {"source": "experts: Nate Herk (видео)", "status": "empty", "candidates": 0, "note": "Scrollcraft-скилл (GitHub commits подтверждают 22-23 авг) — на 8-9 дней вне недельного окна экспертной секции, отклонён; более новых видео с подтверждённой датой не найдено"},
+    {"source": "experts: Matt Pocock (видео)", "status": "empty", "candidates": 0, "note": "не найдено видео с проверяемой свежей датой в пределах недели"},
+    {"source": "video pipeline infrastructure check", "status": "blocked", "candidates": 0, "note": "yt-dlp/imageio-ffmpeg установлены из pip успешно, но прямой тест `yt-dlp --dump-json` на youtube.com даёт 'Tunnel connection failed: 403 Forbidden' на уровне CONNECT egress-прокси — весь YouTube (RSS-discovery, WebFetch, yt-dlp) недоступен в этом прогоне, не только загрузка кадров"}
+  ],
+  "totals": {
+    "candidates": 20,
+    "published": 6,
+    "rejected": {
+      "уже опубликовано ранее / дубль архива": 4,
+      "не продуктовая новость (финансы/легал/ретайр/пресс о ценах)": 5,
+      "старше lookback_hours/окна экспертного контента без подтверждённой свежей даты": 4,
+      "слишком нишевая функция (не про LLM-возможности)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "не запускался — не найдено ни одного видео с независимо подтверждённой датой публикации в пределах 7-дневного окна",
+    "frames": "n/a: extract_frames.py не запускался по той же причине; инфраструктурно yt-dlp/imageio-ffmpeg установлены, но CONNECT к youtube.com даёт 403 на уровне egress-прокси (см. запись выше)"
+  },
+  "notes": "Основные новости: 3 опубликованы (Anthropic infostealer-предупреждение 30 авг, Salesforce×Anthropic Claudeforce 26 авг — ранее пропущено ни в одной сводке и добрано сегодня, Grok Bot templates 26-28 авг). Собственно 'горячих' новостей строго за последние 36 часов почти не нашлось — большинство громких анонсов недели (Claudeforce, WebMCP, Gemini 3.7 Flash, Grok 4.6) оказались старше окна и уже отражены в предыдущих сводках; Claudeforce стал исключением, так как не был опубликован в сводке за 26 августа и таким образом остаётся новым для архива. Экспертный контент: 3 статьи (Willison, Mollick, McAteer) при min_expert_total=5 — недобор объясняется тем, что (а) YouTube полностью заблокирован на уровне CONNECT egress-прокси в этом прогоне (RSS, WebFetch и yt-dlp одновременно), что исключило все 5 видео-каналов из конфига; (б) два изначально найденных кандидата-статьи (Rehberger, Madhavapeddy) при сверке с архивом оказались дублями уже опубликованного 29 августа и были исключены. ≥1/3 источников из основного списка (все блоги вендоров, HN API, все три агрегатора) заблокированы egress-прокси — сигнал деградации сетевого окружения в этом прогоне, а не малособытийного дня самого по себе."
+}

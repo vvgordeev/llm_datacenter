@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «The Evolution of the Agent Harness» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Dan McAteer (Latent Space) · около 2026-08-24</span>
+      <span data-lang="en">Article digest · Dan McAteer (Latent Space) · c. 2026-08-24</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Эволюция агентного харнесса</span>
+      <span data-lang="en">The Evolution of the Agent Harness</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/attention-interface" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Дэн Макэтир определяет харнесс агента предельно широко: это вообще всё, кроме весов самой модели — окружение, инструменты, контекст и защитные ограничения (guardrails), которые организуют работу модели в конкретную задачу. Харнесс, по его словам, изначально возник как интерфейс между человеком и моделью и последовательно менял форму: от чат-окна к IDE, а от IDE — к терминалу. Каждая такая смена формы отражала не прихоть дизайна, а то, что модель научилась делать сама то, что раньше приходилось жёстко прописывать в коде вокруг неё.</span>
+      <span data-lang="en">Dan McAteer defines an agent's harness as broadly as possible: everything besides the model's own weights — the environment, tools, context, and guardrails that organize the model's work into a concrete task. The harness, he argues, was born as the interface between a human and the model and has repeatedly changed shape: from chat window to IDE, and from IDE to the terminal. Each shape change wasn't a design whim — it reflected the model learning to do, on its own, something that previously had to be hard-coded into the scaffolding around it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: цикл «обучение → впитывание → сброс»</span><span data-lang="en">The method: the "train → absorb → shed" loop</span></h2>
+    <p>
+      <span data-lang="ru">Центральная идея статьи — цикл эволюции связки модель+харнесс, который автор формулирует как «train → absorb → shed → repeat» (обучение → впитывание → сброс → повтор). Каждое следующее поколение модели «впитывает» в свои веса часть логики, которая раньше жила в харнессе — например, умение самостоятельно планировать многошаговую задачу или удерживать внимание на длинном контексте без явных подсказок инженера. Как только модель это впитала, инженеры «сбрасывают» соответствующую часть харнесса — удаляют костыль, который стал не нужен. Макэтир прямо предлагает считать мерилом прогресса харнесс-инжиниринга не то, сколько нового кода написано вокруг модели, а то, сколько существующего кода удалось выбросить при сохранении того же уровня возможностей.</span>
+      <span data-lang="en">The article's central idea is a model-plus-harness evolution loop the author names "train → absorb → shed → repeat." Each new model generation "absorbs" into its own weights some logic that used to live in the harness — for instance, the ability to plan a multi-step task on its own, or to hold attention on a long context without an engineer's explicit scaffolding. Once the model has absorbed that capability, engineers "shed" the corresponding piece of harness — they delete the crutch that's no longer needed. McAteer explicitly proposes measuring harness-engineering progress not by how much new code gets written around the model, but by how much existing code you get to delete while keeping the same capability level.</span>
+    </p>
+
+    <h2><span data-lang="ru">Куда сдвигается харнесс: от модели — к вниманию человека</span><span data-lang="en">Where the harness is shifting: from the model to human attention</span></h2>
+    <p>
+      <span data-lang="ru">Если продолжать цикл «впитывание → сброс» до предела, встаёт вопрос: что останется у харнесса, когда модель впитает в себя почти всё техническое — планирование, инструменты, память? Ответ автора — «attention-interface» (интерфейс внимания): токены стали дешёвым и надёжным ресурсом, а по-настоящему дефицитным ресурсом осталось синхронное внимание человека или команды. Поэтому следующий слой эволюции харнесса, по мысли Макэтира, будет обслуживать не модель (ей всё меньше нужны костыли), а человека — определять, когда и в каком виде агент должен прервать свою автономную работу и привлечь внимание конкретного человека, а не просто выполнять задачу от начала до конца в одиночку.</span>
+      <span data-lang="en">Push the "absorb → shed" cycle to its limit and a question arises: what's left for the harness to do once the model has absorbed nearly everything technical — planning, tool use, memory? The author's answer is the "attention-interface": tokens have become a cheap, reliable resource, while the truly scarce resource left is a human's or a team's synchronous attention. So the next layer of harness evolution, in McAteer's view, will serve not the model (which needs fewer and fewer crutches) but the human — deciding when and how an agent should interrupt its own autonomous run to pull a specific person's attention, rather than simply grinding through a task alone start to finish.</span>
+    </p>
+
+    <h2><span data-lang="ru">Практический вывод для тех, кто строит агентов</span><span data-lang="en">The practical takeaway for people building agents</span></h2>
+    <p>
+      <span data-lang="ru">Из этой рамки вытекает конкретная рекомендация для инженеров, которые сейчас пишут харнессы для агентов: не привязываться намертво к текущим ограничениям модели, потому что часть написанного кода — это временный костыль, который через одно-два поколения моделей придётся выбросить. Вместо этого стоит заранее закладывать в харнесс не только «как заставить модель работать», но и «когда и как агенту стоит остановиться и спросить человека» — именно эта часть, по мнению автора, не исчезнет вместе с ростом возможностей моделей, а, наоборот, будет только усложняться и цениться выше.</span>
+      <span data-lang="en">This framing carries a concrete recommendation for engineers writing agent harnesses today: don't get too attached to today's model limitations, because a chunk of what you're writing is a temporary crutch you'll throw away one or two model generations from now. Instead, the harness should encode not just "how to make the model work" but also "when and how the agent should stop and ask a human" — that part, the author argues, won't disappear as model capability grows; if anything, it will get more sophisticated and more valuable over time.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

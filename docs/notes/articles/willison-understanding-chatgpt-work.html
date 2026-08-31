@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Understanding ChatGPT Work» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-08-30</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-08-30</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Разбираемся, что такое ChatGPT Work</span>
+      <span data-lang="en">Understanding ChatGPT Work</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">OpenAI выпустила ChatGPT Work ещё 9 июля и с тех пор непрерывно её дорабатывает, но — как отмечает Саймон Уиллисон — официальная документация объясняет продукт через «для чего он нужен», а не через «что он на самом деле делает». Разобраться пришлось экспериментальным путём. Первое уточнение: под вывеской ChatGPT Work на самом деле скрываются два разных продукта. Version в десктопном приложении (бывшем Codex) работает локально и имеет доступ к файлам и программам на компьютере пользователя — по сути, это Codex, переупакованный так, чтобы не пугать нетехнических людей. Версия, доступная через chatgpt.com и мобильные приложения, выполняется в облаке — именно её Уиллисон называет «Work Cloud» и разбирает в статье. Обе версии доступны только платным подписчикам от $20/мес — бесплатным пользователям и подписчикам за $8/мес Work не открыт.</span>
+      <span data-lang="en">OpenAI shipped ChatGPT Work back on July 9th and has been iterating on it ever since, but — as Simon Willison notes — the official docs explain the product in terms of what it's <em>for</em>, not what it actually <em>does</em>. Figuring that out took hands-on experimentation. First clarification: "ChatGPT Work" is actually two separate products. The version in the desktop app (formerly called Codex) runs locally with access to files and programs on your own machine — essentially Codex re-skinned to feel less intimidating to non-developers. The version reachable through chatgpt.com and the mobile apps runs in the cloud — Willison calls this one "Work Cloud" and it's what the rest of the article covers. Both flavors require a $20/month-and-up subscription; free users and $8/month Go subscribers don't get access at all.</span>
+    </p>
+
+    <h2><span data-lang="ru">Чем Work реально отличается от обычного чата</span><span data-lang="en">What actually sets Work apart from regular Chat</span></h2>
+    <p>
+      <span data-lang="ru">OpenAI объясняет разницу между Chat и Work через сценарии использования («используйте Work, когда нужен результат с чётким исходом — бриф, презентация, аналитика»), но Уиллисон называет это объяснение практически бесполезным: он годами решал все эти задачи в обычном Chat. Реальная разница — в наборе технических возможностей, доступных только в Work Cloud: выбор моделей Luna и Terra вместо Sol; среда выполнения кода с выходом в интернет; полноценный headless-браузер Chrome; персистентная файловая система, общая между сессиями; возможность публиковать сайты ChatGPT Sites; суб-агенты на базе Sol, Luna и Terra; и запланированные автоматизации по расписанию.</span>
+      <span data-lang="en">OpenAI frames the Chat-versus-Work distinction around use cases ("use Work when you want a clear-outcome deliverable — a brief, a deck, an analysis"), but Willison calls that explanation almost useless: he's been handling all of those task types in regular Chat for years. The real difference is a specific set of technical capabilities available only in Work Cloud: the option to pick Luna and Terra instead of Sol; a code execution environment with internet access; a full headless Chrome browser; a persistent filesystem shared across sessions; the ability to publish ChatGPT Sites; sub-agent sessions running Sol, Luna, and Terra; and scheduled prompt automations.</span>
+    </p>
+
+    <h2><span data-lang="ru">Код с выходом в интернет и полноценный браузер</span><span data-lang="en">Internet-connected code and a real browser</span></h2>
+    <p>
+      <span data-lang="ru">Самая яркая для Уиллисона деталь — среда выполнения кода в Work Cloud теперь может свободно обращаться к остальному интернету: клонировать репозитории с GitHub, ставить зависимости и тут же обращаться к внешним API и сайтам. Обычный ChatGPT Chat такого не умеет — сетевой прокси контейнера блокирует подобные обращения. У Claude похожий контейнер имеет ограниченный доступ в сеть с коротким списком разрешённых доменов (PyPI, npm, GitHub) ещё с прошлого сентября; Work Cloud по умолчанию открыт куда шире, хотя список разрешённых доменов можно и ограничить вручную. Второй мощный инструмент — полноценный headless Chrome: он открывает сайты, заполняет формы, делает скриншоты и выполняет произвольный JavaScript внутри DOM загруженной страницы. Если сайт требует входа, браузер может передать управление пользователю для ввода пароля и кода 2FA напрямую, не пропуская эти данные через саму модель. Уиллисон показывает пример: одной командой Work загружает его блог и с помощью JavaScript извлекает из DOM все заголовки страницы — почти один в один повторяя его собственный инструмент shot-scraper, только теперь доступный прямо с телефона.</span>
+      <span data-lang="en">The detail that excites Willison the most: the code execution environment in Work Cloud can now freely talk to the rest of the internet — clone GitHub repos, install dependencies, and immediately hit external APIs and websites. Regular ChatGPT Chat can't do any of that; the container's network proxy blocks it. Claude's equivalent container has had limited network access — a short allowlist of domains (PyPI, npm, GitHub) — since last September; Work Cloud defaults to something much more open, though the allowed-domain list can be restricted manually. The second powerful tool is a full headless Chrome instance: it opens sites, fills out forms, takes screenshots, and runs arbitrary JavaScript against a loaded page's DOM. If a site requires sign-in, the browser can hand control to the user to enter a password and 2FA code directly, without routing those credentials through the model itself. Willison demonstrates this by asking Work to load his blog and extract all the page's headings via JavaScript — nearly identical to his own shot-scraper tool, only now reachable straight from his phone.</span>
+    </p>
+
+    <h2><span data-lang="ru">Персистентная файловая система и публикация сайтов</span><span data-lang="en">A persistent filesystem and publishing sites</span></h2>
+    <p>
+      <span data-lang="ru">В обычном Chat каждая сессия получает свежую, изолированную файловую систему. В Work Cloud у каждой сессии своя папка-«черновик» в общем томе <code>/workspace</code>, но этот том смонтирован во все текущие сессии сразу — правки файлов из одной сессии мгновенно видны в других (хотя процессы и localhost-серверы между сессиями не расшарены). У Уиллисона таких папок накопилось уже 171. Ещё одна возможность — ChatGPT Sites: Work Cloud умеет собирать и по-настоящему деплоить сайты на Cloudflare Workers, вплоть до серверной логики поверх Cloudflare D1 и R2. В качестве демонстрации Уиллисон одной фразой («найди все изображения пеликана в благочестии по Лондону, собери JSON и построй по нему сайт») получил рабочий, задеплоенный сайт с адресом на поддомене chatgpt.site — по умолчанию приватный, но его можно опубликовать или расшарить с конкретными людьми на командных тарифах.</span>
+      <span data-lang="en">In regular Chat, every session gets a fresh, isolated filesystem. In Work Cloud, each session gets its own scratch folder inside a shared <code>/workspace</code> volume, but that volume is mounted into every currently-running session at once — file edits from one session show up instantly in the others (though processes and localhost servers aren't shared between sessions). Willison has accumulated 171 such folders. Another capability is ChatGPT Sites: Work Cloud can build <em>and actually deploy</em> websites on Cloudflare Workers, including server-side logic on top of Cloudflare D1 and R2. As a demo, one prompt — "find every pelican-in-her-piety image across London, turn it into a JSON file, and build a site about it" — produced a working, deployed site on a chatgpt.site subdomain, private by default but shareable publicly or with specific people on team plans.</span>
+    </p>
+
+    <h2><span data-lang="ru">Безопасность и 44 скрытых скилла</span><span data-lang="en">Safety, and 44 hidden skills</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон прямо указывает на риск: по его собственной модели «смертельной триады» (lethal trifecta) — доступ к приватным данным, воздействие недоверенного контента и канал для отправки украденной информации вовне — ChatGPT Work сочетает в себе все три составляющие сразу, а OpenAI пока не раскрывает, как именно защищает сессии Work от атак через инъекцию промпта (вероятно, тем же механизмом авто-ревью, что и в Codex). Из-за скрытости системных промптов и описаний инструментов Уиллисону пришлось буквально попросить сам ChatGPT Work описать себя: он создал сайт-справочник, который задокументировал 223 инструмента, а затем — по дополнительному запросу — ещё и полные копии всех «скиллов» модели. Оказалось, что их 44: от управления браузером через отдельный runtime <code>browser-client</code> до генерации изображений, работы с PDF, таблицами Excel/CSV и создания собственно ChatGPT Sites. Главный практический вывод Уиллисона — прежде чем доверять агенту с такими правами реальную работу, стоит понимать, из чего он на самом деле состоит, а не полагаться на маркетинговое описание «для каких задач это нужно».</span>
+      <span data-lang="en">Willison flags the risk directly: under his own "lethal trifecta" model — access to private data, exposure to untrusted content, and a channel to exfiltrate stolen information — ChatGPT Work combines all three at once, and OpenAI hasn't yet explained how it protects Work sessions against prompt injection (he guesses it's the same auto-review mechanism as Codex). Because OpenAI keeps system prompts and tool descriptions hidden, Willison ended up asking ChatGPT Work to document itself: he had it build a reference site cataloging 223 tools, then — with a follow-up prompt — full copies of every one of its "skills." It turned out there are 44 of them, ranging from browser control through a dedicated <code>browser-client</code> runtime to image generation, PDF handling, Excel/CSV spreadsheets, and building ChatGPT Sites itself. Willison's practical takeaway: before handing an agent with this much reach real work, it's worth understanding what it's actually made of, rather than relying on marketing copy about "what tasks it's for."</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
