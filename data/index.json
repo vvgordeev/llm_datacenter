@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-01",
+      "news_count": 1,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Tencent открывает веса Hy4 preview — флагманскую MoE-модель на 770 млрд параметров с контекстом 1М токенов",
+        "en": "Tencent open-sources Hy4 preview, a 770B-parameter MoE flagship with a 1M-token context window"
+      }
+    },
+    {
       "date": "2026-08-31",
       "news_count": 3,
       "expert_count": 3,

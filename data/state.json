@@ -391,7 +391,8 @@
     "https://www.testingcatalog.com/grok-bot-to-get-templates-and-multi-account-support-soon/": "2026-08-31",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
     "https://www.oneusefulthing.org/p/agency-and-agents": "2026-08-31",
-    "https://www.latent.space/p/attention-interface": "2026-08-31"
+    "https://www.latent.space/p/attention-interface": "2026-08-31",
+    "https://github.com/Tencent-Hunyuan/Hy4-preview": "2026-09-01"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -1111,6 +1112,13 @@
     "xai-grok-bot-templates": {
       "last_date": "2026-08-31",
       "summary": "Grok Bot adds shareable agent templates (shipped Aug 28), Chrome profile import, desktop egress routing to bypass datacenter IP blocks, and multi-account switching"
+    },
+    "tencent-hy4-preview": {
+      "last_date": "2026-09-01",
+      "summary": {
+        "ru": "Tencent открывает веса Hy4 preview: 770B/49B MoE, 1M контекст, Apache 2.0, production serving day one",
+        "en": "Tencent open-sources Hy4 preview: 770B/49B MoE, 1M context, Apache 2.0, production serving on day one"
+      }
     }
   }
 }

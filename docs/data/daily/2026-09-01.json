@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T05:25:55Z",
+  "news": [
+    {
+      "id": "2026-09-01-tencent-hy4-preview",
+      "cluster_id": "tencent-hy4-preview",
+      "models": [
+        "tencent"
+      ],
+      "title": {
+        "ru": "Tencent открывает веса Hy4 preview — флагманскую MoE-модель на 770 млрд параметров с контекстом 1М токенов",
+        "en": "Tencent open-sources Hy4 preview, a 770B-parameter MoE flagship with a 1M-token context window"
+      },
+      "summary": {
+        "ru": "Команда Tencent Hy (Hunyuan) выпустила и полностью открыла веса Hy4 preview под лицензией Apache 2.0: Mixture-of-Experts модель на 770 млрд параметров (49 млрд активных на токен), 78 слоёв с Gated DeepSeek Sparse Attention и встроенным MTP-слоем для спекулятивного декодирования, контекст свыше 1М токенов. Релиз сразу сопровождается production-инфраструктурой — официальными Docker-образами для vLLM и SGLang с OpenAI-совместимым API, инструментом квантования AngelSlim и полным пайплайном дообучения, а не только весами и постом в блоге. По внутреннему слепому тестированию Tencent на 203 инженерных задачах модель немного опередила GLM-5.3 и Kimi K3.",
+        "en": "Tencent's Hy (Hunyuan) team released and fully open-sourced Hy4 preview under Apache 2.0: a Mixture-of-Experts model with 770B total parameters (49B active per token), 78 layers using Gated DeepSeek Sparse Attention plus a built-in MTP layer for speculative decoding, and a context window past 1M tokens. The release ships with production infrastructure from day one — official Docker images for vLLM and SGLang with an OpenAI-compatible API, the AngelSlim quantization toolkit, and a full fine-tuning pipeline, not just weights and a blog post. In Tencent's own blind internal evaluation across 203 engineering tasks, the model narrowly edged out GLM-5.3 and Kimi K3."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Ещё один открытый флагман топ-уровня с разрешительной лицензией и готовой serving-инфраструктурой — заметно расширяет выбор для тех, кто самостоятельно хостит или использует открытые модели по API, но не меняет подходы к использованию LLM для массового пользователя и не открывает новый класс сценариев.",
+        "en": "Another top-tier open-weight flagship with a permissive license and ready-made serving infrastructure — a real expansion of choice for self-hosters and open-model API users, but it doesn't change how everyday LLM users work or open a new class of scenarios."
+      },
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy4-preview",
+      "opinions": [
+        {
+          "author": "MindStudio (обзор релиза)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Tencent обращается с открытым ИИ как с продуктовой стратегией, а не пиар-акцией для исследователей: production serving-инфраструктура в день релиза, полные веса без урезанной лицензии — это шаблон того, как крупным компаниям стоит выпускать открытые модели.",
+            "en": "Tencent treats open-source AI as a product strategy, not a research publicity stunt — shipping production serving infrastructure on day one and full weights under a permissive license is the template for how major companies should release open-weight models."
+          },
+          "url": "https://www.mindstudio.ai/blog/tencent-hy4-preview-open-weight-model"
+        },
+        {
+          "author": "eesel AI (обзор)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Собственный график Tencent показывает обмен победами и поражениями с конкурентами, так что честная формулировка — «на уровне лучших открытых моделей», а не «превосходит всех»: разрыв в 0.05 балла по внутренней шкале компании — это статистическое пожатие плечами, а не результат.",
+            "en": "Tencent's own published chart shows it trading wins and losses with rivals, so the honest read is 'on par with the best open models,' not 'beats them all' — a 0.05-point gap on the vendor's own scale is a statistical shrug, not a result."
+          },
+          "url": "https://www.eesel.ai/blog/tencent-hy4-review"
+        },
+        {
+          "author": "MindStudio (гид по локальному запуску)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Полные веса в BF16 — это около 1848 ГБ, нужно минимум 16×B200 или 8×B300 под веса и KV-кэш; даже квантованная MXFP8-сборка занимает около 924 ГБ. Для подавляющего большинства «использовать» Hy4 preview означает работать через API или приложения Tencent, а не запускать модель на своём железе.",
+            "en": "The full BF16 weights come to about 1,848GB, requiring at least 16x B200 or 8x B300 for weights plus KV cache; even the quantized MXFP8 build is still about 924GB. For most people, 'using' Hy4 preview realistically means the API or one of Tencent's apps, not running it on your own hardware."
+          },
+          "url": "https://www.mindstudio.ai/blog/run-tencent-hy4-preview-locally"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команда разворачивает Hy4 preview через официальные production Docker-образы vLLM или SGLang с OpenAI-совместимым API вместо самостоятельной сборки serving-стека для MoE-модели такого масштаба.",
+            "en": "A team deploys Hy4 preview via the official production Docker images for vLLM or SGLang with an OpenAI-compatible API, instead of building a serving stack for a MoE model at this scale from scratch."
+          },
+          "url": "https://github.com/Tencent-Hunyuan/Hy4-preview"
+        },
+        {
+          "text": {
+            "ru": "Компания выбирает Hy4 preview как более дешёвую альтернативу Kimi K3 и Qwen3.8 Max для агентных инженерных задач на инфраструктуре, которую полностью контролирует, благодаря разрешительной лицензии Apache 2.0.",
+            "en": "A company picks Hy4 preview as a cheaper alternative to Kimi K3 and Qwen3.8 Max for agentic engineering tasks on infrastructure it fully controls, thanks to the permissive Apache 2.0 license."
+          },
+          "url": "https://www.eesel.ai/blog/tencent-hy4-review"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}
