@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-02",
+      "news_count": 3,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "Anthropic выпускает Claude Fable 5.1 и Mythos 5.1",
+        "en": "Anthropic ships Claude Fable 5.1 and Mythos 5.1"
+      }
+    },
+    {
       "date": "2026-09-01",
       "news_count": 1,
       "expert_count": 0,

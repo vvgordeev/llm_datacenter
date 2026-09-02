@@ -1,0 +1,188 @@
+{
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T06:35:00Z",
+  "news": [
+    {
+      "id": "2026-09-02-fable-5-1-mythos-5-1",
+      "cluster_id": "anthropic-fable-mythos-5-1",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic выпускает Claude Fable 5.1 и Mythos 5.1",
+        "en": "Anthropic ships Claude Fable 5.1 and Mythos 5.1"
+      },
+      "summary": {
+        "ru": "1 сентября Anthropic представила Claude Fable 5.1 и Mythos 5.1 — одну и ту же модель с разным уровнем защитных ограничений. Она обходит Fable 5 и Opus 5 на нескольких бенчмарках (например, Terminal-Bench-Science 0.1: 52,6% против 24,7% и 29,0%), стоит примерно на 25% дешевле в типовых нагрузках и добавляет два новых элемента: изменение уровня усилия модели прямо посреди диалога и подписанные метки происхождения контента (C2PA) для сгенерированных изображений и видео.",
+        "en": "On September 1 Anthropic released Claude Fable 5.1 and Mythos 5.1 — the same underlying model with different safeguard levels. It beats Fable 5 and Opus 5 on several benchmarks (e.g. Terminal-Bench-Science 0.1: 52.6% vs 24.7% and 29.0%), runs about 25% cheaper for typical workloads, and adds two new pieces: mid-conversation effort adjustment and signed C2PA content-provenance tags for generated images and video."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Флагманский релиз ведущей лаборатории с реальными новыми возможностями (эффорт посреди диалога, C2PA-метки происхождения) и заметным приростом качества и цены — меняет то, как строят агентные и мультимодальные пайплайны, но не является сменой парадигмы.",
+        "en": "A flagship release from a leading lab with genuinely new capabilities (mid-conversation effort, C2PA provenance) and a real quality/price jump — changes how agentic and multimodal pipelines get built, but isn't a paradigm shift."
+      },
+      "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Симон Уиллисон прогнал свой тест «пеликан на велосипеде» на всех пяти уровнях усилия Fable 5.1 и опубликовал полные транскрипты рассуждений для каждого — практический способ увидеть, что именно меняется между уровнями на одном и том же промпте.",
+            "en": "Simon Willison ran his 'pelican riding a bicycle' SVG benchmark across all five of Fable 5.1's effort levels and published the full reasoning transcripts for each — a hands-on way to see what the effort levels actually change on an identical prompt."
+          },
+          "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/"
+        },
+        {
+          "author": "am.will (@LLMJunky)",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Fable 5.1 — это безумие в геймдизайне... определённо впечатлён»: в посте на X пользователь показал, что модель уложилась в двухшаговый промпт там, где Fable 5 тратил больше часа.",
+            "en": "\"Fable 5.1 is NUTS at Game Design... certainly impressed\": in a post on X the user showed the model nailing a two-shot prompt on a benchmark that used to take Fable 5 over an hour."
+          },
+          "url": "https://x.com/LLMJunky/status/2094894000524156946"
+        },
+        {
+          "author": "MakerMatters",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "«Не так впечатлён, как был Fable 5»: пользователь X пожаловался, что модель по умолчанию делегирует задачи агентам и останавливается, не продолжая работу без постоянных подсказок.",
+            "en": "\"Not as impressed as I was with Fable 5\": an X user complained the model defaults to spinning up agents and then stalls, requiring constant prompting to keep going."
+          },
+          "url": "https://x.com/MakerMatters/status/2081226260471001399"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчики могут менять уровень усилия модели прямо посреди диалога (бета, нужен заголовок mid-conversation-output-config-2026-07-01) — например, поднимать его только для реплик, где нужен точный поиск, вместо того чтобы держать высокий уровень на весь разговор.",
+            "en": "Developers can change the model's effort level mid-conversation (beta, requires the mid-conversation-output-config-2026-07-01 header) — e.g. raising it only for turns that need accurate retrieval instead of holding high effort for the whole session."
+          },
+          "url": "https://platform.claude.com/docs/en/build-with-claude/effort"
+        },
+        {
+          "text": {
+            "ru": "Изображения и видео, сгенерированные Fable 5.1/Mythos 5.1 через Files API, получают подписанные метки происхождения по стандарту C2PA — их можно проверить ниже по цепочке, не полагаясь на заявленное происхождение контента.",
+            "en": "Images and video Fable 5.1/Mythos 5.1 generate through the Files API carry signed C2PA content-provenance tags — downstream systems can verify AI origin instead of relying on a stated claim."
+          },
+          "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+        },
+        {
+          "text": {
+            "ru": "Mythos 5.1 с более разрешёнными защитами для кибербезопасности достигает 60,9% на Terminal-Bench 4.0 (против 55,8% у Fable 5.1) — Anthropic позиционирует его для поиска уязвимостей внутри доверенных программ допуска.",
+            "en": "Mythos 5.1, with more permissive cybersecurity safeguards, scores 60.9% on Terminal-Bench 4.0 (vs 55.8% for Fable 5.1) — Anthropic positions it for vulnerability discovery inside trusted access programs."
+          },
+          "url": "https://officechai.com/ai/fable-5-1-benchmarks/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-02-pentagon-genai-mil",
+      "cluster_id": "pentagon-genai-mil-chatgpt-grok",
+      "models": ["openai", "xai", "google"],
+      "title": {
+        "ru": "Пентагон открывает ChatGPT Mil и Grok for Government на портале GenAI.mil рядом с Gemini",
+        "en": "Pentagon adds ChatGPT Mil and Grok for Government to GenAI.mil alongside Gemini"
+      },
+      "summary": {
+        "ru": "31 августа – 1 сентября Пентагон добавил на защищённый портал GenAI.mil версии ChatGPT (ChatGPT Mil) и Grok (Grok for Government) от OpenAI и xAI — они встали рядом с уже работающим там Gemini и получили допуск уровня Impact Level 5 для работы с контролируемой несекретной информацией. Доступ открыт для 3 млн военных и гражданских сотрудников Минобороны США (1,7 млн уже подключились), а Claude от Anthropic на портале по-прежнему отсутствует: компания отказалась снять ограничения на автономное оружие и массовую слежку, что вылилось в судебный иск и решение суда на этой неделе в пользу Anthropic.",
+        "en": "On August 31–September 1 the Pentagon added OpenAI's ChatGPT Mil and xAI's Grok for Government to its secure GenAI.mil portal, alongside the Gemini deployment already running there, with Impact Level 5 accreditation for Controlled Unclassified Information work. Access covers 3 million DoD military and civilian personnel (1.7 million already onboarded), while Anthropic's Claude remains absent from the portal — the company refused to drop its restrictions on autonomous weapons and mass surveillance, a standoff that produced a lawsuit and, this week, a court ruling in Anthropic's favor."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Развёртывание трёх коммерческих LLM сразу на 3 млн государственных пользователей — заметное расширение области применения — и первый явный публичный случай, когда лаборатория (Anthropic) отказалась от условий контракта из-за автономного оружия и слежки, что повлияет на выбор поставщиков институциональными клиентами.",
+        "en": "Rolling out three commercial LLMs to 3 million government users is a real expansion of where LLMs get used — and the first clearly public case of a lab (Anthropic) walking away from a deal over autonomous-weapons/surveillance terms, which will factor into how institutional buyers pick vendors."
+      },
+      "source_url": "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/",
+      "opinions": [
+        {
+          "author": "Joe Larson (OpenAI, VP and Head of Government)",
+          "stance": "positive",
+          "quote": {
+            "ru": "«ChatGPT на GenAI.mil сделает несекретную работу по всему министерству эффективнее, освобождая время и ресурсы, чтобы сотрудники могли сосредоточиться на задаче», — заявил Ларсон изданию Fortune.",
+            "en": "\"ChatGPT on GenAI.mil will make unclassified work throughout the Department more efficient, freeing up time and resources so DoW personnel can focus on the mission,\" Larson told Fortune."
+          },
+          "url": "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/"
+        },
+        {
+          "author": "Tech Times",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Издание указывает, что собственные инженеры xAI признали отсутствие надёжного технического решения проблемы генерации Grok материалов о сексуальном насилии над детьми (CSAM) — а в объявлении о расширении так и не объяснили, чем Grok for Government в этом отношении отличается от потребительской версии.",
+            "en": "The outlet notes that xAI's own engineers acknowledged there is no reliable technical fix for Grok's CSAM-generation problem — and that the expansion announcement never clarified how Grok for Government differs from the consumer version on this point."
+          },
+          "url": "https://www.techtimes.com/articles/326133/20260901/pentagon-deployed-grok-genaimil-after-engineers-said-csam-has-no-reliable-fix.htm"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "ChatGPT Mil нацелен на объёмную рутинную несекретную работу — административные задачи, логистику, планирование и разработку политики — внутри изолированной государственной облачной инфраструктуры.",
+            "en": "ChatGPT Mil targets document-heavy, routine unclassified work — administrative tasks, logistics, planning and policy drafting — inside isolated government cloud infrastructure."
+          },
+          "url": "https://defensescoop.com/2026/08/31/grok-chatgpt-added-to-genai-mil/"
+        },
+        {
+          "text": {
+            "ru": "Grok for Government добавляет выбираемые режимы рассуждений, постоянные проекты и переиспользуемые «плейбуки» для сотрудников Минобороны.",
+            "en": "Grok for Government adds selectable reasoning modes, persistent projects and reusable playbooks for DoD personnel."
+          },
+          "url": "https://www.androidheadlines.com/2026/09/pentagon-custom-chatgpt-grok-models-military.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-02-gemini-guided-vision",
+      "cluster_id": "google-gemini-guided-vision",
+      "models": ["google"],
+      "title": {
+        "ru": "Gemini Live получает функцию Guided Vision для незрячих и слабовидящих",
+        "en": "Gemini Live ships Guided Vision for blind and low-vision users"
+      },
+      "summary": {
+        "ru": "1 сентября в рамках сентябрьского Android Feature Drop Google выпустила Guided Vision — функцию Gemini Live, которая голосом описывает то, что видит камера телефона, подсказывает, как навести кадр, и помогает прочитать мелкий шрифт или меню в тёмном помещении. Функция разрабатывалась вместе с сообществом незрячих и слабовидящих пользователей и выходит на Android 9+ там, где доступен Gemini, вместе с отдельной функцией «запоминания» местоположения вещей в Find Hub на Android 16+.",
+        "en": "As part of the September Android Feature Drop, Google shipped Guided Vision on September 1 — a Gemini Live feature that describes aloud whatever the phone's camera is pointed at, gives reframing prompts, and helps read fine print or a menu in low light. Built with input from the blind and low-vision community, it's rolling out to Android 9+ wherever Gemini is available, alongside a separate Find Hub item-location memory feature on Android 16+."
+      },
+      "impact_score": 2,
+      "impact_reason": {
+        "ru": "Полезное, но нишевое расширение существующей возможности Gemini Live (голос + камера) для конкретной группы пользователей — подходы к использованию LLM не меняет.",
+        "en": "A useful but niche extension of an existing Gemini Live capability (voice+camera) for a specific user group — doesn't change broader approaches to using LLMs."
+      },
+      "source_url": "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/",
+      "opinions": [
+        {
+          "author": "Android Central",
+          "stance": "positive",
+          "quote": {
+            "ru": "В обзоре сентябрьского Android Drop издание пишет, что предпочитает такие обновления любой очередной «новой фиче ради ИИ» — Guided Vision и Motion Assist названы среди функций, которых на Android «давно ждали».",
+            "en": "In its write-up of the September Android Drop, the outlet says it will \"always prefer updates like this over some 'new thing' for AI\" — naming Guided Vision and Motion Assist as features it's \"ready for\" on Android."
+          },
+          "url": "https://www.androidcentral.com/phones/google-pixel/android-drop-google-motion-assist-and-guided-vision-on-android"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пользователь наводит камеру на этикетку с мелким шрифтом или меню в тёмном ресторане и получает голосовое описание вместе с помощью в наведении кадра.",
+            "en": "A user can point the camera at a food label with fine print or a menu in a dim restaurant and get a spoken description plus help lining up the shot."
+          },
+          "url": "https://www.androidauthority.com/gemini-live-guided-vision-2-3705480/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-02-willison-fable-5-1-pelican",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Claude Fable 5.1 нарисовал мне отличного анимированного пеликана",
+        "en": "Claude Fable 5.1 made me a really nice animated pelican"
+      },
+      "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
+      "summary": {
+        "ru": "Уиллисон прогоняет свой стандартный тест — SVG-пеликан на велосипеде — через все пять уровней усилия новой модели и разбирает, что меняется в результате и в рассуждениях модели по мере роста уровня.",
+        "en": "Willison runs his standard 'SVG pelican riding a bicycle' test across all five effort levels of the new model and breaks down what changes in the output and in the model's reasoning as the level goes up."
+      },
+      "note_page": "notes/articles/willison-fable-5-1-pelican.html"
+    }
+  ]
+}

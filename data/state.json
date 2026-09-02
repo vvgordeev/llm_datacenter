@@ -392,7 +392,12 @@
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
     "https://www.oneusefulthing.org/p/agency-and-agents": "2026-08-31",
     "https://www.latent.space/p/attention-interface": "2026-08-31",
-    "https://github.com/Tencent-Hunyuan/Hy4-preview": "2026-09-01"
+    "https://github.com/Tencent-Hunyuan/Hy4-preview": "2026-09-01",
+    "https://www.anthropic.com/claude-fable-and-mythos-5-1": "2026-09-02",
+    "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/": "2026-09-02",
+    "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/": "2026-09-02",
+    "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/": "2026-09-02",
+    "notes/articles/willison-fable-5-1-pelican.html": "2026-09-02"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -1118,6 +1123,27 @@
       "summary": {
         "ru": "Tencent открывает веса Hy4 preview: 770B/49B MoE, 1M контекст, Apache 2.0, production serving day one",
         "en": "Tencent open-sources Hy4 preview: 770B/49B MoE, 1M context, Apache 2.0, production serving on day one"
+      }
+    },
+    "anthropic-fable-mythos-5-1": {
+      "last_date": "2026-09-02",
+      "summary": {
+        "ru": "Anthropic выпускает Claude Fable 5.1 и Mythos 5.1 — новые флагманы с mid-conversation effort adjustment и C2PA-метками происхождения контента, на 25% дешевле Fable 5",
+        "en": "Anthropic ships Claude Fable 5.1 and Mythos 5.1 — new flagships with mid-conversation effort adjustment and C2PA content-provenance tags, 25% cheaper than Fable 5"
+      }
+    },
+    "pentagon-genai-mil-chatgpt-grok": {
+      "last_date": "2026-09-02",
+      "summary": {
+        "ru": "Пентагон добавляет ChatGPT Mil и Grok for Government на GenAI.mil рядом с Gemini для 3 млн пользователей; Claude отсутствует из-за спора об автономном оружии/слежке",
+        "en": "Pentagon adds ChatGPT Mil and Grok for Government to GenAI.mil alongside Gemini for 3M users; Claude is absent over the autonomous-weapons/surveillance dispute"
+      }
+    },
+    "google-gemini-guided-vision": {
+      "last_date": "2026-09-02",
+      "summary": {
+        "ru": "Google выпускает Gemini Live Guided Vision — голосовое описание камеры для незрячих и слабовидящих пользователей в рамках сентябрьского Android Feature Drop",
+        "en": "Google ships Gemini Live Guided Vision — spoken camera descriptions for blind and low-vision users as part of the September Android Feature Drop"
       }
     }
   }

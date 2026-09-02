@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Claude Fable 5.1 made me a really nice animated pelican» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-01</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-01</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Claude Fable 5.1 нарисовал мне отличного анимированного пеликана</span>
+      <span data-lang="en">Claude Fable 5.1 made me a really nice animated pelican</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/1/claude-fable-5-1/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В день релиза Claude Fable 5.1 и Mythos 5.1 Симон Уиллисон, как обычно, не стал пересказывать пресс-релиз Anthropic, а прогнал модель через свой собственный неформальный бенчмарк — попросил нарисовать SVG-изображение пеликана, едущего на велосипеде. Тест возник ещё в октябре 2024 года как шутливый способ проверить, насколько модель способна работать с пространственными отношениями и составными формами без доступа к реальным изображениям, и с тех пор стал одним из узнаваемых неформальных ориентиров в сообществе для сравнения новых версий моделей друг с другом.</span>
+      <span data-lang="en">On the day Claude Fable 5.1 and Mythos 5.1 shipped, Simon Willison didn't just summarize Anthropic's press release — he ran the model through his own informal benchmark, asking it to draw an SVG image of a pelican riding a bicycle. The test dates back to October 2024 as a tongue-in-cheek way to check how well a model handles spatial relationships and compound shapes without access to real images, and it has since become one of the community's recognizable informal yardsticks for comparing model versions against each other.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что нового: один и тот же промпт на пяти уровнях усилия</span><span data-lang="en">What's new: one prompt, five effort levels</span></h2>
+    <p>
+      <span data-lang="ru">Главное практическое новшество, которое разбирает Уиллисон, — у Fable 5.1 теперь пять уровней усилия (low, medium, high, xhigh, max) вместо прежнего набора, и он сгенерировал полный набор пеликанов для каждого уровня, опубликовав вместе с картинками и полные транскрипты рассуждений модели. Это превращает шуточный тест в наглядный инструмент: вместо абстрактного «эта модель умнее» читатель может увидеть, как именно меняется процесс на одном и том же входе — сколько шагов рассуждения модель делает, какие детали композиции она добавляет или убирает, и где именно происходит скачок в качестве итогового изображения.</span>
+      <span data-lang="en">The main practical novelty Willison covers is that Fable 5.1 now has five effort levels (low, medium, high, xhigh, max) instead of the model's previous set, and he generated a full set of pelicans for each level, publishing the full reasoning transcripts alongside the images. That turns the joke test into a concrete illustration: instead of an abstract "this model is smarter," a reader can see exactly what changes on an identical input — how many reasoning steps the model takes, which compositional details it adds or drops, and where the jump in output quality actually happens.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это нужно на практике</span><span data-lang="en">Why this matters in practice</span></h2>
+    <p>
+      <span data-lang="ru">Anthropic одновременно с релизом добавила возможность менять уровень усилия прямо посреди диалога, не начиная новую сессию, — и разбор Уиллисона фактически служит наглядным объяснением того, для чего эта настройка нужна разработчикам. Если на низком уровне усилия модель чаще отвечает «по памяти» и реже вызывает инструменты поиска или проверки, а результат заметно грубее, то у команды, которая строит агентный пайплайн, появляется осязаемый повод поднимать эффорт выборочно — для конкретных шагов, где нужна точность, — вместо того чтобы держать максимальный (и самый дорогой) уровень на весь разговор целиком.</span>
+      <span data-lang="en">Alongside the release, Anthropic added the ability to change effort level mid-conversation without starting a new session — and Willison's breakdown effectively works as a concrete explanation of why that setting matters to developers. If at low effort the model answers more from memory and calls search or verification tools less often, and the result is noticeably rougher, then a team building an agentic pipeline gets a tangible reason to raise effort selectively — for specific steps that need precision — instead of holding the maximum (and most expensive) level for an entire conversation.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение подхода</span><span data-lang="en">Where the method falls short</span></h2>
+    <p>
+      <span data-lang="ru">Сам Уиллисон неизменно оговаривается, что тест с пеликаном — не строгий бенчмарк и не измеряет ничего похожего на реальные рабочие задачи: SVG-рисование — узкая, во многом декоративная способность, и хорошая картинка не гарантирует качества в кодинге, планировании или работе с длинным контекстом, для которых Anthropic в первую очередь и позиционирует Fable 5.1. Ценность разбора не в ранжировании моделей, а именно в наглядности: единственный воспроизводимый пример, на котором любой читатель может увидеть разницу между уровнями усилия своими глазами, прежде чем настраивать эту опцию в собственных промптах.</span>
+      <span data-lang="en">Willison is consistently careful to note that the pelican test isn't a rigorous benchmark and doesn't measure anything close to real work tasks: SVG drawing is a narrow, largely decorative capability, and a good picture doesn't guarantee quality on coding, planning, or long-context work — the areas Anthropic actually positions Fable 5.1 for. The value of the write-up isn't in ranking models; it's in the visibility it provides: a single, reproducible example where any reader can see the difference between effort levels with their own eyes before tuning that setting in their own prompts.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
