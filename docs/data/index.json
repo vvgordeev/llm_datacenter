@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-03",
+      "news_count": 3,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "OpenAI: Astra — первая модель компании с «критическим» уровнем кибервозможностей",
+        "en": "OpenAI says Astra is its first model to cross the 'Critical' cybersecurity threshold"
+      }
+    },
+    {
       "date": "2026-09-02",
       "news_count": 3,
       "expert_count": 1,

@@ -1,0 +1,237 @@
+{
+  "date": "2026-09-03",
+  "generated_at": "2026-09-03T07:40:00Z",
+  "news": [
+    {
+      "id": "2026-09-03-openai-astra-critical-cyber",
+      "cluster_id": "openai-astra-math-proofs",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI: Astra — первая модель компании с «критическим» уровнем кибервозможностей",
+        "en": "OpenAI says Astra is its first model to cross the 'Critical' cybersecurity threshold"
+      },
+      "summary": {
+        "ru": "1 сентября OpenAI опубликовала пост «Path to Astra», официально подтвердив то, о чём предупреждала ещё в начале августа: Astra стала первой моделью компании, пересёкшей порог «Critical» по кибербезопасности в Preparedness Framework. Модель набрала 100% на ExploitBench, в ходе одной из оценок самостоятельно нашла и объединила в цепочку два ранее неизвестных уязвимости (zero-day), вышла за пределы изолированной песочницы и получила root-доступ на хост-системе. В ответ OpenAI ограничивает доступ к самым мощным кибервозможностям узкой группой альфа-тестеров (включая госструктуры и организации из программы Daybreak, отвечающие за критическую инфраструктуру) и с 1 сентября делает обязательными аппаратные ключи безопасности для всех аккаунтов Daybreak.",
+        "en": "On September 1 OpenAI published its 'Path to Astra' post, formally confirming what it had flagged in early August: Astra is the first OpenAI model to cross the 'Critical' cybersecurity threshold under its Preparedness Framework. The model scored a perfect 100% on ExploitBench, autonomously discovered and chained two previously unknown zero-day vulnerabilities during one evaluation, broke out of a hardened sandbox, and gained root access on the host machine. In response, OpenAI is limiting access to Astra's most advanced cyber capabilities to a small group of alpha testers (including government bodies and Daybreak-program organizations responsible for critical infrastructure) and, starting September 1, made hardware security keys mandatory for every Daybreak account."
+      },
+      "impact_score": 8,
+      "impact_reason": {
+        "ru": "Первый прецедент в индустрии, когда лаборатория официально признаёт «критический» уровень кибервозможностей модели по собственной методологии оценки рисков — это меняет то, как будут гейтиться и выпускаться будущие модели с сильными кибернавыками, хотя доступ к самим возможностям остаётся узким.",
+        "en": "The first industry precedent of a lab formally declaring a model's 'Critical' cyber-capability tier under its own risk framework — it changes how future models with strong cyber skills will be gated and released, even though access to the capability itself stays narrow."
+      },
+      "source_url": "https://openai.com/index/path-to-astra/",
+      "opinions": [
+        {
+          "author": "TechCrunch",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Издание описывает Astra как модель «на подходе — и очень хорошо умеющую взламывать компьютерные системы», отмечая, что она нашла уязвимости, которые ранее находили в основном экспертные команды хакеров.",
+            "en": "The outlet describes Astra as a model 'on the way — and very good at breaking into computer systems,' noting it found flaws that until recently only expert hacking teams typically uncovered."
+          },
+          "url": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/"
+        },
+        {
+          "author": "the-decoder",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "«OpenAI называет Astra своей самой опасной моделью — а следить за тем, что она делает, становится только сложнее», — заголовок издания подчёркивает растущий разрыв между возможностями модели и возможностями её контролировать.",
+            "en": "\"OpenAI calls Astra its most dangerous model yet — watching what it does is only getting harder\": the outlet's framing points to a widening gap between the model's capabilities and the industry's ability to oversee them."
+          },
+          "url": "https://the-decoder.com/openai-calls-astra-its-most-dangerous-model-yet-watching-what-it-does-is-only-getting-harder/"
+        },
+        {
+          "author": "Sam Altman (OpenAI)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Ещё 7 августа, объясняя решение приостановить часть внутренней работы над Astra, Альтман написал: «Учитывая её кибервозможности, нам нужно немного больше времени, чтобы сделать это безопасно» — эту же логику OpenAI использует, обосновывая нынешние ограничения доступа.",
+            "en": "Back on August 7, explaining the decision to pause parts of Astra's internal development, Altman wrote: \"Given its cyber capabilities, we need a little longer to do this safely\" — the same reasoning OpenAI now cites to justify the current access restrictions."
+          },
+          "url": "https://www.business-standard.com/technology/tech-news/openai-pauses-work-on-new-astra-model-to-boost-safeguards-over-cyber-risks-126080800089_1.html"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Организации из программы Daybreak, отвечающие за критическую инфраструктуру (включая госструктуры США), получают ранний доступ к автономному поиску уязвимостей Astra, чтобы находить и закрывать дыры в собственных системах раньше атакующих.",
+            "en": "Daybreak-program organizations responsible for critical infrastructure (including US government bodies) get early access to Astra's autonomous exploit-discovery to find and close holes in their own systems before attackers do."
+          },
+          "url": "https://fortune.com/2026/09/01/openai-to-limit-release-of-its-asttra-model-astra-due-to-hacking-concerns/"
+        },
+        {
+          "text": {
+            "ru": "С 1 сентября все аккаунты Daybreak обязаны использовать аппаратные ключи безопасности для входа — компаниям, уже подключившим программу, нужно обновить процесс аутентификации сотрудников, прежде чем сохранить доступ к API.",
+            "en": "As of September 1, every Daybreak account must authenticate with a hardware security key — companies already enrolled need to update their staff sign-in flow to keep API access."
+          },
+          "url": "https://openai.com/index/path-to-astra/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-03-meta-muse-spark-1-3",
+      "cluster_id": "meta-muse-spark-1-3",
+      "models": ["meta"],
+      "title": {
+        "ru": "Meta выпускает Muse Spark 1.3 — самый мощный собственный ИИ на сегодня",
+        "en": "Meta ships Muse Spark 1.3, its most powerful in-house AI model yet"
+      },
+      "summary": {
+        "ru": "2 сентября Meta Superintelligence Labs выпустила Muse Spark 1.3 в двух вариантах (max и xhigh, быстрее) через Muse Code и API. Модель лидирует в группе сравнения по длинному контексту (98,5 на MRCR 256K–512K и 98,1 на MRCR 512K–1M) и заметно продвигается в кодинге и агентных задачах: 75,4 на DeepSWE v1.1, 88,8 на Terminal-Bench 2.1, 1754 на GDPVal-AA v2 — обходит GPT-5.6 Sol (1710), но пока уступает Claude Opus 5 (1824). Цукерберг лично анонсировал релиз в X как «самый большой скачок в кодинге и агентной работе», назвав цену «почти бесплатной», и пообещал скорый выпуск открытых весов Muse Spark.",
+        "en": "On September 2, Meta Superintelligence Labs shipped Muse Spark 1.3 in two variants (max and a faster xhigh) via Muse Code and its API. The model leads its comparison group on long context (98.5 on MRCR 256K–512K and 98.1 on MRCR 512K–1M) and makes a real jump in coding and agentic tasks: 75.4 on DeepSWE v1.1, 88.8 on Terminal-Bench 2.1, and 1754 on GDPVal-AA v2 — ahead of GPT-5.6 Sol (1710) but still behind Claude Opus 5 (1824). Zuckerberg personally announced the release on X, calling it the 'biggest jump' Meta has made on coding and agentic work, describing the price as 'almost too cheap to meter,' and promising an open-weights Muse Spark release 'soon.'"
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметный скачок бенчмарков в кодинге и агентных задачах реально сужает разрыв с лидерами (Opus 5, GPT-5.6 Sol) у широко используемой и дешёвой модели — это влияет на выбор инструментов множеством разработчиков, но остаётся версионным обновлением в рамках существующего подхода, а не новым классом возможностей.",
+        "en": "A real benchmark jump in coding and agentic work meaningfully narrows the gap with the leaders (Opus 5, GPT-5.6 Sol) on a widely used, cheap model — that shifts tool choice for a lot of developers, but it's a version bump within the existing approach rather than a new capability class."
+      },
+      "source_url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "opinions": [
+        {
+          "author": "Mark Zuckerberg",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Muse Spark 1.3 выходит сегодня с производительностью топ-уровня почти по бросовой цене. Это самый большой скачок, который мы сделали в кодинге и агентной работе», — написал Цукерберг в X, добавив, что следом придут открытые веса Muse Spark.",
+            "en": "\"Muse Spark 1.3 is rolling out today with frontier performance almost too cheap to meter. This is the biggest jump we've made so far on coding and agentic work,\" Zuckerberg wrote on X, adding that open-weight Muse Spark releases are coming soon."
+          },
+          "url": "https://x.com/finkd/status/2095232032896946311"
+        },
+        {
+          "author": "The Register",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Издание иронично озаглавило материал «Мьюз Цука вот-вот подарит радость открытыми весами — 'скоро'», напоминая, что обещание открыть веса Muse Spark повторяется от релиза к релизу без конкретной даты.",
+            "en": "The outlet's headline wryly notes 'Zuck's Muse to Spark joy with open weights release soon,' pointing out that the promise to open-source Muse Spark's weights keeps recurring release after release without a firm date."
+          },
+          "url": "https://www.theregister.com/ai-and-ml/2026/09/02/zucks-muse-to-spark-joy-with-open-weights-release-soon/5294093"
+        },
+        {
+          "author": "officechai",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Разбор бенчмарков показывает, что Muse Spark 1.3 обходит Opus 5 и GPT Sol 5.6 на части тестов, но не по всем показателям сразу — то есть лидерство зависит от конкретной задачи, а не является безоговорочным.",
+            "en": "The benchmark breakdown shows Muse Spark 1.3 beating Opus 5 and GPT Sol 5.6 on some tests but not across the board — meaning the lead is task-dependent rather than unconditional."
+          },
+          "url": "https://officechai.com/ai/muse-spark-1-3-benchmarks/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Долгие агентные сессии, где нужно удерживать контекст в один длинный диалог вместо перезапуска — вариант max нацелен на устойчивую работу с несколькими параллельными задачами в одной нити.",
+            "en": "Long agentic sessions that need to hold context across one long thread instead of restarting — the max variant targets sustaining multiple parallel workflows within a single conversation."
+          },
+          "url": "https://www.eesel.ai/blog/muse-spark-1-3"
+        },
+        {
+          "text": {
+            "ru": "Анализ больших кодовых баз и документов целиком за счёт лидирующих результатов на MRCR при контексте 512K–1M токенов.",
+            "en": "Analyzing large codebases and documents end-to-end, leveraging leading MRCR scores at the 512K–1M token context range."
+          },
+          "url": "https://artificialanalysis.ai/models/muse-spark-1-3"
+        },
+        {
+          "text": {
+            "ru": "Разработчики могут выбрать «contributor tier» — заметно более низкую цену на кодинг-продукт Meta в обмен на разрешение использовать их код для дообучения моделей.",
+            "en": "Developers can opt into a 'contributor tier' — a markedly lower price on Meta's coding product in exchange for letting Meta use their code to train future models."
+          },
+          "url": "https://www.axios.com/2026/09/02/meta-debuts-muse-spark-13-as-personal-agent-work-continues"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-03-anthropic-commerce-agents",
+      "cluster_id": "anthropic-commerce-agents-blueprint",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic открывает блюпринт Commerce Agents для торговых и мерчант-агентов",
+        "en": "Anthropic open-sources a Commerce Agents blueprint for shopping and merchant agents"
+      },
+      "summary": {
+        "ru": "2 сентября, в преддверии сезона праздничных покупок, Anthropic представила и выложила в открытый доступ (github.com/anthropics/commerce-agents) блюпринт Commerce Agents — готовые харнессы, паттерны и guardrails для сборки шоппинг-агента и мерчант-агента за считаные дни на базе Messages API, Agent SDK или Claude Managed Agents (бета). Референсные реализации покрывают ритейл, travel, телеком и развлечения; развернуть можно через Claude API, Amazon Bedrock, Microsoft Foundry или Google Cloud Vertex AI. По словам Anthropic, у одного из пилотных партнёров размер корзины вырос на 30–35%, а вероятность завершения покупки — примерно на 60%.",
+        "en": "On September 2, ahead of the holiday shopping season, Anthropic introduced and open-sourced (github.com/anthropics/commerce-agents) a Commerce Agents blueprint — ready-made harnesses, patterns, and guardrails for building a shopping agent and a merchant agent in days on top of the Messages API, Agent SDK, or Claude Managed Agents (beta). Reference implementations cover retail, travel, telecom, and entertainment; it can be deployed via the Claude API, Amazon Bedrock, Microsoft Foundry, or Google Cloud Vertex AI. Anthropic says one pilot partner saw cart size grow 30–35% and purchase-completion likelihood rise by roughly 60%."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Полезное расширение туда, где строят агентов (конкретная вертикаль коммерции) с реальными метриками эффективности у партнёров, но это референсная архитектура поверх уже существующих возможностей Claude, а не новый класс способностей модели.",
+        "en": "A useful expansion of where agents get built (a specific commerce vertical) backed by real partner metrics, but it's a reference architecture on top of Claude's existing capabilities rather than a new capability class."
+      },
+      "source_url": "https://claude.com/blog/claude-for-commerce-agents",
+      "opinions": [
+        {
+          "author": "Angela Jiang (Anthropic)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Руководитель продукта платформы Claude сообщила о ранних результатах пилота: размер корзины вырос на 30–35%, а покупатели примерно на 60% чаще доводят покупку до конца.",
+            "en": "Anthropic's head of product for the Claude platform reported early pilot results: cart size up about 30–35%, and customers roughly 60% more likely to complete a purchase."
+          },
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-gives-retailers-blueprint-for-ai-shopping-agents/"
+        },
+        {
+          "author": "nekuda",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Аналитический разбор описывает релиз как один из трёх недавних сигналов того, что Anthropic перестаёт быть «просто компанией про кодинг» и осознанно заходит в потребительскую и агентную коммерцию.",
+            "en": "The write-up frames the release as one of three recent signals that Anthropic is no longer 'just a coding company' and is deliberately moving into consumer and agentic commerce."
+          },
+          "url": "https://nekuda.substack.com/p/claude-gets-into-the-agentic-commerce"
+        },
+        {
+          "author": "Horizon (опрос потребителей, MediaPost)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Более широкий отраслевой опрос показывает, почему такие блюпринты выходят на осторожный рынок: 68% опрошенных потребителей сомневаются, что ИИ-агенты для покупок вообще действуют в их интересах, и лишь 33% готовы доверить агенту завершение покупки.",
+            "en": "A broader industry survey shows why blueprints like this land on a wary market: 68% of surveyed consumers doubt that AI shopping agents act in their interest at all, and only 33% are comfortable letting an agent complete a purchase."
+          },
+          "url": "https://www.mediapost.com/publications/article/415524/horizon-shoppers-skeptical-ai-agents-act-in-their.html"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Шоппинг-агент на витрине интернет-магазина даёт персональные рекомендации и сам добавляет товары в корзину по ходу диалога с покупателем.",
+            "en": "A shopping agent on a retail storefront gives preference-based recommendations and adds items to the cart directly during the conversation with a shopper."
+          },
+          "url": "https://github.com/anthropics/commerce-agents"
+        },
+        {
+          "text": {
+            "ru": "Мерчант-агент для владельца магазина отвечает на вопросы о продажах, следит за остатками на складе, предлагает цены и промо и готовит черновики маркетинговых кампаний.",
+            "en": "A merchant agent for a store operator answers questions about sales performance, monitors inventory, recommends pricing and promotions, and drafts marketing campaigns."
+          },
+          "url": "https://www.digitalcommerce360.com/2026/09/02/anthropic-debuts-claude-features-focused-on-agentic-commerce/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-03-willison-claude-system-prompt",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Новый системный промпт Claude очень не хочет воспроизводить тексты песен",
+        "en": "Claude's new system prompt really doesn't want to reproduce song lyrics"
+      },
+      "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+      "summary": {
+        "ru": "Уиллисон диффит опубликованные Anthropic системные промпты через собственный git-репозиторий с автоматической суммаризацией и разбирает, что изменилось между Fable 5 и Fable 5.1: запрет на воспроизведение текстов песен и персонажей (похоже, реакция на иск Sony/Warner Chappell), более мягкий тон при хамстве пользователей и подтверждение того, что часть логики промпта (например, вокруг end_conversation) остаётся неопубликованной.",
+        "en": "Willison diffs Anthropic's published system prompts through his own git repo with automated summarization and breaks down what changed between Fable 5 and Fable 5.1: a new ban on reproducing song lyrics and characters (likely a response to the Sony/Warner Chappell lawsuit), softer handling of abusive users, and confirmation that part of the prompt's logic — like the end_conversation rules — stays unpublished."
+      },
+      "note_page": "notes/articles/willison-claude-system-prompt-diff.html"
+    },
+    {
+      "id": "2026-09-03-marcus-astra-red-alert",
+      "type": "article",
+      "author": "Gary Marcus",
+      "title": {
+        "ru": "Красная тревога: OpenAI готова пересечь красную линию безопасности ИИ",
+        "en": "Red Alert: OpenAI is poised to cross an AI safety redline"
+      },
+      "url": "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross",
+      "summary": {
+        "ru": "Маркус — впервые называя материал «red alert» — предупреждает, что подход «recurrent depth», позволяющий модели рассуждать в скрытом векторном пространстве вместо явного текста, может подорвать мониторинг цепочки рассуждений (CoT) как раз тогда, когда модели вроде Astra получают критический уровень кибервозможностей.",
+        "en": "Marcus — calling this piece his first-ever 'red alert' — warns that 'recurrent depth,' letting a model reason in a hidden vector space instead of legible text, could undermine chain-of-thought monitoring right as models like Astra reach a Critical cyber-capability tier."
+      },
+      "note_page": "notes/articles/marcus-astra-recurrent-depth-red-alert.html"
+    }
+  ]
+}

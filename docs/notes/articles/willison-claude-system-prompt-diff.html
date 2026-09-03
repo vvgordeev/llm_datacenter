@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Claude's new system prompt really doesn't want to reproduce song lyrics» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-02</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Новый системный промпт Claude очень не хочет воспроизводить тексты песен</span>
+      <span data-lang="en">Claude's new system prompt really doesn't want to reproduce song lyrics</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Метод: диффить опубликованные системные промпты, а не гадать</span><span data-lang="en">The method: diff the published system prompts instead of guessing</span></h2>
+    <p>
+      <span data-lang="ru">Anthropic — одна из немногих лабораторий, которая публикует системные промпты своих потребительских приложений (Claude.ai и мобильные клиенты, но не Cowork и не Claude Code) вместе с историей их изменений. Уиллисон построил вокруг этого небольшую инфраструктуру: репозиторий <code>simonw/claude-system-prompts</code> на GitHub, где для каждого семейства моделей (Fable, Opus, Sonnet, Haiku) хранится файл с промптом, а история его правок оформлена как git-коммиты с датами, соответствующими реальным датам публикации на сайте Anthropic. Это превращает сравнение промптов в обычный просмотр диффов в интерфейсе GitHub — можно открыть конкретный коммит и увидеть построчно, что именно добавили или убрали между, например, Fable 5 и Fable 5.1.</span>
+      <span data-lang="en">Anthropic is one of the few labs that publishes the system prompts for its consumer apps (Claude.ai and the mobile clients — not Cowork or Claude Code) along with a history of changes. Willison built a small pipeline around that: the <code>simonw/claude-system-prompts</code> GitHub repo, which keeps one file per model family (Fable, Opus, Sonnet, Haiku) with its prompt, where the edit history is expressed as git commits back-dated to when each revision actually went live on Anthropic's site. That turns prompt comparison into an ordinary GitHub diff view — open one commit and see, line by line, exactly what was added or removed between, say, Fable 5 and Fable 5.1.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Второй слой метода — автоматизация: ежедневный GitHub Actions workflow гоняет диффы через GPT-5.6 Luna с промптом, который просит вычленять только содержательные изменения (новые правила, ослабленные или снятые ограничения, всё неожиданное) и игнорировать рутину вроде дат обучения или списков продуктов. Результат публикуется как CHANGELOG.md и Atom-лента. Уиллисон намеренно не доверил эту суммаризацию самой Claude — по его словам, не хочет, чтобы модель обобщала контент, способный повлиять на её же собственные «мнения» о себе.</span>
+      <span data-lang="en">The second layer is automation: a daily GitHub Actions workflow runs the diffs through GPT-5.6 Luna with a prompt asking it to surface only substantive changes (new rules, loosened or dropped restrictions, anything surprising) and skip routine churn like training-cutoff dates or product lists. The output is published as a CHANGELOG.md and an Atom feed. Willison deliberately didn't trust this summarization step to Claude itself — he says he doesn't want the model summarizing content that could shape its own "opinions" about itself.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что нашлось между Fable 5 и Fable 5.1</span><span data-lang="en">What turned up between Fable 5 and Fable 5.1</span></h2>
+    <p>
+      <span data-lang="ru">Применив этот метод к свежему релизу, Уиллисон нашёл несколько содержательных сдвигов. Самый заметный — новый развёрнутый запрет на дословное воспроизведение текстов песен, стихов и отрывков книг «полностью или частично», причём отказ должен сохраняться на все переформулированные повторные просьбы в рамках того же диалога; исключение — произведения, впервые опубликованные до 1929 года. Уиллисон отмечает, что вряд ли это совпадение: правило появилось спустя считаные дни после того, как Sony Music Publishing и Warner Chappell подали иск против Anthropic за обучение на базах текстов песен. Похожий по духу, но отдельный пункт запрещает воспроизводить узнаваемых персонажей и логотипы даже в сгенерированном коде — SVG, canvas, CSS-макетах — и явно предписывает модели оценивать итоговую картинку по существу, а не по названию: если пользователь просит «синего ежа, который быстро бегает», это всё равно распознаётся как Соник и отклоняется, но с предложением нарисовать оригинального персонажа взамен.</span>
+      <span data-lang="en">Applying the method to the fresh release, Willison found several substantive shifts. The most visible is a hefty new ban on reproducing song lyrics, poems, and book passages "in whole or in part," with the refusal required to persist across reworded follow-up requests within the same conversation; works first published before 1929 are exempt. Willison notes it's probably no coincidence that this landed within days of news that Sony Music Publishing and Warner Chappell are suing Anthropic over training on song-lyric databases. A related but separate clause bans reproducing recognizable characters and logos even in generated code — SVG, canvas, CSS mockups — and explicitly tells the model to judge the finished picture by what it amounts to, not by what it's called: ask for "a blue hedgehog that runs really fast" and it's still recognized as Sonic and declined, with an offer to draw an original character instead.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Дальше — более тихие, но не менее показательные правки. Прежнее указание вежливо предупреждать грубого пользователя и завершать диалog инструментом <code>end_conversation</code> после одного предупреждения заменено формулировкой про «уверенность без самоуничижения»: модели больше не предписывается становиться покорнее при хамстве. При этом сам инструмент <code>end_conversation</code> из опубликованного промпта исчез — но, как выяснил Уиллисон в переписке с самой моделью, логика вокруг него никуда не делась, а просто переехала в отдельный, неопубликованный слой промпта, который подключается динамически в зависимости от того, какие функции включены в сессии. Это подтверждает то, что он подозревал и раньше: опубликованный текст — это ядро, а не весь промпт целиком. Ещё две правки: новый раздел про психоактивные вещества, который впервые в истории промптов Claude ссылается на сторонние домены (dancesafe.org, tripsit.me, psychonautwiki.org) вместо того, чтобы просто отказывать; и явное указание модели избегать слов «genuinely», «honestly», «straightforward» — реакция на давнюю жалобу пользователей на манерность стиля ответов.</span>
+      <span data-lang="en">Other changes are quieter but just as telling. The old instruction to give a rude user a single warning before invoking the <code>end_conversation</code> tool has been replaced with language about "accountability without self-abasement" — the model is no longer told to grow more submissive under abuse. Yet the <code>end_conversation</code> tool itself has vanished from the published prompt entirely — except, as Willison found by asking the model directly, its logic hasn't gone anywhere; it just moved into a separate, unpublished layer of the prompt that gets attached dynamically depending on which features are enabled for a session. That confirms something he'd suspected before: the published text is the core, not the whole prompt. Two more changes stand out: a new substance-use section that, for the first time in the history of Claude's prompts, links out to third-party domains (dancesafe.org, tripsit.me, psychonautwiki.org) instead of just refusing; and an explicit instruction for the model to avoid the words "genuinely," "honestly," and "straightforward" — a response to a long-running complaint about the model's answering style.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это разработчику</span><span data-lang="en">Why this matters for builders</span></h2>
+    <p>
+      <span data-lang="ru">Ценность метода не в конкретных находках, а в повторяемости: любой, кто строит продукт поверх Claude, может открыть тот же репозиторий и увидеть, что реально изменилось в поведении модели при апгрейде версии — без необходимости самому прогонять регрессионные тесты на content policy или гадать, почему модель вдруг стала иначе реагировать на пограничные запросы. Ограничение метода прямое: он видит только то, что Anthropic решила опубликовать, и, как показывает история с <code>end_conversation</code>, часть логики системного промпта — включая, вероятно, целые функциональные блоки для Cowork и Claude Code — остаётся вне поля зрения независимо от того, насколько тщательно ведётся диффинг.</span>
+      <span data-lang="en">The value of the method isn't in the specific findings but in its repeatability: anyone building on top of Claude can open the same repo and see exactly what changed in the model's behavior at a version bump, instead of running their own content-policy regression tests or guessing why the model suddenly handles a borderline request differently. The method's limit is straightforward: it only sees what Anthropic chooses to publish, and as the <code>end_conversation</code> episode shows, a chunk of the system-prompt logic — likely entire feature blocks for Cowork and Claude Code — stays out of view no matter how carefully the diffing is done.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

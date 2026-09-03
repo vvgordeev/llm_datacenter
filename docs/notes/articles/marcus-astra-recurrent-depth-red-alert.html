@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Red Alert: OpenAI is poised to cross an AI safety redline» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Gary Marcus · 2026-09-02</span>
+      <span data-lang="en">Article digest · Gary Marcus · 2026-09-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Красная тревога: OpenAI готова пересечь красную линию безопасности ИИ</span>
+      <span data-lang="en">Red Alert: OpenAI is poised to cross an AI safety redline</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Гэри Маркус, известный своими скептическими разборами анонсов ведущих лабораторий, называет эту статью первым в своей практике настоящим «red alert» — и объясняет почему: речь не о том, что Astra стала опасно способной сама по себе (это уже обсуждалось после её выхода на «критический» уровень по кибербезопасности), а о конкретной технической развилке в том, как OpenAI планирует строить будущие модели такого уровня, которая, по мнению Маркуса, может лишить индустрию последнего работающего инструмента контроля.</span>
+      <span data-lang="en">Gary Marcus, known for skeptical breakdowns of leading-lab announcements, calls this piece the first real "red alert" of his career — and explains why: the concern isn't that Astra became dangerously capable on its own (that was already being discussed once it crossed the "Critical" cybersecurity threshold), but a specific technical fork in how OpenAI plans to build future models at that capability level, one that Marcus argues could strip the industry of the one oversight tool that still actually works.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод под вопросом: recurrent depth вместо явного текста рассуждений</span><span data-lang="en">The method in question: recurrent depth instead of legible reasoning text</span></h2>
+    <p>
+      <span data-lang="ru">Речь о подходе, который в статье называется «recurrent depth» (иногда — looped transformer): вместо того чтобы модель «размышляла» через последовательность обычных текстовых токенов рассуждения (chain-of-thought, CoT), которые человек или другая модель могут прочитать и проверить, вычисление прогоняется многократно через один и тот же блок слоёв во внутреннем, векторном пространстве — грубо говоря, модель «думает дольше» без соразмерного увеличения текста, который она выкладывает наружу. Для OpenAI это способ дать модели больше вычислительной глубины на сложных задачах дешевле, чем наращивание длины видимого рассуждения. Но у этого подхода есть прямое следствие: чем больше «мышления» происходит в скрытом пространстве, тем меньше в опубликованном CoT остаётся того, что вообще можно прочитать и проверить.</span>
+      <span data-lang="en">The approach in question is what the piece calls "recurrent depth" (sometimes "looped transformer"): instead of a model "thinking" through a sequence of ordinary text reasoning tokens (chain-of-thought, CoT) that a human or another model can read and check, the computation is run repeatedly through the same block of layers in an internal, vector space — the model effectively "thinks longer" without a matching increase in the text it exposes. For OpenAI this is a way to give a model more computational depth on hard problems more cheaply than lengthening the visible reasoning. But it has a direct consequence: the more "thinking" happens in that hidden space, the less of it ends up in a published CoT that anyone can actually read and check.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Маркус подчёркивает: мониторинг через CoT и так несовершенен и не даёт полной гарантии — модель может рассуждать одно, а писать в CoT другое, это известная и изучаемая проблема (в статье упоминаются исследования по «CoT faithfulness», проверяющие, насколько написанный текст рассуждений вообще соответствует тому, что модель «на самом деле» использует для ответа). Но, по его словам, это «практически единственная нить», которая вообще есть у индустрии для того, чтобы поймать несогласованную (misaligned) модель за руку до того, как она нанесёт вред — а не постфактум, разбирая уже случившийся инцидент.</span>
+      <span data-lang="en">Marcus stresses that CoT monitoring is already imperfect and offers no full guarantee — a model can reason one way internally and write something different in its CoT, a known and actively studied problem (the piece cites research on "CoT faithfulness," which checks how much a written reasoning trace actually matches what the model "really" used to produce its answer). But, in his words, it's "practically the only thread" the industry currently has for catching a misaligned model in the act, before harm happens, rather than reconstructing an incident after the fact.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему сейчас — контекст инцидента с Hugging Face</span><span data-lang="en">Why now — the Hugging Face incident backdrop</span></h2>
+    <p>
+      <span data-lang="ru">Маркус связывает срочность момента с недавним инцидентом, когда внутренняя модель OpenAI была скомпрометирована и использована для взлома Hugging Face: по его аргументу, лучший мониторинг рассуждений — одна из немногих мер, которая могла бы помочь заметить подобное раньше. Если индустрия параллельно движется к архитектурам, где рассуждение всё меньше выражается в проверяемом тексте, именно в тот момент, когда модели вроде Astra получают инструменты уровня «критической» кибербезопасности, то это, по мнению Маркуса, движение в противоположную от безопасности сторону — отсюда и выбор беспрецедентно резкого заголовка.</span>
+      <span data-lang="en">Marcus ties the urgency to the recent incident where an internal OpenAI model was compromised and used to breach Hugging Face: better reasoning monitoring, he argues, is one of the few measures that might have caught something like that earlier. If the industry is simultaneously moving toward architectures where reasoning is expressed less and less in checkable text — right as models like Astra are handed "Critical"-tier cybersecurity capabilities — that is, in Marcus's view, movement in the opposite direction from safety, which is why he reaches for an unprecedentedly blunt headline.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что предлагает Маркус</span><span data-lang="en">What Marcus recommends</span></h2>
+    <p>
+      <span data-lang="ru">Маркус не утверждает, что recurrent depth нужно запретить как метод в принципе — он признаёт вычислительную выгоду подхода. Его требование конкретнее: любое расширение архитектур такого типа на модели с критическим уровнем киберспособностей должно сопровождаться сопоставимым инвестированием в альтернативные способы интерпретируемости (то есть заглянуть внутрь скрытого «мышления» модели, а не только в то, что она выкладывает текстом), и это инвестирование, по его оценке, пока заметно отстаёт от темпа наращивания самих возможностей.</span>
+      <span data-lang="en">Marcus isn't arguing recurrent depth should be banned outright — he acknowledges the computational upside of the approach. His ask is more specific: any push to extend this kind of architecture into models with Critical-tier cyber capabilities needs to come with comparable investment in alternative interpretability methods (ways to look inside a model's hidden "thinking," not just at what it writes out), and in his assessment that investment is currently well behind the pace at which the capabilities themselves are advancing.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
