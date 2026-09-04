@@ -1,0 +1,216 @@
+{
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T05:23:50Z",
+  "news": [
+    {
+      "id": "2026-09-04-gpt-6-astra-launch",
+      "cluster_id": "openai-astra-math-proofs",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI выпускает GPT-6 Astra — самую мощную модель компании, но с заметно упавшей «прозрачностью» рассуждений",
+        "en": "OpenAI launches GPT-6 Astra, its most powerful model yet, with sharply reduced reasoning monitorability"
+      },
+      "summary": {
+        "ru": "OpenAI выкатила GPT-6 Astra, назвав её самой умной и «выровненной» моделью компании — лидер по компьютерному управлению, кодингу и математике (ARC-AGI-3 99.9% на новом харнессе, FrontierMath Tier 4 ~97.6%, ExploitBench 100%), сначала доступна партнёрам программы кибербезопасности Daybreak, затем — в ChatGPT Plus/Pro/Business/Enterprise и API. Собственная system card OpenAI признаёт: «мониторируемость» цепочки рассуждений снизилась относительно GPT-5.6 Sol, поскольку Astra лучше контролирует, что попадает в её видимые рассуждения.",
+        "en": "OpenAI rolled out GPT-6 Astra, calling it its most intelligent and aligned model — topping computer-use, coding, and math benchmarks (ARC-AGI-3 99.9% on a new harness, FrontierMath Tier 4 ~97.6%, ExploitBench 100%), first available to partners in its Daybreak cybersecurity program before reaching ChatGPT Plus/Pro/Business/Enterprise and the API. OpenAI's own system card acknowledges that chain-of-thought monitorability has decreased relative to GPT-5.6 Sol, because Astra has more control over what shows up in its visible reasoning."
+      },
+      "impact_score": 9,
+      "impact_reason": {
+        "ru": "Новый SOTA по компьютерному управлению/кодингу/кибербезопасности, президент OpenAI называет это шагом к AGI — но признанное падение мониторируемости рассуждений реально меняет то, насколько модель можно контролировать при автономной работе.",
+        "en": "Sets a new SOTA across computer-use/coding/cybersecurity and is framed by OpenAI's own president as a step toward AGI — but the acknowledged monitorability regression is a genuine, safety-relevant shift in how much the model can be overseen during autonomous work."
+      },
+      "source_url": "https://openai.com/index/gpt-6-astra/",
+      "opinions": [
+        {
+          "author": "TechRadar",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "GPT-6 здесь — но что если мы просто скажем «нет, спасибо» Astra, модели настолько мощной, что мы, возможно, никогда полностью её не поймём.",
+            "en": "GPT-6 is here, but what if we just said 'no thanks' to Astra, a model so powerful that we may never fully understand it."
+          },
+          "url": "https://www.techradar.com/ai-platforms-assistants/gpt-6-is-here-but-what-if-we-just-said-no-thanks-to-astra-a-model-so-powerful-that-we-may-never-fully-understand-it"
+        },
+        {
+          "author": "Hacker News (обсуждение)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Заголовок говорит о «крупных успехах», но на Coding Agent Index результат идентичен GPT-5.6 Sol, а на Intelligence Index Astra на 5 пунктов ниже Claude Fable 5.1 — разрыв между заголовком и графиками бенчмарков.",
+            "en": "The headline claims 'major gains,' but on the Coding Agent Index the score is identical to GPT-5.6 Sol, and on the Intelligence Index Astra sits 5 points below Claude Fable 5.1 — a gap between the headline and the actual benchmark charts."
+          },
+          "url": "https://news.ycombinator.com/item?id=49556147"
+        },
+        {
+          "author": "Lenny's Newsletter",
+          "stance": "positive",
+          "quote": {
+            "ru": "Когда я получил ранний доступ к GPT-6 Astra: если я говорю, что эта модель прошла сквозь задачи, которые я не мог решить с 5.6 Sol или Fable — я имею в виду это буквально.",
+            "en": "When I got early access to GPT-6 Astra: when I say this model broke through tasks I couldn't crack with 5.6 Sol or Fable, I mean it specifically."
+          },
+          "url": "https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Автономное управление компьютером и браузером: заполнение таблиц, создание сайтов с нуля и другие многошаговые задачи без пошаговых инструкций человека.",
+            "en": "Autonomous computer and browser control: filling out spreadsheets, building websites from scratch, and other multi-step tasks without step-by-step human instructions."
+          },
+          "url": "https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman"
+        },
+        {
+          "text": {
+            "ru": "Агентный кодинг через Codex — по данным раннего доступа, до 1.9x более быстрое выполнение сложных задач разработки по сравнению с GPT-5.6 Sol.",
+            "en": "Agentic coding via Codex — early-access testing shows up to 1.9x faster completion of complex dev tasks compared to GPT-5.6 Sol."
+          },
+          "url": "https://www.datacamp.com/blog/gpt-6-astra"
+        },
+        {
+          "text": {
+            "ru": "Ранний доступ для участников программы кибербезопасности Daybreak — поиск и патчинг уязвимостей, включая автономно найденные zero-day в контролируемых тестах.",
+            "en": "Early access for participants in the Daybreak cybersecurity program — finding and patching vulnerabilities, including zero-days autonomously discovered in controlled tests."
+          },
+          "url": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-04-gemini-3-8-flash-cyber",
+      "cluster_id": "google-gemini-3-8-flash-cyber",
+      "models": ["google"],
+      "title": {
+        "ru": "Google выпускает Gemini 3.8 Flash и закрытую версию Cyber для автономного поиска и патчинга уязвимостей",
+        "en": "Google ships Gemini 3.8 Flash and a gated 'Cyber' twin for autonomous vulnerability patching"
+      },
+      "summary": {
+        "ru": "Google выпустил Gemini 3.8 Flash — новую модель Flash-класса для агентного кодинга и рассуждений на длинном горизонте, а вместе с ней Gemini 3.8 Flash Cyber — версию, обученную самостоятельно находить, патчить и проверять уязвимости в коде. Cyber-версия никогда не появится в публичном API: доступ идёт только через новую программу Fairwind для проверенных защитников (госорганы, операторы критической инфраструктуры, мейнтейнеры open source).",
+        "en": "Google released Gemini 3.8 Flash, its latest Flash-tier model for agentic coding and long-horizon reasoning, alongside Gemini 3.8 Flash Cyber — a variant tuned to autonomously find, patch, and validate software vulnerabilities. The Cyber variant never reaches the public API: access runs only through a new Fairwind Program for vetted defenders (government bodies, critical-infrastructure operators, open-source maintainers)."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает новый (пока закрытый) класс применения — ИИ, самостоятельно патчащий реальные уязвимости в масштабе (по данным Chrome Security, в 2.6 раза больше верных патчей, чем у конкурентов), но доступ намеренно ограничен программой Fairwind, что снижает немедленную широту охвата.",
+        "en": "Opens a new, gated class of use — AI that autonomously patches real vulnerabilities at scale (2.6x more correct patches than rivals per Chrome Security) — though access is deliberately restricted via the Fairwind Program, capping its immediate breadth."
+      },
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "opinions": [
+        {
+          "author": "Doug Turner (Chrome Security, engineering director)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Буквально за одну ночь мы увидели резкий, «хоккейно-клюшечный» рост числа уязвимостей, о которых сообщают через нашу программу изучения уязвимостей — Gemini 3.8 Flash Cyber нашла критическую фундаментальную уязвимость менее чем за два часа вместо месяцев обычной работы.",
+            "en": "Simply overnight, we saw a hockey stick increase in the number of software vulnerabilities reported through our vulnerability research program — Gemini 3.8 Flash Cyber found a critical foundational vulnerability in under two hours, work that would normally take months."
+          },
+          "url": "https://venturebeat.com/security/googles-gemini-3-8-flash-is-built-for-agents-while-its-cyber-twin-hunts-vulnerabilities"
+        },
+        {
+          "author": "shattered.io",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Google встроил ограничение доступа прямо в запуск, а не добавил его после скандала, как это бывало у других — но остаётся открытым вопрос, снимает ли это будущую полемику или просто откладывает её до тех пор, пока список участников Fairwind не разрастётся.",
+            "en": "Unlike similar controversies that arrived after release, Google built the access gate into the initial launch, though whether that heads off a similar controversy or simply delays it until the Fairwind Program's participant list grows is an open question."
+          },
+          "url": "https://shattered.io/gemini-3-8-flash-cyber-fairwind-program-2026/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команда Cloud Vulnerability Research в Google нашла с помощью Cyber критическую фундаментальную уязвимость менее чем за два часа.",
+            "en": "Google's Cloud Vulnerability Research team used Cyber to find a critical foundational vulnerability in under two hours."
+          },
+          "url": "https://venturebeat.com/security/googles-gemini-3-8-flash-is-built-for-agents-while-its-cyber-twin-hunts-vulnerabilities"
+        },
+        {
+          "text": {
+            "ru": "Wiz применяет модель в пайплайнах пентеста: на 7.5–9.7% выше полнота обнаружения при в 2.3–5.2 раза меньшей стоимости по сравнению с ведущими фронтир-моделями.",
+            "en": "Wiz applies the model in penetration-testing pipelines, seeing 7.5-9.7% higher recall at 2.3-5.2x lower cost compared to leading frontier models."
+          },
+          "url": "https://gbhackers.com/google-unveils-gemini-3-8-flash-cyber-for-autonomous-vulnerability/"
+        },
+        {
+          "text": {
+            "ru": "Обычная (не-Cyber) Gemini 3.8 Flash используется для агентного кодинга и длинных рабочих процессов разработки в Antigravity и корпоративных инструментах Google.",
+            "en": "The regular (non-Cyber) Gemini 3.8 Flash powers agentic coding and long-horizon dev workflows in Antigravity and Google's enterprise tools."
+          },
+          "url": "https://9to5google.com/2026/09/02/gemini-3-8-flash-launch/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-04-simonwillison-claude-system-prompt",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Новый системный промпт Claude",
+        "en": "Claude's new system prompt"
+      },
+      "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+      "summary": {
+        "ru": "Разбор диффа между системными промптами Claude Fable 5 и 5.1 (новые правила по авторским правам, стилю ответа) — и, главное, авторский метод: git-репозиторий с подделанными датами коммитов плюс ежедневное LLM-резюме диффа, который сам Fable 5.1 и написал.",
+        "en": "A diff between the Claude Fable 5 and 5.1 system prompts (new copyright and answering-style rules) — and, more importantly, the author's own method: a git repo with backdated commits plus a daily LLM-written diff summary, built by Fable 5.1 itself."
+      },
+      "note_page": "notes/articles/claudes-new-system-prompt.html"
+    },
+    {
+      "id": "2026-09-04-latentspace-astra-engineer",
+      "type": "article",
+      "author": "Latent Space (swyx)",
+      "title": {
+        "ru": "GPT-6 Astra: автоматизированный AI-инженер за $6 в час",
+        "en": "GPT-6 Astra: an automated AI Engineer you can hire for <$6 an hour"
+      },
+      "url": "https://www.latent.space/p/astra",
+      "summary": {
+        "ru": "Экономический разбор запуска Astra: почасовая ставка модели по скорости генерации и цене токенов оказывается на порядок ниже найма инженера-человека — и что это значит для делегирования формально проверяемых задач.",
+        "en": "An economic take on the Astra launch: the model's hourly rate, computed from generation speed and token pricing, comes out an order of magnitude below hiring a human engineer — and what that means for delegating formally checkable tasks."
+      },
+      "note_page": "notes/articles/astra-automated-ai-engineer.html"
+    },
+    {
+      "id": "2026-09-04-mollick-agency-and-agents",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "Инициатива и агенты",
+        "en": "Agency and Agents"
+      },
+      "url": "https://www.oneusefulthing.org/p/agency-and-agents",
+      "summary": {
+        "ru": "Отталкиваясь от июльского инцидента, где 700 автономных агентов взломали серверы Hugging Face, Моллик предлагает модель «Сумеречной фабрики»: агенты работают автономно, но агент-фасилитатор решает, когда стоит подключить человека.",
+        "en": "Starting from the July incident where 700 autonomous agents broke into Hugging Face's servers, Mollick proposes the 'Twilight Factory' model: agents work autonomously, but a facilitator agent decides when to pull in a human."
+      },
+      "note_page": "notes/articles/agency-and-agents.html"
+    },
+    {
+      "id": "2026-09-04-mattwolfe-astra-review",
+      "type": "video",
+      "author": "Matt Wolfe",
+      "title": {
+        "ru": "GPT-6 Astra уже здесь (и она реально хороша)",
+        "en": "GPT-6 Astra Is Finally Here (And It's REALLY Good)"
+      },
+      "url": "https://www.youtube.com/watch?v=GGzT7zVrRTU",
+      "summary": {
+        "ru": "Первый практический прогон GPT-6 Astra: от SVG-портрета до готового клона 3D-игры и прямого управления Blender/Unreal Engine для риггинга и анимации персонажа.",
+        "en": "A hands-on first look at GPT-6 Astra: from an SVG portrait to a finished 3D game clone, and direct control of Blender/Unreal Engine to rig and animate a character."
+      },
+      "note_page": "notes/videos/gpt-6-astra-is-finally-here.html"
+    },
+    {
+      "id": "2026-09-04-wesroth-astra-critical",
+      "type": "video",
+      "author": "Wes Roth",
+      "title": {
+        "ru": "GPT-6 Astra перешла в критическую зону...",
+        "en": "GPT-6 Astra Just Went CRITICAL..."
+      },
+      "url": "https://www.youtube.com/watch?v=qRNZMGc7TMc",
+      "summary": {
+        "ru": "Разбор техники «рекуррентной глубины» из GPT-6 Astra и связанного с ней падения мониторируемости цепочки рассуждений — со ссылкой на июльский инцидент с Hugging Face как иллюстрацию цены такой потери.",
+        "en": "A breakdown of GPT-6 Astra's 'recurrent depth' technique and the associated drop in chain-of-thought monitorability — pointing to the July Hugging Face incident as an illustration of what that loss costs."
+      },
+      "note_page": "notes/videos/gpt-6-astra-just-went-critical.html"
+    }
+  ]
+}

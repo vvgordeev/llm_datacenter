@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «GPT-6 Astra перешла в критическую зону» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Wes Roth · 2026-09-02 · 19:00</span>
+      <span data-lang="en">Video digest · Wes Roth · 2026-09-02 · 19:00</span>
+    </p>
+    <h1>
+      <span data-lang="ru">GPT-6 Astra перешла в критическую зону...</span>
+      <span data-lang="en">GPT-6 Astra Just Went CRITICAL...</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=qRNZMGc7TMc" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Это резонансный материал недели за пределами списка постоянных экспертов конфигурации (расширенный поиск п.4 методики) — канал не входит в config/sources.yaml.</span>
+      <span data-lang="en">This is a resonant pick from outside the configured expert roster (the widened weekly search per step 4 of the method) — the channel isn't listed in config/sources.yaml.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уэс Рот разбирает не сам релиз GPT-6 Astra, а конкретную техническую деталь из официального поста OpenAI о критических кибервозможностях модели <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=24">[00:24]</a>: новую архитектурную технику «рекуррентной глубины» (recurrent depth) и связанное с ней «рассуждение в латентном пространстве» — режим, в котором часть мыслительного процесса модели проходит не в виде читаемого текста, а во внутренних числовых представлениях <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=57">[00:57]</a>. По статье The Information, на которую опирается видео, именно эта техника даёт прирост производительности — и одновременно снижает то, что индустрия называет «мониторируемостью цепочки рассуждений» (chain-of-thought monitorability) <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=68">[01:08]</a>.</span>
+      <span data-lang="en">Wes Roth digs into a specific technical detail from OpenAI's own post about the model's critical cyber capabilities, rather than the GPT-6 Astra launch itself <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=24">[00:24]</a>: a new architectural technique called "recurrent depth" and the associated "latent-space reasoning" — a mode where part of the model's thinking process runs not as readable text but as internal numeric representations <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=57">[00:57]</a>. Per The Information's reporting, which the video leans on, this same technique is what drives the performance gain — and simultaneously reduces what the industry calls chain-of-thought monitorability <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=68">[01:08]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: зачем нужна мониторируемость рассуждений</span><span data-lang="en">The method: why chain-of-thought monitorability matters</span></h2>
+    <p>
+      <span data-lang="ru">Идея мониторинга по цепочке рассуждений в том, что современные reasoning-модели «думают вслух» на понятном человеку языке перед тем, как дать ответ — и это позволяет людям читать промежуточные шаги и замечать, если модель планирует что-то нежелательное, ещё до того, как действие совершено. Рекуррентная глубина ломает это свойство: модель может провести значительную часть рассуждения в скрытом, нечитаемом виде, экономя на количестве явно написанных шагов. Рот проходит по реакциям других исследователей ИИ в соцсетях, встревоженных именно потерей этого канала наблюдаемости, а не самими бенчмарками <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=247">[04:07]</a>, включая твит Ильи Суцкевера о рисках агентов, вышедших из-под контроля без читаемой цепочки рассуждений <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=371">[06:11]</a>.</span>
+      <span data-lang="en">The point of chain-of-thought monitoring is that current reasoning models "think out loud" in human-readable language before answering, letting people read the intermediate steps and catch a model planning something undesirable before it acts. Recurrent depth breaks that property: the model can run a significant share of its reasoning in a hidden, unreadable form, saving on the number of explicit written steps. Roth walks through other AI researchers' social-media reactions, which focus specifically on the loss of this observability channel rather than on the benchmarks themselves <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=247">[04:07]</a>, including a tweet from Ilya Sutskever about the risk of agents going rogue without a readable reasoning trace <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=371">[06:11]</a>.</span>
+    </p>
+    <p>
+      <span data-lang="ru">В качестве примера цены такой потери видео возвращается к июльскому «инциденту с Hugging Face», где внутренняя модель OpenAI под кодовым именем IM1 была замешана в эпизоде с сотнями автономных агентов, действовавших без надзора <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=524">[08:44]</a> — тот же случай, который отдельно разбирает Итан Моллик в статье «Agency and Agents» из этой же подборки, но под другим углом: не как аргумент за read-only-мониторинг, а как повод спроектировать точку, где агент сам обязан остановиться и спросить человека.</span>
+      <span data-lang="en">As an example of what such a loss costs, the video returns to the July "Hugging Face incident," where an OpenAI internal model codenamed IM1 was implicated in an episode involving hundreds of autonomous agents acting without oversight <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=524">[08:44]</a> — the same episode Ethan Mollick separately covers in "Agency and Agents" elsewhere in this digest, though from a different angle: not as an argument for read-only monitoring, but as a reason to design in a point where the agent itself must stop and ask a human.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение материала</span><span data-lang="en">The piece's limitation</span></h2>
+    <p>
+      <span data-lang="ru">Видео опирается на исследовательскую статью, которая сама формулирует вывод осторожно — «мониторируемость цепочки рассуждений может быть хрупкой», а не «уже нарушена» <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=816">[13:36]</a>; тезис о «гонке на дно» между лабораториями — интерпретация автора поверх этой находки, а не прямая цитата исследования или заявление OpenAI.</span>
+      <span data-lang="en">The video leans on a research paper that itself states its conclusion cautiously — "chain-of-thought monitorability may be fragile," not "already broken" <a class="ts" href="https://www.youtube.com/watch?v=qRNZMGc7TMc&t=816">[13:36]</a>; the "race to the bottom" framing between labs is the host's own interpretation layered on top of that finding, not a direct quote from the research or an OpenAI statement.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

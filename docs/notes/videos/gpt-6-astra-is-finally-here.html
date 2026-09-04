@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «GPT-6 Astra уже здесь» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Matt Wolfe · 2026-09-03 · 19:33</span>
+      <span data-lang="en">Video digest · Matt Wolfe · 2026-09-03 · 19:33</span>
+    </p>
+    <h1>
+      <span data-lang="ru">GPT-6 Astra уже здесь (и она реально хороша)</span>
+      <span data-lang="en">GPT-6 Astra Is Finally Here (And It's REALLY Good)</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=GGzT7zVrRTU" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">В день выхода GPT-6 Astra Мэтт Вольф разбирает официальный анонс OpenAI <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=67">[01:07]</a> и сверяет заявленные скачки на бенчмарках «использования компьютера» и абстрактного мышления, отмечая, что часть агрегированных индексов интеллекта выросла едва заметно — контраст с огромными скачками на отдельных тестах вроде AutomationBench и ARC-AGI-3 <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=108">[01:48]</a>. Дальше видео целиком переходит от цифр к практике: что модель реально умеет строить руками.</span>
+      <span data-lang="en">On the day GPT-6 Astra shipped, Matt Wolfe walks through OpenAI's official announcement <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=67">[01:07]</a> and checks the claimed jumps on computer-use and abstract-reasoning benchmarks, noting that some aggregated intelligence indices barely moved — a contrast with the huge jumps on specific tests like AutomationBench and ARC-AGI-3 <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=108">[01:48]</a>. From there the video moves entirely from numbers to practice: what the model can actually build with its own hands.</span>
+    </p>
+
+    <h2><span data-lang="ru">От SVG-портрета до готовой 3D-игры</span><span data-lang="en">From an SVG portrait to a finished 3D game</span></h2>
+    <p>
+      <span data-lang="ru">Первая практическая проверка — тест BuseyBench: модель рисует SVG-портрет по фотографии одним запросом, и Вольф сравнивает результат с попытками предыдущих моделей <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=326">[05:26]</a>. Дальше — центральный кусок видео: на глазах у зрителя Astra за несколько минут собирает клон 3D-игры «Megabonk» и интерактивный симулятор мира «Orbis» по текстовым описаниям <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=422">[07:02]</a>. Автор подчёркивает именно скорость многошагового цикла (написать код → запустить → увидеть баг → исправить) без ручного вмешательства между шагами — то, что раньше требовало десятков отдельных запросов.</span>
+      <span data-lang="en">The first practical check is the BuseyBench test: the model draws an SVG portrait from a photo in a single prompt, and Wolfe compares the output to previous models' attempts <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=326">[05:26]</a>. Then comes the video's centerpiece: on screen, Astra assembles a "Megabonk" 3D game clone and an interactive world simulator called "Orbis" from text prompts in a matter of minutes <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=422">[07:02]</a>. What he flags specifically is the speed of the multi-step loop (write code → run it → spot the bug → fix it) with no manual intervention between steps — something that used to take dozens of separate prompts.</span>
+    </p>
+
+    <h2><span data-lang="ru">Управление 3D-редакторами напрямую</span><span data-lang="en">Directly driving 3D tools</span></h2>
+    <p>
+      <span data-lang="ru">Самая наглядная демонстрация — Astra напрямую управляет Blender и Unreal Engine, создавая, риггая и анимируя 3D-модель волка от начала до конца, без промежуточных экспортов вручную <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=692">[11:32]</a>. Это прямое следствие заявленного скачка на бенчмарках компьютерного управления: модель не просто пишет код, который потом запускают отдельно, а сама кликает, тащит и настраивает параметры внутри профессионального интерфейса — то есть управляет тем же инструментом, которым пользуется 3D-художник-человек, а не специальным API поверх него.</span>
+      <span data-lang="en">The most vivid demo is Astra directly driving Blender and Unreal Engine, creating, rigging, and animating a 3D wolf model start to finish with no manual exports in between <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=692">[11:32]</a>. This is a direct consequence of the claimed computer-use benchmark jump: the model isn't just writing code that gets run separately — it's clicking, dragging, and adjusting parameters inside the professional interface itself, operating the same tool a human 3D artist would use rather than a special API layered on top.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ближе к концу Вольф показывает подборку проектов, собранных другими пользователями за первые часы доступа <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=899">[14:59]</a>, и завершает выводом: несмотря на скромный прирост в «средних» бенчмарках интеллекта, практический опыт использования говорит о реальном скачке возможностей именно в творческих и сложных кодинг-задачах — а не только в узких тестах <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=1020">[17:00]</a>.</span>
+      <span data-lang="en">Near the end, Wolfe shows a roundup of projects other users built in the first hours of access <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=899">[14:59]</a>, and closes with a conclusion: despite the modest gain on "average" intelligence benchmarks, hands-on experience points to a real capability jump specifically in creative and complex coding tasks — not just on narrow tests <a class="ts" href="https://www.youtube.com/watch?v=GGzT7zVrRTU&t=1020">[17:00]</a>.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

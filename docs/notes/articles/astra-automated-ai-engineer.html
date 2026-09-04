@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Astra — автоматизированный инженер за $6 в час» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (swyx) · 2026-09-03</span>
+      <span data-lang="en">Article digest · Latent Space (swyx) · 2026-09-03</span>
+    </p>
+    <h1>
+      <span data-lang="ru">GPT-6 Astra: автоматизированный AI-инженер, которого можно нанять менее чем за $6 в час</span>
+      <span data-lang="en">GPT-6 Astra: an automated AI Engineer you can hire for &lt;$6 an hour</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/astra" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Latent Space разбирает запуск GPT-6 Astra не со стороны бенчмарков (она чисто обходит Fable 5.1, насыщая самые сложные версии FrontierMath — 97.6% — и ARC-AGI-3 — 99.9%), а со стороны экономики: чему равна почасовая ставка модели, если посчитать её как нанятого инженера, и что это значит для того, как в принципе стоит нанимать (в смысле — вызывать) фронтир-модели для инженерной работы.</span>
+      <span data-lang="en">Latent Space approaches the GPT-6 Astra launch not through benchmarks — it cleanly beats Fable 5.1, saturating the hardest versions of FrontierMath (97.6%) and ARC-AGI-3 (99.9%) — but through economics: what the model's hourly rate works out to if you cost it like a hired engineer, and what that implies for how frontier models should actually be "hired" for engineering work.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: как считать почасовую ставку модели</span><span data-lang="en">The method: pricing a model by the hour</span></h2>
+    <p>
+      <span data-lang="ru">Расчёт простой и воспроизводимый: взять измеренную скорость генерации (по тестам автора — около 33 токенов в секунду) и умножить на официальную цену выходных токенов Astra ($50 за миллион). При непрерывной работе модели час обходится дешевле $6 — на порядок дешевле часовой ставки инженера-человека даже в юниорском диапазоне. Это не «средняя цена запроса», а именно ставка за занятое время, что делает сравнение прямым: если модель может непрерывно писать код, ставить тесты и чинить баги на протяжении рабочей смены, её экономика сопоставима с наймом, а не с разовой подпиской.</span>
+      <span data-lang="en">The math is simple and reproducible: take a measured generation speed (around 33 tokens/second in the author's own testing) and multiply by Astra's official output-token price ($50 per million). Run continuously, that works out to under $6 an hour — an order of magnitude below even a junior human engineer's hourly rate. This isn't an "average request cost" but a rate for occupied time, which makes the comparison direct: if a model can keep writing code, running tests, and fixing bugs across a full working session, its economics look like hiring, not like a subscription.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Официальная цена Astra в API — $10 за миллион входных токенов (при $1 за кэшированные) и $50 за миллион выходных, окно контекста 1.1M токенов; та же ставка, что и у Fable 5/5.1. Автор специально подчёркивает эффективность по токенам: Astra решает задачи за заметно меньшее число сгенерированных токенов, чем Sol и Fable, — то есть итоговая ставка «за час работы» ниже не только из-за цены за токен, но и из-за меньшего объёма самих рассуждений на ту же задачу.</span>
+      <span data-lang="en">Astra's official API price is $10 per million input tokens ($1 for cached input) and $50 per million output tokens, with a 1.1M-token context window — the same rate as Fable 5/5.1. The author specifically flags token efficiency: Astra solves tasks in noticeably fewer generated tokens than Sol and Fable, so the "per hour of work" rate is lower not just because of the per-token price but because of a smaller volume of reasoning for the same task.</span>
+    </p>
+
+    <h2><span data-lang="ru">От бенчмарка к практике: что реально делегировать</span><span data-lang="en">From benchmark to practice: what to actually delegate</span></h2>
+    <p>
+      <span data-lang="ru">После расчёта ставки материал переходит к практическим паттернам агентного кодинга на новых фронтир-моделях по итогам более чем 20 млрд токенов тестового прогона: какие задачи (рефакторинг, покрытие тестами, рутинная документация) отдавать модели целиком без присмотра, а какие — только с человеком, проверяющим план перед запуском. Общий вывод автора: там, где задача формально проверяема (тесты проходят/не проходят, линтер чист/не чист), Astra можно занимать «часами» как junior-инженера; там, где критерий успеха размыт — нужен человек в контуре чаще, чем предполагает маркетинг релиза.</span>
+      <span data-lang="en">After the pricing math, the piece moves to practical agentic-coding patterns for the new frontier models, drawn from over 20B tokens of test runs: which tasks (refactors, test coverage, routine documentation) to hand the model wholesale without supervision, and which need a human checking the plan before it runs. The author's overall takeaway: wherever a task is formally checkable (tests pass/fail, linter clean/not clean), Astra can be "booked by the hour" like a junior engineer; wherever the success criterion is fuzzy, a human needs to stay in the loop more often than the launch messaging implies.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение материала</span><span data-lang="en">The piece's limitation</span></h2>
+    <p>
+      <span data-lang="ru">Ставка «$6/час» — оценка по искусственно непрерывной загрузке (100% времени модель генерирует токены), а не по реальному рабочему циклу с ожиданием ревью, откатами и переключением контекста; сам автор не приводит расчёт для смешанного, реалистичного графика работы. Это делает сравнение с человеческим наймом красноречивым, но верхнеграничным — фактическая экономия от замены части инженерной работы будет ниже, чем прямое сопоставление ставок.</span>
+      <span data-lang="en">The "$6/hour" figure assumes artificially continuous load (the model generating tokens 100% of the time), not a real work cycle with review waits, rollbacks, and context switching; the author doesn't work out a figure for a mixed, realistic schedule. That makes the comparison to human hiring vivid but an upper bound — actual savings from offloading a slice of engineering work will run lower than the raw rate comparison suggests.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

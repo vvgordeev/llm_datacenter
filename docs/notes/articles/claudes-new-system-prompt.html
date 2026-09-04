@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Новый системный промпт Claude» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-02</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Новый системный промпт Claude</span>
+      <span data-lang="en">Claude's new system prompt</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Anthropic публикует системные промпты своих потребительских приложений Claude (Claude.ai и мобильные клиенты) вместе с историей изменений — редкая для индустрии открытость. Симон Уиллисон разбирает, что именно поменялось между Claude Fable 5 и Fable 5.1, построив для этого собственный автоматизированный инструмент — и попутно демонстрирует метод, который интереснее самих находок: как systematically диффить промпты моделей и превращать это в читаемую хронологию.</span>
+      <span data-lang="en">Anthropic publishes the system prompts for its consumer Claude apps (Claude.ai and the mobile clients) along with a history of changes — an unusual level of openness for the industry. Simon Willison digs into what actually changed between Claude Fable 5 and Fable 5.1, building a small automated tool to do it — and along the way demonstrates a method that's more interesting than the findings themselves: how to systematically diff model prompts and turn that into a readable timeline.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что изменилось: авторские права и стиль ответа</span><span data-lang="en">What changed: copyright and answering style</span></h2>
+    <p>
+      <span data-lang="ru">Самое заметное новое правило — прямой запрет воспроизводить тексты песен, стихи и отрывки книг «частично или полностью», включая случаи, когда пользователь присылает строки по одной и выдаёт их за свои. Уиллисон связывает это с судебным иском Sony Music Publishing и Warner Chappell к Anthropic (подан за несколько дней до выхода промпта) об обучении на базах текстов песен. Второе новое правило запрещает рисовать узнаваемых персонажей и логотипы даже кодом (SVG, HTML/CSS-мокапы) — Claude должен судить не по названию, а по тому, что получится на картинке, и не обходить отказ «альтернативными» деталями, которые всё равно складываются в узнаваемый образ. Автор проверяет правило на примере из самого промпта («нарисуй голубого ежа, который очень быстро бегает» — про Соника) и получает именно описанное поведение: отказ и предложение оригинального персонажа взамен.</span>
+      <span data-lang="en">The most notable new rule is an outright ban on reproducing song lyrics, poems, or book passages "in whole or in part," including when a user pastes lines in one at a time and claims them as their own. Willison ties this to Sony Music Publishing and Warner Chappell suing Anthropic (filed days before the prompt shipped) over training on song-lyric databases. A second new rule bans drawing recognizable characters or logos even via code (SVG, HTML/CSS mockups) — Claude has to judge the request by what the finished picture adds up to, not by what it's named, and can't dodge a decline by swapping in "alternative" details that still combine into the same recognizable image. He tests the rule using the prompt's own worked example ("draw a blue hedgehog running really fast" — i.e. Sonic) and gets exactly the described behavior: a decline plus an original character offered instead.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Помимо авторских прав, промпт получил стилистические правки: явный запрет на слова «genuinely», «honestly», «straightforward» (как способ звучать убедительнее вместо прямого ответа), требование быть короче по умолчанию, и смягчение реакции на грубость пользователя — вместо прежнего «одно предупреждение и завершение разговора» новая версия велит Claude не извиняться избыточно и не становиться «покорнее» под давлением, сохраняя ровный тон без эскалации.</span>
+      <span data-lang="en">Beyond copyright, the prompt picked up style tweaks: an explicit ban on the words "genuinely," "honestly," and "straightforward" (used as a crutch to sound convincing instead of just answering directly), a default toward brevity, and a softer response to user rudeness — instead of the old "one warning, then end the conversation," the new version tells Claude not to over-apologize or grow more submissive under pressure, keeping a level tone without escalating.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: как диффить промпты моделей</span><span data-lang="en">The method: diffing model prompts</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая часть материала — не список изменений, а то, как Уиллисон их получил. Он завёл репозиторий <code>claude-system-prompts</code>, куда складывает опубликованные Anthropic промпты по одному файлу на семейство моделей (Fable, Opus, Sonnet, Haiku), а каждое реальное изменение промпта превращает в отдельный git-коммит с датой, «подделанной» под дату изменения — так историю правок можно листать прямо в интерфейсе GitHub как обычный diff. Поверх этого работает GitHub Actions-джоба: раз в день (или по ручному запуску) она сверяет опубликованные промпты с сохранёнными, коммитит разницу и прогоняет получившийся diff через модель (GPT-5.6 Luna), которая пишет короткое резюме на человеческом языке — что добавлено, что убрано, что осталось рутинной правкой (даты, номера версий) и не стоит упоминания.</span>
+      <span data-lang="en">The most useful part of the piece isn't the list of changes, it's how Willison obtained them. He built a repo, <code>claude-system-prompts</code>, with one file per model family (Fable, Opus, Sonnet, Haiku) holding the prompts Anthropic publishes, and turns every real prompt change into its own git commit, backdated to when the change actually happened — so the edit history can be browsed as an ordinary diff right in the GitHub UI. On top of that sits a GitHub Actions job: once a day (or on manual trigger) it checks the published prompts against the saved ones, commits the difference, and runs the resulting diff through a model (GPT-5.6 Luna) that writes a short, human-readable summary — what was added, what was dropped, and what's routine churn (dates, version numbers) not worth mentioning.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Показательная деталь выбора модели: резюмировать делает не сам Claude, а модель другого вендора — сознательно, чтобы не рисковать тем, что материал из системного промпта Claude повлияет на то, как Claude же его оценивает. При этом весь код автоматизации и почти всю документацию написал сам Claude Fable 5.1 (Уиллисон опубликовал полную стенограмму этой сессии отдельной ссылкой) — то есть модель использовалась для построения инструмента, который потом независимо проверяет промпты этой же модели.</span>
+      <span data-lang="en">A telling detail in the tool design: the summarizing step doesn't use Claude itself but a different vendor's model — deliberately, to avoid the risk that material from Claude's own system prompt could color how Claude judges it. At the same time, Claude Fable 5.1 itself wrote nearly all of the automation code and documentation (Willison published the full transcript of that session as a separate link) — meaning the model was used to build a tool that then independently audits prompts for that same model.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это тем, кто работает с промптами</span><span data-lang="en">Why this matters for anyone working with prompts</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод для инженеров, работающих с чужими API: система, которую построил Уиллисон, обобщается на любой источник, публикующий версионируемый текст без нормального diff-интерфейса — не только системные промпты. Приём «git-репозиторий с подделанными датами коммитов + LLM-резюме диффа раз в день» — дешёвый способ следить за скрытыми изменениями поведения продукта, на которые вендор явно не укажет в release notes.</span>
+      <span data-lang="en">The practical takeaway for engineers working with someone else's API: the system Willison built generalizes to any source that publishes versioned text without a proper diff interface — not just system prompts. The "git repo with backdated commits plus a daily LLM-written diff summary" trick is a cheap way to track quiet behavioral changes a vendor won't call out in release notes.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

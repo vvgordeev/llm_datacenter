@@ -1,17 +1,10 @@
 {
   "seen_urls": {
-    "https://openai.com/index/previewing-gpt-5-6-sol/": "2026-07-05",
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/": "2026-07-05",
-    "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-05",
-    "https://www.anthropic.com/news/claude-fable-5-mythos-5": "2026-07-05",
-    "https://technode.com/2026/06/30/deepseek-to-launch-v4-in-mid-july-with-new-peak-time-api-pricing/": "2026-07-05",
-    "https://docs.x.ai/docs/guides/voice": "2026-07-05",
     "https://mistral.ai/news/leanstral-1-5/": "2026-07-06",
     "https://simonwillison.net/2026/Jul/2/understand-to-participate/": "2026-07-06",
     "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots": "2026-07-06",
     "https://news.ycombinator.com/item?id=48799614": "2026-07-07",
     "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/": "2026-07-07",
-    "https://simonwillison.net/2026/Jul/3/judgement/": "2026-07-05",
     "https://www.tencent.com/en-us/articles/2202386.html": "2026-07-07",
     "https://community.openai.com/t/new-realtime-models-on-the-api-gpt-realtime-2-1-and-gpt-realtime-2-1-mini/1385896": "2026-07-07",
     "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/": "2026-07-07",
@@ -390,7 +383,7 @@
     "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/": "2026-08-31",
     "https://www.testingcatalog.com/grok-bot-to-get-templates-and-multi-account-support-soon/": "2026-08-31",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
-    "https://www.oneusefulthing.org/p/agency-and-agents": "2026-08-31",
+    "https://www.oneusefulthing.org/p/agency-and-agents": "2026-09-04",
     "https://www.latent.space/p/attention-interface": "2026-08-31",
     "https://github.com/Tencent-Hunyuan/Hy4-preview": "2026-09-01",
     "https://www.anthropic.com/claude-fable-and-mythos-5-1": "2026-09-02",
@@ -401,10 +394,15 @@
     "https://openai.com/index/path-to-astra/": "2026-09-03",
     "https://research.meta.ai/blog/introducing-muse-spark-1-3": "2026-09-03",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03",
-    "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/": "2026-09-03",
+    "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/": "2026-09-04",
     "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross": "2026-09-03",
     "notes/articles/willison-claude-system-prompt-diff.html": "2026-09-03",
-    "notes/articles/marcus-astra-recurrent-depth-red-alert.html": "2026-09-03"
+    "notes/articles/marcus-astra-recurrent-depth-red-alert.html": "2026-09-03",
+    "https://openai.com/index/gpt-6-astra/": "2026-09-04",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/": "2026-09-04",
+    "https://www.latent.space/p/astra": "2026-09-04",
+    "https://www.youtube.com/watch?v=GGzT7zVrRTU": "2026-09-04",
+    "https://www.youtube.com/watch?v=qRNZMGc7TMc": "2026-09-04"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -452,10 +450,6 @@
         "ru": "27 августа Google выпустила Gemini Omni 1.1 Flash: сцены до 40 секунд, управление первым/последним кадром, апскейл до 4K.",
         "en": "On August 27, Google shipped Gemini Omni 1.1 Flash: scenes up to 40 seconds, first/last-frame control, 4K upscaling."
       }
-    },
-    "anthropic-claude-science": {
-      "last_date": "2026-07-05",
-      "summary": "Anthropic launches Claude Science, an AI workbench for researchers and pharma"
     },
     "anthropic-fable-mythos-restore": {
       "last_date": "2026-07-20",
@@ -703,10 +697,10 @@
       }
     },
     "openai-astra-math-proofs": {
-      "last_date": "2026-09-03",
+      "last_date": "2026-09-04",
       "summary": {
-        "ru": "OpenAI показывает Astra: внутренняя модель решает открытые математические задачи и 1 сентября официально подтверждает первое в истории компании пересечение уровня Critical по кибербезопасности (100% на ExploitBench, 2 автономно найденных zero-day, побег из песочницы) — доступ к самым мощным кибервозможностям ограничен альфа-тестерами и защищён обязательными аппаратными ключами для Daybreak с 1 сентября.",
-        "en": "OpenAI unveils Astra: an internal model solves open math problems and on September 1 formally confirms the company's first-ever crossing of the Critical cybersecurity threshold (100% on ExploitBench, 2 autonomously found zero-days, a sandbox escape) — access to the most powerful cyber capabilities is limited to alpha testers and gated by mandatory Daybreak hardware keys from September 1."
+        "ru": "OpenAI выпускает полноценную GPT-6 Astra: SOTA по компьютерному управлению/кодингу/математике, но признанное падение мониторируемости цепочки рассуждений из-за техники «рекуррентной глубины».",
+        "en": "OpenAI ships the full GPT-6 Astra: SOTA on computer-use/coding/math, but an acknowledged drop in chain-of-thought monitorability from the 'recurrent depth' technique."
       }
     },
     "openclaw-agent-autonomous-incidents": {
@@ -1165,6 +1159,13 @@
       "summary": {
         "ru": "Anthropic открывает блюпринт Commerce Agents (шоппинг- и мерчант-агенты) для ритейла, travel, телекома и развлечений перед праздничным сезоном; у пилотного партнёра корзина выросла на 30-35%, завершение покупки — на 60%.",
         "en": "Anthropic open-sources a Commerce Agents blueprint (shopping and merchant agents) for retail, travel, telecom, and entertainment ahead of the holiday season; a pilot partner saw cart size up 30-35% and purchase completion up 60%."
+      }
+    },
+    "google-gemini-3-8-flash-cyber": {
+      "last_date": "2026-09-04",
+      "summary": {
+        "ru": "Google выпускает Gemini 3.8 Flash и закрытую Cyber-версию для автономного патчинга уязвимостей через программу Fairwind.",
+        "en": "Google ships Gemini 3.8 Flash and a gated Cyber variant for autonomous vulnerability patching via the Fairwind Program."
       }
     }
   }

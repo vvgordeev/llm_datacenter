@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-04",
+      "news_count": 2,
+      "expert_count": 5,
+      "top_title": {
+        "ru": "OpenAI выпускает GPT-6 Astra — самую мощную модель компании, но с заметно упавшей «прозрачностью» рассуждений",
+        "en": "OpenAI launches GPT-6 Astra, its most powerful model yet, with sharply reduced reasoning monitorability"
+      }
+    },
+    {
       "date": "2026-09-03",
       "news_count": 3,
       "expert_count": 2,
