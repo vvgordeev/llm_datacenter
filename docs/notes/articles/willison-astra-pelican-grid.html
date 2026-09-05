@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Сравнительная таблица пеликанов для Astra» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-04</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-04</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Сравнительная таблица пеликанов для Astra оказалась на удивление показательной</span>
+      <span data-lang="en">The Pelican comparison grid for Astra is pretty interesting</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/4/astra-pelicans/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Зачем рисовать пеликанов на велосипеде</span><span data-lang="en">Why draw pelicans riding bicycles</span></h2>
+    <p>
+      <span data-lang="ru">У Уиллисона есть многолетний неформальный бенчмарк: попросить модель нарисовать SVG-пеликана, едущего на велосипеде. Задача обманчиво проста — она требует одновременно понимать анатомию птицы, геометрию велосипеда и уметь выразить всё это в координатах SVG без визуальной обратной связи, поэтому результат хорошо показывает, «видит» ли модель форму объекта, а не просто копирует стиль. Получив доступ к GPT-6 Astra в день релиза, он прогнал тест на всех пяти уровнях рассуждений модели — low, medium, high, xhigh и max (Astra, в отличие от предшественников, не поддерживает уровень «none») — и собрал результаты в одну сравнительную таблицу вместе с пеликанами GPT-5.6 Sol, Terra и Luna.</span>
+      <span data-lang="en">Willison runs a long-standing informal benchmark: ask a model to draw an SVG pelican riding a bicycle. The task is deceptively simple — it requires understanding bird anatomy and bicycle geometry at once, and expressing both in SVG coordinates with no visual feedback loop, which makes it a decent probe of whether a model actually "sees" the shape of an object rather than just imitating style. Getting access to GPT-6 Astra on release day, he ran the test across all five of the model's reasoning levels — low, medium, high, xhigh, and max (Astra, unlike its predecessors, doesn't support a "none" level) — and put the results into one comparison grid alongside pelicans from GPT-5.6 Sol, Terra, and Luna.</span>
+    </p>
+
+    <h2><span data-lang="ru">Astra рисует лучше на любом уровне рассуждений</span><span data-lang="en">Astra draws better at every reasoning level</span></h2>
+    <p>
+      <span data-lang="ru">Главный вывод грубо очевиден из самой картинки: пеликаны Astra заметно лучше на любом уровне. Даже лучший пеликан GPT-5.6 Sol (Уиллисону больше понравился xhigh, чем max) остаётся набором узнаваемых, но абстрактных фигур, тогда как каждый пеликан Astra — от low до xhigh — выглядит лучше этого лучшего результата Sol; пеликан на уровне max получился по-настоящему хорош. При этом есть и системная слабость: ниже уровня max Astra всё ещё не всегда надёжно рисует лапы птицы по обе стороны кадра — деталь, которая как раз и выдаёт модели, ещё не до конца «понимающие» позу объекта.</span>
+      <span data-lang="en">The headline finding is visible straight from the grid: Astra's pelicans are noticeably better at every level. Even the best GPT-5.6 Sol pelican (Willison preferred xhigh over max) is still a set of recognizable but abstract shapes, while every Astra pelican, from low to xhigh, beats that best Sol result outright; the max-level pelican is genuinely good. There's a systematic weak spot too: below max, Astra still doesn't reliably draw the pelican's legs on both sides of the frame — the kind of detail that gives away a model that hasn't fully "understood" the object's pose yet.</span>
+    </p>
+
+    <h2><span data-lang="ru">Токены, цена и странное совпадение с Luna</span><span data-lang="en">Tokens, price, and a curious overlap with Luna</span></h2>
+    <p>
+      <span data-lang="ru">По цене Astra примерно вдвое дороже Sol ($10/млн входных, $50/млн выходных токенов против $5/$30), но использует заметно меньше токенов на каждом уровне рассуждений, из-за чего итоговая цена генерации на разных уровнях сближается сильнее, чем можно было бы ожидать по номинальному прайсингу. Самый дешёвый режим — Astra low — обходится в 9,55 цента и выдаёт пеликана лучше, чем ЛЮБАЯ модель линейки GPT-5.6 Sol на любом уровне рассуждений: потратить 10 центов на другую модель означает получить результат заметно хуже.</span>
+      <span data-lang="en">On price, Astra runs roughly twice as expensive as Sol ($10/million input tokens, $50/million output, versus $5/$30), but it uses noticeably fewer tokens at each reasoning level, which pulls the effective per-image cost across levels closer together than the sticker pricing would suggest. The cheapest setting, Astra low, costs 9.55 cents and produces a better pelican than ANY GPT-5.6 Sol model at any reasoning level — spending 10 cents on any other model buys a visibly worse result.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Самое любопытное наблюдение — в счётчиках входных токенов: Astra и Luna потратили на один и тот же промпт по 16 входных токенов, а Sol и Terra — по 26. Такое совпадение токенизации между «флагманом» Astra и «лёгкой» Luna заставляет Уиллисона задуматься, не связаны ли эти две модели друг с другом теснее, чем это официально признаёт OpenAI — притом что компания представляет их как отдельные модели линейки GPT-5.6/6.</span>
+      <span data-lang="en">The most intriguing observation is buried in the input-token counts: Astra and Luna both used 16 input tokens for the same prompt, while Sol and Terra used 26. That tokenization match between the "flagship" Astra and the "lightweight" Luna leads Willison to wonder whether the two models are more closely related than OpenAI has officially let on — even though the company presents them as separate models in the GPT-5.6/6 lineup.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

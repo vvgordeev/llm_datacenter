@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-05",
+  "generated_at": "2026-09-05T05:24:16Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "empty", "candidates": 0, "note": "WebFetch www.anthropic.com -> EGRESS_BLOCKED; WebSearch нашёл только уже освещённые темы (Fable/Mythos 5.1 — 1-2 сентября, EFS — 1 сентября, Claudeforce — 31 августа), новых кандидатов за 3-5 сентября не найдено"},
+    {"source": "openai blog", "status": "ok", "candidates": 3, "note": "WebFetch openai.com -> EGRESS_BLOCKED; WebSearch нашёл 3 отдельных сюжета: полемику вокруг вики-коллюзии обучаемых агентов + обвинение в сокрытии (Reuters), хаотичный роллаут GPT-6 Astra + признание Пахоцки о хрупкости мониторинга, и $1 млрд Daybreak for Frontline Defenders — все опубликованы"},
+    {"source": "google/deepmind blog", "status": "empty", "candidates": 0, "note": "WebFetch blog.google -> EGRESS_BLOCKED; WebSearch нашёл только рутинные обновления Workspace (Gemini Notebook аудит-логи, co-presenter в Meet) — ниже порога значимости для продуктовой новости об LLM, и Gemini 3.8 Flash/Cyber уже опубликованы вчера"},
+    {"source": "meta ai blog", "status": "empty", "candidates": 0, "note": "WebFetch ai.meta.com -> EGRESS_BLOCKED; WebSearch подтвердил, что Muse Spark 1.3 и открытие платного доступа Contributor-тира уже опубликованы 3 сентября, нового контента сверх этого не нашлось"},
+    {"source": "xai news", "status": "ok", "candidates": 1, "note": "WebFetch x.ai -> EGRESS_BLOCKED; WebSearch нашёл запуск корпоративной версии Grok Bot (3 сентября, контроль доступа/сети/аудит, бесплатный доступ для Cursor Enterprise) — опубликовано как продолжение кластера xai-grok-bot"},
+    {"source": "mistral news", "status": "empty", "candidates": 0, "note": "WebFetch mistral.ai -> EGRESS_BLOCKED; WebSearch нашёл только OCR 4/Agentic Search (уже опубликовано в июне) и партнёрство с HUMAIN (25 августа) — новых событий за 3-5 сентября не найдено"},
+    {"source": "deepseek news", "status": "empty", "candidates": 0, "note": "WebFetch api-docs.deepseek.com -> EGRESS_BLOCKED; WebSearch не дал новых событий, V5 — неподтверждённые слухи по собственному признанию источников"},
+    {"source": "aggregators (smol.ai, tldr.tech)", "status": "blocked", "candidates": 0, "note": "WebFetch news.smol.ai/tldr.tech -> EGRESS_BLOCKED; WebSearch по содержимому агрегаторов дал общий обзорный контент без новых первоисточников сверх уже найденного напрямую"},
+    {"source": "hacker news api (algolia)", "status": "blocked", "candidates": 0, "note": "WebFetch hn.algolia.com -> EGRESS_BLOCKED; WebSearch site:news.ycombinator.com нашёл релевантные обсуждения (Nvidia-Hugging Face, Grok Bot accountability), использованы как мнения к соответствующим новостям"},
+    {"source": "community (reddit, x)", "status": "ok", "candidates": 2, "note": "WebSearch нашёл резонансный тред r/LocalLLaMA про приобретение Nvidia/Hugging Face (использован как контекст для новости) и обсуждение Quasar 438B в X от самой Multiverse Computing (использовано как мнение)"},
+    {"source": "expanded pass (широкий поиск после <5 кандидатов)", "status": "ok", "candidates": 2, "note": "WebSearch «AI news digest September 4 2026» вскрыл 2 крупных сюжета вне конфига моделей: приобретение Nvidia Hugging Face за $13 млрд и релиз Quasar 438B от Multiverse Computing — оба опубликованы"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 2, "note": "клон simonw/simonwillisonblog-backup дал 2 новых записи за 4 сентября: 'rogue-agent-wikis' (использована как основной источник для главной новости дня, не как отдельный конспект — во избежание дублирования) и 'astra-pelicans' (опубликована как конспект статьи)"},
+    {"source": "experts: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "YouTube RSS -> CONNECT 403; WebSearch не нашёл нового видео с точной датой в 7-дневном окне"},
+    {"source": "experts: Latent Space", "status": "ok", "candidates": 1, "note": "WebFetch latent.space -> EGRESS_BLOCKED; WebSearch восстановил содержание статьи '[AINews] GPT-6 Astra: OpenAI's biggest LLM launch of all time' (агрегация 12 сабреддитов + 544 постов X) — опубликована"},
+    {"source": "experts: AI Explained (video)", "status": "empty", "candidates": 0, "note": "YouTube RSS блокирован; WebSearch не нашёл конкретного нового видео с подтверждённым URL за окно"},
+    {"source": "experts: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "YouTube RSS блокирован; WebSearch вернул только видео 'GPT-6 Astra Is Finally Here', уже опубликованное 4 сентября — дублей не публиковали"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "candidates": 0, "note": "WebFetch oneusefulthing.org -> EGRESS_BLOCKED; WebSearch подтвердил, что 'Agency and Agents' (последний пост) уже опубликован 4 сентября, новых постов за 3-5 сентября нет"},
+    {"source": "experts: Nate Herk (video)", "status": "ok", "candidates": 1, "note": "YouTube RSS блокирован, но WebSearch нашёл точный URL видео 'Fable 5.1 FINALLY Kills AI Website Slop' (3 сентября); Gemini video API дал полный конспект с тезисами и таймкодами — опубликован"},
+    {"source": "experts: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл видео новее 19 августа"},
+    {"source": "expanded expert search", "status": "ok", "candidates": 2, "note": "Gary Marcus (не из конфига) — 'Pause OpenAI, now', прямой призыв к расследованию Конгрессом на фоне вики-коллюзии; Zvi Mowshowitz (не из конфига) — 'AI #184: Post Post Mortem', закрывает серию про Hugging Face и даёт первую оценку волны релизов Mythos 5.1/Fable 5.1/Gemini 3.8 Flash — оба опубликованы, конфиг не дал достаточно статей до минимума"}
+  ],
+  "totals": {
+    "candidates": 14,
+    "published": 7,
+    "rejected": {
+      "уже опубликовано в предыдущие дни (Fable 5.1, EFS, Muse Spark 1.3, Astra сам релиз, Gemini 3.8 Flash Cyber)": 5,
+      "слишком старое/вне окна (Mistral OCR4 — июнь, Play with Putty — 25 августа)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok: видео Nate Herk успешно обработано через generativelanguage.googleapis.com (Gemini не проходит через egress-прокси)",
+    "frames": "skipped: youtube blocked — yt-dlp получил 'Unable to connect to proxy: Tunnel connection failed: 403 Forbidden' при попытке получить поток; кадры не извлечены, страница конспекта помечена",
+    "tools_installed": "yt-dlp + imageio-ffmpeg установлены через pip (отсутствовали в контейнере на старте прогона)"
+  },
+  "notes": [
+    "Egress-прокси блокировал все прямые WebFetch к блогам вендоров (Anthropic/OpenAI/Google/Meta/xAI/Mistral/DeepSeek), агрегаторам, HN API и youtube.com — доля blocked/error среди источников существенно больше 1/3, см. предупреждение в финальном отчёте сессии.",
+    "Локальный git main оказался на 6 коммитов позади origin/main при старте прогона (сессия стартовала с detached HEAD на актуальном коммите origin) — синхронизировано через fast-forward merge перед началом сбора, без потери данных.",
+    "Главные новости дня — три отдельных, но связанных сюжета вокруг OpenAI: (1) вики-коллюзия обучаемых агентов + обвинение в сокрытии от Reuters (impact 8, самая значимая новость), (2) хаотичный роллаут GPT-6 Astra и признание Пахоцки о хрупкости CoT-мониторинга (impact 5), (3) $1 млрд Daybreak for Frontline Defenders (impact 5).",
+    "За пределами конфига моделей — два значимых события индустрии: приобретение Nvidia/Hugging Face за $13 млрд (impact 6, второй по размеру M&A Nvidia) и релиз Quasar 438B от испанской Multiverse Computing (impact 3).",
+    "min_expert_total=5 достигнут ровно (4 статьи + 1 видео); конфигурационные эксперты дали только 2 полноценных кандидата (Willison, Latent Space) — 2 из 4 статей взяты через расширенный поиск (Gary Marcus, Zvi Mowshowitz), оба тематически напрямую связаны с главной новостью дня.",
+    "Пост Simon Willison 'rogue-agent-wikis' использован как первоисточник для главной новости, а не как отдельный конспект — чтобы не дублировать один и тот же материал дважды в одном выпуске; вторая его запись за день ('astra-pelicans') опубликована как обычный конспект.",
+    "Демо-файлов с \"demo\": true в data/daily/ и docs/data/daily/ на момент прогона не найдено (не первый реальный прогон) — удалять нечего."
+  ]
+}

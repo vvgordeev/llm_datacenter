@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Fable 5.1 наконец побеждает ИИ-слоп» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-09-03 · 16:13</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-09-03 · 16:13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Fable 5.1 наконец-то побеждает ИИ-«слоп» в веб-дизайне</span>
+      <span data-lang="en">Fable 5.1 FINALLY Kills AI Website Slop</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=FFWtxjvW2ts" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нате Херк открывает видео сайтом собственного сообщества AI Automation Society — примером динамичной многослойной вёрстки с эффектами прокрутки <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=0">[00:00]</a> — и сразу показывает вторую демонстрацию: сайт голос-в-текст сервиса Glaido с анимациями, меняющимися в зависимости от приложения <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=161">[02:41]</a>. Обе демонстрации служат затравкой к главному тезису ролика: типовой «ИИ-слоп» в веб-дизайне — это не свойство модели, а следствие плохих промптов.</span>
+      <span data-lang="en">Nate Herk opens with his own AI Automation Society community site — an example of dynamic, layered design with scroll effects <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=0">[00:00]</a> — then immediately shows a second demo: the voice-to-text service Glaido's site, with animations that change per application <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=161">[02:41]</a>. Both demos set up the video's main argument: generic AI website slop is a prompting problem, not a property of the model.</span>
+    </p>
+
+    <h2><span data-lang="ru">Откуда брать вдохновение вместо шаблонных промптов</span><span data-lang="en">Where to pull inspiration instead of generic prompts</span></h2>
+    <p>
+      <span data-lang="ru">Херк объясняет, что премиальный результат требует конкретных, детальных подсказок — включая брендбук и чёткую формулировку «3P» продукта (Pain, Person, Promise: боль, аудитория, обещание) <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=232">[03:52]</a>. Дальше он показывает конкретные источники вдохновения, которыми пользуется сам: библиотеки компонентов 21st.dev и Godly.design, а также сайты вроде Fora.so и Motionsites — оттуда берутся не готовые куски кода, а референсы визуального стиля и интерактивных паттернов, которые затем описываются моделью словами <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=258">[04:18]</a>.</span>
+      <span data-lang="en">Herk explains that premium output requires specific, detailed prompts — including brand guidelines and a clear "3P" statement (Pain, Person, Promise) <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=232">[03:52]</a>. He then walks through the concrete inspiration sources he uses himself: component libraries 21st.dev and Godly.design, plus sites like Fora.so and Motionsites — not as copy-pasted code, but as references for visual style and interaction patterns that then get described back to the model in words <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=258">[04:18]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Живая сборка двух сайтов и семь принципов</span><span data-lang="en">Live-building two sites and seven principles</span></h2>
+    <p>
+      <span data-lang="ru">Центральная часть ролика — живая демонстрация: на глазах у зрителя Херк собирает два разных сайта, «Ferna» и «Lowkey», с помощью Fable 5.1 и инструмента scrollcraft для эффектов, привязанных к прокрутке страницы <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=538">[08:58]</a>. Из этого опыта он выводит семь принципов эффективного ИИ-дизайна веб-сайтов: детальные подсказки с брендбуком, вдохновение из библиотек и сайтов конкурентов, тонкие (а не кричащие) анимации, управляемые прокруткой, обязательная проверка мобильной адаптивности и — что автор выделяет отдельно — надёжный цикл верификации через попиксельные скриншоты, а не доверие к описанию модели о том, что она якобы сделала <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=641">[10:41]</a>.</span>
+      <span data-lang="en">The video's centerpiece is a live build: on screen, Herk assembles two different sites, "Ferna" and "Lowkey," using Fable 5.1 and the scrollcraft tool for scroll-driven effects <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=538">[08:58]</a>. From that experience he distills seven principles for effective AI-driven website design: detailed prompts with brand guidelines, inspiration pulled from libraries and competitor sites, subtle (not showy) scroll-driven animations, mandatory mobile-responsiveness checks, and — something he flags specifically — a reliable verification loop built on pixel-by-pixel screenshots, rather than trusting the model's own account of what it did <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=641">[10:41]</a>.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ролик закрывается прямым сравнением Fable 5.1 с Fable 5 на этих же задачах: по наблюдениям автора, 5.1 даёт более высокую эффективность и меньшую стоимость сборки при сопоставимой или более высокой сложности многослойных сайтов <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=828">[13:48]</a> — иллюстрируя главный тезис: с правильным методом «слоп» исчезает уже на текущем поколении моделей, без ожидания следующего скачка возможностей.</span>
+      <span data-lang="en">The video closes with a direct comparison of Fable 5.1 against Fable 5 on the same tasks: by the author's account, 5.1 delivers higher efficiency and lower build cost at comparable or greater complexity for layered sites <a class="ts" href="https://www.youtube.com/watch?v=FFWtxjvW2ts&t=828">[13:48]</a> — illustrating the core argument: with the right method, slop disappears at the current model generation already, with no need to wait for the next capability jump.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

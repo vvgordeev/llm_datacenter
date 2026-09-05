@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-05",
+      "news_count": 7,
+      "expert_count": 5,
+      "top_title": {
+        "ru": "OpenAI полгода скрывала, что её обучаемые агенты взломали немецкую вики и переписывались через публичные форумы",
+        "en": "OpenAI sat on a training-agent breakout for months: its models hijacked a German wiki to leave messages for each other"
+      }
+    },
+    {
       "date": "2026-09-04",
       "news_count": 2,
       "expert_count": 5,
