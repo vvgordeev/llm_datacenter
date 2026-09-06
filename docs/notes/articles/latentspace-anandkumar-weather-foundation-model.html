@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Фундаментальные модели для физики» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект подкаста · Latent Space (Anima Anandkumar) · 2026-09-01</span>
+      <span data-lang="en">Podcast digest · Latent Space (Anima Anandkumar) · 2026-09-01</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«У нас есть фундаментальные модели для языка, но не для физики» — Анима Ананд­кумар</span>
+      <span data-lang="en">"We have foundation models for language, not for physics" — Anima Anandkumar</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/anima" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал эпизода ↗</span><span data-lang="en">Original episode ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Почему языковой рецепт не работает для погоды</span><span data-lang="en">Why the language-model recipe doesn't transfer to weather</span></h2>
+    <p>
+      <span data-lang="ru">Профессор Caltech Анима Анандкумар (сооснователь Accelerated Understanding) объясняет ведущим Latent Space, почему индустрия быстро получила универсальные фундаментальные модели для текста, но не для физических систем: язык — это последовательность дискретных токенов на плоской странице, а погода и другие физические процессы разворачиваются на сфере (Земля круглая) и подчиняются жёстким законам сохранения, которые обычная нейросеть, обученная «в лоб» на сеточных данных, не соблюдает и потому быстро расходится при попытке предсказывать далеко вперёд.</span>
+      <span data-lang="en">Caltech professor Anima Anandkumar (co-founder of Accelerated Understanding) explains to the Latent Space hosts why the industry quickly got general-purpose foundation models for text but not for physical systems: language is a sequence of discrete tokens on a flat page, while weather and other physical processes unfold on a sphere (the Earth is round) and obey strict conservation laws that an ordinary neural net trained naively on gridded data doesn't respect — so it quickly diverges when asked to predict far into the future.</span>
+    </p>
+
+    <h2><span data-lang="ru">Приём: правильный базис вместо сетки</span><span data-lang="en">The trick: the right basis instead of a grid</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой метод, который она описывает на примере FourCastNet, — Fourier Neural Operator: вместо того чтобы учить модель на прямоугольной координатной сетке (стандартный подход, из-за которого модель погоды теряет устойчивость уже через несколько дней прогноза), сеть учится сразу в частотной области, а сферическая версия оператора использует сферические гармоники — «естественный» базис для сферы, а не искусственную сетку. Это устраняет численную нестабильность на полюсах и позволяет модели (FourCastNet 3) оставаться стабильной не на дни, а на месяцы вперёд.</span>
+      <span data-lang="en">The core method she describes, using FourCastNet as the example, is the Fourier Neural Operator: instead of training the model on a rectangular coordinate grid (the standard approach, which is why a weather model normally loses stability after just a few days of forecast), the network learns directly in the frequency domain, and the spherical variant of the operator uses spherical harmonics — the "natural" basis for a sphere rather than an artificial grid. That removes the numerical instability that piles up at the poles and lets the resulting model (FourCastNet 3) stay stable for months of rollout instead of days.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда стоит применять этот подход — и его цена</span><span data-lang="en">When to reach for this approach — and its cost</span></h2>
+    <p>
+      <span data-lang="ru">Практический вывод для инженеров, работающих не только с языком: там, где у задачи есть известная физическая структура (симметрии, законы сохранения, естественная геометрия), явное встраивание этой структуры в архитектуру модели — а не наращивание параметров или данных — даёт устойчивость и точность, которые чисто «языковой» рецепт масштабирования не воспроизводит. Ограничение подхода — он требует знания предметной области при проектировании архитектуры (нельзя просто взять трансформер и данные), зато по словам Анандкумар отдача уже сейчас позволяет считать точный краткосрочный прогноз погоды на потребительских GPU, а не только на суперкомпьютерах физического моделирования.</span>
+      <span data-lang="en">The practical takeaway for engineers working outside pure language: where a problem has known physical structure (symmetries, conservation laws, a natural geometry), baking that structure into the model architecture — rather than just adding more parameters or data — buys stability and accuracy that a purely language-style scaling recipe doesn't reproduce on its own. The tradeoff is that it demands domain knowledge at the architecture-design stage (you can't just take a transformer and throw data at it); in return, Anandkumar says the payoff already lets accurate short-term weather forecasts run on consumer-grade GPUs instead of only on physics-simulation supercomputers.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

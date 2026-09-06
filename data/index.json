@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-06",
+      "news_count": 1,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Claude автономно формализовал полное машинно-проверяемое доказательство Великой теоремы Ферма на Lean",
+        "en": "Claude autonomously formalized a complete, machine-checked proof of Fermat's Last Theorem in Lean"
+      }
+    },
+    {
       "date": "2026-09-05",
       "news_count": 7,
       "expert_count": 5,

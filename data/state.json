@@ -1,13 +1,5 @@
 {
   "seen_urls": {
-    "https://news.ycombinator.com/item?id=48799614": "2026-07-07",
-    "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/": "2026-07-07",
-    "https://www.tencent.com/en-us/articles/2202386.html": "2026-07-07",
-    "https://community.openai.com/t/new-realtime-models-on-the-api-gpt-realtime-2-1-and-gpt-realtime-2-1-mini/1385896": "2026-07-07",
-    "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/": "2026-07-07",
-    "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/": "2026-07-07",
-    "https://www.youtube.com/watch?v=y24lF1q4SFY": "2026-07-07",
-    "https://www.youtube.com/watch?v=XTBWVVcF3Pk": "2026-07-07",
     "https://claude.com/blog/cowork-web-mobile": "2026-07-08",
     "https://www.axios.com/2026/07/08/openai-gpt-trump-ban-lifted": "2026-07-08",
     "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/": "2026-07-08",
@@ -146,7 +138,7 @@
     "https://thezvi.substack.com/p/ai-178-a-fire-alarm-for-general-intelligence": "2026-07-25",
     "https://api-docs.deepseek.com/updates/": "2026-08-01",
     "https://workspace.google.com/marketplace/app/grok/660927092109": "2026-07-26",
-    "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22": "2026-07-26",
+    "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22": "2026-09-06",
     "notes/articles/mollick-opinionated-guide-summer-2026.html": "2026-07-26",
     "https://thenewstack.io/opus-5-agentic-coding-cost/": "2026-07-26",
     "notes/articles/thenewstack-opus5-agentic-coding-cost.html": "2026-07-26",
@@ -416,7 +408,15 @@
     "https://thezvi.substack.com/p/ai-184-post-post-mortem": "2026-09-05",
     "notes/articles/zvi-ai-184-post-post-mortem.html": "2026-09-05",
     "https://www.youtube.com/watch?v=FFWtxjvW2ts": "2026-09-05",
-    "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05"
+    "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
+    "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-06",
+    "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/": "2026-09-06",
+    "https://www.latent.space/p/anima": "2026-09-06",
+    "https://www.sonarsource.com/blog/stop-the-context-tax/": "2026-09-06",
+    "notes/articles/willison-blender-coding-agents-macos.html": "2026-09-06",
+    "notes/articles/mollick-which-ai-to-use-summer-2026.html": "2026-09-06",
+    "notes/articles/latentspace-anandkumar-weather-foundation-model.html": "2026-09-06",
+    "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -1205,6 +1205,10 @@
         "ru": "Claude Code 2.1.259 (2 сентября): managedMcpServers для организаций, --permission-prompts none для headless; 2.1.260 (3 сентября): полноэкранная панель диффов (/diff), откат ошибочного применения правил Read к аргументам Bash.",
         "en": "Claude Code 2.1.259 (Sept 2): managedMcpServers for organizations, --permission-prompts none for headless hosts; 2.1.260 (Sept 3): fullscreen diff panel (/diff), reverts a mistaken application of Read deny rules to Bash arguments."
       }
+    },
+    "anthropic-claude-fermat-proof": {
+      "ru": "Anthropic сообщает, что Claude автономно за 11 дней сформализовал полное машинно-проверяемое доказательство Великой теоремы Ферма на Lean 4 (13 млн строк, 30 300 теорем) через мультиагентную платформу Prove2Me",
+      "en": "Anthropic says Claude autonomously formalized a complete, machine-checked proof of Fermat's Last Theorem in Lean 4 (13M lines, 30,300 theorems) over 11 days via the multi-agent Prove2Me platform"
     }
   }
 }

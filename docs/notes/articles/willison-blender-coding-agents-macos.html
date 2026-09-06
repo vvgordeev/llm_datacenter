@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Blender и кодинг-агенты на macOS» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи (TIL) · Simon Willison · 2026-09-05</span>
+      <span data-lang="en">Article digest (TIL) · Simon Willison · 2026-09-05</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как использовать Blender вместе с кодинг-агентами на macOS</span>
+      <span data-lang="en">Using Blender with coding agents on macOS</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Приём: агент как оператор Blender, а не генератор картинок</span><span data-lang="en">The trick: the agent as a Blender operator, not an image generator</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон описывает короткий, но практичный приём: современные фронтир-модели уже достаточно хорошо знают Python-API Blender (bpy) и его сценовый формат, чтобы кодинг-агент мог управлять полноценным десктопным Blender через терминал, а не пытаться нарисовать 3D-сцену «на глаз» в SVG или растре. Вместо промпта «нарисуй пеликана» агенту дают задачу написать и выполнить Python-скрипт, который создаёт объекты, материалы, камеру и свет внутри реального приложения Blender, а затем рендерит результат.</span>
+      <span data-lang="en">Willison describes a short, practical trick: frontier models already know Blender's Python API (bpy) and scene format well enough that a coding agent can drive the full desktop Blender app from a terminal, instead of trying to eyeball a 3D scene in SVG or raster form. Instead of a prompt like "draw a pelican," the agent is tasked with writing and running a Python script that creates objects, materials, a camera, and lighting inside the actual Blender application, then renders the result.</span>
+    </p>
+
+    <h2><span data-lang="ru">Из каких шагов состоит связка</span><span data-lang="en">What the setup consists of</span></h2>
+    <p>
+      <span data-lang="ru">Настройка на macOS сводится к одному условию: нужно поставить полноценное десктопное приложение Blender с blender.org (не облегчённый pip-пакет), после чего агенту достаточно одной инструкции вида «используй уже установленный /Applications/Blender, чтобы отрендерить сцену с пеликаном на велосипеде». Дальше агент сам пишет bpy-скрипт, запускает Blender в headless-режиме через командную строку и забирает готовый файл. Уиллисон тестировал связку с GPT-6 Astra (уровень Medium) в приложении ChatGPT для macOS в режиме Codex, но описывает приём как модель-агностичный: важен не конкретный поставщик, а то, что современные модели одинаково хорошо знают синтаксис bpy.</span>
+      <span data-lang="en">The macOS setup boils down to one requirement: install the full desktop Blender application from blender.org (not the lightweight pip package), after which a single instruction like "use the already-installed /Applications/Blender to render a scene of a pelican riding a bicycle" is enough. From there the agent writes its own bpy script, runs Blender headless from the command line, and retrieves the finished file. Willison tested the setup with GPT-6 Astra (Medium) in the ChatGPT macOS app's Codex mode, but frames the trick as model-agnostic: what matters isn't the specific vendor but that current models all know bpy syntax reasonably well.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что можно получить на выходе и где предел приёма</span><span data-lang="en">What you get out, and where the trick runs out</span></h2>
+    <p>
+      <span data-lang="ru">Результат — не только статичный рендер: агент может отдать .blend-файл, который потом открывается и редактируется руками в самом Blender, а может собрать последовательность кадров и склеить их в видео через ffmpeg, получив полноценную короткую анимацию без единого клика мышью. Ограничение, которое отмечает Уиллисон, — это по-прежнему «слепой» процесс: модель не видит рендер, пока явно не попросит его показать, поэтому итерации идут через пересборку сцены с нуля по текстовому описанию проблемы, а не через визуальную правку, и сложные сцены с точной композицией камеры или физикой всё ещё требуют нескольких проходов и подсказок.</span>
+      <span data-lang="en">The output isn't just a static render: the agent can hand back a .blend file that you then open and edit by hand in Blender itself, or it can assemble a sequence of frames and stitch them into a video with ffmpeg, producing a full short animation without a single mouse click. The limitation Willison notes is that it's still a "blind" process: the model doesn't see the render unless it explicitly asks to view it, so iteration happens by rebuilding the scene from a text description of the problem rather than by visual editing, and scenes needing precise camera composition or physics still take several passes and nudges.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

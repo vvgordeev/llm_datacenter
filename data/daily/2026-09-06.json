@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-06",
+  "generated_at": "2026-09-06T10:40:00Z",
+  "news": [
+    {
+      "id": "2026-09-06-anthropic-claude-fermat-proof",
+      "cluster_id": "anthropic-claude-fermat-proof",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude автономно формализовал полное машинно-проверяемое доказательство Великой теоремы Ферма на Lean",
+        "en": "Claude autonomously formalized a complete, machine-checked proof of Fermat's Last Theorem in Lean"
+      },
+      "summary": {
+        "ru": "Anthropic сообщила, что Claude за 11 дней в основном автономной работы через платформу Prove2Me (координация множества агентов Claude против графа промежуточных утверждений, разработанную Тяньи Пэном и коллегами из Колумбийского университета) написал первое сквозное машинно-проверяемое доказательство Великой теоремы Ферма на языке Lean 4 — 13 миллионов строк кода и 30 300 доказанных промежуточных теорем (29 500 из них использованы в финальном доказательстве), что в пять раз больше основной библиотеки Lean. Это не новая математика: Claude формализовал существующее доказательство Эндрю Уайлса 1995 года, но закрыл им последний пункт в 20-летнем списке Фрика Видейка из 100 задач на формализацию.",
+        "en": "Anthropic says Claude spent 11 days working largely autonomously via the Prove2Me platform (coordinating many Claude agents against a graph of intermediate statements, built by Tianyi Peng and collaborators at Columbia University) to write the first end-to-end, machine-checked proof of Fermat's Last Theorem in Lean 4 — 13 million lines of code and 30,300 proved intermediate theorems (29,500 of them used in the final proof), five times the size of Lean's own core library. This isn't new mathematics: Claude formalized Andrew Wiles's existing 1995 proof, but in doing so it closed out the last entry on Freek Wiedijk's 20-year-old list of 100 formalization challenges."
+      },
+      "impact_score": 8,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — полностью автономную формализацию математики в промышленном масштабе там, где человеческие команды закладывали годы, — но применимость пока нишевая (формальная верификация/математика), а не для всех пользователей LLM",
+        "en": "Opens a new class of scenarios — fully autonomous, industrial-scale math formalization where human teams budgeted years — but applicability is still niche (formal verification/research math), not a change for every LLM user"
+      },
+      "source_url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+      "opinions": [
+        {
+          "author": "Kevin Buzzard (Imperial College London, ведёт конкурирующий проект по формализации FLT)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Проверил доказательство Claude и подтвердил, что оно выдерживает проверку на базовых логических правилах Lean — назвал это выдающимся достижением, случившимся заметно быстрее, чем ожидали эксперты",
+            "en": "Reviewed Claude's proof and confirmed it holds up under Lean's basic logical rules — called it an extraordinary achievement that arrived far sooner than experts had expected"
+          },
+          "url": "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/"
+        },
+        {
+          "author": "Cliff Pickover (X/Twitter)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Резюмировал масштаб для широкой аудитории: 13 млн строк, более 29 000 новых доказанных теорем, проверено математиком, ведущим конкурирующий проект",
+            "en": "Summarized the scale for a broad audience: 13M lines, over 29,000 newly proved theorems, reviewed by the mathematician leading a competing project"
+          },
+          "url": "https://x.com/pickover/status/2095972276621717797"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Формализация-как-сервис: проверка корректности крупных математических доказательств (обычно занимающая у людей годы) через координацию множества агентов на общем графе теорем вместо одного длинного диалога с моделью",
+            "en": "Formalization-as-a-service: verifying large mathematical proofs (normally a years-long human effort) by coordinating many agents against a shared theorem graph, instead of one long dialogue with a single model"
+          },
+          "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-06-willison-blender-coding-agents",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Как использовать Blender вместе с кодинг-агентами на macOS",
+        "en": "Using Blender with coding agents on macOS"
+      },
+      "url": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/",
+      "summary": {
+        "ru": "Приём: ставите десктопный Blender с blender.org, и кодинг-агент сам пишет и выполняет bpy-скрипты через терминал, получая на выходе редактируемые .blend-файлы, рендеры и даже собранные через ffmpeg анимации — без единого клика мышью, хотя процесс остаётся «слепым» до явного запроса показать результат.",
+        "en": "The trick: install the desktop Blender app from blender.org, and a coding agent writes and runs bpy scripts from the terminal, producing editable .blend files, renders, and even ffmpeg-stitched animations — no mouse clicks, though the process stays \"blind\" until the agent is explicitly asked to show a render."
+      },
+      "note_page": "notes/articles/willison-blender-coding-agents-macos.html"
+    },
+    {
+      "id": "2026-09-06-mollick-which-ai-guide",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "Пристрастный гид: каким ИИ пользоваться прямо сейчас (лето 2026)",
+        "en": "An opinionated guide to which AI to use to do stuff — the Summer 2026 Edition"
+      },
+      "url": "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
+      "summary": {
+        "ru": "Летняя редакция гида сужает рекомендацию «основного» ИИ до ChatGPT или Claude и впервые явно снимает с рекомендации Gemini для повседневной работы; главное практическое правило — для низкоставочных задач годится любая бесплатная модель, а для высокоставочных стоит сознательно брать самую мощную модель на уровне рассуждений не ниже High.",
+        "en": "The summer edition narrows the \"primary daily driver\" recommendation to ChatGPT or Claude and for the first time explicitly drops Gemini from everyday use; the core practical rule is that any free default model is fine for low-stakes tasks, while high-stakes questions deserve the most capable model available at a reasoning level of at least High."
+      },
+      "note_page": "notes/articles/mollick-which-ai-to-use-summer-2026.html"
+    },
+    {
+      "id": "2026-09-06-latentspace-anandkumar-weather",
+      "type": "article",
+      "author": "Latent Space (Anima Anandkumar)",
+      "title": {
+        "ru": "«У нас есть фундаментальные модели для языка, но не для физики» — Анима Анандкумар",
+        "en": "\"We have foundation models for language, not for physics\" — Anima Anandkumar"
+      },
+      "url": "https://www.latent.space/p/anima",
+      "summary": {
+        "ru": "Caltech-профессор объясняет, почему у языка есть универсальные фундаментальные модели, а у физических систем вроде погоды — нет: явное встраивание физической структуры задачи (сферические гармоники вместо координатной сетки в FourCastNet) вместо наращивания параметров даёт устойчивость прогноза на месяцы вперёд ценой необходимости доменной экспертизы при проектировании архитектуры.",
+        "en": "The Caltech professor explains why language has general-purpose foundation models while physical systems like weather don't: baking a problem's physical structure directly into the architecture (spherical harmonics instead of a coordinate grid in FourCastNet), rather than adding parameters, buys months of stable forecasting at the cost of needing domain expertise up front."
+      },
+      "note_page": "notes/articles/latentspace-anandkumar-weather-foundation-model.html"
+    },
+    {
+      "id": "2026-09-06-sonar-vortex-context-tax",
+      "type": "article",
+      "author": "Sonar (SonarSource)",
+      "title": {
+        "ru": "Умная навигация для кодинг-агентов: как Sonar Vortex снижает «налог на контекст»",
+        "en": "Smarter navigation for AI coding agents with Sonar Vortex"
+      },
+      "url": "https://www.sonarsource.com/blog/stop-the-context-tax/",
+      "summary": {
+        "ru": "Вместо того чтобы агент грепал и перечитывал файлы в поисках определений, Sonar Vortex строит локальный граф зависимостей кода (SemSitter) и отвечает на вопросы навигации без затрат токенов модели — по данным Sonar, это снижает расход токенов на 5–36% на крупных стабильных кодовых базах.",
+        "en": "Instead of the agent grepping and re-reading files to find definitions, Sonar Vortex builds a local code dependency graph (SemSitter) and answers navigation questions without spending model tokens — per Sonar's numbers, cutting token usage 5-36% on large, stable codebases."
+      },
+      "note_page": "notes/articles/sonar-vortex-semantic-code-navigation.html"
+    }
+  ]
+}

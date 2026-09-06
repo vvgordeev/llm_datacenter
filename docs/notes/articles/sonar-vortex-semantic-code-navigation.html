@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Sonar Vortex против налога на контекст» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Sonar (SonarSource) · 2026-09-01</span>
+      <span data-lang="en">Article digest · Sonar (SonarSource) · 2026-09-01</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Умная навигация для кодинг-агентов: как Sonar Vortex снижает «налог на контекст»</span>
+      <span data-lang="en">Smarter navigation for AI coding agents with Sonar Vortex</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.sonarsource.com/blog/stop-the-context-tax/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Проблема: агент читает файлы, чтобы найти одно определение</span><span data-lang="en">The problem: the agent reads whole files just to find one definition</span></h2>
+    <p>
+      <span data-lang="ru">Когда кодинг-агент работает в большой кодовой базе, самый частый способ «понять», как устроен код, — это grep и последовательное чтение файлов целиком в поисках нужного класса, метода или места вызова. Каждый такой раунд грубого текстового поиска стоит токенов и раунд-трипов к модели, а на действительно крупном репозитории агент раз за разом перечитывает одни и те же файлы, потому что у него нет постоянной «карты» кода — только то, что он успел удержать в контексте за последние несколько шагов.</span>
+      <span data-lang="en">When a coding agent works in a large codebase, the most common way it "understands" the code is grep plus reading whole files in sequence to find the class, method, or call site it needs. Each round of that brute-force text search costs tokens and a round-trip to the model, and on a genuinely large repository the agent ends up re-reading the same files over and over, because it has no persistent "map" of the code — only whatever it managed to hold in context over the last few steps.</span>
+    </p>
+
+    <h2><span data-lang="ru">Приём: граф зависимостей вместо повторного чтения</span><span data-lang="en">The trick: a dependency graph instead of re-reading</span></h2>
+    <p>
+      <span data-lang="ru">Sonar предлагает Vortex — прослойку, которая строит Unified Dependency Graph (UDG) всего репозитория движком SemSitter: каждая функция, метод, класс, поле и параметр становится узлом графа, а типизированные рёбра описывают связи между ними (вызов, ссылка, возврат значения, параметр, тип, наследование). Вместо того чтобы агент сам грепал файлы, он задаёт графу вопрос навигации («кто вызывает этот метод», «где определён этот тип») и получает точный ответ без перечитывания исходников; сам граф вычисляется локально, в процессе, и не расходует токены модели.</span>
+      <span data-lang="en">Sonar's answer is Vortex, a layer that builds a Unified Dependency Graph (UDG) of the whole repository via its SemSitter engine: every function, method, class, field, and parameter becomes a graph node, and typed edges describe the relationships between them (calls, references, returns, has-param, is-type, extends). Instead of the agent grepping files itself, it asks the graph a navigation question ("who calls this method," "where is this type defined") and gets an exact answer without re-reading source files; the graph itself is computed locally, in-process, and doesn't spend any model tokens.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это оправдано и что остаётся ограничением</span><span data-lang="en">When it pays off, and what still limits it</span></h2>
+    <p>
+      <span data-lang="ru">По данным Sonar, замена «слепых» чтений файлов навигацией по графу снижает расход токенов агента на 5–36% в зависимости от задачи и размера кодовой базы; в одном из примеров с окном контекста, приближающимся к пределу в 1M токенов, средняя стоимость одного PR составляла около $65 — именно такие задачи выигрывают от подхода сильнее всего. Приём оправдан там, где кодовая база достаточно велика и стабильна, чтобы граф зависимостей окупал своё построение и поддержку; для маленьких проектов или кода, который меняется быстрее, чем граф успевает переиндексироваться, выигрыш менее заметен, а сама техника работает как надстройка над конкретными инструментами (Sonar Vortex, SonarQube), а не как универсальный протокол, переносимый на любой стек без адаптации.</span>
+      <span data-lang="en">Per Sonar's numbers, replacing blind file reads with graph navigation cuts an agent's token usage by 5-36%, depending on the task and codebase size; in one example, with a context window approaching the 1M-token ceiling, the average cost per pull request ran around $65 — exactly the kind of task that benefits most from the approach. The trick pays off where the codebase is large and stable enough that building and maintaining the dependency graph earns back its own cost; on small projects, or code that changes faster than the graph can be re-indexed, the payoff is smaller, and the technique itself is tied to specific tooling (Sonar Vortex, SonarQube) rather than being a universal protocol you can drop into any stack unmodified.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
