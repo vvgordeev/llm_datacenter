@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Astra и зацикленные трансформеры» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Sebastian Raschka · 2026-09-05</span>
+      <span data-lang="en">Article digest · Sebastian Raschka · 2026-09-05</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Astra и зацикленные трансформеры: разбираем приём «recurrent depth» без хайпа</span>
+      <span data-lang="en">OpenAI Astra and looped transformers</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Повод: слух о «принципиально новой» архитектуре Astra</span><span data-lang="en">The trigger: a rumor about Astra's "fundamentally new" architecture</span></h2>
+    <p>
+      <span data-lang="ru">После выхода GPT-6 Astra издание The Information написало, что модель построена как «recurrent depth» или «зацикленный трансформер» (looped transformer), и в комьюнити быстро возник нарратив, что OpenAI открыла принципиально новую архитектуру, которая заодно скрывает часть рассуждений модели от посторонних глаз. Racшка, автор известных учебников по глубокому обучению, разбирает это заявление по существу: он напоминает, что сам приём совсем не нов, и двумя месяцами ранее уже разбирал архитектуру открытой модели Nanbeige с точно таким же устройством.</span>
+      <span data-lang="en">After GPT-6 Astra shipped, The Information reported that the model is built as "recurrent depth" or a "looped transformer," and a narrative quickly formed that OpenAI had unveiled a fundamentally new architecture that also happens to hide part of the model's reasoning from outside view. Raschka, author of well-known deep learning textbooks, pushes back on the substance of that claim: he points out the technique itself is nothing new, and two months earlier he'd already covered the open-weight Nanbeige model, which uses the exact same setup.</span>
+    </p>
+
+    <h2><span data-lang="ru">Приём: один и тот же блок слоёв прогоняется дважды</span><span data-lang="en">The technique: the same layer stack, run through twice</span></h2>
+    <p>
+      <span data-lang="ru">Идея зацикленного трансформера сводится к переиспользованию слоёв: вместо одного прохода через N-слойный блок трансформера скрытое состояние прогоняется через тот же самый блок ещё раз — например, Nanbeige4.2-3B использует 22-слойный блок дважды, эффективно получая 44 слоя «глубины», но не удваивая при этом веса модели. Отсюда и главный компромисс приёма: модель не требует вдвое больше памяти и диска для хранения (компоненты переиспользуются), но требует почти вдвое больше вычислений на инференс, потому что входные эмбеддинги проходят почти вдвое больше слоёв. В техническом отчёте Nanbeige 4.2 два прохода дали лучший компромисс, сохранив около 75% token-эффективности обычной архитектуры; больше проходов почти не добавляли качества, но заметно замедляли и удорожали обучение.</span>
+      <span data-lang="en">The looped-transformer idea comes down to layer reuse: instead of a single pass through an N-layer transformer block, the hidden state is run through the same block a second time — for instance, Nanbeige4.2-3B reuses a 22-layer block twice, effectively getting 44 layers of "depth" without doubling the model's weights. That's the technique's central trade-off: the model doesn't need twice the memory and disk to host (components are reused), but it needs close to twice the compute at inference, since input embeddings pass through nearly twice as many layers. In the Nanbeige 4.2 technical report, two passes gave the best trade-off, retaining about 75% of a standard architecture's token efficiency; more passes barely improved quality but made training noticeably slower and more expensive.</span>
+    </p>
+
+    <h2><span data-lang="ru">Развенчание: «зацикленность» — не способ спрятать рассуждения</span><span data-lang="en">The debunk: "looping" isn't a way to hide reasoning</span></h2>
+    <p>
+      <span data-lang="ru">Главный тезис Рашки — не архитектурный, а концептуальный: сам факт повторного прохода через блок слоёв не создаёт скрытого от мониторинга «слоя рассуждений». Повторный проход добавляет вычисления над скрытыми состояниями до того, как модель выдаст следующий токен, точно так же, как это делают обычные слои трансформера — и это никак не отличается по «непрозрачности» от того, что модель и так делает внутри себя на каждом обычном шаге. Иными словами, тот факт, что GPT-6 Astra тратит меньше видимых токенов на рассуждение, чем GPT-5.6 Sol, объясняется не «зацикленностью», а тем, что это в целом более обученная и умная модель — то же самое наблюдалось и в предыдущих поколениях моделей без всякого looping.</span>
+      <span data-lang="en">Raschka's central claim isn't architectural but conceptual: the mere fact of a repeated pass through a layer block does not create a "reasoning layer" hidden from monitoring. The extra pass adds computation over hidden states before the model emits its next token, exactly like ordinary transformer layers already do — and it's no more "opaque" than what the model is already doing internally at every regular step. In other words, the fact that GPT-6 Astra uses fewer visible reasoning tokens than GPT-5.6 Sol isn't explained by "looping" — it's explained by Astra simply being a more heavily trained, smarter model overall, the same pattern seen across earlier model generations with no looping at all.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда применять приём и в чём его реальный предел</span><span data-lang="en">When to use the technique, and its real limit</span></h2>
+    <p>
+      <span data-lang="ru">Зацикленные трансформеры имеет смысл рассматривать, когда важнее ограничение по памяти/диску, чем по инференс-компьюту: это приём для сценариев с дефицитом VRAM или ограниченным размером модели на устройстве (как в случае с компактной Nanbeige4.2-3B), а не универсальное улучшение качества. Практический предел, который отдельно называет технический отчёт Nanbeige, — насыщение уже на двух проходах: дальнейшее увеличение числа повторов даёт исчезающе малый прирост качества ценой сильно растущей стоимости обучения и инференса, так что «просто зациклить побольше» — не работающая стратегия масштабирования.</span>
+      <span data-lang="en">Looped transformers make sense when memory/disk budget matters more than inference compute: it's a technique for VRAM-constrained or on-device model-size-constrained scenarios (as with the compact Nanbeige4.2-3B), not a universal quality upgrade. The practical limit the Nanbeige technical report calls out is saturation after just two passes: adding more repeats yields vanishingly small quality gains at a steeply rising training and inference cost, so "just loop it more" isn't a working scaling strategy.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

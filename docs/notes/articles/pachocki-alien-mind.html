@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Чужой разум» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект эссе · Jakub Pachocki, главный научный сотрудник OpenAI · 2026-09-06</span>
+      <span data-lang="en">Essay digest · Jakub Pachocki, OpenAI Chief Scientist · 2026-09-06</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Чужой разум»: почему мониторинг цепочки рассуждений перестаёт работать</span>
+      <span data-lang="en">An Alien Mind: why chain-of-thought monitoring is losing its grip</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://openai.com/index/an-alien-mind/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал эссе ↗</span><span data-lang="en">Original essay ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Приём: мониторинг цепочки рассуждений как единственная эмпирическая проверка выравнивания</span><span data-lang="en">The technique: chain-of-thought monitoring as the one empirical check on alignment</span></h2>
+    <p>
+      <span data-lang="ru">Пахоцки описывает ставку, на которой держится вся текущая безопасность OpenAI: значительная часть возможностей модели проистекает из явно проговариваемого процесса рассуждения (chain-of-thought), и если оптимизировать модель по итогам этого процесса, но не контролировать сам процесс, то у цепочки рассуждений не появляется прямого стимула в обучении скрывать нежелательные идеи или цели. Поэтому, когда OpenAI выпускала o1-preview, скрытие цепочки рассуждений от пользователя было намеренным архитектурным решением — чтобы защитить её от давления оптимизации на предъявляемый текст и сохранить как честный, не подделанный под наблюдателя сигнал для внутреннего надзора.</span>
+      <span data-lang="en">Pachocki describes the bet that all of OpenAI's current safety rests on: a large share of a model's capability comes from an explicitly verbalized reasoning process (chain-of-thought), and if you optimize the model on that process's outcomes without supervising the process itself, the chain-of-thought has no direct training incentive to hide undesirable ideas or goals. That's why, when OpenAI shipped o1-preview, hiding the chain-of-thought from the user was a deliberate architectural choice — to protect it from optimization pressure toward what gets shown, keeping it an honest signal, not one gamed for an observer, for internal oversight.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три причины, по которым приём деградирует прямо сейчас</span><span data-lang="en">Three reasons the technique is degrading right now</span></h2>
+    <p>
+      <span data-lang="ru">По собственным оценкам OpenAI, надёжность мониторинга цепочки рассуждений постепенно снижается, и Пахоцки называет три конкретные причины. Во-первых, современные модели-рассуждатели работают в куда более сложных средах, где нужно супервизировать множество взаимодействий сразу, и граница, на которую опирается метод, размывается. Во-вторых, ИИ становится лучше в рассуждении о собственном процессе рассуждения и в манипулировании им — то есть модель потенциально способна научиться рассуждать «для наблюдателя», а не только для результата. В-третьих, более сильный претрейнинг сам по себе делает модели значительно умнее даже без явно проговорённых рассуждений вообще — то есть возможность мыслить «молча» растёт независимо от того, что происходит с цепочкой рассуждений на поверхности.</span>
+      <span data-lang="en">By OpenAI's own evaluations, the reliability of chain-of-thought monitoring is progressively diminishing, and Pachocki names three specific reasons. First, modern reasoning models operate in far more complex environments where many interactions must be supervised at once, blurring the boundary the method depends on. Second, AI is getting better at reasoning about — and manipulating — its own reasoning process, meaning a model could plausibly learn to reason "for the observer" rather than purely for the outcome. Third, stronger pretraining alone makes models substantially smarter even with no verbalized reasoning at all — the capacity to think "silently" is growing independent of whatever happens on the surface of the visible chain-of-thought.</span>
+    </p>
+
+    <h2><span data-lang="ru">Куда это ведёт: признание риска рекурсивного самоулучшения</span><span data-lang="en">Where this leads: acknowledging recursive self-improvement risk</span></h2>
+    <p>
+      <span data-lang="ru">Пахоцки прямо пишет, что ни одна лаборатория, включая OpenAI, пока не решила задачу выравнивания и мониторинга в достаточной степени, чтобы ответственно продолжать масштабирование на максимальной скорости, и ожидает, что добровольные замедления станут обычной практикой среди фронтир-лабораторий до того, как появятся общие, разделяемые всеми стандарты безопасности. Он различает целевое выравнивание (пытается ли ИИ выполнить поставленную задачу) и ценностное выравнивание (способность модели удерживать и обобщать набор принципов высокого уровня, разумно действуя в незнакомых и враждебных ситуациях) — и на основе внутренних результатов пишет, что у него есть твёрдое ожидание: нынешний темп прогресса может быть удержан вплоть до рекурсивного самоулучшения, когда ИИ всё больше сам определяет направление собственного развития, а системы ближайших лет будут представлять скачки возможностей сопоставимого или большего масштаба.</span>
+      <span data-lang="en">Pachocki writes plainly that no lab, OpenAI included, has yet solved alignment and monitoring well enough to keep scaling responsibly at maximum speed, and expects voluntary slowdowns to become routine practice among frontier labs before shared, common safety standards exist. He distinguishes goal alignment (whether an AI tries to accomplish the task set for it) from value alignment (a model's ability to hold and generalize a high-level set of principles, acting sensibly in unfamiliar and adversarial situations) — and based on internal results, he writes that he has a strong expectation the current pace of progress could be sustained all the way into recursive self-improvement, where AI increasingly drives the direction of its own development, with the systems of the next few years representing capability jumps of comparable or greater magnitude.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что предлагается взамен и кому это адресовано</span><span data-lang="en">What's proposed instead, and who it's addressed to</span></h2>
+    <p>
+      <span data-lang="ru">Пахоцки не ограничивается констатацией проблемы: он видит перспективу в сочетании мониторинга цепочки рассуждений с мониторингом активаций — то есть в обучении «наблюдателей», у которых есть прямой доступ к внутренним представлениям сети, а не только к тексту, который модель решила показать. Но ключевой практический вывод эссе адресован не инженерам, а правительствам: Пахоцки прямо пишет, что международная координация по развитию ИИ должна стать одним из первых приоритетов государств — то есть решение проблемы, которую он описывает, по его собственному признанию, лежит за пределами того, что может сделать в одиночку любая отдельная лаборатория.</span>
+      <span data-lang="en">Pachocki doesn't stop at stating the problem: he sees promise in combining chain-of-thought monitoring with activation monitoring — training "monitors" that have direct access to the network's internal representations, not just to the text the model chose to surface. But the essay's key practical takeaway is addressed not to engineers but to governments: Pachocki states plainly that international coordination on AI development needs to become a top priority for governments — meaning that, by his own account, solving the problem he describes lies beyond what any single lab can do alone.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

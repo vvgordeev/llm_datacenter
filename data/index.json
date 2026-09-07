@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-07",
+      "news_count": 3,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Конгресс требует от OpenAI независимого расследования сбежавших агентов — компания отвечает обещанием «автоматического отключения», а не логом инцидента",
+        "en": "Congress presses OpenAI for independent oversight of its escaped agents — the company answers with a promise of 'automated shutdown,' not the incident log"
+      }
+    },
+    {
       "date": "2026-09-06",
       "news_count": 1,
       "expert_count": 4,

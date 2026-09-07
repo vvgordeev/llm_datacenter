@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-07",
+  "generated_at": "2026-09-07T05:22:37Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED www.anthropic.com; covered via WebSearch"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED openai.com; covered via WebSearch"},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED blog.google and deepmind.google; covered via WebSearch"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED ai.meta.com; covered via WebSearch"},
+    {"source": "xai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED x.ai; covered via WebSearch"},
+    {"source": "mistral blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED mistral.ai and docs.mistral.ai; covered via WebSearch"},
+    {"source": "deepseek blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED api-docs.deepseek.com; covered via WebSearch"},
+    {"source": "anthropic (WebSearch, 3+ queries)", "status": "ok", "candidates": 1, "note": "Claude Code 2.1.261/2.1.263 changelog (github.com and code.claude.com not blocked) — единственная непубликовавшаяся новость; Fable/Mythos 5.1, Fermat-proof, Commerce Agents уже покрыты 09-01..09-06"},
+    {"source": "openai (WebSearch, 4+ queries)", "status": "ok", "candidates": 2, "note": "GPT-6 Astra rollout продолжение уже покрыто 09-03..09-05 (не дублировали); новое — Congress oversight letter (thehill.com) и 'An Alien Mind' эссе Пахоцки (openai.com/index доступен напрямую)"},
+    {"source": "google (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "Gemini 3.8 Flash/Cyber уже покрыт 09-04; свежих релизов за окно не найдено, только маркетинговые пересказы без точных дат"},
+    {"source": "meta (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "Muse Spark 1.3 уже покрыт 09-03; ничего нового за окно"},
+    {"source": "xai (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "Grok 4.7 — только анонс даты (12 сентября) твитом Маска, не релиз; не публикуем как новость, недостаточно подтверждено"},
+    {"source": "mistral (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "OCR 4 (июнь) и Agentic Search (20 августа) — вне lookback-окна, не новые"},
+    {"source": "deepseek (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "V5 — неподтверждённый слух, нет changelog/API-строки; не публикуем"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED hn.algolia.com; WebSearch site:news.ycombinator.com не дал релевантных свежих тредов"},
+    {"source": "aggregators: smol.ai, tldr.tech (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED news.smol.ai, tldr.tech; покрыто через WebSearch по содержимому"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего нового по теме LLM-фич за окно, кроме уже покрытого"},
+    {"source": "расширенный проход (LLM news/AI model release/coding agent update)", "status": "ok", "candidates": 2, "note": "нашёл continuation-кандидаты: OpenAI rogue-agents Congress oversight, Abliteration.ai — оба вне строгого 36ч окна (3-4 сентября), но ранее не публиковались ни в одном дне"},
+    {"source": "experts: Simon Willison (git backup simonwillisonblog-backup)", "status": "ok", "candidates": 1, "note": "simonwillison.net сам заблокирован (EGRESS_BLOCKED), но github.com/simonw/simonwillisonblog-backup доступен; нашли блогмарк 'Research acceleration' (6 сент), не опубликованный ранее"},
+    {"source": "experts: Andrej Karpathy, AI Explained, Matt Wolfe, Nate Herk, Matt Pocock (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "www.youtube.com CONNECT заблокирован на уровне egress-прокси в этом прогоне (RSS/WebFetch); WebSearch как фолбэк не нашёл видео с точным URL и датой публикации за последние 7 дней — индекс отстаёт"},
+    {"source": "experts: Ethan Mollick, Latent Space, Zvi", "status": "empty", "candidates": 0, "note": "последние посты этих авторов (Agency and Agents, AI #184, Astra-статьи) уже опубликованы в прошлых днях (01-06 сентября); новых материалов за окно не нашли"},
+    {"source": "experts: расширенный поиск (Sebastian Raschka, Jakub Pachocki/OpenAI, Rauno Arike/LessWrong)", "status": "ok", "candidates": 3, "note": "добавлены как заметные технические материалы недели: разбор архитектуры Astra и безопасность мониторинга рассуждений"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 3,
+    "rejected": {
+      "уже опубликовано в прошлых днях": 3,
+      "неподтверждённые слухи/анонсы без релиза": 2,
+      "финансовые/юридические без продуктовой части": 1
+    },
+    "expert_content_count": 4,
+    "expert_content_note": "min_expert_total=5 не достигнут (4 статьи, 0 видео) — упёрлись в max_articles_per_day=4, а видео-контур не дал ни одного результата из-за блокировки youtube.com в этом прогоне (см. video_pipeline)"
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: youtube.com egress blocked this run, no fresh video URL with confirmed publish date discovered via WebSearch fallback",
+    "frames": "skipped: no video processed",
+    "note": "yt-dlp и imageio-ffmpeg установлены через pip на случай, если понадобятся, но videos: 0/4 сегодня из-за блокировки youtube.com на уровне egress-прокси (RSS, WebFetch, вероятно и yt-dlp) — окружение деградировало по сравнению с прошлыми прогонами, где YouTube иногда был доступен"
+  }
+}
