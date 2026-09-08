@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-08",
+  "generated_at": "2026-09-08T05:20:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED www.anthropic.com; covered via WebSearch"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED openai.com; covered via WebSearch"},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED blog.google; covered via WebSearch"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED ai.meta.com; covered via WebSearch"},
+    {"source": "xai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED x.ai; covered via WebSearch"},
+    {"source": "mistral blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED mistral.ai; covered via WebSearch"},
+    {"source": "deepseek blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED api-docs.deepseek.com; covered via WebSearch"},
+    {"source": "anthropic (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "Только уже опубликованное: Fable/Mythos 5.1 (01.09), Claudeforce/Salesforce (26.08), Claude Code v2.1.263 (06.09, дублирует кластер anthropic-claude-code-2-1-259-260, опубликованный 07.09 под id 2026-09-07-claude-code-2-1-261-263) — новых фактов сверх этого нет"},
+    {"source": "openai (WebSearch, 4 queries)", "status": "empty", "candidates": 0, "note": "GPT-6 Astra (03.09), Critical cybersecurity threshold/path-to-astra (01-03.09), 'An Alien Mind' (07.09), Congress letter (07.09) — всё уже опубликовано 09-03..09-07; новых фактов за окно 36ч не найдено"},
+    {"source": "google (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "Gemini 3.8 Flash Cyber (02.09) и Gemini Notebook compute-limits (02.09) уже вне окна и/или уже покрыты ранее; ничего нового"},
+    {"source": "meta (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "Muse Spark 1.3 (02.09) уже опубликован; LlamaCon/Impact Grants — старые материалы без даты в окне"},
+    {"source": "xai (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "Grok 4.6 на Microsoft Foundry — public preview 26.08, вне окна; Grok 4.7 — анонс даты (12.09) без релиза, недостаточно подтверждено, не публикуем как новость"},
+    {"source": "mistral (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "OCR 4 и Mistral Small 4 — датировки июнь/июль, вне окна; новых материалов не найдено"},
+    {"source": "deepseek (WebSearch, 2 queries)", "status": "empty", "candidates": 0, "note": "Последний релиз — V4-Pro (13.08), следующий ожидается ~15.10; на этой неделе релизов нет"},
+    {"source": "aggregators: smol.ai / TLDR AI / Willison linkblog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED на все три домена"},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED hn.algolia.com"},
+    {"source": "broadened WebSearch (LLM news/AI model release for 07-08.09, LocalLLaMA, reddit)", "status": "empty", "candidates": 0, "note": "Ничего нового сверх уже опубликованного 09-01..09-07; день после насыщенной релизами недели (Fable 5.1, GPT-6 Astra, Gemini 3.8 Flash, Muse Spark 1.3) действительно тихий"}
+  ],
+  "totals": {
+    "candidates": 0,
+    "published": 0,
+    "rejected": {
+      "уже опубликовано в 09-01..09-07": 6,
+      "вне окна свежести (июнь-август)": 4,
+      "неподтверждённый анонс без релиза (Grok 4.7 на 12.09)": 1
+    },
+    "expert_content_count": 0,
+    "expert_content_note": "min_expert_total=5 НЕ достигнут (0 из 5) — редкий полностью пустой день. Причина не в отсутствии материалов, а в отказе сетевого окружения: WebFetch сегодня блокирует практически весь прямой доступ, гораздо шире обычного (см. video_pipeline и note ниже) — заблокированы даже en.wikipedia.org, huggingface.co, arxiv.org, lesswrong.com, garymarcus.substack.com, thezvi.substack.com, sebastianraschka.com, vllm-project.github.io, skool.com, x.com, creatordb.app, ai-tldr.dev. Единственный работающий прямой канал — github.com/raw.githubusercontent.com (использован для simonwillisonblog-backup: свежих полноценных записей блога после 04.09 нет, единственный новый пункт — короткая заметка-ссылка 'Creepy crawlies' от 07.09 про нагрузку от краулеров на git.kernel.org, не по теме 'подходов к использованию LLM', отклонена). Через WebSearch для Latent Space и Ethan Mollick найдены только материалы вне 7-дневного окна свежести (март/июль/31.08) — свежих постов за 01-08.09 не обнаружено."
+  },
+  "video_pipeline": {
+    "youtube_reachability": "ПОЛНОСТЬЮ заблокирован сегодня: www.youtube.com даёт CONNECT 403 на уровне egress-прокси для RSS (5 каналов экспертов), WebFetch и yt-dlp (проверено напрямую — 'Unable to connect to proxy: Tunnel connection failed: 403 Forbidden' на прямой watch-URL и на ytsearch)",
+    "gemini": "not_attempted: ни одного проверяемого youtube.com/watch?v=<id>, достоверно привязанного к сконфигурированному эксперту (Karpathy/AI Explained/Wolfe/Nate Herk/Pocock), не найдено — WebSearch многократно упоминает свежие видео Nate Herk и др. про GPT-6 Astra, но отдаёт только вторичные пересказы (MindStudio, skool.com, LinkedIn), а сами эти вторичные страницы тоже заблокированы для WebFetch; не выдумываем URL",
+    "gemini_api_reachability": "generativelanguage.googleapis.com доступен (проверено curl, HTTP 200) — пайплайн конспектов видео технически рабочий, не хватило именно проверяемого исходного URL",
+    "frames": "not_attempted: см. gemini"
+  },
+  "environment_note": "СЕГОДНЯШНЕЕ ОКРУЖЕНИЕ ДЕГРАДИРОВАНО СИЛЬНЕЕ ОБЫЧНОГО: доля заблокированных источников намного выше порога 1/3 — из прямых fetch прошёл только github.com/raw.githubusercontent.com. Даже обычно доступные в этом проекте домены (github.io, sonarsource.com в прошлые дни) сегодня недоступны. WebSearch остаётся рабочим и был единственным каналом сбора; broadened-проход подтверждает, что для раздела news это совпало с реально тихим днём, а для expert_content — это ограничение среды, а не отсутствие материалов."
+}
