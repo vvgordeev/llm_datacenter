@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «О задаче тысячелетия Навье — Стокса» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (со ссылкой на отчёт OpenAI) · 2026-09-08</span>
+      <span data-lang="en">Article digest · Simon Willison (linking OpenAI's own report) · 2026-09-08</span>
+    </p>
+    <h1>
+      <span data-lang="ru">О задаче тысячелетия Навье — Стокса</span>
+      <span data-lang="en">On the Navier–Stokes Millennium Prize Problem</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://openai.com/index/navier-stokes-solution/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал отчёта OpenAI ↗</span><span data-lang="en">OpenAI's original report ↗</span>
+      </a>
+      ·
+      <a href="https://simonwillison.net/2026/Sep/8/on-navier-stokes/" target="_blank" rel="noopener">
+        <span data-lang="ru">заметка Уиллисона ↗</span><span data-lang="en">Willison's note ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Заявление: сингулярность за конечное время, найденная роем агентов</span><span data-lang="en">The claim: a finite-time singularity, found by a swarm of agents</span></h2>
+    <p>
+      <span data-lang="ru">OpenAI утверждает, что внутренняя, ещё не выпущенная модель — более мощная, чем GPT-6 Astra, — произвела аналитическое доказательство и его формализацию в системе Lean: уравнения Навье — Стокса, описывающие движение вязкой жидкости, допускают возникновение сингулярности (коллапс решения) за конечное время. Это одна из семи задач тысячелетия Института Клэя, за решение которых с 24 мая 2000 года назначен приз в миллион долларов. По описанию OpenAI, около 10 000 параллельно работающих агентов пришли к результату 5 сентября — спустя 88 часов после запуска первых агентов, — а затем ещё 17 часов ушло на Lean-верификацию силами GPT-6 Astra. На всю попытку решить все открытые задачи тысячелетия агенты отправили 4,9 млн сообщений и потратили порядка 300 млрд токенов; из них 2,7 млн сообщений и около 130 млрд токенов — непосредственно на Навье — Стокса.</span>
+      <span data-lang="en">OpenAI says an internal, not-yet-released model — more capable than GPT-6 Astra — produced an analytical proof and a Lean formalization showing that the Navier–Stokes equations, which describe viscous fluid motion, can develop a singularity (a breakdown of the solution) in finite time. This is one of the Clay Mathematics Institute's seven Millennium Prize Problems, each carrying a $1,000,000 prize since May 24, 2000. Per OpenAI's account, about 10,000 coordinating agents reached the result on September 5 — 88 hours after the first agents launched — with another 17 hours spent on Lean verification via GPT-6 Astra. Across the full attempt at every open Millennium Prize problem, the agents sent 4.9 million messages and used roughly 300 billion tokens; of that, 2.7 million messages and about 130 billion tokens went specifically toward Navier–Stokes.</span>
+    </p>
+
+    <h2><span data-lang="ru">Скандал: кто первым узнал о чужом черновике</span><span data-lang="en">The scandal: who found out about whose draft first</span></h2>
+    <p>
+      <span data-lang="ru">Публикацию тут же омрачило обвинение Тристана Бакмастера — профессора математики NYU, работавшего над смежной версией задачи вместе с Левентом Алпёге, математиком, который сейчас работает в Anthropic. По словам Бакмастера, они с Алпёге почти год продвигались к результату, активно используя Claude и Codex (в основном GPT-5.6 Sol), и добились прорыва 15 августа. Слух об этом дошёл до OpenAI, и та связалась с ними, узнав, что «крупная открытая задача» якобы уже решена. Бакмастер спросил, когда именно был отправлен первый промпт со стороны OpenAI, — прямого ответа он долго не получал, а в итоге подтвердили: «в последние несколько дней», уже после того как информация о работе Бакмастера и Алпёге дошла до компании. OpenAI предложила подождать публикации Бакмастера или включить его в соавторы своей статьи — но однозначно дала понять, что Алпёге соавтором не будет, поскольку работает на конкурента.</span>
+      <span data-lang="en">The announcement was immediately overshadowed by an accusation from Tristan Buckmaster, an NYU math professor who had been working on a related version of the problem together with Levent Alpöge, a mathematician who currently works at Anthropic. Per Buckmaster, he and Alpöge spent almost a year working toward a result, making heavy use of Claude and Codex (mainly GPT-5.6 Sol), and had a breakthrough on August 15. Rumor of this reached OpenAI, who reached out after hearing that "a major open problem" had supposedly been solved. Buckmaster asked exactly when OpenAI's first prompt on the problem had been sent — he didn't get a direct answer for some time, and it was eventually confirmed to be "in the past few days," after information about his and Alpöge's work had already reached the company. OpenAI offered to wait for Buckmaster to publish, or to have him co-author their paper — but made clear Alpöge would not be a co-author, because he works for a competitor.</span>
+    </p>
+
+    <h2><span data-lang="ru">Обе стороны, и вопрос без ответа</span><span data-lang="en">Both sides, and one question left unanswered</span></h2>
+    <p>
+      <span data-lang="ru">OpenAI описывает хронологию иначе: якобы слух о решённых задачах тысячелетия дошёл до них 1 сентября, и лишь позже они поняли, что он связан с Алпёге и Бакмастером; своё доказательство и Lean-верификацию компания завершила 6 сентября и лишь тогда предложила совместный релиз с признанием приоритета первооткрывателей. В своём заявлении OpenAI подчёркивает: «мы не видели их работу никакими средствами до её публичного релиза — в частности, для решения этой задачи не использовались никакие данные конкретных пользователей», но тут же добавляет оговорку — компания не может исключить, что обезличенные данные из использования её моделями Бакмастером и Алпёге могли повлиять на улучшение самих моделей. Уиллисон в комментарии называет это ключевым нерешённым вопросом всей истории: что именно означает фраза «данные используются для улучшения модели» на практике, и есть ли гарантия, что чужой черновик, оставленный в диалоге с ассистентом, не всплывёт неявно в ответе, который получит кто-то другой.</span>
+      <span data-lang="en">OpenAI tells the timeline differently: it says a rumor about solved Millennium Prize problems reached it on September 1, and only later did it realize this was connected to Alpöge and Buckmaster; the company finished its own proof and Lean verification on September 6 and only then proposed a joint release crediting the original team's priority. OpenAI's statement stresses: "we did not see any of their work through any means until they released it publicly — in particular, no specific user data was accessed in order to solve this problem" — but immediately adds a caveat: it cannot rule out that de-identified data derived from Buckmaster's and Alpöge's usage of its products helped improve its models. Willison calls this the real unresolved question in the whole story: what a phrase like "your data is used to improve model performance" actually means in practice, and whether there's any guarantee that someone else's draft, left inside a chat with an assistant, can't implicitly surface in an answer given to a different user later.</span>
+    </p>
+
+    <h2><span data-lang="ru">Параллель с безопасностью: слух как эксплойт</span><span data-lang="en">The security parallel: a rumor as an exploit</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон проводит параллель с миром компьютерной безопасности, вспоминая недавний пост Анила Мадхавапедди о том, что для поиска эксплойта сегодня хватает одного лишь слуха об уязвимости: если кто-то знает, что в софте есть непропатченная дыра, можно бросить на её поиск агентов и найти её первым. По мысли Уиллисона, в математике теперь работает та же логика: достаточно знать, что где-то есть нерешённая (но уже нащупанная кем-то) задача, чтобы запустить миллионы долларов LLM-вычислений и успеть первым. Он резюмирует случившееся не как злой умысел OpenAI, а как решение компании, узнавшей о скором прорыве в математике силами LLM, воспользоваться моментом и продемонстрировать возможности своей новейшей модели — не особенно задумываясь о том, как это будет выглядеть по отношению к команде, которая целый год делала эту же работу теми же инструментами OpenAI.</span>
+      <span data-lang="en">Willison draws a parallel to computer security, citing a recent post by Anil Madhavapeddy arguing that today just a rumor of a bug is enough to trigger an exploit hunt: if someone knows unpatched software has a vulnerability, they can set agents loose to find it and get there first. Willison suggests the same logic now applies to mathematics — just knowing an unpublished, partially-solved problem exists somewhere is enough to trigger millions of dollars of LLM spend racing to solve it first. His read on what happened here isn't outright malice from OpenAI, but a company that heard an LLM-driven math breakthrough was imminent and took the opportunity to show off its newest model — without thinking hard enough about how that would look to a team that had spent a year doing the same work with OpenAI's own tools.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

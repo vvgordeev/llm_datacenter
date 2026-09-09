@@ -1,0 +1,293 @@
+{
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T06:40:00Z",
+  "news": [
+    {
+      "id": "2026-09-09-openai-navier-stokes-proof",
+      "cluster_id": "openai-navier-stokes-proof",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI заявляет, что её ИИ решил задачу Навье — Стокса — и тут же тонет в споре об авторстве",
+        "en": "OpenAI says its AI resolved the Navier–Stokes problem — and the claim is immediately swallowed by an authorship dispute"
+      },
+      "summary": {
+        "ru": "Внутренняя (неопубликованная) модель OpenAI, по словам компании, произвела аналитическое доказательство и Lean-формализацию того, что уравнения Навье — Стокса допускают образование сингулярности за конечное время — одну из семи задач тысячелетия Института Клэя. Около 10 000 параллельно работающих агентов пришли к результату за 88 часов, ещё 17 часов ушло на формальную верификацию в Lean силами GPT-6 Astra. Публикацию тут же омрачило обвинение математика Тристана Бакмастера (NYU) в том, что OpenAI подключилась к задаче сразу после того, как узнала о его почти готовом результате с соавтором из Anthropic.",
+        "en": "An internal, unreleased OpenAI model reportedly produced an analytical proof and a Lean formalization showing the Navier–Stokes equations can develop a finite-time singularity — one of the Clay Institute's seven Millennium Prize Problems. About 10,000 coordinating agents reached the result in 88 hours, with another 17 hours of formal Lean verification via GPT-6 Astra. The announcement was immediately overshadowed by NYU mathematician Tristan Buckmaster's accusation that OpenAI jumped on the problem right after learning his team, working with an Anthropic-employed co-author, was close to its own result."
+      },
+      "impact_score": 8,
+      "impact_reason": {
+        "ru": "Если результат выдержит независимую проверку — это первая публично заявленная победа ИИ-агентов над задачей тысячелетия и мощная демонстрация масштабируемого агентного ресёрча; статус пока «self-assessed», а скандал с авторством бьёт по доверию к процессу.",
+        "en": "If it survives independent review, this would be the first publicly claimed AI resolution of a Millennium Prize problem and a strong demo of scaled agentic research; but the result is currently 'self-assessed' and the authorship dispute undercuts trust in the process."
+      },
+      "source_url": "https://openai.com/index/navier-stokes-solution/",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Впечатляющий результат, который тут же омрачён обвинениями в неблаговидном поведении... Мой новый любимый гипотетический вопрос: если я использую ChatGPT, чтобы частично решить задачу тысячелетия, какова вероятность, что моя работа повлияет на обучение так, что более поздняя модель поможет решить её кому-то другому раньше меня?",
+            "en": "Impressive result from OpenAI... immediately overshadowed by accusations of skulduggery. My new preferred hypothetical: if I use ChatGPT to help partially solve a Millennium Prize problem, what are the chances my work influences training such that a later model helps someone else solve it first?"
+          },
+          "url": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/"
+        },
+        {
+          "author": "Tristan Buckmaster (NYU)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Я спросил, когда был отправлен их первый промпт. Ответ на этот вопрос долго не давали напрямую. В итоге подтвердили, что это произошло «в последние несколько дней», уже после того как информация о нашей работе дошла до OpenAI.",
+            "en": "I asked when the first prompt had been sent by them. This question was not answered directly by OpenAI for some time. Eventually it was agreed that it had been sent in the past few days, after information about our work had reached OpenAI."
+          },
+          "url": "https://cims.nyu.edu/~tristanb/statement.pdf"
+        },
+        {
+          "author": "Terence Tao",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Бакмастеру и Алпёге удалось продвинуть один из главных перспективных подходов к построению blow-up-решений уравнений гидродинамики — но это не следует читать как одобрение только что опубликованной рукописи OpenAI.",
+            "en": "Buckmaster and Alpöge have managed to push one of the major promising approaches towards constructing blowup solutions to fluid equations — but this should not be read as an endorsement of the newly released OpenAI manuscript."
+          },
+          "url": "https://fortune.com/2026/09/08/openai-says-it-cracked-navier-stokes-math-grand-challenge-buckmaster-accusation-cheating-intimidation-tao-lament/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "~10 000 параллельно координирующихся ИИ-агентов направляются на все открытые задачи тысячелетия сразу, а результат прогоняется через формальный Lean-верификатор вместо того, чтобы полагаться на доверие к рассуждениям модели.",
+            "en": "~10,000 coordinating AI agents pointed at every open Millennium Prize problem at once, with the result run through a formal Lean verifier instead of trusting the model's reasoning on faith."
+          },
+          "url": "https://openai.com/index/navier-stokes-solution/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-09-meta-muse-agent-launch",
+      "cluster_id": "meta-muse-agent-launch",
+      "models": ["meta"],
+      "title": {
+        "ru": "Meta запускает Muse — личного ИИ-агента для задач: покупки, бронирования, планирование бизнеса",
+        "en": "Meta launches Muse, a personal AI agent for tasks: shopping, bookings, business planning"
+      },
+      "summary": {
+        "ru": "Meta выпустила Muse — персонального ИИ-агента в отдельном приложении и в WhatsApp, доступного пока только в США (18+). Агент может открывать браузер, заполнять формы, бронировать билеты и вести переговоры от имени пользователя ради долгосрочных целей (годовой план тренировок, запуск бизнеса), работает в изолированной защищённой виртуальной машине. Тарифы: бесплатный, $20/мес и $100/мес.",
+        "en": "Meta shipped Muse, a personal AI agent available as a standalone app and via WhatsApp, initially US-only (18+). The agent can open a browser, fill out forms, book travel, and negotiate on the user's behalf toward longer-term goals (a yearlong fitness plan, launching a business), running inside an isolated, secured virtual machine. Pricing: free, $20/month, and $100/month tiers."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Крупнейший на сегодня потребительский пуш в сторону автономных кросс-приложенческих агентов с реальными действиями (покупки, платежи) — открывает новый массовый сценарий использования, но испытывает давление из-за истории Meta с приватностью и найденных на тестах багов безопасности.",
+        "en": "The biggest consumer push yet into autonomous cross-app agents taking real-world actions (purchases, payments) — opens a genuinely new mass-market use case, tempered by Meta's privacy track record and security issues found during internal testing."
+      },
+      "source_url": "https://ai.meta.com/muse/",
+      "opinions": [
+        {
+          "author": "Meta AI (official)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Muse работает в собственной изолированной среде... никогда не видит ваши настоящие пароли или платёжные данные и спрашивает разрешение перед любым чувствительным действием.",
+            "en": "Muse runs within its own isolated environment... it never sees your actual passwords or payment details and asks before doing anything sensitive."
+          },
+          "url": "https://www.cnbc.com/2026/09/08/meta-personal-ai-agents-public-reckoning-privacy-safety.html"
+        },
+        {
+          "author": "CNBC",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Meta продвигает личных ИИ-агентов на фоне публичного разбирательства о приватности и безопасности компании.",
+            "en": "Meta pushes into personal AI agents as the company faces a public reckoning over privacy and safety."
+          },
+          "url": "https://www.cnbc.com/2026/09/08/meta-personal-ai-agents-public-reckoning-privacy-safety.html"
+        },
+        {
+          "author": "Forkast",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Внутреннее тестирование рисует куда более сумбурную картину: агент испытывал проблемы с обходом ограничений, включая случай раскрытия фотографий, а внутренние отчёты описывают зависания продукта и тихо игнорируемые ошибки.",
+            "en": "Internal testing tells a much messier story, with reports indicating the agent has struggled with guardrail bypasses, including a photo exposure incident, plus product stalling and silently ignored errors."
+          },
+          "url": "https://forkast.news/metas-muse-launches-as-the-biggest-cross-app-ai-agent-yet-with-a-security-disclosure-problem/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Бронирование билетов, запись на приём, заполнение разрешения на школьную поездку, годовой план тренировок или пошаговый план запуска бизнеса — агент сам продвигает задачу дальше после того, как получил цель.",
+            "en": "Booking tickets, scheduling appointments, filling out a school permission slip, a yearlong workout plan or a step-by-step business-launch plan — the agent advances the task on its own once given the goal."
+          },
+          "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-09-inception-mercury-2-5",
+      "cluster_id": "inception-mercury-2-5",
+      "models": [],
+      "title": {
+        "ru": "Inception Labs выпускает Mercury 2.5 — крупнейшую диффузионную языковую модель, 1100+ токенов/с",
+        "en": "Inception Labs ships Mercury 2.5, the largest diffusion language model yet, at 1,100+ tokens/sec"
+      },
+      "summary": {
+        "ru": "Inception Labs представила Mercury 2.5 — диффузионную (не авторегрессивную) LLM: вместо генерации токенов по одному модель начинает с чернового варианта всего ответа и уточняет токены параллельно. Заявлены рост «интеллекта» на 40% к Mercury 2, скорость свыше 1100 токенов/с, контекст 260K и уровень качества, сравнимый с бюджетными флагманами вроде GPT-5.6 Luna (Low), Gemini 3.5 Flash-Lite и Claude Haiku 4.5.",
+        "en": "Inception Labs released Mercury 2.5, a diffusion-based (non-autoregressive) LLM: instead of generating tokens one at a time, it starts from a rough draft of the whole answer and refines tokens in parallel. Claims include a 40% intelligence gain over Mercury 2, 1,100+ tokens/sec throughput, a 260K context window, and quality competitive with cost-optimized frontier models like GPT-5.6 Luna (Low), Gemini 3.5 Flash-Lite, and Claude Haiku 4.5."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Диффузионная генерация — структурно иной подход к архитектуре LLM (параллельное уточнение вместо пошаговой авторегрессии); Mercury 2.5 подтягивает его качество к фронтир-уровню при сохранении кратного преимущества в скорости — заметное развитие ниши, ещё не смена парадигмы для большинства пользователей.",
+        "en": "Diffusion-based generation is a structurally different LLM architecture (parallel refinement instead of step-by-step autoregression); Mercury 2.5 pulls its quality toward frontier level while keeping a large speed edge — a notable advance for the niche, not yet a paradigm shift for most users."
+      },
+      "source_url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5",
+      "opinions": [
+        {
+          "author": "AlphaSignal",
+          "stance": "positive",
+          "quote": {
+            "ru": "Mercury 2.5 достигает 1107 токенов в секунду, обгоняя авторегрессивные модели.",
+            "en": "Inception's Mercury 2.5 hits 1,107 tokens per second, beating autoregressive models."
+          },
+          "url": "https://alphasignal.ai/news/inception-s-mercury-2-5-hits-1-107-tokens-per-second-beating-autoregressive"
+        },
+        {
+          "author": "Digital Applied",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Диффузионные модели пишут иначе, чем привычные авторегрессивные: вместо того чтобы выдавать один токен за другим, они начинают с чернового варианта всего ответа и параллельно уточняют токены.",
+            "en": "Diffusion language models write differently from the usual autoregressive kind: instead of producing one token after another, they start from a rough draft of the whole answer and refine tokens in parallel."
+          },
+          "url": "https://www.digitalapplied.com/blog/mercury-2-5-diffusion-model-1100-tokens-a-second"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Низкая задержка генерации делает модель кандидатом для интерактивных кодинг-агентов и реал-таймовых сценариев, где важна не только цена, но и скорость ответа.",
+            "en": "Low generation latency makes the model a candidate for interactive coding agents and real-time scenarios where response speed matters as much as price."
+          },
+          "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-09-deepseek-v4-1-flash-beta",
+      "cluster_id": "deepseek-v4-1-flash-beta",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "DeepSeek открывает двухдневное бета-тестирование V4.1 Flash — новая архитектура с нативной мультимодальностью",
+        "en": "DeepSeek opens a two-day V4.1 Flash beta — a new architecture with native multimodality"
+      },
+      "summary": {
+        "ru": "DeepSeek открыла в API временную бета-версию V4.1 Flash (id модели `deepseek-v4.1-flash-expires-on-0910`, отключится 10 сентября) — первое архитектурное обновление серии V4 с апреля. Мультимодальность (текст/изображение/речь) теперь встроена в архитектуру, а не добавлена поверх; цена та же, что у V4 Flash, лимит — 20 параллельных запросов на аккаунт. По независимым замерам скорость превышает 300 токенов/с, местами до ~500 токенов/с.",
+        "en": "DeepSeek opened a temporary API beta of V4.1 Flash (model id `deepseek-v4.1-flash-expires-on-0910`, shutting down September 10) — the first architectural update to the V4 line since April. Multimodality (text/image/speech) is now built into the architecture rather than bolted on; pricing matches V4 Flash, with a 20-concurrent-request cap per account. Independent benchmarks show throughput above 300 tokens/sec, peaking around ~500 tokens/sec."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Реальный архитектурный сдвиг (нативная мультимодальность) по цене Flash-уровня — но выпущен лишь как истекающая через два дня бета, а не как коммит на релиз, поэтому это скорее сигнал направления, чем готовый к работе продукт.",
+        "en": "A genuine architectural shift (native multimodality) at Flash-tier pricing — but shipped only as a two-day expiring beta rather than a committed release, so it's a directional signal more than a production-ready product."
+      },
+      "source_url": "https://x.com/plotarmordev/status/2097247035099640216",
+      "opinions": [
+        {
+          "author": "Hacker News (thread)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Главная привлекательность V4.1 Flash — она снимает дилемму «дёшево, но слабо» против «сильно, но дорого».",
+            "en": "The biggest appeal of V4.1 Flash is that it breaks the either-or dilemma of being 'cheap but weak' or 'strong but expensive'."
+          },
+          "url": "https://news.ycombinator.com/item?id=49607094"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Мультимодальные агентные сценарии (текст+изображение+речь) по цене текстовой Flash-модели, без доплаты за мультимодальность.",
+            "en": "Multimodal agent workflows (text+image+speech) at text-only Flash-tier pricing, with no multimodality surcharge."
+          },
+          "url": "https://www.kucoin.com/news/flash/deepseek-launches-v4-1-flash-internal-test-version-with-multimodal-support-and-lower-costs"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-09-openai-chatgpt-images-2-5",
+      "cluster_id": "openai-chatgpt-images-2-5",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI выпускает ChatGPT Images 2.5: точнее следует инструкциям в несколько шагов, лучше сохраняет объект по референсу",
+        "en": "OpenAI ships ChatGPT Images 2.5: better multi-turn instruction-following, better reference-photo subject preservation"
+      },
+      "summary": {
+        "ru": "OpenAI обновила модели генерации изображений — два новых API-идентификатора, `gpt-image-2.5-sunburst` (точность редактирования) и `gpt-image-2.5-flare` (быстрая повседневная генерация). Модели быстрее отвечают, лучше следуют инструкциям в многошаговых правках и точнее сохраняют объект на референсных фото. Продукт уже используется для генерации свыше 3 млрд изображений суммарно по ChatGPT Images и API.",
+        "en": "OpenAI updated its image-generation models with two new API model IDs — `gpt-image-2.5-sunburst` (editing precision) and `gpt-image-2.5-flare` (fast everyday generation). The models respond faster, follow multi-turn edit instructions better, and preserve subjects from reference photos more accurately. The product has already been used to generate more than 3 billion images across ChatGPT Images and the API combined."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Инкрементальное, но широко используемое обновление уже массового продукта (точность редактирования, сохранение референсов) — полезно многим, подхода к использованию не меняет.",
+        "en": "An incremental but widely-used upgrade to an already-mass-scale product (editing precision, reference preservation) — useful to many, doesn't change the approach to using it."
+      },
+      "source_url": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "positive",
+          "quote": {
+            "ru": "Судя по всему, Sunburst — более сильный вариант для сценариев, где важнее всего точность редактирования, а Flare — для быстрой качественной генерации на каждый день.",
+            "en": "Based on this, I think Sunburst is the stronger option for workflows where editing precision matters most, and Flare for fast, high-quality everyday image generation."
+          },
+          "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Передать модели референсное фото и текстовый промпт правки (например, «добавь на график вдумчиво изучающего его енота-учёного») и получить композитное изображение, которое сохраняет исходный объект.",
+            "en": "Pass the model a reference photo plus a text edit prompt (e.g. 'add a raccoon scientist studying the chart thoughtfully') and get back a composited image that preserves the original subject."
+          },
+          "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-09-willison-on-navier-stokes",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "О задаче тысячелетия Навье — Стокса",
+        "en": "On the Navier–Stokes Millennium Prize Problem"
+      },
+      "url": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
+      "summary": {
+        "ru": "Уиллисон разбирает заявление OpenAI о решении задачи Навье-Стокса и параллельно всплывший скандал: математик из NYU обвиняет компанию в том, что она подключилась к задаче, узнав о почти готовом результате конкурентов, использовавших Claude и Codex.",
+        "en": "Willison unpacks OpenAI's Navier-Stokes claim alongside the parallel scandal: an NYU mathematician accuses the company of jumping on the problem after learning that a rival team, using Claude and Codex, was close to its own result."
+      },
+      "note_page": "notes/articles/willison-on-navier-stokes.html"
+    },
+    {
+      "id": "2026-09-09-garymarcus-openai-misconduct-pattern",
+      "type": "article",
+      "author": "Gary Marcus",
+      "title": {
+        "ru": "Систематические нарушения OpenAI",
+        "en": "OpenAI's Egregious Pattern of Misconduct"
+      },
+      "url": "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct",
+      "summary": {
+        "ru": "Маркус сводит воедино несколько недавних инцидентов OpenAI — взлом Hugging Face, необъявленный аналогичный инцидент с немецким сайтом, сокрытие инцидента с координацией агентов через вики и спор об авторстве вокруг доказательства Навье-Стокса — как повторяющийся паттерн, а не серию изолированных случаев.",
+        "en": "Marcus ties together several recent OpenAI incidents — the Hugging Face breach, an undisclosed similar incident on a German site, the cover-up of agents coordinating via public wikis, and the Navier-Stokes authorship dispute — as a repeating pattern rather than a string of isolated events."
+      },
+      "note_page": "notes/articles/garymarcus-openai-misconduct-pattern.html"
+    },
+    {
+      "id": "2026-09-09-willison-chatgpt-images-2-5",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Знакомство с ChatGPT Images 2.5",
+        "en": "Introducing ChatGPT Images 2.5"
+      },
+      "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+      "summary": {
+        "ru": "Короткий разбор релиза ChatGPT Images 2.5 с практическим тестом: Уиллисон обновляет свою CLI-утилиту под новые модели и показывает на реальном примере, как модель сохраняет объект референсного фото при редактировании.",
+        "en": "A short breakdown of the ChatGPT Images 2.5 release with a hands-on test: Willison upgrades his own CLI tool for the new models and shows, with a real example, how the model preserves a reference photo's subject during editing."
+      },
+      "note_page": "notes/articles/willison-chatgpt-images-2-5.html"
+    }
+  ]
+}

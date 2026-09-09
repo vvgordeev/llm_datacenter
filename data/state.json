@@ -1,15 +1,5 @@
 {
   "seen_urls": {
-    "https://www.anthropic.com/news/reflect-with-claude": "2026-07-10",
-    "https://openai.com/index/chatgpt-for-your-most-ambitious-work/": "2026-07-10",
-    "https://cloud.google.com/blog/products/ai-machine-learning/alphaevolve-is-available-for-everyone": "2026-07-10",
-    "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/": "2026-07-10",
-    "https://thenewstack.io/gpt-5-6-developer-reactions/": "2026-07-10",
-    "https://the-decoder.com/grok-4-5-is-so-cheap-compared-to-fable-5-and-gpt-5-5-that-benchmark-gaps-may-not-matter-much/": "2026-07-10",
-    "https://simonwillison.net/2026/Jul/9/gpt-5-6/": "2026-07-10",
-    "https://simonwillison.net/2026/Jul/9/muse-spark-1-1/": "2026-07-10",
-    "https://www.youtube.com/watch?v=eMVaGOsfYs8": "2026-07-10",
-    "https://www.youtube.com/watch?v=UNzCG3lw6O0": "2026-07-10",
     "https://variety.com/2026/biz/news/meta-suspends-ai-image-instagram-feature-backlash-1236806989/": "2026-07-11",
     "https://x.ai/news/new-flagship-voices": "2026-07-11",
     "https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier": "2026-07-11",
@@ -415,7 +405,18 @@
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
     "notes/articles/raschka-astra-looped-transformers.html": "2026-09-07",
     "notes/articles/pachocki-alien-mind.html": "2026-09-07",
-    "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07"
+    "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
+    "https://openai.com/index/navier-stokes-solution/": "2026-09-09",
+    "https://ai.meta.com/muse/": "2026-09-09",
+    "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
+    "https://x.com/plotarmordev/status/2097247035099640216": "2026-09-09",
+    "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
+    "https://simonwillison.net/2026/Sep/8/on-navier-stokes/": "2026-09-09",
+    "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/": "2026-09-09",
+    "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
+    "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
+    "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
+    "notes/articles/willison-chatgpt-images-2-5.html": "2026-09-09"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -426,25 +427,9 @@
       "last_date": "2026-08-01",
       "summary": "OpenAI ships GPT-Live, a full-duplex voice model for ChatGPT that delegates hard reasoning/search/code to GPT-5.5 in the background"
     },
-    "openai-chatgpt-work": {
-      "last_date": "2026-07-10",
-      "summary": "OpenAI launches ChatGPT Work, a GPT-5.6-powered agent that plans and executes multi-hour workplace tasks across files, apps and the web, plus a Sites beta and Scheduled Tasks"
-    },
     "xai-grok-4-5": {
       "last_date": "2026-07-11",
       "summary": "xAI launches Grok 4.5 (trained alongside Cursor); day-two reaction centers on trust concerns, day-three independent benchmarks rank it 4th on Artificial Analysis Intelligence Index behind Fable 5/Opus 4.8/GPT-5.5 but best-in-class on cost"
-    },
-    "anthropic-reflect": {
-      "last_date": "2026-07-10",
-      "summary": "Anthropic launches Reflect, a usage-reflection dashboard in Claude settings with monthly recaps, quiet hours and break reminders"
-    },
-    "google-alphaevolve-ga": {
-      "last_date": "2026-07-10",
-      "summary": "AlphaEvolve, Google's Gemini-powered algorithm-discovery agent, moves from private preview to general availability on Gemini Enterprise Agent Platform"
-    },
-    "meta-muse-spark": {
-      "last_date": "2026-07-10",
-      "summary": "Meta ships Muse Spark 1.1, its first paid agentic/coding model with a public API preview, aimed at large-codebase bug fixing, migrations and computer use"
     },
     "anthropic-cowork-mobile": {
       "last_date": "2026-08-19",
@@ -1189,15 +1174,46 @@
         "en": "Claude Code 2.1.259-260 (Sept 2-3): managedMcpServers, fullscreen diff panel → 2.1.261 (Sept 4): /skill-doctor, bashOutputMaxChars/taskOutputMaxChars, subagent system-prompt files → 2.1.263 (Sept 6): stability fixes only."
       }
     },
-    "anthropic-claude-fermat-proof": {
-      "ru": "Anthropic сообщает, что Claude автономно за 11 дней сформализовал полное машинно-проверяемое доказательство Великой теоремы Ферма на Lean 4 (13 млн строк, 30 300 теорем) через мультиагентную платформу Prove2Me",
-      "en": "Anthropic says Claude autonomously formalized a complete, machine-checked proof of Fermat's Last Theorem in Lean 4 (13M lines, 30,300 theorems) over 11 days via the multi-agent Prove2Me platform"
-    },
     "abliteration-ai-guardrail-removal-service": {
       "last_date": "2026-09-07",
       "summary": {
         "ru": "Abliteration.ai продаёт доступ к моделям с вычищенным отказным поведением (включая GLM-5.3), позиционируя себя как инструмент для red-teaming банков и авиакомпаний; TechCrunch подтвердила риск, получив от бесплатного аккаунта код кражи паролей и протокол работы с патогеном.",
         "en": "Abliteration.ai sells access to models with refusal behavior stripped out (including GLM-5.3), positioning itself as a red-teaming tool for banks and airlines; TechCrunch confirmed the risk, getting password-theft code and a pathogen protocol from a free account."
+      }
+    },
+    "openai-navier-stokes-proof": {
+      "last_date": "2026-09-09",
+      "summary": {
+        "ru": "OpenAI заявляет, что внутренняя модель решила задачу Навье-Стокса силами ~10000 агентов; разгорается спор об авторстве с математиком NYU Бакмастером и его соавтором из Anthropic Алпёге.",
+        "en": "OpenAI claims an internal model resolved Navier-Stokes via ~10,000 agents; an authorship dispute erupts with NYU mathematician Buckmaster and his Anthropic-employed co-author Alpöge."
+      }
+    },
+    "meta-muse-agent-launch": {
+      "last_date": "2026-09-09",
+      "summary": {
+        "ru": "Meta запускает Muse — личного ИИ-агента (приложение + WhatsApp) для задач и покупок в США; внутреннее тестирование выявило проблемы с приватностью.",
+        "en": "Meta launches Muse, a personal AI agent (app + WhatsApp) for tasks and shopping in the US; internal testing surfaced privacy issues."
+      }
+    },
+    "inception-mercury-2-5": {
+      "last_date": "2026-09-09",
+      "summary": {
+        "ru": "Inception Labs выпускает Mercury 2.5 — крупнейшую диффузионную LLM, 1100+ токенов/с, качество на уровне бюджетных фронтир-моделей.",
+        "en": "Inception Labs ships Mercury 2.5, the largest diffusion LLM, 1,100+ tok/s, quality on par with cost-optimized frontier models."
+      }
+    },
+    "deepseek-v4-1-flash-beta": {
+      "last_date": "2026-09-09",
+      "summary": {
+        "ru": "DeepSeek открывает двухдневную бету V4.1 Flash — новая архитектура с нативной мультимодальностью по цене V4 Flash.",
+        "en": "DeepSeek opens a two-day V4.1 Flash beta — a new architecture with native multimodality at V4 Flash pricing."
+      }
+    },
+    "openai-chatgpt-images-2-5": {
+      "last_date": "2026-09-09",
+      "summary": {
+        "ru": "OpenAI выпускает ChatGPT Images 2.5 (sunburst/flare) — точнее следует инструкциям правки и сохраняет референсный объект.",
+        "en": "OpenAI ships ChatGPT Images 2.5 (sunburst/flare) — better edit-instruction following and reference-subject preservation."
       }
     }
   }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Знакомство с ChatGPT Images 2.5» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (со ссылкой на анонс OpenAI) · 2026-09-08</span>
+      <span data-lang="en">Article digest · Simon Willison (linking OpenAI's announcement) · 2026-09-08</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Знакомство с ChatGPT Images 2.5</span>
+      <span data-lang="en">Introducing ChatGPT Images 2.5</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://openai.com/index/introducing-chatgpt-images-2-5/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал анонса OpenAI ↗</span><span data-lang="en">OpenAI's original announcement ↗</span>
+      </a>
+      ·
+      <a href="https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/" target="_blank" rel="noopener">
+        <span data-lang="ru">заметка Уиллисона ↗</span><span data-lang="en">Willison's note ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Два новых идентификатора модели вместо одного универсального</span><span data-lang="en">Two new model IDs instead of one universal option</span></h2>
+    <p>
+      <span data-lang="ru">OpenAI обновила линейку моделей генерации изображений, отметив, что её изображательные модели уже использованы для создания более 3 миллиардов картинок суммарно в ChatGPT Images и API. Новый релиз лучше следует инструкциям в рамках многошаговой правки, отвечает быстрее и точнее сохраняет исходный объект на референсных фотографиях при редактировании. В API появились два новых идентификатора — `gpt-image-2.5-sunburst` и `gpt-image-2.5-flare`. Уиллисон, опираясь на официальную документацию OpenAI, делает практический вывод: Sunburst — более сильный вариант для сценариев, где важнее всего точность правки, а Flare — вариант для быстрой и качественной генерации на каждый день, то есть выбор модели теперь явно завязан на компромисс между точностью и скоростью, а не на универсальный «лучший вариант по умолчанию».</span>
+      <span data-lang="en">OpenAI updated its image-generation model lineup, noting its image models have already been used to create more than 3 billion images combined across ChatGPT Images and the API. The new release follows multi-turn editing instructions better, responds faster, and more accurately preserves a subject from reference photos during edits. Two new model IDs landed in the API: `gpt-image-2.5-sunburst` and `gpt-image-2.5-flare`. Drawing on OpenAI's own documentation, Willison draws a practical conclusion: Sunburst is the stronger option for workflows where editing precision matters most, while Flare is meant for fast, high-quality everyday generation — so the model choice is now explicitly a precision-versus-speed tradeoff rather than one universal "best default."</span>
+    </p>
+
+    <h2><span data-lang="ru">Проверка на практике: свой CLI-инструмент и живой пример</span><span data-lang="en">A hands-on check: his own CLI tool and a live example</span></h2>
+    <p>
+      <span data-lang="ru">Вместо того чтобы пересказывать анонс, Уиллисон сразу обновил свою утилиту командной строки `openai_image.py` (часть его набора инструментов на tools.simonwillison.net), добавив поддержку передачи одного или нескольких референсных изображений вместе с текстовым промптом. В качестве демонстрации он взял реальный график из другой своей заметки (об ускорении исследований внутри OpenAI) и передал модели `gpt-image-2.5-sunburst` промпт «добавь на график вдумчиво изучающего его енота-учёного в очках и белом халате». Модель вернула композитное изображение: тот же график с теми же подписями осей и линией тренда, но с добавленным в передний план мультяшным енотом за столом с кружкой, украшенной логотипом OpenAI, и стопкой книг на тему ИИ-агентов.</span>
+      <span data-lang="en">Rather than just summarizing the announcement, Willison immediately upgraded his own `openai_image.py` command-line tool (part of his toolset at tools.simonwillison.net) to support passing in one or more reference images alongside a text prompt. As a demo, he took a real chart from another one of his posts (about research acceleration inside OpenAI) and gave the `gpt-image-2.5-sunburst` model the prompt "add a raccoon scientist studying the chart thoughtfully," with glasses and a white lab coat. The model returned a composited image: the same chart with the same axis labels and trend line, but with a cartoon raccoon added in the foreground at a desk, holding a mug bearing the OpenAI logo, next to a stack of AI-agent-themed books.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что это значит для тех, кто уже строит инструменты на изображательном API</span><span data-lang="en">What this means if you're already building tools on the image API</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая практическая деталь в том, что обновление обратно совместимо на уровне интерфейса: существующий код, который передавал модели промпт и референсное изображение, продолжает работать — меняется лишь идентификатор модели и, как следствие, качество результата. Для разработчиков CLI- и агентных инструментов вокруг генерации изображений это означает, что переход на новую пару моделей — вопрос выбора между `sunburst` и `flare` по задаче, а не переписывания интеграции; сам Уиллисон демонстрирует это buildable-примером за несколько строк на своём собственном инструменте, а не абстрактным описанием API.</span>
+      <span data-lang="en">The key practical detail is that the update is backward-compatible at the interface level: existing code that passed a prompt and a reference image to the model keeps working — only the model ID changes, and with it the quality of the result. For developers building CLI or agentic tools around image generation, this means switching to the new model pair is a matter of picking `sunburst` versus `flare` for the task at hand, not rewriting the integration — and Willison demonstrates exactly that with a few-line, buildable example on his own tool rather than an abstract API description.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
