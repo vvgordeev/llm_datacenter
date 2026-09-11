@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T07:40:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED www.anthropic.com; covered via WebSearch"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED openai.com; covered via WebSearch"},
+    {"source": "google/deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED blog.google; covered via WebSearch"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED ai.meta.com; covered via WebSearch"},
+    {"source": "xai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED x.ai; covered via WebSearch"},
+    {"source": "mistral blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED mistral.ai; covered via WebSearch"},
+    {"source": "deepseek blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch EGRESS_BLOCKED api-docs.deepseek.com; covered via WebSearch"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 3, "note": "Coxon/Hubinger extinction-risk story, threat-intel report, econ scenario explorer (не включён — не продуктовая новость)"},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 2, "note": "Agents API public beta (включена); GPT-6 Astra/ChatGPT Images 2.5 — уже в сводках 09-04/09-09"},
+    {"source": "google/deepmind (WebSearch)", "status": "empty", "candidates": 0, "note": "Gemini 3.8 Flash/Flash Cyber уже в сводке 09-04; ничего нового за 09-10/09-11 не найдено"},
+    {"source": "meta (WebSearch)", "status": "empty", "candidates": 0, "note": "Muse-агент уже в сводке 09-09 (запуск); Stilla.ai — финансовое приобретение без продуктовой части, не включено"},
+    {"source": "xai (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok 4.7 анонсирован Маском на ~12 сентября, ещё не вышел — не включено как непроизошедшее событие; Grok Bot for Enterprise уже в сводке 09-05"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "Leanstral 1.5 — релиз конца июня/начала июля, не свежий; раунд финансирования €3B — финансовая новость без продуктовой части, не включено"},
+    {"source": "deepseek (WebSearch)", "status": "ok", "candidates": 1, "note": "V4.1 Flash: официальный релиз 10 сентября — продолжение кластера deepseek-v4-1-flash-beta (бета от 09-09)"},
+    {"source": "hacker news API", "status": "blocked", "candidates": 0, "note": "hn.algolia.com CONNECT 403 из песочницы; использован WebSearch site:news.ycombinator.com"},
+    {"source": "hacker news (WebSearch)", "status": "ok", "candidates": 0, "note": "источник реакций/мнений для новостей DeepSeek V4.1 Flash и OpenAI Agents API, отдельных новостей не дал"},
+    {"source": "aggregators (smol.ai, TLDR AI, HN API)", "status": "blocked", "candidates": 0, "note": "прямой fetch недоступен; discovery шёл через общие WebSearch-запросы 'AI news September 10/11 2026'"},
+    {"source": "reddit/x community", "status": "empty", "candidates": 0, "note": "WebSearch не дал релевантных находок сверх уже включённого"},
+    {"source": "experts: Simon Willison (simonwillison.net)", "status": "ok", "candidates": 1, "note": "blog.simonwillisonblog-backup дамп отстаёт (последняя запись 2026-09-04..09), для .blend-viewer поста (09-09) использован WebSearch; включена статья"},
+    {"source": "experts: Andrej Karpathy (YouTube)", "status": "blocked", "candidates": 0, "note": "youtube.com RSS/WebFetch CONNECT 403 из песочницы; WebSearch не нашёл видео за 09-08..09-11 с надёжной атрибуцией"},
+    {"source": "experts: Latent Space", "status": "empty", "candidates": 0, "note": "найден дневной AINews-дайджест (09-09), но не про метод использования LLM; отдельного разбора Agents API/Coxon не найдено"},
+    {"source": "experts: AI Explained (YouTube)", "status": "blocked", "candidates": 0, "note": "то же ограничение YouTube; видео с надёжной атрибуцией канала/даты не найдено"},
+    {"source": "experts: Matt Wolfe (YouTube)", "status": "blocked", "candidates": 0, "note": "то же ограничение YouTube"},
+    {"source": "experts: Ethan Mollick (oneusefulthing.org)", "status": "empty", "candidates": 0, "note": "архив показывает последний пост от 08-31; за 09-08..09-11 нового не найдено"},
+    {"source": "experts: Nate Herk (YouTube)", "status": "blocked", "candidates": 0, "note": "то же ограничение YouTube"},
+    {"source": "experts: Matt Pocock (YouTube)", "status": "blocked", "candidates": 0, "note": "то же ограничение YouTube; последнее найденное видео датировано 08-19"},
+    {"source": "experts: расширенный поиск (не из конфига)", "status": "ok", "candidates": 1, "note": "Zvi Mowshowitz, AI #185: Preference Cascade (thezvi.substack.com) — резонансный разбор недели, включён"}
+  ],
+  "totals": {
+    "candidates": 8,
+    "published": 4,
+    "rejected": {
+      "уже опубликовано ранее (тот же сюжет без новизны)": 2,
+      "финансовые/корпоративные новости без продуктовой части": 2,
+      "событие ещё не произошло (анонс без релиза)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used: не найдено ни одного видео-кандидата от экспертов конфига с надёжной атрибуцией (канал youtube.com недоступен из песочницы для RSS/WebFetch/yt-dlp; WebSearch индекс отстаёт на 1-2 дня)",
+    "frames": "not used: видео-кандидатов не было",
+    "tooling": "yt-dlp и imageio-ffmpeg установлены через pip на случай появления видео-кандидата, не потребовались"
+  },
+  "notes": [
+    "2026-09-10 сводка отсутствует в data/daily и docs/data/daily — предыдущий прогон, похоже, не состоялся; в этом прогоне подобраны свежие новости 09-10/09-11, но задним числом 09-10 не восстанавливается (инвариант 1 — не редактируем чужой день)",
+    "youtube.com (RSS/WebFetch/yt-dlp) недоступен из песочницы в этом прогоне (CONNECT 403) — видео-часть экспертной секции полностью пропущена; ниже минимума min_expert_total=5 (собрано 2), что соответствует исторической норме проекта на дни с деградацией YouTube"
+  ]
+}

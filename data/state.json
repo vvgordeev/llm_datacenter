@@ -1,16 +1,6 @@
 {
   "seen_urls": {
-    "https://variety.com/2026/biz/news/meta-suspends-ai-image-instagram-feature-backlash-1236806989/": "2026-07-11",
-    "https://x.ai/news/new-flagship-voices": "2026-07-11",
-    "https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier": "2026-07-11",
-    "https://www.tryai.dev/blog/gpt-5.6-build-off-12-models": "2026-07-11",
-    "https://pub.towardsai.net/gpt-5-6-stopped-calling-tools-one-at-a-time-it-writes-code-now-and-cut-tokens-63-5-387d2b7160f9": "2026-07-11",
-    "https://www.eesel.ai/blog/meta-muse-image-review": "2026-07-11",
-    "https://www.latent.space/p/databricks": "2026-07-11",
-    "https://www.youtube.com/watch?v=EuzYhzB0vbI": "2026-07-11",
     "https://x.ai/build/changelog": "2026-07-13",
-    "https://simonwillison.net/2026/Jul/9/llm-meta-ai/": "2026-07-12",
-    "https://www.youtube.com/watch?v=iTY8Q449YNQ": "2026-07-12",
     "https://x.com/__eknight__/status/2075643450196971805": "2026-07-13",
     "https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/": "2026-07-13",
     "https://www.youtube.com/watch?v=zyvdl__Ywfk": "2026-07-13",
@@ -416,7 +406,15 @@
     "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
-    "notes/articles/willison-chatgpt-images-2-5.html": "2026-09-09"
+    "notes/articles/willison-chatgpt-images-2-5.html": "2026-09-09",
+    "https://openai.com/index/introducing-the-agents-api/": "2026-09-11",
+    "https://api-docs.deepseek.com/news/news260910/": "2026-09-11",
+    "https://x.com/hilbertspaess/status/2097476196791709843": "2026-09-11",
+    "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-09-11",
+    "https://simonwillison.net/2026/Sep/9/blender-viewer/": "2026-09-11",
+    "https://thezvi.substack.com/p/ai-185-preference-cascade": "2026-09-11",
+    "notes/articles/willison-blender-viewer-faberge.html": "2026-09-11",
+    "notes/articles/zvi-ai-185-preference-cascade.html": "2026-09-11"
   },
   "clusters": {
     "openai-gpt-5-6": {
@@ -426,10 +424,6 @@
     "openai-gpt-live": {
       "last_date": "2026-08-01",
       "summary": "OpenAI ships GPT-Live, a full-duplex voice model for ChatGPT that delegates hard reasoning/search/code to GPT-5.5 in the background"
-    },
-    "xai-grok-4-5": {
-      "last_date": "2026-07-11",
-      "summary": "xAI launches Grok 4.5 (trained alongside Cursor); day-two reaction centers on trust concerns, day-three independent benchmarks rank it 4th on Artificial Analysis Intelligence Index behind Fable 5/Opus 4.8/GPT-5.5 but best-in-class on cost"
     },
     "anthropic-cowork-mobile": {
       "last_date": "2026-08-19",
@@ -462,10 +456,6 @@
     "xai-grok-build-voice": {
       "last_date": "2026-07-13",
       "summary": "xAI's Grok Build CLI ships frequent changelog updates: v0.2.97 added token-cost tracking, message editing and voice mode for API-key sessions (2026-07-12); v0.2.98 added config.toml auth pinning, /context skill/MCP cost visibility, more reliable Linux middle-click paste, and terminal color/theme reporting in /terminal-setup (2026-07-13)"
-    },
-    "meta-muse-image": {
-      "last_date": "2026-07-11",
-      "summary": "Meta launches Muse Image (July 7), its first image-gen model; an Instagram-tagging feature draws backlash from SAG-AFTRA/CAA and is pulled July 10"
     },
     "xai-grok-build-data-leak": {
       "last_date": "2026-07-16",
@@ -1203,10 +1193,10 @@
       }
     },
     "deepseek-v4-1-flash-beta": {
-      "last_date": "2026-09-09",
+      "last_date": "2026-09-11",
       "summary": {
-        "ru": "DeepSeek открывает двухдневную бету V4.1 Flash — новая архитектура с нативной мультимодальностью по цене V4 Flash.",
-        "en": "DeepSeek opens a two-day V4.1 Flash beta — a new architecture with native multimodality at V4 Flash pricing."
+        "ru": "DeepSeek переходит от двухдневной беты к официальному релизу V4.1 Flash — новая архитектура Causal Encoder-Decoder, V4 Pro выводится из эксплуатации.",
+        "en": "DeepSeek moves from a two-day beta to the official V4.1 Flash release — a new causal encoder-decoder architecture, with V4 Pro being retired."
       }
     },
     "openai-chatgpt-images-2-5": {
@@ -1214,6 +1204,27 @@
       "summary": {
         "ru": "OpenAI выпускает ChatGPT Images 2.5 (sunburst/flare) — точнее следует инструкциям правки и сохраняет референсный объект.",
         "en": "OpenAI ships ChatGPT Images 2.5 (sunburst/flare) — better edit-instruction following and reference-subject preservation."
+      }
+    },
+    "openai-agents-api": {
+      "last_date": "2026-09-11",
+      "summary": {
+        "ru": "OpenAI открывает публичную бету Agents API — харнес Codex (оркестрация, сжатие контекста, восстановление) доступен разработчикам одним API-вызовом.",
+        "en": "OpenAI opens the Agents API public beta — the Codex harness (orchestration, context compaction, recovery) becomes available to developers behind a single API call."
+      }
+    },
+    "anthropic-researcher-extinction-warning": {
+      "last_date": "2026-09-11",
+      "summary": {
+        "ru": "Джейкоб Коксон уходит из Anthropic с публичным предупреждением о риске вымирания от ИИ; глава Alignment Science Эван Хубингер публично соглашается (>10% в декаду).",
+        "en": "Jacob Coxon resigns from Anthropic with a public AI extinction-risk warning; alignment science lead Evan Hubinger publicly agrees (>10% within a decade)."
+      }
+    },
+    "anthropic-threat-intel-sept2026": {
+      "last_date": "2026-09-11",
+      "summary": {
+        "ru": "Anthropic публикует отчёт Threat Intelligence за сентябрь 2026: биоугрозы, vibe hacking, дистилляция моделей китайскими лабораториями.",
+        "en": "Anthropic publishes its September 2026 Threat Intelligence report: bio threats, vibe hacking, model distillation by Chinese labs."
       }
     }
   }

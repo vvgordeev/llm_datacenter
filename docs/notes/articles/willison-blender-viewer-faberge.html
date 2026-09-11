@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: инструмент для просмотра .blend и конвейер «изображение → 3D» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-09</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Инструмент для просмотра .blend по URL, и конвейер «изображение → 3D-модель»</span>
+      <span data-lang="en">A .blend URL viewer tool, and an image-to-3D-model agent pipeline</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/9/blender-viewer/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки Уиллисона ↗</span><span data-lang="en">Willison's original note ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Метод: от картинки до 3D-модели за один агентный прогон</span><span data-lang="en">The method: from a picture to a 3D model in a single agent run</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон, коллекционер идеи имперских яиц Фаберже, решил проверить, насколько далеко сейчас можно зайти по цепочке «текстовый промпт → изображение → 3D-модель», не открывая при этом ни одного специализированного 3D-редактора вручную. Шаг первый: он описал словами яйцо Фаберже в теме сериала Pluribus и сгенерировал референсное изображение в ChatGPT Images 2.5. Шаг второй: он вставил это изображение в Codex (терминальное приложение OpenAI), запущенный на модели GPT-6 Astra в режиме high, вместе с локальным Blender-навыком (skill) — набором инструкций и вспомогательных скриптов, которые объясняют агенту, как управлять Blender через его Python API. Шаг третий: агент самостоятельно интерпретировал референсное изображение, спланировал геометрию и материалы яйца и построил рабочий .blend-файл — весь прогон занял 17 минут 51 секунду без вмешательства человека в процессе.</span>
+      <span data-lang="en">Willison, a collector of the idea of Imperial Fabergé eggs, wanted to test how far the chain "text prompt → image → 3D model" can now go without opening a dedicated 3D editor by hand. Step one: he described a Fabergé egg themed after the TV show Pluribus in words and generated a reference image with ChatGPT Images 2.5. Step two: he pasted that image into Codex (OpenAI's terminal app) running GPT-6 Astra on high, together with a local Blender skill — a set of instructions and helper scripts that teach the agent how to drive Blender through its Python API. Step three: the agent interpreted the reference image on its own, planned the egg's geometry and materials, and built a working .blend file — the whole run took 17 minutes 51 seconds with no human intervention along the way.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это раскрывать: рендеринг сцен и не только моделирование</span><span data-lang="en">Why this matters: scene rendering, not just modeling</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон уточняет, что это не единичный трюк, а продолжение его более раннего разбора работы с Blender через кодинг-агентов на macOS (тот пост вышел неделей раньше). В этот раз он дополнительно прогнал GPT-6 Astra в режиме medium через macOS-приложение ChatGPT в режиме Codex, чтобы заставить Blender не просто построить модель, а отрендерить сцену — то есть агент управлял полным циклом: геометрия, материалы, свет, камера и финальный рендер. Для человека, не владеющего Blender, это означает, что можно получить приемлемый 3D-актив, вообще не изучая интерфейс программы — весь необходимый навык инкапсулирован в промпте и skill-файле, а не в голове пользователя.</span>
+      <span data-lang="en">Willison notes this isn't a one-off trick but a continuation of his earlier piece on using Blender through coding agents on macOS (that post came out a week earlier). This time he also ran GPT-6 Astra on medium through the ChatGPT macOS app in Codex mode to get Blender not just to build a model but to render a scene — meaning the agent drove the full cycle: geometry, materials, lighting, camera, and the final render. For someone who doesn't know Blender, this means a usable 3D asset is reachable without ever learning the program's interface — the necessary skill is encapsulated in the prompt and the skill file rather than in the user's head.</span>
+    </p>
+
+    <h2><span data-lang="ru">Побочный инструмент: просмотр .blend прямо по ссылке</span><span data-lang="en">The side tool: viewing .blend files straight from a link</span></h2>
+    <p>
+      <span data-lang="ru">Чтобы не заставлять читателей своего блога скачивать и открывать .blend-файлы локально, Уиллисон собрал и опубликовал небольшой инструмент — «.blend URL Viewer»: он принимает ссылку на .blend-файл и рендерит его прямо в браузере. Это мелкая, но показательная деталь метода: агентная генерация 3D-контента становится практически применимой только тогда, когда результат легко посмотреть и переслать — сам файл в формате Blender бесполезен для человека без Blender на компьютере, а веб-вьюер закрывает именно этот разрыв между «агент что-то построил» и «результат можно показать кому угодно».</span>
+      <span data-lang="en">To avoid making his blog's readers download and open .blend files locally, Willison built and published a small tool — the ".blend URL Viewer": it takes a link to a .blend file and renders it right in the browser. It's a minor but telling detail of the method: agent-generated 3D content only becomes practically useful once the result is easy to view and share — the raw Blender file is useless to anyone without Blender on their machine, and a web viewer closes exactly that gap between "the agent built something" and "the result can be shown to anyone."</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения подхода</span><span data-lang="en">Limitations of the approach</span></h2>
+    <p>
+      <span data-lang="ru">Метод пока остаётся демонстрацией возможностей, а не готовым производственным пайплайном: он завязан на конкретный skill-файл, который нужно поддерживать под версии Blender API, требует доступа к GPT-6 Astra (доступному пока ограниченному кругу пользователей) и не даёт гарантий по качеству топологии получившейся геометрии — для реального продакшена (игры, 3D-печать) модель, скорее всего, потребует ручной доводки. Тем не менее сам факт, что агент способен пройти путь от плоской картинки до валидного .blend-файла со сценой без единой ручной операции в Blender, показывает, что порог входа в 3D-моделирование для непрограммистов и не-3D-художников продолжает падать.</span>
+      <span data-lang="en">The method is still a capability demo rather than a finished production pipeline: it depends on a specific skill file that needs upkeep against Blender's API, requires access to GPT-6 Astra (currently limited to a subset of users), and offers no guarantee on the resulting geometry's topology quality — for real production use (games, 3D printing) the model would likely need manual cleanup. Still, the fact that an agent can go from a flat picture to a valid .blend file with a full scene without a single manual operation in Blender shows that the barrier to entry for 3D modeling keeps dropping for people who are neither programmers nor 3D artists.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

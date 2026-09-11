@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-11",
+      "news_count": 4,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "OpenAI выводит Agents API в открытую бету — харнес Codex доступен одним вызовом API",
+        "en": "OpenAI opens the Agents API in public beta — the Codex harness behind a single API call"
+      }
+    },
+    {
       "date": "2026-09-09",
       "news_count": 5,
       "expert_count": 3,

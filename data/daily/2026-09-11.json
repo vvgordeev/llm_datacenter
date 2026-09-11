@@ -1,0 +1,214 @@
+{
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T07:40:00Z",
+  "news": [
+    {
+      "id": "2026-09-11-openai-agents-api",
+      "cluster_id": "openai-agents-api",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI выводит Agents API в открытую бету — харнес Codex доступен одним вызовом API",
+        "en": "OpenAI opens the Agents API in public beta — the Codex harness behind a single API call"
+      },
+      "summary": {
+        "ru": "OpenAI открыла публичную бету Agents API: тот же харнес, что работает внутри Codex, теперь берёт на себя оркестрацию сессий, вызовов модели и инструментов, сжатие контекста и восстановление после сбоев на стороне OpenAI — разработчик поставляет только инструменты и выбирает песочницу выполнения. Агенты умеют выполнять код, редактировать файлы, подключаться к MCP-серверам и работать в хостинг-песочнице OpenAI либо в собственной инфраструктуре.",
+        "en": "OpenAI opened the public beta of the Agents API: the same harness that powers Codex now handles session orchestration, model/tool-call coordination, context compaction, and failure recovery on OpenAI's side — developers just supply tools and pick an execution environment. Agents can run code, edit files, connect to MCP servers, and operate in an OpenAI-hosted sandbox or their own infrastructure."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Снимает с разработчиков основную инженерную нагрузку по сборке агентного харнеса (ретраи, управление контекстом, координация подагентов) и делает production-агентов доступнее широкому кругу команд — заметный сдвиг в подходе к постройке агентных приложений, хотя сама технология (харнес Codex) не новая.",
+        "en": "Removes most of the engineering burden of building an agent harness (retries, context management, subagent coordination) from developers and makes production agents accessible to far more teams — a real shift in how agentic apps get built, even though the underlying tech (the Codex harness) isn't new."
+      },
+      "source_url": "https://openai.com/index/introducing-the-agents-api/",
+      "opinions": [
+        {
+          "author": "AlphaSignal",
+          "stance": "positive",
+          "quote": {
+            "ru": "Agents API убирает тот слой оркестрации, который разработчики ненавидят собирать сами — харнес версионируется вместе с релизами моделей, так что улучшения приходят без переписывания промптов и инструментов.",
+            "en": "The Agents API kills the orchestration layer developers hate building — the harness is versioned against model releases, so improvements ship without rewiring prompts and tool definitions."
+          },
+          "url": "https://alphasignal.ai/news/openai-s-agents-api-kills-the-orchestration-layer-developers-hate-building"
+        },
+        {
+          "author": "Hacker News (обсуждение)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Странная промежуточная позиция: условия использования выглядят рассчитанными на личное использование, а не на то, что реально пытаются строить разработчики.",
+            "en": "Feels like a weird middle ground — the terms of service read as if built for personal use, not for what developers are actually trying to build."
+          },
+          "url": "https://news.ycombinator.com/item?id=49649213"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "SafetyKit перенёс проверку кейсов на Agents API и снизил стоимость на кейс на 60%; Nash.ai использует его для тысяч долгоживущих агентов в глобальных логистических сетях.",
+            "en": "SafetyKit migrated its case-review workflow to the Agents API and cut cost per case by 60%; Nash.ai runs thousands of long-running agents on it across global logistics networks."
+          },
+          "url": "https://www.marktechpost.com/2026/09/10/openai-launches-the-agents-api-in-public-beta-putting-the-codex-harness-behind-one-api-call/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-11-deepseek-v4-1-flash-release",
+      "cluster_id": "deepseek-v4-1-flash-beta",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "DeepSeek выпускает V4.1 Flash: новая архитектура Causal Encoder-Decoder приходит на смену V4 Pro",
+        "en": "DeepSeek ships V4.1 Flash: a new causal encoder-decoder architecture replaces V4 Pro"
+      },
+      "summary": {
+        "ru": "После двухдневной беты DeepSeek официально выпустила V4.1 Flash — первую модель новой архитектурной семьи с нативным визуальным пониманием: асимметричный дизайн активирует лишь 8B параметров на входе и 16B на выходе из 552B общих, что резко сокращает KV-кэш и стоимость длинных агентных циклов. По собственным бенчмаркам компании модель обходит более крупный V4 Pro по качеству, скорости и цене; DeepSeek планирует поэтапно вывести V4 Pro из эксплуатации.",
+        "en": "After a two-day beta, DeepSeek officially released V4.1 Flash, the first model in a new architecture family with native visual understanding: an asymmetric design activates only 8B parameters on input and 16B on output out of 552B total, sharply cutting KV-cache size and the cost of long agent loops. By DeepSeek's own benchmarks it beats the larger V4 Pro on quality, speed and price; the company plans to retire V4 Pro over time."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Развитие уже анонсированной 9 сентября линии (бета), но архитектурный сдвиг заметно снижает стоимость serving для длинных агентных задач и задаёт ориентир для остальных open-weight моделей.",
+        "en": "An evolution of a line already announced on Sept 9 (the beta), but the architectural shift meaningfully lowers serving cost for long agent loops and sets a bar for other open-weight models."
+      },
+      "source_url": "https://api-docs.deepseek.com/news/news260910/",
+      "opinions": [
+        {
+          "author": "Hacker News (обсуждение)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Похоже, это новый король среди open-weight моделей — нативное визуальное понимание и архитектура, рассчитанная на дальнейшее масштабирование.",
+            "en": "Probably the newest king of the hill amongst open weights models, with native multimodal visual understanding and an architecture designed to scale further."
+          },
+          "url": "https://news.ycombinator.com/item?id=49639090"
+        },
+        {
+          "author": "Hacker News (обсуждение)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "552B параметров — это уже не совсем «flash»: локальный деплой требует намного больше ресурсов, даже если активная часть невелика.",
+            "en": "At 552B parameters, it's not really 'flash' anymore — local deployment is considerably more demanding even though the active part is small."
+          },
+          "url": "https://news.ycombinator.com/item?id=49639090"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "WorkBuddy/CodeBuddy и OpenCode официально поддержали V4.1 Flash в день релиза; схема вызова инструментов повторяет формат OpenAI, так что существующий агентный код почти не требует правок.",
+            "en": "WorkBuddy/CodeBuddy and OpenCode added official V4.1 Flash support on release day; its tool-calling schema mirrors OpenAI's, so existing agent code needs almost no changes."
+          },
+          "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-11-anthropic-coxon-extinction-warning",
+      "cluster_id": "anthropic-researcher-extinction-warning",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Исследователь Anthropic уходит с предупреждением о риске вымирания — глава Alignment Science публично соглашается",
+        "en": "An Anthropic researcher resigns warning of extinction risk — the alignment science lead publicly agrees"
+      },
+      "summary": {
+        "ru": "Джейкоб Коксон, три года занимавшийся претрейном в OpenAI и Anthropic, объявил об уходе постом на X: обе компании, по его словам, «несутся к самоулучшающемуся суперинтеллекту, ставя на кон наши жизни». Пост за сутки собрал около 76 млн просмотров. Эван Хубингер, глава Alignment Science в Anthropic, публично согласился с сутью предупреждения и оценил риск вымирания от ИИ более чем в 10% в ближайшее десятилетие, уточнив, что у компании пока нет плана решения alignment для суперинтеллекта.",
+        "en": "Jacob Coxon, who spent three years on pretraining research at OpenAI and Anthropic, announced his resignation in an X post: both companies, he said, are 'racing straight to self-improving superintelligence and gambling with our lives.' The post drew roughly 76 million views overnight. Evan Hubinger, Anthropic's alignment science lead, publicly agreed with the substance of the warning, putting his own estimate of AI extinction risk at over 10% within the next decade, and noting the company doesn't yet have a plan to solve alignment for superintelligence."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Не меняет ни одного технического подхода к использованию LLM, но это редкий случай, когда действующий глава направления безопасности крупной лаборатории публично подтверждает двузначную оценку риска вымирания — с огромным резонансом (обвинения в пиар-акции с одной стороны, поддержка исследователей с другой), способным повлиять на регуляторную и внутриотраслевую динамику.",
+        "en": "Doesn't change a single technical approach to using LLMs, but it's a rare case of a frontier lab's sitting safety lead publicly confirming a double-digit extinction-risk estimate — with enormous fallout (accusations of a PR stunt on one side, researcher support on the other) that could shape regulatory and industry dynamics."
+      },
+      "source_url": "https://x.com/hilbertspaess/status/2097476196791709843",
+      "opinions": [
+        {
+          "author": "Evan Hubinger (Anthropic)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Джейкоб прав — мы действительно всерьёз считаем, что ИИ может убить всех людей. Я лично оцениваю этот риск более чем в 10% в течение следующего десятилетия. У Anthropic пока нет плана решения alignment для суперинтеллекта.",
+            "en": "Jacob is correct here — we really do earnestly believe AI could kill all humans! I personally think it is >10% within the next decade. We do not yet have a plan to solve alignment for superintelligence."
+          },
+          "url": "https://x.com/EvanHub/status/2097497037956891126"
+        },
+        {
+          "author": "David Sacks",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "IPO Anthropic наверняка нужно приостановить, пока не проверят заявления этого «информатора».",
+            "en": "Surely Anthropic's IPO must be paused until the claims of this 'whistleblower' can be investigated."
+          },
+          "url": "https://x.com/DavidSacks/status/2097861539491463331"
+        }
+      ],
+      "use_cases": []
+    },
+    {
+      "id": "2026-09-11-anthropic-threat-intel-sept2026",
+      "cluster_id": "anthropic-threat-intel-sept2026",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic публикует отчёт о вредоносном использовании ИИ: биооружие, «vibe hacking» и дистилляция моделей",
+        "en": "Anthropic publishes a threat-intelligence report on AI misuse: bioweapons, 'vibe hacking' and model distillation"
+      },
+      "summary": {
+        "ru": "Anthropic выпустила очередной отчёт Threat Intelligence о случаях злоупотребления Claude, выявленных и пресечённых с декабря 2025 по август 2026 по семи направлениям: кибератаки, влияние, слежка, мошенничество, биологические угрозы, обычные вооружения и дистилляция моделей. Среди кейсов — пять попыток использовать Claude в исследованиях, потенциально связанных с биооружием (передаваемость вирусов, уклонение от иммунитета, работа с токсинами), кампания вымогательства через Claude Code против 17 организаций и попытки нескольких китайских лабораторий (включая DeepSeek) дистиллировать модель через массовые запросы.",
+        "en": "Anthropic released its latest Threat Intelligence report, describing misuse of Claude detected and disrupted between December 2025 and August 2026 across seven areas: cyber operations, influence operations, surveillance, fraud, biological threats, conventional weapons, and model distillation. Cases include five attempts to use Claude for research potentially tied to bioweapons (virus transmissibility, immune evasion, toxin work), an extortion campaign run through Claude Code against 17 organizations, and attempts by several Chinese labs (DeepSeek among them) to distill the model via mass querying."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Регулярный (не первый) отчёт о злоупотреблениях — расширяет картину реальных рисков и подхода Anthropic к мониторингу, но не меняет продуктовые возможности и подходы обычных пользователей к работе с LLM.",
+        "en": "A recurring (not first-of-its-kind) misuse report — it broadens the picture of real-world risk and Anthropic's monitoring approach, but doesn't change product capabilities or how ordinary users work with LLMs."
+      },
+      "source_url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "opinions": [
+        {
+          "author": "CyberScoop",
+          "stance": "neutral",
+          "quote": {
+            "ru": "ИИ стирает связь между уровнем квалификации атакующего и сложностью атаки — то, что раньше требовало команды опытных хакеров, теперь может провернуть один человек с доступом к модели.",
+            "en": "AI breaks the link between attacker skill level and attack sophistication — what once required a team of skilled hackers can now be executed by a single individual armed with AI."
+          },
+          "url": "https://cyberscoop.com/anthropic-report-ai-enabled-cyber-attacks/"
+        },
+        {
+          "author": "djnnvx (Better Stack Community)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Технически подкованный государственный актор вряд ли выбрал бы инструмент, оставляющий настолько заметный и детальный след, когда доступны более скрытные альтернативы — это ставит под вопрос, была ли это реальная атака или интерпретация red-team/исследовательской активности.",
+            "en": "A sophisticated state-sponsored actor would be unlikely to choose a tool that leaves such an obvious and detailed trail when superior, more covert alternatives are available — which raises the question of whether this was a genuine attack or an interpretation of red-teaming/research activity."
+          },
+          "url": "https://betterstack.com/community/guides/ai/anthropic-ai-cyber-attack/"
+        }
+      ],
+      "use_cases": []
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-11-willison-blender-viewer-faberge",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Инструмент для просмотра .blend по URL и агентный конвейер «изображение → 3D-модель»",
+        "en": "A .blend URL viewer tool, and an image-to-3D-model agent pipeline"
+      },
+      "url": "https://simonwillison.net/2026/Sep/9/blender-viewer/",
+      "summary": {
+        "ru": "Уиллисон собирает Pluribus-тематическое яйцо Фаберже: генерирует изображение в ChatGPT Images 2.5, отдаёт его Codex с GPT-6 Astra и локальным Blender-навыком — и получает готовую 3D-модель за 18 минут; заодно публикует инструмент для просмотра .blend-файлов прямо по URL в браузере.",
+        "en": "Willison assembles a Pluribus-themed Fabergé egg: he generates an image in ChatGPT Images 2.5, hands it to Codex running GPT-6 Astra with a local Blender skill, and gets a finished 3D model in 18 minutes — while also shipping a tool that renders .blend files straight from a URL in the browser."
+      },
+      "note_page": "notes/articles/willison-blender-viewer-faberge.html"
+    },
+    {
+      "id": "2026-09-11-zvi-ai-185-preference-cascade",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #185: Каскад предпочтений",
+        "en": "AI #185: Preference Cascade"
+      },
+      "url": "https://thezvi.substack.com/p/ai-185-preference-cascade",
+      "summary": {
+        "ru": "Мовшовиц разбирает уход Коксона из Anthropic как триггер «каскада предпочтений»: давление к публичной честности о рисках ИИ копилось внутри лабораторий и раньше (в том числе у OpenAI), а резонанс вокруг ухода лишь превратил его в лавину — наряду с этим в выпуске разбираются отчёты об ускорении разработки на 10-50x и доказательство Great Fermat теоремы силами Claude.",
+        "en": "Mowshowitz reads Coxon's departure as the trigger for a 'preference cascade': pressure for public honesty about AI risk had already been building inside labs (OpenAI included), and the resignation's fallout simply turned it into an avalanche — the issue also covers reports of 10-50x dev-speed gains and Claude's formal proof of Fermat's Last Theorem."
+      },
+      "note_page": "notes/articles/zvi-ai-185-preference-cascade.html"
+    }
+  ]
+}

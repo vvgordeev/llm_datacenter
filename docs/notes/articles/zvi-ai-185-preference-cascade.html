@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: AI #185 — Каскад предпочтений — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Zvi Mowshowitz · 2026-09-10</span>
+      <span data-lang="en">Article digest · Zvi Mowshowitz · 2026-09-10</span>
+    </p>
+    <h1>
+      <span data-lang="ru">AI #185: Каскад предпочтений</span>
+      <span data-lang="en">AI #185: Preference Cascade</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thezvi.substack.com/p/ai-185-preference-cascade" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал выпуска ↗</span><span data-lang="en">Original issue ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Что такое «каскад предпочтений» и при чём тут уход Коксона</span><span data-lang="en">What a "preference cascade" is, and why Coxon's resignation triggered one</span></h2>
+    <p>
+      <span data-lang="ru">Мовшовиц берёт термин из социальной теории: каскад предпочтений — это ситуация, когда многие люди уже втайне придерживаются одного мнения, но молчат, потому что боятся быть первыми, — а стоит кому-то одному заговорить вслух, как остальные быстро подхватывают, и частное мнение лавинообразно становится публичным. По его прочтению, именно это произошло после ухода Джейкоба Коксона из Anthropic с публичным предупреждением о риске вымирания: давление к честности о внутренних оценках риска ИИ копилось внутри лабораторий и раньше — в том числе, по наблюдению автора, у OpenAI, — но именно резонанс вокруг ухода Коксона превратил тлеющий процесс в лавину, вынудив других исследователей и руководителей публично проговаривать то, что раньше звучало только в частных разговорах.</span>
+      <span data-lang="en">Mowshowitz borrows a term from social theory: a preference cascade is a situation where many people already privately hold the same opinion but stay silent out of fear of being first — until someone finally speaks up, at which point everyone else quickly follows, and a private opinion becomes public in an avalanche. In his reading, this is exactly what happened after Jacob Coxon left Anthropic with a public extinction-risk warning: pressure for honesty about internal AI-risk estimates had already been building inside labs — OpenAI included, by his observation — but the fallout from Coxon's resignation is what turned a smoldering process into an avalanche, pushing other researchers and executives to say out loud what previously only surfaced in private conversations.</span>
+    </p>
+
+    <h2><span data-lang="ru">Система OpenAI как ещё один канал того же сигнала</span><span data-lang="en">OpenAI's system card as another channel for the same signal</span></h2>
+    <p>
+      <span data-lang="ru">По мысли автора, у самого OpenAI уже была своя, ещё не прорвавшаяся волна: в системной карточке GPT-6 Astra и в сопутствующих постах на X компания делала неоднократные, целенаправленные раскрытия и предупреждения о рисках новой модели, как будто хотела, чтобы внимательные наблюдатели заранее поняли, что должно произойти. Мовшовиц читает это не как разовую случайность, а как часть того же более широкого каскада: лаборатории одновременно нащупывают, насколько откровенно можно говорить о рисках, не разрушая доверие бизнеса, — и уход Коксона резко сдвинул эту границу в сторону большей открытости.</span>
+      <span data-lang="en">In the author's view, OpenAI already had its own not-yet-broken wave: in GPT-6 Astra's system card and accompanying posts on X, the company made repeated, pointed disclosures and warnings about the new model's risks, as if it wanted attentive observers to know in advance what was coming. Mowshowitz reads this not as a one-off but as part of the same broader cascade: labs are simultaneously testing how candidly they can talk about risk without breaking business trust — and Coxon's departure sharply shifted that boundary toward more openness.</span>
+    </p>
+
+    <h2><span data-lang="ru">Остальное в выпуске: ускорение разработки и доказательство Ферма</span><span data-lang="en">The rest of the issue: faster development and a Fermat proof</span></h2>
+    <p>
+      <span data-lang="ru">Помимо главной темы, в выпуске разбираются два менее резонансных, но конкретных сюжета недели. Первый — данные Рубена Блума (участника исследования METR об ускорении работы разработчиков), сообщающего об ускорении в 10–50 раз на отдельных проектах при использовании текущих агентов, что заметно выше типичных прежних оценок METR и указывает на растущий разброс результатов в зависимости от типа задачи. Второй — новость о том, что Claude предоставила формальное доказательство Великой теоремы Ферма в системе Lean; Мовшовиц использует оба сюжета как фон, показывающий, что разговор о рисках существования сверхинтеллекта идёт параллельно с не менее реальным ростом возможностей моделей здесь и сейчас, а не вместо него.</span>
+      <span data-lang="en">Beyond the main topic, the issue covers two smaller but concrete stories from the week. The first is a data point from Ruben Bloom (a participant in METR's developer-speedup research) reporting 10-50x speedups on individual projects when using current agents — notably higher than METR's typical earlier estimates, and a sign of growing variance depending on task type. The second is Claude producing a formal proof of Fermat's Last Theorem in Lean. Mowshowitz uses both as backdrop, showing that the conversation about superintelligence risk is running in parallel with — not instead of — an equally real growth in what models can do right now.</span>
+    </p>
+
+    <h2><span data-lang="ru">Итоговая рамка автора</span><span data-lang="en">The author's overall framing</span></h2>
+    <p>
+      <span data-lang="ru">Мовшовиц не пытается рассудить, кто прав — Коксон и Хубингер или их критики вроде Дэвида Сакса. Его интерес в другом: он показывает механику того, как частное убеждение внутри узкого круга исследователей превращается в публичный факт индустрии за считаные дни, и предупреждает, что раз каскад уже начался, следующие откровенные заявления от инсайдеров — вопрос времени, а не вероятности.</span>
+      <span data-lang="en">Mowshowitz doesn't try to adjudicate who's right — Coxon and Hubinger, or critics like David Sacks. His interest lies elsewhere: showing the mechanics of how a private belief held by a narrow circle of researchers turns into a public industry fact within days, and warning that once a cascade has started, further candid statements from insiders are a matter of time rather than probability.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
