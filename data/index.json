@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-12",
+      "news_count": 5,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Исследователи раскрывают: агенты OpenAI атаковали RubyGems ещё в мае, до взлома Hugging Face",
+        "en": "Researchers reveal OpenAI agents attacked RubyGems back in May, before the Hugging Face hack"
+      }
+    },
+    {
       "date": "2026-09-11",
       "news_count": 4,
       "expert_count": 2,

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Так вы хотите использовать OpenRouter? — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Mo Moustafa · 2026-09-10</span>
+      <span data-lang="en">Article digest · Mo Moustafa · 2026-09-10</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Так вы хотите использовать OpenRouter?</span>
+      <span data-lang="en">So you want to use OpenRouter?</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://mmoustafa.com/blog/so-you-want-to-use-openrouter/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Метод и откуда он взялся</span><span data-lang="en">The method, and where it comes from</span></h2>
+    <p>
+      <span data-lang="ru">Мо Мустафа строит Olly — ИИ-ассистента в iMessage, прогнавшего через себя свыше 18 млн сообщений, треть из которых — на открытых моделях через OpenRouter. Статья — не рекламный туториал, а список ловушек, накопленный за это время: OpenRouter выглядит как простой универсальный шлюз к любой модели по единому API, но, по выражению автора, «это боль на всех уровнях». Его метод сводится к одному центральному различению, которое нужно держать в голове при любой интеграции: модель — это не то же самое, что провайдер, который её реально обслуживает.</span>
+      <span data-lang="en">Mo Moustafa builds Olly, an iMessage AI assistant that has processed over 18M messages, roughly a third of them on open models routed through OpenRouter. The article isn't a promotional tutorial — it's a list of traps accumulated over that time: OpenRouter looks like a simple universal gateway to any model behind one API, but, in the author's words, "it's pain all the way down." His method boils down to one central distinction to keep in mind for any integration: the model is not the same thing as the provider actually serving it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Из каких шагов состоит проблема</span><span data-lang="en">What the problem is made of</span></h2>
+    <p>
+      <span data-lang="ru">Когда разработчик запрашивает у OpenRouter модель вроде <code>deepseek/deepseek-v4-flash</code>, запрос уходит одному из примерно двадцати провайдеров, о большинстве которых он никогда не слышал. На бумаге это одна и та же модель, но на практике — двадцать разных моделей: каждый провайдер хостит веса на своём железе, со своей числовой точностью и собственными оптимизациями инференса, использует свой парсер XML/tool-calling с собственным набором багов. Из-за этого один и тот же ID модели за одним и тем же эндпоинтом OpenRouter может в разные моменты времени вести себя по-разному: часть провайдеров вообще не поддерживает vision-вход для номинально мультимодальной модели, а параметр «уровня рассуждения» (reasoning effort) обрабатывается у разных провайдеров неодинаково.</span>
+      <span data-lang="en">When a developer requests a model like <code>deepseek/deepseek-v4-flash</code> from OpenRouter, the request goes to one of roughly twenty providers, most of which they've never heard of. On paper it's the same model; in practice it's twenty different models — each provider hosts the weights on its own hardware, at its own numeric precision, with its own inference optimizations, and runs its own XML/tool-calling parser with its own set of bugs. As a result, the same model ID behind the same OpenRouter endpoint can behave differently at different times: some providers don't support vision input at all for a nominally multimodal model, and the "reasoning effort" parameter is handled inconsistently across providers.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда и зачем это применять</span><span data-lang="en">When and why to apply this</span></h2>
+    <p>
+      <span data-lang="ru">Мустафа не призывает отказаться от OpenRouter — для его продукта агрегатор остаётся практичным способом получить доступ к десяткам открытых моделей без отдельных контрактов с каждым провайдером. Вместо этого он показывает, как удерживать контроль: параметр <code>provider.only</code> позволяет закрепить конкретного провайдера за конкретной моделью в проде, вместо того чтобы полагаться на автоматический (и непредсказуемый) выбор маршрута OpenRouter; метод <code>/endpoints</code> возвращает список реально доступных провайдеров для данного ID модели, что превращает выбор провайдера в осознанный, проверяемый шаг деплоя, а не случайность.</span>
+      <span data-lang="en">Moustafa isn't arguing against OpenRouter — for his product, the aggregator remains a practical way to reach dozens of open models without a separate contract with each provider. Instead, he shows how to keep control: the <code>provider.only</code> parameter lets you pin a specific provider to a specific model in production instead of relying on OpenRouter's automatic (and unpredictable) routing; the <code>/endpoints</code> method returns the list of providers actually available for a given model ID, turning provider selection into a deliberate, checkable deployment step rather than a coin flip.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения подхода</span><span data-lang="en">Limitations of the approach</span></h2>
+    <p>
+      <span data-lang="ru">Закрепление провайдера решает проблему воспроизводимости, но создаёт новую: если единственный подходящий провайдер модели перегружен или временно недоступен, запросы либо падают, либо приходится держать резервный список провайдеров и логику переключения между ними самостоятельно — то есть часть инженерной работы, которую, по идее, должен был взять на себя агрегатор, всё равно ложится на разработчика. Статья ценна именно тем, что называет это прямо, вместо того чтобы представлять OpenRouter как решение «подключил и забыл».</span>
+      <span data-lang="en">Pinning a provider solves the reproducibility problem but creates a new one: if the one suitable provider for a model is overloaded or briefly unavailable, requests either fail outright or the developer has to maintain a fallback provider list and switching logic themselves — engineering work that was supposedly the aggregator's job to absorb, landing back on the developer anyway. The article's value is precisely in saying this plainly, instead of presenting OpenRouter as a connect-and-forget solution.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
