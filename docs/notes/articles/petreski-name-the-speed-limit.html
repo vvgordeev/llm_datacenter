@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: назовите скоростной лимит — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Vanja Petreski · 2026-09-12</span>
+      <span data-lang="en">Article digest · Vanja Petreski · 2026-09-12</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Придерживай темп фронтира. Но назови скоростной лимит»: разбор эссе Amodei без готового ответа</span>
+      <span data-lang="en">"Pace the Frontier. Name the Speed Limit.": a close read of Amodei's essay that finds no concrete answer</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://vanja.io/pace-the-frontier/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал эссе Петрески ↗</span><span data-lang="en">Petreski's original essay ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Претензия: у «pacing» нет ни числа, ни порога</span><span data-lang="en">The complaint: "pacing" has neither a number nor a threshold</span></h2>
+    <p>
+      <span data-lang="ru">Ванья Петрески разбирает эссе Дарио Амодеи «We Must Pace the Frontier» (опубликовано в тот же день) и указывает на разрыв между риторикой и содержанием: Amodei обосновывает необходимость сдерживать темп через продемонстрированные (already-shown) возможности моделей, но сам порог, при достижении которого разработку следует притормозить, в эссе не назван. Речь не о случайной недоговорённости — по мнению автора, отсутствие числового или операционального критерия обесценивает предложение как практический план: без порога «pacing» становится словом, под которое можно подвести что угодно, и в равной мере ничего.</span>
+      <span data-lang="en">Vanja Petreski dissects Dario Amodei's essay "We Must Pace the Frontier" (published the same day) and points to a gap between rhetoric and substance: Amodei grounds the case for slowing down in models' already-demonstrated capabilities, but the essay never names the threshold at which development should actually be throttled. This isn't an incidental omission, in the author's reading — without a numeric or operational criterion, "pacing" becomes a word that can justify anything, and therefore nothing in particular.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что предлагается вместо деклараций: проверяемое доказательство и операциональные вопросы</span><span data-lang="en">What's proposed instead of declarations: verifiable evidence and operational questions</span></h2>
+    <p>
+      <span data-lang="ru">Петрески формулирует, что убедило бы его в серьёзности намерений: конкретный случай, когда прибыльный обучающий прогон, который лаборатория хотела продолжить, был всё же остановлен — потому что он не прошёл заранее опубликованный чекпойнт. Это смещает разговор с абстрактных «уровней возможностей» на операциональные, проверяемые извне вопросы о самой системе: чем она управляет, какие границы способна пересечь, как долго может действовать без присмотра и кто в состоянии её прервать. По мнению автора, именно такие вопросы, а не общие оценки «насколько модель способна», должны лежать в основе любого реального механизма пейсинга.</span>
+      <span data-lang="en">Petreski spells out what would actually convince him the intent is serious: a concrete case of a profitable training run a lab wanted to continue, that got stopped anyway — because it failed a checkpoint published in advance. That reframes the conversation away from abstract "capability levels" toward operational, externally verifiable questions about the system itself: what does it control, which boundaries can it cross, how long can it run unattended, and who is able to interrupt it. In the author's view, these are the questions any real pacing mechanism should be built on, not general assessments of "how capable" a model is.</span>
+    </p>
+
+    <h2><span data-lang="ru">Контекст: письмо «Pacing the Frontier» и проблема измерения</span><span data-lang="en">Context: the "Pacing the Frontier" letter, and the measurement problem</span></h2>
+    <p>
+      <span data-lang="ru">Эссе Amodei выходит на фоне более раннего открытого письма «Pacing the Frontier» (июль 2026 года, подписанного, по разным данным, более чем тысячей сотрудников AI-компаний), которое предлагало правительствам выстроить техническую инфраструктуру для скоординированного замедления: согласованные пороги возможностей, режимы тестирования и механизмы верификации между лабораториями и странами. Петрески признаёт слабое место и этого более широкого подхода — так называемую «проблему измерения»: любой порог возможностей — лишь приблизительный показатель (proxy) реального риска, а не сам риск, и его можно обыграть (game) формально пройдя чекпойнт, не устранив опасность по существу.</span>
+      <span data-lang="en">Amodei's essay lands against the backdrop of an earlier open letter, "Pacing the Frontier" (July 2026, reportedly signed by more than a thousand AI-company employees), which asked governments to build the technical infrastructure for coordinated slowdown: agreed capability thresholds, testing regimes, and verification mechanisms across labs and countries. Petreski concedes a weak point in that broader approach too — the "measurement problem": any capability threshold is only a proxy for the underlying risk, not the risk itself, and it can be gamed by formally clearing a checkpoint without actually removing the danger.</span>
+    </p>
+
+    <h2><span data-lang="ru">Историческая оговорка: почему письма 2023 года были преждевременны</span><span data-lang="en">A historical caveat: why the 2023 pause letters were premature</span></h2>
+    <p>
+      <span data-lang="ru">Отдельно автор проговаривает нюанс, который отличает нынешний момент от волны писем-призывов к паузе в 2023 году: тогдашние модели, по его оценке, действительно не обладали достаточными возможностями, чтобы действовать как автономные агенты или представлять серьёзную угрозу через обман или кибератаки, — то есть требования притормозить были на тот момент преждевременны по существу. Это признание важно для тона всего эссе: Петрески не отвергает саму идею пейсинга, а настаивает, что именно сейчас, когда аргумент о возможностях стал более обоснованным, отсутствие конкретного, проверяемого порога — это не техническая деталь, а главный недостаток предложения Amodei.</span>
+      <span data-lang="en">The author separately addresses a nuance that distinguishes today from the 2023 wave of pause letters: those earlier models, in his assessment, genuinely lacked the capability to act as autonomous agents or pose a serious threat through deception or cyberattacks — so calls to slow down were substantively premature at the time. That concession matters for the essay's overall tone: Petreski isn't rejecting the idea of pacing itself, he's insisting that now, when the capability argument is more solidly grounded, the absence of a concrete, verifiable threshold isn't a technical footnote — it's the main flaw in Amodei's proposal.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

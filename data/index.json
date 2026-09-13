@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-13",
+      "news_count": 2,
+      "expert_count": 5,
+      "top_title": {
+        "ru": "«Мы должны придержать темп фронтира»: Amodei зовёт индустрию сознательно замедлить разработку — Altman и Musk соглашаются",
+        "en": "\"We Must Pace the Frontier\": Amodei calls for the industry to deliberately slow development — Altman and Musk agree"
+      }
+    },
+    {
       "date": "2026-09-12",
       "news_count": 5,
       "expert_count": 2,

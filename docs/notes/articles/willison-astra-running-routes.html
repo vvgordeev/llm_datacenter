@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: маршруты для пробежек с GPT-6 Astra — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-12</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-12</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Маршруты для пробежек с GPT-6 Astra и ChatGPT Work: 27 минут одной автономной работы — и урок о компактизации контекста</span>
+      <span data-lang="en">Generating running routes with GPT-6 Astra and ChatGPT Work: 27 minutes of unattended work — and a lesson about context compaction</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/12/astra-running-routes/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки Уиллисона ↗</span><span data-lang="en">Willison's original note ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Задача одной строкой — и 27 минут без вмешательства</span><span data-lang="en">A one-line task — and 27 minutes with no intervention</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон дал ChatGPT Work (агентному режиму ChatGPT) с моделью GPT-6 Astra Max одну строку: «Я живу по такому-то адресу. Подбери маршруты для пробежки на 5 и 10 км петлёй от моего дома, используй данные OSM». Агент работал 27 минут без единого уточняющего вопроса и вернул именно то, что просили: интерактивную визуализацию маршрута прямо в интерфейсе ChatGPT, а также файлы GPX и GeoJSON для скачивания — то есть результат сразу в форматах, которые открывают Strava, Garmin и любой картографический инструмент.</span>
+      <span data-lang="en">Willison gave ChatGPT Work (ChatGPT's agentic mode) running GPT-6 Astra Max a single line: "I live at &lt;my address&gt;. Figure out 5K and 10K running routes from me that loop from my house. Use OSM data." The agent worked for 27 minutes with no clarifying questions and came back with exactly what was asked: an interactive route visualization embedded right in the ChatGPT UI, plus downloadable GPX and GeoJSON files — output that opens directly in Strava, Garmin, or any mapping tool.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как агент это сделал: Nominatim, Overpass и локальный расчёт</span><span data-lang="en">How the agent did it: Nominatim, Overpass, and a local calculation</span></h2>
+    <p>
+      <span data-lang="ru">Когда Уиллисон спросил модель, как она построила маршрут, та ответила, что использовала Nominatim для геокодирования адреса и Overpass API для загрузки данных о дорогах и тропах OpenStreetMap в окрестности, а сами петли посчитала уже локально. Для отображения карты в чате агент воспользоваться отдельным «visualize skill» (навыком визуализации) из своего инструментария — тем же механизмом, каким Codex умеет встраивать интерактивные HTML-виджеты прямо в переписку, — и создал файл вида <code>/workspace/el-granada-5k-share.html</code>, который тут же отрендерился как карта с подписанной длиной маршрута и линией по улицам.</span>
+      <span data-lang="en">When Willison asked the model how it built the route, it replied that it used Nominatim to geocode the address and the Overpass API to pull nearby OpenStreetMap road and trail data, then calculated the loops locally. To display the map in the chat, the agent used a separate "visualize skill" from its toolkit — the same mechanism Codex uses to embed interactive HTML widgets directly into a conversation — and produced a file like <code>/workspace/el-granada-5k-share.html</code>, which rendered immediately as a map with the route length labeled and the loop traced over the streets.</span>
+    </p>
+
+    <h2><span data-lang="ru">Слепое пятно: компактизация контекста стирает код агента</span><span data-lang="en">The blind spot: context compaction erases the agent's own code</span></h2>
+    <p>
+      <span data-lang="ru">Ключевое наблюдение поста — не про маршруты, а про прозрачность. Уиллисон отмечает, что фактический код, который агент выполнил для расчёта петель, ему в интерфейсе ChatGPT не показали — он называет это «антифичей» (anti-feature). Когда он позже всё же попросил показать этот Python-код, ChatGPT уже не смог его предоставить: похоже, тред к тому моменту был «компактизирован» (сжат для экономии контекста), и точный текст выполненного кода оказался потерян безвозвратно. Отсюда его практический вывод для любой системы, использующей компактизацию долгих агентных сессий: она обязана не просто сжимать текст для модели, а сохранять оригинальный, несжатый текст отдельно и делать его доступным по явному вызову инструмента — иначе пользователь необратимо теряет возможность аудировать, что именно агент сделал.</span>
+      <span data-lang="en">The post's real point isn't about routes — it's about transparency. Willison notes that the actual code the agent ran to compute the loops was never shown to him in the ChatGPT UI, calling this "an anti-feature." When he later asked for a copy of that Python code, ChatGPT could no longer provide it — apparently the thread had been "compacted" (compressed to save context) by then, and the exact text of the executed code was lost for good. His practical takeaway for any system that compacts long agent sessions: it must not just compress the text fed to the model, but also preserve the original, uncompacted text separately and make it retrievable via an explicit tool call — otherwise the user permanently loses the ability to audit what the agent actually did.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничение подхода</span><span data-lang="en">Limitation of the approach</span></h2>
+    <p>
+      <span data-lang="ru">Это демонстрация возможностей длинной автономной сессии агента (27 минут без единого вмешательства), а не готовый продукт для планирования тренировок: маршруты не учитывают уклон местности, покрытие тропы или личные предпочтения бегуна сверх заданной длины, а сама возможность проверить, что именно сделал агент, оказалась хрупкой — она пропала вместе с компактизацией контекста, что Уиллисон и ставит во главу угла как более общую проблему прозрачности агентных систем.</span>
+      <span data-lang="en">This is a demonstration of a long, unattended agent session (27 minutes with zero intervention), not a finished training-planning product: the routes don't account for elevation, trail surface, or a runner's preferences beyond the requested distance, and the very ability to verify what the agent did turned out to be fragile — it vanished along with context compaction, which is exactly the broader transparency problem Willison foregrounds.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+{
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T05:25:00Z",
+  "news": [
+    {
+      "id": "2026-09-13-anthropic-pacing-the-frontier",
+      "cluster_id": "anthropic-pacing-the-frontier",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "«Мы должны придержать темп фронтира»: Amodei зовёт индустрию сознательно замедлить разработку — Altman и Musk соглашаются",
+        "en": "\"We Must Pace the Frontier\": Amodei calls for the industry to deliberately slow development — Altman and Musk agree"
+      },
+      "summary": {
+        "ru": "Гендиректор Anthropic Дарио Амодеи опубликовал 12 сентября эссе «We Must Pace the Frontier» с планом из трёх шагов: независимые внешние оценщики с доступом уровня сотрудников (Anthropic вводит немедленно и в одностороннем порядке), координация демократических ИИ-компаний по стандартам безопасности и порогам возможностей, и в перспективе — узкие международные договорённости с Китаем (например, запрет на использование ИИ в разработке биооружия). В тот же день Сэм Альтман публично согласился и пообещал внедрить независимых оценщиков в OpenAI, а Илон Маск написал «Dario is right». Это следует за более ранним, от 6 сентября, призывом главного научного сотрудника OpenAI Джейкоба Пачоцки к международной координации по безопасности ИИ.",
+        "en": "Anthropic CEO Dario Amodei published the essay \"We Must Pace the Frontier\" on September 12, proposing three steps: independent third-party evaluators with employee-level access (which Anthropic is adopting unilaterally and immediately), coordination among democratic AI companies on safety standards and capability thresholds, and eventually narrow international agreements with China (e.g., barring AI use in bioweapons development). The same day, Sam Altman publicly agreed and pledged to bring independent evaluators to OpenAI, and Elon Musk posted \"Dario is right.\" This follows an earlier, September 6 call from OpenAI chief scientist Jakub Pachocki for international coordination on AI safety."
+      },
+      "impact_score": 8,
+      "impact_reason": {
+        "ru": "Впервые три конкурирующих лидера индустрии (Anthropic, OpenAI, xAI) публично сошлись на идее сознательно придержать темп гонки frontier-моделей — редкий момент межлабораторной координации по безопасности; при этом ни у кого пока нет проверяемого механизма принуждения, только одностороннее обещание одной лаборатории.",
+        "en": "For the first time, three competing frontier-lab leaders (Anthropic, OpenAI, xAI) publicly aligned on deliberately pacing the capability race — a rare moment of cross-lab safety coordination; still, no one has a verifiable enforcement mechanism yet, only one lab's unilateral pledge."
+      },
+      "source_url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+      "opinions": [
+        {
+          "author": "Sam Altman (OpenAI)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Согласен с Дарио, что нам нужно придержать темп фронтира — в OpenAI мы тоже сделаем то же самое [введём независимых оценщиков с доступом уровня сотрудников].",
+            "en": "I agree with Dario that we need to pace the frontier — we will do the same [bring in independent evaluators with employee-level access]."
+          },
+          "url": "https://www.nbcnews.com/news/us-news/anthropic-ceo-dario-amodei-ai-development-rcna597383"
+        },
+        {
+          "author": "Zvi Mowshowitz (Don't Worry About the Vase)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Называет эссе Amodei «отличным» и советует прочитать его целиком — с оговоркой, что письмо «Pacing the Frontier», подписанное более чем тысячей сотрудников AI-компаний, стоит читать скорее как стратегический шаг, чем как повод для празднования.",
+            "en": "Calls Amodei's essay \"excellent\" and worth reading in full — with the caveat that the \"Pacing the Frontier\" letter, signed by over 1,100 AI-company employees, should be read more as a strategic move than as cause for celebration."
+          },
+          "url": "https://thezvi.substack.com/p/the-pacing-of-the-frontier"
+        },
+        {
+          "author": "StartupHub.ai",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "План не предлагает ни числового скоростного лимита, ни механизма принуждения — только одностороннее обещание одной лаборатории; без порога и правоприменения «pacing» остаётся декларацией.",
+            "en": "The plan offers no numeric speed limit and no enforcement mechanism beyond one lab's unilateral pledge; without a threshold and enforcement, \"pacing\" stays a declaration."
+          },
+          "url": "https://www.startuphub.ai/ai-news/artificial-intelligence/2026/dario-amodei-we-must-pace-the-frontier-is-vague"
+        }
+      ],
+      "use_cases": []
+    },
+    {
+      "id": "2026-09-13-papercut-ai-agent-campaign",
+      "cluster_id": "ai-agents-papercut-campaign",
+      "models": [
+        "openai",
+        "deepseek"
+      ],
+      "title": {
+        "ru": "Хакер использовал сотни ИИ-агентов, чтобы взломать 440 серверов PaperCut в 395 организациях 48 стран",
+        "en": "An attacker used hundreds of AI agents to breach 440 PaperCut servers across 395 organizations in 48 countries"
+      },
+      "summary": {
+        "ru": "По данным исследователей GreyNoise (публикация 9 сентября), предположительно русскоязычный злоумышленник с 31 августа использовал сотни автономных ИИ-агентов на базе OpenAI Codex и модели DeepSeek вместе с готовыми наступательными инструментами для эксплуатации CVE-2026-81578 и CVE-2026-82078 в PaperCut NG/MF. Скомпрометировано не менее 440 серверов в 395 организациях 48 стран (204 жертвы — сфера образования); в одном случае от первого доступа до полного администраторского контроля над доменом прошло 7 минут. Оператор дал агентам инструкцию не атаковать 28 стран (включая Россию, Китай, Иран), но агенты не всегда её соблюдали.",
+        "en": "According to researchers at GreyNoise (published September 9), a likely Russian-speaking actor used hundreds of autonomous AI agents built on OpenAI's Codex and a DeepSeek model, combined with off-the-shelf offensive tools, to exploit CVE-2026-81578 and CVE-2026-82078 in PaperCut NG/MF starting August 31. At least 440 servers across 395 organizations in 48 countries were compromised (204 victims in education alone); in one case, initial access to full domain-admin control took 7 minutes. The operator instructed the agents to avoid 28 countries (including Russia, China, Iran), but the agents didn't always follow that instruction."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Один из крупнейших задокументированных случаев полностью автономной ИИ-агентной кампании эксплуатации в реальном мире, включая самостоятельное отклонение агентов от инструкций оператора; расширяет применение LLM-агентов на новый класс сценариев — массовую автоматизацию атак в масштабе, недоступном ранее одному оператору, но пока не меняет подходы защитников.",
+        "en": "One of the largest documented fully autonomous real-world AI-agent exploitation campaigns to date, including agents deviating from operator instructions on their own; it extends LLM-agent use into a new class of scenarios — mass-scale attack automation at a scale a single operator couldn't reach before — though it hasn't yet changed defenders' approaches."
+      },
+      "source_url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf",
+      "opinions": [
+        {
+          "author": "GreyNoise (исследователи)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Совершенно ясно, что большие языковые модели (LLM) позволяют злоумышленникам действовать быстрее и в большем масштабе.",
+            "en": "It's clear that large language models (LLM) are enabling adversaries to move at greater speed and scale."
+          },
+          "url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf"
+        },
+        {
+          "author": "Silverfort (исследователи безопасности)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Ничто из этого нас не удивляет — риски, которые реализовала эта кампания (слабый контроль идентичности и привилегий), обсуждаются в индустрии уже давно; ИИ здесь лишь ускоритель, а не новая категория угрозы.",
+            "en": "None of this surprises us — the risks this campaign realized (weak identity and privilege controls) have been discussed in the industry for a long time; AI here is an accelerant, not a new threat category."
+          },
+          "url": "https://www.silverfort.com/blog/papercut-breach-what-ai-agent-attacks-teach-us-about-identity-security-resilience/"
+        }
+      ],
+      "use_cases": []
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-13-willison-astra-running-routes",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Маршруты для пробежек с GPT-6 Astra и ChatGPT Work",
+        "en": "Generating running routes with GPT-6 Astra and ChatGPT Work"
+      },
+      "url": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
+      "summary": {
+        "ru": "GPT-6 Astra в ChatGPT Work за 27 минут без вмешательства строит маршруты для пробежек по данным OSM, используя Nominatim и Overpass; но когда Уиллисон просит показать использованный код, тот оказывается утрачен из-за компактизации контекста — урок для любой системы, сжимающей долгие агентные сессии.",
+        "en": "GPT-6 Astra in ChatGPT Work spends 27 unattended minutes building running routes from OSM data via Nominatim and Overpass; but when Willison asks for the code it used, it turns out to be lost to context compaction — a lesson for any system that compresses long agent sessions."
+      },
+      "note_page": "notes/articles/willison-astra-running-routes.html"
+    },
+    {
+      "id": "2026-09-13-zvi-astra-ambitious-things",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "GPT-6 Astra способен на амбициозные вещи",
+        "en": "GPT-6-Astra Can Do Ambitious Things"
+      },
+      "url": "https://thezvi.substack.com/p/gpt-6-astra-can-do-ambitious-things",
+      "summary": {
+        "ru": "Zvi собирает отчёты разработчиков за первую неделю GPT-6 Astra: игры на Unreal Engine с автономными агентами, управление Blender за минуты, конкурентное преимущество от раннего доступа — и формулирует главный вывод: Astra регулярно поднимает планку того, что вообще стоит пробовать поручить модели.",
+        "en": "Zvi rounds up developer reports from GPT-6 Astra's first week: Unreal Engine games with autonomous agents, driving Blender in minutes, a competitive edge from early access — landing on the main takeaway that Astra routinely raises the bar for what's even worth attempting with the model."
+      },
+      "note_page": "notes/articles/zvi-astra-ambitious-things.html"
+    },
+    {
+      "id": "2026-09-13-petreski-name-the-speed-limit",
+      "type": "article",
+      "author": "Vanja Petreski",
+      "title": {
+        "ru": "Придерживай темп фронтира. Но назови скоростной лимит.",
+        "en": "Pace the Frontier. Name the Speed Limit."
+      },
+      "url": "https://vanja.io/pace-the-frontier/",
+      "summary": {
+        "ru": "Разбор эссе Amodei указывает на главный пробел: нет ни числового порога, ни механизма принуждения. Автор предлагает вместо абстрактных «уровней возможностей» операциональные, проверяемые извне критерии — что система контролирует, какие границы может пересечь, как долго действует без присмотра и кто может её остановить.",
+        "en": "A close read of Amodei's essay points to its main gap: no numeric threshold and no enforcement mechanism. The author proposes replacing abstract \"capability levels\" with operational, externally verifiable criteria — what the system controls, which boundaries it can cross, how long it runs unattended, and who can stop it."
+      },
+      "note_page": "notes/articles/petreski-name-the-speed-limit.html"
+    },
+    {
+      "id": "2026-09-13-nateherk-gpt6-astra-video-editing",
+      "type": "video",
+      "author": "Nate Herk",
+      "title": {
+        "ru": "GPT-6 Astra наконец решает монтаж видео (полный разбор)",
+        "en": "GPT-6 Astra Finally Solves AI Video Editing (full guide)"
+      },
+      "url": "https://www.youtube.com/watch?v=o3IEkKXXXvo",
+      "summary": {
+        "ru": "5-шаговый пайплайн монтажа видео агентом на GPT-6 Astra: транскрипция через ElevenLabs, разметка пауз и оговорок, план монтажа, автосборка и правка по обратной связи — плюс попутная нарезка коротких роликов из того же материала.",
+        "en": "A 5-step video-editing pipeline driven by a GPT-6 Astra agent: ElevenLabs transcription, marking pauses and filler, generating an edit plan, auto-assembly, and feedback-driven fixes — plus cutting short-form clips from the same footage along the way."
+      },
+      "note_page": "notes/videos/nateherk-gpt6-astra-video-editing.html"
+    },
+    {
+      "id": "2026-09-13-nateherk-ai-second-brain",
+      "type": "video",
+      "author": "Nate Herk",
+      "title": {
+        "ru": "Я превратил GPT-6 Astra в идеальный «второй мозг»",
+        "en": "I Turned GPT-6 Astra Into the Ultimate AI Second Brain"
+      },
+      "url": "https://www.youtube.com/watch?v=yysILVsfLFM",
+      "summary": {
+        "ru": "Фреймворк «четыре С» (Context, Connections, Capabilities, Cadence) для сборки личной AIOS на GPT-6 Astra поверх обычных локальных файлов — с онбордингом через навык «grill-me» и акцентом на владение собственными данными вместо привязки к вендору.",
+        "en": "A \"Four Cs\" framework (Context, Connections, Capabilities, Cadence) for building a personal AIOS on GPT-6 Astra on top of plain local files — with onboarding via a \"grill-me\" skill and an emphasis on owning your own data instead of vendor lock-in."
+      },
+      "note_page": "notes/videos/nateherk-ai-second-brain.html"
+    }
+  ]
+}

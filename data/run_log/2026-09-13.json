@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T05:25:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED www.anthropic.com; покрыто через WebSearch"},
+    {"source": "anthropic blog (WebSearch)", "status": "ok", "candidates": 1, "note": "Основной сюжет дня — эссе Amodei «We Must Pace the Frontier» (публикуется на darioamodei.com, не на блоге компании); прочее (Fable 5.1, workspace-id header, mid-conversation tool changes) — старое или слишком мелкое"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch: EGRESS_BLOCKED openai.com; покрыто через WebSearch"},
+    {"source": "openai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "IPO-задержка Альтмана — финансовая новость без продуктовой части, отклонено; реакция Altman на эссе Amodei учтена как opinion в новости #1"},
+    {"source": "google deepmind blog (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего нового за окно; Gemini app для Windows уже покрыт 2026-09-12"},
+    {"source": "meta ai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего нового за окно"},
+    {"source": "xai news (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok 4.7 — таргет 12 сентября истёк без релиза, новой даты нет; слух, не включено. Реакция Маска на эссе Amodei учтена как opinion в новости #1"},
+    {"source": "mistral news (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего нового за окно"},
+    {"source": "deepseek news (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего нового за окно; V4.1 Flash уже покрыт 2026-09-11"},
+    {"source": "aggregators (smol.ai/TLDR/Simon Willison linkblog)", "status": "ok", "candidates": 2, "note": "через WebSearch и git clone simonwillisonblog-backup; отсюда найдены оба главных сюжета дня (Amodei essay reactions, PaperCut campaign)"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "curl: connect_rejected на CONNECT hn.algolia.com — egress-прокси; WebSearch site:news.ycombinator.com дал единственный релевантный тред (HN item 49672510 про эссе Amodei), сам тред WebFetch не открылся (EGRESS_BLOCKED), реакции взяты из вторичных источников"},
+    {"source": "hn (WebSearch)", "status": "ok", "candidates": 1, "note": "тред про «We Must Pace the Frontier», недоступен напрямую"},
+    {"source": "reddit/x community (WebSearch)", "status": "ok", "candidates": 2, "note": "твиты Sam Altman и Elon Musk по эссе Amodei"},
+    {"source": "expert: Simon Willison (git clone simonwillisonblog-backup)", "status": "ok", "candidates": 1, "note": "blog_entry.ndjson отсортирован по created — самый свежий пост (2026-09-12 23:56 UTC) про GPT-6 Astra и маршруты для пробежек; blog_blogmark без новых записей после 2026-09-11 (уже покрыто)"},
+    {"source": "expert: Andrej Karpathy (youtube)", "status": "blocked", "candidates": 0, "note": "RSS-фид: connect-уровень 000 (CONNECT отклонён egress-прокси) на все 5 channel_id; WebSearch не нашёл видео свежее конца апреля"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "нет постов после 2026-09-07 (уже покрыт), WebSearch не нашёл новых эпизодов подкаста за неделю"},
+    {"source": "expert: AI Explained (youtube)", "status": "blocked", "candidates": 0, "note": "RSS 000; WebSearch — самое свежее видео от 6 сентября, уже покрыто"},
+    {"source": "expert: Matt Wolfe (youtube)", "status": "blocked", "candidates": 0, "note": "RSS 000; WebSearch — видео про запуск GPT-6 Astra от 3 сентября, уже покрыто 2026-09-04"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "последний пост 31 августа, уже покрыт"},
+    {"source": "expert: Nate Herk (youtube)", "status": "ok", "candidates": 2, "note": "RSS 000 (заблокирован), но WebSearch нашёл 2 свежих видео про GPT-6 Astra (монтаж видео — 8 сентября, AI second brain — ≈неделю назад); оба использованы"},
+    {"source": "expert: Matt Pocock (youtube)", "status": "blocked", "candidates": 0, "note": "RSS 000; WebSearch не нашёл видео свежее 19 августа"},
+    {"source": "expert: расширенный поиск (WebSearch)", "status": "ok", "candidates": 2, "note": "Zvi Mowshowitz (GPT-6-Astra Can Do Ambitious Things, 12 сентября) и Vanja Petreski (Pace the Frontier. Name the Speed Limit., 12 сентября) — оба использованы как продолжение сюжета дня о pacing"}
+  ],
+  "totals": {
+    "candidates": 11,
+    "published": 2,
+    "rejected": {
+      "финансовая новость без продуктовой части (OpenAI IPO delay)": 1,
+      "слух без релиза (Grok 4.7)": 1,
+      "уже покрыто в предыдущих сводках (Gemini app Windows, DeepSeek V4.1 Flash, Fable 5.1, Matt Wolfe Astra launch video, AI Explained видео)": 5,
+      "не подошло по формату (GitSpawn/Manifold — раскрыто 1 сентября, вне окна свежести для главной новости; аргентинский инцидент с ChatGPT — не про подход к использованию LLM)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — 2 видео (Nate Herk) успешно проанализированы через gemini_video.py, GEMINI_API_KEY доступен",
+    "frames": "skipped: youtube.com streaming доступ (yt-dlp -g) заблокирован egress-прокси на уровне CONNECT/туннеля (403 Forbidden), несмотря на установленные из pip yt-dlp и imageio-ffmpeg; конспекты видео опубликованы без кадров с пометкой на странице"
+  }
+}
