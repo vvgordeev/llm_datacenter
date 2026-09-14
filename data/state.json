@@ -1,17 +1,6 @@
 {
   "seen_urls": {
-    "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15",
-    "https://deepseek.day/en/blog/deepseek-v4-peak-pricing-launch/": "2026-07-15",
-    "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123": "2026-07-15",
-    "https://arxiv.org/abs/2607.09024": "2026-07-15",
     "https://simonwillison.net/2026/Jul/13/doomql/": "2026-07-18",
-    "notes/articles/doomql-sql-game-engine.html": "2026-07-15",
-    "https://www.youtube.com/watch?v=M3jYrNKQjEg": "2026-07-15",
-    "notes/videos/mattpocock-skills-complete-deep-dive.html": "2026-07-15",
-    "https://www.youtube.com/watch?v=3b5v1-jlyZs": "2026-07-15",
-    "notes/videos/complete-ai-tech-stack-2026.html": "2026-07-15",
-    "https://aichemyst.substack.com/p/give-fable-5-a-mission-not-a-just": "2026-07-15",
-    "notes/articles/give-fable-5-a-mission-not-a-prompt.html": "2026-07-15",
     "https://x.ai/news/grok-build-open-source": "2026-07-16",
     "https://simonwillison.net/2026/Jul/15/grok-build/": "2026-07-16",
     "notes/articles/xai-grok-build-now-open-source.html": "2026-07-16",
@@ -429,13 +418,17 @@
     "https://www.youtube.com/watch?v=o3IEkKXXXvo": "2026-09-13",
     "notes/videos/nateherk-gpt6-astra-video-editing.html": "2026-09-13",
     "https://www.youtube.com/watch?v=yysILVsfLFM": "2026-09-13",
-    "notes/videos/nateherk-ai-second-brain.html": "2026-09-13"
+    "notes/videos/nateherk-ai-second-brain.html": "2026-09-13",
+    "https://www.business-standard.com/technology/artificial-intelligence/ai-must-help-humanity-or-it-s-not-worth-pursuing-microsoft-ceo-nadella-126091400095_1.html": "2026-09-14",
+    "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
+    "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
+    "https://cognition.com/blog/swe-2": "2026-09-14",
+    "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
+    "https://www.youtube.com/watch?v=TLQLfa7yH4I": "2026-09-14",
+    "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
+    "notes/videos/nateherk-gpt6-astra-stock-trader.html": "2026-09-14"
   },
   "clusters": {
-    "openai-gpt-5-6": {
-      "last_date": "2026-07-14",
-      "summary": "OpenAI previews GPT-5.6 (Sol/Terra/Luna), brings Sol to Cerebras, teases Sol Ultra for Codex, gets US Commerce Dept approval to lift access restrictions, goes publicly live on July 9, draws benchmark skepticism and safety-card scrutiny ('lying problem') on July 10, then Sol Ultra claims a Cycle Double Cover Conjecture proof via 64 subagents (announced July 10) that mathematicians meet with unverified/unreviewed skepticism"
-    },
     "openai-gpt-live": {
       "last_date": "2026-08-01",
       "summary": "OpenAI ships GPT-Live, a full-duplex voice model for ChatGPT that delegates hard reasoning/search/code to GPT-5.5 in the background"
@@ -475,22 +468,11 @@
         "en": "xAI Grok Build CLI — data leak, Musk's response, then open-sourcing the code and resetting usage limits (2026-07-16)"
       }
     },
-    "anthropic-claude-code-token-overhead": {
-      "last_date": "2026-07-14",
-      "summary": "Systima study finds Claude Code sends ~33k tokens of system prompt/tool schemas before reading the user prompt (~75k with MCP/CLAUDE.md), 4.7x more than OpenCode"
-    },
     "anthropic-claude-for-teachers": {
       "last_date": "2026-08-29",
       "summary": {
         "ru": "Anthropic Claude for Teachers — от бесплатного доступа для отдельных K-12 учителей (июль) до Enterprise-предложения для школ и округов с SSO/RBAC (август)",
         "en": "Anthropic Claude for Teachers — from free individual K-12 educator access (July) to an Enterprise offering for schools/districts with SSO/RBAC (August)"
-      }
-    },
-    "google-genception-vision": {
-      "last_date": "2026-07-15",
-      "summary": {
-        "ru": "Google DeepMind GenCeption — видео-модели как универсальное зрение",
-        "en": "Google DeepMind GenCeption — video models as general-purpose vision"
       }
     },
     "moonshot-kimi-k3": {
@@ -1267,10 +1249,10 @@
       }
     },
     "anthropic-pacing-the-frontier": {
-      "last_date": "2026-09-13",
+      "last_date": "2026-09-14",
       "summary": {
-        "ru": "12 сентября Amodei публикует «We Must Pace the Frontier» с планом из трёх шагов (независимые оценщики, координация лабораторий, международные договорённости); Altman и Musk публично соглашаются в тот же день — продолжение призыва Пачоцки от 6 сентября к международной координации по безопасности ИИ.",
-        "en": "On September 12 Amodei publishes \"We Must Pace the Frontier\" with a three-step plan (independent evaluators, lab coordination, international agreements); Altman and Musk publicly agree the same day — a continuation of Pachocki's September 6 call for international AI-safety coordination."
+        "ru": "12 сентября Amodei публикует «We Must Pace the Frontier»; Altman и Musk соглашаются в тот же день; 13 сентября Nadella (Microsoft) присоединяется и обещает опубликовать Code of Conduct для моделей MAI 14 сентября — четвёртый крупный игрок, поддержавший сдерживание темпа.",
+        "en": "On September 12 Amodei publishes \"We Must Pace the Frontier\"; Altman and Musk agree the same day; on September 13 Nadella (Microsoft) joins in, pledging to publish a Code of Conduct for MAI models on September 14 — the fourth major player to back pacing the frontier."
       }
     },
     "ai-agents-papercut-campaign": {
@@ -1278,6 +1260,27 @@
       "summary": {
         "ru": "GreyNoise публикует (9 сентября) разбор кампании с 31 августа: сотни автономных ИИ-агентов на Codex+DeepSeek скомпрометировали 440 серверов PaperCut NG/MF в 395 организациях 48 стран, местами отклоняясь от инструкций оператора не атаковать определённые страны.",
         "en": "GreyNoise publishes (September 9) a writeup of a campaign running since August 31: hundreds of autonomous AI agents on Codex+DeepSeek compromised 440 PaperCut NG/MF servers across 395 organizations in 48 countries, in places deviating from the operator's instructions not to target certain countries."
+      }
+    },
+    "xai-grok-4-8": {
+      "last_date": "2026-09-14",
+      "summary": {
+        "ru": "Grok 4.7 (2.1 трлн) обещан на 12 сентября, дважды сдвинут, а 13 сентября Musk пропускает его целиком и анонсирует Grok 4.8 (2.5 трлн, новый стек на C++) без даты релиза.",
+        "en": "Grok 4.7 (2.1T) was promised for September 12, slipped twice, and on September 13 Musk skipped it outright and teased Grok 4.8 (2.5T, new C++ stack) with no release date."
+      }
+    },
+    "cognition-swe-2": {
+      "last_date": "2026-09-14",
+      "summary": {
+        "ru": "Cognition выпускает SWE-2 (10 сентября) — кодовую модель на базе Kimi K3 с RL на нескольких уровнях усилия за один прогон обучения, близкую к Fable 5.1 по качеству при на 64% меньшей цене.",
+        "en": "Cognition ships SWE-2 (September 10) — a Kimi K3-based coding model with multi-effort-level RL in a single training run, near Fable 5.1 quality at 64% lower cost."
+      }
+    },
+    "anthropic-claude-code-weekly-limits": {
+      "last_date": "2026-09-14",
+      "summary": {
+        "ru": "Временная надбавка 50% к недельным лимитам Claude Code (с мая) истекла 13 сентября; с 14 сентября — постоянные +25% к базовому уровню, что на деле означает снижение на 17% относительно вчерашнего уровня.",
+        "en": "Claude Code's temporary 50%-above-baseline weekly limit boost (running since May) expired September 13; from September 14, a permanent +25%-above-baseline replaces it — a net 17% cut versus yesterday's level."
       }
     }
   }

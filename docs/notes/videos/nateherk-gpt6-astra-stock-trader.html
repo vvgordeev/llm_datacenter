@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: GPT-6 Astra как круглосуточный трейдер — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · ≈2026-09-07 · 17 мин</span>
+      <span data-lang="en">Video digest · Nate Herk · ≈2026-09-07 · 17 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Я превратил GPT-6 Astra в круглосуточного биржевого трейдера</span>
+      <span data-lang="en">I Turned GPT-6 Astra Into a 24/7 Stock Trader (tutorial)</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=TLQLfa7yH4I" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Херк запускает семидневный вызов с реальными деньгами <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=10">[00:10]</a>: 10 000 долларов и агент на базе GPT-6 Astra, который должен сам исследовать рынок, решать, что покупать и продавать, и вести дневную отчётность — без единого клика человека после настройки. Видео — не про конкретную торговую стратегию, а про инженерную схему, которая вообще позволяет агенту работать автономно и непрерывно несколько дней подряд.</span>
+      <span data-lang="en">Nate Herk kicks off a seven-day real-money challenge <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=10">[00:10]</a>: $10,000 and a GPT-6 Astra-based agent that has to research the market, decide what to buy and sell, and file daily reports — with zero human clicks after setup. The video isn't really about a specific trading strategy; it's about the engineering scaffolding that lets an agent run autonomously and continuously for days at a stretch.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: расписание вместо чата и «непрерывность» через журнал</span><span data-lang="en">The method: a schedule instead of a chat, and "continuity" via a journal</span></h2>
+    <p>
+      <span data-lang="ru">Первый шаг — Astra сама предлагает дневной торговый график (когда проверять рынок, когда пересматривать позиции, когда писать отчёт) <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=109">[01:49]</a>, а затем Херк объясняет ключевое ограничение агентов вроде Codex: они безгосударственны — каждый запуск начинается с чистого листа и не помнит, что «решил» агент пять минут назад <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=194">[03:14]</a>. Решение — «непрерывность» через общий журнал прогресса: перед завершением каждого запуска агент обязан записать в файл, что сделано, что решено и что нужно проверить в следующий раз, а следующий запуск начинается с чтения этого журнала. Это простой, но общий паттерн для любого многодневного агентного рабочего процесса, а не только для торговли.</span>
+      <span data-lang="en">First, Astra proposes its own daily trading schedule (when to check the market, when to revisit positions, when to file a report) <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=109">[01:49]</a>, and then Herk spells out the key constraint on agents like Codex: they're stateless — every run starts from a blank slate and doesn't remember what the agent "decided" five minutes ago <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=194">[03:14]</a>. The fix is "continuity" via a shared progress journal: before each run ends, the agent must write down what it did, what it decided, and what to check next time, and the next run starts by reading that journal. It's a simple but general pattern for any multi-day agentic workflow, not just trading.</span>
+    </p>
+
+    <h2><span data-lang="ru">Подключение к брокеру и расписание задач</span><span data-lang="en">Connecting to a broker and scheduling tasks</span></h2>
+    <p>
+      <span data-lang="ru">Далее — практическая часть: подключение Codex к торговой платформе Alpaca через API-ключи <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=332">[05:32]</a>, при этом Херк специально подчёркивает, что ключи должны лежать в файле <code>.env</code> внутри проекта, а не вставляться прямо в чат — иначе они попадут в историю переписки и логи. Затем в Codex настраиваются запланированные задачи <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=573">[09:33]</a>, которые автоматически запускают агента по расписанию из первого шага, а не по требованию пользователя, и агент настраивается отправлять уведомления в ClickUp при каждом ежедневном обновлении <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=797">[13:17]</a>.</span>
+      <span data-lang="en">Next comes the practical part: connecting Codex to the Alpaca trading platform via API keys <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=332">[05:32]</a>, with Herk specifically stressing that the keys belong in a project <code>.env</code> file, not typed directly into chat — otherwise they end up in conversation history and logs. Then scheduled tasks are set up in Codex <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=573">[09:33]</a> that fire the agent automatically on the schedule from step one, rather than on demand, and the agent is configured to push a ClickUp notification with every daily update <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=797">[13:17]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Локально или в облаке — и мониторинг с телефона</span><span data-lang="en">Local vs. cloud — and monitoring from a phone</span></h2>
+    <p>
+      <span data-lang="ru">Херк проверяет, что все запланированные задачи и уведомления действительно сработали <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=909">[15:09]</a>, и разбирает компромисс между локальным и облачным запуском: локально агент получает полный доступ к самой мощной модели и всему контексту чата, а запуск в облаке позволяет следить за действиями агента удалённо с телефона, не требуя, чтобы компьютер был постоянно включён <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=946">[15:46]</a>.</span>
+      <span data-lang="en">Herk confirms that all the scheduled tasks and notifications actually fired <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=909">[15:09]</a>, and walks through the local-vs-cloud tradeoff: running locally gives the agent full access to the most capable model and the full chat context, while running in the cloud lets you monitor the agent's actions remotely from a phone without needing the computer to stay on <a class="ts" href="https://www.youtube.com/watch?v=TLQLfa7yH4I&t=946">[15:46]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения</span><span data-lang="en">Limitations</span></h2>
+    <p>
+      <span data-lang="ru">Это семидневный челлендж с небольшим капиталом, а не проверенная годами торговая система — Херк сам подаёт видео как демонстрацию инженерной схемы (расписание + журнал + уведомления), а не как рекомендацию по стратегии; он прямо советует сначала тестировать на бумажном счёте, прежде чем рисковать реальными деньгами. Схема также зависит от третьих сторон (Alpaca, ClickUp) и от того, что расписание в Codex не даёт сбоев в течение нескольких дней подряд.</span>
+      <span data-lang="en">It's a seven-day challenge with modest capital, not a strategy proven over years — Herk himself frames the video as a demo of the engineering scaffolding (schedule + journal + notifications), not strategy advice, and he explicitly recommends testing with a paper account before risking real money. The setup also depends on third parties (Alpaca, ClickUp) and on Codex's scheduler not glitching over several consecutive days.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API; кадры извлечь не удалось — в текущем облачном окружении egress-прокси блокирует потоковый доступ yt-dlp к YouTube (403 на туннель, несмотря на установленные yt-dlp/imageio-ffmpeg из pip). Дата публикации — оценочная (по косвенным упоминаниям, начало сентября). Статус — в run_log дня.</span>
+      <span data-lang="en">Digest built from a Gemini API video analysis; frame extraction failed — in this cloud environment the egress proxy blocks yt-dlp's streaming access to YouTube (403 on the tunnel, despite yt-dlp/imageio-ffmpeg being installed via pip). Publish date is approximate (per secondary mentions, early September). Status is recorded in the day's run_log.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

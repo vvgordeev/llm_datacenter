@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T06:40:00Z",
+  "notes": "ВАЖНО: обнаружено и исправлено расхождение веток. HEAD сессии был в detached state на коммите 2c69700 (digest 09-13), а локальная и удалённая ветка main указывали на 4332182 (digest 09-08) — коммиты за 09-09/09-11/09-12/09-13 существовали, но никогда не попадали на main/origin (предыдущие прогоны не мёржили/не пушили их). Перед сбором за 09-14 сделан `git checkout main` + `git merge --ff-only` до 2c69700 и `git push` — production (GitHub Pages) обновлён впервые с 09-08.",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED www.anthropic.com"},
+    {"source": "anthropic blog (WebSearch)", "status": "ok", "candidates": 1, "note": "Nadella/Microsoft joins pacing-the-frontier (13 сент.); Claude Code weekly limits (14 сент.); остальное (Claude Academy, mid-conversation tool changes, Claudeforce) — старое, уже покрыто"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED openai.com"},
+    {"source": "openai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "GPT-6 Astra и API-фичи (project keys expiry, Agents API, GPT-Live-1) — всё старше окна, уже покрыто 09-05..09-12"},
+    {"source": "google deepmind blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED blog.google"},
+    {"source": "google deepmind blog (WebSearch)", "status": "empty", "candidates": 0, "note": "Gemini 3.8 Flash (2 сент.) и Gemini 4 pre-training — старое, уже покрыто"},
+    {"source": "meta ai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED ai.meta.com"},
+    {"source": "meta ai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "AI Mode для Facebook Search, агент Hatch — не в окне сбора, продуктовая часть тонкая"},
+    {"source": "xai news (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED x.ai"},
+    {"source": "xai news (WebSearch)", "status": "ok", "candidates": 1, "note": "Grok 4.7 полностью пропущен, анонсирован Grok 4.8 без даты (13 сент.) — опубликовано"},
+    {"source": "mistral news (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED mistral.ai"},
+    {"source": "mistral news (WebSearch)", "status": "empty", "candidates": 0, "note": "Leanstral 1.5, Mistral OCR 4 — обе новости старше окна (объявлены ранее в сентябре), продуктовых изменений за 09-13/09-14 не найдено"},
+    {"source": "deepseek news (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED api-docs.deepseek.com"},
+    {"source": "deepseek news (WebSearch)", "status": "empty", "candidates": 0, "note": "V4.1 Flash уже покрыт 09-11; V4 Pro deprecation walk-back — не продуктовая новость"},
+    {"source": "aggregators (smol.ai/TLDR/Simon Willison linkblog)", "status": "ok", "candidates": 2, "note": "через WebSearch и git clone simonwillisonblog-backup; TLDR AI не проиндексирован после 09-07; smol.ai/AINews не даёт свежее 09-10 в поиске; главные находки дня пришли через прямой WebSearch по темам, а не через агрегаторы"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "curl connect_rejected (000) на CONNECT hn.algolia.com — как и в предыдущие дни"},
+    {"source": "hn (WebSearch)", "status": "ok", "candidates": 1, "note": "Эссе Yoshua Bengio (576 очков, 642 комментария) и обсуждение Cognition SWE-2 (418 очков) — оба использованы"},
+    {"source": "reddit/x community (WebSearch)", "status": "ok", "candidates": 1, "note": "Жалобы пользователей на урезание лимитов Claude Code (via Bleeping Computer)"},
+    {"source": "expert: Simon Willison (git clone simonwillisonblog-backup)", "status": "empty", "candidates": 0, "note": "Последний entry — 12 сентября (astra-running-routes), уже опубликован 09-13; последний blogmark — 11 сентября (openrouter), уже опубликован 09-12; новых записей за 09-13/09-14 нет"},
+    {"source": "expert: Andrej Karpathy (youtube)", "status": "blocked", "candidates": 0, "note": "RSS CONNECT 000 на все попытки; WebSearch не находит ничего свежее Sequoia Ascent (апрель)"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "Последние найденные эпизоды (Jeff Dean, It's Time to Science) — старые (февраль/более ранний период); AINews-кроспост про DeepSeek V4.1 Flash от 9-10 сентября уже покрыт 09-11"},
+    {"source": "expert: AI Explained (youtube)", "status": "blocked", "candidates": 0, "note": "RSS CONNECT 000; WebSearch не даёт конкретного свежего видео с датой"},
+    {"source": "expert: Matt Wolfe (youtube)", "status": "blocked", "candidates": 0, "note": "RSS CONNECT 000; найден только newsletter-заголовок без раскрытия содержания, не использован"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "Последний пост в архиве — 31 августа (Agency and Agents), уже был в seen_urls (09-04) — не новый"},
+    {"source": "expert: Nate Herk (youtube)", "status": "ok", "candidates": 1, "note": "RSS CONNECT 000; WebSearch нашёл видео «24/7 Stock Trader» (~7-8 сентября) — использовано"},
+    {"source": "expert: Matt Pocock (youtube)", "status": "blocked", "candidates": 0, "note": "RSS CONNECT 000; WebSearch не даёт ничего свежее марта"},
+    {"source": "expert: расширенный поиск (WebSearch)", "status": "ok", "candidates": 1, "note": "Yoshua Bengio — «Why Are AI Agents Lying, Cheating and Coordinating?» (11 сентября, yoshuabengio.org) — использовано; проверены также Gary Marcus (ничего нового с 09-12), Nathan Lambert/Interconnects (ничего нового с июня), swyx/Latent Space (ничего профильного), Boris Cherny-цитата у Simon Willison (переиздание старого материала, не использовано)"}
+  ],
+  "totals": {
+    "candidates": 8,
+    "published": 4,
+    "rejected": {
+      "финансовая новость без продуктовой части (Anthropic IPO/gross margins)": 1,
+      "уже покрыто в предыдущих сводках (GPT-6 Astra API-фичи, Gemini 3.8 Flash, Leanstral 1.5/OCR 4, DeepSeek V4.1 Flash, Jacob Coxon/AI-185, Agency and Agents, Boris Cherny quote)": 7,
+      "слух без подтверждённого релиза (Grok 4.7 → 4.8 сам по себе оценён как минорная новость и опубликован, а не отклонён)": 0
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — 1 видео (Nate Herk, 24/7 Stock Trader) успешно проанализировано через gemini_video.py, GEMINI_API_KEY доступен",
+    "frames": "skipped: yt-dlp получил 403 Forbidden на CONNECT к youtube.com через egress-прокси, несмотря на pip-установленные yt-dlp/imageio-ffmpeg; конспект опубликован без кадров с пометкой на странице"
+  },
+  "degradation_flag": "Более трети источников (модели напрямую, HN API, 5 из 8 видео-экспертов) заблокированы egress-прокси на уровне CONNECT — соответствует норме для облачного окружения последних недель, WebSearch отработал как основной канал discovery без сбоев."
+}
