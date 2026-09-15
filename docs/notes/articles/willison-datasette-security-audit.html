@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: аудит безопасности Datasette тремя LLM — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-11</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как три разные LLM нашли в Datasette баги, пережившие годы обычного код-ревью</span>
+      <span data-lang="en">How three different LLMs found Datasette bugs that survived years of ordinary code review</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/11/datasette-security/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки Уиллисона ↗</span><span data-lang="en">Willison's original note ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Повод: два независимых репорта о протечках доступа</span><span data-lang="en">The trigger: two independent access-leak reports</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон и соразработчик Datasette Алекс Гарсия получили от независимых исследователей Севбана Дёнмеза и ещё одного репортёра сообщения о протечках доступа: в некоторых конфигурациях анонимный посетитель мог увидеть данные из приватных таблиц через служебные эндпоинты — полнотекстовый поиск, представления (views) и статистические таблицы SQLite, которые не считались «настоящими» таблицами и потому не всегда проходили через ту же проверку прав, что и обычный просмотр данных. Проблема не была одной дырой — это был целый класс мест, где логика прав отставала от логики отображения.</span>
+      <span data-lang="en">Willison and Datasette co-developer Alex Garcia received reports from independent researchers Sevban Dönmez and another reporter about access leaks: under certain configurations, an anonymous visitor could reach data from private tables through auxiliary endpoints — full-text search, views, and SQLite's internal statistics tables, which weren't treated as "real" tables and so didn't always go through the same permission check as ordinary table browsing. This wasn't one hole — it was a whole class of places where the permission logic had drifted out of sync with the display logic.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: не один ассистент, а три модели на одном и том же коде</span><span data-lang="en">The method: not one assistant, but three models against the same code</span></h2>
+    <p>
+      <span data-lang="ru">Вместо того чтобы вручную вычитывать каждый эндпоинт, Уиллисон и Гарсия организовали первый для проекта полноценный аудит силами кодовых агентов: один и тот же участок кодовой базы прогнали через Claude Fable 5.1, GPT-5.6 и GPT-6 Astra, работая в общем приватном репозитории, куда каждая модель писала находки, а разработчики — проверяли и обсуждали их. Смысл в том, что у каждой модели свой профиль внимания и слепые пятна: то, что одна пропускает как «выглядит нормально», другая помечает как подозрительное несовпадение между тем, что рендерит шаблон, и тем, что проверяет guard-функция. Несколько раундов такого аудита подряд вскрыли значительное количество проблем, включая тонкие баги, пережившие годы обычного человеческого ревью.</span>
+      <span data-lang="en">Instead of manually re-reading every endpoint, Willison and Garcia ran what became the project's first thorough coding-agent security audit: the same slice of the codebase was pushed through Claude Fable 5.1, GPT-5.6, and GPT-6 Astra, working out of a shared private repository where each model wrote up findings and the two developers reviewed and discussed them. The point is that each model has its own attention profile and blind spots: what one model waves through as "looks fine," another flags as a suspicious mismatch between what a template renders and what a guard function actually checks. Several rounds of this audit in a row surfaced a significant number of problems, including subtle bugs that had survived years of ordinary human review.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что нашли и как это закрыли</span><span data-lang="en">What they found and how it was closed</span></h2>
+    <p>
+      <span data-lang="ru">Большинство пойманных багов сводилось к одному и тому же классу ошибок: проверка прав была завязана на точное, регистрозависимое имя таблицы или представления, тогда как сам SQLite обращается с именами регистронезависимо — из-за этого расхождения запрос с другим регистром имени мог обойти guard. Среди конкретных исправлений: имена таблиц и представлений теперь сравниваются регистронезависимо так же, как это делает сам SQLite; полнотекстовые индексные таблицы поиска требуют того же права, что и исходная таблица, которую они индексируют; доступ к служебным таблицам статистики SQLite (`sqlite_stat1`–`sqlite_stat4`) закрыт по умолчанию. Правки сначала внесли в основную ветку, а затем выборочно перенесли (backport) в стабильную ветку 0.65.x, чтобы выпустить два security-релиза — 1.0a39 и 0.65.4 — в один день.</span>
+      <span data-lang="en">Most of the caught bugs boiled down to the same class of mistake: a permission check keyed off an exact, case-sensitive table or view name, while SQLite itself treats names case-insensitively — the mismatch let a request using a different letter case slip past the guard. Concrete fixes included: table and view names are now compared case-insensitively the way SQLite itself does; full-text search index tables now require the same permission as the source table they index; and access to SQLite's internal statistics tables (`sqlite_stat1`–`sqlite_stat4`) is denied by default. The fixes landed on the main branch first, then selected ones were backported to the stable 0.65.x branch so two security releases — 1.0a39 and 0.65.4 — could ship on the same day.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения подхода: находка — не значит закрытая дыра</span><span data-lang="en">Limits of the approach: a finding isn't a closed hole</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон не подаёт это как «отдайте аудит ИИ и расслабьтесь»: три модели генерировали находки, но каждую всё равно проверяли и обсуждали два человека-разработчика, прежде чем превратить её в патч и тест на регрессию. Метод хорош там, где нужно быстро прочесать большую поверхность кода на систематическое расхождение одного и того же паттерна (здесь — «регистр имени» и «что считается таблицей»), но он не заменяет понимание модели угроз проекта и не гарантирует, что три модели вместе покрывают все классы уязвимостей, а не только те, что стереотипны для обучающих данных LLM.</span>
+      <span data-lang="en">Willison doesn't present this as "hand it to AI and relax": three models produced findings, but each one still went through review and discussion by two human developers before becoming a patch and a regression test. The method works well when you need to sweep a large code surface quickly for a systematic mismatch in one recurring pattern (here, "name case" and "what counts as a table") — but it doesn't replace understanding the project's threat model, and it offers no guarantee that three models together cover every vulnerability class rather than just the ones that are stereotypical in LLM training data.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

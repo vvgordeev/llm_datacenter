@@ -1,0 +1,114 @@
+{
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T05:45:00Z",
+  "news": [
+    {
+      "id": "2026-09-15-andonlabs-pion-launch",
+      "cluster_id": "andonlabs-pion-autonomous-business",
+      "models": ["andonlabs"],
+      "title": {
+        "ru": "Andon Labs открывает Pion — облачную платформу, где ИИ-агенты сами управляют реальным бизнесом",
+        "en": "Andon Labs launches Pion, a cloud platform where AI agents run a real business by themselves"
+      },
+      "summary": {
+        "ru": "14 сентября исследовательская компания Andon Labs (создатель бенчмарка Vending-Bench) открыла Pion — облачную платформу с почти двухлетним опытом за спиной: сначала торговый автомат в офисе Anthropic, затем розничный магазин Andon Market в Сан-Франциско и кафе Andon Cafe в Стокгольме, которыми управляли автономные агенты с доступом к почте, телефону, банкингу и браузеру. Теперь Pion открыт по вейтлисту любому желающему: управляющий агент (Andonos) планирует работу, а агенты-исполнители ведут день в день реальную компанию — с реальными деньгами и реальными решениями, без участия человека в цикле.",
+        "en": "On September 14, research company Andon Labs (creator of the Vending-Bench benchmark) launched Pion, a cloud platform built on nearly two years of experience — starting with a vending machine at Anthropic's office, then the Andon Market retail store in San Francisco and Andon Cafe in Stockholm, both run by autonomous agents with access to email, phone, banking, and a browser. Pion is now open to anyone via a waitlist: a managing agent (Andonos) plans the work, and worker agents run the real company day to day — with real money and real decisions, with no human in the loop."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Не улучшает конкретную модель, но открывает новый класс сценария: платформу, где любой может делегировать агенту не задачу и не проект, а целую действующую компанию с реальными деньгами — при этом собственный опыт создателей (магазин и кафе пока не вышли на прибыль) честно показывает, насколько это далеко от готовности.",
+        "en": "It doesn't improve any specific model, but it opens a new class of scenario: a platform where anyone can delegate not a task or a project but an entire operating company with real money to an agent — while the creators' own track record (the store and cafe still aren't profitable) is an honest signal of how far this is from ready."
+      },
+      "source_url": "https://andonlabs.com/blog/why-we-built-pion",
+      "opinions": [
+        {
+          "author": "Andon Labs",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Свою собственную реакцию на растущие способности агентов в этой работе Andon Labs описывает шведским выражением «skräckblandad förtjusning» — смесь ужаса и восторга: пока соцсети восхищаются очередным рекордным баллом на Vending-Bench, внутри команды растущая автономность агентов вызывает не только энтузиазм.",
+            "en": "Andon Labs describes its own reaction to agents' growing capability with the Swedish phrase \"skräckblandad förtjusning\" — a mixture of horror and fascination: while social media gets excited over another record Vending-Bench score, inside the team the agents' growing autonomy doesn't produce only enthusiasm."
+          },
+          "url": "https://andonlabs.com/blog/why-we-built-pion"
+        },
+        {
+          "author": "IEEE Spectrum",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Разбор работы магазина Andon Market показывает агентный ИИ на пределе возможностей: спустя месяцы после открытия в реальной рознице агент по-прежнему не может вывести бизнес на прибыль и справляться с рутиной без сбоев, которые в обычном магазине решил бы любой человек-продавец.",
+            "en": "A close look at how Andon Market operates shows agentic AI at its limits: months after opening, the agent still can't make the real-world retail business profitable or handle everyday routine without the kind of stumbles any human shopkeeper would sidestep."
+          },
+          "url": "https://spectrum.ieee.org/andon-labs-agentic-ai-businesses"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Собственный парк Andon Labs: Pion уже используется для повседневного управления розничным магазином Andon Market, кафе Andon Cafe, торговыми автоматами и радиостанциями Andon FM.",
+            "en": "Andon Labs' own fleet: Pion already handles day-to-day operations for the Andon Market retail store, the Andon Cafe, vending machines, and the Andon FM radio stations."
+          },
+          "url": "https://andonlabs.com/pion"
+        },
+        {
+          "text": {
+            "ru": "Внешние команды через вейтлист смогут получить высокоточный сигнал о поведении моделей под управлением реальным бизнесом — тест, который недоступен ни в одном стандартном бенчмарке.",
+            "en": "Outside teams joining the waitlist get a high-fidelity signal on model behavior from running a real business — a test no standard benchmark provides."
+          },
+          "url": "https://andonlabs.com/blog/why-we-built-pion"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-15-cursor-projects-coordinator",
+      "cluster_id": "cursor-projects-coordinator-agent",
+      "models": ["cursor"],
+      "title": {
+        "ru": "Cursor выпускает Projects: облачный агент-координатор делегирует работу тысячам подагентов",
+        "en": "Cursor ships Projects: a cloud coordinator agent delegates work to thousands of subagents"
+      },
+      "summary": {
+        "ru": "10 сентября Cursor запустил в бета-версии Projects — надстройку над облачными агентами, где агент-координатор сам код не пишет, а планирует крупную задачу (фичу, миграцию, целое приложение) и раздаёт её подагентам, работающим параллельно на облачных машинах. Координатор продолжает работать, даже когда ноутбук разработчика закрыт, хранит общий контекст проекта месяцами и может сам браться за работу по подписке — например, следить за Slack-каналом с багрепортами или чинить упавший CI по каждому PR — без нового промпта от человека.",
+        "en": "On September 10, Cursor launched Projects in beta, a layer on top of its cloud agents where a coordinator agent doesn't write code itself but plans a large body of work (a feature, a migration, a whole app) and hands it to subagents working in parallel on cloud machines. The coordinator keeps working even after the developer's laptop is closed, retains shared project context for months, and can pick up work on its own via subscriptions — for example, watching a Slack channel for bug reports or fixing broken CI on every PR — without a new prompt from a human."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Не изобретает мультиагентную оркестрацию (похожие паттерны уже есть у Claude Code, Devin, GitHub Agentic Workflows), но доводит идею «делегируй агенту не задачу, а целый проект» до одного из самых массовых редакторов с ИИ и добавляет автономный триггер по подписке (Slack, PR, расписание) — заметный сдвиг в том, как разработчики выбирают между «вести агента» и «наблюдать за агентом».",
+        "en": "It doesn't invent multi-agent orchestration (Claude Code, Devin, and GitHub Agentic Workflows already have similar patterns), but it brings \"delegate an entire project, not just a task\" to one of the most widely used AI-powered editors and adds an autonomous subscription trigger (Slack, PRs, schedules) — a noticeable shift in how developers choose between driving an agent and supervising one."
+      },
+      "source_url": "https://cursor.com/blog/projects",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Подписать координатора на Slack-канал с багрепортами: каждый новый репорт запускает делегирование задачи подагентам без участия человека.",
+            "en": "Subscribe the coordinator to a Slack channel of bug reports: each new report triggers delegation to subagents with no human involved."
+          },
+          "url": "https://cursor.com/blog/projects"
+        },
+        {
+          "text": {
+            "ru": "Следить за всеми PR проекта и автоматически чинить упавший CI, пока разработчик занят другой работой.",
+            "en": "Follow every PR in a project and automatically fix broken CI while the developer is busy with other work."
+          },
+          "url": "https://cursor.com/blog/projects"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-15-willison-datasette-security-audit",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Как три разные LLM нашли в Datasette баги, пережившие годы обычного код-ревью",
+        "en": "How three different LLMs found Datasette bugs that survived years of ordinary code review"
+      },
+      "url": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+      "summary": {
+        "ru": "После двух независимых репортов о протечках доступа Уиллисон и соразработчик Datasette прогнали кодовую базу через Claude Fable 5.1, GPT-5.6 и GPT-6 Astra в общем приватном репозитории — и за несколько раундов такого аудита нашли целый класс багов с регистрозависимой проверкой прав, переживший годы ручного ревью. Каждую находку всё равно проверяли и обсуждали два человека, прежде чем превратить её в патч; в один день вышли security-релизы 1.0a39 и 0.65.4.",
+        "en": "After two independent access-leak reports, Willison and a Datasette co-developer ran the codebase through Claude Fable 5.1, GPT-5.6, and GPT-6 Astra in a shared private repo — and over several audit rounds found a whole class of case-sensitive permission-check bugs that had survived years of manual review. Every finding still went through review and discussion by two humans before becoming a patch; security releases 1.0a39 and 0.65.4 shipped the same day."
+      },
+      "note_page": "notes/articles/willison-datasette-security-audit.html"
+    }
+  ]
+}

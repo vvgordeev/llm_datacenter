@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-15",
+      "news_count": 2,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "Andon Labs открывает Pion — облачную платформу, где ИИ-агенты сами управляют реальным бизнесом",
+        "en": "Andon Labs launches Pion, a cloud platform where AI agents run a real business by themselves"
+      }
+    },
+    {
       "date": "2026-09-14",
       "news_count": 4,
       "expert_count": 2,

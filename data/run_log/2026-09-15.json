@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T05:45:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 0, "note": "WebFetch www.anthropic.com -> EGRESS_BLOCKED; WebSearch (2 queries) found only items already published on 2026-09-01..09-14 (Fable/Mythos 5.1, Claude Academy Aug 20, Project Glasswing Apr 7, scientist seats Aug 27, mid-conversation tool changes Sep 7) or search-summary date drift (e.g. 'Opus 5 unveiled today' — actually July 24)"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch openai.com -> EGRESS_BLOCKED; WebSearch found GPT-6 Astra (Sep 3, already covered), GPT-Live-1 (Sep 10-12, already covered), Agents API (Sep 11, already covered), Images 2.5 (Sep 8-9, already covered) — nothing new for lookback window"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch blog.google -> EGRESS_BLOCKED; WebSearch surfaced only Gemini 3.8 Flash (Sep 2, already covered) and Gemini Windows app (Sep 12, already covered)"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ai.meta.com -> EGRESS_BLOCKED; WebSearch surfaced Muse Spark 1.3 (Sep 2-3, already covered) and Hatch/Muse agent (already covered as meta-muse-agent-launch, Sep 9)"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch x.ai -> EGRESS_BLOCKED; WebSearch found Grok 4.8 (already covered Sep 14) and the Grok Bot Galaxy livestream event (Sep 15-17) — treated as marketing/event, not a feature or release, excluded per collection rules"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch mistral.ai -> EGRESS_BLOCKED; WebSearch found only older items (Leanstral 1.5, OCR 4, funding round — all Sep 5-8, outside a fresh-news bar and not previously flagged as pending)"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch api-docs.deepseek.com -> EGRESS_BLOCKED; WebSearch found only the V4.1 Flash / V4 Pro pricing continuation, already covered 2026-09-11"},
+    {"source": "hacker news api (algolia)", "status": "blocked", "candidates": 0, "note": "curl to hn.algolia.com -> CONNECT rejected by egress proxy (org policy), one attempt, no retry per runbook"},
+    {"source": "hacker news (websearch)", "status": "ok", "candidates": 2, "note": "surfaced the Pion launch thread (372 comments, top story) and general AI-safety-debate threads (already-covered Bengio/Coxon stories); used for Pion discovery and reaction"},
+    {"source": "aggregators (smol.ai, tldr.tech, simonwillison linkblog)", "status": "blocked", "candidates": 0, "note": "WebFetch news.smol.ai and tldr.tech -> EGRESS_BLOCKED; used WebSearch on aggregator-style recap sites instead, which mostly rolled up already-covered stories or showed date drift"},
+    {"source": "reddit (r/LocalLLaMA, r/ClaudeAI)", "status": "empty", "candidates": 0, "note": "WebSearch found no dated, attributable threads for the last 24-36h beyond generic subreddit stats pages"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 3, "note": "Sep 11 Datasette security-audit post (used, new), Sep 12 running-routes post (already covered 09-13), Sep 14 shot-scraper webp post (too thin for a full method conspect, skipped)"},
+    {"source": "experts: Yoshua Bengio (added ad hoc)", "status": "ok", "candidates": 1, "note": "'Why are AI agents lying, cheating and coordinating' — already published as expert content on 2026-09-14, not reused"},
+    {"source": "experts: Zvi Mowshowitz (added ad hoc)", "status": "ok", "candidates": 1, "note": "'AI #185: Preference Cascade' / Jacob Coxon commentary (Sep 11) — already covered as expert content 2026-09-11, not reused"},
+    {"source": "experts: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "no dated upload found for the last 7 days beyond an April 2026 fireside chat"},
+    {"source": "experts: AI Explained (video)", "status": "empty", "candidates": 0, "note": "channel identity for recently-titled videos ('GPT-6 Astra is AGI...') could not be confirmed against the configured channel_id; not used to avoid misattribution"},
+    {"source": "experts: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "no dated, titled upload found via WebSearch for the lookback window"},
+    {"source": "experts: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "recent titled videos found were already published 2026-09-13 and 2026-09-14"},
+    {"source": "experts: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "most recent dated upload found was from May 2026"},
+    {"source": "experts: Latent Space / Ethan Mollick (article)", "status": "empty", "candidates": 0, "note": "no dated post found within the 7-day window beyond an already-stale AINews recap"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 3,
+    "rejected": {
+      "уже опубликовано ранее": 4,
+      "маркетинг/событие без содержания": 1,
+      "слишком незначительно для конспекта": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: no video candidate cleared discovery",
+    "frames": "not attempted: no video candidate cleared discovery",
+    "note": "YouTube RSS discovery CONNECT-blocked by egress proxy on all 5 configured channel_ids (curl exit 56, connect_rejected); WebSearch fallback per SKILL.md could not confirm dated, channel-attributable uploads for any configured video expert within the 7-day window. expert_content total (1) is below limits.min_expert_total (5) as a direct result — documented rather than filled with unverifiable content."
+  }
+}
