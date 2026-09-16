@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Заразность страха» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Bryan Cantrill · 2026-09-13</span>
+      <span data-lang="en">Article digest · Bryan Cantrill · 2026-09-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Заразность страха</span>
+      <span data-lang="en">The contagion of fear</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+      ·
+      <a href="https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/" target="_blank" rel="noopener">
+        <span data-lang="ru">Через блог Simon Willison ↗</span><span data-lang="en">Via Simon Willison's blog ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Повод: твит бывшего сотрудника Anthropic</span><span data-lang="en">The trigger: a tweet from a former Anthropic employee</span></h2>
+    <p>
+      <span data-lang="ru">Эссе Брайана Кантрилла (сооснователь Oxide Computer, ранее — архитектор DTrace в Sun/Joyent) — прямой ответ на твит бывшего сотрудника Anthropic Джейкоба Коксона о том, что многие исследователи внутри компании считают: ИИ «может убить нас всех к концу десятилетия». Кантрилл не спорит с тем, что риск стоит обсуждать, — он спорит с тем, как именно такие заявления формулируются и кем.</span>
+      <span data-lang="en">Bryan Cantrill's essay (Oxide Computer co-founder, formerly the architect of DTrace at Sun/Joyent) is a direct response to a tweet from former Anthropic employee Jacob Coxon claiming that many researchers inside the company believe AI "could kill us all by the end of the decade." Cantrill isn't arguing the risk shouldn't be discussed — he's arguing about how such claims get made, and by whom.</span>
+    </p>
+
+    <h2><span data-lang="ru">Личная история как предупреждение</span><span data-lang="en">A personal story as a warning</span></h2>
+    <p>
+      <span data-lang="ru">Кантрилл вспоминает собственную молодую ошибку: в прошлом он невольно вызвал неоправданную панику среди менее технических коллег своими же необдуманными громкими заявлениями. Он приводит это как урок, который «стыдно» усвоил десятилетия назад — экспертный статус даёт человеку имплицитное доверие публики, и этим доверием легко злоупотребить, если формулировать тревожные прогнозы без должной осторожности.</span>
+      <span data-lang="en">Cantrill recalls his own youthful mistake: he once caused unjustified panic among less technical colleagues through his own careless, alarming statements. He offers this as a lesson he learned "shamefully" decades ago — expert status grants a person the public's implicit trust, and that trust is easy to abuse by voicing alarming predictions without due care.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ключевая цитата эссе: «Эти жуткие заявления бьют прямо по самому больному месту, и учитывая очевидную важность ИИ, неудивительно, что они прорвались в мейнстрим — люди закономерно спрашивают: как именно это произойдёт? Ответы всегда опираются на неопределённую экстраполяцию в будущее; например, Джейкоб Коксон ссылается на "взлом критической инфраструктуры" и "оружие массового поражения уровня вымирания" без каких-либо уточнений. Но Коксон не эксперт ни по критической инфраструктуре, ни по биооружию — ни, если уж на то пошло, по вымиранию».</span>
+      <span data-lang="en">The essay's key line: "These ghoulish claims strike brazenly at the hearth, and given the obvious importance of AI, it is unsurprising that they have leapt into the mainstream, with people asking the natural question: how would that happen? The answers always rely on hand-wavy extrapolation into the future; for example, Jacob Coxon cites 'hacking critical infrastructure' and 'extinction-level bioweapons' without further elaboration. But Coxon is not an expert on critical infrastructure, nor on bioweapons — nor, for that matter, on extinction."</span>
+    </p>
+
+    <h2><span data-lang="ru">Бремя доказательства — на том, кто бьёт тревогу</span><span data-lang="en">The burden of proof sits with whoever raises the alarm</span></h2>
+    <p>
+      <span data-lang="ru">Центральный тезис: нельзя ожидать, что публика самостоятельно разберётся в LLM, критической инфраструктуре, биологии вымирания и прочих сложных темах — это бремя лежит на том, кто выдвигает громкое заявление. Кантрилл формулирует это так: «Мы не должны ждать, что публика поймёт LLM, критическую инфраструктуру, биологию вымирания и так далее — это бремя должно лежать на тех, кто выдвигает подобное заявление. Урок, который я усвоил (со стыдом) десятилетия назад, в том, что эксперты в силу своей экспертизы имплицитно пользуются доверием публики — и мы не должны этим доверием злоупотреблять. На нас лежит обязанность быть осмотрительными в своих заявлениях — и максимально осмотрительными именно тогда, когда мы бьём тревогу».</span>
+      <span data-lang="en">The core claim: the public cannot be expected to independently untangle LLMs, critical infrastructure, extinction biology, and the rest — that burden falls on whoever makes the alarming claim. Cantrill puts it directly: "we should not expect the public to understand LLMs, critical infrastructure, bioweapons, extinction biology, etc. — that burden must lie with those making the claim. The lesson that I learned (shamefully) decades ago is that domain experts, by way of their expertise, implicitly hold the public's trust — and we must not abuse it. It is incumbent upon us to be circumspect in our claims — and maximally so when raising the alarm."</span>
+    </p>
+
+    <h2><span data-lang="ru">«Биооружие» как конкретный пример злоупотребления</span><span data-lang="en">"Bioweapons" as the specific example of the abuse</span></h2>
+    <p>
+      <span data-lang="ru">Кантрилл особо цепляется за пример с биооружием — тему он развивал ещё в подкасте Oxide and Friends с участием Simon Willison. В отрывке подкаста он говорит: «Мне кажется, нужно быть осторожными, потому что так легко впасть в страх, когда мы просто придумываем... "оно может дать вам биологическое оружие". Как? В смысле, можем мы, пожалуйста, послушать биолога на этот счёт? Или кого-то, у кого есть реальный опыт с биооружием? [...] Тема биооружия у меня прямо под ногтями горит, потому что она оставляет столько простора воображению, что мы заполняем его страхом».</span>
+      <span data-lang="en">Cantrill singles out the bioweapons example — a theme he'd already developed on the Oxide and Friends podcast with Simon Willison as a guest. In that episode he says: "I really think we need to be careful because it's so easy to be overcome with fear when we kind of make up these... it can give you biological weapons. Like, how? I mean, can we please have a biologist weigh in on this? Or can we have like someone who's got experience with bioweapons? [...] The bioweapon thing just gets under my fingernails because it leaves so much to the imagination that we insert with fear."</span>
+    </p>
+    <p>
+      <span data-lang="ru">Материал явно перекликается с эссе Дарио Амодея «We Must Pace the Frontier» (12 сентября) и последовавшей волной поддержки/критики со стороны других лабораторий: Кантрилл, по сути, формулирует контраргумент изнутри инженерного сообщества — риски ИИ стоит обсуждать предметно и с опорой на конкретную экспертизу, а не абстрактными формулировками, которые сами по себе становятся источником паники.</span>
+      <span data-lang="en">The piece clearly connects to Dario Amodei's "We Must Pace the Frontier" essay (September 12) and the wave of industry support and criticism that followed it: Cantrill is essentially formulating a counterargument from inside the engineering community — AI risk should be discussed concretely and with real domain expertise, not through abstract framings that themselves become a source of panic.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

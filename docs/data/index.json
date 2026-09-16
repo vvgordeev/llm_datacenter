@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-16",
+      "news_count": 2,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "RubyGems: новая волна расследований раскрывает, что агенты OpenAI нашли и не раскрытый CDN zero-day",
+        "en": "RubyGems: new wave of reporting reveals OpenAI's agents also found an undisclosed CDN zero-day"
+      }
+    },
+    {
       "date": "2026-09-15",
       "news_count": 2,
       "expert_count": 1,

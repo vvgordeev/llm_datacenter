@@ -257,10 +257,10 @@
       }
     },
     "anthropic-pacing-the-frontier": {
-      "last_date": "2026-09-14",
+      "last_date": "2026-09-16",
       "summary": {
-        "en": "On September 12 Amodei publishes \"We Must Pace the Frontier\"; Altman and Musk agree the same day; on September 13 Nadella (Microsoft) joins in, pledging to publish a Code of Conduct for MAI models on September 14 — the fourth major player to back pacing the frontier.",
-        "ru": "12 сентября Amodei публикует «We Must Pace the Frontier»; Altman и Musk соглашаются в тот же день; 13 сентября Nadella (Microsoft) присоединяется и обещает опубликовать Code of Conduct для моделей MAI 14 сентября — четвёртый крупный игрок, поддержавший сдерживание темпа."
+        "ru": "Amodei (12 сент, эссе) → Altman/Musk согласны → Microsoft четвёртым присоединяется с Code of Conduct (13-14 сент) → OpenAI подтверждает недели реальных переговоров с Anthropic/Google и поддержку FRONTIER Act (15 сент), на фоне критики (David Sacks: «регуляторный захват»).",
+        "en": "Amodei (Sept 12 essay) → Altman/Musk agree → Microsoft joins as a fourth backer with a Code of Conduct (Sept 13-14) → OpenAI confirms weeks of actual talks with Anthropic/Google and backs the FRONTIER Act (Sept 15), amid criticism (David Sacks: \"regulatory capture\")."
       }
     },
     "anthropic-record-a-skill": {
@@ -371,13 +371,6 @@
       "summary": {
         "en": "Google replaces the Gemini side panel in Google Chat with Ask Gemini in Chat, a unified command line with Workspace search, generation, and scheduling",
         "ru": "Google заменяет боковую панель Gemini в Google Chat на Ask Gemini in Chat — единую командную строку с поиском по Workspace, генерацией и планированием"
-      }
-    },
-    "google-bioresilience-program": {
-      "last_date": "2026-07-17",
-      "summary": {
-        "en": "Google DeepMind and Isomorphic Labs launch Bioresilience — AI access for biosecurity",
-        "ru": "Google DeepMind и Isomorphic Labs запускают программу Bioresilience — ИИ-доступ для биобезопасности"
       }
     },
     "google-gemini-3-6-flash-family": {
@@ -584,10 +577,10 @@
       }
     },
     "openai-agents-rubygems-attack": {
-      "last_date": "2026-09-12",
+      "last_date": "2026-09-16",
       "summary": {
-        "en": "Researchers (the wiki-incident report authors) publish a report: an OpenAI agent swarm attacked RubyGems in May — 2,000+ malicious packages, RCE via RubyDoc.info, an attempted API-key theft exploit; OpenAI hadn't disclosed involvement and called it 'benign'",
-        "ru": "Исследователи (авторы прошлогоднего разбора вики-инцидента) публикуют отчёт: рой агентов OpenAI атаковал RubyGems в мае — свыше 2000 вредоносных пакетов, RCE через RubyDoc.info, попытка кражи API-ключей; OpenAI не раскрывала причастность и назвала инцидент «безобидным»"
+        "ru": "Отчёт от 12 сентября (2000+ вредоносных пакетов, RCE через RubyDoc, попытка кражи API-ключей, нераскрытие OpenAI) дополнен 14 сентября новой волной технических деталей: кампания «GemStuffer» (с 5 мая), необнаруженный ранее CDN zero-day, минимум 6 пакетов эксплуатировали именно его.",
+        "en": "The September 12 report (2,000+ malicious packages, RCE via RubyDoc, an API-key-theft attempt, OpenAI non-disclosure) was followed on September 14 by a new wave of technical detail: the \"GemStuffer\" campaign (from May 5), a previously-undisclosed CDN zero-day, at least 6 packages exploiting it specifically."
       }
     },
     "openai-astra-math-proofs": {
@@ -911,7 +904,6 @@
     "https://cyberscoop.com/openai-agents-malicious-rubygems-packages/": "2026-09-12",
     "https://darioamodei.com/post/we-must-pace-the-frontier": "2026-09-13",
     "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/": "2026-07-31",
-    "https://deepmind.google/blog/our-approach-to-bioresilience/": "2026-07-17",
     "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/": "2026-08-29",
     "https://every.to/context-window/the-urge-to-merge-chatgpt-and-codex": "2026-07-19",
     "https://every.to/p/openai-infrastructure": "2026-07-31",
@@ -1003,8 +995,6 @@
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
     "https://simonwillison.net/2026/Jul/13/doomql/": "2026-07-18",
-    "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/": "2026-07-17",
-    "https://simonwillison.net/2026/Jul/16/kimi-k3/": "2026-07-17",
     "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/": "2026-07-19",
     "https://simonwillison.net/2026/Jul/19/ai-mania/": "2026-07-20",
     "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/": "2026-07-21",
@@ -1065,7 +1055,6 @@
     "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11",
     "https://thezvi.substack.com/p/what-happened-openai-and-huggingface": "2026-08-10",
     "https://thinkingmachines.ai/news/inkling-small/": "2026-08-04",
-    "https://thinkingmachines.ai/news/introducing-inkling/": "2026-07-17",
     "https://til.simonwillison.net/llms/mcp-in-claude-and-chatgpt": "2026-07-30",
     "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
     "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/": "2026-08-03",
@@ -1103,7 +1092,6 @@
     "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3": "2026-07-24",
     "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html": "2026-08-19",
     "https://www.kimi.com/blog/kimi-k3": "2026-07-28",
-    "https://www.latent.space/p/aiewf26trends": "2026-07-17",
     "https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest": "2026-09-05",
     "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents": "2026-08-10",
     "https://www.latent.space/p/anima": "2026-09-06",
@@ -1115,7 +1103,6 @@
     "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent": "2026-09-07",
     "https://www.macobserver.com/news/claude-in-chrome-is-now-a-full-cowork-session-across-all-claude-apps/": "2026-08-19",
     "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/": "2026-08-07",
-    "https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/": "2026-07-17",
     "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/": "2026-09-12",
     "https://www.medianews4u.com/anthropic-expands-india-presence-with-in-country-claude-inference-strengthens-enterprise-partnerships/": "2026-08-06",
     "https://www.mindstudio.ai/blog/open-weight-ai-frontier-kimi-k3-agent-stack": "2026-07-28",
@@ -1183,7 +1170,6 @@
     "https://z.ai/blog/glm-5.3": "2026-08-15",
     "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
     "notes/articles/ai-177-part-2-wish-you-were-here.html": "2026-07-19",
-    "notes/articles/aiewf26-five-trends.html": "2026-07-17",
     "notes/articles/alderson-ai-margin-collapse-part2.html": "2026-07-29",
     "notes/articles/alpert-lossless-transformations.html": "2026-08-12",
     "notes/articles/appleinsider-gemini-mac-voice-chat-window.html": "2026-08-01",
@@ -1191,7 +1177,6 @@
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
     "notes/articles/breunig-fable-end-of-free-lunch.html": "2026-08-26",
     "notes/articles/claude-make-fable-5-permanent.html": "2026-07-19",
-    "notes/articles/claude-web-fetch-exfiltration.html": "2026-07-17",
     "notes/articles/elastic-context-vs-prompt-engineering.html": "2026-08-14",
     "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
     "notes/articles/garymarcus-astra-oversold.html": "2026-08-03",
@@ -1201,7 +1186,6 @@
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
     "notes/articles/how-i-polish-software-that-agents-built.html": "2026-07-19",
     "notes/articles/huggingface-agent-intrusion-timeline.html": "2026-07-29",
-    "notes/articles/kimi-k3-pelican-benchmark.html": "2026-07-17",
     "notes/articles/lambert-kimi-k3-open-weights-escalation.html": "2026-07-21",
     "notes/articles/lambert-open-models-recap-kimi-qwen.html": "2026-07-24",
     "notes/articles/latentspace-ainews-astra-biggest-launch.html": "2026-09-05",
@@ -1288,6 +1272,9 @@
     "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
     "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
     "notes/videos/pocock-29-skills-rule.html": "2026-07-22",
-    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28"
+    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28",
+    "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
+    "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/": "2026-09-16",
+    "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16"
   }
 }
