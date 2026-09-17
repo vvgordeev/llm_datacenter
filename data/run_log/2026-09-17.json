@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T05:23:38Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 1, "note": "WebFetch www.anthropic.com -> EGRESS_BLOCKED (one attempt, no retry); WebSearch covered instead — found Cowork/chat merge (Sept 16) and Suleyman-vs-Anthropic model-welfare debate (Sept 16)"},
+    {"source": "openai blog", "status": "ok", "candidates": 0, "note": "WebFetch openai.com -> EGRESS_BLOCKED; WebSearch found only stale items already within lookback boundary (GPT-Live-1 Sept 10, gpt-5.4-cyber deprecation) — no fresh Sept 15-17 OpenAI product news found"},
+    {"source": "google/deepmind blog", "status": "ok", "candidates": 2, "note": "WebFetch blog.google/deepmind.google -> EGRESS_BLOCKED; WebSearch found Gemini 3.8 Live + Live Extended Thinking (Sept 15) and the Apple Siri/Gemini iOS 27 launch (Sept 14)"},
+    {"source": "meta ai blog", "status": "ok", "candidates": 0, "note": "WebFetch ai.meta.com -> EGRESS_BLOCKED; WebSearch found only stale LlamaCon/Muse Spark 1.3 coverage (early Sept, already past lookback)"},
+    {"source": "xai news", "status": "ok", "candidates": 0, "note": "WebFetch x.ai -> EGRESS_BLOCKED; WebSearch confirms Grok 4.7 still unreleased as of Sept 14-17 ('needs a few more days to cook') — no new candidate"},
+    {"source": "mistral news", "status": "ok", "candidates": 1, "note": "WebFetch mistral.ai -> EGRESS_BLOCKED; WebSearch found Mistral x Mozilla Firefox Smart Window partnership (Sept 16)"},
+    {"source": "deepseek changelog", "status": "ok", "candidates": 0, "note": "WebFetch api-docs.deepseek.com -> EGRESS_BLOCKED; WebSearch shows only V4.1 Flash (Sept 10, already clustered deepseek-v4-1-flash-beta) — no new Sept 15-17 item"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "hn.algolia.com -> EGRESS_BLOCKED on CONNECT (one attempt, no retry); switched to WebSearch site:news.ycombinator.com / topic queries for HN threads (used as opinion sources on several news items)"},
+    {"source": "community (reddit/x)", "status": "ok", "candidates": 0, "note": "covered via WebSearch as part of per-story opinion gathering, not as separate candidate discovery"},
+    {"source": "aggregators (smol.ai, TLDR AI)", "status": "ok", "candidates": 3, "note": "WebFetch news.smol.ai/tldr.tech not attempted directly (JS-heavy); WebSearch surfaced Atria Dawn Preview (Shanghai AI Lab, via smol.ai coverage), TypeSafe Jev launch, and confirmed Gemini 3.8 Live / Suleyman stories independently"},
+    {"source": "experts: config list (Simon Willison, Karpathy, Latent Space, AI Explained, Matt Wolfe, Mollick, Nate Herk, Matt Pocock)", "status": "ok", "candidates": 4, "note": "Willison's two freshest posts (Astra running-routes Sept 12, Suleyman quotation Sept 16) were already published in prior digests or too thin (bare quote) — used his Cowork/chat blogmark as a news opinion instead, not as expert content. Latent Space (Socher/Recursive) and Matt Wolfe (AI News Sept 11) confirmed fresh. Karpathy/AI Explained/Mollick/Nate Herk/Matt Pocock: most recent findable content was weeks to months old (Apr-Aug) — no item within the 7-day expert window"},
+    {"source": "experts: widened search (non-config resonant authors)", "status": "ok", "candidates": 2, "note": "Zvi Mowshowitz ('We Must Pace The Frontier', Sept 12) and Mike Taylor/Every.to (TypeSafe Jev hands-on test, Sept 16) added per SKILL.md widening rule; Bryan Cantrill's 'Contagion of Fear' considered but already published 2026-09-16 (skipped as duplicate)"}
+  ],
+  "totals": {
+    "candidates": 20,
+    "published": 7,
+    "rejected": {
+      "уже освещено в прошлых сводках (Cursor/OpenAI Nov 12 cutoff, GPT-Live-1 launch, Astra math proofs, LlamaCon, DeepSeek V4.1 Flash)": 5,
+      "нет реального Sept 15-17 события (OpenAI/Meta/xAI/DeepSeek блоги)": 4,
+      "недостаточно проверено / вероятная синтетика поисковика (нестандартные HN-агрегатор-issue страницы 'agents-radar')": 4
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — scripts/gemini_video.py successfully summarized https://www.youtube.com/watch?v=JwTCjarfJYw via generativelanguage.googleapis.com (GEMINI_API_KEY present)",
+    "frames": "skipped: youtube.com blocked at egress CONNECT for yt-dlp (confirmed via direct error, no retry) — note page built without frames, hint text added per SKILL.md"
+  },
+  "expert_content_note": "min_expert_total=5 not reached (published 4: 3 articles + 1 video) despite widening search beyond config experts to resonant non-config authors (Zvi Mowshowitz, Every.to/Mike Taylor) — Willison's two freshest posts were already covered by prior digests or too thin, and Karpathy/AI Explained/Mollick/Nate Herk/Matt Pocock had no verifiably fresh (within 7 days) content found via WebSearch."
+}

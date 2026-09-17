@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Ричард Сошер о рекурсивном самосовершенствовании ИИ — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи (подкаст) · Latent Space · 2026-09-14</span>
+      <span data-lang="en">Article digest (podcast) · Latent Space · 2026-09-14</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Последнее изобретение человечества» — Ричард Сошер о Recursive и рекурсивном самосовершенствовании ИИ</span>
+      <span data-lang="en">Humanity's Last Invention — Richard Socher of Recursive</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/recursive" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал (Latent Space) ↗</span><span data-lang="en">Original (Latent Space) ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ричард Сошер — фигура с историей в NLP (соавтор ранних embedding-подходов ещё в докомпьютерную-для-ИИ эпоху, основатель You.com) — в разговоре с Latent Space описывает свой новый стартап Recursive и его цель: построить «машину эврик» (Eureka Machine), рекурсивно самоулучшающуюся систему, которая автоматизирует не применение ИИ к науке, а сам процесс ИИ-исследований. Тезис Сошера предельно прямой: ИИ — это код, и теперь ИИ умеет писать код; как только эти два факта соединяются, петля самосовершенствования замыкается сама собой, без отдельного «включателя».</span>
+      <span data-lang="en">Richard Socher — an NLP veteran (co-author of early embedding approaches, founder of You.com) — describes his new startup Recursive to Latent Space, and its goal: building a "Eureka Machine," a recursively self-improving system that automates not the application of AI to science, but the process of AI research itself. Socher's thesis is blunt: AI is code, and now AI can code; once those two facts connect, the self-improvement loop closes on its own, with no separate switch to flip.</span>
+    </p>
+
+    <h2><span data-lang="ru">Из чего состоит подход: система, изучающая собственные ограничения</span><span data-lang="en">What the approach consists of: a system that studies its own limits</span></h2>
+    <p>
+      <span data-lang="ru">Практически Recursive строит агентов, которые проводят эксперименты над собственным кодом и процессом обучения: система должна сама находить свои слабые места, писать для них бенчмарки и затем переписывать собственную кодовую базу, чтобы стать способнее. Ближний фокус — не на общих рассуждениях, а на «ИИ для ИИ-исследований»: автоматизации самой рутины ресёрча (постановка гипотезы, запуск эксперимента, интерпретация результата, следующая итерация). Первые публичные результаты — это не абстрактные бенчмарки понимания языка, а прикладные задачи оптимизации: на NanoChat autoresearch система достигает того же лосса в 1.3 раза быстрее человека-бейзлайна; на NanoGPT Speedrun сокращает время прогона с 79.7 до 77.5 секунды; на SOL-ExecBench (235 GPU-ядер) поднимает средний балл с 0.699 до 0.754 — причём находит оптимизации ядер без участия CUDA-экспертов в процессе.</span>
+      <span data-lang="en">In practice, Recursive builds agents that run experiments on their own code and training process: the system is meant to find its own weak points, write benchmarks for them, and then rewrite its own codebase to become more capable. The near-term focus isn't abstract reasoning, but "AI for AI research" — automating the actual grind of research (forming a hypothesis, running an experiment, interpreting the result, iterating). The first public results are applied optimization tasks rather than abstract language benchmarks: on NanoChat autoresearch the system reaches the same loss 1.3x faster than the human baseline; on NanoGPT Speedrun it cuts runtime from 79.7 to 77.5 seconds; on SOL-ExecBench (235 GPU kernels) it raises the mean score from 0.699 to 0.754 — finding kernel optimizations without any CUDA experts in the loop.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это применимо и в чём ограничения</span><span data-lang="en">When this applies, and its limits</span></h2>
+    <p>
+      <span data-lang="ru">Сошер описывает свою позицию как «акселерационистскую, но за медленный взлёт» (accelerationist slow-takeoff): он хочет, чтобы рекурсивное самоулучшение продолжалось, потому что видит в нём путь к ускорению решения крупных научных проблем (энергетика, материалы, биология), но одновременно подчёркивает, что ценность подхода пока доказана только на узких, легко верифицируемых инженерных задачах — там, где есть чёткий численный критерий успеха (время выполнения, оценка бенчмарка). Для задач без такого чёткого критерия (открытые научные гипотезы, тем более — вопросы, требующие человеческого суждения) метод пока не демонстрирует переноса, и именно поэтому текущий продукт Recursive — это «v0.1» машины эврик, а не сама машина эврик.</span>
+      <span data-lang="en">Socher describes his own stance as "accelerationist, slow-takeoff": he wants recursive self-improvement to continue because he sees it as a path to speeding up major scientific problems (energy, materials, biology), while stressing that the approach's value so far is proven only on narrow, easily verifiable engineering tasks — ones with a clear numeric success criterion (runtime, benchmark score). For tasks without such a clear criterion (open scientific hypotheses, let alone anything requiring human judgment), the method hasn't yet shown transfer — which is exactly why Recursive's current product is a "v0.1" of the Eureka Machine, not the Eureka Machine itself.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

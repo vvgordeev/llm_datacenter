@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Майк Тейлор тестирует TypeSafe Jev — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Mike Taylor (Every) · 2026-09-16</span>
+      <span data-lang="en">Article digest · Mike Taylor (Every) · 2026-09-16</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Мини-«вайб-чек»: как Jev от TypeSafe оценил всё, что я написал, за 0.7 секунды</span>
+      <span data-lang="en">Mini-Vibe Check: TypeSafe's Jev Judged Everything I've Written in 0.7 Seconds</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Майк Тейлор, руководитель направления оценки (evals) в Every и соавтор книги «Prompt Engineering for Generative AI», разбирает свежий запуск Jev от стартапа TypeSafe не через документацию вендора, а через собственный эксперимент: он скормил модели 37 своих статей и задал по ним 21 вопрос на каждую — итого 777 отдельных суждений. Jev вернул все ответы меньше чем за 0.7 секунды суммарно, по цене около четверти цента.</span>
+      <span data-lang="en">Mike Taylor, head of evals at Every and co-author of "Prompt Engineering for Generative AI," approaches TypeSafe's freshly launched Jev not through vendor documentation but through his own experiment: he fed the model 37 of his own articles and asked 21 questions about each — 777 separate judgments in total. Jev returned all of them in under 0.7 seconds combined, for roughly a quarter of a cent.</span>
+    </p>
+
+    <h2><span data-lang="ru">В чём метод: типизированный вопрос вместо генерации текста</span><span data-lang="en">The method: a typed question instead of text generation</span></h2>
+    <p>
+      <span data-lang="ru">Jev — не чат-модель: он не пишет свободный текст, а отвечает на заранее заданный вопрос на простом языке (в том числе нечёткий или субъективный) калиброванной вероятностью по фиксированному набору категорий — по сути, «умный if/then» для автоматизации веток в рабочем процессе. Тейлор использует это буквально: один из вопросов был «похоже ли это на текст, написанный с помощью ИИ?» — и Jev верно пометил именно те его собственные статьи, где он сам сильнее опирался на ИИ при написании, что дало ему проверяемый (хоть и не строго независимый) сигнал качества калибровки.</span>
+      <span data-lang="en">Jev isn't a chat model — it doesn't produce free-form text, but answers a preset plain-language question (including fuzzy or subjective ones) with a calibrated probability over a fixed set of categories — effectively a "smart if/then" for automating branches in a workflow. Taylor puts this to a direct test: one question was "does this read like AI-assisted writing?" — and Jev correctly flagged the specific pieces of his own where he himself had leaned more on AI while writing, giving him a checkable (if not strictly independent) signal of calibration quality.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это применимо и где граница метода</span><span data-lang="en">When this applies, and where the method's limits are</span></h2>
+    <p>
+      <span data-lang="ru">Область применения, которую подчёркивает Тейлор, — это места в пайплайне, где сейчас вызывают маленькую LLM только ради одного структурированного поля (классификация, маршрутизация, оценка, ветвление), а не ради содержательного текста: там задержка и цена полноценной генерации — чистые накладные расходы. Именно поэтому 777 суждений уложились в доли секунды и в четверть цента — Jev не тратит токены на рассуждение вслух. Ограничение, которое Тейлор явно не скрывает: это разовый личный тест на его собственных статьях, а не независимый бенчмарк с контрольной выборкой и посторонней разметкой — для продакшен-использования, по его словам, нужна более основательная проверка точности, прежде чем полагаться на калибровку модели вслепую.</span>
+      <span data-lang="en">The use case Taylor emphasizes is the place in a pipeline where a small LLM currently gets called just for one structured field (classification, routing, scoring, branching) rather than for substantive text — where the latency and cost of full generation is pure overhead. That's exactly why 777 judgments fit in a fraction of a second and a quarter of a cent — Jev doesn't spend tokens reasoning out loud. The limit Taylor doesn't hide: this is a one-off personal test on his own articles, not an independent benchmark with a held-out set and outside labeling — production use, he says, needs a much more thorough accuracy check before trusting the model's calibration blindly.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

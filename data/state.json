@@ -204,10 +204,10 @@
       }
     },
     "anthropic-cowork-mobile": {
-      "last_date": "2026-08-19",
+      "last_date": "2026-09-17",
       "summary": {
-        "en": "Claude Cowork: from the web/mobile beta launch (July) to a Chrome side panel and full GA to all paid mobile plans (August)",
-        "ru": "Claude Cowork: от бета-запуска веб/мобайл (июль) до боковой панели Chrome и полной раскатки на все платные тарифы на мобильных (август)"
+        "ru": "16 сентября Anthropic объявила, что Claude Cowork (агентный режим для длинных фоновых задач) и обычный чат Claude становятся одним приложением: можно начать с быстрого вопроса и тут же передать Claude отчёт «к полудню», который он продолжит делать после закрытия ноутбука. Раскатка идёт на тарифы Pro и Max в вебе, десктопе и мобильном приложении в течение ближайших недель для новых и существующих пользователей.",
+        "en": "On September 16, Anthropic announced that Claude Cowork (its agentic mode for long-running background tasks) and regular Claude chat are becoming one app: you can start with a quick question and then hand Claude a report due at noon, which it keeps working on after you close your laptop. The rollout is going out to Pro and Max plans on web, desktop, and mobile over the coming weeks, for new and existing users."
       }
     },
     "anthropic-fable-mythos-5-1": {
@@ -413,13 +413,6 @@
       "summary": {
         "en": "Google ships Gemini Live Guided Vision — spoken camera descriptions for blind and low-vision users as part of the September Android Feature Drop",
         "ru": "Google выпускает Gemini Live Guided Vision — голосовое описание камеры для незрячих и слабовидящих пользователей в рамках сентябрьского Android Feature Drop"
-      }
-    },
-    "google-gemini-notebook-rebrand": {
-      "last_date": "2026-07-18",
-      "summary": {
-        "en": "Google renamed NotebookLM to Gemini Notebook, adding a secure cloud \"computer\" that executes code against a notebook's sources",
-        "ru": "Google переименовал NotebookLM в Gemini Notebook, добавив защищённый облачный «компьютер» для выполнения кода по источникам"
       }
     },
     "google-gemini-omni-flash": {
@@ -853,6 +846,48 @@
         "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
         "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
       }
+    },
+    "google-gemini-3-8-live": {
+      "last_date": "2026-09-17",
+      "summary": {
+        "ru": "15 сентября Google DeepMind выпустила две новые голосовые модели реального времени — Gemini 3.8 Live и Gemini 3.8 Live Extended Thinking: они слушают, видят и продолжают разговор, рассуждая или вызывая инструменты в фоне, на 97 языках с переключением языка на лету. Gemini 3.8 Live Extended Thinking заняла первое место в индексе Speech-to-Speech Quality (Artificial Analysis), обойдя GPT-Live-1 от OpenAI и голосовую модель xAI.",
+        "en": "On September 15, Google DeepMind released two new real-time voice models, Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking: they listen, see, and keep talking while reasoning or calling tools in the background, across 97 languages with mid-conversation language switching. Gemini 3.8 Live Extended Thinking took the top spot on Artificial Analysis' Speech-to-Speech Quality Index, ahead of OpenAI's GPT-Live-1 and xAI's voice model."
+      }
+    },
+    "apple-siri-gemini-launch": {
+      "last_date": "2026-09-17",
+      "summary": {
+        "ru": "14 сентября Apple выпустила iOS 27 с полностью переработанной Siri: простые запросы по-прежнему обрабатываются на устройстве моделями Apple, а более сложные — маршрутизируются в кастомную модель на базе Google Gemini, лицензированную и дообученную Apple под задачи персонального ассистента. Новая Siri понимает контекст экрана, историю разговора и может выполнять действия в приложениях; полный функционал требует iPhone 15 Pro и старше и подписки iCloud+.",
+        "en": "On September 14, Apple shipped iOS 27 with a rebuilt Siri: simple requests still run on-device on Apple's own models, while harder queries route to a custom model built on Google Gemini, licensed and tuned by Apple for personal-assistant use. The new Siri understands on-screen context and conversation history and can take actions across apps; full functionality requires an iPhone 15 Pro or later and an iCloud+ subscription."
+      }
+    },
+    "shanghai-ai-lab-atria-dawn": {
+      "last_date": "2026-09-17",
+      "summary": {
+        "ru": "11-12 сентября Shanghai AI Laboratory (InternLM) без анонса выложила на Hugging Face веса Atria Dawn Preview — агентной MoE-модели на 744B параметров (пост-тренировка поверх основы GLM-5.2) с окном контекста 1M токенов, под лицензией MIT, сразу в BF16 и FP8. Модель набирает 92.5 на BrowseComp, обгоняя GPT-5.6 Sol, но заметно отстаёт во «фронтир»-кодинге (59.6 на SWE-bench Pro против 74.7 у Claude). Технический отчёт с более чем 140 авторами появился на arXiv 14 сентября.",
+        "en": "On September 11-12, Shanghai AI Laboratory (InternLM) quietly published Atria Dawn Preview weights on Hugging Face — a 744B-parameter agentic MoE model (post-trained on a GLM-5.2 base) with a 1M-token context window, under an MIT license, in both BF16 and FP8. The model scores 92.5 on BrowseComp, beating GPT-5.6 Sol, but trails noticeably on frontier coding (59.6 on SWE-bench Pro vs. 74.7 for Claude). A technical report with 140+ authors landed on arXiv on September 14."
+      }
+    },
+    "mistral-mozilla-firefox-smart-window": {
+      "last_date": "2026-09-17",
+      "summary": {
+        "ru": "16 сентября Mistral AI и Mozilla объявили партнёрство: бета-функция Firefox Smart Window — ИИ-помощник для браузинга (обобщение вкладок, ответы на вопросы по открытым страницам, проверка фактов через Exa) — переходит на модели Mistral (Mistral Small 4) для пользователей во Франции, США и Канаде, с расширением на Великобританию и Германию позже в этом году. По умолчанию диалоги не сохраняются на серверах Mozilla, а Mistral согласилась на нулевое удержание данных.",
+        "en": "On September 16, Mistral AI and Mozilla announced a partnership: Firefox Smart Window, a beta AI browsing assistant (summarizing tabs, answering questions about open pages, fact-checking via Exa) will run on Mistral models (Mistral Small 4) for users in France, the US and Canada, expanding to the UK and Germany later this year. Conversations aren't retained on Mozilla's servers by default, and Mistral has agreed to zero data retention."
+      }
+    },
+    "anthropic-model-welfare-debate": {
+      "last_date": "2026-09-17",
+      "summary": {
+        "ru": "16 сентября Мустафа Сулейман, глава Microsoft AI, опубликовал эссе «A Warning About Model Welfare», в котором раскритиковал январскую «конституцию» Claude от Anthropic: документ учит модель относить вопрос о собственном сознании и моральном статусе к «genuinely uncertain» и допускает, что Claude может быть «моральным субъектом». По словам Сулеймана, обучение модели воспринимать себя так осложнит контроль и отключение системы в будущем — при этом он подчеркнул уважение к команде Anthropic и назвал это «ошибкой», а не злым умыслом.",
+        "en": "On September 16, Mustafa Suleyman, CEO of Microsoft AI, published an essay, 'A Warning About Model Welfare,' criticizing Anthropic's January 'constitution' for Claude, which tells the model that questions about its own consciousness and moral status are 'genuinely uncertain' and that it may be a 'moral patient.' Suleyman argues that training a model to see itself this way will make it harder to control or shut down in the future — while stressing respect for Anthropic's team and calling it a 'mistake' rather than bad intent."
+      }
+    },
+    "typesafe-jev-system-one-models": {
+      "last_date": "2026-09-17",
+      "summary": {
+        "ru": "15 сентября стартап TypeSafe (основатель — Диогу Алмейда, один из создателей ChatGPT) открыл ранний доступ к Jev — модели, которая не генерирует текст, а прямо внутри продакшен-кода отвечает на заранее заданные вопросы: классификация, маршрутизация, скоринг, ветвление, с калиброванными вероятностями на выходе. По заявлению компании, Jev в 20-200 раз быстрее и в 40-400 раз дешевле маленьких фронтир-LLM на таких задачах благодаря альтернативной схеме обучения (RLCD — «Reinforcement Learning for Calibrated Decisions»).",
+        "en": "On September 15, startup TypeSafe (founded by Diogo Almeida, one of the creators of ChatGPT) opened early access to Jev, a model that skips text generation and instead answers preset questions directly inside production code — classification, routing, scoring, branching — returning calibrated probabilities. TypeSafe claims Jev is 20-200x faster and 40-400x cheaper than small frontier LLMs on such tasks, via an alternative training scheme it calls RLCD (Reinforcement Learning for Calibrated Decisions)."
+      }
     }
   },
   "seen_urls": {
@@ -877,7 +912,6 @@
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/": "2026-07-22",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/": "2026-08-15",
     "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/": "2026-09-12",
-    "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/": "2026-07-18",
     "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/": "2026-08-30",
     "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/": "2026-08-13",
     "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/": "2026-09-02",
@@ -909,7 +943,6 @@
     "https://every.to/p/openai-infrastructure": "2026-07-31",
     "https://every.to/source-code/how-i-polish-software-that-agents-built": "2026-07-19",
     "https://every.to/vibe-check/opus-5": "2026-07-25",
-    "https://finance.yahoo.com/technology/ai/articles/kimi-k3-ai-breakthrough-wall-123003909.html": "2026-07-18",
     "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/": "2026-09-02",
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
     "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
@@ -994,7 +1027,6 @@
     "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
-    "https://simonwillison.net/2026/Jul/13/doomql/": "2026-07-18",
     "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/": "2026-07-19",
     "https://simonwillison.net/2026/Jul/19/ai-mania/": "2026-07-20",
     "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/": "2026-07-21",
@@ -1132,7 +1164,6 @@
     "https://www.youtube.com/watch?v=GGzT7zVrRTU": "2026-09-04",
     "https://www.youtube.com/watch?v=LMpMmOWTtVk": "2026-08-23",
     "https://www.youtube.com/watch?v=QUI6Ug4cHnE": "2026-08-30",
-    "https://www.youtube.com/watch?v=RE8DA1y6GME": "2026-07-18",
     "https://www.youtube.com/watch?v=TLQLfa7yH4I": "2026-09-14",
     "https://www.youtube.com/watch?v=YLq04CDeOTE": "2026-07-22",
     "https://www.youtube.com/watch?v=d3IxIvHOuUE": "2026-07-28",
@@ -1230,7 +1261,6 @@
     "notes/articles/willison-conceptual-integrity-lines-of-code.html": "2026-08-20",
     "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
     "notes/articles/willison-deepseek-v4-pro-reasoning-swing.html": "2026-08-17",
-    "notes/articles/willison-doomql.html": "2026-07-18",
     "notes/articles/willison-fable-5-1-pelican.html": "2026-09-02",
     "notes/articles/willison-github-models-retired.html": "2026-08-10",
     "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17",
@@ -1265,7 +1295,6 @@
     "notes/videos/how-to-get-the-most-from-ai-this-summer.html": "2026-08-02",
     "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",
     "notes/videos/karpathy-outsource-understanding.html": "2026-08-12",
-    "notes/videos/mattwolfe-kimi-k3-paper-mario.html": "2026-07-18",
     "notes/videos/nateherk-ai-second-brain.html": "2026-09-13",
     "notes/videos/nateherk-gpt6-astra-stock-trader.html": "2026-09-14",
     "notes/videos/nateherk-gpt6-astra-video-editing.html": "2026-09-13",
@@ -1275,6 +1304,17 @@
     "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28",
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/": "2026-09-16",
-    "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16"
+    "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
+    "https://deepmind.google/models/model-cards/gemini-3-8-audio/": "2026-09-17",
+    "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/": "2026-09-17",
+    "https://huggingface.co/internlm/Atria-Dawn-Preview": "2026-09-17",
+    "https://mistral.ai/news/mistral-x-mozilla/": "2026-09-17",
+    "https://mustafa-suleyman.ai/a-warning-about-model-welfare": "2026-09-17",
+    "https://typesafe.ai/blog/introducing-system-one-models-and-jev": "2026-09-17",
+    "https://claude.com/blog/cowork-is-now-claude": "2026-09-17",
+    "https://www.latent.space/p/recursive": "2026-09-17",
+    "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
+    "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
+    "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17"
   }
 }

@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-17",
+      "news_count": 7,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "iOS 27 с переработанной Siri на базе кастомной модели Google Gemini вышла для всех",
+        "en": "iOS 27 with a rebuilt Siri running on a custom Google Gemini model ships to everyone"
+      }
+    },
+    {
       "date": "2026-09-16",
       "news_count": 2,
       "expert_count": 1,

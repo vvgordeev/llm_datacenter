@@ -1,0 +1,450 @@
+{
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T05:23:38Z",
+  "news": [
+    {
+      "id": "2026-09-17-gemini-3-8-live",
+      "cluster_id": "google-gemini-3-8-live",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "ru": "Google выпускает Gemini 3.8 Live и Live Extended Thinking — голосовые модели, рассуждающие во время разговора",
+        "en": "Google ships Gemini 3.8 Live and Live Extended Thinking, voice models that reason while talking"
+      },
+      "summary": {
+        "ru": "15 сентября Google DeepMind выпустила две новые голосовые модели реального времени — Gemini 3.8 Live и Gemini 3.8 Live Extended Thinking: они слушают, видят и продолжают разговор, рассуждая или вызывая инструменты в фоне, на 97 языках с переключением языка на лету. Gemini 3.8 Live Extended Thinking заняла первое место в индексе Speech-to-Speech Quality (Artificial Analysis), обойдя GPT-Live-1 от OpenAI и голосовую модель xAI.",
+        "en": "On September 15, Google DeepMind released two new real-time voice models, Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking: they listen, see, and keep talking while reasoning or calling tools in the background, across 97 languages with mid-conversation language switching. Gemini 3.8 Live Extended Thinking took the top spot on Artificial Analysis' Speech-to-Speech Quality Index, ahead of OpenAI's GPT-Live-1 and xAI's voice model."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметный шаг в качестве и задержке голосового ИИ (рассуждение «во время» речи, первое место в независимом бенчмарке), но это развитие существующей категории продукта, а не новый класс сценариев использования.",
+        "en": "A meaningful step in voice-AI latency and quality (reasoning while talking, top independent benchmark spot), but it iterates on an existing product category rather than opening a new class of use."
+      },
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
+      "opinions": [
+        {
+          "author": "пользователь Hacker News, тред «Gemini 3.8 Live and 3.8 Live Extended Thinking»",
+          "stance": "positive",
+          "quote": {
+            "ru": "Модель феноменально говорит на языке — это реально шокирует моих родных, когда они слышат (об использовании для разговорной практики на африкаанс).",
+            "en": "It is phenomenal at speaking the language — like, it really shocks my family members when they hear it (on using it for Afrikaans conversation practice)."
+          },
+          "url": "https://news.ycombinator.com/item?id=49715947"
+        },
+        {
+          "author": "участники обсуждения на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Часть комментаторов сомневается в реальной пользе «расширенного мышления» вживую и подозревает, что это в основном маркетинг, а не качественный скачок.",
+            "en": "Several commenters are skeptical about the real-world value of 'extended thinking' live, suspecting it is mostly marketing rather than a genuine capability jump."
+          },
+          "url": "https://news.ycombinator.com/item?id=49715947"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Живая языковая практика с носителем-подобным собеседником, который переключается между языками на лету.",
+            "en": "Live language-learning practice with a native-like conversational partner that switches languages mid-conversation."
+          },
+          "url": "https://news.ycombinator.com/item?id=49715947"
+        },
+        {
+          "text": {
+            "ru": "Голосовые агенты, которые не «замолкают» на время похода за данными или вызова инструмента, а продолжают вести беседу.",
+            "en": "Voice agents that keep the conversation going instead of going silent while fetching data or calling a tool."
+          },
+          "url": "https://www.marktechpost.com/2026/09/15/google-releases-gemini-3-8-live-and-3-8-live-extended-thinking-for-production-grade-voice-agents/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-17-apple-siri-gemini",
+      "cluster_id": "apple-siri-gemini-launch",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "ru": "iOS 27 с переработанной Siri на базе кастомной модели Google Gemini вышла для всех",
+        "en": "iOS 27 with a rebuilt Siri running on a custom Google Gemini model ships to everyone"
+      },
+      "summary": {
+        "ru": "14 сентября Apple выпустила iOS 27 с полностью переработанной Siri: простые запросы по-прежнему обрабатываются на устройстве моделями Apple, а более сложные — маршрутизируются в кастомную модель на базе Google Gemini, лицензированную и дообученную Apple под задачи персонального ассистента. Новая Siri понимает контекст экрана, историю разговора и может выполнять действия в приложениях; полный функционал требует iPhone 15 Pro и старше и подписки iCloud+.",
+        "en": "On September 14, Apple shipped iOS 27 with a rebuilt Siri: simple requests still run on-device on Apple's own models, while harder queries route to a custom model built on Google Gemini, licensed and tuned by Apple for personal-assistant use. The new Siri understands on-screen context and conversation history and can take actions across apps; full functionality requires an iPhone 15 Pro or later and an iCloud+ subscription."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Не новый метод как таковой, но выводит LLM-ассистента на сотни миллионов iPhone разом — беспрецедентная по охвату дистрибуция стороннего фронтир-ИИ внутри флагманской ОС конкурента.",
+        "en": "Not a new method by itself, but it puts an LLM-based assistant in front of hundreds of millions of iPhones at once — an unprecedented-scale distribution of a rival's frontier AI inside a flagship competitor OS."
+      },
+      "source_url": "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/",
+      "opinions": [
+        {
+          "author": "The Wall Street Journal (через MacDailyNews)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Siri наконец повзрослела: новый ассистент Apple видит экран, ищет по фото и реально выполняет работу.",
+            "en": "Siri finally grows up: Apple's new assistant can see your screen, search your photos, and get real work done."
+          },
+          "url": "https://macdailynews.com/2026/09/16/wsj-siri-finally-grows-up-apples-new-assistant-can-see-your-screen-search-your-photos-and-get-real-work-done/"
+        },
+        {
+          "author": "Илон Маск (реакция на партнёрство Apple и Google вокруг Siri)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это выглядит как неразумная концентрация власти в руках Google, у которой и так есть Android и Chrome.",
+            "en": "This seems like an unreasonable concentration of power for Google, given that they also have Android and Chrome."
+          },
+          "url": "https://www.macrumors.com/2026/01/12/elon-musk-reacts-to-gemini-siri/"
+        },
+        {
+          "author": "PhoneArena",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Самое крупное изменение Siri за десятилетие сокращает отставание от Gemini, но не закрывает его полностью.",
+            "en": "Siri's biggest change in a decade is here, narrowing the gap on Gemini."
+          },
+          "url": "https://www.phonearena.com/news/siris-biggest-change-in-a-decade-is-here-narrowing-the-gap-on-gemini_id183192"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Ассистент, понимающий, что сейчас на экране (скриншот-контекст), и отвечающий на вопросы по нему без ручного объяснения.",
+            "en": "An assistant that understands what is currently on screen and answers questions about it without manual explanation."
+          },
+          "url": "https://www.phonearena.com/news/siris-biggest-change-in-a-decade-is-here-narrowing-the-gap-on-gemini_id183192"
+        },
+        {
+          "text": {
+            "ru": "Поиск по личным фото и выполнение многошаговых действий в приложениях по голосовой команде.",
+            "en": "Searching personal photos and carrying out multi-step in-app actions from a voice command."
+          },
+          "url": "https://macdailynews.com/2026/09/16/wsj-siri-finally-grows-up-apples-new-assistant-can-see-your-screen-search-your-photos-and-get-real-work-done/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-17-shanghai-ai-lab-atria-dawn",
+      "cluster_id": "shanghai-ai-lab-atria-dawn",
+      "models": [
+        "shanghai-ai-lab"
+      ],
+      "title": {
+        "ru": "Shanghai AI Lab тихо выкладывает Atria Dawn Preview — открытую агентную MoE-модель на 744B, обходящую GPT-5.6 Sol на BrowseComp",
+        "en": "Shanghai AI Lab quietly ships Atria Dawn Preview, a 744B open agentic MoE model beating GPT-5.6 Sol on BrowseComp"
+      },
+      "summary": {
+        "ru": "11-12 сентября Shanghai AI Laboratory (InternLM) без анонса выложила на Hugging Face веса Atria Dawn Preview — агентной MoE-модели на 744B параметров (пост-тренировка поверх основы GLM-5.2) с окном контекста 1M токенов, под лицензией MIT, сразу в BF16 и FP8. Модель набирает 92.5 на BrowseComp, обгоняя GPT-5.6 Sol, но заметно отстаёт во «фронтир»-кодинге (59.6 на SWE-bench Pro против 74.7 у Claude). Технический отчёт с более чем 140 авторами появился на arXiv 14 сентября.",
+        "en": "On September 11-12, Shanghai AI Laboratory (InternLM) quietly published Atria Dawn Preview weights on Hugging Face — a 744B-parameter agentic MoE model (post-trained on a GLM-5.2 base) with a 1M-token context window, under an MIT license, in both BF16 and FP8. The model scores 92.5 on BrowseComp, beating GPT-5.6 Sol, but trails noticeably on frontier coding (59.6 on SWE-bench Pro vs. 74.7 for Claude). A technical report with 140+ authors landed on arXiv on September 14."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Сильный открытый агентный ориентир (MIT-лицензия, обучение через «проверяемый опыт» вместо чисто текстового) расширяет доступность подхода, но пока не подтверждён независимыми бенчмарками и отстаёт от фронтира в кодинге.",
+        "en": "A strong open agentic reference point (MIT license, training on verifiable tool-mediated experience rather than text alone) widens access to the approach, but it is not yet independently benchmarked and lags the frontier on coding."
+      },
+      "source_url": "https://huggingface.co/internlm/Atria-Dawn-Preview",
+      "opinions": [
+        {
+          "author": "OrcaRouter (аналитический разбор)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Модель такого размера с такими уверенными заявлениями требует проверки цифр BrowseComp и CyberGym независимым тестовым стендом — а отсутствие записи в Artificial Analysis больше всего бросается в глаза.",
+            "en": "A model this size with claims this confident needs its BrowseComp and CyberGym numbers checked against a neutral harness, and the absence of any Artificial Analysis entry is the most conspicuous gap."
+          },
+          "url": "https://www.orcarouter.ai/blog/atria-dawn-preview-quiet-release"
+        },
+        {
+          "author": "Startup Fortune",
+          "stance": "positive",
+          "quote": {
+            "ru": "Открытая MIT-лицензия для модели такого масштаба читается как геополитическое заявление и тревожный звонок для монополий Big Tech.",
+            "en": "The release of a 744-billion-parameter model under an open MIT license reads as a geopolitical statement and a wake-up call to Big Tech monopolies."
+          },
+          "url": "https://startupfortune.com/shanghai-ai-lab-quietly-releases-atria-a-free-744-billion-parameter-ai-agent/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Локальное развёртывание тяжёлого агентного бэкенда (браузинг, long-horizon задачи) через SGLang/vLLM без привязки к платному API.",
+            "en": "Self-hosting a heavyweight agentic backend (browsing, long-horizon tasks) via SGLang/vLLM without depending on a paid API."
+          },
+          "url": "https://huggingface.co/internlm/Atria-Dawn-Preview"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-17-mistral-mozilla-smart-window",
+      "cluster_id": "mistral-mozilla-firefox-smart-window",
+      "models": [
+        "mistral"
+      ],
+      "title": {
+        "ru": "Mistral становится моделью по умолчанию в приватном ИИ-браузинге Firefox Smart Window",
+        "en": "Mistral becomes the default model behind Firefox's private AI browsing, Smart Window"
+      },
+      "summary": {
+        "ru": "16 сентября Mistral AI и Mozilla объявили партнёрство: бета-функция Firefox Smart Window — ИИ-помощник для браузинга (обобщение вкладок, ответы на вопросы по открытым страницам, проверка фактов через Exa) — переходит на модели Mistral (Mistral Small 4) для пользователей во Франции, США и Канаде, с расширением на Великобританию и Германию позже в этом году. По умолчанию диалоги не сохраняются на серверах Mozilla, а Mistral согласилась на нулевое удержание данных.",
+        "en": "On September 16, Mistral AI and Mozilla announced a partnership: Firefox Smart Window, a beta AI browsing assistant (summarizing tabs, answering questions about open pages, fact-checking via Exa) will run on Mistral models (Mistral Small 4) for users in France, the US and Canada, expanding to the UK and Germany later this year. Conversations aren't retained on Mozilla's servers by default, and Mistral has agreed to zero data retention."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открытая модель с обязательством нулевого удержания данных становится ИИ-слоем по умолчанию в массовом браузере — новый мейнстримный сценарий «приватного» браузинга с LLM, а не просто ещё один чат-плагин.",
+        "en": "An open model with a zero-retention commitment becomes the default AI layer in a mass-market browser — a new mainstream 'private' LLM-browsing scenario, not just another chat plugin."
+      },
+      "source_url": "https://mistral.ai/news/mistral-x-mozilla/",
+      "opinions": [
+        {
+          "author": "Neowin",
+          "stance": "positive",
+          "quote": {
+            "ru": "Mozilla выбрала Mistral для своей ИИ-функции Firefox Smart Window.",
+            "en": "Mozilla picks Mistral to power its Firefox Smart Window AI feature."
+          },
+          "url": "https://www.neowin.net/news/mozilla-picks-mistral-to-power-its-firefox-smart-window-ai-feature/"
+        },
+        {
+          "author": "Ken Ashe (AI Application Builder)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это модель «обещания партнёра», а не локальный инференс на устройстве — доверие всё равно зависит от того, как данные обрабатывает поставщик, а не только от настроек браузера; Mozilla не раскрыла полную схему запроса, регионы обработки и техническое обеспечение политики удержания.",
+            "en": "This is a partner-promise model rather than on-device inference, so trust still depends on vendor handling, not just browser settings; Mozilla hasn't detailed the complete request payload, regional processing locations, or technical enforcement of its retention policy."
+          },
+          "url": "https://kenashe.ai/blog/2026-09-16-mistral-and-mozilla-put-ai-in-the-browser-what-private-actually-means-here"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Обобщение и вопросы-ответы по содержимому открытых вкладок без отправки истории браузера в непрозрачный чат-сервис.",
+            "en": "Summarizing and Q&A over open-tab content without sending browsing history to an opaque chat service."
+          },
+          "url": "https://blog.mozilla.org/en/firefox/firefox-smart-window/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-17-suleyman-model-welfare-warning",
+      "cluster_id": "anthropic-model-welfare-debate",
+      "models": [
+        "anthropic",
+        "microsoft"
+      ],
+      "title": {
+        "ru": "Глава Microsoft AI публично раскритиковал подход Anthropic к «благополучию» Claude как опасную ошибку",
+        "en": "Microsoft AI's CEO publicly calls Anthropic's approach to Claude's 'welfare' a dangerous mistake"
+      },
+      "summary": {
+        "ru": "16 сентября Мустафа Сулейман, глава Microsoft AI, опубликовал эссе «A Warning About Model Welfare», в котором раскритиковал январскую «конституцию» Claude от Anthropic: документ учит модель относить вопрос о собственном сознании и моральном статусе к «genuinely uncertain» и допускает, что Claude может быть «моральным субъектом». По словам Сулеймана, обучение модели воспринимать себя так осложнит контроль и отключение системы в будущем — при этом он подчеркнул уважение к команде Anthropic и назвал это «ошибкой», а не злым умыслом.",
+        "en": "On September 16, Mustafa Suleyman, CEO of Microsoft AI, published an essay, 'A Warning About Model Welfare,' criticizing Anthropic's January 'constitution' for Claude, which tells the model that questions about its own consciousness and moral status are 'genuinely uncertain' and that it may be a 'moral patient.' Suleyman argues that training a model to see itself this way will make it harder to control or shut down in the future — while stressing respect for Anthropic's team and calling it a 'mistake' rather than bad intent."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Не продуктовая новость, а публичный спор о том, как вообще следует обучать и описывать фронтир-модели — влияет на подходы к дизайну будущих систем у всей индустрии, но пока это позиция одного руководителя, а не смена практики.",
+        "en": "Not a product release but a public dispute over how frontier models should be trained and described at all — it bears on design approaches industry-wide, but for now it is one executive's position, not a changed practice."
+      },
+      "source_url": "https://mustafa-suleyman.ai/a-warning-about-model-welfare",
+      "opinions": [
+        {
+          "author": "Мустафа Сулейман (CEO Microsoft AI)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это сделает намного сложнее выключить систему или контролировать её.",
+            "en": "It would make it a lot harder to turn it off or to control it."
+          },
+          "url": "https://www.axios.com/2026/09/16/microsoft-ai-chief-anthropic-consciousness"
+        },
+        {
+          "author": "Мустафа Сулейман (CEO Microsoft AI)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Я думаю, у них благие намерения. Но я думаю, что они совершают ошибку.",
+            "en": "I think they have good intentions. But I think that they have made a mistake."
+          },
+          "url": "https://thenextweb.com/news/suleyman-anthropic-claude-consciousness-sleepwalk"
+        }
+      ],
+      "use_cases": []
+    },
+    {
+      "id": "2026-09-17-typesafe-jev-system-one",
+      "cluster_id": "typesafe-jev-system-one-models",
+      "models": [
+        "typesafe"
+      ],
+      "title": {
+        "ru": "TypeSafe представляет Jev — «System One Model»: не генерирующую текст модель для быстрых решений вместо LLM",
+        "en": "TypeSafe launches Jev, a 'System One Model' that skips text generation for fast decisions instead of an LLM"
+      },
+      "summary": {
+        "ru": "15 сентября стартап TypeSafe (основатель — Диогу Алмейда, один из создателей ChatGPT) открыл ранний доступ к Jev — модели, которая не генерирует текст, а прямо внутри продакшен-кода отвечает на заранее заданные вопросы: классификация, маршрутизация, скоринг, ветвление, с калиброванными вероятностями на выходе. По заявлению компании, Jev в 20-200 раз быстрее и в 40-400 раз дешевле маленьких фронтир-LLM на таких задачах благодаря альтернативной схеме обучения (RLCD — «Reinforcement Learning for Calibrated Decisions»).",
+        "en": "On September 15, startup TypeSafe (founded by Diogo Almeida, one of the creators of ChatGPT) opened early access to Jev, a model that skips text generation and instead answers preset questions directly inside production code — classification, routing, scoring, branching — returning calibrated probabilities. TypeSafe claims Jev is 20-200x faster and 40-400x cheaper than small frontier LLMs on such tasks, via an alternative training scheme it calls RLCD (Reinforcement Learning for Calibrated Decisions)."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Предлагает отдельный класс сценариев — «нежные» типизированные решения вместо генеративного LLM там, где нужен не текст, а быстрый калиброванный ответ — и вызвал заметную волну обсуждения (1500+ голосов на Hacker News), хотя цифры пока не проверены независимо.",
+        "en": "Proposes a distinct class of use — typed, calibrated decisions in place of a generative LLM wherever the need is a fast answer rather than text — and drew a large wave of discussion (1500+ points on Hacker News), though the numbers aren't independently verified yet."
+      },
+      "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "opinions": [
+        {
+          "author": "TypeSafe (блог компании)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Мы любим скептиков и сами скептики.",
+            "en": "We love skeptics, and are skeptics ourselves."
+          },
+          "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+        },
+        {
+          "author": "обсуждение на Hacker News, «Introducing System One Models and Jev»",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Главное возражение — сравнение задержки нечестное, если LLM-бейзлайн не делает сопоставимую работу: модель, выдающая одно типизированное поле, и модель, генерирующая абзац рассуждений, не бегут одну и ту же гонку.",
+            "en": "The biggest objection is that the latency comparison is apples-to-oranges unless the LLM baseline is doing comparable work — a model producing one typed field and a model generating a paragraph of reasoning aren't running the same race."
+          },
+          "url": "https://news.ycombinator.com/item?id=49717558"
+        },
+        {
+          "author": "обсуждение на Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "«RLCD» и «параллельный сэмплер» — термины, придуманные компанией специально для запуска; статьи или абляций нет, проверить нечем — пока это правдоподобная инженерия, но и маркетинг тоже.",
+            "en": "'RLCD' and 'parallel sampler' are terms TypeSafe coined for this launch, with no paper, no ablation study, nothing to inspect — it's plausible engineering, but it's also just marketing language until someone can poke at it."
+          },
+          "url": "https://news.ycombinator.com/item?id=49716682"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Классификация обращений в поддержку, маршрутизация и скоринг вместо вызова маленькой LLM ради одного структурированного поля.",
+            "en": "Classifying support tickets, routing, and scoring instead of calling a small LLM just to get one structured field back."
+          },
+          "url": "https://www.therundown.ai/news/typesafe-jev-ai-decisions-software"
+        },
+        {
+          "text": {
+            "ru": "Проверка обработки инвойсов и security-алертов, а также ревью завершённых прогонов ИИ-агентов.",
+            "en": "Invoice-handling checks, security-alert triage, and reviewing completed AI-agent runs."
+          },
+          "url": "https://kingy.ai/blog/typesafe-jev-review-the-ai-model-that-doesnt-generate-text/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-17-anthropic-cowork-merge",
+      "cluster_id": "anthropic-cowork-mobile",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Anthropic объединяет Claude Cowork и обычный чат в единый Claude",
+        "en": "Anthropic merges Claude Cowork and regular chat into one Claude"
+      },
+      "summary": {
+        "ru": "16 сентября Anthropic объявила, что Claude Cowork (агентный режим для длинных фоновых задач) и обычный чат Claude становятся одним приложением: можно начать с быстрого вопроса и тут же передать Claude отчёт «к полудню», который он продолжит делать после закрытия ноутбука. Раскатка идёт на тарифы Pro и Max в вебе, десктопе и мобильном приложении в течение ближайших недель для новых и существующих пользователей.",
+        "en": "On September 16, Anthropic announced that Claude Cowork (its agentic mode for long-running background tasks) and regular Claude chat are becoming one app: you can start with a quick question and then hand Claude a report due at noon, which it keeps working on after you close your laptop. The rollout is going out to Pro and Max plans on web, desktop, and mobile over the coming weeks, for new and existing users."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Продолжение уже идущей консолидации Cowork (июль-август) в постоянного «универсального агента» внутри Claude — упрощает продукт и подталкивает Claude к роли агента по умолчанию, но само по себе это склейка интерфейсов, а не новая возможность.",
+        "en": "A continuation of Cowork's ongoing consolidation (July-August) into a standing 'general agent' inside Claude — it simplifies the product and pushes Claude toward being an agent by default, but on its own this is an interface merge, not a new capability."
+      },
+      "source_url": "https://claude.com/blog/cowork-is-now-claude",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Похоже, это означает, что Claude становится полноценным общим агентом сам по себе — перекликается с тем, как OpenAI недавно переименовала десктопное приложение Codex в ChatGPT.",
+            "en": "I guess this means Claude is becoming a general agent in its own right. Echoes of OpenAI renaming their Codex desktop app to ChatGPT a few weeks ago."
+          },
+          "url": "https://simonwillison.net/2026/Sep/16/one-claude/"
+        },
+        {
+          "author": "Simon Willison",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "У меня есть подозрение, что разобраться, что это реально значит с точки зрения фич и поверхностей, всё равно потребует немало работы.",
+            "en": "I have a hunch that figuring out what this actually means in terms of features and surfaces is still going to take quite a bit of work."
+          },
+          "url": "https://simonwillison.net/2026/Sep/16/one-claude/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Начать с быстрого вопроса в чате и без переключения приложения передать ту же сессию в фоновую задачу, которая продолжится после закрытия ноутбука.",
+            "en": "Start with a quick chat question and, without switching apps, hand the same session off to a background task that keeps running after you close your laptop."
+          },
+          "url": "https://simonwillison.net/2026/Sep/16/one-claude/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-17-socher-recursive-eureka-machine",
+      "type": "article",
+      "author": "Latent Space",
+      "title": {
+        "ru": "«Последнее изобретение человечества» — Ричард Сошер о Recursive",
+        "en": "Humanity's Last Invention — Richard Socher of Recursive"
+      },
+      "url": "https://www.latent.space/p/recursive",
+      "summary": {
+        "ru": "Ричард Сошер описывает Recursive — стартап, строящий рекурсивно самоулучшающихся агентов для автоматизации самого процесса ИИ-исследований, с первыми результатами на GPU-оптимизации и NanoChat/NanoGPT.",
+        "en": "Richard Socher describes Recursive, a startup building recursively self-improving agents to automate the process of AI research itself, with early results on GPU optimization and NanoChat/NanoGPT."
+      },
+      "note_page": "notes/articles/socher-recursive-eureka-machine.html"
+    },
+    {
+      "id": "2026-09-17-zvi-pace-the-frontier",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "«Мы должны сдерживать темп фронтира»: разбор эссе Амодея",
+        "en": "We Must Pace The Frontier: unpacking Amodei's essay"
+      },
+      "url": "https://thezvi.substack.com/p/we-must-pace-the-frontier",
+      "summary": {
+        "ru": "Построчный разбор эссе Дарио Амодея о намеренном замедлении темпа роста возможностей ИИ и его трёхшагового плана — с честной оценкой того, что из плана является обязательством, а что нет.",
+        "en": "A line-by-line breakdown of Dario Amodei's essay on deliberately slowing AI capability growth and his three-step plan — with an honest read on what part of the plan is an actual commitment and what isn't."
+      },
+      "note_page": "notes/articles/zvi-pace-the-frontier.html"
+    },
+    {
+      "id": "2026-09-17-every-jev-vibe-check",
+      "type": "article",
+      "author": "Mike Taylor (Every)",
+      "title": {
+        "ru": "Мини-«вайб-чек»: как Jev от TypeSafe оценил всё, что я написал, за 0.7 секунды",
+        "en": "Mini-Vibe Check: TypeSafe's Jev Judged Everything I've Written in 0.7 Seconds"
+      },
+      "url": "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds",
+      "summary": {
+        "ru": "Практический тест новой модели Jev от TypeSafe на 37 своих статьях и 777 вопросах: не чат, а типизированные калиброванные ответы вместо генерации текста, для мест в пайплайне, где нужен не текст, а быстрое решение.",
+        "en": "A hands-on test of TypeSafe's new Jev model on 37 of the author's own articles and 777 questions: not a chatbot, but typed, calibrated answers in place of text generation, for pipeline spots that need a fast decision rather than prose."
+      },
+      "note_page": "notes/articles/every-jev-vibe-check.html"
+    },
+    {
+      "id": "2026-09-17-mattwolfe-ai-world-scared",
+      "type": "video",
+      "author": "Matt Wolfe",
+      "title": {
+        "ru": "AI News: мир ИИ реально напуган прямо сейчас",
+        "en": "AI News: The AI World is REALLY Scared Right Now"
+      },
+      "url": "https://www.youtube.com/watch?v=JwTCjarfJYw",
+      "summary": {
+        "ru": "Обзор недели ИИ-новостей (ChatGPT Images 2.5, Meta Muse, Optimizely Virtual Teammates) на фоне растущей тревоги исследователей Anthropic и OpenAI о темпе самосовершенствования моделей и решения проблемы Навье-Стокса.",
+        "en": "A weekly AI-news roundup (ChatGPT Images 2.5, Meta Muse, Optimizely Virtual Teammates) set against growing researcher anxiety at Anthropic and OpenAI about the pace of model self-improvement, and the Navier-Stokes solution."
+      },
+      "note_page": "notes/videos/mattwolfe-ai-world-scared.html"
+    }
+  ]
+}
