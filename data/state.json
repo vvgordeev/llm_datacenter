@@ -257,10 +257,10 @@
       }
     },
     "anthropic-pacing-the-frontier": {
-      "last_date": "2026-09-16",
+      "last_date": "2026-09-18",
       "summary": {
-        "ru": "Amodei (12 сент, эссе) → Altman/Musk согласны → Microsoft четвёртым присоединяется с Code of Conduct (13-14 сент) → OpenAI подтверждает недели реальных переговоров с Anthropic/Google и поддержку FRONTIER Act (15 сент), на фоне критики (David Sacks: «регуляторный захват»).",
-        "en": "Amodei (Sept 12 essay) → Altman/Musk agree → Microsoft joins as a fourth backer with a Code of Conduct (Sept 13-14) → OpenAI confirms weeks of actual talks with Anthropic/Google and backs the FRONTIER Act (Sept 15), amid criticism (David Sacks: \"regulatory capture\")."
+        "ru": "Amodei (12 сент, эссе) → Altman/Musk согласны → Microsoft четвёртым присоединяется с Code of Conduct (13-14 сент) → OpenAI подтверждает недели переговоров и поддержку FRONTIER Act (15 сент) → Anthropic публикует первый количественный R&D Automation Index: Claude ведёт 26% AI R&D компании (17 сент).",
+        "en": "Amodei (Sept 12 essay) → Altman/Musk agree → Microsoft joins as a fourth backer with a Code of Conduct (Sept 13-14) → OpenAI confirms weeks of talks and backs the FRONTIER Act (Sept 15) → Anthropic publishes the first quantitative R&D Automation Index: Claude leads 26% of the company's AI R&D (Sept 17)."
       }
     },
     "anthropic-record-a-skill": {
@@ -457,13 +457,6 @@
         "ru": "CloudSEK раскрывает мартовскую атаку на цепочку поставок LiteLLM (популярный опенсорсный шлюз к LLM API) через скомпрометированный сканер Trivy — 2500+ организаций и ~434000 CI/CD-пайплайнов потенциально затронуты кражей учётных данных"
       }
     },
-    "lmstudio-bionic": {
-      "last_date": "2026-07-19",
-      "summary": {
-        "en": "LM Studio ships Bionic — an agent app for local/open models with automatic checkpointing and a ZDR Secure Cloud",
-        "ru": "LM Studio выпускает Bionic — агента для локальных/открытых моделей с автосохранением контрольных точек и Secure Cloud (ZDR)"
-      }
-    },
     "mcp-2026-07-28-stateless": {
       "last_date": "2026-07-29",
       "summary": {
@@ -655,13 +648,6 @@
       "summary": {
         "en": "On August 10, OpenAI added restaurant booking to ChatGPT through partnerships with OpenTable (available worldwide), Resy (US), and Yelp (US and Canada, plus waitlists): a user describes a city, time, party size, and cuisine or atmosphere preferences, and ChatGPT surfaces real available slots and com",
         "ru": "10 августа OpenAI включила в ChatGPT бронирование столиков через партнёрство с OpenTable (доступно по всему миру), Resy (США) и Yelp (США и Канада, плюс лист ожидания): пользователь описывает город, время, число гостей и предпочтения по кухне или атмосфере, а ChatGPT показывает реально доступные сло"
-      }
-    },
-    "openai-chatgpt-unified-search": {
-      "last_date": "2026-07-19",
-      "summary": {
-        "en": "ChatGPT adds unified search across chats, Projects, images and documents on every plan",
-        "ru": "ChatGPT добавляет единый поиск по чатам, проектам, изображениям и документам на всех тарифах"
       }
     },
     "openai-codex-appshots-computer-use": {
@@ -888,6 +874,27 @@
         "ru": "15 сентября стартап TypeSafe (основатель — Диогу Алмейда, один из создателей ChatGPT) открыл ранний доступ к Jev — модели, которая не генерирует текст, а прямо внутри продакшен-кода отвечает на заранее заданные вопросы: классификация, маршрутизация, скоринг, ветвление, с калиброванными вероятностями на выходе. По заявлению компании, Jev в 20-200 раз быстрее и в 40-400 раз дешевле маленьких фронтир-LLM на таких задачах благодаря альтернативной схеме обучения (RLCD — «Reinforcement Learning for Calibrated Decisions»).",
         "en": "On September 15, startup TypeSafe (founded by Diogo Almeida, one of the creators of ChatGPT) opened early access to Jev, a model that skips text generation and instead answers preset questions directly inside production code — classification, routing, scoring, branching — returning calibrated probabilities. TypeSafe claims Jev is 20-200x faster and 40-400x cheaper than small frontier LLMs on such tasks, via an alternative training scheme it calls RLCD (Reinforcement Learning for Calibrated Decisions)."
       }
+    },
+    "openai-sponsored-agents-ads": {
+      "last_date": "2026-09-18",
+      "summary": {
+        "ru": "OpenAI запускает Sponsored Agents — оплаченных брендами ИИ-агентов внутри диалогов ChatGPT (пилот США, партнёры Wayfair и Angi), плюс интеграции Shopify/HubSpot (16 сент).",
+        "en": "OpenAI launches Sponsored Agents — brand-paid AI agents inside ChatGPT conversations (US pilot, partners Wayfair and Angi), plus Shopify/HubSpot integrations (Sept 16)."
+      }
+    },
+    "google-deepmind-institute-agi": {
+      "last_date": "2026-09-18",
+      "summary": {
+        "ru": "Google DeepMind запускает DeepMind Institute — публичную площадку эссе о подготовке общества к AGI (Хассабис, Легг, Манyика), совпало с сообщениями о застопорившихся планах госнадзора за ИИ в США (16 сент).",
+        "en": "Google DeepMind launches the DeepMind Institute — a public essay platform on societal AGI readiness (Hassabis, Legg, Manyika), coinciding with reports that US government AI-oversight plans had stalled (Sept 16)."
+      }
+    },
+    "xai-grok-build-memory": {
+      "last_date": "2026-09-18",
+      "summary": {
+        "ru": "xAI добавляет в Grok Build долговременную кросс-сессионную память проекта с командой /memory (16 сент).",
+        "en": "xAI adds long-term, cross-session project memory to Grok Build with a /memory command (Sept 16)."
+      }
     }
   },
   "seen_urls": {
@@ -939,9 +946,7 @@
     "https://darioamodei.com/post/we-must-pace-the-frontier": "2026-09-13",
     "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/": "2026-07-31",
     "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/": "2026-08-29",
-    "https://every.to/context-window/the-urge-to-merge-chatgpt-and-codex": "2026-07-19",
     "https://every.to/p/openai-infrastructure": "2026-07-31",
-    "https://every.to/source-code/how-i-polish-software-that-agents-built": "2026-07-19",
     "https://every.to/vibe-check/opus-5": "2026-07-25",
     "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/": "2026-09-02",
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
@@ -963,7 +968,6 @@
     "https://interconnected.org/home/2026/08/21/galactic": "2026-08-26",
     "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/": "2026-08-26",
     "https://kingy.ai/news/appshots-inside-openai-codexs-new-command-command-trick-for-macos/": "2026-08-19",
-    "https://lmstudio.ai/blog/introducing-lm-studio-bionic": "2026-07-19",
     "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-2-winners-and-losers/": "2026-07-29",
     "https://mistral.ai/news/mistral-x-humain/": "2026-08-25",
     "https://mistral.ai/news/regional-inference-open-models-new-compute/": "2026-08-12",
@@ -1027,7 +1031,6 @@
     "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
-    "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/": "2026-07-19",
     "https://simonwillison.net/2026/Jul/19/ai-mania/": "2026-07-20",
     "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/": "2026-07-21",
     "https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/": "2026-07-22",
@@ -1068,7 +1071,6 @@
     "https://thenewstack.io/kimi-k3-open-weights/": "2026-07-28",
     "https://thenewstack.io/moonshot-fable5-distillation-accusations/": "2026-07-24",
     "https://thenewstack.io/opus-5-agentic-coding-cost/": "2026-07-26",
-    "https://thezvi.substack.com/p/ai-177-part-2-wish-you-were-here": "2026-07-19",
     "https://thezvi.substack.com/p/ai-178-a-fire-alarm-for-general-intelligence": "2026-07-25",
     "https://thezvi.substack.com/p/ai-179-part-1-a-louder-fire-alarm": "2026-07-31",
     "https://thezvi.substack.com/p/ai-179-part-2-hearing-the-fire-alarm": "2026-08-01",
@@ -1150,8 +1152,6 @@
     "https://www.sonarsource.com/blog/stop-the-context-tax/": "2026-09-06",
     "https://www.techradar.com/ai-platforms-assistants/gemini/google-just-gave-every-windows-10-and-11-pc-a-gemini-key-i-tried-it-and-its-the-easiest-way-to-use-its-ai-yet": "2026-09-12",
     "https://www.techradar.com/pro/claude-cowork-is-coming-to-your-chrome-browser-and-i-might-finally-use-it-now": "2026-08-19",
-    "https://www.techtimes.com/articles/320519/20260714/chatgpt-turns-searchable-knowledge-base-every-conversation-now-findable.htm": "2026-07-19",
-    "https://www.techtimes.com/articles/320905/20260718/claude-fable-5-ends-subscription-limbo-permanent-max-credits-only-pro.htm": "2026-07-19",
     "https://www.testingcatalog.com/grok-bot-to-get-templates-and-multi-account-support-soon/": "2026-08-31",
     "https://www.theregister.com/ai-and-ml/2026/08/25/claude-and-cowork-now-share-what-they-know-about-you/5292412": "2026-08-26",
     "https://www.unite.ai/deepseek-ships-v4-pro-as-its-flagship-model-leaves-preview/": "2026-08-13",
@@ -1200,14 +1200,12 @@
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "https://z.ai/blog/glm-5.3": "2026-08-15",
     "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
-    "notes/articles/ai-177-part-2-wish-you-were-here.html": "2026-07-19",
     "notes/articles/alderson-ai-margin-collapse-part2.html": "2026-07-29",
     "notes/articles/alpert-lossless-transformations.html": "2026-08-12",
     "notes/articles/appleinsider-gemini-mac-voice-chat-window.html": "2026-08-01",
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
     "notes/articles/breunig-fable-end-of-free-lunch.html": "2026-08-26",
-    "notes/articles/claude-make-fable-5-permanent.html": "2026-07-19",
     "notes/articles/elastic-context-vs-prompt-engineering.html": "2026-08-14",
     "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
     "notes/articles/garymarcus-astra-oversold.html": "2026-08-03",
@@ -1215,7 +1213,6 @@
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
     "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
-    "notes/articles/how-i-polish-software-that-agents-built.html": "2026-07-19",
     "notes/articles/huggingface-agent-intrusion-timeline.html": "2026-07-29",
     "notes/articles/lambert-kimi-k3-open-weights-escalation.html": "2026-07-21",
     "notes/articles/lambert-open-models-recap-kimi-qwen.html": "2026-07-24",
@@ -1241,7 +1238,6 @@
     "notes/articles/simonw-raccoon-heist-vibe-coding.html": "2026-08-09",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
     "notes/articles/stross-non-use-of-ai-writing.html": "2026-08-03",
-    "notes/articles/the-urge-to-merge-chatgpt-and-codex.html": "2026-07-19",
     "notes/articles/thenewstack-kimi-k3-fable5-siphoning.html": "2026-07-24",
     "notes/articles/thenewstack-kimi-k3-few-can-run-it.html": "2026-07-28",
     "notes/articles/thenewstack-opus5-agentic-coding-cost.html": "2026-07-26",
@@ -1315,6 +1311,13 @@
     "https://www.latent.space/p/recursive": "2026-09-17",
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
     "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
-    "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17"
+    "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17",
+    "https://www.anthropic.com/institute/measuring-pace-of-ai-development": "2026-09-18",
+    "https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads": "2026-09-18",
+    "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/": "2026-09-18",
+    "https://x.ai/news/grok-build-memory": "2026-09-18",
+    "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
+    "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
+    "https://www.youtube.com/watch?v=u-giatW9mYU": "2026-09-18"
   }
 }

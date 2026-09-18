@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-18",
+      "news_count": 4,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Anthropic публикует первый «Индекс автоматизации R&D»: Claude уже ведёт 26% исследований и разработок компании",
+        "en": "Anthropic publishes its first R&D Automation Index: Claude now leads 26% of the company's own research and development"
+      }
+    },
+    {
       "date": "2026-09-17",
       "news_count": 7,
       "expert_count": 4,

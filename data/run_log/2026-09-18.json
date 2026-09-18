@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T06:40:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "blocked", "candidates": 1, "note": "WebFetch www.anthropic.com -> EGRESS_BLOCKED (one attempt, no retry); WebSearch covered instead — found the Institute's R&D Automation Index report (Sept 17), a continuation of the anthropic-pacing-the-frontier cluster"},
+    {"source": "openai blog", "status": "ok", "candidates": 1, "note": "WebFetch openai.com not attempted (consistently EGRESS_BLOCKED in prior runs); WebSearch found Sponsored Agents ad launch (Sept 16). No other fresh Sept 16-18 OpenAI product news found"},
+    {"source": "google/deepmind blog", "status": "ok", "candidates": 1, "note": "WebFetch deepmind.google not attempted; WebSearch found the DeepMind Institute AGI think-tank launch (Sept 16). Gemini 3.5 Transcribe API update and Search Live integration found but judged too minor/API-only to include"},
+    {"source": "meta ai blog", "status": "ok", "candidates": 0, "note": "WebSearch found only Muse (Sept 8) already past lookback and previously covered — no new Sept 16-18 Meta item"},
+    {"source": "xai news", "status": "ok", "candidates": 1, "note": "WebSearch found Grok Build long-term memory feature (Sept 16)"},
+    {"source": "mistral news", "status": "ok", "candidates": 0, "note": "WebSearch found only OCR 4 / Leanstral 1.5 items already outside lookback — no new Sept 16-18 item"},
+    {"source": "deepseek changelog", "status": "ok", "candidates": 0, "note": "WebSearch found only a viral engineer opinion piece (Sept 17, no product content) and V4.1 Flash (already clustered Sept 10) — no new candidate"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "hn.algolia.com -> EGRESS_BLOCKED on CONNECT (one attempt, no retry); used WebSearch site:news.ycombinator.com queries instead for reactions/opinions"},
+    {"source": "community (reddit/x)", "status": "ok", "candidates": 0, "note": "covered via WebSearch as part of per-story opinion gathering, not as separate candidate discovery"},
+    {"source": "aggregators (smol.ai, TLDR AI)", "status": "ok", "candidates": 1, "note": "smol.ai coverage (via WebSearch) surfaced the OpenAI Navier-Stokes story, already clustered on 2026-09-09 — no new candidate from aggregators beyond items found via direct model/expert searches"},
+    {"source": "china / other labs (widened search)", "status": "ok", "candidates": 1, "note": "Found 'The Last AI Built by Humans' RSI roadmap paper (35 Chinese researchers, ByteDance/Tsinghua/Shanghai AI Lab, arXiv 2609.11873, covered Sept 15-16) — NOT published: could not verify a genuine, correctly-dated third-party reaction quote about the paper itself (a candidate Anna Wang quote turned out to be from an unrelated Sept 9 resignation post, not a reaction to this paper) within the session's egress constraints (WebFetch blocked on all candidate sources), so it was dropped rather than risk a misattributed opinion"},
+    {"source": "experts: config list (Simon Willison, Karpathy, Latent Space, AI Explained, Matt Wolfe, Mollick, Nate Herk, Matt Pocock)", "status": "ok", "candidates": 1, "note": "Simon Willison's Sept 17 post on self-generated prompt injections in compaction summaries confirmed fresh and substantial — published. Karpathy/AI Explained/Matt Wolfe/Mollick/Nate Herk/Matt Pocock/Latent Space: no verifiably fresh (within 7 days) content found via WebSearch; YouTube RSS/WebFetch fully EGRESS_BLOCKED this run (could not confirm exact upload dates for any config video channel)"},
+    {"source": "experts: widened search (non-config resonant authors)", "status": "ok", "candidates": 2, "note": "Zvi Mowshowitz 'AI #186: The World Takes Notice' (Sept 17, article) and Nate B. Jones 'AI Made Every Company 10x More Productive...' (Sept 17, YouTube video, confirmed real URL) added per SKILL.md widening rule"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 4,
+    "rejected": {
+      "уже освещено в прошлых сводках (Meta Muse, Mistral OCR 4/Leanstral, DeepSeek V4.1 Flash, OpenAI Navier-Stokes)": 4,
+      "недостаточно проверенная атрибуция реакции (Chinese RSI roadmap paper — риск ошибочного цитирования)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — scripts/gemini_video.py successfully summarized https://www.youtube.com/watch?v=u-giatW9mYU via generativelanguage.googleapis.com (GEMINI_API_KEY present); no demonstration timestamps flagged, so extract_frames.py was not run",
+    "frames": "not needed — Gemini flagged zero demonstration moments in this video (talking-head format with thesis slides)"
+  },
+  "expert_content_note": "min_expert_total=5 not reached (published 3: 2 articles + 1 video) despite widening search beyond config experts (Zvi Mowshowitz, Nate B. Jones added). All 8 config video experts (Karpathy, AI Explained, Matt Wolfe, Nate Herk, Matt Pocock) had no WebSearch-confirmed upload within the 7-day window this run, and YouTube RSS/WebFetch was fully EGRESS_BLOCKED (unlike some prior runs where it was intermittently available), so exact upload dates for their channels could not be checked directly.",
+  "egress_note": "This run saw WebFetch EGRESS_BLOCKED on essentially every domain attempted, including youtube.com, news.ycombinator.com, arxiv.org, and most news outlets (Bloomberg, Engadget, Business Standard, SiliconANGLE, Unite.AI, IBTimes UK, blog.redwoodresearch.org, blog domains of Anthropic/OpenAI/Google/Meta/Mistral/DeepSeek/xAI). This is well over 1/3 of sources attempted — a significant environment degradation from some prior runs. All news and opinion sourcing this run relied on WebSearch synthesis; opinions were restricted to cases where either an exact quoted line or an exact article headline could be confirmed verbatim in search results, to avoid misattributing paraphrased content as direct quotes."
+}

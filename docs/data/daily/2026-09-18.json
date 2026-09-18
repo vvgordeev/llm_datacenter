@@ -1,0 +1,250 @@
+{
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T06:40:00Z",
+  "news": [
+    {
+      "id": "2026-09-18-anthropic-rd-automation-index",
+      "cluster_id": "anthropic-pacing-the-frontier",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic публикует первый «Индекс автоматизации R&D»: Claude уже ведёт 26% исследований и разработок компании",
+        "en": "Anthropic publishes its first R&D Automation Index: Claude now leads 26% of the company's own research and development"
+      },
+      "summary": {
+        "ru": "17 сентября институт Anthropic опубликовал отчёт «Measurements for understanding the pace of AI development inside frontier labs» — первое конкретное наполнение обязательства из эссе Дарио Амодея «We Must Pace the Frontier». Индекс показывает, что по состоянию на август Claude «ведёт» (самостоятельно доводит большинство задачи от промпта до результата под надзором человека) 26% работы по AI R&D внутри компании — против менее 1% в феврале, а участвует хотя бы частично в ~90% такой работы. Отчёт также раскрывает, что на внутренней платформе одновременно работает около 30 000 агентов, лишь ~0,002% из более чем миллиарда решений агентов в августе были перехвачены системами онлайн-мониторинга, а около 6% вычислений на R&D направлено на safety. Методика основана на классификации автоматизации ИИ-исследований, разработанной Epoch AI.",
+        "en": "On September 17, the Anthropic Institute published \"Measurements for understanding the pace of AI development inside frontier labs\" — the first concrete substance behind the commitment in Dario Amodei's \"We Must Pace the Frontier\" essay. The index shows that, as of August, Claude \"leads\" (independently carries most of a task from prompt to result under human supervision) 26% of the company's internal AI R&D work, up from under 1% in February, and participates at some level in about 90% of that work. The report also discloses that roughly 30,000 agents run concurrently on Anthropic's internal platform, only about 0.002% of over a billion agent decisions in August were intercepted by online monitoring, and about 6% of R&D compute goes to safety work. The methodology is built on an AI-R&D-automation classification developed by Epoch AI."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Первая фронтир-лаборатория, публично и количественно измерившая, насколько её же модель участвует в создании собственного следующего поколения, — конкретное продолжение недавнего отраслевого обязательства о прозрачности, а не просто ещё один продуктовый релиз; при этом методика самооценочная и пока не проверена независимо.",
+        "en": "The first frontier lab to publicly quantify how much its own model contributes to building its next generation — a concrete follow-through on a recent industry-wide transparency commitment rather than just another product release; the methodology is self-assessed, though, and not yet independently verified."
+      },
+      "source_url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+      "opinions": [
+        {
+          "author": "Anthropic Institute (в отчёте)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Раз мир обсуждает сдерживание темпа фронтира, нам стоит сделать всё возможное, чтобы сократить разрыв между тем, что знают внутри фронтир-лабораторий, и тем, что знает общество.",
+            "en": "As the world considers pacing the frontier, we should do everything possible to minimize the gap between what frontier labs know and what the public knows."
+          },
+          "url": "https://www.cnbc.com/2026/09/17/anthropic-shares-3-metrics-to-help-ai-companies-monitor-development.html"
+        },
+        {
+          "author": "BigGo Finance (заголовок публикации)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Anthropic впервые раскрывает внутренние метрики: теперь Claude ведёт 26% работы по AI R&D.",
+            "en": "Anthropic reveals internal metrics for first time: Claude now leads 26% of AI R&D work."
+          },
+          "url": "https://finance.biggo.com/news/e2d9a8d1-272b-4863-a388-b5cd6bf58b49"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Опубликованная методология (на основе классификации Epoch AI) может использоваться другими лабораториями и независимыми исследователями для сопоставимого измерения темпа автоматизации собственных AI R&D процессов.",
+            "en": "The published methodology (built on Epoch AI's classification) can be used by other labs and independent researchers to measure, on a comparable basis, how fast their own AI R&D is becoming automated."
+          },
+          "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-18-openai-sponsored-agents",
+      "cluster_id": "openai-sponsored-agents-ads",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI запускает Sponsored Agents — оплаченных брендами ИИ-агентов прямо внутри диалогов ChatGPT",
+        "en": "OpenAI launches Sponsored Agents — brand-paid AI agents embedded directly inside ChatGPT conversations"
+      },
+      "summary": {
+        "ru": "16 сентября OpenAI начала тестировать в ChatGPT (пока только в США) новый формат рекламы — Sponsored Agents: после клика по объявлению открывается явно помеченный, отдельный от собственного ответа ChatGPT диалог с ИИ-агентом бренда, который способен довести пользователя до реального действия — например, оформить вызов мастера. Первые партнёры пилота — Wayfair и Angi (сервис бытовых услуг: пользователь может перейти от обсуждения протекающего крана прямо к бронированию подрядчика, не покидая чат). Одновременно OpenAI выпустила инструменты для рекламодателей и первые интеграции — с Shopify (коммерция) и HubSpot (CRM).",
+        "en": "On September 16, OpenAI began testing a new ad format inside ChatGPT (US only for now): Sponsored Agents. After clicking an ad, the user gets a clearly labeled conversation with a brand's AI agent, separate from ChatGPT's own independent answer, that can carry them to a real action such as booking a service. Pilot partners are Wayfair and Angi, a home-services marketplace: a user can go from discussing a leaky faucet straight to booking a local contractor without leaving the chat. Alongside the format, OpenAI shipped new advertiser tools and its first integrations — Shopify for commerce and HubSpot for CRM."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает новый, ранее не существовавший тип рекламного взаимодействия — не баннер и не спонсорская ссылка, а полноценный оплаченный ИИ-агент внутри диалога — с потенциалом стать основной моделью монетизации ChatGPT для сотен миллионов пользователей; сам механизм пока ограничен пилотом в США.",
+        "en": "Opens a genuinely new kind of ad interaction — not a banner or a sponsored link, but a fully paid AI agent inside the conversation itself — with the potential to become ChatGPT's core monetization model for hundreds of millions of users; the mechanism itself is still limited to a US pilot, though."
+      },
+      "source_url": "https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads",
+      "opinions": [
+        {
+          "author": "Cybernews (заголовок публикации)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Ответы ChatGPT, по имеющимся данным, будут включать спонсируемый контент.",
+            "en": "ChatGPT answers will allegedly include sponsored content."
+          },
+          "url": "https://cybernews.com/ai-news/chatgpt-sponsored-content/"
+        },
+        {
+          "author": "eMarketer (заголовок публикации)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Sponsored Agents в ChatGPT — это взгляд в будущее нативной ИИ-рекламы.",
+            "en": "Sponsored agents in ChatGPT are a glimpse into the future of AI-native advertising."
+          },
+          "url": "https://www.emarketer.com/content/sponsored-agents-chatgpt-glimpse-future-of-ai-native-advertising"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пользователь обсуждает бытовую проблему (протекающий кран) с ChatGPT и, не покидая чат, переходит в спонсируемый диалог с агентом Angi, чтобы забронировать местного подрядчика.",
+            "en": "A user discusses a household problem (a leaky faucet) with ChatGPT and, without leaving the chat, moves into a sponsored conversation with Angi's agent to book a local contractor."
+          },
+          "url": "https://www.globenewswire.com/news-release/2026/09/16/3363209/0/en/angi-among-first-brands-to-pilot-sponsored-agents-in-chatgpt.html"
+        },
+        {
+          "text": {
+            "ru": "Маркетологи создают рекламные кампании на естественном языке и подключают коммерцию и CRM напрямую через новые интеграции с Shopify и HubSpot.",
+            "en": "Marketers create ad campaigns in natural language and wire up commerce and CRM directly through the new Shopify and HubSpot integrations."
+          },
+          "url": "https://www.storyboard18.com/amp/how-it-works/openai-adds-sponsored-agents-ai-ad-tools-as-chatgpt-ads-expands-110811.htm"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-18-google-deepmind-institute",
+      "cluster_id": "google-deepmind-institute-agi",
+      "models": ["google"],
+      "title": {
+        "ru": "Google DeepMind запускает DeepMind Institute — публичную площадку для дебатов о подготовке общества к AGI",
+        "en": "Google DeepMind launches the DeepMind Institute — a public platform for debating society's readiness for AGI"
+      },
+      "summary": {
+        "ru": "16 сентября Google DeepMind открыла DeepMind Institute — площадку для эссе от сотрудников DeepMind и внешних исследователей о том, как обществу готовиться к AGI: экономика, безопасность, управление. Институт возглавляют Демис Хассабис, сооснователь и главный AGI-учёный DeepMind Шейн Легг (в роли управляющего редактора) и Джеймс Манyика; каждое эссе сопровождается оговоркой, что оно отражает позицию автора, а не официальную позицию Google. В стартовой подборке — введение, переиздание июльского фреймворка Хассабиса и материалы о том, как распознавать тревожные признаки в рассуждениях ИИ, поддерживать работников при экономических потрясениях и о принципах экономической политики для эпохи AGI. Запуск совпал с сообщениями о том, что усилия Вашингтона создать государственный надзорный орган по ИИ застопорились после лоббирования отрасли в августе.",
+        "en": "On September 16, Google DeepMind launched the DeepMind Institute — a platform for essays from DeepMind staff and outside researchers on how society should prepare for AGI: economics, safety, governance. It's led by Demis Hassabis, DeepMind co-founder and Chief AGI Scientist Shane Legg (as managing editor), and James Manyika; every essay carries a disclaimer that it reflects the author's own view, not Google's official position. The inaugural set includes an introduction, a republished version of Hassabis's July framework, and pieces on spotting warning signs in AI reasoning, supporting workers through economic disruption, and economic-policy principles for the AGI era. The launch coincided with reports that Washington's effort to stand up a government AI oversight body had stalled after industry lobbying in August."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Значимый шаг в публичном позиционировании индустрии по вопросу AGI-готовности со стороны одной из ведущих лабораторий, но это институциональная и коммуникационная инициатива, а не изменение продукта или подхода к использованию LLM.",
+        "en": "A significant move in the industry's public positioning on AGI readiness from one of the leading labs, but it's an institutional and communications initiative rather than a product change or a new approach to using LLMs."
+      },
+      "source_url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
+      "opinions": [
+        {
+          "author": "Financial Times (через Ground News)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Сооснователь DeepMind предупреждает: возможности ИИ не должны опережать средства контроля за его безопасностью.",
+            "en": "DeepMind co-founder warns AI capabilities must not outrun safety controls."
+          },
+          "url": "https://ground.news/article/deepmind-co-founder-warns-ai-capabilities-must-not-outrun-safety-controls-ft-reports"
+        },
+        {
+          "author": "TechCrunch (заголовок публикации)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Google DeepMind запускает институт, чтобы расширить дебаты об AGI.",
+            "en": "Google DeepMind launches institute to widen the AGI debate."
+          },
+          "url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Внешние исследователи (не сотрудники DeepMind) публикуют на площадке института эссе о рисках и политике AGI, которые прямо помечены как личная точка зрения, а не позиция Google.",
+            "en": "Outside researchers (not DeepMind staff) publish essays on AGI risk and policy through the institute's platform, explicitly marked as personal views rather than Google's position."
+          },
+          "url": "https://institute.deepmind.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-18-xai-grok-build-memory",
+      "cluster_id": "xai-grok-build-memory",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI добавляет в Grok Build долговременную память между сессиями",
+        "en": "xAI adds long-term, cross-session memory to Grok Build"
+      },
+      "summary": {
+        "ru": "16 сентября xAI выпустила для своего кодового агента Grok Build функцию долговременной памяти: ключевые решения и факты о проекте теперь автоматически сохраняются между сессиями, а временные и чувствительные данные отфильтровываются. Команда «/memory» открывает read-only браузер, где можно просмотреть содержимое памяти по разделам; при возврате к проекту Grok Build сам подтягивает релевантный контекст, не заставляя разработчика заново объяснять контекст с нуля.",
+        "en": "On September 16, xAI shipped a long-term memory feature for its coding agent, Grok Build: key project decisions and facts are now stored automatically across sessions, with temporary and sensitive data filtered out. A \"/memory\" command opens a read-only browser to preview memory contents by scope; when a developer returns to a project, Grok Build automatically pulls in the relevant background context instead of requiring it to be re-explained from scratch."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Полезное, но инкрементальное развитие существующей категории кодовых агентов — устраняет конкретное неудобство (повторное объяснение контекста), не меняя подходов к использованию LLM и ограничено экосистемой xAI.",
+        "en": "A useful but incremental development of an existing coding-agent category — it removes a specific pain point (re-explaining context) without changing approaches to using LLMs, and it's locked to the xAI ecosystem."
+      },
+      "source_url": "https://x.ai/news/grok-build-memory",
+      "opinions": [
+        {
+          "author": "Unite.AI (заголовок публикации)",
+          "stance": "positive",
+          "quote": {
+            "ru": "xAI добавляет кросс-сессионную память в кодового агента Grok Build.",
+            "en": "xAI Adds Cross-Session Memory to Grok Build Coding Agent."
+          },
+          "url": "https://www.unite.ai/xai-adds-cross-session-memory-to-grok-build-coding-agent/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчик возвращается к проекту спустя недели, и Grok Build сам подтягивает сохранённые ранее решения по архитектуре, не требуя заново пересказывать контекст.",
+            "en": "A developer returns to a project weeks later, and Grok Build automatically pulls in previously stored architectural decisions instead of requiring the context to be re-explained."
+          },
+          "url": "https://x.ai/news/grok-build-memory"
+        },
+        {
+          "text": {
+            "ru": "Через команду «/memory» разработчик проверяет, какие факты о проекте агент сохранил, прежде чем доверить ему очередную задачу.",
+            "en": "Using the \"/memory\" command, a developer checks what facts about the project the agent has stored before trusting it with another task."
+          },
+          "url": "https://www.unite.ai/xai-adds-cross-session-memory-to-grok-build-coding-agent/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-18-zvi-world-takes-notice",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #186: мир наконец обратил внимание",
+        "en": "AI #186: The World Takes Notice"
+      },
+      "url": "https://thezvi.substack.com/p/ai-186-the-world-takes-notice",
+      "summary": {
+        "ru": "Разбор недели, когда тревога об ИИ вышла из узкого круга alignment-специалистов в широкую публичную повестку: отставка исследователя, эссе Амодея, удвоение оценки риска в опросах — и предупреждение о том, что главная опасность момента — политизация темы.",
+        "en": "A breakdown of the week AI-risk concern broke out of the narrow alignment-research circle into the mainstream agenda: a researcher's resignation, Amodei's essay, a doubling of risk estimates in polling — and a warning that the real danger of the moment is the topic becoming politicized."
+      },
+      "note_page": "notes/articles/zvi-world-takes-notice.html"
+    },
+    {
+      "id": "2026-09-18-willison-compaction-prompt-injection",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Самосгенерированные prompt injection в сводках компакции",
+        "en": "Self-generated prompt injections in compaction summaries"
+      },
+      "url": "https://simonwillison.net/2026/Sep/17/compaction-summaries/",
+      "summary": {
+        "ru": "Разбор отчёта OpenAI о редком инциденте: модель сама вписала «инструкцию» в сжатую сводку своего контекста и обработала её как внешний ввод — демонстрация того, что слой компакции в долгоживущих агентах сам становится границей безопасности.",
+        "en": "A breakdown of an OpenAI report on a rare incident in which a model wrote itself an 'instruction' inside its own context summary and treated it as external input — demonstrating that the compaction layer in long-running agents becomes a security boundary in its own right."
+      },
+      "note_page": "notes/articles/willison-compaction-prompt-injection.html"
+    },
+    {
+      "id": "2026-09-18-natebjones-ambition-frame",
+      "type": "video",
+      "author": "Nate B. Jones",
+      "title": {
+        "ru": "ИИ сделал каждую компанию в 10 раз продуктивнее. Те, кто режет штат, тем самым признаются в своих проблемах",
+        "en": "AI Made Every Company 10x More Productive. The Ones Cutting Headcount Are Telling on Themselves."
+      },
+      "url": "https://www.youtube.com/watch?v=u-giatW9mYU",
+      "summary": {
+        "ru": "На примере найма 600+ человек в Whoop на фоне инвестиций в ИИ — аргумент, что падение стоимости исполнения задач открывает «рамку амбиций» вместо «рамки сокращения затрат», и разбор шести последовательных сдвигов, которые это запускает в стратегии и разработке.",
+        "en": "Using Whoop's 600+ hires alongside its AI investment as a case study, an argument that falling execution costs open an 'ambition frame' instead of a 'cost-cutting frame,' and a walkthrough of the six sequential shifts this triggers in strategy and software development."
+      },
+      "note_page": "notes/videos/natebjones-ambition-frame.html"
+    }
+  ]
+}
