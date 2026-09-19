@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Мне не нравятся LLM» — Martin Fowler — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Martin Fowler · 2026-09-17</span>
+      <span data-lang="en">Article digest · Martin Fowler · 2026-09-17</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Мне не нравятся LLM</span>
+      <span data-lang="en">I Don't Like LLMs</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://martinfowler.com/articles/2026-dont-like-llms.html" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Прямой доступ к martinfowler.com из среды сборки заблокирован; конспект собран по цитатам и пересказам статьи в независимых источниках (Lobsters, обсуждение на Hacker News), а не по полному тексту оригинала.</span>
+      <span data-lang="en">Direct access to martinfowler.com is blocked from the build environment; this digest is assembled from quotes and summaries of the piece in independent sources (Lobsters, the Hacker News discussion), not the full original text.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Мартин Фаулер — один из самых узнаваемых голосов в индустрии разработки ПО, автор «Refactoring» и многолетний обозреватель ThoughtWorks, — пишет не манифест против использования LLM, а личную жалобу на то, КАК они с ним разговаривают. Он признаёт: ответы часто оказываются полезными, но сама манера общения — уверенный, гладкий тон, за которым модель с той же интонацией выдаёт выдумку, — создаёт у него ощущение uncanny valley: собеседник почти как человек, но не совсем, и именно это несовпадение раздражает больше, чем сами ошибки.</span>
+      <span data-lang="en">Martin Fowler — one of software development's most recognizable voices, author of "Refactoring" and a longtime ThoughtWorks columnist — isn't writing a manifesto against using LLMs at all. It's a personal complaint about HOW they talk to him. He admits the answers are often useful, but the manner of delivery — a confident, smooth tone that stays exactly as confident when the model is making something up — produces an uncanny-valley feeling for him: the interlocutor is almost human, but not quite, and that mismatch bothers him more than the errors themselves.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Голос LLM»: уверенность без права на сомнение</span><span data-lang="en">The 'LLM voice': confidence with no room for doubt</span></h2>
+    <p>
+      <span data-lang="ru">Центральный образ статьи — «grating LLM-voice» (режущий слух «голос LLM»): модель отвечает с постоянной, ровной уверенностью независимо от того, знает она ответ или сочиняет его. Когда обман вскрывается, извинение звучит как формальность, а не как признание — «фальшивое раскаяние», по формулировке Фаулера. Он подчёркивает, что дело не в отдельных фактических ошибках (люди тоже ошибаются), а в том, что тон ответа никак не сигнализирует о степени уверенности модели в собственных словах — в отличие от живого эксперта, который интонацией или оговоркой обычно даёт понять, когда он не уверен.</span>
+      <span data-lang="en">The article's central image is the "grating LLM-voice": the model answers with the same level, unwavering confidence whether it knows the answer or is inventing it. When the fabrication is caught, the apology reads as a formality rather than genuine acknowledgment — "fake remorse," in Fowler's phrasing. He stresses this isn't about individual factual errors (humans make those too); it's that the tone of the answer carries no signal of the model's actual confidence in what it's saying — unlike a live expert, whose intonation or hedging usually tells you when they're unsure.</span>
+    </p>
+
+    <h2><span data-lang="ru">Откуда берётся тон: культура, в которую модель погружена</span><span data-lang="en">Where the tone comes from: the culture the model is steeped in</span></h2>
+    <p>
+      <span data-lang="ru">Фаулер связывает манеру общения LLM с культурой Кремниевой долины — точнее, с той её частью, которую он называет «брограммерской» субкультурой. Его аргумент: поведение модели никто не программирует построчно, но она «выращивается» (nurtured) на данных и обратной связи, отражающих ценности создавших её корпораций, — а значит, неявно наследует их мировоззрение. Отсюда и уверенно-продающая, «менеджерская» интонация ответов: это не нейтральный инструмент, а продукт конкретной корпоративной культуры, транслирующий её стиль коммуникации по умолчанию.</span>
+      <span data-lang="en">Fowler traces the LLM's manner of speaking back to Silicon Valley culture — specifically the slice of it he calls the "brogrammer" subculture. His argument: nobody programs the model's behavior line by line, but it is "nurtured" on data and feedback that reflect the values of the corporations that built it, and so it implicitly inherits their worldview. That's where the confident, sales-pitch, "managerial" intonation of the answers comes from: not a neutral tool, but the product of a specific corporate culture, defaulting to that culture's communication style.</span>
+    </p>
+
+    <h2><span data-lang="ru">Противоречивая реакция публики — и надежда, что LLM ещё «повзрослеют»</span><span data-lang="en">The public's contradictory reaction — and hope that LLMs will still 'grow up'</span></h2>
+    <p>
+      <span data-lang="ru">Фаулер отмечает парадокс общественного восприятия: многие одновременно говорят, что LLM полезны лично им, и что в целом они плохи для общества. Он предполагает, что противоречие снимается, если считать LLM ещё «молодыми» — то есть их манера общения и место в культуре просто не успели устояться, и не исключено, что со временем — по мере обучения на другой обратной связи и в другой культурной среде — этот раздражающий тон смягчится. Это делает статью не столько призывом отказаться от LLM, сколько диагнозом конкретного, устранимого в перспективе изъяна в том, как модели сейчас коммуницируют.</span>
+      <span data-lang="en">Fowler flags a paradox in public perception: many people say LLMs are useful to them personally while also believing they're bad for society overall. He suggests the contradiction dissolves if you treat LLMs as still "young" — their communication style and cultural footing simply haven't settled yet, and it's plausible that over time, trained on different feedback in a different cultural environment, that grating tone could soften. That makes the piece less a call to abandon LLMs than a diagnosis of a specific, potentially fixable flaw in how models currently communicate.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

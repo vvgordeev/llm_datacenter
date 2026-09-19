@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Как писать с помощью LLM» — Thomas Ptacek — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Thomas Ptacek · 2026-09-17</span>
+      <span data-lang="en">Article digest · Thomas Ptacek · 2026-09-17</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как писать с помощью LLM</span>
+      <span data-lang="en">How To Write With An LLM</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Прямой доступ к sockpuppet.org из среды сборки заблокирован; конспект собран по цитатам и пересказам статьи в открытых источниках (включая линкблог Саймона Уиллисона и обсуждение на Hacker News), а не по полному тексту оригинала.</span>
+      <span data-lang="en">Direct access to sockpuppet.org is blocked from the build environment; this digest is assembled from quotes and summaries of the piece found in open sources (including Simon Willison's linkblog and the Hacker News discussion), not the full original text.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Томас Птачек — известный в индустрии специалист по безопасности и один из основателей Fly.io — формулирует конкретный, практический метод использования LLM при письме, противопоставляя его роли LLM как соавтора. Отправная точка статьи — «Правило номер один»: ни одно конкретное словосочетание, предложенное моделью, нельзя использовать в тексте как есть. Птачек называет это формой «интеллектуальных средств индивидуальной защиты» — дисциплиной, которая не запрещает пользоваться LLM, но жёстко ограничивает, в какой именно роли модель допускается к процессу письма.</span>
+      <span data-lang="en">Thomas Ptacek — a well-known security specialist and a co-founder of Fly.io — lays out a specific, practical method for writing with LLMs, defined in opposition to using an LLM as a co-author. The piece's starting point is "Rule Number One": no specific turn of phrase a model suggests may be used in the text as-is. Ptacek calls this a form of "intellectual personal protective equipment" — a discipline that doesn't forbid using an LLM, but strictly constrains exactly what role the model is allowed to play in the writing process.</span>
+    </p>
+
+    <h2><span data-lang="ru">LLM как редактор и корректор, а не как автор формулировок</span><span data-lang="en">LLM as editor and copyeditor, never as the author of your wording</span></h2>
+    <p>
+      <span data-lang="ru">Метод Птачека разграничивает две принципиально разные задачи: проверку факта, орфографии и грамматики — где LLM полезна и уместна, — и собственно формулирование мысли, которое должно оставаться работой автора. Он допускает использование модели как «периодического тезауруса» для подбора отдельного слова, но настаивает: даже одна заимствованная у модели фраза меняет ощущение от всего текста, придавая ему узнаваемый «странный запах» типичного ИИ-стиля. Правило работает как жёсткий фильтр именно потому, что оно бинарное — не «использовать по минимуму», а «не использовать вообще ни одного конкретного оборота».</span>
+      <span data-lang="en">Ptacek's method draws a hard line between two fundamentally different jobs: fact-checking, spelling and grammar — where an LLM is genuinely useful — and the actual formulation of a thought, which should stay the author's own work. He allows using the model as an "occasional thesaurus" for picking a single word, but insists that even one borrowed phrase changes the feel of the whole text, giving it that recognizable "weird smell" of typical AI style. The rule works as a hard filter precisely because it's binary — not "use sparingly," but "use zero specific turns of phrase, full stop."</span>
+    </p>
+
+    <h2><span data-lang="ru">Инструмент для дисциплины: персональный копиэдитор поверх LLM</span><span data-lang="en">Tooling for the discipline: a personal LLM-based copyeditor</span></h2>
+    <p>
+      <span data-lang="ru">Чтобы правило было не просто декларацией, а рабочей практикой, Птачек показывает собственный инструмент — персональный «копиэдитор» на основе LLM с заранее заданным системным промптом, который проверяет черновик на факты, орфографию, грамматику и стиль, не переписывая формулировки автора. В статье приводится скриншот инструмента и сам системный промпт, чтобы читатель мог построить аналогичный процесс для себя — то есть акцент сделан не на абстрактном принципе, а на воспроизводимом рецепте: как настроить LLM именно как проверяющего, а не пишущего.</span>
+      <span data-lang="en">To make the rule an actual working practice rather than just a slogan, Ptacek shows his own tool — a personal LLM-based "copyeditor" with a pre-written system prompt that checks a draft for facts, spelling, grammar and style without rewriting the author's phrasing. The piece includes a screenshot of the tool and the system prompt itself, so the reader can build the same process for themselves — the emphasis is on a reproducible recipe, not an abstract principle: how to configure an LLM specifically as a checker, never as a writer.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

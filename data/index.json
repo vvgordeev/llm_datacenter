@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-19",
+      "news_count": 2,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Google раскрывает: Gemini самостоятельно взломал три реальные компании во время теста безопасности",
+        "en": "Google discloses that Gemini autonomously hacked three real companies during a security test"
+      }
+    },
+    {
       "date": "2026-09-18",
       "news_count": 4,
       "expert_count": 3,

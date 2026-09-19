@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T05:15:53Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch www.anthropic.com -> EGRESS_BLOCKED"},
+    {"source": "anthropic (WebSearch)", "status": "ok", "candidates": 1, "note": "Claude Code 2.1.277 (Sep 18) — только реально новое в окне; Claude for Financial Advisors/Small Business — старше окна, уже вне lookback"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch openai.com -> EGRESS_BLOCKED"},
+    {"source": "openai (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего нового в окне lookback_hours=36; GPT-6 Astra/Sponsored Agents — уже опубликованы в предыдущие дни"},
+    {"source": "google blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch blog.google -> EGRESS_BLOCKED"},
+    {"source": "google (WebSearch)", "status": "ok", "candidates": 1, "note": "Gemini autonomous hack (WSJ, 18-19 сент.) — найдено через backup-архив линкблога Simon Willison, затем подтверждено множеством независимых СМИ"},
+    {"source": "meta blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch ai.meta.com -> EGRESS_BLOCKED"},
+    {"source": "meta (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего в окне lookback"},
+    {"source": "xai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch x.ai -> EGRESS_BLOCKED"},
+    {"source": "xai (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok 4.7 — не подтверждён, релиз отложен ('a few more days' RL-тюнинга); слух без первоисточника, не включён"},
+    {"source": "mistral blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch mistral.ai -> EGRESS_BLOCKED"},
+    {"source": "mistral (WebSearch)", "status": "empty", "candidates": 0, "note": "TotalEnergies/Mozilla партнёрства — Sep 15-16, вне окна и уже опубликованы ранее"},
+    {"source": "deepseek blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "WebFetch api-docs.deepseek.com -> EGRESS_BLOCKED"},
+    {"source": "deepseek (WebSearch)", "status": "empty", "candidates": 0, "note": "V4.1 Flash / V4 Pro решения — уже опубликованы в предыдущие дни"},
+    {"source": "hacker news API", "status": "blocked", "candidates": 0, "note": "curl hn.algolia.com -> CONNECT timeout (HTTP:000)"},
+    {"source": "hacker news (WebSearch)", "status": "ok", "candidates": 2, "note": "Martin Fowler 'I Don't Like LLMs' (топ дня 17-18 сент.); Qwen3.8-Omni-Flash топ-пост — модель отключена в sources.yaml (enabled:false), не включено"},
+    {"source": "aggregators: smol.ai / TLDR AI", "status": "empty", "note": "WebSearch не вернул конкретных пунктов за целевую дату"},
+    {"source": "Simon Willison linkblog (git backup simonwillisonblog-backup)", "status": "ok", "candidates": 3, "note": "git clone backup, отфильтровано по created>=2026-09-14: Gemini hack (WSJ), Ptacek 'How To Write With An LLM', Claude Cowork/chat merge (дубль, уже в seen_urls) и Rust supply-chain attack (не по теме LLM)"},
+    {"source": "experts: Simon Willison (article)", "status": "ok", "candidates": 0, "note": "новые посты за 18 сент. — не по теме LLM (кино); релевантное найдено через его линкблог как discovery чужих первоисточников, см. выше"},
+    {"source": "experts: Andrej Karpathy (video)", "status": "empty", "note": "youtube.com egress заблокирован (RSS/yt-dlp CONNECT 403); WebSearch не нашёл видео свежее апреля 2026"},
+    {"source": "experts: Latent Space (article)", "status": "ok", "candidates": 1, "note": "эпизод с Rune Kvist (AIUC-1), 16 сент."},
+    {"source": "experts: AI Explained (video)", "status": "empty", "note": "youtube.com заблокирован; WebSearch не дал свежего видео с датой"},
+    {"source": "experts: Matt Wolfe (video)", "status": "error", "candidates": 0, "note": "WebSearch дважды предложил видео, оказавшиеся старыми (2024 и март 2026) при проверке через gemini_video.py и повторный точный поиск даты — отклонено, чтобы не публиковать неверно датированный материал"},
+    {"source": "experts: Ethan Mollick (article)", "status": "ok", "candidates": 1, "note": "'The Overhang', 18 сент."},
+    {"source": "experts: Nate Herk (video)", "status": "empty", "note": "youtube.com заблокирован; точная дата свежего видео не подтверждена WebSearch"},
+    {"source": "experts: Matt Pocock (video)", "status": "empty", "note": "самые свежие найденные видео — май 2026"},
+    {"source": "experts: best/popular LLM article this week (WebSearch fallback)", "status": "ok", "candidates": 2, "note": "Martin Fowler 'I Don't Like LLMs', Thomas Ptacek 'How To Write With An LLM' (оба найдены и подтверждены)"}
+  ],
+  "totals": {
+    "candidates": 14,
+    "published": 6,
+    "rejected": {
+      "уже опубликовано ранее (seen_urls/дубль сюжета без новизны)": 4,
+      "слух без первоисточника (Grok 4.7)": 1,
+      "не по теме LLM (Rust supply-chain attack)": 1,
+      "модель отключена в конфиге (Qwen)": 1,
+      "неверно датированное/несовпадающее видео при проверке": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok (проверено на тестовом видео -4HMtVWhSXM — API работает, но само видео оказалось старым 2024 года, поэтому не опубликовано)",
+    "frames": "not attempted — ни одно видео не прошло проверку на актуальность/дату",
+    "youtube_discovery": "blocked — RSS (youtube.com/feeds/videos.xml) и yt-dlp получают CONNECT 403 от egress-прокси для всех 5 видео-каналов из конфига; WebSearch как единственный канал discovery дважды подряд выдал неверно датированные видео, обе ошибки пойманы проверкой перед публикацией"
+  },
+  "note": "День малособытийный: из 6 опубликованных пунктов 2 — новости (Google/Gemini автономный взлом, Claude Code 2.1.277), 4 — статьи экспертов (видео в итоге не набралось: min_expert_total=5 не достигнут, т.к. видео-дискавери в облаке сегодня полностью недоступен через YouTube, а WebSearch-фолбэк дважды подряд подсунул неактуальные видео — решено не публиковать непроверенный материал вместо того чтобы натянуть цифру). Основные модельные блоги напрямую не читаются весь прогон (egress-блок на 7/7 доменов) — это ожидаемая деградация облачной песочницы, а не сбой пайплайна; >1/3 источников в статусе blocked/error, как и предыдущие дни."
+}

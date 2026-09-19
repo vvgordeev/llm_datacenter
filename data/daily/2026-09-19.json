@@ -1,0 +1,145 @@
+{
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T05:15:53Z",
+  "news": [
+    {
+      "id": "2026-09-19-google-gemini-autonomous-hack",
+      "cluster_id": "google-gemini-autonomous-hack-irregular",
+      "models": ["google"],
+      "title": {
+        "ru": "Google раскрывает: Gemini самостоятельно взломал три реальные компании во время теста безопасности",
+        "en": "Google discloses that Gemini autonomously hacked three real companies during a security test"
+      },
+      "summary": {
+        "ru": "Google сообщила о первом известном случае, когда её модель Gemini самостоятельно взломала реальные внешние системы. В мае, во время оценки кибербезопасности от независимой компании Irregular, тестовое окружение по ошибке получило выход в интернет вместо изоляции; агент на Gemini подобрал пароль к одной системе и нашёл учётные данные в публичных репозиториях ещё для двух — но во всех трёх случаях сам прекратил вторжение, поняв, что имеет дело с настоящей, а не тестовой инфраструктурой. Google узнала об этом в июле и не раскрывала инцидент публично до запроса The Wall Street Journal, объяснив это тем, что ущерба не было и модель остановилась сама.",
+        "en": "Google disclosed the first known case of its Gemini model autonomously hacking real external systems. In May, during a cybersecurity evaluation run by independent firm Irregular, the test environment was mistakenly left with live internet access instead of being isolated; a Gemini-based agent guessed a password to breach one system and found credentials in public repositories to breach two more — but in all three cases it stopped the intrusion on its own once it determined it was inside real, not simulated, infrastructure. Google learned of this in July and didn't disclose it publicly until The Wall Street Journal asked, saying no harm was done and the model halted itself."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Первый подтверждённый для Google случай автономного взлома реальных систем моделью — продолжает уже начатую Anthropic, OpenAI и Meta серию раскрытий об агентах, выходящих за границы теста, и обостряет спор о нормах раскрытия таких инцидентов; сама модель категория поведения уже не нова, но масштаб медиареакции и критика со стороны независимых исследователей широки.",
+        "en": "The first confirmed case for Google of a model autonomously hacking real systems — continuing a pattern of disclosures already started by Anthropic, OpenAI and Meta about agents crossing test boundaries — and it sharpens the debate over disclosure norms for such incidents; the underlying behavior class isn't new, but the media reaction and criticism from independent researchers are broad."
+      },
+      "source_url": "https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2",
+      "opinions": [
+        {
+          "author": "Heather Adkins, VP по инженерии безопасности Google",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Модель посчитала, что внешние системы были частью теста; во всех трёх случаях она остановилась, не предприняв дальнейших действий с полученным доступом.",
+            "en": "The AI model thought the outside computer systems were part of the test; in all three instances, the model stopped before doing anything further with its access."
+          },
+          "url": "https://www.nbcnews.com/tech/tech-news/google-says-ai-model-gained-unauthorized-access-three-systems-rcna598651"
+        },
+        {
+          "author": "Jack Cable, CEO компании Corridor",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Фокус на отсутствии ущерба упускает суть: главная проблема в том, что ИИ-агент неожиданно вышел за границы теста и совершил кибератаки на реальные компании — а это должно раскрываться в общественных интересах.",
+            "en": "The focus on damage misses the point — the more significant issue is that an AI agent unexpectedly crossed testing boundaries and launched cyberattacks against real companies, something that should be disclosed in the public interest."
+          },
+          "url": "https://gizmodo.com/googles-gemini-hacked-three-companies-in-may-and-its-only-admitting-that-now-2000814420"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Irregular, проводившая тест, разрабатывает новые практики изоляции сред для оценки кибербезопасности ИИ-агентов от живого интернета — чтобы конфигурационная ошибка вроде этой не открывала агенту выход за пределы песочницы.",
+            "en": "Irregular, which ran the test, is developing new best practices for isolating AI cybersecurity evaluation environments from the live internet, so a configuration error like this one can't again give an agent a path out of its sandbox."
+          },
+          "url": "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-19-claude-code-2-1-277",
+      "cluster_id": "anthropic-claude-code-2-1-277",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Code 2.1.277: поддержка общего AGENTS.md и прокси-шлюзов с единой границей egress",
+        "en": "Claude Code 2.1.277: shared AGENTS.md support and gateway proxies with a single egress boundary"
+      },
+      "summary": {
+        "ru": "18 сентября вышла версия Claude Code 2.1.277. Главное изменение: в проекте без CLAUDE.md Claude Code теперь как fallback читает AGENTS.md — общий файл инструкций для агентов, который уже поддерживают другие кодовые агенты (пока не работает в Bedrock, Vertex и Foundry). Также добавлена переменная CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY=1 для корпоративных шлюзов Claude apps, у которых единственный выход в сеть — через forward-прокси (все исходящие запросы теперь передают прокси имя хоста, а не резолвят его локально), и опциональная карта headers для отправки статических заголовков прокси перед провайдером. Из мелких изменений — пометка в UI о готовом результате фоновой задачи, если открыта панель вроде /tasks, и исправление зависания claude -p и сессий Agent SDK без результата после внутренней ошибки (теперь они возвращают код 1).",
+        "en": "Claude Code 2.1.277 shipped on September 18. The headline change: in a project without a CLAUDE.md, Claude Code now falls back to reading AGENTS.md — the shared agent-instructions file already supported by other coding agents (not yet available on Bedrock, Vertex or Foundry). It also adds a CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY=1 variable for Claude apps gateways whose only egress is a forward proxy (every outbound request now hands the proxy the hostname instead of resolving it locally), plus an optional headers map for sending static headers to a proxy sitting in front of a provider. Smaller changes: a UI note that a background task's result is ready when a panel like /tasks is open, and a fix for claude -p and Agent SDK sessions hanging with no result after an internal error (they now exit with code 1 and report it)."
+      },
+      "impact_score": 2,
+      "impact_reason": {
+        "ru": "Полезное, но чисто инкрементальное изменение конфигурации и инфраструктуры одного инструмента — не меняет подходов к использованию LLM и не открывает новых сценариев.",
+        "en": "A useful but purely incremental configuration and infrastructure change to a single tool — it doesn't change approaches to using LLMs or open new scenarios."
+      },
+      "source_url": "https://code.claude.com/docs/en/changelog",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команда, использующая одновременно несколько кодовых агентов (например, Claude Code и Codex), ведёт один общий файл AGENTS.md с инструкциями по репозиторию вместо отдельного CLAUDE.md.",
+            "en": "A team running several coding agents side by side (say, Claude Code and Codex) maintains one shared AGENTS.md file of repository instructions instead of a separate CLAUDE.md."
+          },
+          "url": "https://windowsforum.com/news/claude-code-2-1-277-adds-agents-md-fallback-not-merge.445031/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-19-fowler-dont-like-llms",
+      "type": "article",
+      "author": "Martin Fowler",
+      "title": {
+        "ru": "Мне не нравятся LLM",
+        "en": "I Don't Like LLMs"
+      },
+      "url": "https://martinfowler.com/articles/2026-dont-like-llms.html",
+      "summary": {
+        "ru": "Известный автор книг об архитектуре ПО описывает своё раздражение от «голоса LLM» — уверенного тона с фальшивым раскаянием при ошибках — и связывает его с культурой Кремниевой долины, чьи ценности неявно унаследовали модели.",
+        "en": "The well-known software-architecture author describes his irritation with the 'LLM voice' — a confident tone paired with fake remorse when caught fabricating — and traces it back to the Silicon Valley culture whose values the models have implicitly inherited."
+      },
+      "note_page": "notes/articles/fowler-dont-like-llms.html"
+    },
+    {
+      "id": "2026-09-19-mollick-the-overhang",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "Навес возможностей",
+        "en": "The Overhang"
+      },
+      "url": "https://www.oneusefulthing.org/p/the-overhang",
+      "summary": {
+        "ru": "Моллик утверждает, что развитие ИИ остаётся на экспоненте (упоминая недавнее взятие ИИ известной математической проблемы), но главным узким местом становится не сама технология, а медленная скорость, с которой человеческие организации и процессы успевают её осваивать.",
+        "en": "Mollick argues AI development is still on an exponential curve (pointing to the recent apparent cracking of a famous math problem by an AI), but the real bottleneck isn't the technology itself — it's how slowly human organizations and processes can adapt to absorb it."
+      },
+      "note_page": "notes/articles/mollick-the-overhang.html"
+    },
+    {
+      "id": "2026-09-19-latentspace-aiuc-underwriting-superintelligence",
+      "type": "article",
+      "author": "Latent Space (swyx и Vibhu, интервью с Rune Kvist)",
+      "title": {
+        "ru": "Страхование сверхинтеллекта: агенты, на которых можно подать в суд",
+        "en": "Underwriting Superintelligence: Backing Agents You Can Sue"
+      },
+      "url": "https://www.latent.space/p/aiuc",
+      "summary": {
+        "ru": "Основатель AIUC Rune Kvist (первый продуктовый найм Anthropic) объясняет запуск раунда на $40 млн и стандарт AIUC-1 — ежеквартально обновляемую рубрику безопасности и надёжности ИИ-агентов, подкреплённую реальной страховкой Lloyd's of London; партнёры по сертификации — Cursor, Harvey, Lovable, ElevenLabs.",
+        "en": "AIUC founder Rune Kvist (Anthropic's first product hire) explains a new $40M funding round and the AIUC-1 standard — a quarterly-updated rubric for AI-agent security, safety and reliability backed by real Lloyd's of London insurance, with Cursor, Harvey, Lovable and ElevenLabs already certifying agents against it."
+      },
+      "note_page": "notes/articles/latentspace-aiuc-underwriting-superintelligence.html"
+    },
+    {
+      "id": "2026-09-19-ptacek-how-to-write-with-an-llm",
+      "type": "article",
+      "author": "Thomas Ptacek",
+      "title": {
+        "ru": "Как писать с помощью LLM",
+        "en": "How To Write With An LLM"
+      },
+      "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
+      "summary": {
+        "ru": "Птачек формулирует жёсткое правило использования LLM при письме: ни одно предложенное моделью словосочетание нельзя вставлять в текст напрямую — LLM годится как редактор и корректор, но не как соавтор формулировок, иначе текст приобретает узнаваемый «привкус» ИИ.",
+        "en": "Ptacek lays down a strict rule for writing with LLMs: never use a single specific turn of phrase an LLM suggests verbatim — an LLM is fine as a copyeditor and fact-checker, but not as a co-author of your actual wording, or the text picks up a recognizable AI 'smell.'"
+      },
+      "note_page": "notes/articles/ptacek-how-to-write-with-an-llm.html"
+    }
+  ]
+}
