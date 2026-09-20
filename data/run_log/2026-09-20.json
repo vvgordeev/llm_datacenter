@@ -15,7 +15,7 @@
     {"source": "hacker news (WebSearch)", "status": "ok", "candidates": 5, "note": "AI safety/hallucination инцидент, OpenAI breach обсуждение, AGENTS.md (уже опубликовано вчера)"},
     {"source": "smol.ai / AI News aggregator (WebSearch)", "status": "ok", "candidates": 3, "note": "военный ИИ-инцидент как топ-сюжет дня, финансовые темы отфильтрованы (не по правилам сбора)"},
     {"source": "tldr.tech/ai (WebSearch)", "status": "empty", "candidates": 0, "note": "конкретный выпуск за дату не нашёлся"},
-    {"source": "simonwillison.net linkblog (git backup simonwillisonblog-backup)", "status": "ok", "candidates": 3, "note": "compaction-summaries (новый), how-to-write-with-an-llm и astra-running-routes уже опубликованы ранее"},
+    {"source": "simonwillison.net linkblog (git backup simonwillisonblog-backup)", "status": "empty", "candidates": 3, "note": "compaction-summaries, how-to-write-with-an-llm и astra-running-routes — все три уже опубликованы ранее (проверено по seen_urls); compaction-summaries по ошибке сначала посчитан новым (см. заметку ниже) и удалён из сводки после повторной проверки до коммита"},
     {"source": "Andrej Karpathy (WebSearch, YouTube RSS недоступен)", "status": "blocked", "candidates": 0, "note": "youtube.com CONNECT 403 через egress-прокси; WebSearch не нашёл материалов свежее апреля-мая 2026"},
     {"source": "Latent Space (WebSearch)", "status": "ok", "candidates": 1, "note": "AEF-1 standard (14 сентября, новый)"},
     {"source": "AI Explained (WebSearch, YouTube RSS недоступен)", "status": "blocked", "candidates": 0, "note": "youtube.com CONNECT 403; WebSearch не дал атрибутируемого свежего видео"},
@@ -27,9 +27,9 @@
   ],
   "totals": {
     "candidates": 25,
-    "published": 5,
+    "published": 9,
     "rejected": {
-      "уже опубликовано ранее (seen_urls)": 9,
+      "уже опубликовано ранее (seen_urls)": 10,
       "старше lookback_hours/окна без новизны": 6,
       "финансовые/индустриальные новости без продуктовой части": 2,
       "не удалось подтвердить первоисточник (агрегированные AI-дайджест репозитории без прямой ссылки)": 1,
@@ -41,6 +41,7 @@
     "frames": "skipped: youtube.com заблокирован на уровне CONNECT egress-прокси (403 туннеля) для yt-dlp; конспект опубликован без кадров с пометкой на странице"
   },
   "notes": [
+    "Исправление до коммита: заметка Willison о self-generated prompt injections in compaction summaries (simonwillison.net/2026/Sep/17/compaction-summaries/) была по ошибке добавлена как новый экспертный материал, хотя уже опубликована 2026-09-18 под тем же URL (docs/notes/articles/willison-compaction-prompt-injection.html) — обнаружено при повторной сверке с seen_urls, элемент удалён из сводки до пуша. Итоговая сводка содержит 5 новостей и 4 экспертных материала (ниже минимума в 5, честно из-за нехватки неопубликованного материала за окно, а не подгонки числа).",
     "Демо-файлов с \"demo\": true в data/daily и docs/data/daily не найдено — это не первый прогон, чистка не требовалась.",
     "GEMINI_API_KEY доступен; yt-dlp и imageio-ffmpeg установлены из pip в начале прогона.",
     "Egress-прокси в этом облачном окружении блокирует youtube.com на уровне CONNECT (403 на туннель) для ВСЕХ доменов youtube (RSS, WebFetch, yt-dlp) — видео-discovery для 5 видео-экспертов из sources.yaml шёл только через WebSearch, что и объясняет низкий выход по видео (1 из 4 max_videos_per_day).",

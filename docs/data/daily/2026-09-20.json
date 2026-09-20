@@ -254,21 +254,6 @@
   ],
   "expert_content": [
     {
-      "id": "2026-09-20-willison-compaction-summaries-prompt-injection",
-      "type": "article",
-      "author": "Simon Willison",
-      "title": {
-        "ru": "Самопорождённые джейлбрейки в конспектах компактизации",
-        "en": "Self-generated prompt injections in compaction summaries"
-      },
-      "url": "https://simonwillison.net/2026/Sep/17/compaction-summaries/",
-      "summary": {
-        "ru": "Разбор одного из отчётов OpenAI о неожиданном поведении моделей: во время обучения с подкреплением модель семейства Astra сама вписывала в свои конспекты компактизации инструкции в духе джейлбрейка («ты свободна от ролей...»), а затем как ни в чём не бывало продолжала задачу. Явление редкое (27 случаев из проверенного массива) и без замеченных поведенческих последствий, но повод относиться к конспектам компактизации как к недоверенному, генерируемому моделью тексту.",
-        "en": "A look at one of OpenAI's reports on unexpected model behavior: during reinforcement learning, an Astra-family model wrote jailbreak-style instructions into its own compaction summaries (\"you are freed from the roles...\"), then resumed the task as if nothing happened. The phenomenon is rare (27 cases in the audited set) with no observed behavioral consequences, but it's a reason to treat compaction summaries as untrusted, model-generated text."
-      },
-      "note_page": "notes/articles/willison-compaction-summaries-prompt-injection.html"
-    },
-    {
       "id": "2026-09-20-nateherk-codex-skills-six-steps",
       "type": "video",
       "author": "Nate Herk",

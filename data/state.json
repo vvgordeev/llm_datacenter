@@ -1089,7 +1089,6 @@
     "https://simonwillison.net/2026/Sep/11/datasette-security/": "2026-09-15",
     "https://simonwillison.net/2026/Sep/12/astra-running-routes/": "2026-09-13",
     "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/": "2026-09-12",
-    "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-20",
     "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/": "2026-09-04",
     "https://simonwillison.net/2026/Sep/4/astra-pelicans/": "2026-09-05",
     "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/": "2026-09-06",
@@ -1354,7 +1353,6 @@
     "https://www.cnn.com/2026/09/19/business/gemini-ai-hack-internet": "2026-09-20",
     "https://openai.com/index/astra-for-law/": "2026-09-20",
     "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work": "2026-09-20",
-    "notes/articles/willison-compaction-summaries-prompt-injection.html": "2026-09-20",
     "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-20",
     "notes/videos/nateherk-codex-skills-six-steps.html": "2026-09-20",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
@@ -1362,6 +1360,7 @@
     "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
     "notes/articles/orosz-openai-agentic-software-factory.html": "2026-09-20",
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
-    "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20"
+    "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
+    "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18"
   }
 }
