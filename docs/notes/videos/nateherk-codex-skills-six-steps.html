@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: шесть шагов к надёжным навыкам Codex — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-09-19 · 27 мин</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-09-19 · 27 min</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как построить навыки Codex лучше, чем 99% людей</span>
+      <span data-lang="en">How to Build Codex Skills Better than 99% of People</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=9KOtMsZ9I28" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Херк начинает с определения: навык (skill) — это переиспользуемая инструкция, которую ИИ-агент подключает под конкретную задачу вместо того, чтобы каждый раз объяснять её заново в чате <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=20">[00:20]</a>. Дальше всё видео — это разбор шестишагового метода, который должен сделать такие навыки надёжными и воспроизводимыми, а не одноразовым удачным промптом.</span>
+      <span data-lang="en">Nate Herk opens with a definition: a skill is a reusable instruction an AI agent loads for a specific task instead of having it re-explained in chat every time <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=20">[00:20]</a>. The rest of the video walks through a six-step method meant to make such skills reliable and repeatable, not a one-off lucky prompt.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаг 1–2: обратное проектирование от результата и один навык — один триггер</span><span data-lang="en">Steps 1–2: reverse-engineer from the output, one skill — one trigger</span></h2>
+    <p>
+      <span data-lang="ru">Первый шаг метода — обратное проектирование: вместо того чтобы сразу писать инструкцию, нужно сначала получить (вручную или через пример) результат, который считается «хорошим», и уже потом восстанавливать шаги, которые к нему приводят <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=120">[02:00]</a>. На живом примере навыка x-article Херк показывает структуру файла Skill.md — как в него оформляется этот восстановленный процесс <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=226">[03:46]</a>. Второй принцип — разбивать сложные процессы на отдельные, узко сфокусированные навыки с чётким триггером на каждый, а не строить один универсальный навык на всё: это даёт модульность и позволяет объединять навыки в цепочки.</span>
+      <span data-lang="en">The method's first step is reverse engineering: instead of writing the instruction first, you get a "good" output (by hand or from an example) and only then reconstruct the steps that lead to it <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=120">[02:00]</a>. Using the x-article skill as a live example, Herk walks through the Skill.md file structure — how that reconstructed process gets written down <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=226">[03:46]</a>. The second principle is to break complex processes into separate, narrowly focused skills with a clear trigger each, rather than one do-everything skill — this gives modularity and lets skills chain together.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаг 3–4: «уровень свободы» задачи и циклы верификации</span><span data-lang="en">Steps 3–4: the task's "freedom level" and verification loops</span></h2>
+    <p>
+      <span data-lang="ru">Третий шаг — заранее решить, детерминированная задача или нет, и настроить инструкции навыка под нужный «уровень свободы»: для детерминированных шагов агенту дают жёсткую последовательность действий, для недетерминированных — оставляют пространство для собственного суждения. Четвёртый и, по акценту видео, самый важный шаг — встроить циклы верификации: ИИ-агенты (или отдельные суб-агенты) сами оценивают результат по заданным стандартам и дают конструктивную обратную связь <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=553">[09:13]</a>, что заметно сокращает объём ручной проверки со стороны человека.</span>
+      <span data-lang="en">The third step is deciding upfront whether a task is deterministic or not, and tuning the skill's instructions to the right "freedom level": deterministic steps get a rigid sequence of actions, non-deterministic ones leave room for the agent's own judgment. The fourth step — and the video's biggest emphasis — is building in verification loops: AI agents (or separate sub-agents) assess the output against defined standards and give constructive feedback <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=553">[09:13]</a>, which noticeably cuts down on manual human review.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаг 5–6: подбор модели по цене и «метод велосипеда»</span><span data-lang="en">Steps 5–6: picking a model on cost, and the "Bike method"</span></h2>
+    <p>
+      <span data-lang="ru">Пятый шаг — тестировать один и тот же навык на разных моделях LLM и разных уровнях усилия (effort), чтобы найти самую дешёвую конфигурацию, которая всё ещё проходит по стандарту качества, а не автоматически брать самую мощную и дорогую модель. Шестой шаг Херк называет «методом велосипеда» — навык рассматривается не как готовый артефакт, а как развивающаяся сущность, которая улучшается после каждого прогона за счёт постоянной обратной связи <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=848">[14:08]</a>. Дальше в видео идёт живая демонстрация: сравнение результатов навыка x-article, сгенерированных разными моделями LLM, чтобы наглядно показать разницу в качестве и стоимости <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=986">[16:26]</a>.</span>
+      <span data-lang="en">The fifth step is testing the same skill across different LLM models and effort levels to find the cheapest configuration that still clears the quality bar, instead of defaulting to the most powerful and expensive model available. Herk calls the sixth step the "Bike method" — treating a skill not as a finished artifact but as an evolving thing that improves with every run through continuous feedback <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=848">[14:08]</a>. The video then moves into a live demo comparing x-article skill outputs generated by different LLM models, to make the quality-and-cost tradeoff concrete <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=986">[16:26]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения</span><span data-lang="en">Limitations</span></h2>
+    <p>
+      <span data-lang="ru">Метод демонстрируется на собственных навыках автора (в частности, x-article) в конкретной платформе (Codex) и не подкреплён в видео независимым бенчмарком, который показывал бы, что шесть шагов действительно надёжнее альтернативных подходов к разработке навыков — это личная методология практика, а не проверенный академический стандарт. Циклы верификации и подбор дешёвой модели тоже требуют дополнительной инфраструктуры (суб-агентов для оценки, доступа к нескольким моделям), так что для простых одноразовых задач шесть шагов могут быть избыточны.</span>
+      <span data-lang="en">The method is demonstrated on the author's own skills (x-article in particular) on one specific platform (Codex), and the video offers no independent benchmark showing the six steps are actually more reliable than alternative approaches to skill development — it's a practitioner's personal methodology, not a validated academic standard. Verification loops and cheap-model selection also require extra infrastructure (evaluator sub-agents, access to multiple models), so the six steps can be overkill for simple, one-off tasks.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API; кадры извлечь не удалось — в текущем облачном окружении egress-прокси блокирует потоковый доступ yt-dlp к YouTube (CONNECT 403 на туннель), несмотря на установленные из pip yt-dlp/imageio-ffmpeg. Статус — в run_log дня.</span>
+      <span data-lang="en">Digest built from a Gemini API video analysis; frame extraction failed — in this cloud environment the egress proxy blocks yt-dlp's streaming access to YouTube (CONNECT 403 on the tunnel), despite yt-dlp/imageio-ffmpeg being installed via pip. Status is recorded in the day's run_log.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

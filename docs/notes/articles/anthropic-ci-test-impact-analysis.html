@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: как Anthropic масштабировала анализ влияния тестов при 25-кратном росте CI — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Anthropic Engineering · 2026-09-14</span>
+      <span data-lang="en">Article digest · Anthropic Engineering · 2026-09-14</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Агентное кодирование перегружает CI. Как Anthropic масштабировала анализ влияния тестов</span>
+      <span data-lang="en">Agentic coding is straining CI. Here's how we scaled test impact analysis at Anthropic</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Проблема: агенты плодят пул-реквесты быстрее, чем CI успевает их проверять</span><span data-lang="en">The problem: agents generate PRs faster than CI can check them</span></h2>
+    <p>
+      <span data-lang="ru">Anthropic описывает конкретную инженерную боль от собственного же продукта: по мере того как в компании росло число агентов на одного инженера и ускорялось одобрение пул-реквестов, объём job'ов CI вырос в 25 раз всего за полгода. Прогонять весь набор тестов на каждое изменение просто перестало масштабироваться — гейты CI становились всё длиннее, дороже и, что важнее, менее заслуживающими доверия: за длинным прогоном сложнее уследить, а сбойные тесты, не относящиеся к изменению, размывают сигнал.</span>
+      <span data-lang="en">Anthropic describes a very concrete engineering pain caused by its own product: as the number of agents per engineer grew and PR approval accelerated inside the company, CI job volume increased 25x in just six months. Running the entire test suite on every change simply stopped scaling — CI gates got longer, more expensive, and, more importantly, less trustworthy: a long-running check is harder to keep track of, and unrelated test failures dilute the signal.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: детерминированный отбор тестов из двух частей — журнал и селектор</span><span data-lang="en">The method: deterministic test selection from two parts — a listener and a selector</span></h2>
+    <p>
+      <span data-lang="ru">Решение — сервис анализа влияния тестов (test impact analysis), который для каждого изменения детерминированно решает, какие тесты действительно нужно прогнать, опираясь на историю прошлых прогонов и релевантность затронутых пакетов. Система держится на синхронной работе двух компонентов: «слушатель» (listener) записывает результат каждого теста в каждом прогоне CI в историю по каждому тесту в отдельности, а «селектор» (selector) на основе этой истории плюс релевантности пакетов выбирает, какие именно тесты нужно прогнать для конкретного пул-реквеста. Ключевая идея в том, что человек и так неплохо умеет на глаз отличать сбой теста, который относится к его изменению, от постороннего шума — а вот агенту для этого нужен явный, узкий и достоверный набор тестов, чтобы он мог сам проверить результат и итеративно исправить ошибку, не расходуя контекст на анализ нерелевантных сбоев.</span>
+      <span data-lang="en">The fix is a test-impact-analysis service that deterministically decides, for every change, which tests actually need to run, based on the history of past runs and the relevance of the affected packages. The system relies on two components staying in sync: a "listener" records every test's result from every CI run into a per-test history, and a "selector" uses that history plus package relevance to pick exactly which tests a given pull request should run. The core idea is that a human is already reasonably good at eyeballing which test failure relates to their change versus unrelated noise — but an agent needs an explicit, narrow, trustworthy set of tests to be able to self-verify the result and iterate on a fix without burning context analyzing irrelevant failures.</span>
+    </p>
+
+    <h2><span data-lang="ru">Путь к решению не был прямым — три патча до устойчивой архитектуры</span><span data-lang="en">The path wasn't straightforward — three patches before a durable architecture</span></h2>
+    <p>
+      <span data-lang="ru">Статья честно описывает, что сервис отбора тестов патчили трижды, прежде чем нашли устойчивое решение — то есть первые попытки залатать проблему точечными фиксами не выдерживали продолжающегося роста нагрузки от агентов. Авторы прямо связывают рост CI с тем, что среднее число агентов на инженера растёт, а одобрение пул-реквестов ускоряется и становится более автоматизированным, — и это же меняет форму самих пул-реквестов: Claude, по их наблюдению, склонен предпочитать более мелкие, более гранулярные PR, что дополнительно увеличивает количество прогонов CI, даже если объём кода в каждом отдельном PR не растёт.</span>
+      <span data-lang="en">The article is candid that the test-selection service was patched three times before a durable solution was found — meaning the first attempts at point fixes couldn't keep up with the continuing growth in agent-driven load. The authors directly link the CI growth to a rising average number of agents per engineer and to PR approval becoming faster and more automated — which in turn changes the shape of PRs themselves: Claude, in their observation, tends to prefer smaller, more granular PRs, which further increases the number of CI runs even when the amount of code in each individual PR isn't growing.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это касается не только Anthropic — и ограничения подхода</span><span data-lang="en">Why this isn't just an Anthropic problem — and the approach's limitations</span></h2>
+    <p>
+      <span data-lang="ru">Anthropic формулирует это как проблему, с которой скоро столкнутся всё больше инженерных команд по мере того, как агенты продолжают ускорять генерацию и ревью кода, и предсказывает, что горизонтально масштабируемая архитектура отбора тестов станет отраслевым стандартом. Ограничение самого подхода в том, что он детерминированный и зависит от истории: селектору нужен уже накопленный по каждому тесту журнал результатов и корректно поддерживаемая карта релевантности пакетов — для нового репозитория или нестабильно флакующих тестов такая история менее надёжна, а рассинхронизация «слушателя» и «селектора» способна тихо подорвать точность отбора, если её не отслеживать отдельно.</span>
+      <span data-lang="en">Anthropic frames this as a problem more engineering teams will soon face as agents keep accelerating code generation and review, and predicts that horizontally scaled test-selection architecture will become an industry standard. The approach's own limitation is that it's deterministic and history-dependent: the selector needs an already-accumulated per-test result history and a correctly maintained package-relevance map — for a new repository or for flaky tests, that history is less reliable, and the listener and selector drifting out of sync can quietly undermine selection accuracy if it isn't monitored separately.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

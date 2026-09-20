@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-20",
+  "generated_at": "2026-09-20T05:22:39Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED прокси; далее WebSearch x2"},
+    {"source": "anthropic blog (WebSearch)", "status": "ok", "candidates": 3, "note": "Claude Code changelog Sept 19 (уже опубликовано вчера), Claude Code Projects coordinator (Sept 17, опубликовано сегодня)"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED прокси; далее WebSearch x2"},
+    {"source": "openai blog (WebSearch)", "status": "ok", "candidates": 4, "note": "GPT-6 Astra/ChatGPT Images уже покрыты ранее; Astra for Law (Sept 17, опубликовано сегодня)"},
+    {"source": "google deepmind blog (WebSearch)", "status": "ok", "candidates": 2, "note": "Gemini 3.8 Flash уже покрыт ранее; ничего нового за окно, кроме follow-up по автономному взлому (уже опубликован вчера, сегодня — новые факты)"},
+    {"source": "meta ai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего релевантного за lookback_hours и расширенное окно"},
+    {"source": "xai news (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok 4.7 анонс и Grok Build апдейты старше окна, не новые"},
+    {"source": "mistral news (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED; WebSearch — TotalEnergies/Mozilla партнёрства старше окна"},
+    {"source": "deepseek news (WebSearch)", "status": "empty", "candidates": 0, "note": "V4.1 Flash релиз (10 сентября) старше окна"},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "CONNECT 403 через egress-прокси; далее WebSearch"},
+    {"source": "hacker news (WebSearch)", "status": "ok", "candidates": 5, "note": "AI safety/hallucination инцидент, OpenAI breach обсуждение, AGENTS.md (уже опубликовано вчера)"},
+    {"source": "smol.ai / AI News aggregator (WebSearch)", "status": "ok", "candidates": 3, "note": "военный ИИ-инцидент как топ-сюжет дня, финансовые темы отфильтрованы (не по правилам сбора)"},
+    {"source": "tldr.tech/ai (WebSearch)", "status": "empty", "candidates": 0, "note": "конкретный выпуск за дату не нашёлся"},
+    {"source": "simonwillison.net linkblog (git backup simonwillisonblog-backup)", "status": "ok", "candidates": 3, "note": "compaction-summaries (новый), how-to-write-with-an-llm и astra-running-routes уже опубликованы ранее"},
+    {"source": "Andrej Karpathy (WebSearch, YouTube RSS недоступен)", "status": "blocked", "candidates": 0, "note": "youtube.com CONNECT 403 через egress-прокси; WebSearch не нашёл материалов свежее апреля-мая 2026"},
+    {"source": "Latent Space (WebSearch)", "status": "ok", "candidates": 1, "note": "AEF-1 standard (14 сентября, новый)"},
+    {"source": "AI Explained (WebSearch, YouTube RSS недоступен)", "status": "blocked", "candidates": 0, "note": "youtube.com CONNECT 403; WebSearch не дал атрибутируемого свежего видео"},
+    {"source": "Matt Wolfe (WebSearch, YouTube RSS недоступен)", "status": "blocked", "candidates": 0, "note": "youtube.com CONNECT 403; WebSearch не дал атрибутируемого свежего видео"},
+    {"source": "Ethan Mollick / oneusefulthing.org (WebSearch, WebFetch блокирован)", "status": "ok", "candidates": 1, "note": "The Overhang (19 сентября) уже опубликован вчера"},
+    {"source": "Nate Herk (WebSearch, YouTube RSS недоступен)", "status": "ok", "candidates": 1, "note": "Codex skills six-step framework (19 сентября, новый, конспект + Gemini video ok, кадры не удались)"},
+    {"source": "Matt Pocock (WebSearch, YouTube RSS недоступен)", "status": "blocked", "candidates": 0, "note": "youtube.com CONNECT 403; WebSearch не дал атрибутируемого свежего видео за неделю"},
+    {"source": "расширенный проход: другие эксперты (Zvi, Raschka, Hamel Husain, Pragmatic Engineer, Anthropic Engineering)", "status": "ok", "candidates": 2, "note": "AI #186 Zvi уже опубликован; Anthropic CI test impact analysis (14 сент, новый) и Pragmatic Engineer software factory (15 сент, новый) добавлены"}
+  ],
+  "totals": {
+    "candidates": 25,
+    "published": 5,
+    "rejected": {
+      "уже опубликовано ранее (seen_urls)": 9,
+      "старше lookback_hours/окна без новизны": 6,
+      "финансовые/индустриальные новости без продуктовой части": 2,
+      "не удалось подтвердить первоисточник (агрегированные AI-дайджест репозитории без прямой ссылки)": 1,
+      "не по теме LLM": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — python scripts/gemini_video.py успешно обработал https://www.youtube.com/watch?v=9KOtMsZ9I28 (yt-dlp/imageio-ffmpeg установлены из pip)",
+    "frames": "skipped: youtube.com заблокирован на уровне CONNECT egress-прокси (403 туннеля) для yt-dlp; конспект опубликован без кадров с пометкой на странице"
+  },
+  "notes": [
+    "Демо-файлов с \"demo\": true в data/daily и docs/data/daily не найдено — это не первый прогон, чистка не требовалась.",
+    "GEMINI_API_KEY доступен; yt-dlp и imageio-ffmpeg установлены из pip в начале прогона.",
+    "Egress-прокси в этом облачном окружении блокирует youtube.com на уровне CONNECT (403 на туннель) для ВСЕХ доменов youtube (RSS, WebFetch, yt-dlp) — видео-discovery для 5 видео-экспертов из sources.yaml шёл только через WebSearch, что и объясняет низкий выход по видео (1 из 4 max_videos_per_day).",
+    "Прямой WebFetch/curl на блоги вендоров (anthropic.com, openai.com, mistral.ai) и на hn.algolia.com и oneusefulthing.org даёт EGRESS_BLOCKED/403 — как и предупреждает SKILL.md; WebSearch отработал как основной канал без сбоев.",
+    "≥1/3 источников имеют статус blocked — ожидаемая деградация окружения (egress-прокси), а не признак нерабочего сбора: это стабильно с прошлых прогонов (см. run_log 2026-07-09, 2026-07-18)."
+  ]
+}

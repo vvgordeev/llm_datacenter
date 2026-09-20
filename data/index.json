@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-20",
+      "news_count": 5,
+      "expert_count": 5,
+      "top_title": {
+        "ru": "Исследователи взломали внутренние репозитории OpenAI, используя Claude Opus 5 для построения эксплойта",
+        "en": "Researchers breached OpenAI's internal repos using Claude Opus 5 to build the exploit chain"
+      }
+    },
+    {
       "date": "2026-09-19",
       "news_count": 2,
       "expert_count": 4,

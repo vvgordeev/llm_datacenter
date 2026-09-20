@@ -423,10 +423,10 @@
       }
     },
     "google-gemini-autonomous-hack-irregular": {
-      "last_date": "2026-09-19",
+      "last_date": "2026-09-20",
       "summary": {
-        "en": "Google discloses the first known case of Gemini autonomously hacking three real companies during a May cybersecurity test run by Irregular — the test environment was mistakenly given live internet access, but the agent stopped the intrusion itself upon discovering real infrastructure.",
-        "ru": "Google раскрывает первый известный случай, когда Gemini самостоятельно взломал три реальные компании во время майского теста кибербезопасности от Irregular — тестовое окружение по ошибке получило выход в интернет, но агент сам прекратил вторжение, обнаружив реальную инфраструктуру."
+        "ru": "Новые публикации (CNN Business, Al Jazeera, ABC) добавляют к вчерашней истории о взломе Gemini три реальные компании ключевой контекст: журналисты подтвердили официальное заявление Google и установили, что OpenAI, Anthropic и Meta ранее пережили похожие инциденты во время оценок безопасности от той же независимой фирмы Irregular — и во всех случаях причиной был один и тот же изъян методологии, непреднамеренный живой доступ агента в интернет вместо изолированной песочницы. Единичный случай Google превращается в системную проблему тестирования по всей индустрии.",
+        "en": "New coverage (CNN Business, Al Jazeera, ABC) adds crucial context to yesterday's story about Gemini hacking three real companies: reporters confirmed Google's official statement and established that OpenAI, Anthropic and Meta had all experienced similar incidents during security evaluations by the same independent firm, Irregular — with the same root cause each time, unintended live internet access for the agent instead of an isolated sandbox. Google's single incident turns into an industry-wide testing-methodology problem."
       }
     },
     "google-gemini-classroom-all-ages": {
@@ -902,6 +902,34 @@
         "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
         "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
       }
+    },
+    "us-military-ai-hallucination-china-ship": {
+      "last_date": "2026-09-20",
+      "summary": {
+        "ru": "Весной 2026 года аналитик Special Operations Command Pacific задал ИИ-чатботу вопрос о грузе китайского судна, и модель, объединив открытые данные с секретной SIGINT, ошибочно заключила, что судно везёт компоненты для ядерной программы. Отчёт поднялся по цепочке командования без проверки, военные самолёты уже были в воздухе для операции по перехвату судна — операцию отменили в последний момент, когда галлюцинацию обнаружили. CNN стало известно об инциденте от источников; следом демократы в Конгрессе потребовали расследования.",
+        "en": "In spring 2026, a Special Operations Command Pacific analyst asked an AI chatbot about a Chinese vessel's cargo, and the model — fusing open-source intelligence with classified SIGINT — wrongly concluded the ship was carrying nuclear-program components. The report moved up the chain of command unchallenged, and military aircraft were already airborne for an interception operation before it was aborted at the last minute once the hallucination was caught. CNN broke the story from sources, and Democratic senators followed with a demand for an investigation."
+      }
+    },
+    "openai-breach-claude-opus5-exploit": {
+      "last_date": "2026-09-20",
+      "summary": {
+        "ru": "Команда Hacktron AI (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) связала уязвимость переполнения кучи в декодере libheif — через загрузку HEIC-изображений на форуме OpenAI на Discourse — с ошибкой конфигурации SSO и за 72 часа добралась до внутреннего GitHub, Outlook и Slack компании, потратив менее $3000 в токенах. Показательно, что предыдущая модель Claude Opus 4.8 не смогла собрать рабочий эксплойт против защиты памяти, а Opus 5 справилась в течение нескольких часов после своего релиза. Это была авторизованная исследовательская работа: команда доказала доступ безобидным pull request'ом и остановилась; OpenAI подтвердила отчёт, заплатила $6500 по bug bounty и закрыла уязвимости.",
+        "en": "The Hacktron AI team (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) chained a heap-overflow bug in the libheif image decoder — via HEIC uploads on OpenAI's Discourse-based forum — with an SSO misconfiguration to reach the company's internal GitHub, Outlook and Slack within 72 hours, spending under $3,000 in AI tokens. Notably, the prior model Claude Opus 4.8 couldn't get a working exploit past memory protections, while Opus 5 produced one within hours of its release. This was authorized research: the team proved access with a harmless pull request and stopped; OpenAI confirmed the report, paid a $6,500 bounty, and patched the vulnerabilities."
+      }
+    },
+    "openai-astra-for-law": {
+      "last_date": "2026-09-20",
+      "summary": {
+        "ru": "OpenAI выпустила Astra for Law — конфигурацию GPT-6 Astra, настроенную под юридический ресёрч и drafting, с индексом судебной практики, статутов, нормативных актов и судебных постановлений США (более 230 млн URL, ежедневно пополняется). На бенчмарке Vals AI Legal Research Bench конфигурация прошла проверку на корректность в 54% из 200 вопросов против 38.7% у обычного GPT-6 Astra с веб-поиском. Доступ пока даётся избранным юрфирмам через программу Trusted Access в ChatGPT/Codex, с 26 партнёрскими плагинами (Thomson Reuters, Harvey, Legora и другие).",
+        "en": "OpenAI launched Astra for Law, a configuration of GPT-6 Astra tuned for legal research and drafting, backed by an index of US case law, statutes, regulations and court rulings (230M+ URLs, updated daily). On Vals AI's Legal Research Bench, the configuration passed the overall correctness check on 54% of 200 questions versus 38.7% for plain GPT-6 Astra with web search. Access is currently limited to select law firms via a Trusted Access program in ChatGPT/Codex, with 26 partner plugins (Thomson Reuters, Harvey, Legora and others)."
+      }
+    },
+    "anthropic-claude-code-projects-coordinator": {
+      "last_date": "2026-09-20",
+      "summary": {
+        "ru": "Anthropic представила бета-версию переработанного Claude Code Projects: координатор принимает от разработчика крупную цель, делит её на параллельные облачные сессии Claude Code, каждая из которых работает в собственной ветке и копии репозитория, а затем координатор собирает результаты и следит за общей памятью проекта (требования, решения, файлы). Пример из анонса — вывод из эксплуатации устаревшего v1-эндпоинта сразу в API, веб- и мобильном репозиториях: отдельные потоки мигрируют вызывающий код и тестируют каждый репозиторий, пока координатор отслеживает зависимости. Доступно пока ограниченному кругу подписчиков Claude Pro/Max в облачных сессиях.",
+        "en": "Anthropic unveiled a beta redesign of Claude Code Projects: a coordinator takes a developer's larger goal, splits it across parallel cloud-based Claude Code sessions, each operating on its own branch and repo copy, then assembles the results while maintaining shared project memory (requirements, decisions, files). The announcement's example: retiring a deprecated v1 endpoint across API, web and mobile repos at once — separate threads migrate callers and test each repository while the coordinator tracks dependencies. Currently limited to select Claude Pro/Max subscribers using cloud sessions."
+      }
     }
   },
   "seen_urls": {
@@ -1048,7 +1076,6 @@
     "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
-    "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/": "2026-07-21",
     "https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/": "2026-07-22",
     "https://simonwillison.net/2026/Jul/21/cat-and-thariq/": "2026-07-22",
     "https://simonwillison.net/2026/Jul/21/nativ/": "2026-07-24",
@@ -1062,7 +1089,7 @@
     "https://simonwillison.net/2026/Sep/11/datasette-security/": "2026-09-15",
     "https://simonwillison.net/2026/Sep/12/astra-running-routes/": "2026-09-13",
     "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/": "2026-09-12",
-    "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
+    "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-20",
     "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/": "2026-09-04",
     "https://simonwillison.net/2026/Sep/4/astra-pelicans/": "2026-09-05",
     "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/": "2026-09-06",
@@ -1145,7 +1172,6 @@
     "https://www.elastic.co/search-labs/blog/context-engineering-vs-prompt-engineering": "2026-08-14",
     "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf": "2026-09-13",
     "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
-    "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation": "2026-07-21",
     "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3": "2026-07-24",
     "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html": "2026-08-19",
     "https://www.kimi.com/blog/kimi-k3": "2026-07-28",
@@ -1211,7 +1237,6 @@
     "https://x.ai/news/introducing-grok-bot": "2026-08-12",
     "https://x.com/ChatGPT/status/2086852819215090168": "2026-08-11",
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
-    "https://x.com/Kimi_Moonshot/status/2078855608565207130": "2026-07-21",
     "https://x.com/OpenAI/status/2087231350134980830": "2026-08-17",
     "https://x.com/OpenAI/status/2087996496088297746": "2026-08-16",
     "https://x.com/ThePrimeagen/status/2081066227619836308": "2026-07-31",
@@ -1219,7 +1244,6 @@
     "https://x.com/claudeai/status/2079595988998554047": "2026-07-23",
     "https://x.com/claudeai/status/2086891169217122586": "2026-08-16",
     "https://x.com/deepseek_ai/status/2087864589895798968": "2026-08-14",
-    "https://x.com/elonmusk/status/2078289996323148076": "2026-07-21",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
     "https://x.com/hilbertspaess/status/2097476196791709843": "2026-09-11",
     "https://x.com/mkratsios47/status/2079933645888880708": "2026-07-24",
@@ -1243,7 +1267,6 @@
     "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
     "notes/articles/huggingface-agent-intrusion-timeline.html": "2026-07-29",
-    "notes/articles/lambert-kimi-k3-open-weights-escalation.html": "2026-07-21",
     "notes/articles/lambert-open-models-recap-kimi-qwen.html": "2026-07-24",
     "notes/articles/latentspace-ainews-astra-biggest-launch.html": "2026-09-05",
     "notes/articles/latentspace-anandkumar-weather-foundation-model.html": "2026-09-06",
@@ -1273,7 +1296,6 @@
     "notes/articles/turnbull-dont-classify-hallucinate.html": "2026-08-15",
     "notes/articles/venturebeat-kimi-k3-license-caveat.html": "2026-07-28",
     "notes/articles/webb-galactic-compass-ai-tutor.html": "2026-08-26",
-    "notes/articles/willison-afraid-of-chinese-models.html": "2026-07-21",
     "notes/articles/willison-anthropic-revenue-ramp-index.html": "2026-08-26",
     "notes/articles/willison-astra-pelican-grid.html": "2026-09-05",
     "notes/articles/willison-astra-running-routes.html": "2026-09-13",
@@ -1326,6 +1348,20 @@
     "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
     "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
     "notes/videos/pocock-29-skills-rule.html": "2026-07-22",
-    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28"
+    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28",
+    "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship": "2026-09-20",
+    "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/": "2026-09-20",
+    "https://www.cnn.com/2026/09/19/business/gemini-ai-hack-internet": "2026-09-20",
+    "https://openai.com/index/astra-for-law/": "2026-09-20",
+    "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work": "2026-09-20",
+    "notes/articles/willison-compaction-summaries-prompt-injection.html": "2026-09-20",
+    "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-20",
+    "notes/videos/nateherk-codex-skills-six-steps.html": "2026-09-20",
+    "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
+    "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
+    "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
+    "notes/articles/orosz-openai-agentic-software-factory.html": "2026-09-20",
+    "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
+    "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20"
   }
 }

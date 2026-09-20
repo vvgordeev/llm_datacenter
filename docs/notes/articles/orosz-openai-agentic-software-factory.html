@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: внутри агентной софтверной фабрики OpenAI — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Gergely Orosz, The Pragmatic Engineer · 2026-09-15</span>
+      <span data-lang="en">Article digest · Gergely Orosz, The Pragmatic Engineer · 2026-09-15</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Внутри агентной софтверной фабрики OpenAI</span>
+      <span data-lang="en">Inside OpenAI's agentic software factory</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://newsletter.pragmaticengineer.com/p/openai-software-factory" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Идея «софтверной фабрики»: не генерация кода, а замкнутый цикл с обратной связью</span><span data-lang="en">The "software factory" idea: not code generation, but a closed feedback loop</span></h2>
+    <p>
+      <span data-lang="ru">Гергей Орос описывает, как внутри OpenAI устроены несколько автоматизированных, агентных петель обратной связи, которые компания использует для собственной разработки. Центральное различие, которое подчёркивает статья: это не просто генерация кода по запросу, а агент (Codex), встроенный в цикл, включающий выполнение, результаты тестов, состояние репозитория и итеративное исправление. Агенту дают доступ к исходному коду и документации, к Git и GitHub, к Slack, Notion, Databricks, Datadog, внутренним логам и внутренне поддерживаемым «навыкам» (skills) — то есть к тому же контексту, которым пользовался бы штатный инженер.</span>
+      <span data-lang="en">Gergely Orosz describes how OpenAI has built several automated, agentic feedback loops it uses for its own software development. The key distinction the article draws: this isn't just on-demand code generation — it's an agent (Codex) embedded in a loop involving execution, test results, repository state, and iterative correction. The agent is given access to source code and documentation, Git and GitHub, Slack, Notion, Databricks, Datadog, internal logs, and internally maintained "skills" — essentially the same context a staff engineer would use.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пример «Perf Factory»: от продакшена — обратно в разработку</span><span data-lang="en">The "Perf Factory" example: from production back into development</span></h2>
+    <p>
+      <span data-lang="ru">Показательный пример из статьи — Perf Factory: система мониторит продакшен и сама запускает агентов Codex для исправления проблем с производительностью. Механика такая: агент вносит изменение, собирает софт, прогоняет тесты и чинит падения, создаёт или обновляет пул-реквест, а CI параллельно выполняет более полный набор линтеров и тестов; агент затем сам отслеживает статус пул-реквеста, интерпретирует обратную связь от CI, дорабатывает изменение и повторяет цикл, пока проверки не станут зелёными. Для оценки влияния на производительность агент прогоняет проблемные пул-реквесты через отдельный perf-харнесс и фреймворк синтетических A/B-тестов (Synthetics A/B) — то есть решение «стало ли лучше» тоже принимается по измеримому сигналу, а не на глаз.</span>
+      <span data-lang="en">A telling example from the article is Perf Factory: a system that monitors production and automatically kicks off Codex agents to fix performance regressions. The mechanics: the agent makes a change, builds the software, runs tests and fixes failures, opens or updates a pull request, while CI runs a fuller set of linters and tests in parallel; the agent then monitors the PR's status itself, interprets CI feedback, revises the change, and repeats the cycle until checks turn green. To judge the performance impact, the agent runs problematic PRs through a dedicated perf harness and the Synthetics A/B testing framework — so the "did this actually get better" call is also made on a measurable signal, not by eyeballing it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Результат: рост пропускной способности — и 10-кратная нагрузка на инфраструктуру</span><span data-lang="en">The result: higher throughput — and 10x load on infrastructure</span></h2>
+    <p>
+      <span data-lang="ru">По описанию статьи, у такого подхода быстрое распространение внутри компании — как среди инженерных, так и среди неинженерных команд, — и заметно более высокая пропускная способность разработки за счёт новых петель обратной связи, замыкающих продакшен на разработку. Но та же автоматизация создала примерно десятикратную нагрузку на часть систем разработки и подняла вопросы о том, как в таких объёмах вообще устроено ревью пул-реквестов человеком. Важная деталь, которую подчёркивает автор: автоматизация не устранила необходимость в человеческом одобрении, операционной экспертизе или дежурных инженерах (on-call) — агентная фабрика ускоряет цикл, но не убирает человека из контура принятия решений.</span>
+      <span data-lang="en">Per the article, this approach spread rapidly across the company, both in engineering and non-engineering teams, delivering substantially higher development throughput thanks to the new feedback loops connecting production back to development. But the same automation created roughly 10x load on some development systems and raised open questions about how pull-request review by humans can even work at that volume. A key detail the author stresses: the automation hasn't eliminated the need for human approval, operational expertise, or on-call engineers — the agentic factory speeds up the loop, but doesn't remove the human from the decision loop.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения</span><span data-lang="en">Limitations</span></h2>
+    <p>
+      <span data-lang="ru">Это описание внутренней инфраструктуры одной компании (OpenAI) на основе интервью с её сотрудниками, а не воспроизводимый рецепт с открытым кодом — конкретные пороги, при которых Perf Factory считает изменение «регрессией», и детали интеграции с внутренними инструментами (Databricks, Datadog и др.) в статье не раскрываются полностью. Само явление десятикратной нагрузки на инфраструктуру и нерешённый вопрос масштабирования человеческого ревью показывают, что подход пока не «закрыт» даже для самой OpenAI, а находится в процессе донастройки.</span>
+      <span data-lang="en">This is a description of one company's (OpenAI's) internal infrastructure based on interviews with its staff, not a reproducible open-source recipe — the article doesn't fully disclose the specific thresholds Perf Factory uses to flag a change as a "regression," or the integration details with internal tools like Databricks and Datadog. The 10x infrastructure load and the still-open question of scaling human review show the approach isn't a solved problem even for OpenAI itself — it's still being tuned.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
