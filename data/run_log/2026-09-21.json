@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T06:10:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED прокси на direct fetch; далее WebSearch x2+"},
+    {"source": "anthropic blog (WebSearch)", "status": "empty", "candidates": 0, "note": "всё найденное за lookback_hours (Claude помогает разрабатывать себя, Salesforce Claudeforce) старше окна или уже опубликовано ранее (institute/measuring-pace, 2026-09-18)"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED; далее WebSearch x2+"},
+    {"source": "openai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего нового за окно; Astra for Law уже опубликован 2026-09-20"},
+    {"source": "google deepmind blog (WebSearch)", "status": "empty", "candidates": 0, "note": "продолжение Gemini-хака без новых фактов за сутки; ничего нового"},
+    {"source": "meta ai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего релевантного за lookback_hours и расширенное окно"},
+    {"source": "xai news (WebSearch)", "status": "empty", "candidates": 0, "note": "Grok Build memory (2026-09-16) старше окна"},
+    {"source": "mistral news (WebSearch)", "status": "empty", "candidates": 0, "note": "TotalEnergies/Mozilla партнёрства старше окна, не продуктовые"},
+    {"source": "deepseek changelog (WebSearch)", "status": "empty", "candidates": 0, "note": "V4.1 Flash старше окна"},
+    {"source": "hacker news api", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED на hn.algolia.com; WebSearch site:news.ycombinator.com использован как фолбэк"},
+    {"source": "aggregators (smol.ai, tldr.tech, aiweekly.co)", "status": "blocked", "candidates": 2, "note": "WebFetch на все три блокирован прокси; aiweekly.co через WebSearch дал зацепки на Plugin4Shell и StepFun Step 5 Preview"},
+    {"source": "расширенный проход (LLM news/model release за дату, AI coding agent update)", "status": "ok", "candidates": 2, "note": "нашёл Plugin4Shell (AIR Security, 17-18 сентября) и StepFun Step 5 Preview (20 сентября) — оба ещё не в seen_urls"},
+    {"source": "experts: Simon Willison", "status": "empty", "candidates": 0, "note": "проверено через simonwillisonblog-backup (git clone ndjson-дампа); последний blogmark — 2026-09-18 23:57 UTC (Gemini hack, уже опубликован 2026-09-19), новых постов за 19-21 сентября нет"},
+    {"source": "experts: Ethan Mollick (oneusefulthing.org)", "status": "empty", "candidates": 0, "note": "последний пост «The Overhang» от 18 сентября уже опубликован 2026-09-19; новых постов нет"},
+    {"source": "experts: Zvi Mowshowitz (thezvi)", "status": "empty", "candidates": 0, "note": "последний выпуск AI#186 от ~17 сентября уже опубликован 2026-09-18; AI#187 не найден"},
+    {"source": "experts: Latent Space (article+AINews)", "status": "empty", "candidates": 0, "note": "последняя найденная заметка (aef-1) уже опубликована 2026-09-20; WebFetch на latent.space блокирован"},
+    {"source": "experts: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "новых видео/тредов за окно не найдено; RSS/YouTube WebFetch блокирован прокси"},
+    {"source": "experts: AI Explained (video)", "status": "ok", "candidates": 1, "note": "видео от 19 сентября про Gemini-хак, ещё не опубликовано — взято в конспект"},
+    {"source": "experts: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "не удалось найти конкретное видео с точной датой за окно через WebSearch (индекс отстаёт)"},
+    {"source": "experts: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "не удалось найти конкретное видео с точной датой за окно"},
+    {"source": "experts: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "не удалось найти конкретное видео с точной датой за окно"},
+    {"source": "расширенный проход экспертов (другие авторы: Every, Pragmatic Engineer, Gary Marcus, Ben Thompson)", "status": "ok", "candidates": 1, "note": "Every.to «Evals for Everyone» (Шиппер/Тейлор, опубл. 10 сентября, обновлено 20 сентября) — взято; остальные найденные материалы (Pragmatic Engineer, Thompson, Marcus) старше 7-дневного окна свежести"}
+  ],
+  "totals": {
+    "candidates": 6,
+    "published": 2,
+    "rejected": {
+      "уже опубликовано ранее (продолжение без новых фактов)": 2,
+      "старше окна свежести (>7 дней для экспертов, >36ч для новостей без расширения)": 6,
+      "не по теме (политика/финансы без продуктовой части: Trump AI Force, DraftKings)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok",
+    "frames": "skipped: EGRESS_BLOCKED — yt-dlp получает CONNECT 403 от прокси на туннель к youtube.com, несмотря на pip-установленные yt-dlp/imageio-ffmpeg"
+  },
+  "notes": "Понедельник после спокойного выходного: у большинства сконфигурированных экспертов (Willison, Mollick, Zvi, Latent Space, Karpathy) не вышло новых материалов с 17-18 сентября — все проверено вплотную (включая git-бэкап блога Willison) и подтверждено отсутствие нового контента, а не пропуск поиска. Итог — 2 новости и 2 экспертных материала вместо целевых 12 и 5: это ниже минимума min_expert_total, что честно зафиксировано здесь, а не подогнано лишними слабыми материалами. Прямые WebFetch на youtube.com, latent.space, simonwillison.net (кроме github-бэкапа), oneusefulthing.org, aiweekly.co, theregister.com, air.security, helpnetsecurity.com блокированы egress-прокси на уровне CONNECT 403 — весь discovery шёл через WebSearch."
+}

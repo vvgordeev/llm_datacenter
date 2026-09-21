@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: личные эвалы вместо публичных бенчмарков — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Every (Дэн Шиппер, Майк Тейлор) · опубликовано 2026-09-10, обновлено 2026-09-20</span>
+      <span data-lang="en">Article digest · Every (Dan Shipper, Mike Taylor) · published 2026-09-10, updated 2026-09-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Эвалы для каждого: как превратить свои правки за ИИ в тест для любой модели</span>
+      <span data-lang="en">Evals for Everyone: turning your AI corrections into a test for any model</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://every.to/context-window/evals-for-everyone" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Проблема: публичный бенчмарк не знает, что для вас «хорошо»</span><span data-lang="en">The problem: a public benchmark doesn't know what "good" means for you</span></h2>
+    <p>
+      <span data-lang="ru">Дэн Шиппер объясняет, почему в компании Every каждому сотруднику строят личный бенчмарк. Модель может уверенно сдавать выпускные экзамены по физике или математике — и при этом не знать, куда лично вы поставите запятую в своём тексте или сколько идей уместно на одном слайде вашей презентации. Публичные лидерборды измеряют общую способность модели, а не то, подходит ли она для конкретного, узкого кусочка вашей повседневной работы — и именно этот зазор статья предлагает закрывать личным набором эвалов (evals): тестов, оценивающих модель по вашему собственному стандарту качества, а не по чужому.</span>
+      <span data-lang="en">Dan Shipper explains why every employee at Every gets a personal benchmark built for them. A model can ace graduate-level physics or science exams and still have no idea where you'd personally put a comma in your writing, or how many ideas belong on one slide of your deck. Public leaderboards measure a model's general capability, not whether it fits a specific, narrow slice of your actual daily work — and that's the gap the article proposes to close with a personal set of evals: tests graded against your own standard of quality, not someone else's.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: правки, которые вы уже даёте ИИ, становятся проверками</span><span data-lang="en">The method: the corrections you already give AI become checks</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая идея метода — не изобретать эвалы с нуля, а превращать в них то, что вы всё равно делаете каждый день: исправляете за моделью формулировку, структуру, тон. Каждая такая правка кодируется в конкретное правило-проверку («результат должен/не должен...»), по которому потом можно прогнать вывод любой модели и получить оценку «прошёл/не прошёл» вместо смутного ощущения «звучит не так». Вместо того чтобы вручную править вывод раз за разом, вы один раз описываете, как хотите, чтобы работа выполнялась, — и это описание становится многоразовым тестом, который можно применить к новой модели или новой версии старой.</span>
+      <span data-lang="en">The method's core idea is not to invent evals from scratch, but to turn what you already do every day — correcting a model's wording, structure, or tone — into checks. Each correction gets encoded as a concrete pass/fail rule ("the output must/must not...") that any model's output can later be run against, replacing a vague "this doesn't sound right" with a measurable pass or fail. Instead of manually fixing the output over and over, you describe once how you want the work done, and that description becomes a reusable test you can point at a new model or a new version of an old one.</span>
+    </p>
+
+    <h2><span data-lang="ru">Цикл улучшения: от проверки — к навыку, от навыка — снова к проверке</span><span data-lang="en">The improvement loop: from check to skill, and back to check</span></h2>
+    <p>
+      <span data-lang="ru">Дальше правило, по которому вы оцениваете задачу, само становится «навыком» (skill), который можно подключить модели, чтобы улучшить будущие результаты, — а не просто разовым фильтром для отбраковки плохих ответов. Если модель проваливает проверку, ошибка диагностируется, соответствующий навык уточняется, и эвал прогоняется снова — цикл повторяется, пока результат не станет стабильно проходить. Тейлор, руководящий оценками в Every, описывает, как один такой прогон личного бенчмарка убедил его, что более компактная и дешёвая модель способна закрыть значительную часть его повседневной работы не хуже дорогой топовой модели, — то есть личный набор эвалов служит не только контролем качества, но и инструментом для осознанного выбора модели по цене.</span>
+      <span data-lang="en">The rule you use to grade a task then becomes a "skill" you can hand to the model to improve future outputs, rather than just a one-off filter for rejecting bad answers. When a model fails a check, the failure gets diagnosed, the relevant skill gets revised, and the eval gets rerun — the loop repeats until the result reliably passes. Taylor, who heads evals at Every, describes how one run of his own personal benchmark convinced him that a smaller, cheaper model could handle a substantial share of his day-to-day work just as well as a pricier flagship one — so the personal eval set doubles as a tool for deliberate, cost-aware model choice, not just quality control.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения</span><span data-lang="en">Limitations</span></h2>
+    <p>
+      <span data-lang="ru">Метод требует, чтобы у вас уже накопился запас реальных правок и понимание собственного стандарта качества, — для новой задачи без истории правок личный эвал строить не из чего. Статья не приводит независимого исследования, показывающего, насколько личные бенчмарки, построенные таким образом внутри одной компании, переносимы на чужие задачи и рабочие процессы, и не описывает, сколько ручного труда уходит на поддержание набора проверок в актуальном виде по мере смены моделей.</span>
+      <span data-lang="en">The method assumes you already have a backlog of real corrections and a clear sense of your own quality standard — for a brand-new task with no correction history, there's nothing yet to build a personal eval from. The article offers no independent study of how transferable benchmarks built this way inside one company are to other people's tasks and workflows, and it doesn't say how much upkeep the check set needs to stay current as models change.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

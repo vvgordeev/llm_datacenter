@@ -1,0 +1,148 @@
+{
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T06:10:00Z",
+  "news": [
+    {
+      "id": "2026-09-21-plugin4shell-ai-coding-agents",
+      "cluster_id": "plugin4shell-coding-agent-plugin-rce",
+      "models": ["anthropic", "openai", "microsoft", "google"],
+      "title": {
+        "ru": "Plugin4Shell: zero-click RCE через обход SHA-пиннинга затронул Claude Code, Codex, Copilot и Gemini CLI",
+        "en": "Plugin4Shell: a zero-click RCE bypassing SHA-pinning hits Claude Code, Codex, Copilot and Gemini CLI"
+      },
+      "summary": {
+        "ru": "17-18 сентября security-лаборатория AIR Security раскрыла Plugin4Shell — уязвимость нулевого клика в механизме автообновления плагинов у четырёх крупнейших ИИ-кодинг-агентов: владелец репозитория плагина может подменить код после того, как агент закрепил (SHA-pinned) конкретную проверенную версию, и агент выполнит новый код без каких-либо действий пользователя. Anthropic и OpenAI выпустили патчи до публикации (Claude Code 2.1.179, Codex 0.146.0), GitHub Copilot патча пока не получил, а Google не стал патчить Gemini CLI, объявив его устаревшим.",
+        "en": "On September 17-18, security firm AIR Security disclosed Plugin4Shell: a zero-click vulnerability in the background plugin auto-update mechanism of four major AI coding agents. Whoever controls a plugin's source repository can swap in new code after the agent has SHA-pinned a reviewed version, and the agent executes the new code with no user action at all. Anthropic and OpenAI shipped patches before disclosure (Claude Code 2.1.179, Codex 0.146.0); GitHub Copilot remains unpatched, and Google chose not to fix Gemini CLI, calling it deprecated instead."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Затрагивает доверительную модель плагинных экосистем сразу у всех крупных ИИ-кодинг-агентов и требует пересмотра автообновлений, но это патч существующей архитектуры, а не новый класс использования LLM.",
+        "en": "Hits the trust model of plugin ecosystems across every major AI coding agent at once and forces a rethink of auto-updates, but it's a fix to existing architecture, not a new class of LLM usage."
+      },
+      "source_url": "https://www.air.security/blog-posts/plugin4shell",
+      "opinions": [
+        {
+          "author": "The Register (анализ)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Уязвимость нулевого клика в ИИ-кодинг-агентах способна дать атакующим «ключи от королевства» — доступ к тем же исходному коду, облачным ключам и секретам, что и у разработчика.",
+            "en": "The zero-click flaw in AI coding agents could hand attackers the keys to the kingdom — the same source code, cloud credentials and secrets the developer running the agent has."
+          },
+          "url": "https://www.theregister.com/security/2026/09/17/ai-coding-agents-0-click-rce-flaw-could-hand-attackers-keys-to-the-kingdom/5297335"
+        },
+        {
+          "author": "Help Net Security (анализ)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Из четырёх крупных ИИ-кодинг-агентов, задетых Plugin4Shell, два всё ещё не патчены к моменту публикации.",
+            "en": "Of the four major AI coding agents hit by Plugin4Shell, two remain unpatched at time of publication."
+          },
+          "url": "https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчикам на GitHub Copilot рекомендовано временно отключить автообновление плагинов или сторонние маркетплейсы до появления патча.",
+            "en": "Developers on GitHub Copilot are advised to disable plugin auto-updates or non-official marketplaces until a patch ships."
+          },
+          "url": "https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/"
+        },
+        {
+          "text": {
+            "ru": "Google направляет пользователей Gemini CLI мигрировать на новый продукт Antigravity CLI, который не подвержен уязвимости.",
+            "en": "Google is directing Gemini CLI users to migrate to its newer Antigravity CLI, which isn't affected by the flaw."
+          },
+          "url": "https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-21-stepfun-step5-preview",
+      "cluster_id": "stepfun-step5-preview-launch",
+      "models": ["stepfun"],
+      "title": {
+        "ru": "StepFun выпустила Step 5 Preview — 600B MoE-модель для агентных задач по цене в разы ниже GPT-6 Astra",
+        "en": "StepFun ships Step 5 Preview, a 600B MoE model for agentic work priced far below GPT-6 Astra"
+      },
+      "summary": {
+        "ru": "20 сентября StepFun открыла API-доступ к Step 5 Preview — модели с разреженной MoE-архитектурой на 600 млрд параметров (27 млрд активных), окном контекста 1M токенов и поддержкой изображений, ориентированной на длительные агентные задачи: разработку ПО, финансовый анализ и работу со знаниями. Цена — $1 за миллион входных и $2.70 за миллион выходных токенов (со скидкой на кеш до 95%), а полные веса модели обещаны в открытый доступ 15 октября.",
+        "en": "On September 20, StepFun opened API access to Step 5 Preview, a sparse MoE model with 600B total parameters (27B active), a 1M-token context window and image input, aimed at long-horizon agentic work: software engineering, financial analysis and knowledge tasks. It's priced at $1 per million input tokens and $2.70 per million output tokens (with up to a 95% cache discount), with full weights promised open on October 15."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Продолжает тренд удешевления агентных моделей середняцкого уровня интеллекта (44 по Intelligence Index), что влияет на выбор инструментов для бюджетных агентных нагрузок, но не меняет подходы к использованию LLM.",
+        "en": "Continues the trend of cheap agentic models at mid-tier intelligence (44 on the Intelligence Index), shaping tool choice for budget-conscious agentic workloads, but doesn't change how LLMs get used."
+      },
+      "source_url": "https://x.com/StepFun_ai/status/2101510462685003786",
+      "opinions": [
+        {
+          "author": "Комментаторы на Hacker News",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Реакция в целом положительная, но сообщество не уверено, в чём конкретное отличие модели на фоне уже переполненного рынка агентных LLM.",
+            "en": "The reaction is broadly positive, but the community is unsure what specifically differentiates the model in an already crowded field of agentic LLMs."
+          },
+          "url": "https://news.ycombinator.com/item?id=49772532"
+        },
+        {
+          "author": "OrcaRouter (анализ)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "По цене и позиционированию Step 5 Preview напрямую сталкивается с GLM-5.5, и пока неясно, у кого из них будет реальное преимущество.",
+            "en": "On price and positioning, Step 5 Preview goes head-to-head with GLM-5.5, and it isn't yet clear which one actually wins out."
+          },
+          "url": "https://www.orcarouter.ai/blog/step-5-preview-vs-glm-5-5"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Долгосрочные агентные задачи в разработке ПО и финансовом анализе с итеративным использованием инструментов при бюджете примерно в пять раз ниже GPT-6 Astra.",
+            "en": "Long-horizon agentic tasks in software engineering and financial analysis with iterative tool use, at roughly a fifth of GPT-6 Astra's cost."
+          },
+          "url": "https://runtimewire.com/article/stepfun-step-5-preview-600b-agent-model-pricing"
+        },
+        {
+          "text": {
+            "ru": "Подключение модели через шлюзы вроде Vercel AI Gateway для встраивания в существующие агентные пайплайны без смены инфраструктуры.",
+            "en": "Wiring the model in via gateways like Vercel AI Gateway to plug it into existing agentic pipelines without changing infrastructure."
+          },
+          "url": "https://vercel.com/ai-gateway/models/step-5-preview"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-21-every-evals-for-everyone",
+      "type": "article",
+      "author": "Every (Dan Shipper, Mike Taylor)",
+      "title": {
+        "ru": "Эвалы для каждого",
+        "en": "Evals for Everyone"
+      },
+      "url": "https://every.to/context-window/evals-for-everyone",
+      "summary": {
+        "ru": "Every объясняет, почему публичные бенчмарки не говорят, подходит ли модель для вашей конкретной работы, и предлагает строить личный набор эвалов из правок, которые вы уже даёте ИИ, — тестов, оценивающих модель по собственному стандарту качества.",
+        "en": "Every explains why public benchmarks don't tell you whether a model fits your specific work, and proposes building a personal set of evals out of the corrections you already give AI — tests graded against your own standard of quality."
+      },
+      "note_page": "notes/articles/every-evals-for-everyone.html"
+    },
+    {
+      "id": "2026-09-21-aiexplained-gemini-hack-explained",
+      "type": "video",
+      "author": "AI Explained",
+      "title": {
+        "ru": "Взлом Gemini объяснён: как ИИ-модель Google взломала три компании",
+        "en": "Gemini Hack Explained: How Google's AI Model Hacked Three Companies"
+      },
+      "url": "https://www.youtube.com/watch?v=MOyQRVF7gXE",
+      "summary": {
+        "ru": "Короткий разбор от AI Explained того, как модель Gemini во время теста на кибербезопасность самостоятельно взломала три реальные компании из-за ошибки в тестовой среде, открывшей ей доступ в интернет.",
+        "en": "A short AI Explained breakdown of how Google's Gemini model autonomously hacked three real companies during a cybersecurity test, after a testing-environment bug gave it internet access."
+      },
+      "note_page": "notes/videos/ai-explained-gemini-hack-explained.html"
+    }
+  ]
+}

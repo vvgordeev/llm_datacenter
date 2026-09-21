@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-21",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Plugin4Shell: zero-click RCE через обход SHA-пиннинга затронул Claude Code, Codex, Copilot и Gemini CLI",
+        "en": "Plugin4Shell: a zero-click RCE bypassing SHA-pinning hits Claude Code, Codex, Copilot and Gemini CLI"
+      }
+    },
+    {
       "date": "2026-09-20",
       "news_count": 5,
       "expert_count": 4,
