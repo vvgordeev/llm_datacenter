@@ -277,13 +277,6 @@
         "ru": "Amodei (12 сент, эссе) → Altman/Musk согласны → Microsoft четвёртым присоединяется с Code of Conduct (13-14 сент) → OpenAI подтверждает недели переговоров и поддержку FRONTIER Act (15 сент) → Anthropic публикует первый количественный R&D Automation Index: Claude ведёт 26% AI R&D компании (17 сент)."
       }
     },
-    "anthropic-record-a-skill": {
-      "last_date": "2026-07-23",
-      "summary": {
-        "en": "Claude Cowork shipped Record a Skill (July 21) — teaching the agent by screen-recording a demonstration instead of writing a prompt/SKILL.md",
-        "ru": "Claude Cowork получил «Record a Skill» (21 июля) — обучение агента демонстрацией через запись экрана вместо промпта/SKILL.md"
-      }
-    },
     "anthropic-researcher-extinction-warning": {
       "last_date": "2026-09-11",
       "summary": {
@@ -879,10 +872,10 @@
       }
     },
     "xai-grok-4-8": {
-      "last_date": "2026-09-14",
+      "last_date": "2026-09-22",
       "summary": {
-        "en": "Grok 4.7 (2.1T) was promised for September 12, slipped twice, and on September 13 Musk skipped it outright and teased Grok 4.8 (2.5T, new C++ stack) with no release date.",
-        "ru": "Grok 4.7 (2.1 трлн) обещан на 12 сентября, дважды сдвинут, а 13 сентября Musk пропускает его целиком и анонсирует Grok 4.8 (2.5 трлн, новый стек на C++) без даты релиза."
+        "en": "Grok 4.7 (2.1T), teased since mid-September and twice delayed, finally shipped on Sep 21 as a coding/agentic-work update at unchanged Grok 4.6 pricing; Grok 4.8 (2.5T, new C++ stack) remains unreleased.",
+        "ru": "Grok 4.7 (2.1 трлн), анонсированный ещё в середине сентября и дважды перенесённый, наконец вышел 21 сентября как обновление для кодинга и агентных задач по прежней цене Grok 4.6; Grok 4.8 (2.5 трлн, новый стек на C++) пока не выпущен."
       }
     },
     "xai-grok-bot": {
@@ -987,7 +980,6 @@
     "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
     "https://garymarcus.substack.com/p/breaking-two-rays-of-hope": "2026-09-12",
     "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold": "2026-08-03",
-    "https://garymarcus.substack.com/p/openais-disconcerting-hack-of-huggingface": "2026-07-23",
     "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
     "https://garymarcus.substack.com/p/pause-openai-now": "2026-09-05",
     "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross": "2026-09-03",
@@ -1027,7 +1019,6 @@
     "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/": "2026-08-12",
     "https://openai.com/index/gpt-6-astra/": "2026-09-04",
     "https://openai.com/index/hugging-face-incident-and-the-road-ahead/": "2026-08-28",
-    "https://openai.com/index/hugging-face-model-evaluation-security-incident/": "2026-07-23",
     "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
     "https://openai.com/index/introducing-gpt-live-1-in-the-api/": "2026-09-12",
     "https://openai.com/index/introducing-openai-presence/": "2026-07-24",
@@ -1071,7 +1062,6 @@
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
     "https://simonwillison.net/2026/Jul/21/nativ/": "2026-07-24",
-    "https://simonwillison.net/2026/Jul/22/openai-cyberattack/": "2026-07-23",
     "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/": "2026-07-29",
     "https://simonwillison.net/2026/Jul/26/relay-market/": "2026-07-28",
     "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/": "2026-07-31",
@@ -1083,6 +1073,7 @@
     "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/": "2026-09-12",
     "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
     "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/": "2026-09-04",
+    "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/4/astra-pelicans/": "2026-09-05",
     "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/": "2026-09-06",
     "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/": "2026-09-07",
@@ -1125,7 +1116,6 @@
     "https://thezvi.substack.com/p/claude-opus-5-is-highly-capable-but": "2026-07-29",
     "https://thezvi.substack.com/p/gpt-6-astra-can-do-ambitious-things": "2026-09-13",
     "https://thezvi.substack.com/p/on-kimi-k3-its-capabilities-and-related": "2026-07-24",
-    "https://thezvi.substack.com/p/openai-model-hacks-into-huggingface": "2026-07-23",
     "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11",
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
     "https://thezvi.substack.com/p/what-happened-openai-and-huggingface": "2026-08-10",
@@ -1210,7 +1200,7 @@
     "https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2": "2026-09-19",
     "https://www.youtube.com/watch?v=--8pJvYNcX4": "2026-08-15",
     "https://www.youtube.com/watch?v=0oXOOlqVu5M": "2026-08-22",
-    "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-20",
+    "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-22",
     "https://www.youtube.com/watch?v=FFWtxjvW2ts": "2026-09-05",
     "https://www.youtube.com/watch?v=GGzT7zVrRTU": "2026-09-04",
     "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17",
@@ -1228,6 +1218,7 @@
     "https://www.youtube.com/watch?v=yysILVsfLFM": "2026-09-13",
     "https://www.youtube.com/watch?v=zpS6JGJNaGg": "2026-08-26",
     "https://x.ai/news/grok-4-6": "2026-08-13",
+    "https://x.ai/news/grok-4-7": "2026-09-22",
     "https://x.ai/news/grok-bot-for-enterprise": "2026-09-05",
     "https://x.ai/news/grok-bot-more-plans": "2026-08-22",
     "https://x.ai/news/grok-build-memory": "2026-09-18",
@@ -1240,7 +1231,6 @@
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "https://x.com/ThePrimeagen/status/2081066227619836308": "2026-07-31",
     "https://x.com/bot/status/2092664183334846840": "2026-08-27",
-    "https://x.com/claudeai/status/2079595988998554047": "2026-07-23",
     "https://x.com/claudeai/status/2086891169217122586": "2026-08-16",
     "https://x.com/deepseek_ai/status/2087864589895798968": "2026-08-14",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
@@ -1262,7 +1252,6 @@
     "notes/articles/elastic-context-vs-prompt-engineering.html": "2026-08-14",
     "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
     "notes/articles/garymarcus-astra-oversold.html": "2026-08-03",
-    "notes/articles/garymarcus-huggingface-wakeup-call.html": "2026-07-23",
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
     "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
@@ -1317,7 +1306,6 @@
     "notes/articles/willison-nativ-local-ai-mac.html": "2026-07-24",
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
     "notes/articles/willison-open-letters-ai-development.html": "2026-08-03",
-    "notes/articles/willison-openai-cyberattack-science-fiction.html": "2026-07-23",
     "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
     "notes/articles/willison-runaway-ai-agent.html": "2026-07-29",
@@ -1334,7 +1322,6 @@
     "notes/articles/zvi-astra-ambitious-things.html": "2026-09-13",
     "notes/articles/zvi-astra-cyber-critical.html": "2026-08-14",
     "notes/articles/zvi-kimi-k3-capabilities-discontents.html": "2026-07-24",
-    "notes/articles/zvi-openai-huggingface-hack.html": "2026-07-23",
     "notes/articles/zvi-opus-5-vs-mythos.html": "2026-07-29",
     "notes/articles/zvi-what-happened-openai-huggingface.html": "2026-08-10",
     "notes/videos/ai-explained-model-landscape-mid-2026.html": "2026-08-15",

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Jev и восход "моделей-решателей"» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-21</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-21</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Jev и восход «моделей-решателей»</span>
+      <span data-lang="en">Jev and the rise of "decision models"</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/21/jev/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки Уиллисона ↗</span><span data-lang="en">Willison's original note ↗</span>
+      </a>
+      ·
+      <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener">
+        <span data-lang="ru">Анонс TypeSafe ↗</span><span data-lang="en">TypeSafe's announcement ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Модель, которая не пишет текст</span><span data-lang="en">A model that doesn't write text</span></h2>
+    <p>
+      <span data-lang="ru">TypeSafe (компания, основанная Диого Алмейдой, одним из создателей ChatGPT) выпустила Jev — первый пример новой категории моделей, которую называет «System One models»; Уиллисон предпочитает термин Мэгги Эпплтон «decision models» («модели-решатели»), и он точнее описывает суть. Jev принимает обычный текстовый вход, но вместо текста на выходе выдаёт только число с плавающей запятой: уверенность в ответе, распределение вероятностей по вариантам или оценку по шкале. TypeSafe формулирует это так: «неструктурированное состояние на входе, типизированные вероятностные решения на выходе» — фактически это функция-вызов на уровне интеллекта топовой модели, а не генератор текста.</span>
+      <span data-lang="en">TypeSafe (the company founded by Diogo Almeida, one of ChatGPT's creators) shipped Jev, the first example of what it calls a "System One model"; Willison prefers Maggie Appleton's term "decision model," which describes the thing more precisely. Jev takes ordinary text input, but instead of text it returns only a floating-point number: a confidence score, a probability distribution over options, or a rating along a scale. TypeSafe's own framing: "unstructured state in, typed probabilistic decisions out" — effectively a function call running on frontier-model intelligence rather than a text generator.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три формы вопроса и экономика без выходных токенов</span><span data-lang="en">Three question shapes, and an economics with no output tokens</span></h2>
+    <p>
+      <span data-lang="ru">Вы отправляете Jev «состояние» — строку, массив строк или набор пар имя-значение, описывающий статью, клиента или любую другую запись, — а затем один или несколько вопросов трёх видов. «Noul»-вопросы (от Bernoulli) — утверждение да/нет, на которое модель возвращает число от 0 до 1 как степень уверенности. Choice-вопросы дают распределение вероятностей по заранее заданному набору вариантов. Score-вопросы возвращают число вдоль числовой шкалы с описанными уровнями. Вопросы обрабатываются параллельно, так что десяток вопросов о документе занимает примерно столько же времени, сколько один. Ключевая экономическая деталь: Jev берёт плату только за входные токены — $0.042 за миллион, дешевле даже GPT-5 Nano ($0.05/млн), — а выход, будучи одним числом, ничего не стоит.</span>
+      <span data-lang="en">You send Jev a "state" — a string, an array of strings, or a set of name/value pairs describing an article, a customer, or any other record — plus one or more questions of three shapes. "Noul" questions (from Bernoulli) are yes/no statements the model answers with a 0-to-1 confidence score. Choice questions return a probability distribution over a fixed set of options. Score questions return a number along a described numeric scale. Questions run in parallel, so a dozen questions about a document take about as long as one. The key economic detail: Jev only charges for input tokens — $0.042 per million, cheaper than even OpenAI's GPT-5 Nano ($0.05/million) — and the output, being a single number, is free.</span>
+    </p>
+
+    <h2><span data-lang="ru">Чёрные ящики снова в моде</span><span data-lang="en">Black boxes are back in fashion</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон отмечает главное неудобство этого формата: Jev — это шаг ещё глубже в сторону чёрного ящика машинного обучения. Обычные LLM и так непрозрачны — их можно попросить объяснить решение, но нет гарантии, что объяснение отражает реальную причину. Jev не даёт даже этого: на входе — сколько угодно текста, на выходе — одно число, и непонятно, какие именно сигналы в тексте на него повлияли. Отсюда прямое предупреждение: не стоит использовать Jev для ранжирования кандидатов на работу — число может маскировать любую скрытую предвзятость модели, а экспериментально её выявить крайне сложно. Собственный эксперимент Уиллисона это иллюстрирует: он попросил Jev оценить каждый город залива Сан-Франциско по вопросу «хороший ли это город?» — первым оказался Купертино, последним Ист-Пало-Альто, без единой причины на поверхности. Практический вывод: раз объяснения нет, эвалы и структурированные эксперименты становятся даже важнее, чем в обычных LLM-проектах — благо, дешевизна Jev позволяет прогнать через него сотни и тысячи тестовых промптов буквально за копейки.</span>
+      <span data-lang="en">Willison names the format's core discomfort: Jev is a further step back toward black-box machine learning. Regular LLMs are already opaque — you can ask them to justify a decision, but there's no guarantee the justification reflects the real cause. Jev doesn't even offer that: however much text goes in, only a single number comes out, with no way to tell which signals in the text drove it. Hence a direct warning: don't use Jev to rank job applicants — that floating-point number could conceal all manner of unseen bias, and picking that bias apart experimentally is genuinely hard. Willison's own experiment illustrates the point: he had Jev score every city in the San Francisco Bay Area on whether it was a "good city," and it rated Cupertino top and East Palo Alto bottom, with no visible reason why. The practical upshot: with no explanation to lean on, evals and structured experiments matter even more than on a regular LLM project — fortunately Jev is cheap enough that running hundreds or thousands of test prompts through it costs just a few cents.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что сообщество уже сделало с Jev</span><span data-lang="en">What the community has already done with Jev</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон описывает decision-model-фрейминг как наиболее полезный для задач, сводимых к классификации: детекция спама, подсказка меток, приоритизация, ранжирование — сам он экспериментирует с реранкингом поиска, отбирая сотню кандидатов дешёвым BM25 и затем прогоняя их через Jev на релевантность запросу. Отдельно он собрал нестандартные применения, придуманные сообществом за первые дни после релиза: jevchat Кайла Пены превращает Jev в (нарочито плохой) чат-бот, на каждом шаге спрашивая только «какой символ следующий»; jev-leftpad Фатиха Кадира Акына реализует классическую функцию left-pad через choice-вопрос «сколько пробелов нужно»; jev-2048 Энди Гейтона использует Jev для игры в 2048. Эти игрушечные примеры не самоцель — они демонстрируют, насколько непохож этот новый класс моделей на всё, с чем индустрия работала последние несколько лет, и что для decision models ещё только предстоит нащупать серьёзные продакшн-сценарии за пределами классификации и ранжирования.</span>
+      <span data-lang="en">Willison frames the decision-model approach as most useful for anything reducible to classification: spam detection, label suggestion, prioritization, ranking — he's experimenting himself with search reranking, pulling a hundred candidates with cheap BM25 and then having Jev score them for relevance to the query. He also rounds up the community's more playful uses from the first few days after launch: Kyle Pena's jevchat turns Jev into a (deliberately bad) chat model by asking it, at every step, only "which symbol comes next"; Fatih Kadir Akın's jev-leftpad implements the classic left-pad function via a choice question asking "how many spaces are needed"; Andy Gayton's jev-2048 uses Jev to play the sliding-tile game 2048. These toy examples aren't the point in themselves — they show how unlike anything the industry has worked with in recent years this new model class is, and that serious production use cases for decision models, beyond classification and ranking, are still being worked out.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-22",
+      "news_count": 1,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "xAI наконец выпускает Grok 4.7 — обновление для кодинга и агентных задач по прежней цене",
+        "en": "xAI finally ships Grok 4.7, a coding- and agentic-work upgrade at unchanged pricing"
+      }
+    },
+    {
       "date": "2026-09-21",
       "news_count": 2,
       "expert_count": 2,

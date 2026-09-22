@@ -1,0 +1,109 @@
+{
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T06:30:00Z",
+  "news": [
+    {
+      "id": "2026-09-22-xai-grok-4-7",
+      "cluster_id": "xai-grok-4-8",
+      "models": ["xai"],
+      "title": {
+        "ru": "xAI наконец выпускает Grok 4.7 — обновление для кодинга и агентных задач по прежней цене",
+        "en": "xAI finally ships Grok 4.7, a coding- and agentic-work upgrade at unchanged pricing"
+      },
+      "summary": {
+        "ru": "21 сентября xAI выпустила Grok 4.7 — модель на более крупной базовой архитектуре с более долгим прогоном RL, ориентированным на многочасовые задачи, после двух переносов даты релиза. Цена ($2/$6 за миллион токенов) и контекст в 500K токенов у Grok 4.6 сохранены, при этом CursorBench 4.0 вырос с 40.4% до 46.3%, Terminal-Bench 4.0 — с 20.3% до 38.0%, а по агентному бенчмарку AA-Briefcase (Artificial Analysis) модель прибавила 111 Elo. Доступна с первого дня в Cursor, Grok Build, GitHub Copilot и API xAI.",
+        "en": "On September 21, xAI released Grok 4.7, built on a larger base model with a longer reinforcement-learning run weighted toward long, multi-hour tasks, after twice slipping the ship date. It keeps Grok 4.6's $2/$6-per-million-token pricing and 500K context while lifting CursorBench 4.0 from 40.4% to 46.3%, Terminal-Bench 4.0 from 20.3% to 38.0%, and gaining +111 Elo on Artificial Analysis's AA-Briefcase agentic-work benchmark. It shipped day one in Cursor, Grok Build, GitHub Copilot and the xAI API."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Реальный и широко доступный скачок в агентных кодинг-возможностях без роста цены для текущих пользователей, но по независимым замерам модель в целом остаётся в середине рейтинга (#5), позади Claude и GPT-6, — это заточка существующего подхода, а не новый.",
+        "en": "A real, broadly-usable jump in agentic coding capability at no extra cost for existing users, but independent benchmarks place it mid-pack (#5) overall behind Claude and GPT-6 — it sharpens an existing approach rather than opening a new one."
+      },
+      "source_url": "https://x.ai/news/grok-4-7",
+      "opinions": [
+        {
+          "author": "AndroidHeadlines",
+          "stance": "positive",
+          "quote": {
+            "ru": "Заметное обновление кодинг- и агентных возможностей, доступное текущим пользователям Grok 4.6 по прежней цене, — прямая выгода для тех, кто уже платит за подписку.",
+            "en": "A notable coding and agentic upgrade delivered to existing Grok 4.6 users at the same price point — a straightforward win for teams already paying for it."
+          },
+          "url": "https://www.androidheadlines.com/2026/09/grok-4-7-ai-launch-coding-upgrades-pricing.html"
+        },
+        {
+          "author": "the Decoder",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Несмотря на прирост в кодинге, по бенчмаркам Grok 4.7 в целом остаётся в середине рейтинга — разрыв с Claude Fable 5.1 и GPT-6 Astra по-прежнему велик.",
+            "en": "Despite the coding-specific gains, benchmarks show Grok 4.7 landing mid-pack overall — a wide gap remains to Claude Fable 5.1 and GPT-6 Astra."
+          },
+          "url": "https://the-decoder.com/xai-launches-grok-4-7-at-bargain-prices-but-benchmarks-reveal-a-wide-gap-to-claude-and-gpt-6/"
+        },
+        {
+          "author": "Hacker News (обсуждение анонса)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "В обсуждении неподдельный интерес к приросту в агентном кодинге соседствует с колкими замечаниями о том, что релиз сдвинулся почти на две недели от исходной даты, а маржа компании выглядит тоньше прежнего.",
+            "en": "The thread mixes genuine excitement about the agentic-coding gains with pointed remarks that the release slipped nearly two weeks past its original date and margins look thinner than before."
+          },
+          "url": "https://news.ycombinator.com/item?id=49788838"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Многошаговая инженерная работа — поиск бага в большом кодбейзе, прогон тестов, итерации — в Cursor, где акцент релиза сделан именно на устойчивую самопроверку.",
+            "en": "Multi-step engineering work — hunting a bug across a large codebase, running tests, iterating — in Cursor, where sustained self-verification is the point of the release."
+          },
+          "url": "https://x.ai/news/grok-4-7"
+        },
+        {
+          "text": {
+            "ru": "Продолжительная агентная работа со знаниями (сбор источников, синтез, финальный артефакт) — по бенчмарку AA-Briefcase модель теперь на одном уровне с Claude Opus 5 и Fable 5.1.",
+            "en": "Long-horizon agentic knowledge work (research, synthesis, producing a final artifact), where the model's AA-Briefcase score now sits alongside Claude Opus 5 and Fable 5.1 at the top of that leaderboard."
+          },
+          "url": "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+        },
+        {
+          "text": {
+            "ru": "Терминальные кодинг-агенты: показатель Terminal-Bench 4.0 почти удвоился (с 20.3% до 38.0%); доступно в GitHub Copilot с первого дня.",
+            "en": "Terminal-based coding agents, where Terminal-Bench 4.0 nearly doubled (20.3% → 38.0%); available same-day in GitHub Copilot."
+          },
+          "url": "https://www.androidheadlines.com/2026/09/grok-4-7-ai-launch-coding-upgrades-pricing.html"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-22-willison-jev-decision-models",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Jev и восход «моделей-решателей»",
+        "en": "Jev and the rise of \"decision models\""
+      },
+      "url": "https://simonwillison.net/2026/Sep/21/jev/",
+      "summary": {
+        "ru": "Уиллисон разбирает Jev от TypeSafe — новую категорию моделей, которые принимают текст, а на выходе дают только числа: уверенность да/нет, вероятности по вариантам или числовую оценку. Это делает модель крайне дешёвой для задач классификации (спам-фильтрация, ранжирование, реранкинг поиска), но поднимает вопрос предвзятости: модель отдаёт число без единого объяснения, почему оно именно такое.",
+        "en": "Willison unpacks TypeSafe's Jev, a new category of model that takes text in and returns only floating-point decisions — yes/no confidence scores, choice probabilities, or numeric ratings — making it extremely cheap for classification-style tasks like spam detection, ranking and search reranking, while flagging the bias risk of a model that gives you a number with no explanation attached."
+      },
+      "note_page": "notes/articles/willison-jev-decision-models.html"
+    },
+    {
+      "id": "2026-09-22-nateherk-codex-skills-framework",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Как создавать скиллы для Codex лучше, чем 99% людей",
+        "en": "How to Build Codex Skills Better than 99% of People"
+      },
+      "url": "https://www.youtube.com/watch?v=9KOtMsZ9I28",
+      "summary": {
+        "ru": "Шестишаговый метод создания переиспользуемых скиллов для Codex: определить желаемый результат и идти в обратную сторону, дать каждому скиллу один узкий триггер, подобрать жёсткость инструкций под «уровень свободы» задачи, встроить цикл верификации (часто силами второго ИИ-агента), а затем «спускать» скилл на более дешёвые модели и дорабатывать его от запуска к запуску.",
+        "en": "A six-step framework for building reusable Codex skills: reverse-engineer the desired output, give each skill one narrow trigger, match instruction rigidity to the task's 'freedom level', build a verification loop (often with a second AI agent), then walk the skill down to cheaper models and keep refining it run over run."
+      },
+      "note_page": "notes/videos/nateherk-codex-skills-framework.html"
+    }
+  ]
+}

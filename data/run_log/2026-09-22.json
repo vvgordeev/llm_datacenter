@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T06:30:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED прокси на direct fetch www.anthropic.com; далее WebSearch x2+"},
+    {"source": "anthropic blog (WebSearch)", "status": "empty", "candidates": 0, "note": "всё найденное (Claude помогает разрабатывать себя, Claudeforce, ценообразование Sonnet 5) старше окна lookback_hours или уже опубликовано ранее"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED openai.com; далее WebSearch x2+"},
+    {"source": "openai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "GPT-6 Astra (3 сент), misalignment-фреймворк (16-17 сент), teen safety — всё старше окна или не продуктовая функция"},
+    {"source": "google deepmind blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED blog.google; далее WebSearch x2+"},
+    {"source": "google deepmind blog (WebSearch)", "status": "empty", "candidates": 0, "note": "Gemini 3.8 Flash (2 сент), Notebooks в Gemini (14 сент) — старше окна; Build with Gemini 2026 — ивент, не функция"},
+    {"source": "meta ai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED ai.meta.com; далее WebSearch x2+"},
+    {"source": "meta ai blog (WebSearch)", "status": "empty", "candidates": 0, "note": "Muse Spark 1.3 (2 сент), Meta One (15 сент) — старше окна, ничего нового за 36ч"},
+    {"source": "xai news (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED x.ai; далее WebSearch x2+"},
+    {"source": "xai news (WebSearch)", "status": "ok", "candidates": 1, "note": "Grok 4.7 опубликован 21 сентября 16:17 UTC (x.ai/news/grok-4-7) — ранее анонс дважды переносился (см. кластер xai-grok-4-8 от 14 сентября); ещё не в seen_urls — взят в сводку"},
+    {"source": "mistral news (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED mistral.ai; далее WebSearch x2+"},
+    {"source": "mistral news (WebSearch)", "status": "empty", "candidates": 0, "note": "Mozilla-партнёрство (16 сент), Leanstral 1.5 — старше окна"},
+    {"source": "deepseek changelog (WebFetch)", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED api-docs.deepseek.com; далее WebSearch x2+"},
+    {"source": "deepseek changelog (WebSearch)", "status": "empty", "candidates": 0, "note": "V4.1 Flash (10 сент) старше окна, ничего нового"},
+    {"source": "hacker news api", "status": "blocked", "candidates": 0, "note": "EGRESS_BLOCKED hn.algolia.com; WebSearch site:news.ycombinator.com использован как фолбэк, дал тред по Grok 4.7"},
+    {"source": "aggregators (smol.ai, tldr.tech)", "status": "blocked", "candidates": 0, "note": "WebFetch и WebSearch по обоим агрегаторам за 21-22 сентября не дали ничего нового сверх уже найденного напрямую (Jev/decision models, Grok 4.7 — оба уже покрыты через WebSearch по эксперту/модели)"},
+    {"source": "расширенный проход (AI news / model release за дату)", "status": "empty", "candidates": 0, "note": "широкий проход по датам 21-22 сентября не дал дополнительных кандидатов новостей сверх Grok 4.7 — остальное либо уже опубликовано в прошлых сводках (AEF-1 standard, Navier-Stokes, Gemini autonomous hack), либо не по теме (политика/безопасность без продуктовой части: Trump AI Force, иск о темпах разработки ИИ)"},
+    {"source": "experts: Simon Willison", "status": "ok", "candidates": 1, "note": "через simonwillisonblog-backup (git-клон ndjson-дампа): пост «jev» от 2026-09-21 23:09 UTC, ещё не опубликован — взят в конспект"},
+    {"source": "experts: Ethan Mollick (oneusefulthing.org)", "status": "empty", "candidates": 0, "note": "последний пост «The Overhang» (18 сент) уже опубликован 2026-09-19; новых постов нет"},
+    {"source": "experts: Latent Space (article+AINews)", "status": "empty", "candidates": 0, "note": "последняя найденная заметка (aef-1-standard) уже опубликована 2026-09-20; более новых выпусков AINews с точной датой найти не удалось, WebFetch на latent.space блокирован"},
+    {"source": "experts: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "новых видео за окно не найдено (последнее найденное — апрельский fireside chat); RSS youtube.com заблокирован прокси (CONNECT 403, подтверждено)"},
+    {"source": "experts: AI Explained (video)", "status": "empty", "candidates": 0, "note": "конкретное новое видео с точной датой за окно найти не удалось через WebSearch"},
+    {"source": "experts: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "конкретное новое видео с точной датой за окно найти не удалось через WebSearch"},
+    {"source": "experts: Nate Herk (video)", "status": "ok", "candidates": 1, "note": "видео «How to Build Codex Skills Better than 99% of People» (youtube.com/watch?v=9KOtMsZ9I28), ещё не опубликовано — взято в конспект; кадры не извлечены (см. video_pipeline)"},
+    {"source": "experts: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "найден только TikTok-ролик без точной даты; новых видео на YouTube-канале за окно не найдено"},
+    {"source": "расширенный проход экспертов (Every, Zvi Mowshowitz)", "status": "empty", "candidates": 0, "note": "Every (Dan Shipper/Mike Taylor) — «Evals for Everyone» уже опубликован 2026-09-21, новых материалов нет"}
+  ],
+  "totals": {
+    "candidates": 3,
+    "published": 3,
+    "rejected": {
+      "старше окна свежести (>36ч для новостей, >7 дней для экспертов) или уже опубликовано ранее": 8,
+      "не по теме (политика/безопасность без продуктовой части, отраслевые события/конференции)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok",
+    "frames": "skipped: EGRESS_BLOCKED — yt-dlp получает CONNECT 403 от прокси на туннель к youtube.com (подтверждено повторно в этом прогоне), несмотря на pip-установленные yt-dlp/imageio-ffmpeg"
+  },
+  "notes": "Единственная надёжно подтверждённая новость за 36-часовое окно сбора — релиз Grok 4.7 (xAI), продолжающий сюжет двух переносов даты, отслеживаемый с 14 сентября. Остальные найденные через WebSearch материалы либо старше окна, либо дублируют уже опубликованные сводки (проверено по data/state.json), либо не являются продуктовой новостью. 2 экспертных материала вместо целевых min_expert_total=5: у большинства сконфигурированных экспертов (Karpathy, AI Explained, Matt Wolfe, Matt Pocock, Latent Space, Ethan Mollick) за 7-дневное окно свежести либо нет нового контента, либо не удалось найти точную дату/URL конкретного материала через WebSearch (YouTube RSS/WebFetch заблокированы прокси) — это ниже минимума, зафиксировано честно, без добора слабыми материалами. Прямые WebFetch на youtube.com, x.ai, www.anthropic.com, openai.com, blog.google, ai.meta.com, mistral.ai, api-docs.deepseek.com, hn.algolia.com, news.ycombinator.com блокированы egress-прокси (CONNECT 403/EGRESS_BLOCKED) — весь discovery шёл через WebSearch и, для Simon Willison, через git-бэкап его блога."
+}

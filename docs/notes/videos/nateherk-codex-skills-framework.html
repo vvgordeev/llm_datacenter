@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «How to Build Codex Skills Better than 99% of People» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk | AI Automation · 27:05</span>
+      <span data-lang="en">Video digest · Nate Herk | AI Automation · 27:05</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как создавать скиллы для Codex лучше, чем 99% людей</span>
+      <span data-lang="en">How to Build Codex Skills Better than 99% of People</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=9KOtMsZ9I28" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Херк, автор канала об автоматизации на базе ИИ, объясняет скилл для Codex через аналогию с рецептом блинов <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=20">[00:20]</a>: это markdown-файл, который один раз фиксирует, как именно выполнять повторяющийся процесс, чтобы агент делал его одинаково хорошо при каждом запуске, а не заново «интерпретировал» задачу. Дальше видео разворачивает не список готовых скиллов, а метод их создания — шесть шагов, которые Херк демонстрирует на собственном скилле для написания статей под X (Twitter).</span>
+      <span data-lang="en">Nate Herk, who runs a channel about AI automation, introduces the idea of a Codex skill with a pancake-recipe analogy <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=20">[00:20]</a>: it's a markdown file that documents, once, exactly how to run a repeatable process, so the agent executes it the same reliable way every time instead of re-interpreting the task from scratch. The video then unfolds not as a list of ready-made skills but as a method for building them — six steps, which Herk demonstrates on his own skill for writing articles for X (Twitter).</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаги 1-2: результат в обратную сторону, один узкий триггер</span><span data-lang="en">Steps 1-2: work backward from the output, one narrow trigger</span></h2>
+    <p>
+      <span data-lang="ru">Первый шаг — обратное проектирование: начать не с процесса, а с того, что вы считаете готовым, качественным результатом, и уже от него достраивать шаги, которые к нему приводят <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=115">[01:55]</a>. Второй шаг — гранулярность: у каждого скилла должна быть одна конкретная работа и одно чёткое условие запуска, а не попытка закрыть сразу несколько сценариев одним файлом <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=221">[03:41]</a>. По мысли Херка, именно узкие, предсказуемо запускаемые скиллы потом надёжно комбинируются друг с другом — тогда как скилл «на все случаи» превращается в набор нечётких инструкций, которые агент трактует по-разному от запуска к запуску.</span>
+      <span data-lang="en">The first step is reverse engineering: start not from the process but from what you consider a finished, high-quality output, and work backward to the steps that produce it <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=115">[01:55]</a>. The second is granularity: every skill should do one specific job with one clear trigger, rather than trying to cover several scenarios in a single file <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=221">[03:41]</a>. Herk's point is that narrow, predictably-triggered skills chain together reliably later, whereas a catch-all skill collapses into vague instructions the agent interprets differently from one run to the next.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаги 3-4: уровень свободы и верификация</span><span data-lang="en">Steps 3-4: freedom level and verification</span></h2>
+    <p>
+      <span data-lang="ru">Третий шаг вводит понятие «уровня свободы»: нужно заранее решить, детерминированная перед вами задача (правила, которые можно расписать пошагово) или недетерминированная (требующая суждения) — от этого зависит, насколько жёсткими и подробными должны быть инструкции в скилле <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=388">[06:28]</a>. Для недетерминированных задач Херк советует не пытаться прописать всё заранее, а закладывать больше пространства для итеративной обратной связи. Четвёртый шаг — верификация: скилл должен включать отдельный цикл проверки результата на соответствие стандарту, зачастую силами второго ИИ-агента, а не полагаться на то, что первый прогон окажется правильным <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=546">[09:06]</a>. Это тот же принцип «доверяй, но проверяй», который делает скилл пригодным для повторного использования без ручного контроля.</span>
+      <span data-lang="en">The third step introduces a "freedom level": decide upfront whether the task is deterministic (rules you can spell out step by step) or non-deterministic (judgment-based) — that decision drives how rigid and detailed the skill's instructions need to be <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=388">[06:28]</a>. For non-deterministic tasks, Herk's advice is not to try to specify everything upfront but to leave more room for iterative feedback. The fourth step is verification: a skill should include a separate check of its output against a standard, often run by a second AI agent, rather than trusting the first pass to be correct <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=546">[09:06]</a>. It's the same "trust but verify" principle that makes a skill safe to reuse without a human checking every run.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаги 5-6 и живая демонстрация</span><span data-lang="en">Steps 5-6 and a live demo</span></h2>
+    <p>
+      <span data-lang="ru">Пятый шаг, «спуск» («walk it down»), — как только скилл даёт нужное качество на мощной модели, его нужно систематически прогонять на всё более дешёвых моделях, пока не найдётся самая простая из них, ещё удерживающая планку качества <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=753">[12:33]</a>. Шестой — «метод велосипеда»: разработка скилла не одноразовая задача, а постоянный цикл обратной связи, как при обучении ребёнка езде на велосипеде — поддержку постепенно убирают, а исправления вносят по ходу дела. В демонстрации Херк на практике создаёт и тестирует скилл «X-статья» в Codex <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=935">[15:35]</a>, а затем сравнивает результат его работы на разных моделях (Luna, Terra, Sol), наглядно показывая, как выглядит «спуск» на практике и на каком уровне модели скилл ещё держит нужное качество <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=1201">[20:01]</a>.</span>
+      <span data-lang="en">The fifth step, "walk it down," says that once a skill hits the desired quality on a capable model, you systematically test it on progressively cheaper models until you find the simplest one that still clears the bar <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=753">[12:33]</a>. The sixth, the "bike method," treats skill-building as an ongoing feedback loop rather than a one-time task — like teaching a kid to ride a bike, support is gradually removed and corrections happen along the way. In the demo, Herk builds and tests an "X article" skill in Codex live <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=935">[15:35]</a>, then compares its output across different models (Luna, Terra, Sol), making concrete what "walking it down" looks like and at what model tier the skill still holds its quality bar <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=1201">[20:01]</a>.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
