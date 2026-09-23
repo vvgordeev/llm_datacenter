@@ -161,6 +161,13 @@
         "ru": "Anthropic выпускает Claude Opus 5 — почти уровень Fable 5 при неизменной цене, с новым регулируемым effort-параметром"
       }
     },
+    "anthropic-claude-opus-5-5": {
+      "last_date": "2026-09-23",
+      "summary": {
+        "en": "Anthropic ships Claude Opus 5.5 (Sep 22) — Fable 5.1-level intelligence, 20% cheaper than Opus 5 ($4/$20), ~40% total savings from token efficiency; METR calls the advance over Fable 5.1 incremental.",
+        "ru": "Anthropic выпускает Claude Opus 5.5 (22 сент.) — интеллект уровня Fable 5.1, цена на 20% ниже Opus 5 ($4/$20), совокупная экономия ~40% за счёт эффективности по токенам; METR называет прогресс инкрементальным относительно Fable 5.1."
+      }
+    },
     "anthropic-claude-platform-agent-stack-ga": {
       "last_date": "2026-08-26",
       "summary": {
@@ -201,13 +208,6 @@
       "summary": {
         "en": "Anthropic opens Claude Team plan for 10,000 scientists: free/discounted seats, expanding AI for Science into math, physics, engineering",
         "ru": "Anthropic открывает Claude Team для 10 000 учёных: бесплатные/льготные места, расширение AI for Science на математику, физику, инженерию"
-      }
-    },
-    "anthropic-claude-voice-mode-upgrade": {
-      "last_date": "2026-07-24",
-      "summary": {
-        "en": "Anthropic updated Claude's voice mode: Opus and Sonnet alongside Haiku, cross-app automation (Gmail, Calendar, Slack, Canva, Notion), support for 10 languages",
-        "ru": "Anthropic обновила голосовой режим Claude: Opus и Sonnet вместо только Haiku, кросс-приложенная автоматизация (Gmail, Calendar, Slack, Canva, Notion), поддержка 10 языков"
       }
     },
     "anthropic-commerce-agents-blueprint": {
@@ -720,6 +720,13 @@
         "ru": "OpenAI и Cerebras выпускают Ultrafast — тир API на 750 tok/s (до 14x) для GPT-5.6 Sol без потери качества; ограниченный превью-доступ, цена как у обычного Sol"
       }
     },
+    "openai-gpt-6-sol-luna": {
+      "last_date": "2026-09-23",
+      "summary": {
+        "en": "OpenAI ships GPT-6 Sol and Luna (Sep 22, 90 minutes after Opus 5.5) — half the price of GPT-5.6; some benchmarks (OSWorld 2.0, DeepSWE) score below GPT-5.6 Sol, the win is mostly cost-per-task.",
+        "ru": "OpenAI выпускает GPT-6 Sol и Luna (22 сент., через 90 минут после Opus 5.5) — цены вдвое ниже GPT-5.6; часть бенчмарков (OSWorld 2.0, DeepSWE) ниже, чем у GPT-5.6 Sol, выигрыш в основном по стоимости за задачу."
+      }
+    },
     "openai-gpt-live": {
       "last_date": "2026-08-01",
       "summary": "OpenAI ships GPT-Live, a full-duplex voice model for ChatGPT that delegates hard reasoning/search/code to GPT-5.5 in the background"
@@ -736,13 +743,6 @@
       "summary": {
         "en": "OpenAI claims an internal model resolved Navier-Stokes via ~10,000 agents; an authorship dispute erupts with NYU mathematician Buckmaster and his Anthropic-employed co-author Alpöge.",
         "ru": "OpenAI заявляет, что внутренняя модель решила задачу Навье-Стокса силами ~10000 агентов; разгорается спор об авторстве с математиком NYU Бакмастером и его соавтором из Anthropic Алпёге."
-      }
-    },
-    "openai-presence": {
-      "last_date": "2026-07-24",
-      "summary": {
-        "en": "OpenAI launched Presence, a managed platform for production agents (policies, guardrails, Codex improvement loop); internal use hits 75% automated resolution, partners include BBVA Mexico and SoftBank",
-        "ru": "OpenAI запустила Presence — управляемую платформу для продакшн-агентов (политики, guardrails, Codex-цикл улучшений); внутреннее использование даёт 75% автоматического решения обращений, партнёры — BBVA Mexico, SoftBank"
       }
     },
     "openai-replit-free-mode": {
@@ -879,10 +879,10 @@
       }
     },
     "xai-grok-bot": {
-      "last_date": "2026-09-05",
+      "last_date": "2026-09-23",
       "summary": {
-        "en": "Grok Bot access steps down from SuperGrok Heavy/Cursor Ultra (Aug 11) to all SuperGrok and Cursor Pro plans (Aug 26), adds templates and multi-account switching (Aug 28) → ships an enterprise tier with access/network controls and audit logs, plus free access for Cursor Enterprise (Sept 3).",
-        "ru": "Grok Bot поэтапно расширяется с SuperGrok Heavy/Cursor Ultra (11 авг) на все планы SuperGrok и Cursor Pro (26 авг), добавляет шаблоны и мультиаккаунт (28 авг) → выходит корпоративная версия с контролем доступа, сети и аудитом плюс бесплатный доступ для Cursor Enterprise (3 сентября)."
+        "en": "Grok Bot keeps expanding: email/calendar connectors shipped September 5, and on September 22 Tesla built Grok Bot with Connectors directly into vehicles — hands-free email, calendar and ordering tasks (SuperGrok Heavy).",
+        "ru": "Grok Bot расширяется: коннекторы к почте/календарю появились 5 сентября, а 22 сентября Tesla встроила Grok Bot с коннекторами прямо в автомобили — хендс-фри работа с почтой, календарём и заказами (SuperGrok Heavy)."
       }
     },
     "xai-grok-bot-templates": {
@@ -1020,8 +1020,8 @@
     "https://openai.com/index/gpt-6-astra/": "2026-09-04",
     "https://openai.com/index/hugging-face-incident-and-the-road-ahead/": "2026-08-28",
     "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
+    "https://openai.com/index/introducing-gpt-6-sol-and-luna/": "2026-09-23",
     "https://openai.com/index/introducing-gpt-live-1-in-the-api/": "2026-09-12",
-    "https://openai.com/index/introducing-openai-presence/": "2026-07-24",
     "https://openai.com/index/introducing-the-agents-api/": "2026-09-11",
     "https://openai.com/index/navier-stokes-solution/": "2026-09-09",
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models/": "2026-08-20",
@@ -1061,7 +1061,6 @@
     "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
-    "https://simonwillison.net/2026/Jul/21/nativ/": "2026-07-24",
     "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/": "2026-07-29",
     "https://simonwillison.net/2026/Jul/26/relay-market/": "2026-07-28",
     "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/": "2026-07-31",
@@ -1074,6 +1073,7 @@
     "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
     "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/": "2026-09-04",
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
+    "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/4/astra-pelicans/": "2026-09-05",
     "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/": "2026-09-06",
     "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/": "2026-09-07",
@@ -1086,7 +1086,6 @@
     "https://stratechery.com/2026/openai-hacks-hugging-face-what-happened-alignment-and-paper-clips/": "2026-07-25",
     "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content": "2026-08-11",
     "https://support.claude.com/en/articles/16893491-get-started-with-smart-reports": "2026-09-12",
-    "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/": "2026-07-24",
     "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/": "2026-07-25",
     "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/": "2026-08-13",
     "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/": "2026-08-26",
@@ -1100,7 +1099,6 @@
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
     "https://thenewstack.io/kimi-k3-open-weights/": "2026-07-28",
-    "https://thenewstack.io/moonshot-fable5-distillation-accusations/": "2026-07-24",
     "https://thenewstack.io/opus-5-agentic-coding-cost/": "2026-07-26",
     "https://thezvi.substack.com/p/ai-178-a-fire-alarm-for-general-intelligence": "2026-07-25",
     "https://thezvi.substack.com/p/ai-179-part-1-a-louder-fire-alarm": "2026-07-31",
@@ -1115,7 +1113,6 @@
     "https://thezvi.substack.com/p/anthropic-risk-report-august-2026": "2026-08-20",
     "https://thezvi.substack.com/p/claude-opus-5-is-highly-capable-but": "2026-07-29",
     "https://thezvi.substack.com/p/gpt-6-astra-can-do-ambitious-things": "2026-09-13",
-    "https://thezvi.substack.com/p/on-kimi-k3-its-capabilities-and-related": "2026-07-24",
     "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11",
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
     "https://thezvi.substack.com/p/what-happened-openai-and-huggingface": "2026-08-10",
@@ -1136,6 +1133,7 @@
     "https://www.air.security/blog-posts/plugin4shell": "2026-09-21",
     "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing": "2026-08-06",
     "https://www.anthropic.com/claude-fable-and-mythos-5-1": "2026-09-02",
+    "https://www.anthropic.com/claude-opus-5-5": "2026-09-23",
     "https://www.anthropic.com/institute/measuring-pace-of-ai-development": "2026-09-18",
     "https://www.anthropic.com/news/claude-opus-5": "2026-07-25",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-29",
@@ -1158,7 +1156,6 @@
     "https://www.elastic.co/search-labs/blog/context-engineering-vs-prompt-engineering": "2026-08-14",
     "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf": "2026-09-13",
     "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
-    "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3": "2026-07-24",
     "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html": "2026-08-19",
     "https://www.kimi.com/blog/kimi-k3": "2026-07-28",
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
@@ -1180,10 +1177,11 @@
     "https://www.mindstudio.ai/blog/open-weight-ai-frontier-kimi-k3-agent-stack": "2026-07-28",
     "https://www.modular.com/blog/mojo-open-source": "2026-08-19",
     "https://www.neowin.net/news/google-replaces-chat-side-panel-with-new-ask-gemini-integration/": "2026-08-26",
+    "https://www.notateslaapp.com/news/4724/tesla-adds-grok-bot-to-vehicles-for-hands-free-errands-and-tasks": "2026-09-23",
     "https://www.nxcode.io/resources/news/claude-platform-agent-tools-ga-browser-skills-files-2026": "2026-08-26",
     "https://www.oneusefulthing.org/p/agency-and-agents": "2026-09-04",
     "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22": "2026-09-06",
-    "https://www.oneusefulthing.org/p/the-overhang": "2026-09-19",
+    "https://www.oneusefulthing.org/p/the-overhang": "2026-09-23",
     "https://www.pcworld.com/article/3232453/i-tried-the-gemini-app-for-windows-it-wasted-my-time.html": "2026-09-12",
     "https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/": "2026-09-05",
     "https://www.rubyhack.ai/": "2026-09-12",
@@ -1212,9 +1210,9 @@
     "https://www.youtube.com/watch?v=kvmkj3dj_kw": "2026-08-02",
     "https://www.youtube.com/watch?v=o3IEkKXXXvo": "2026-09-13",
     "https://www.youtube.com/watch?v=qRNZMGc7TMc": "2026-09-04",
+    "https://www.youtube.com/watch?v=r3NH48_Z9Vk": "2026-09-23",
     "https://www.youtube.com/watch?v=tgjYMym_0-c": "2026-08-28",
     "https://www.youtube.com/watch?v=u-giatW9mYU": "2026-09-18",
-    "https://www.youtube.com/watch?v=wzY2fV4Mp3U": "2026-07-24",
     "https://www.youtube.com/watch?v=yysILVsfLFM": "2026-09-13",
     "https://www.youtube.com/watch?v=zpS6JGJNaGg": "2026-08-26",
     "https://x.ai/news/grok-4-6": "2026-08-13",
@@ -1235,7 +1233,6 @@
     "https://x.com/deepseek_ai/status/2087864589895798968": "2026-08-14",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
     "https://x.com/hilbertspaess/status/2097476196791709843": "2026-09-11",
-    "https://x.com/mkratsios47/status/2079933645888880708": "2026-07-24",
     "https://x.com/oikon48/status/2090694214447468649": "2026-08-26",
     "https://x.com/plotarmordev/status/2097247035099640216": "2026-09-09",
     "https://x.com/thlarsen/status/2098544270361964576": "2026-09-12",
@@ -1256,7 +1253,6 @@
     "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
     "notes/articles/huggingface-agent-intrusion-timeline.html": "2026-07-29",
-    "notes/articles/lambert-open-models-recap-kimi-qwen.html": "2026-07-24",
     "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
     "notes/articles/latentspace-ainews-astra-biggest-launch.html": "2026-09-05",
     "notes/articles/latentspace-anandkumar-weather-foundation-model.html": "2026-09-06",
@@ -1281,7 +1277,6 @@
     "notes/articles/simonw-raccoon-heist-vibe-coding.html": "2026-08-09",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
     "notes/articles/stross-non-use-of-ai-writing.html": "2026-08-03",
-    "notes/articles/thenewstack-kimi-k3-fable5-siphoning.html": "2026-07-24",
     "notes/articles/thenewstack-kimi-k3-few-can-run-it.html": "2026-07-28",
     "notes/articles/thenewstack-opus5-agentic-coding-cost.html": "2026-07-26",
     "notes/articles/turnbull-dont-classify-hallucinate.html": "2026-08-15",
@@ -1303,7 +1298,6 @@
     "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17",
     "notes/articles/willison-mcp-custom-connectors.html": "2026-07-30",
     "notes/articles/willison-mojo-open-source.html": "2026-08-19",
-    "notes/articles/willison-nativ-local-ai-mac.html": "2026-07-24",
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
     "notes/articles/willison-open-letters-ai-development.html": "2026-08-03",
     "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
@@ -1321,11 +1315,9 @@
     "notes/articles/zvi-anthropic-risk-report-august-2026.html": "2026-08-20",
     "notes/articles/zvi-astra-ambitious-things.html": "2026-09-13",
     "notes/articles/zvi-astra-cyber-critical.html": "2026-08-14",
-    "notes/articles/zvi-kimi-k3-capabilities-discontents.html": "2026-07-24",
     "notes/articles/zvi-opus-5-vs-mythos.html": "2026-07-29",
     "notes/articles/zvi-what-happened-openai-huggingface.html": "2026-08-10",
     "notes/videos/ai-explained-model-landscape-mid-2026.html": "2026-08-15",
-    "notes/videos/aiexplained-huggingface-incident-sans-hype.html": "2026-07-24",
     "notes/videos/how-to-get-the-most-from-ai-this-summer.html": "2026-08-02",
     "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",
     "notes/videos/karpathy-outsource-understanding.html": "2026-08-12",

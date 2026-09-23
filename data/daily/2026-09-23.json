@@ -1,0 +1,245 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T05:15:00Z",
+  "news": [
+    {
+      "id": "2026-09-23-anthropic-opus-5-5",
+      "cluster_id": "anthropic-claude-opus-5-5",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic выпускает Claude Opus 5.5 — интеллект уровня Fable 5.1 на 40% дешевле",
+        "en": "Anthropic ships Claude Opus 5.5 — Fable 5.1-level intelligence at 40% less cost"
+      },
+      "summary": {
+        "ru": "22 сентября Anthropic выпустила Claude Opus 5.5 — модель, которая, по заявлению компании, соответствует Claude Fable 5.1 на большинстве задач при цене на 20% ниже ($4/$20 за миллион токенов вместо $5/$25) и совокупной экономии около 40% за счёт меньшего расхода токенов на задачу. Цена кэш-чтения упала на 60% (важно для длинных агентных диалогов), вывод стал быстрее на 30%, а по автоматизированному поведенческому аудиту Anthropic это лучший результат среди всех протестированных моделей компании.",
+        "en": "On September 22, Anthropic released Claude Opus 5.5, which the company says matches Claude Fable 5.1 on most work while pricing 20% lower ($4/$20 per million tokens vs $5/$25) and cutting overall run cost by roughly 40% because it needs fewer tokens per task. Cached-input pricing fell 60% (a big deal for long agentic conversations), output generates 30% faster, and Anthropic's automated behavioral audit rates it the strongest model the company has tested to date."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметный, широко доступный шаг в цена/качество основной рабочей модели Anthropic — но, по независимой оценке METR, разрыв с Fable 5.1 «уже, чем предполагают бенчмарки», а сам Уиллисон показал, что режим max ломается на длинном рассуждении; это оптимизация существующего подхода (agentic coding/knowledge work), а не новый класс сценариев.",
+        "en": "A real, broadly-available step in the price/quality of Anthropic's workhorse model — but METR's independent evaluation calls the gap with Fable 5.1 \"narrower than benchmark margins suggest,\" and Willison found the max effort mode can break mid-reasoning; this sharpens the existing agentic-coding/knowledge-work approach rather than opening a new one."
+      },
+      "source_url": "https://www.anthropic.com/claude-opus-5-5",
+      "opinions": [
+        {
+          "author": "TechCrunch",
+          "stance": "positive",
+          "quote": {
+            "ru": "Opus 5.5 задаёт новый уровень качества в кодинге и офисной интеллектуальной работе — модель обходит более крупную Fable по многим бенчмаркам и справляется с неформальными задачами, на которых Fable спотыкается.",
+            "en": "Opus 5.5 sets a new state of the art in coding and knowledge-work performance — the release outpaces the larger Fable model on many benchmarks and succeeds at informal tasks Fable fails to complete."
+          },
+          "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/"
+        },
+        {
+          "author": "METR (независимая предзапусковая оценка)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Судя по количественным замерам, Opus 5.5 — инкрементальное улучшение над Fable 5.1, а не скачок через разрыв; по «суждению» модель не демонстрирует большого прогресса относительно Fable 5.1.",
+            "en": "On quantitative evaluations, Opus 5.5 is an incremental improvement above Fable 5.1 rather than a discontinuous jump; the evidence does not suggest a large improvement over Fable 5.1 in \"judgement\" skills."
+          },
+          "url": "https://metr.org/blog/2026-09-22-claude-opus-5-5/"
+        },
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "В своём тесте «нарисуй пеликана на велосипеде» Opus 5.5 в режиме max не выдал ответа вовсе: модель так долго и подробно рассуждала над деталями SVG, что уткнулась в лимит в 128 000 выходных токенов, так и не дописав рисунок — и это повторилось при повторной попытке.",
+            "en": "In my \"draw a pelican riding a bicycle\" test, Claude Opus 5.5 at \"max\" thinking level failed to return a response at all: it reasoned about the SVG's details for so long it hit the 128,000-token output limit before finishing the drawing — and the second attempt did the same thing."
+          },
+          "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Многочасовая работа над кодом без присмотра: в тесте The New Stack Opus 5.5 и Fable 5.1 переписывали HAProxy с C на Rust, оба прохода почти полностью прошли регресс-тесты, но Opus 5.5 справился за 9.5 часов против 12 у Fable и на 51% дешевле.",
+            "en": "Long, unattended coding work: in a The New Stack head-to-head, Opus 5.5 and Fable 5.1 both rewrote HAProxy from C to Rust and passed nearly all regression tests, but Opus 5.5 finished in 9.5 hours versus Fable's 12, at 51% lower cost."
+          },
+          "url": "https://thenewstack.io/claude-opus-5-5-lifecycle/"
+        },
+        {
+          "text": {
+            "ru": "Ревью кода с проверкой внешней документации: модель поймала баг, возникший несколько коммитов назад из-за неверно смоделированной интеграции со сторонним сервисом.",
+            "en": "Code review that checks external docs: the model caught a bug introduced several commits earlier by an incorrectly modeled third-party integration."
+          },
+          "url": "https://www.anthropic.com/claude-opus-5-5"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-23-openai-gpt6-sol-luna",
+      "cluster_id": "openai-gpt-6-sol-luna",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI отвечает Anthropic: GPT-6 Sol и GPT-6 Luna вдвое дешевле GPT-5.6",
+        "en": "OpenAI answers Anthropic: GPT-6 Sol and GPT-6 Luna land at half the price of GPT-5.6"
+      },
+      "summary": {
+        "ru": "Через полтора часа после Opus 5.5 OpenAI выпустила GPT-6 Sol и GPT-6 Luna — более дешёвые модели «под капотом» с методами обучения GPT-6 Astra. Sol подешевел с $4/$20 до $2/$10 за миллион токенов, Luna — с $0.20/$1.20 до $0.10/$0.50, что делает её одной из самых дешёвых моделей OpenAI за всё время. Luna доступна бесплатным пользователям в десктоп-приложении ChatGPT, Sol — в Copilot Pro+/Max/Business/Enterprise и Codex; по заявлению OpenAI, Sol теперь делает вдвое меньше ошибок, чем GPT-5.6 Sol.",
+        "en": "About ninety minutes after Opus 5.5, OpenAI shipped GPT-6 Sol and GPT-6 Luna — cheaper models built with GPT-6 Astra's training methods. Sol's price dropped from $4/$20 to $2/$10 per million tokens, Luna's from $0.20/$1.20 to $0.10/$0.50, making it one of the cheapest models OpenAI has ever shipped. Luna reaches free ChatGPT desktop users, Sol ships to Copilot Pro+/Max/Business/Enterprise and Codex; OpenAI says Sol now makes about half as many mistakes as GPT-5.6 Sol."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Резкое снижение цены на два массовых тарифа расширяет доступ к качеству уровня Astra, но по собственным таблицам OpenAI часть бенчмарков (OSWorld 2.0, DeepSWE) у Sol ниже, чем у GPT-5.6 Sol — выигрыш в основном в стоимости за задачу, а не в пиковом качестве; подход (дешёвый массовый tier) не новый, просто интенсивная ценовая конкуренция с Anthropic.",
+        "en": "A sharp price cut on two mass-market tiers widens access to Astra-level quality, but OpenAI's own charts show Sol scoring below GPT-5.6 Sol on some benchmarks (OSWorld 2.0, DeepSWE) — the win is mostly cost-per-task, not peak capability; the approach itself (a cheap mass tier) isn't new, this is intense price competition with Anthropic."
+      },
+      "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "opinions": [
+        {
+          "author": "VentureBeat",
+          "stance": "positive",
+          "quote": {
+            "ru": "OpenAI выпускает GPT-6 Sol и Luna, снижая цены API на 50% и более — агрессивный ответ на ценовое давление конкурентов при сохранении улучшений Astra в фактологии, кодинге и компьютерном использовании.",
+            "en": "OpenAI releases GPT-6 Sol and Luna models, slashing API costs 50% or more — an aggressive answer to competitive price pressure while carrying over Astra's gains in factuality, coding and computer use."
+          },
+          "url": "https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more"
+        },
+        {
+          "author": "Digital Applied / benchmark-анализ",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "На OSWorld 2.0 лучший результат GPT-6 Sol (64.4%) ниже, чем у GPT-5.6 Sol (66.2%); заявленные «50% дешевле» посчитаны от промо-цены GPT-5.6, а не от исходного прайс-листа — апгрейд считается по стоимости за задачу, а не по пиковому баллу.",
+            "en": "On OSWorld 2.0, GPT-6 Sol's best score (64.4%) sits below GPT-5.6 Sol's (66.2%); the advertised \"50% cheaper\" is calculated from GPT-5.6's promotional price, not the original rate card — the upgrade is being sold on cost per task, not peak score."
+          },
+          "url": "https://www.digitalapplied.com/blog/gpt-6-sol-luna-launch-pricing-benchmarks-2026"
+        },
+        {
+          "author": "Zvi Mowshowitz",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Рад видеть, что OpenAI по-прежнему плохо придумывает названия — Sol/Terra/Luna хуже закрепляют иерархию моделей, чем Opus/Sonnet/Haiku: у «Солнца» на первом плане не масштаб, а жар и опасность.",
+            "en": "Glad to see OpenAI still stinks at naming things — Sol/Terra/Luna reinforce the model hierarchy worse than Opus/Sonnet/Haiku, since when people think of the sun, heat and danger come to mind before size."
+          },
+          "url": "https://x.com/TheZvi/status/2076771362069237833"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Продакшн-агенты в Microsoft Foundry: GPT-6 Astra, Sol и Luna доступны как база для промышленных агентных пайплайнов с контролем стоимости.",
+            "en": "Production agents in Microsoft Foundry: GPT-6 Astra, Sol and Luna are offered as the base for enterprise agentic pipelines with cost control."
+          },
+          "url": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/"
+        },
+        {
+          "text": {
+            "ru": "Массовый бесплатный доступ: GPT-6 Luna по $0.10/$0.50 за миллион токенов становится моделью по умолчанию для Free/Go-пользователей десктоп-приложения ChatGPT.",
+            "en": "Free-tier mass access: at $0.10/$0.50 per million tokens, GPT-6 Luna becomes the default model for Free/Go users of the ChatGPT desktop app."
+          },
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-23-xai-grok-tesla-connectors",
+      "cluster_id": "xai-grok-bot",
+      "models": ["xai"],
+      "title": {
+        "ru": "Grok Bot получает доступ к почте, календарю и файлам прямо в Tesla",
+        "en": "Grok Bot gets inbox, calendar and file access built right into Tesla vehicles"
+      },
+      "summary": {
+        "ru": "22 сентября Tesla объявила, что Grok Bot в автомобилях получает «коннекторы» — защищённые интеграции с внешними сервисами вроде Gmail и Google Calendar, позволяющие голосом управлять почтой, чистить календарь и обсуждать файлы прямо за рулём. Функция пока ограничена подписчиками SuperGrok Heavy; Grok может выполнять многошаговые задачи — заказ кофе в Starbucks, бронирование через OpenTable, заказ в DoorDash/Uber Eats — пока автомобиль едет в режиме автопилота. Tesla не раскрыла, какие именно сервисы поддерживаются на старте, и подчёркивает, что диалоги с Grok обрабатывает xAI и они не привязаны к аккаунту Tesla или автомобилю.",
+        "en": "On September 22, Tesla announced that in-car Grok Bot is getting \"Connectors\" — secure integrations with outside services like Gmail and Google Calendar that let drivers manage their inbox, clean up a calendar, or discuss files hands-free. The feature is currently limited to SuperGrok Heavy subscribers; Grok can run multi-step tasks — ordering a usual Starbucks coffee, booking on OpenTable, ordering via DoorDash/Uber Eats — while the car drives itself on FSD. Tesla hasn't disclosed which services are supported at launch, and stresses that Grok conversations are processed by xAI and aren't linked to a Tesla account or vehicle."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Расширяет уже существующий агентный сценарий Grok Bot (коннекторы к почте/календарю появились ещё 5 сентября) на новую среду — автомобиль, что реально расширяет охват сценария, но не меняет сам подход к использованию LLM-агентов; ограничено топовой подпиской и списком сервисов, который Tesla не раскрывает.",
+        "en": "Extends the already-existing Grok Bot agentic connectors (which shipped September 5) into a new environment — the car — which genuinely broadens where the pattern reaches, but doesn't change the underlying approach to LLM agents; gated to the top subscription tier and an undisclosed service list."
+      },
+      "source_url": "https://www.notateslaapp.com/news/4724/tesla-adds-grok-bot-to-vehicles-for-hands-free-errands-and-tasks",
+      "opinions": [
+        {
+          "author": "TechEBlog",
+          "stance": "positive",
+          "quote": {
+            "ru": "Grok Bot приходит в автомобили Tesla, готовый заказать кофе, разобрать календарь и проверить почту, пока вы за рулём — реальная экономия времени в рутинных задачах за рулём.",
+            "en": "Grok Bot arrives in Tesla vehicles ready to order coffee, clean up calendars, and check email while you drive — a genuine time-saver for routine tasks behind the wheel."
+          },
+          "url": "https://www.techeblog.com/grok-bot-tesla-vehicles-model3-modely-cybertruck/"
+        },
+        {
+          "author": "Tesla North",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Tesla открывает Grok'у в салоне доступ к почте, календарю и файлам, но не говорит, какие именно сервисы поддерживаются на старте — доверить голосовому агенту рабочую переписку за рулём требует большего доверия, чем компания пока обосновала.",
+            "en": "Tesla gives in-car Grok access to your email, calendar and files, but hasn't said which services are supported at launch — handing a voice agent your work correspondence while driving asks for more trust than the company has yet earned."
+          },
+          "url": "https://teslanorth.com/2026/09/22/grok-connectors-in-car-work-tasks/"
+        },
+        {
+          "author": "Not a Tesla App",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Настройка через коннекторы — сознательный выбор пользователя: открыть приложение Grok, нажать «+», выбрать «New Connector» и сервис для подключения; без этого шага доступа к личным данным нет.",
+            "en": "Setup runs through an explicit opt-in: open the Grok app, tap the + icon, choose \"New Connector\" and pick a service to link; without that step, there's no access to personal data."
+          },
+          "url": "https://www.notateslaapp.com/news/4724/tesla-adds-grok-bot-to-vehicles-for-hands-free-errands-and-tasks"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Заказ кофе по дороге: пока автопилот ведёт машину, водитель просит Grok заказать привычный напиток в ближайшем Starbucks — Grok прокладывает маршрут, подтверждает заказ и сумму, и напиток готов к моменту парковки.",
+            "en": "Ordering coffee on the way: while FSD drives, the driver asks Grok to order their usual drink at the nearest Starbucks — Grok routes the car there, confirms the order and total, and the drink is ready when the car parks."
+          },
+          "url": "https://www.techeblog.com/grok-bot-tesla-vehicles-model3-modely-cybertruck/"
+        },
+        {
+          "text": {
+            "ru": "Хендс-фри разбор рабочей почты и календаря в поездке — без необходимости лезть в телефон за рулём.",
+            "en": "Hands-free triage of work email and calendar during a drive — without reaching for a phone behind the wheel."
+          },
+          "url": "https://x.com/Tesla/status/2102430656349544590"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-09-23-willison-opus-sol-luna-price-war",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna и новая ценовая война",
+        "en": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war"
+      },
+      "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+      "summary": {
+        "ru": "Уиллисон сравнивает цены и первые впечатления от трёх моделей, выпущенных в один день: GPT-6 Luna и Sol стали вдвое дешевле своих предшественников 5.6, Opus 5.5 подешевел на 20%. Отдельно — забавный и тревожный кейс: Opus 5.5 в режиме max не смог дорисовать тестовый SVG пеликана, упершись в лимит выходных токенов посреди рассуждения.",
+        "en": "Willison compares pricing and first impressions across three same-day model launches: GPT-6 Luna and Sol are half the price of their 5.6 predecessors, Opus 5.5 is 20% cheaper. He also documents a funny-but-concerning case: Opus 5.5 at \"max\" effort failed to finish his test pelican SVG, hitting the output-token limit mid-reasoning."
+      },
+      "note_page": "notes/articles/willison-opus-sol-luna-price-war.html"
+    },
+    {
+      "id": "2026-09-23-mollick-the-overhang",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "Навес возможностей",
+        "en": "The Overhang"
+      },
+      "url": "https://www.oneusefulthing.org/p/the-overhang",
+      "summary": {
+        "ru": "Моллик формулирует «навес возможностей» — растущий разрыв между тем, что ИИ уже умеет, и тем, для чего его реально используют, — и утверждает, что граница пролегает не между теми, у кого есть доступ к ИИ, и теми, у кого его нет, а между теми, кто приносит к работе с ИИ глубокие и широкие знания, вкус и субъектность, и теми, кто просто получает всё более гладкие версии работы, которая их никогда особенно не заботила.",
+        "en": "Mollick names the \"capability overhang\" — the widening gap between what AI can already do and what most people actually use it for — and argues the real divide isn't access to AI but whether a person brings deep and wide knowledge, taste, and agency to the work, versus using ever-more-capable systems to produce ever-more-polished versions of work they never much cared about."
+      },
+      "note_page": "notes/articles/mollick-the-overhang.html"
+    },
+    {
+      "id": "2026-09-23-nateherk-google-ai-day",
+      "type": "video",
+      "author": "Nate Herk | AI Automation",
+      "title": {
+        "ru": "Я провёл день с ИИ-экспертами Google. Вот что я узнал",
+        "en": "I spent the day with AI experts at Google. Here's what I learned"
+      },
+      "url": "https://www.youtube.com/watch?v=r3NH48_Z9Vk",
+      "summary": {
+        "ru": "Херк проводит день в кампусе Google Cloud и выносит практические принципы работы с ИИ-агентами от инженеров компании: доверять данным можно только при их согласованности и защите, агентам нужно чёткое определение «сделано», а человек должен оставаться в контуре для решений, требующих суждения — при этом навыки работы с ИИ становятся универсальными для любой роли, а не только технической.",
+        "en": "Herk spends a day at Google Cloud's campus and distills practical principles for working with AI agents from the company's own engineers: trust your data only when it's consistent and protected, give agents an explicit definition of \"done,\" and keep a human in the loop for judgment calls — while AI skills become table stakes across every role, not just technical ones."
+      },
+      "note_page": "notes/videos/nateherk-google-ai-day.html"
+    }
+  ]
+}

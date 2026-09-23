@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna и новая ценовая война» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-09-22</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-09-22</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna и новая ценовая война</span>
+      <span data-lang="en">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки Уиллисона ↗</span><span data-lang="en">Willison's original note ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Один день, три релиза, обвал цен</span><span data-lang="en">One day, three releases, prices in free fall</span></h2>
+    <p>
+      <span data-lang="ru">22 сентября Anthropic выпустила Claude Opus 5.5, а примерно через час OpenAI ответила GPT-6 Sol и GPT-6 Luna. Уиллисон сразу собирает всю ценовую картину дня в одну таблицу: GPT-6 Luna ($0.10/$0.50 за миллион токенов вход/выход) вдвое дешевле GPT-5.6 Luna, GPT-6 Sol ($2/$10) — вдвое дешевле GPT-5.6 Sol, а Claude Opus 5.5 ($4/$20) на 20% дешевле Opus 5. При этом у GPT-5.6 в ноябре должно было пройти плановое повышение цены на 25% — то есть новый GPT-6 вдвое дешевле не текущего, а уже промо-прайса предшественника. С учётом этого повышения любой смысл использовать GPT-5.6 Terra исчезает: она стоит ровно столько же, сколько новый GPT-6 Sol, но хуже.</span>
+      <span data-lang="en">On September 22, Anthropic shipped Claude Opus 5.5, and about an hour later OpenAI answered with GPT-6 Sol and GPT-6 Luna. Willison immediately lays out the day's whole pricing picture in one table: GPT-6 Luna ($0.10/$0.50 per million input/output tokens) is half the price of GPT-5.6 Luna, GPT-6 Sol ($2/$10) is half of GPT-5.6 Sol, and Claude Opus 5.5 ($4/$20) is 20% cheaper than Opus 5. GPT-5.6 also had a scheduled 25% price hike due in November — so the new GPT-6 pricing is half not of today's rate but of the predecessor's already-promotional rate. Once that hike is accounted for, any remaining reason to use GPT-5.6 Terra evaporates: it now costs exactly what the new GPT-6 Sol costs, while performing worse.</span>
+    </p>
+
+    <h2><span data-lang="ru">Насколько это конкурентно</span><span data-lang="en">How competitive this actually is</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон подчёркивает, что ещё вчера Grok 4.7 позиционировался как дешёвый вариант по $2/$6 — меньше половины цены GPT-5.6 Sol. Сегодня же он оказывается на равных с GPT-6 Sol по входу и близко по выходу: конкурент, который вчера казался агрессивно дешёвым, за сутки стал середняком по цене. При $0.10/$0.50 GPT-6 Luna — одна из самых дешёвых моделей, которые вообще выпускала OpenAI, уступая только куда более слабым GPT-4.1 Nano и GPT-5 Nano. Opus 5.5 при этом получил ту же цену, что была у GPT-5.6 Sol — но это цена ДО того, как OpenAI обрушила цену Sol вдвое в тот же день.</span>
+      <span data-lang="en">Willison points out that just yesterday, Grok 4.7 was positioning itself as the cheap option at $2/$6 — less than half of GPT-5.6 Sol's price. Today it lands equal to GPT-6 Sol on input and close on output: a competitor that looked aggressively cheap yesterday became mid-pack on price within a day. At $0.10/$0.50, GPT-6 Luna is one of the cheapest models OpenAI has ever released, beaten only by the far weaker GPT-4.1 Nano and GPT-5 Nano. Opus 5.5 landed at the same price GPT-5.6 Sol used to have — except that's the price from BEFORE OpenAI halved Sol's price that same day.</span>
+    </p>
+
+    <h2><span data-lang="ru">Opus 5.5: то, о чём просило сообщество, плюс скидка</span><span data-lang="en">Opus 5.5: what people asked for, plus a discount</span></h2>
+    <p>
+      <span data-lang="ru">По впечатлениям Уиллисона, Opus 5.5 отвечает на главную жалобу пользователей на стиль общения Opus: разработчик Тхарик Шихипар пишет в X, что «Opus 5.5 — результат вашей обратной связи. Модель ясно формулирует мысли, дешевле по токену, чем Opus 5.0, при интеллекте уровня Fable 5.1, очень токен-эффективна и работает на любом уровне усилий». Модели Opus 4.5, 4.6, 4.7, 4.8 и 5 все стоили одинаково — $5/$25 за миллион; 5.5 — первое снижение цены за всю линейку, на 20%. Особенно заметно падение цены кэш-чтения на 60% — критично для длинных агентных диалогов, где 90%+ входных токенов обрабатываются именно по кэш-цене. Anthropic анонсировала, что Sonnet 5.5 и Haiku 5.5 на подходе — и Уиллисону интересно, удастся ли Haiku вернуть ценовую конкурентоспособность, ведь нынешний Haiku 4.5 стоит $1/$5, а новый GPT-6 Luna — в десять раз дешевле.</span>
+      <span data-lang="en">By Willison's account, Opus 5.5 addresses the biggest complaint people had about Opus's communication style: developer Thariq Shihipar posts on X that "Opus 5.5 is the result of your feedback. It communicates clearly, it's cheaper per token than Opus 5.0 with the intelligence of Fable 5.1, it's very token efficient and works across every effort level." Opus 4.5, 4.6, 4.7, 4.8 and 5 all shared the same price — $5/$25 per million; 5.5 is the line's first price cut, at 20%. The 60% drop in cached-input pricing stands out especially — critical for long agentic conversations, where 90%+ of input tokens get processed at the cached rate. Anthropic says Sonnet 5.5 and Haiku 5.5 are coming soon, and Willison wonders whether Haiku can regain price competitiveness, given that today's Haiku 4.5 costs $1/$5 while the new GPT-6 Luna is a tenth of that.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пеликан, который не долетел: над-мышление до поломки</span><span data-lang="en">The pelican that never landed: over-thinking to the point of breaking</span></h2>
+    <p>
+      <span data-lang="ru">В своём фирменном тесте «нарисуй SVG пеликана на велосипеде» Уиллисон впервые получил не рисунок, а обрыв: Opus 5.5 в режиме «max» назвал запрос «классическим тестовым» и стал рассуждать в мельчайших деталях — проверял длину голени пеликана, прорисовывал путь стопы по педали, спорил сам с собой о выражении «мордочки» и порядке слоёв цепи велосипеда — а затем модель просто остановилась, так и не выдав итоговый SVG. Причина: максимальный лимит в 128 000 выходных токенов у моделей Claude, который был исчерпан прямо посреди рассуждения. Попытка номер два дала тот же результат; каждая стоила Уиллисону $2.56 и почти 20 минут. Вывод, который он делает: если модель «над-думывает» до поломки на заведомо тривиальном промпте, доверять режиму max в реальной сложной работе — рискованно. Для контраста: Fable 5.1 в режиме max не стала над-думывать и выдала, по его словам, лучшего пеликана среди всех моделей Anthropic.</span>
+      <span data-lang="en">In his signature "draw an SVG of a pelican riding a bicycle" test, Willison got not a drawing but a cutoff for the first time: Opus 5.5 at "max" effort called the prompt "a classic test request" and reasoned over minute details — checking the pelican's shin length, tracing the foot's path on the pedal, debating its facial expression and the chain-ring layering — and then simply stopped without ever emitting the final SVG. The cause: Claude models' 128,000-token output cap, hit mid-reasoning. A second attempt produced the same result; each cost him $2.56 and nearly 20 minutes. His takeaway: if a model over-thinks to the point of breaking on a deliberately trivial prompt, trusting "max" mode on genuinely complex work becomes risky. For contrast, Fable 5.1 on "max" didn't over-think and, in his view, produced the best pelican from any Anthropic model yet.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что это значит на практике</span><span data-lang="en">What this means in practice</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон завершает заметку личным выбором: он уже сделал GPT-6 Sol и Claude Opus 5.5 моделями по умолчанию в Codex и Claude Code, а свой демо-проект agent.datasette.io перевёл на GPT-6 Luna — по его словам, она достаточно быстрая и компетентная и для SQL-запросов, и для сборки HTML/JS-приложений. Он также отмечает, что сравнение пеликанов между разными вендорами теряет смысл как метрика «кто лучше», но остаётся полезным именно для сравнения одного семейства моделей между уровнями рассуждения — что и показал провал Opus 5.5 max.</span>
+      <span data-lang="en">Willison closes with his own choice: he's already made GPT-6 Sol and Claude Opus 5.5 his default models in Codex and Claude Code, and switched his agent.datasette.io demo project to GPT-6 Luna, which he says is fast and competent enough for both SQL queries and building HTML/JS apps. He also notes that comparing pelicans across vendors has stopped being a meaningful "who's better" metric, but stays useful for comparing one model family across reasoning levels — exactly what the Opus 5.5 max failure demonstrated.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
