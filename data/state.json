@@ -35,6 +35,13 @@
         "ru": "Anthropic перезапускает Claude Academy на academy.claude.com: 26 бесплатных курсов на фреймворке «4D», эволюция мартовской Anthropic Academy (13 курсов)"
       }
     },
+    "anthropic-claude-biolab-enzyme-discovery": {
+      "last_date": "2026-09-24",
+      "summary": {
+        "en": "Anthropic opened a biology lab; 950 Claude agents autonomously found an uncharacterized enzyme system (ART) with a CRISPR-like repeat array in bacteriophage DNA, function still unknown.",
+        "ru": "Anthropic открыла биолабораторию; 950 агентов Claude автономно нашли неописанную ферментную систему (ART) с CRISPR-подобным массивом повторов в ДНК бактериофагов, функция пока не известна."
+      }
+    },
     "anthropic-claude-code-2-1-234": {
       "last_date": "2026-08-18",
       "summary": {
@@ -147,18 +154,18 @@
         "ru": "Anthropic Claude for Teachers — от бесплатного доступа для отдельных K-12 учителей (июль) до Enterprise-предложения для школ и округов с SSO/RBAC (август)"
       }
     },
+    "anthropic-claude-marketplace": {
+      "last_date": "2026-09-24",
+      "summary": {
+        "en": "Anthropic relaunched Claude Marketplace as a single hub for connectors/plugins, Claude-powered partner products and service partners, letting customers pay for partner software out of committed spend.",
+        "ru": "Anthropic перезапустила Claude Marketplace: единый хаб коннекторов/плагинов, партнёрских продуктов на Claude и сервисных партнёров, с возможностью платить committed spend за партнёрский софт."
+      }
+    },
     "anthropic-claude-memory-unification": {
       "last_date": "2026-08-26",
       "summary": {
         "en": "Anthropic unifies Claude's memory across chat and Cowork (August 25): context carries between modes, updates live, sensitive topics are not stored by default",
         "ru": "Anthropic объединяет память Claude между чатом и Cowork (25 августа): контекст переносится между режимами, обновляется в реальном времени, чувствительные темы по умолчанию не сохраняются"
-      }
-    },
-    "anthropic-claude-opus-5": {
-      "last_date": "2026-07-25",
-      "summary": {
-        "en": "Anthropic ships Claude Opus 5 — near-Fable-5 performance at unchanged pricing, with a new adjustable effort setting",
-        "ru": "Anthropic выпускает Claude Opus 5 — почти уровень Fable 5 при неизменной цене, с новым регулируемым effort-параметром"
       }
     },
     "anthropic-claude-opus-5-5": {
@@ -657,13 +664,6 @@
         "ru": "OpenAI делает GPT-5.6 Luna дефолтом для бесплатных пользователей ChatGPT с безлимитным текстом (с недели 10 августа) и обновляет GPT-5.6 Sol для Plus/Pro — более прямые ответы и на 68% меньше фактических ошибок"
       }
     },
-    "openai-chatgpt-health": {
-      "last_date": "2026-07-25",
-      "summary": {
-        "en": "OpenAI rolls out ChatGPT Health to all US adult users on every plan; sharp privacy criticism and a parallel lawsuit",
-        "ru": "OpenAI открывает ChatGPT Health всем взрослым пользователям в США на всех тарифах; резкая критика приватности и параллельный иск"
-      }
-    },
     "openai-chatgpt-images-2-5": {
       "last_date": "2026-09-09",
       "summary": {
@@ -954,6 +954,7 @@
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03",
     "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29",
+    "https://claude.com/blog/claude-marketplace": "2026-09-24",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26",
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-26",
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-19",
@@ -974,7 +975,6 @@
     "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
     "https://every.to/context-window/evals-for-everyone": "2026-09-21",
     "https://every.to/p/openai-infrastructure": "2026-07-31",
-    "https://every.to/vibe-check/opus-5": "2026-07-25",
     "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/": "2026-09-02",
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
     "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
@@ -1083,10 +1083,8 @@
     "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/": "2026-08-22",
     "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
     "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications": "2026-08-15",
-    "https://stratechery.com/2026/openai-hacks-hugging-face-what-happened-alignment-and-paper-clips/": "2026-07-25",
     "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content": "2026-08-11",
     "https://support.claude.com/en/articles/16893491-get-started-with-smart-reports": "2026-09-12",
-    "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/": "2026-07-25",
     "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/": "2026-08-13",
     "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/": "2026-08-26",
     "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/": "2026-09-07",
@@ -1100,7 +1098,6 @@
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
     "https://thenewstack.io/kimi-k3-open-weights/": "2026-07-28",
     "https://thenewstack.io/opus-5-agentic-coding-cost/": "2026-07-26",
-    "https://thezvi.substack.com/p/ai-178-a-fire-alarm-for-general-intelligence": "2026-07-25",
     "https://thezvi.substack.com/p/ai-179-part-1-a-louder-fire-alarm": "2026-07-31",
     "https://thezvi.substack.com/p/ai-179-part-2-hearing-the-fire-alarm": "2026-08-01",
     "https://thezvi.substack.com/p/ai-180-no-longer-in-charge": "2026-08-07",
@@ -1135,7 +1132,7 @@
     "https://www.anthropic.com/claude-fable-and-mythos-5-1": "2026-09-02",
     "https://www.anthropic.com/claude-opus-5-5": "2026-09-23",
     "https://www.anthropic.com/institute/measuring-pace-of-ai-development": "2026-09-18",
-    "https://www.anthropic.com/news/claude-opus-5": "2026-07-25",
+    "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-24",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-29",
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-30",
@@ -1168,7 +1165,6 @@
     "https://www.latent.space/p/inference-eng": "2026-08-16",
     "https://www.latent.space/p/ontologies-agentic-systems": "2026-08-03",
     "https://www.latent.space/p/recursive": "2026-09-17",
-    "https://www.latent.space/p/unsupervised-learning-2026": "2026-07-25",
     "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent": "2026-09-07",
     "https://www.macobserver.com/news/claude-in-chrome-is-now-a-full-cowork-session-across-all-claude-apps/": "2026-08-19",
     "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/": "2026-08-07",

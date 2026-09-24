@@ -1,0 +1,126 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T05:16:00Z",
+  "news": [
+    {
+      "id": "2026-09-24-anthropic-claude-marketplace",
+      "cluster_id": "anthropic-claude-marketplace",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic перезапускает Claude Marketplace: 2000+ партнёрских инструментов и гибкий committed spend",
+        "en": "Anthropic relaunches Claude Marketplace with 2,000+ partner tools and flexible committed spend"
+      },
+      "summary": {
+        "ru": "23 сентября Anthropic расширила Claude Marketplace (впервые показанную в закрытом превью в марте) до единого хаба: более 2000 коннекторов и плагинов (Atlassian, Google, Microsoft, Notion, Salesforce), партнёрские продукты на Claude (CrowdStrike, Cursor, Harvey, Legora, Lovable, Snowflake) и уровень сервисных партнёров (Accenture, BCG, Deloitte). Новое — клиенты теперь могут направить часть уже законтрактованного (committed spend) бюджета на Anthropic на оплату партнёрского софта, а Anthropic берёт на себя единый договор и единый счёт вместо отдельных сделок с каждым вендором.",
+        "en": "On September 23, Anthropic expanded Claude Marketplace (first shown in a limited preview back in March) into a single hub: over 2,000 connectors and plugins (Atlassian, Google, Microsoft, Notion, Salesforce), Claude-powered partner products (CrowdStrike, Cursor, Harvey, Legora, Lovable, Snowflake), and a services tier (Accenture, BCG, Deloitte). The new piece is that customers can now apply a portion of their existing Anthropic committed spend toward partner software, with Anthropic managing a single contract and invoice instead of separate vendor deals."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Реальный, но узкий шаг: это ход в сфере закупок/дистрибуции для корпоративных покупателей, а не новая возможность или способ использования самой модели — и VentureBeat отмечает, что он вступает в противоречие с собственными конкурирующими корпоративными продуктами Anthropic.",
+        "en": "Real but narrow: this is a procurement/distribution move for enterprise buyers, not a new capability or a new way of using the model itself — and VentureBeat notes it sits in tension with Anthropic's own competing enterprise products."
+      },
+      "source_url": "https://claude.com/blog/claude-marketplace",
+      "opinions": [
+        {
+          "author": "Jamil Valliani, Head of Product AI, Atlassian",
+          "stance": "positive",
+          "quote": {
+            "ru": "Теперь можно задать Claude вопрос и быть уверенным, что он по-настоящему понимает твой рабочий контекст.",
+            "en": "Ask Claude a question and trust that it truly understands your world."
+          },
+          "url": "https://claude.com/blog/claude-marketplace"
+        },
+        {
+          "author": "VentureBeat",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Anthropic весь последний год выстраивала собственные корпоративные продукты — Claude Code, Claude for Work и растущий набор агентных инструментов, — и каждый из них хотя бы отчасти конкурирует с партнёрскими инструментами, которые теперь появляются в маркетплейсе.",
+            "en": "Anthropic has spent the past year building its own enterprise products — Claude Code, Claude for Work, and a growing suite of agentic tools — and each of those competes, at least at the margin, with the partner tools now appearing in the marketplace."
+          },
+          "url": "https://venturebeat.com/technology/anthropic-launches-claude-marketplace-giving-enterprises-access-to-claude"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "CodeRabbit направил часть своего контракта с Anthropic на Vercel, где работают его кодовые агенты.",
+            "en": "CodeRabbit put part of its Anthropic commitment toward Vercel, where its coding agents run."
+          },
+          "url": "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace"
+        },
+        {
+          "text": {
+            "ru": "Power Digital и ThoughtSpot направили свой committed spend на Snowflake для дата-инфраструктуры.",
+            "en": "Power Digital and ThoughtSpot directed their committed spend to Snowflake for data infrastructure."
+          },
+          "url": "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-24-anthropic-claude-enzyme-discovery",
+      "cluster_id": "anthropic-claude-biolab-enzyme-discovery",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic открывает биолабораторию: 950 агентов Claude нашли новую ферментную систему, похожую на CRISPR",
+        "en": "Anthropic launches a biology lab and says 950 Claude agents found a novel, CRISPR-like enzyme system"
+      },
+      "summary": {
+        "ru": "23 сентября Anthropic представила новую исследовательскую группу по наукам о жизни и опубликовала первый результат: около 950 агентов Claude за 21 час и 210 млн токенов просканировали более 200 000 обратных транскриптаз, сузили список до 20 кандидатов и обнаружили ранее неописанную ферментную систему в ДНК бактериофагов — обратную транскриптазу, ген-партнёр и CRISPR-подобный массив ДНК-повторов, названную ART. Anthropic подчёркивает, что реальная функция системы пока не известна, и приглашает внешних учёных предложить дальнейшие эксперименты.",
+        "en": "On September 23 Anthropic introduced a new life-sciences research group and reported its first result: roughly 950 Claude agents spent 21 hours and 210M tokens scanning 200,000+ reverse transcriptases, narrowed the field to 20 candidates, and flagged a previously uncharacterized enzyme system in bacteriophage DNA — a reverse transcriptase, a partner gene, and a CRISPR-like array of DNA repeats, dubbed ART. Anthropic stresses the system's actual function is still unknown and is inviting outside researchers to propose follow-up experiments."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — массовый автономный агентный майнинг научных данных для генерации гипотез, — но сам CEO Anthropic и независимые критики подчёркивают, что находка пока недоказанное совпадение паттерна, а не работающий инструмент: это ранний спорный сигнал, а не состоявшийся прорыв.",
+        "en": "Opens a new class of scenario — large swarms of agents autonomously mining scientific data to generate hypotheses — but Anthropic's own CEO and independent critics stress the finding is an unproven pattern-match, not a working tool, so it reads as an early, contested signal rather than a settled breakthrough."
+      },
+      "source_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "opinions": [
+        {
+          "author": "Feng Zhang (MIT / Broad Institute, соавтор технологии CRISPR)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Обнаружение массивов РНК-повторов, ассоциированных с обратными транскриптазами, — по-настоящему интригующая находка, заслуживающая дальнейшего изучения.",
+            "en": "The identification of RNA-repeat arrays associated with reverse transcriptases is genuinely intriguing and merits further investigation."
+          },
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        },
+        {
+          "author": "Dario Amodei, CEO Anthropic",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Точная функция, биотехнологическая польза (если она есть) или значимость этой системы пока не ясны, но как минимум это работа, которой я гордился бы как учёный.",
+            "en": "Its precise function, biotechnological utility (if any), or level of significance is not yet clear, but at minimum it is work I would have been proud of as a scientist."
+          },
+          "url": "https://x.com/DarioAmodei/status/2102831170299834652"
+        },
+        {
+          "author": "Remy, redreamality.com",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Читая маркетинг лаборатории, отделяйте «одобрение первопроходца» от «функция подтверждена». Так вы отбросите немало шума.",
+            "en": "When you read lab marketing, separate 'pioneer endorsement' from 'function confirmed.' You will discard a lot of noise."
+          },
+          "url": "https://redreamality.com/blog/claude-discovers-novel-enzyme-crispr-like-art/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Сам процесс открытия: около 950 агентов Claude работали параллельно 21 час и потратили 210 млн токенов, сжав работу по майнингу генома, на которую, по словам Anthropic, у эксперта-человека ушли бы недели или месяцы.",
+            "en": "The discovery pipeline itself: ~950 Claude agents ran in parallel for 21 hours on 210M tokens, compressing genome-mining work Anthropic says would take a human expert weeks or months."
+          },
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        },
+        {
+          "text": {
+            "ru": "Anthropic приглашает внешних учёных подавать исследовательские заявки, чтобы выяснить, что на самом деле делает ART.",
+            "en": "Anthropic is inviting outside scientists to submit research proposals to determine what ART actually does."
+          },
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

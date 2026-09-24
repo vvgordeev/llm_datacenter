@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T05:16:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 2, "note": "WebFetch anthropic.com/news ok; нашли Claude Marketplace relaunch (23 сент.) и запуск биолаборатории/открытие ART-фермента (23 сент.); Opus 5.5 и enzyme-новость от 23 сент. дублируют вчерашний прогон только частично — Opus 5.5 уже опубликован вчера, enzyme-новость нова"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch openai.com — EGRESS_BLOCKED; WebSearch: GPT-6 Sol/Luna и Model Misalignment Framework уже опубликованы ранее (>36ч), новых релизов в окне lookback_hours нет"},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch blog.google — EGRESS_BLOCKED; WebSearch: последний релиз — Gemini 3.8 Flash (2 сент.), уже опубликован, ничего нового в окне"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ai.meta.com — EGRESS_BLOCKED; WebSearch не нашёл ничего в окне lookback_hours"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch x.ai — EGRESS_BLOCKED; WebSearch: Grok 4.7 (21 сент.) уже опубликован вчера, новых релизов в окне нет"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch mistral.ai — EGRESS_BLOCKED; WebSearch дал вводящую в заблуждение сводку про 'AI Now Summit сентября' — при проверке дат (Leanstral 1.5, OCR 4, партнёрства Airbus/BMW/ASML) все оказались от мая-июня 2026, отфильтрованы как устаревшие"},
+    {"source": "deepseek changelog", "status": "blocked", "candidates": 0, "note": "WebFetch api-docs.deepseek.com — EGRESS_BLOCKED; WebSearch: V4.1-Flash (10 сент.) уже опубликован, ничего нового"},
+    {"source": "aggregators (smol.ai, tldr.tech)", "status": "blocked", "note": "WebFetch news.smol.ai и tldr.tech/ai — EGRESS_BLOCKED; заменено широким WebSearch по LLM news/AI coding agent update за дату — предметных новых кандидатов не дало"},
+    {"source": "hn algolia api", "status": "error", "note": "curl к hn.algolia.com не вернул данных (пусто/таймаут); WebSearch site:news.ycombinator.com по Claude Marketplace и enzyme-открытию не дал надёжно датированных тредов за сегодня — HN-мнения в сводку не включены"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "note": "WebSearch не нашёл специфичных тредов, привязанных к сегодняшним новостям"},
+    {"source": "experts: Simon Willison", "status": "empty", "note": "simonwillisonblog-backup (git clone, свежий) — последняя запись blog_entry от 22 сент. (opus-and-sol-and-luna) уже опубликована вчера; последний blogmark от 23 сент. — анонс митапа, не материал по теме; новых постов по содержанию нет"},
+    {"source": "experts: Andrej Karpathy", "status": "blocked", "note": "youtube.com CONNECT 403 на уровне egress-прокси (yt-dlp и RSS оба упали); WebSearch — последнее видео за пределами 7-дневного окна (апрель)"},
+    {"source": "experts: Latent Space", "status": "empty", "note": "Свежий материал (AINews про Opus 5.5) — по факту пересказ уже опубликованной вчера новости, отклонён как дубль по содержанию, а не самостоятельный аналитический материал; собственное эссе swyx ('Scaling without Slop') от января, вне окна"},
+    {"source": "experts: AI Explained", "status": "blocked", "note": "youtube.com CONNECT 403; WebSearch не дал видео с надёжной атрибуцией каналу за неделю"},
+    {"source": "experts: Matt Wolfe", "status": "blocked", "note": "youtube.com CONNECT 403; WebSearch не дал конкретного видео с датой за неделю"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "note": "Последний пост 'The Overhang' (18 сент.) уже опубликован вчера; новых постов в пределах недели нет"},
+    {"source": "experts: Nate Herk", "status": "blocked", "note": "youtube.com CONNECT 403; WebSearch нашёл только уже опубликованное вчера видео про визит в Google (20 сент.)"},
+    {"source": "experts: Matt Pocock", "status": "blocked", "note": "youtube.com CONNECT 403; WebSearch не дал видео за неделю"},
+    {"source": "расширенный поиск (не по конфигу)", "status": "empty", "note": "Проверены кандидаты вне списка экспертов: эссе Dario Amodei 'We Must Pace the Frontier' (12 сент., вне 7-дневного окна), NYT-колонка Zeynep Tufekci об AI и науке (упомянута WebSearch с 22 сент., но точный URL не подтверждён напрямую — отклонена во избежание недостоверной ссылки), эссе swyx и Tim Requarth — оба вне окна"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 2,
+    "rejected": {
+      "уже опубликовано ранее (>36ч для новостей / вне окна для экспертов)": 5,
+      "не удалось подтвердить атрибуцию/точный URL": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: ни один видео-эксперт не дал кандидата с надёжной атрибуцией в пределах 7-дневного окна",
+    "frames": "n/a — видео-конспектов в этом прогоне нет"
+  },
+  "notes": "Деградация окружения: youtube.com полностью недоступен через egress-прокси (CONNECT 403 подтверждён и для RSS, и для yt-dlp, и для piped.video-зеркала) — это заблокировало все 5 видео-экспертов из конфига целиком, а не только discovery. Прямые WebFetch на все блоги моделей кроме anthropic.com дали EGRESS_BLOCKED — больше 1/3 источников заблокированы/недоступны, использован WebSearch как основной канал. min_expert_total=5 не набран (получено 0): все материалы конфигурационных экспертов за неделю либо уже опубликованы в предыдущих прогонах, либо видео-каналы недоступны. Расширенный поиск за пределами конфига (эссе Amodei, колонка Tufekci, эссе swyx/Requarth) не дал материалов, одновременно попадающих в 7-дневное окно и допускающих надёжную проверку ссылки/содержания — решено не включать их, чтобы не рисковать выдуманными деталями. Из новостного потока опубликовано 2 реальные новости (обе Anthropic, 23 сентября): расширение Claude Marketplace и запуск биолаборатории с находкой ART-фермента; остальные модели (OpenAI, Google, Meta, xAI, Mistral, DeepSeek) не дали новых релизов в 36-часовом окне — все найденные кандидаты либо уже опубликованы ранее, либо (Mistral 'AI Now Summit') оказались при проверке датированы маем-июнем."
+}
