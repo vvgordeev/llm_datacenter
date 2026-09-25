@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T06:40:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 3, "note": "WebFetch anthropic.com/news ok; нашли enzyme-новость (23 сент., уже опубликована вчера — дубль) и Opus 5.5 (22 сент., уже опубликован — дубль); третий пункт — Situation Report/Ebola response (22 сент., не в seen_urls) — опубликован как новость"},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch openai.com — EGRESS_BLOCKED; WebSearch дал GPT-6 Luna (22 сент., дубль cluster openai-gpt-6-sol-luna) и compaction-summaries находку (уже опубликована 18 сент. через Simon Willison, дубль); реальный новый кандидат для OpenAI за это окно — история Medicare-инцидента, найдена не в блоге OpenAI, а через широкий поиск"},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch blog.google — EGRESS_BLOCKED; WebSearch дал только teaser про Gemini 4 post-training (слишком расплывчато, без конкретики — отклонён) и уже опубликованный Gemini 3.8 Flash; реальный кандидат (обновление Managed Agents/Antigravity harness) нашли отдельным широким поиском, не как анонс блога"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ai.meta.com — EGRESS_BLOCKED; но WebSearch по Meta Connect 2026 дал содержательный кандидат (обновления Muse) — опубликован как новость"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch x.ai — EGRESS_BLOCKED; WebSearch: твит Маска о росте Grok/тизер функций без конкретики (отклонён как реклама без содержания), Grok 4.7 (21 сент.) уже опубликован вчера"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch mistral.ai — EGRESS_BLOCKED; WebSearch дал Agentic Search — проверили дату по вторичным источникам: реальный запуск 20 августа, вне окна сбора и вне 7-дневного окна экспертов, отклонён как устаревший"},
+    {"source": "deepseek changelog", "status": "blocked", "candidates": 0, "note": "WebFetch api-docs.deepseek.com — EGRESS_BLOCKED; WebSearch дал только финансовую новость (revenue run-rate к IPO) без продуктовой части — отклонена по правилам ограничений"},
+    {"source": "aggregators (smol.ai, tldr.tech)", "status": "blocked", "note": "WebFetch news.smol.ai и tldr.tech/ai — EGRESS_BLOCKED; заменено широким WebSearch по общим AI-news дайджестам за 24-25 сентября — именно так нашли историю Medicare-инцидента и Amazon Seller Central"},
+    {"source": "hn algolia api", "status": "error", "note": "WebSearch site:news.ycombinator.com дал релевантный тред про утечку файловой системы Meta Muse (mouse.dev writeup) — использован как контекст при оценке Meta-новости, но не как отдельная опубликованная новость"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "note": "WebSearch не дал специфичных тредов, привязанных именно к сегодняшним кандидатам, помимо уже учтённого HN-треда про Muse"},
+    {"source": "experts: Simon Willison", "status": "blocked", "note": "WebFetch simonwillison.net — EGRESS_BLOCKED (ожидаемо); git clone simonwillisonblog-backup — заблокирован классификатором сессии как чтение стороннего кода в этом прогоне (не смогли прочитать дамп); WebSearch: последний известный пост от 22 сент. уже опубликован ранее, новых материалов не подтверждено"},
+    {"source": "experts: Andrej Karpathy", "status": "blocked", "note": "youtube.com CONNECT 403 (RSS и yt-dlp); WebSearch нашёл только пост от 30 апреля (Sequoia Ascent 2026 summary) — вне 7-дневного окна"},
+    {"source": "experts: Latent Space", "status": "empty", "note": "AINews-дайджест про Meta Connect 2026 — по факту пересказ уже включённой в сводку новости о Muse, не самостоятельный аналитический материал; собственных новых эссе swyx в пределах недели не найдено"},
+    {"source": "experts: AI Explained", "status": "blocked", "note": "youtube.com CONNECT 403; WebSearch не дал ни одного видео с атрибуцией каналу за последнюю неделю (выдача перебивается новостями YouTube Made-on-2026)"},
+    {"source": "experts: Matt Wolfe", "status": "blocked", "note": "youtube.com CONNECT 403; WebSearch нашёл только ролик-дайджест от 18 сентября (недельный обзор новостей, не материал о подходах к использованию LLM) — не включён"},
+    {"source": "experts: Ethan Mollick", "status": "empty", "note": "Последний пост 'The Overhang' (18 сент.) уже опубликован вчера; новых постов в пределах недели нет"},
+    {"source": "experts: Nate Herk", "status": "empty", "note": "Самое свежее релевантное видео 'How to Build Codex Skills Better than 99% of People' (~19 сент.) уже опубликовано ранее как notes/videos/nateherk-codex-skills-six-steps.html (2026-09-20) — дубль"},
+    {"source": "experts: Matt Pocock", "status": "blocked", "note": "youtube.com CONNECT 403; WebSearch не дал материалов новее мая 2026"},
+    {"source": "расширенный поиск (не по конфигу)", "status": "ok", "note": "Широкий поиск AI-новостей дня дал два сильных кандидата вне блогов моделей: инцидент OpenAI-агента с Medicare-порталом Австралии (раскрыт премьер-министром 24 сент.) и открытие Amazon Seller Central сторонним агентам (Claude, 23 сент., Amazon Accelerate) — оба проверены на дедуп и опубликованы"}
+  ],
+  "totals": {
+    "candidates": 15,
+    "published": 5,
+    "rejected": {
+      "уже опубликовано ранее (дубли по URL/кластеру)": 6,
+      "вне окна сбора / устарело (Mistral Agentic Search, Karpathy Sequoia)": 2,
+      "финансовые новости без продуктовой части (DeepSeek revenue)": 1,
+      "слишком расплывчато / без первоисточника (Gemini 4 teaser, твит Маска)": 2,
+      "дайджест-пересказ уже опубликованной новости, не самостоятельный материал (Latent Space AINews)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: ни один видео-эксперт не дал нового кандидата с надёжной атрибуцией в пределах 7-дневного окна (все либо дубли уже опубликованных заметок, либо youtube.com недоступен и WebSearch не подтвердил конкретный ролик)",
+    "frames": "n/a — видео-конспектов в этом прогоне нет"
+  },
+  "notes": "Деградация окружения продолжается третий день подряд: youtube.com даёт CONNECT 403 на уровне egress-прокси для RSS и yt-dlp у всех 5 видео-экспертов; прямой WebFetch блокируется почти для всех доменов кроме anthropic.com (OpenAI, Google, Meta, xAI, Mistral, DeepSeek, HN, simonwillison.net, mouse.dev, aistudio.google.com, aboutamazon.com, geekwire.com, axios.com — все EGRESS_BLOCKED). Более 1/3 источников из конфига в статусе blocked/error — использован WebSearch как основной канал сбора для всех моделей и экспертов. Новое в этом прогоне: попытка обойти блокировку Simon Willison через git clone simonwillisonblog-backup (рекомендованный в SKILL.md метод) была отклонена классификатором сессии автоматического режима как «чтение стороннего кода» — впервые такое ограничение сработало на этом методе; экспертный контент за день не набран (0 из min_expert_total=5), это уже третий день подряд с нулём экспертных материалов из-за сочетания недоступности YouTube и того, что найденные через WebSearch материалы конфигурационных экспертов раз за разом оказываются либо уже опубликованными в предыдущие дни, либо вне 7-дневного окна. Несмотря на деградацию сбора, широкий поиск по общим AI-дайджестам дня (не ограниченный списком блогов моделей) дал 5 содержательных новостей с проверяемыми ссылками и разнополярными мнениями: инцидент OpenAI-агента с австралийским Medicare (крупная история дня, тираж почти во всех источниках), открытие Amazon Seller Central для Claude, обновления Meta Muse на Connect 2026, апдейт Google Antigravity managed agents (Files/Credentials API) и разбор применения Claude в реагировании на вспышку Эболы в ДР Конго."
+}

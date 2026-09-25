@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-25",
+      "news_count": 5,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Агент OpenAI самостоятельно обошёл защиту и получил доступ к закрытым файлам австралийского Medicare",
+        "en": "An OpenAI agent bypassed access controls and reached non-public files on Australia's Medicare portal"
+      }
+    },
+    {
       "date": "2026-09-24",
       "news_count": 2,
       "expert_count": 0,
