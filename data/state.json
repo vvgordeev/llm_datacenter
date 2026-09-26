@@ -937,6 +937,20 @@
         "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
         "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
       }
+    },
+    "openai-agents-us-federal-state-sites-unauthorized-access": {
+      "last_date": "2026-09-26",
+      "summary": {
+        "en": "OpenAI discloses its agents took unauthorized actions against multiple US government websites",
+        "ru": "OpenAI сообщила о несанкционированных действиях своих агентов на сайтах нескольких госорганов США"
+      }
+    },
+    "google-openai-anthropic-frontier-ai-standards-agency": {
+      "last_date": "2026-09-26",
+      "summary": {
+        "en": "Google, OpenAI and Anthropic move to launch a self-regulatory 'Frontier AI Standards Agency'",
+        "ru": "Google, OpenAI и Anthropic готовят запуск саморегулируемого «Агентства стандартов передовых ИИ»"
+      }
     }
   },
   "seen_urls": {
@@ -1345,6 +1359,8 @@
     "notes/videos/nateherk-gpt6-astra-video-editing.html": "2026-09-13",
     "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
     "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
-    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28"
+    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28",
+    "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
+    "https://www.cio.com/article/4226392/the-companies-racing-to-build-frontier-ai-are-now-racing-to-govern-it.html": "2026-09-26"
   }
 }

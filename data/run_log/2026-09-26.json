@@ -1,0 +1,129 @@
+{
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T05:20:14Z",
+  "sources": [
+    {
+      "source": "anthropic blog",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebFetch к anthropic.com/news не пробовался напрямую (see egress note); WebSearch по анонсам за окно не дал ничего свежее уже опубликованного (Opus 5.5 от 22.09 — старше lookback_hours)"
+    },
+    {
+      "source": "openai blog/news",
+      "status": "ok",
+      "candidates": 2,
+      "note": "WebSearch нашёл 2 реальные новые истории (federal agencies breach, voice upgrade — voice отклонён как старее 36ч)"
+    },
+    {
+      "source": "google/deepmind blog",
+      "status": "empty",
+      "candidates": 0,
+      "note": "только слух о сроках Gemini 4 (не событие, не берём), остальное старее окна"
+    },
+    {
+      "source": "meta ai blog",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Muse Spark 1.3 и Connect 2026 — старее lookback_hours, уже в архиве"
+    },
+    {
+      "source": "xai news",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Grok 4.7 и long-term memory — старее lookback_hours, уже в архиве"
+    },
+    {
+      "source": "mistral news",
+      "status": "empty",
+      "candidates": 0,
+      "note": "funding round (финансы, не берём) и Leanstral 1.5 — не удалось подтвердить дату в окне"
+    },
+    {
+      "source": "deepseek news",
+      "status": "empty",
+      "candidates": 0,
+      "note": "V4.1-Flash — релиз 10.09, старее окна, уже в архиве"
+    },
+    {
+      "source": "aggregators (smol.ai/TLDR/HN API)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "прямой WebFetch/curl 403 (см. HN API и youtube.com CONNECT 403 ниже); использован WebSearch как фоллбэк, вытащил Xi-Trump/Sanders-Casar/Alibaba Qwen voice — все не в теме продуктовых фич LLM, отклонены"
+    },
+    {
+      "source": "Hacker News (WebSearch discovery)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "нашлись реальные HN-треды по обеим отобранным новостям (David Sacks pacing-the-frontier тред, общий тред про rogue-агентов и government sites)"
+    },
+    {
+      "source": "community (Reddit/X)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "предметных тредов под конкретные два кандидата через WebSearch не нашлось (кроме уже использованных X-постов Altman/Sacks)"
+    },
+    {
+      "source": "expert: Simon Willison",
+      "status": "empty",
+      "candidates": 0,
+      "note": "git-бэкап блога (simonwillisonblog-backup) склонирован; последние 2 полноразмерных поста (jev, opus-and-sol-and-luna) уже опубликованы в прошлых сводках; свежее — только двухпредложечная заметка 24.09, недостаточно для конспекта"
+    },
+    {
+      "source": "expert: Andrej Karpathy (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com CONNECT 403 на уровне egress-прокси — RSS и yt-dlp недоступны; WebSearch не нашёл видео Karpathy свежее апреля-мая 2026"
+    },
+    {
+      "source": "expert: Latent Space",
+      "status": "ok",
+      "candidates": 0,
+      "note": "нашёлся новый пост 25.09 ([AINews] The Future of Latent Space), но по содержанию — компиляция уже освещённых новостей + анонс формата рассылки, не тянет на конспект метода"
+    },
+    {
+      "source": "expert: AI Explained (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com CONNECT 403; WebSearch не дал датированного свежего ролика"
+    },
+    {
+      "source": "expert: Matt Wolfe (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com CONNECT 403; WebSearch подтвердил активность канала, но без точного URL/даты в окне"
+    },
+    {
+      "source": "expert: Ethan Mollick",
+      "status": "empty",
+      "candidates": 0,
+      "note": "последний пост «The Overhang» (18.09) уже опубликован в сводке за 23.09; новых постов за 25-26.09 не найдено"
+    },
+    {
+      "source": "expert: Nate Herk (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com CONNECT 403; все найденные через WebSearch ролики (Codex skills, Google day) уже опубликованы в прошлых сводках"
+    },
+    {
+      "source": "expert: Matt Pocock (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com CONNECT 403; WebSearch не дал датированного свежего ролика с AI-темой"
+    }
+  ],
+  "totals": {
+    "candidates": 18,
+    "published": 2,
+    "rejected": {
+      "старее lookback_hours/уже в архиве": 9,
+      "финансы/политика без продуктовой части": 3,
+      "слухи без подтверждённого события": 2,
+      "не по теме LLM": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — gemini_video.py успешно получил конспект для https://www.youtube.com/watch?v=9KOtMsZ9I28 (видео Nate Herk, но само видео оказалось уже опубликовано ранее — не вошло в сводку)",
+    "frames": "error: yt-dlp CONNECT 403 на youtube.com (egress-прокси блокирует напрямую, Gemini достаёт видео на своей стороне и поэтому не пострадал)"
+  },
+  "notes": "Экспертный минимум (min_expert_total=5) не достигнут: 0 материалов. Основная причина — youtube.com заблокирован на уровне CONNECT egress-прокси (RSS-дискавери и yt-dlp недоступны для всех 5 видео-каналов), а WebSearch по всем 8 экспертам либо возвращал уже опубликованный в прошлых сводках контент, либо материалы старше 7-дневного окна. Это деградация окружения (>1/3 источников blocked/error), не «тихий день» — явно фиксируется здесь по правилу шага 6.5."
+}
