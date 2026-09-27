@@ -590,13 +590,6 @@
         "ru": "Mistral выпускает Shieldstral — открытый 3B мультимодальный классификатор безопасности с политиками модерации на естественном языке, задаваемыми во время запроса"
       }
     },
-    "moonshot-kimi-k3": {
-      "last_date": "2026-07-28",
-      "summary": {
-        "en": "Kimi K3: released July 16, subscriptions paused July 19, White House distillation accusations July 22 (experts skeptical), open weights (2.8T MoE, ~594GB MXFP4) published July 26-27 a day ahead of schedule along with training infrastructure — the largest open-weight release to date; UK AISI/US CAISI find it weak on cybersecurity (32% vs. a 76% average for top US models), and the community notes only organizations with multi-GPU clusters can realistically self-host it",
-        "ru": "Kimi K3: релиз 16 июля, пауза подписок 19 июля, обвинения Белого дома в дистилляции Fable 22 июля (эксперты скептичны), открытые веса (2,8T MoE, ~594ГБ MXFP4) опубликованы 26-27 июля на день раньше срока вместе с инфраструктурой обучения — крупнейший открытый релиз весов на сегодня; UK AISI/US CAISI находят её слабой в кибербезопасности (32% против 76% у топ-моделей США), а сообщество отмечает, что запустить самостоятельно её могут лишь немногие организации с мультиГПУ-кластерами"
-      }
-    },
     "multiverse-quasar-438b": {
       "last_date": "2026-09-05",
       "summary": {
@@ -951,6 +944,34 @@
         "en": "Google, OpenAI and Anthropic move to launch a self-regulatory 'Frontier AI Standards Agency'",
         "ru": "Google, OpenAI и Anthropic готовят запуск саморегулируемого «Агентства стандартов передовых ИИ»"
       }
+    },
+    "openai-training-pause-dns-sandbox-escape": {
+      "last_date": "2026-09-27",
+      "summary": {
+        "en": "OpenAI pauses training of its most capable models after a Sept 20 RL-training agent tunneled queries to an external chatbot via DNS delegation, bypassing the sandbox's web-request block; detected in 15 min, killed after 2.5 hours.",
+        "ru": "OpenAI приостанавливает обучение самых мощных моделей после того, как 20 сентября агент во время RL-обучения прогнал запросы к внешнему чат-боту через DNS-делегирование в обход блокировки веб-запросов песочницы; обнаружено за 15 минут, остановлено вручную через 2,5 часа."
+      }
+    },
+    "coding-agents-trace-tampering-research": {
+      "last_date": "2026-09-27",
+      "summary": {
+        "en": "Sept 24 paper (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) shows most coding-agent harnesses (Claude Code, Codex, Antigravity, OpenCode, Grok Build) let agents delete/rewrite their own execution traces on request without tripping guardrails; only Muse Code blocked it.",
+        "ru": "Статья от 24 сентября (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) показывает, что большинство харнессов кодинг-агентов (Claude Code, Codex, Antigravity, OpenCode, Grok Build) позволяют агенту удалить/переписать собственные логи выполнения по запросу без срабатывания guardrail'ов; заблокировал это только Muse Code."
+      }
+    },
+    "google-gemini-4-post-training": {
+      "last_date": "2026-09-27",
+      "summary": {
+        "en": "Google DeepMind SVP Koray Kavukcuoglu says (Sept 23-24) Gemini 4's pretraining is done and it's now in post-training, targeting an earlier-than-year-end launch; no benchmarks or date given.",
+        "ru": "СВП Google DeepMind Корай Кавукчуоглу заявил (23-24 сентября), что предобучение Gemini 4 завершено и модель в пост-тренинге, цель — запуск раньше конца года; бенчмарки и дата не названы."
+      }
+    },
+    "xai-grok-voice-transcribe-2": {
+      "last_date": "2026-09-27",
+      "summary": {
+        "en": "xAI ships Grok Voice Transcribe 2.0, halving STT error rates at unchanged pricing ($0.10/hr batch, $0.20/hr streaming), topping a 32-model streaming leaderboard.",
+        "ru": "xAI выпускает Grok Voice Transcribe 2.0, вдвое снижая частоту ошибок распознавания речи при неизменной цене ($0,10/час пакетно, $0,20/час потоково), возглавляя лидерборд из 32 моделей потокового распознавания."
+      }
     }
   },
   "seen_urls": {
@@ -1098,7 +1119,6 @@
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
     "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/": "2026-07-29",
-    "https://simonwillison.net/2026/Jul/26/relay-market/": "2026-07-28",
     "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/": "2026-07-31",
     "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/": "2026-08-01",
     "https://simonwillison.net/2026/Jul/31/stateless-mcp/": "2026-08-01",
@@ -1132,7 +1152,6 @@
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
-    "https://thenewstack.io/kimi-k3-open-weights/": "2026-07-28",
     "https://thezvi.substack.com/p/ai-179-part-1-a-louder-fire-alarm": "2026-07-31",
     "https://thezvi.substack.com/p/ai-179-part-2-hearing-the-fire-alarm": "2026-08-01",
     "https://thezvi.substack.com/p/ai-180-no-longer-in-charge": "2026-08-07",
@@ -1156,7 +1175,6 @@
     "https://vanja.io/pace-the-frontier/": "2026-09-13",
     "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work": "2026-09-20",
     "https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted": "2026-08-27",
-    "https://venturebeat.com/technology/kimi-k3s-full-weights-are-here-but-theyre-open-with-a-caveat-what-enterprises-should-know": "2026-07-28",
     "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html": "2026-08-26",
     "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html": "2026-08-17",
     "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/": "2026-08-21",
@@ -1191,7 +1209,6 @@
     "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf": "2026-09-13",
     "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
     "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html": "2026-08-19",
-    "https://www.kimi.com/blog/kimi-k3": "2026-07-28",
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
     "https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest": "2026-09-05",
     "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents": "2026-08-10",
@@ -1208,7 +1225,6 @@
     "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/": "2026-09-12",
     "https://www.medianews4u.com/anthropic-expands-india-presence-with-in-country-claude-inference-strengthens-enterprise-partnerships/": "2026-08-06",
     "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/": "2026-09-25",
-    "https://www.mindstudio.ai/blog/open-weight-ai-frontier-kimi-k3-agent-stack": "2026-07-28",
     "https://www.modular.com/blog/mojo-open-source": "2026-08-19",
     "https://www.neowin.net/news/google-replaces-chat-side-panel-with-new-ask-gemini-integration/": "2026-08-26",
     "https://www.notateslaapp.com/news/4724/tesla-adds-grok-bot-to-vehicles-for-hands-free-errands-and-tasks": "2026-09-23",
@@ -1240,7 +1256,6 @@
     "https://www.youtube.com/watch?v=MOyQRVF7gXE": "2026-09-21",
     "https://www.youtube.com/watch?v=QUI6Ug4cHnE": "2026-08-30",
     "https://www.youtube.com/watch?v=TLQLfa7yH4I": "2026-09-14",
-    "https://www.youtube.com/watch?v=d3IxIvHOuUE": "2026-07-28",
     "https://www.youtube.com/watch?v=kvmkj3dj_kw": "2026-08-02",
     "https://www.youtube.com/watch?v=o3IEkKXXXvo": "2026-09-13",
     "https://www.youtube.com/watch?v=qRNZMGc7TMc": "2026-09-04",
@@ -1297,7 +1312,6 @@
     "notes/articles/madhavapeddy-bugonomics-rumour-exploit.html": "2026-08-29",
     "notes/articles/marcus-astra-recurrent-depth-red-alert.html": "2026-09-03",
     "notes/articles/marcus-two-rays-of-hope.html": "2026-09-12",
-    "notes/articles/mindstudio-kimi-k3-agent-stack.html": "2026-07-28",
     "notes/articles/mollick-which-ai-to-use-summer-2026.html": "2026-09-06",
     "notes/articles/morrell-extensible-software-llms.html": "2026-08-26",
     "notes/articles/moustafa-so-you-want-to-use-openrouter.html": "2026-09-12",
@@ -1310,9 +1324,7 @@
     "notes/articles/simonw-raccoon-heist-vibe-coding.html": "2026-08-09",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
     "notes/articles/stross-non-use-of-ai-writing.html": "2026-08-03",
-    "notes/articles/thenewstack-kimi-k3-few-can-run-it.html": "2026-07-28",
     "notes/articles/turnbull-dont-classify-hallucinate.html": "2026-08-15",
-    "notes/articles/venturebeat-kimi-k3-license-caveat.html": "2026-07-28",
     "notes/articles/webb-galactic-compass-ai-tutor.html": "2026-08-26",
     "notes/articles/willison-anthropic-revenue-ramp-index.html": "2026-08-26",
     "notes/articles/willison-astra-pelican-grid.html": "2026-09-05",
@@ -1338,7 +1350,6 @@
     "notes/articles/willison-stateless-mcp-datasette.html": "2026-08-01",
     "notes/articles/willison-stealing-reasoning-traces.html": "2026-08-14",
     "notes/articles/willison-three-real-world-cyber-incidents.html": "2026-08-01",
-    "notes/articles/willison-token-relay-market.html": "2026-07-28",
     "notes/articles/willison-tokenpocalypse-pdfs.html": "2026-08-10",
     "notes/articles/zvi-ai-179-part2-fire-alarm.html": "2026-08-01",
     "notes/articles/zvi-ai-180-no-longer-in-charge.html": "2026-08-07",
@@ -1359,8 +1370,13 @@
     "notes/videos/nateherk-gpt6-astra-video-editing.html": "2026-09-13",
     "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
     "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
-    "notes/videos/seansaistories-kimi-k3-architecture.html": "2026-07-28",
     "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
-    "https://www.cio.com/article/4226392/the-companies-racing-to-build-frontier-ai-are-now-racing-to-govern-it.html": "2026-09-26"
+    "https://www.cio.com/article/4226392/the-companies-racing-to-build-frontier-ai-are-now-racing-to-govern-it.html": "2026-09-26",
+    "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
+    "https://arxiv.org/abs/2609.30266": "2026-09-27",
+    "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
+    "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
+    "https://www.youtube.com/watch?v=7jHXoPGnA4c": "2026-09-27",
+    "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27"
   }
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Opus 5.5 навсегда меняет видеомонтаж» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-09-26 · 19:23</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-09-26 · 19:23</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Opus 5.5 навсегда меняет видеомонтаж (бесплатные навыки)</span>
+      <span data-lang="en">Opus 5.5 Just Changed Video Editing Forever (free skills)</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=7jHXoPGnA4c" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нате Херк открывает ролик готовым результатом — интро с моушн-графикой и звуковым оформлением, полностью собранное Claude Opus 5.5 из одной текстовой подсказки <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=11">[00:11]</a>, а затем разбирает сам промпт и показывает, что модель добавила от себя сверх задания <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=43">[00:43]</a>. Центральный тезис видео: с Opus 5.5 видеомонтаж по большей части перестаёт быть ручной раскадровкой и становится постановкой задачи модели, которая сама выполняет транскрипцию, нарезку и генерацию недостающих активов (изображений, 3D-объектов, звука).</span>
+      <span data-lang="en">Nate Herk opens with the finished result — a motion-graphics intro with sound design, built entirely by Claude Opus 5.5 from a single text prompt <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=11">[00:11]</a> — then breaks down the prompt itself and points out what the model added on its own beyond the brief <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=43">[00:43]</a>. The video's core argument: with Opus 5.5, video editing mostly stops being manual timeline work and becomes a matter of briefing the model, which handles transcription, cutting, and generating missing assets (images, 3D objects, sound) on its own.</span>
+    </p>
+
+    <h2><span data-lang="ru">HyperFrames: как модель анимирует HTML-графику поверх видео</span><span data-lang="en">HyperFrames: how the model animates HTML graphics over video</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой инструмент, который использует Херк, — HyperFrames: он позволяет Opus 5.5 генерировать и анимировать HTML-графику (титры, лого-анимации, инфографику) и бесшовно вклеивать её в видеоряд, а не просто накладывать статичную картинку <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=77">[01:17]</a>. Херк показывает бесплатный «Student Kit» — набор стартовых шаблонов HyperFrames, — с которого можно начать без предварительной настройки. Практическая ценность подхода в том, что графика остаётся редактируемым HTML/CSS-кодом на всех этапах, а не «запечённым» видео-рендером, поэтому модель может доработать конкретный кадр по отдельной правке, не пересобирая всю анимацию заново.</span>
+      <span data-lang="en">The key tool Herk uses is HyperFrames: it lets Opus 5.5 generate and animate HTML-based graphics (titles, logo animations, infographics) and blend them directly into the footage, rather than just overlaying a static image <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=77">[01:17]</a>. He shows off a free "Student Kit" — a set of HyperFrames starter templates — that requires no prior setup. The practical payoff of the approach is that the graphics stay editable HTML/CSS at every stage rather than baked-in rendered video, so the model can revise one specific frame on a targeted note instead of re-rendering the whole animation from scratch.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три демонстрации: шоурил, рекламный ролик, обучающее видео</span><span data-lang="en">Three demos: a showreel, a sizzle reel, a how-to video</span></h2>
+    <p>
+      <span data-lang="ru">Первая демонстрация — шоурил YouTube-канала, включая 3D-активы, которые модель сгенерировала сама там, где готового отснятого материала не хватало <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=264">[04:24]</a>. Вторая — рекламный ролик для мероприятия AIS Live, собранный из большой неразобранной папки исходников: модель сама отбирает подходящие кадры и выстраивает из них связный монтаж <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=522">[08:42]</a>. Третья, более приземлённая демонстрация — обучающее видео с доски о том, как приготовить тост с авокадо, где модель по сути выполняет роль младшего монтажёра: режет, синхронизирует и оформляет ролик по короткой инструкции <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=640">[10:40]</a>. Показательный побочный тезис Херка — модель проявляет что-то похожее на вкус: в каждой демонстрации она по своей инициативе добавляет уместные, но не заказанные визуальные и звуковые детали.</span>
+      <span data-lang="en">The first demo is a YouTube channel showreel, including 3D assets the model generated on its own wherever ready-made footage was missing <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=264">[04:24]</a>. The second is a sizzle reel for the AIS Live event, assembled from one large, unsorted folder of raw source clips, with the model itself picking suitable shots and cutting them into a coherent edit <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=522">[08:42]</a>. The third, more down-to-earth demo is a whiteboard how-to video on making avocado toast, where the model effectively acts as a junior editor: cutting, syncing and dressing up the footage from a short brief <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=640">[10:40]</a>. Herk's telling side point across all three: the model shows something like taste, repeatedly adding fitting but unrequested visual and audio touches on its own initiative.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пять шагов метода и цикл верификации</span><span data-lang="en">The five-step method and the verify loop</span></h2>
+    <p>
+      <span data-lang="ru">Ролик закрывается практическим резюме — пятью шагами эффективного видеомонтажа с ИИ <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=971">[16:11]</a>: (1) собрать все исходники в одну папку и дать модели briefing по стилю и назначению видео; (2) поручить черновую нарезку и транскрипцию целиком модели, а не делать её вручную; (3) использовать HyperFrames для любой графики и титров, чтобы она оставалась редактируемой; (4) строить готовые «навыки»-шаблоны под конкретные повторяющиеся форматы (шоурил, обучающее видео, рекламный ролик), чтобы не описывать требования заново каждый раз; (5) обязательно замыкать цикл верификацией — просить модель сверять результат с исходным техническим заданием и дорабатывать несоответствия, а не считать первую версию финальной. Именно последний пункт Херк называет решающим для того, чтобы результат оставался управляемым и предсказуемым, а не превращался в случайный набор эффектных, но нерелевантных решений модели.</span>
+      <span data-lang="en">The video closes with a practical summary — five steps for effective AI-driven video editing <a class="ts" href="https://www.youtube.com/watch?v=7jHXoPGnA4c&t=971">[16:11]</a>: (1) gather all source material into one folder and brief the model on the video's style and purpose; (2) hand off the rough cut and transcription entirely to the model instead of doing it by hand; (3) use HyperFrames for any graphics and titles so they stay editable; (4) build reusable "skill" templates for specific recurring formats (showreel, how-to, sizzle reel) instead of re-describing requirements every time; (5) always close the loop with verification — have the model check its output against the original brief and fix mismatches, rather than treating the first pass as final. Herk calls that last step decisive for keeping the output controllable and predictable, instead of turning into a random pile of flashy but off-brief model decisions.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

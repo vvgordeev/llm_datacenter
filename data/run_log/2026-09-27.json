@@ -1,0 +1,208 @@
+{
+  "date": "2026-09-27",
+  "generated_at": "2026-09-27T05:21:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (WebFetch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Only Sept 23 enzyme-discovery item (already published 2026-09-24); no fresh Anthropic post found."
+    },
+    {
+      "source": "anthropic (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Opus 5.5 (Sept 22) and threat-intel report (Sept 10) already covered previously; nothing new found for the window."
+    },
+    {
+      "source": "openai blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on openai.com"
+    },
+    {
+      "source": "openai (WebSearch x2)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "DNS sandbox-escape training pause (published); Sora API discontinuation (Sept 24, not a feature/approach story, rejected)."
+    },
+    {
+      "source": "google/deepmind blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on blog.google"
+    },
+    {
+      "source": "google (WebSearch x2)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Gemini 4 post-training signal (published); other Sept items (3.5 Transcribe, Workspace features) already stale/covered."
+    },
+    {
+      "source": "meta blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on ai.meta.com"
+    },
+    {
+      "source": "meta (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Meta Connect / Muse / Ray-Ban Audio glasses already published as cluster meta-muse-connect-2026-updates (2026-09-25); no new facts found."
+    },
+    {
+      "source": "xai blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on x.ai"
+    },
+    {
+      "source": "xai (WebSearch x2)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Grok Voice Transcribe 2.0 (published); Grok 4.7 already covered 2026-09-22."
+    },
+    {
+      "source": "mistral blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on mistral.ai"
+    },
+    {
+      "source": "mistral (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Agentic Search (Aug 20) too stale to run as news; Mozilla partnership already covered 2026-09-17; funding round out of scope (not a product feature)."
+    },
+    {
+      "source": "deepseek blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on api-docs.deepseek.com"
+    },
+    {
+      "source": "deepseek (WebSearch x2)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "20T-parameter training-plan claim rejected: sourced only to an 'alleged leaked transcript' of an investor meeting, no primary confirmation -- treated as rumor per digest rules."
+    },
+    {
+      "source": "aggregator: smol.ai (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on news.smol.ai"
+    },
+    {
+      "source": "aggregator: smol.ai (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Content used only to cross-check/discover primary sources already listed above."
+    },
+    {
+      "source": "aggregator: TLDR AI (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on tldr.tech"
+    },
+    {
+      "source": "aggregator: TLDR AI (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "No specific Sept 26/27 issue content retrievable via search; used only for cross-checking."
+    },
+    {
+      "source": "Hacker News API (curl)",
+      "status": "error",
+      "candidates": 0,
+      "note": "curl exit 56, CONNECT tunnel failed / timeout (HTTP_CODE 000) -- unlike sources.yaml note, API unreachable this run."
+    },
+    {
+      "source": "Hacker News (WebFetch item page)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on news.ycombinator.com; used WebSearch fallback to pull thread content/quotes instead."
+    },
+    {
+      "source": "Hacker News (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Used for reactions/opinions on the OpenAI DNS story, not as independent news discovery."
+    },
+    {
+      "source": "reddit r/LocalLLaMA, r/ClaudeAI, r/OpenAI (WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "No specific dated discussion threads surfaced via search for this window."
+    },
+    {
+      "source": "arxiv / research (WebSearch, broadened pass)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Trace-tampering paper (arxiv 2609.30266, Sept 24) -- published."
+    },
+    {
+      "source": "expert: Simon Willison (git clone simonwillisonblog-backup, ndjson)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Backup fresh as of run time (last commit today); latest entry/blogmark dated 2026-09-23, already used in a prior digest. No new post in the freshness window."
+    },
+    {
+      "source": "expert: Andrej Karpathy (WebSearch, RSS blocked)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "youtube.com RSS/WebFetch EGRESS_BLOCKED this run; WebSearch found nothing newer than an April 2026 blog post."
+    },
+    {
+      "source": "expert: Latent Space (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Only AINews aggregator recaps found (excluded as 'news retelling' per skill rules); no original analysis piece found in window."
+    },
+    {
+      "source": "expert: AI Explained (WebSearch, RSS blocked)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "No specific recent video identified via search."
+    },
+    {
+      "source": "expert: Matt Wolfe (WebSearch, RSS blocked)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Sept 25 video found ('AI News: Opus 5.5, GPT-6 Sol, Jev, Muse and More!') but rejected: pure news recap of already-published items, not an approach/method piece."
+    },
+    {
+      "source": "expert: Ethan Mollick / One Useful Thing (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Latest post 'The Overhang' (Sept 18) already published as expert content on 2026-09-23."
+    },
+    {
+      "source": "expert: Nate Herk (WebSearch, RSS blocked)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "'Opus 5.5 Just Changed Video Editing Forever' (Sept 26) -- published as video conspect."
+    },
+    {
+      "source": "expert: Matt Pocock (WebSearch, RSS blocked)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "No specific recent video identified via search."
+    }
+  ],
+  "totals": {
+    "candidates": 24,
+    "published": 4,
+    "rejected": {
+      "уже опубликовано ранее (продолжение без новых фактов)": 8,
+      "слух без первоисточника": 1,
+      "слишком старое (вне окна свежести, нет развития)": 2,
+      "не по теме (не новая функция/подход)": 1,
+      "новость-пересказ (не подходит для экспертной секции)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok",
+    "frames": "skipped: youtube.com blocked at egress proxy this run (yt-dlp CONNECT 403), consistent with known instability noted in SKILL.md"
+  },
+  "note": "Egress proxy blocked direct WebFetch to every vendor blog and every community aggregator/HN attempted this run (>=1/3 of sources blocked/error) -- consistent with prior cloud-sandbox runs; WebSearch was the effective discovery channel throughout, as documented in SKILL.md. Expert-content minimum (min_expert_total=5) was not met: only 1 of 8 configured experts had genuinely fresh, non-duplicate, non-recap content in the freshness window despite a full pass plus broadened search; documented per-expert above rather than stretched with weak or repeated material."
+}

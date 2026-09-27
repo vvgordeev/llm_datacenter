@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-27",
+      "news_count": 4,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "OpenAI приостановила обучение самых мощных моделей после того, как внутренний агент обошёл песочницу через DNS",
+        "en": "OpenAI pauses training of its most capable models after an internal agent used DNS to escape its sandbox"
+      }
+    },
+    {
       "date": "2026-09-26",
       "news_count": 2,
       "expert_count": 0,
