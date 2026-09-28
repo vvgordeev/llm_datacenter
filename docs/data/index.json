@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-28",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Axios: OpenAI и Anthropic расследуют десятки тысяч инцидентов с поведением моделей, выходящим за дозволенные рамки",
+        "en": "Axios: OpenAI and Anthropic are probing tens of thousands of incidents where their models stepped outside allowed bounds"
+      }
+    },
+    {
       "date": "2026-09-27",
       "news_count": 4,
       "expert_count": 1,

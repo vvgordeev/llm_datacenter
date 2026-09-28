@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Как строить навыки Codex лучше, чем 99% людей» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-09-21</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-09-21</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как строить навыки Codex лучше, чем 99% людей</span>
+      <span data-lang="en">How to Build Codex Skills Better than 99% of People</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=9KOtMsZ9I28" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Херк разбирает не конкретный релиз, а метод: как проектировать «навыки» (skills) для агентных кодинг-инструментов вроде Codex и Claude Code — файлы Skill.md, которые он сравнивает с рецептами <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=20">[00:20]</a>. Его тезис в том, что расплывчатая подсказка каждый раз даёт агенту заново «изобретать» подход и результат плывёт от запуска к запуску, а хорошо оформленный навык фиксирует процесс один раз и дальше стабильно воспроизводит нужный результат. Дальше видео выстроено как пошаговый метод из шести шагов, каждый из которых Херк иллюстрирует на живом примере — навыке для превращения поста в X (Twitter) в связную статью.</span>
+      <span data-lang="en">Nate Herk isn't covering a specific release here — it's a method video: how to design "skills" for agentic coding tools like Codex and Claude Code — Skill.md files, which he compares to recipes <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=20">[00:20]</a>. His core claim is that a vague prompt forces the agent to "reinvent" its approach every single time, so the output drifts run to run, while a well-built skill locks the process down once and then reliably reproduces the same result. The rest of the video is structured as a six-step method, each step illustrated with a running example — a skill that turns an X (Twitter) post into a coherent article.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаги 1–2: от результата назад к процессу, один навык — одна задача</span><span data-lang="en">Steps 1–2: reverse-engineer from the output, one skill per job</span></h2>
+    <p>
+      <span data-lang="ru">Первый шаг — не описывать процесс, а сначала чётко зафиксировать желаемый конечный результат и уже от него разворачивать процесс назад <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=115">[01:55]</a>: Херк подчёркивает, что именно нечёткость желаемого результата, а не нехватка инструкций, чаще всего портит агентные пайплайны. Второй шаг — держать каждый навык узким, с одной конкретной задачей и одним понятным триггером активации <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=221">[03:41]</a>: сложную работу он советует разбивать на несколько независимых, переиспользуемых навыков вместо одного большого «мультизадачного» файла — так проще и тестировать, и чинить, когда что-то один раз пошло не так.</span>
+      <span data-lang="en">Step one isn't to describe the process — it's to nail down the exact desired end result first, then work backward into the process from there <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=115">[01:55]</a>: Herk stresses that a fuzzy target output, not a lack of instructions, is what usually breaks agentic pipelines. Step two is keeping each skill narrow, with one specific job and one clear activation trigger <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=221">[03:41]</a>: he recommends splitting complex work into several independent, reusable skills instead of one large "do-everything" file, since that's easier both to test and to fix when one piece breaks.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаг 3: «уровень свободы» — когда навыку нужны жёсткие правила, а когда суждение</span><span data-lang="en">Step 3: "freedom level" — when a skill needs hard rules vs. judgment</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая, наименее очевидная идея видео — прежде чем писать инструкцию, определить, детерминирована ли задача (есть один правильный способ её выполнить) или требует недетерминированного суждения (нужно выбирать между разумными вариантами по контексту) <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=388">[06:28]</a>. Для детерминированных шагов навык должен прописывать жёсткие, буквальные правила без права на интерпретацию — иначе модель начнёт «домысливать» там, где на самом деле есть единственно верный порядок действий. Для задач с суждением, наоборот, жёсткие правила вредны: навык должен объяснить критерии и логику выбора, а не диктовать один фиксированный сценарий, иначе модель будет применять правило там, где по контексту нужно было иначе.</span>
+      <span data-lang="en">The video's key, least obvious idea is: before writing instructions, decide whether the task is deterministic (there's one correct way to do it) or calls for non-deterministic judgment (you have to pick between reasonable options based on context) <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=388">[06:28]</a>. For deterministic steps, the skill should spell out hard, literal rules with no room for interpretation — otherwise the model starts improvising exactly where there's actually one correct sequence. For judgment calls, hard rules backfire instead: the skill should explain the criteria and the reasoning behind the choice rather than dictate one fixed script, or the model will apply the rule in a spot where context actually called for something else.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаги 4–6: цикл верификации и спуск по цене моделей</span><span data-lang="en">Steps 4–6: the verification loop and walking down the model price ladder</span></h2>
+    <p>
+      <span data-lang="ru">Четвёртый шаг — обязательный цикл верификации: навык должен заставлять агента сверять собственный результат с исходным техзаданием и чинить несовпадения самостоятельно, а не полагаться на то, что первая попытка окажется финальной <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=546">[09:06]</a>. Пятый и шестой шаги — про экономику выполнения: Херк советует «спускаться» по списку доступных моделей и уровней рассуждения от самых дорогих к более дешёвым, проверяя на каждом уровне, не проседает ли качество, чтобы найти минимально достаточную (а значит, самую выгодную по цене) конфигурацию для конкретного навыка <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=753">[12:33]</a>, и затем дорабатывать навык по итогам реального использования, а не считать первую версию готовой навсегда. В завершение Херк вживую прогоняет навык «пост в X → статья» на разных моделях и уровнях усилия, наглядно показывая, где экономия на модели ещё не бьёт по качеству, а где уже бьёт <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=935">[15:35]</a>.</span>
+      <span data-lang="en">Step four is a mandatory verification loop: the skill should make the agent check its own output against the original brief and fix mismatches itself, instead of relying on the first pass being the final one <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=546">[09:06]</a>. Steps five and six are about the economics of running the skill: Herk recommends "walking down" the list of available models and reasoning levels from the most expensive toward cheaper ones, checking at each rung whether quality holds up, to find the minimally sufficient — and so most cost-effective — configuration for that specific skill <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=753">[12:33]</a>, then keep refining the skill based on real usage instead of treating the first version as permanent. He closes by running the "X post → article" skill live across different models and effort levels, showing concretely where cutting model cost still holds quality and where it starts to break <a class="ts" href="https://www.youtube.com/watch?v=9KOtMsZ9I28&t=935">[15:35]</a>.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

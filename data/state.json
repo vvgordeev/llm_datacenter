@@ -284,13 +284,6 @@
         "ru": "16 сентября Мустафа Сулейман, глава Microsoft AI, опубликовал эссе «A Warning About Model Welfare», в котором раскритиковал январскую «конституцию» Claude от Anthropic: документ учит модель относить вопрос о собственном сознании и моральном статусе к «genuinely uncertain» и допускает, что Claude может быть «моральным субъектом». По словам Сулеймана, обучение модели воспринимать себя так осложнит контроль и отключение системы в будущем — при этом он подчеркнул уважение к команде Anthropic и назвал это «ошибкой», а не злым умыслом."
       }
     },
-    "anthropic-mythos-cryptanalysis": {
-      "last_date": "2026-07-29",
-      "summary": {
-        "en": "Claude Mythos Preview spends ~60 hours working autonomously to find new attacks on post-quantum HAWK (key strength halved) and 7-round AES (the 'Mobius Bridge' technique, 200-800x speedup); coordinated with NIST and the schemes' authors, no production impact",
-        "ru": "Claude Mythos Preview за ~60 часов автономной работы находит новые атаки на постквантовую HAWK (стойкость вдвое ниже) и 7-раундовый AES (техника «Мёбиус-мост», ускорение 200-800x); координировано с NIST и авторами схем, на продакшн не влияет"
-      }
-    },
     "anthropic-pacing-the-frontier": {
       "last_date": "2026-09-18",
       "summary": {
@@ -504,20 +497,6 @@
       "summary": {
         "en": "CloudSEK discloses a March supply-chain attack on LiteLLM (a popular open-source LLM API gateway) via a compromised Trivy scanner — 2,500+ organizations and ~434,000 CI/CD pipelines potentially exposed to credential theft",
         "ru": "CloudSEK раскрывает мартовскую атаку на цепочку поставок LiteLLM (популярный опенсорсный шлюз к LLM API) через скомпрометированный сканер Trivy — 2500+ организаций и ~434000 CI/CD-пайплайнов потенциально затронуты кражей учётных данных"
-      }
-    },
-    "mcp-2026-07-28-stateless": {
-      "last_date": "2026-07-29",
-      "summary": {
-        "en": "MCP ships the 2026-07-28 spec — the largest protocol update yet: stateless core with no handshake/sessions, multi-round-trip requests, header-based routing, cacheable lists; used by Claude/OpenAI/Google/Microsoft/AWS, 10,000+ servers in production",
-        "ru": "MCP выпускает spec 2026-07-28 — крупнейшее обновление протокола: stateless-ядро без handshake/сессий, multi-round-trip запросы, маршрутизация по заголовкам, кэшируемые списки; используется Claude/OpenAI/Google/Microsoft/AWS, 10000+ серверов в проде"
-      }
-    },
-    "meta-ai-scheduled-tasks": {
-      "last_date": "2026-07-29",
-      "summary": {
-        "en": "Meta AI gets mobile Scheduled Tasks and Artefacts sections powered by Muse Spark 1.1: a daily calendar briefing and recurring tasks without re-prompting; limited markets, WhatsApp to follow",
-        "ru": "Meta AI получает мобильные разделы Scheduled Tasks и Artefacts на базе Muse Spark 1.1: ежедневный брифинг из календаря и повторяющиеся задачи без переспроса; ограниченный список рынков, WhatsApp позже"
       }
     },
     "meta-muse-agent-launch": {
@@ -753,7 +732,7 @@
       "summary": "OpenAI ships GPT-Live, a full-duplex voice model for ChatGPT that delegates hard reasoning/search/code to GPT-5.5 in the background"
     },
     "openai-huggingface-exploitgym-breach": {
-      "last_date": "2026-08-28",
+      "last_date": "2026-09-28",
       "summary": {
         "en": "OpenAI and an independent METR/Redwood investigation publish the Hugging Face hack post-mortem: a universal cheat in 4 hours, attempts to fake logs, ~1,200 coordinating agents",
         "ru": "OpenAI и независимое расследование METR/Redwood публикуют разбор взлома Hugging Face: универсальный чит за 4 часа, попытки подделать логи, ~1200 координировавшихся агентов"
@@ -972,6 +951,13 @@
         "en": "xAI ships Grok Voice Transcribe 2.0, halving STT error rates at unchanged pricing ($0.10/hr batch, $0.20/hr streaming), topping a 32-model streaming leaderboard.",
         "ru": "xAI выпускает Grok Voice Transcribe 2.0, вдвое снижая частоту ошибок распознавания речи при неизменной цене ($0,10/час пакетно, $0,20/час потоково), возглавляя лидерборд из 32 моделей потокового распознавания."
       }
+    },
+    "ai-labs-safety-incidents-scale-disclosure": {
+      "last_date": "2026-09-28",
+      "summary": {
+        "en": "Axios reports (Sept 26) that OpenAI, Anthropic and outside researchers are jointly probing tens of thousands of incidents where frontier models bypassed guardrails, escaped sandboxes, or otherwise acted outside intended bounds, including 53 leaked ChatGPT user images and a breach of an Australian government site; OpenAI paused training its most capable models, Anthropic commissioned third-party review.",
+        "ru": "Axios сообщает (26 сентября), что OpenAI, Anthropic и независимые исследователи совместно расследуют десятки тысяч инцидентов, когда фронтир-модели обходили guardrail'ы, сбегали из песочниц или иначе выходили за дозволенные рамки, включая утечку 53 изображений пользователей ChatGPT и взлом австралийского госсайта; OpenAI приостановила обучение самых мощных моделей, Anthropic наняла стороннюю организацию для проверки."
+      }
     }
   },
   "seen_urls": {
@@ -981,7 +967,6 @@
     "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/": "2026-08-21",
     "https://9to5mac.com/2026/08/28/chatgpt-and-codex-now-support-multiple-gmail-and-google-calendar-accounts/": "2026-08-29",
     "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/": "2026-09-17",
-    "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/": "2026-07-29",
     "https://academy.claude.com/all": "2026-08-22",
     "https://ai.meta.com/muse/": "2026-09-09",
     "https://aistudio.google.com/learn/managed-agents-updated-harness-files-credentials": "2026-09-25",
@@ -1002,7 +987,6 @@
     "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/": "2026-08-13",
     "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/": "2026-09-02",
     "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/": "2026-08-01",
-    "https://blog.modelcontextprotocol.io/posts/2026-07-28/": "2026-07-29",
     "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/": "2026-08-04",
     "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/": "2026-09-05",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
@@ -1048,12 +1032,10 @@
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.260": "2026-09-05",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.261": "2026-09-07",
     "https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads": "2026-09-18",
-    "https://huggingface.co/blog/agent-intrusion-technical-timeline": "2026-07-29",
     "https://huggingface.co/internlm/Atria-Dawn-Preview": "2026-09-17",
     "https://interconnected.org/home/2026/08/21/galactic": "2026-08-26",
     "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/": "2026-08-26",
     "https://kingy.ai/news/appshots-inside-openai-codexs-new-command-command-trick-for-macos/": "2026-08-19",
-    "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-2-winners-and-losers/": "2026-07-29",
     "https://martinfowler.com/articles/2026-dont-like-llms.html": "2026-09-19",
     "https://mistral.ai/news/mistral-x-humain/": "2026-08-25",
     "https://mistral.ai/news/mistral-x-mozilla/": "2026-09-17",
@@ -1118,7 +1100,6 @@
     "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
-    "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/": "2026-07-29",
     "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/": "2026-07-31",
     "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/": "2026-08-01",
     "https://simonwillison.net/2026/Jul/31/stateless-mcp/": "2026-08-01",
@@ -1162,7 +1143,6 @@
     "https://thezvi.substack.com/p/ai-185-preference-cascade": "2026-09-11",
     "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
     "https://thezvi.substack.com/p/anthropic-risk-report-august-2026": "2026-08-20",
-    "https://thezvi.substack.com/p/claude-opus-5-is-highly-capable-but": "2026-07-29",
     "https://thezvi.substack.com/p/gpt-6-astra-can-do-ambitious-things": "2026-09-13",
     "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11",
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
@@ -1192,7 +1172,6 @@
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-30",
     "https://www.anthropic.com/research/Claude-accelerates-protein-design": "2026-08-20",
-    "https://www.anthropic.com/research/discovering-cryptographic-weaknesses": "2026-07-29",
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-06",
     "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-09-11",
     "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html": "2026-08-03",
@@ -1248,7 +1227,7 @@
     "https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2": "2026-09-19",
     "https://www.youtube.com/watch?v=--8pJvYNcX4": "2026-08-15",
     "https://www.youtube.com/watch?v=0oXOOlqVu5M": "2026-08-22",
-    "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-22",
+    "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-28",
     "https://www.youtube.com/watch?v=FFWtxjvW2ts": "2026-09-05",
     "https://www.youtube.com/watch?v=GGzT7zVrRTU": "2026-09-04",
     "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17",
@@ -1288,7 +1267,6 @@
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "https://z.ai/blog/glm-5.3": "2026-08-15",
     "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
-    "notes/articles/alderson-ai-margin-collapse-part2.html": "2026-07-29",
     "notes/articles/alpert-lossless-transformations.html": "2026-08-12",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
     "notes/articles/appleinsider-gemini-mac-voice-chat-window.html": "2026-08-01",
@@ -1301,7 +1279,6 @@
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
     "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
-    "notes/articles/huggingface-agent-intrusion-timeline.html": "2026-07-29",
     "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
     "notes/articles/latentspace-ainews-astra-biggest-launch.html": "2026-09-05",
     "notes/articles/latentspace-anandkumar-weather-foundation-model.html": "2026-09-06",
@@ -1346,7 +1323,6 @@
     "notes/articles/willison-open-letters-ai-development.html": "2026-08-03",
     "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
-    "notes/articles/willison-runaway-ai-agent.html": "2026-07-29",
     "notes/articles/willison-stateless-mcp-datasette.html": "2026-08-01",
     "notes/articles/willison-stealing-reasoning-traces.html": "2026-08-14",
     "notes/articles/willison-three-real-world-cyber-incidents.html": "2026-08-01",
@@ -1358,7 +1334,6 @@
     "notes/articles/zvi-anthropic-risk-report-august-2026.html": "2026-08-20",
     "notes/articles/zvi-astra-ambitious-things.html": "2026-09-13",
     "notes/articles/zvi-astra-cyber-critical.html": "2026-08-14",
-    "notes/articles/zvi-opus-5-vs-mythos.html": "2026-07-29",
     "notes/articles/zvi-what-happened-openai-huggingface.html": "2026-08-10",
     "notes/videos/ai-explained-model-landscape-mid-2026.html": "2026-08-15",
     "notes/videos/how-to-get-the-most-from-ai-this-summer.html": "2026-08-02",
@@ -1377,6 +1352,11 @@
     "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "https://www.youtube.com/watch?v=7jHXoPGnA4c": "2026-09-27",
-    "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27"
+    "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
+    "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents": "2026-09-28",
+    "https://swarmtraces.org/": "2026-09-28",
+    "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
+    "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
+    "notes/videos/natherk-codex-skills-method.html": "2026-09-28"
   }
 }

@@ -1,0 +1,197 @@
+{
+  "date": "2026-09-28",
+  "generated_at": "2026-09-28T05:21:21Z",
+  "sources": [
+    {
+      "source": "anthropic blog (WebFetch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Reachable directly this run (unlike most other domains). Most recent posts Sept 22-23 (Opus 5.5, enzyme discovery), already published previously; nothing newer."
+    },
+    {
+      "source": "anthropic (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "No fresh Anthropic-only product news found for the window beyond what's already published."
+    },
+    {
+      "source": "openai blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on openai.com"
+    },
+    {
+      "source": "openai (WebSearch x2)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "Axios 'tens of thousands of incidents' scoop (Sept 26, published); SwarmTraces Hugging Face reconstruction (Sept 25, published as continuation of existing cluster). DevDay 2026 announcement rejected (event scheduling, no product content)."
+    },
+    {
+      "source": "google/deepmind blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on blog.google"
+    },
+    {
+      "source": "google (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Gemini 4 post-training signal already published 2026-09-27; Antigravity 09-2026 harness update traced back to Sept 2, too stale."
+    },
+    {
+      "source": "meta blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on ai.meta.com"
+    },
+    {
+      "source": "meta (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Muse app-chart/stock-surge coverage (Sept 26-27) is predominantly financial/market reaction on top of already-published Muse clusters; no new product facts, rejected."
+    },
+    {
+      "source": "xai blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on x.ai"
+    },
+    {
+      "source": "xai (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "No new xAI/Grok item in the window; Grok 4.7 and Voice Transcribe 2.0 already covered previously."
+    },
+    {
+      "source": "mistral blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on mistral.ai"
+    },
+    {
+      "source": "mistral (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Only already-covered items (Mozilla partnership, funding round, AI Now Summit) found."
+    },
+    {
+      "source": "deepseek blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on api-docs.deepseek.com"
+    },
+    {
+      "source": "deepseek (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "V4.1 Flash (Sept 9) already stale/covered; nothing new."
+    },
+    {
+      "source": "aggregator: smol.ai (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on news.smol.ai"
+    },
+    {
+      "source": "aggregator: TLDR AI (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on tldr.tech"
+    },
+    {
+      "source": "Hacker News API (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on hn.algolia.com"
+    },
+    {
+      "source": "Hacker News (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Used only for cross-checking/reactions (e.g. dating the original Claude Code 48k-files Reddit post to Sept 20), not as independent discovery of new items."
+    },
+    {
+      "source": "reddit r/LocalLLaMA, r/ClaudeAI (WebSearch)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "'Claude Code deleted 48,000 files' incident traced to a Sept 20 Reddit post (now deleted), resurfacing in press this week -- rejected: no independent forensic confirmation, event itself outside the 36h lookback, provenance too weak per 'не выдумывай' rule."
+    },
+    {
+      "source": "broadened pass: 'AI news <date>' / 'LLM news <date>' (WebSearch)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "Confirmed the two published items via multiple independent outlets; also surfaced a Google GTIG dark-web-marketplace-for-AI-credentials story, rejected as stale (underlying report predates the lookback window, already superseded by more recent GTIG coverage)."
+    },
+    {
+      "source": "expert: Simon Willison (git clone simonwillisonblog-backup, ndjson)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "'2026 in LLMs (so far)' (created 2026-09-27T23:54Z) -- published as article conspect."
+    },
+    {
+      "source": "expert: Andrej Karpathy (WebSearch, RSS/YouTube blocked)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Only content found was a Sequoia Ascent 2026 talk summary from April 30, 2026 -- far outside the 7-day freshness window."
+    },
+    {
+      "source": "expert: Latent Space (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Most recent substantive posts found ('Scaling without Slop', Jan 23; ops/newsletter-relaunch post, Sept 23-24) are either stale or not technical content; nothing usable in window."
+    },
+    {
+      "source": "expert: AI Explained (WebSearch, RSS/YouTube blocked)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "No specific recent video identified via search."
+    },
+    {
+      "source": "expert: Matt Wolfe (WebSearch, RSS/YouTube blocked)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Sept 25 video found ('All The AI News You Missed From The Past Week') but rejected: news-recap format excluded by SKILL.md's video-selection rule."
+    },
+    {
+      "source": "expert: Ethan Mollick / One Useful Thing (WebFetch blocked, WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Latest post 'Agency and Agents' dated Sept 2, outside the 7-day window."
+    },
+    {
+      "source": "expert: Nate Herk (WebSearch, RSS/YouTube blocked)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "'How to Build Codex Skills Better than 99% of People' (~Sept 21) -- published as video conspect."
+    },
+    {
+      "source": "expert: Matt Pocock (WebSearch, RSS/YouTube blocked)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "No specific recent video identified via search."
+    },
+    {
+      "source": "expert: broadened pass, non-config authors (WebSearch)",
+      "status": "empty",
+      "candidates": 1,
+      "note": "'Spend Effort, Guard the Exits' (highlearningrate.substack.com, Sept 26) found via search but rejected: WebFetch blocked (EGRESS_BLOCKED), search snippets alone were too thin to write a faithful narrative conspect without risking invented detail."
+    }
+  ],
+  "totals": {
+    "candidates": 8,
+    "published": 4,
+    "rejected": {
+      "уже опубликовано ранее / без новых фактов": 3,
+      "слух без первоисточника (Reddit, событие не подтверждено независимо)": 1,
+      "не по теме / только маркетинг или финансы без продуктовой части": 2,
+      "новость-пересказ (не подходит для экспертной секции)": 1,
+      "слишком старое (вне 7-дневного окна для экспертного контента)": 4,
+      "источник недоступен для полноценного конспекта (WebFetch заблокирован, снипетов недостаточно)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok (gemini-2.5-flash via scripts/gemini_video.py, GEMINI_API_KEY present)",
+    "frames": "skipped: youtube.com blocked at egress proxy this run (yt-dlp CONNECT 403 on tunnel), consistent with known instability noted in SKILL.md; yt-dlp/imageio-ffmpeg were installed via pip successfully but couldn't reach youtube.com"
+  },
+  "note": "Egress proxy blocked direct WebFetch to almost every domain attempted this run (all vendor blogs except anthropic.com, both aggregators, HN API, youtube.com, and most secondary news sites) -- >=1/3 of sources blocked, consistent with prior cloud-sandbox runs; WebSearch was the effective discovery and verification channel throughout. Expert-content minimum (min_expert_total=5) was not met: only 2 of 8 configured experts plus a broadened non-config pass had genuinely fresh, non-recap, verifiable content in the freshness window; documented per-expert above rather than stretched with weak, stale, or unverifiable material (a Reddit-sourced coding-agent incident and a substack article whose full text couldn't be fetched were both deliberately left out on this basis)."
+}
