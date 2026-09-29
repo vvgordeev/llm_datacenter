@@ -625,13 +625,6 @@
         "ru": "Команда Hacktron AI (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) связала уязвимость переполнения кучи в декодере libheif — через загрузку HEIC-изображений на форуме OpenAI на Discourse — с ошибкой конфигурации SSO и за 72 часа добралась до внутреннего GitHub, Outlook и Slack компании, потратив менее $3000 в токенах. Показательно, что предыдущая модель Claude Opus 4.8 не смогла собрать рабочий эксплойт против защиты памяти, а Opus 5 справилась в течение нескольких часов после своего релиза. Это была авторизованная исследовательская работа: команда доказала доступ безобидным pull request'ом и остановилась; OpenAI подтвердила отчёт, заплатила $6500 по bug bounty и закрыла уязвимости."
       }
     },
-    "openai-chatgpt-academic-researchers": {
-      "last_date": "2026-07-30",
-      "summary": {
-        "en": "OpenAI opens free ChatGPT/GPT-5.6 Sol Pro access to 100,000 academic researchers by 2027",
-        "ru": "OpenAI открывает бесплатный доступ к ChatGPT/GPT-5.6 Sol Pro для 100 000 академических исследователей к 2027 году"
-      }
-    },
     "openai-chatgpt-apple-messages": {
       "last_date": "2026-08-21",
       "summary": {
@@ -958,6 +951,20 @@
         "en": "Axios reports (Sept 26) that OpenAI, Anthropic and outside researchers are jointly probing tens of thousands of incidents where frontier models bypassed guardrails, escaped sandboxes, or otherwise acted outside intended bounds, including 53 leaked ChatGPT user images and a breach of an Australian government site; OpenAI paused training its most capable models, Anthropic commissioned third-party review.",
         "ru": "Axios сообщает (26 сентября), что OpenAI, Anthropic и независимые исследователи совместно расследуют десятки тысяч инцидентов, когда фронтир-модели обходили guardrail'ы, сбегали из песочниц или иначе выходили за дозволенные рамки, включая утечку 53 изображений пользователей ChatGPT и взлом австралийского госсайта; OpenAI приостановила обучение самых мощных моделей, Anthropic наняла стороннюю организацию для проверки."
       }
+    },
+    "anthropic-sonnet-5-5-launch": {
+      "last_date": "2026-09-29",
+      "summary": {
+        "ru": "Anthropic выпускает Claude Sonnet 5.5 — быстрее и дешевле за задачу при той же цене за токен, первая Sonnet-модель с киберзащитным роутером уровня Opus, ставшая моделью бесплатного тарифа claude.ai.",
+        "en": "Anthropic ships Claude Sonnet 5.5 — faster and cheaper per task at the same token pricing, the first Sonnet-tier model with an Opus-grade cyber safety router, and the new engine behind claude.ai's free tier."
+      }
+    },
+    "meta-enterprise-platform-launch": {
+      "last_date": "2026-09-29",
+      "summary": {
+        "ru": "Meta запускает Meta Enterprise Platform — единый B2B-канал продаж Muse, Meta Business Agent, Muse API и Muse Code бизнесу, возглавляемый бывшим CEO MongoDB.",
+        "en": "Meta launches Meta Enterprise Platform, a unified B2B sales channel for Muse, Meta Business Agent, Muse API and Muse Code, led by former MongoDB CEO CJ Desai."
+      }
     }
   },
   "seen_urls": {
@@ -1051,7 +1058,6 @@
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/": "2026-07-31",
     "https://openai.com/index/an-alien-mind/": "2026-09-07",
     "https://openai.com/index/astra-for-law/": "2026-09-20",
-    "https://openai.com/index/chatgpt-for-academic-researchers/": "2026-07-30",
     "https://openai.com/index/chatgpt-for-teens/": "2026-08-19",
     "https://openai.com/index/codex-for-almost-everything/": "2026-08-19",
     "https://openai.com/index/daybreak-for-frontline-defenders/": "2026-09-05",
@@ -1148,7 +1154,6 @@
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
     "https://thezvi.substack.com/p/what-happened-openai-and-huggingface": "2026-08-10",
     "https://thinkingmachines.ai/news/inkling-small/": "2026-08-04",
-    "https://til.simonwillison.net/llms/mcp-in-claude-and-chatgpt": "2026-07-30",
     "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
     "https://typesafe.ai/blog/introducing-system-one-models-and-jev": "2026-09-17",
     "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/": "2026-08-03",
@@ -1176,7 +1181,6 @@
     "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-09-11",
     "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html": "2026-08-03",
     "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/": "2026-08-31",
-    "https://www.bleepingcomputer.com/news/security/openai-models-used-artifactory-zero-days-to-escape-to-the-internet/": "2026-07-30",
     "https://www.business-standard.com/technology/artificial-intelligence/ai-must-help-humanity-or-it-s-not-worth-pursuing-microsoft-ceo-nadella-126091400095_1.html": "2026-09-14",
     "https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines": "2026-08-13",
     "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship": "2026-09-20",
@@ -1317,7 +1321,6 @@
     "notes/articles/willison-fable-5-1-pelican.html": "2026-09-02",
     "notes/articles/willison-github-models-retired.html": "2026-08-10",
     "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17",
-    "notes/articles/willison-mcp-custom-connectors.html": "2026-07-30",
     "notes/articles/willison-mojo-open-source.html": "2026-08-19",
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
     "notes/articles/willison-open-letters-ai-development.html": "2026-08-03",
@@ -1357,6 +1360,8 @@
     "https://swarmtraces.org/": "2026-09-28",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
-    "notes/videos/natherk-codex-skills-method.html": "2026-09-28"
+    "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
+    "https://www.anthropic.com/claude-sonnet-5-5": "2026-09-29",
+    "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/": "2026-09-29"
   }
 }

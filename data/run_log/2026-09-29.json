@@ -1,0 +1,141 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T05:20:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (WebFetch)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Reachable directly. Sept 28 'Introducing Claude Sonnet 5.5' post found and published; Sept 23 enzyme-discovery item already covered previously."
+    },
+    {
+      "source": "anthropic (WebSearch x2)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Confirmed Sonnet 5.5 details, pricing, benchmarks, safety-router mechanics via anthropic.com fetch + search."
+    },
+    {
+      "source": "openai blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on openai.com"
+    },
+    {
+      "source": "openai (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "No fresh OpenAI product news for the window; DevDay 2026 keynote is later today (10am PT / 17:00 UTC, after this run) with no announcements yet, only schedule/speculation — rejected as event-without-content per skill rules."
+    },
+    {
+      "source": "google/deepmind blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on blog.google"
+    },
+    {
+      "source": "google (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Gemini 4 post-training-phase status already published 2026-09-27/28; gemini-omni-flash-preview deprecation (Sept 30) is a removal, not a feature. Nothing new."
+    },
+    {
+      "source": "meta blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on ai.meta.com"
+    },
+    {
+      "source": "meta (WebSearch x2)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Meta Enterprise Platform launch (Sept 28, about.fb.com) found and published. Muse Spark 1.3, LlamaCon, Meta Connect already covered previously."
+    },
+    {
+      "source": "xai blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on x.ai"
+    },
+    {
+      "source": "xai (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Grok 4.7 (Sept 21/22) and Voice Transcribe 2.0 (Sept 27) already published. Nothing new for the window."
+    },
+    {
+      "source": "mistral blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on mistral.ai"
+    },
+    {
+      "source": "mistral (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "OCR 4, Agentic Search, Leanstral 1.5 retirement, Firefox integration — none dated within the lookback window with enough product substance / all pre-existing threads."
+    },
+    {
+      "source": "deepseek blog (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on api-docs.deepseek.com"
+    },
+    {
+      "source": "deepseek (WebSearch x2)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "V4.1-Flash (Sept 9) already old; 20T-parameter next-model claim from a closed-door investor meeting is unsourced rumor, rejected per 'no rumors without primary source' rule."
+    },
+    {
+      "source": "aggregators: smol.ai / tldr.tech (WebFetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "EGRESS_BLOCKED on both domains"
+    },
+    {
+      "source": "Simon Willison linkblog (github simonwillisonblog-backup ndjson dump)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Latest blogmark (Sept 28) is Sonnet 5.5 itself — used as an opinion source on that story, not a separate expert item. No other new blogmark/entry within the freshness window that isn't already published (jev/decision-models Sept 21 and opus-and-sol-and-luna Sept 22 already in state.json; 2026-in-llms-so-far Sept 27 already published 2026-09-28)."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT rejected by egress proxy (organization policy), unlike the note in sources.yaml; fell back to WebSearch site:news.ycombinator.com queries."
+    },
+    {
+      "source": "Hacker News (WebSearch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Confirmed large Sonnet 5.5 HN thread exists (item 49881850, ~474 pts) but could not extract individually attributable, verifiable quotes (WebFetch on news.ycombinator.com blocked); used verified X/blog reactions instead."
+    },
+    {
+      "source": "widening: 'LLM news Sept 29', 'AI model release this week', 'AI coding agent update Sept 2026' (WebSearch)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Surfaced AMD/World Labs $8.2B acquisition (Fei-Fei Li) — rejected as financial/M&A news about world models/compute, not an LLM feature or usage approach. No other missed items found."
+    },
+    {
+      "source": "experts: all 8 configured (Willison, Karpathy, Latent Space, AI Explained, Matt Wolfe, Mollick, Nate Herk, Matt Pocock) + widened search for other notable authors/channels",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Thorough pass on every configured expert plus broadened search for other resonant 'how to use LLMs' material from the past week found nothing both (a) genuinely new (not already published in the 2026-09-24..28 digests) and (b) attributable to a real, notable, verifiable author on approaches to using LLMs — only generic SEO listicle content or news-recap videos, which the skill excludes. RSS discovery unavailable: youtube.com CONNECT blocked by egress proxy today. Rather than pad the section with weak/unverifiable material, publishing 0 expert_content items today; this falls short of limits.min_expert_total=5."
+    }
+  ],
+  "totals": {
+    "candidates": 5,
+    "published": 2,
+    "rejected": {
+      "уже опубликовано ранее": 8,
+      "событие без контента (DevDay расписание)": 1,
+      "финансовая/M&A новость без продуктовой части (AMD/World Labs)": 1,
+      "слух без первоисточника (DeepSeek 20T investor meeting)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — no video expert content found this run",
+    "frames": "not used — no video expert content found this run",
+    "note": "yt-dlp/imageio-ffmpeg installed via pip per step 0.4; youtube.com CONNECT was blocked by the egress proxy for the entire run (RSS + would-be yt-dlp), consistent with prior runs' observation that YouTube availability is unstable between sessions."
+  }
+}

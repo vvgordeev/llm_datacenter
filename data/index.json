@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-29",
+      "news_count": 2,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Anthropic выпустила Claude Sonnet 5.5 — самый быстрый Sonnet с системой киберзащиты уровня старших моделей",
+        "en": "Anthropic launches Claude Sonnet 5.5, its fastest Sonnet yet with an Opus-grade cyber safety router"
+      }
+    },
+    {
       "date": "2026-09-28",
       "news_count": 2,
       "expert_count": 2,

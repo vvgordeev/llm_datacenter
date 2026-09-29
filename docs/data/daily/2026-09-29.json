@@ -1,0 +1,139 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T05:20:00Z",
+  "news": [
+    {
+      "id": "2026-09-29-anthropic-sonnet-5-5",
+      "cluster_id": "anthropic-sonnet-5-5-launch",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Anthropic выпустила Claude Sonnet 5.5 — самый быстрый Sonnet с системой киберзащиты уровня старших моделей",
+        "en": "Anthropic launches Claude Sonnet 5.5, its fastest Sonnet yet with an Opus-grade cyber safety router"
+      },
+      "summary": {
+        "ru": "28 сентября Anthropic выпустила Claude Sonnet 5.5 — вторую модель в семействе Claude 5.5: при той же цене $2/$10 за миллион токенов, что и у Sonnet 5, она генерирует ответы более чем на 30% быстрее и, по тестам Anthropic, обходится до 30% дешевле за задачу, при этом опережая Sonnet 5 на бенчмарках (в т.ч. скачок на Terminal-Bench 4.0 — 70,6% против 10,3%). Это первая модель уровня Sonnet, получившая классификатор-роутер киберзащиты с автоматическим откатом на Sonnet 5 для рискованных задач по кибербезопасности — раньше такой механизм резервировался только для моделей уровня Opus; кроме того, она незаметно стала моделью бесплатного тарифа claude.ai.",
+        "en": "On September 28, Anthropic released Claude Sonnet 5.5, the second model in the Claude 5.5 family: at the same $2/$10 per-million-token pricing as Sonnet 5, it generates output 30%+ faster and costs up to 30% less per task in Anthropic's own testing, while beating Sonnet 5 on benchmarks including a large jump on Terminal-Bench 4.0 (70.6% vs 10.3%). It's the first Sonnet-tier model to ship with the classifier-driven cyber safeguards and automatic fallback to Sonnet 5 on higher-risk cybersecurity tasks that Anthropic previously reserved for its Opus-tier models, and it has quietly become the model behind claude.ai's free tier."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Не прорыв на фронтире, но паттерн безопасного роутинга (автооткат для рискованных кибер-задач) впервые спускается в модель среднего уровня, которой пользуется большинство бесплатных и API-пользователей, а сама модель становится движком бесплатного тарифа — это заметно расширяет круг тех, кого касается и прирост возможностей, и архитектура безопасности.",
+        "en": "Not a frontier jump, but it pushes a safety-routing pattern (auto-fallback on risky cyber tasks) down into the mid-tier model most free and API users actually run, while also becoming the engine behind the free tier — meaningfully widening who is affected by both the capability gain and the safety architecture."
+      },
+      "source_url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Модель стоит столько же, сколько Sonnet 5, но, похоже, превосходит её на каждом бенчмарке и должна быть дешевле в использовании... Самое интересное в Sonnet 5.5 — она стала моделью бесплатного тарифа claude.ai. Бесплатный тариф ChatGPT у OpenAI использует Luna 5.6, а значит, сейчас у Anthropic заметно более мощное бесплатное предложение.",
+            "en": "It's priced the same as Sonnet 5 but appears to beat it on every benchmark, and should be cheaper to run as well... The most interesting thing about Sonnet 5.5 is that it's now the model used for the free tier on claude.ai. OpenAI's ChatGPT free tier uses Luna 5.6, which means Anthropic currently have a much more capable free offering."
+          },
+          "url": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/"
+        },
+        {
+          "author": "Dan Shipper (Every)",
+          "stance": "positive",
+          "quote": {
+            "ru": "SONNET 5.5 ВЫШЕЛ! В моих тестах для @every он заметно улучшил качество текста — даже по сравнению с Opus 5.5. Astra всё ещё мой фаворит для написания текста с нуля, но эта модель обгоняет его в задачах правки. И она быстрее и дешевле Opus 5.5.",
+            "en": "SONNET 5.5 IS OUT! It has dramatically improved writing even versus Opus 5.5 in my testing for @every. Astra is still my favorite for writing, but this model beats it at revision tasks. It's faster and cheaper than Opus 5.5."
+          },
+          "url": "https://x.com/danshipper/status/2104636728992776510"
+        },
+        {
+          "author": "Forkast News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Sonnet 5.5 от Anthropic превращает безопасность в фичу — а федеральный суд только что назвал это уязвимостью. Через три дня после того, как окружной суд округа Колумбия признал ограничения безопасности Anthropic риском для цепочки поставок, компания выпустила модель, которая ещё больше опирается на те же защитные механизмы.",
+            "en": "Anthropic's Sonnet 5.5 Ships Safety as a Feature. A Federal Court Just Called It a Liability. Three days after the D.C. Circuit ruled Anthropic's safety restrictions are a supply chain risk, the company released a model that doubles down on the same safeguards."
+          },
+          "url": "https://forkast.news/anthropics-sonnet-5-5-ships-safety-as-a-feature-a-federal-court-just-called-it-a-liability/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Райтеры и редакторы (например, команда Every) используют Sonnet 5.5 именно для правки и итераций черновиков — по тестам Дэна Шиппера, здесь она обгоняет по качеству даже старшую писательскую модель Anthropic.",
+            "en": "Writers and editors (e.g. Every's team) are using Sonnet 5.5 specifically for revision and iteration passes on drafts, where per Dan Shipper's testing it now beats Anthropic's own top writing model on quality."
+          },
+          "url": "https://x.com/danshipper/status/2104636728992776510"
+        },
+        {
+          "text": {
+            "ru": "Разработчики инструментов поверх Claude (например, опенсорсный агентный CLI «xum») были вынуждены добавить явную клиентскую цепочку отката Sonnet 5.5 → Sonnet 5 для обработки отказов по кибер-запросам — новый роутер безопасности теперь может срабатывать прямо на алиасе Sonnet по умолчанию.",
+            "en": "Developer tooling built on Claude (e.g. the open-source agent CLI \"xum\") had to add an explicit Sonnet 5.5 → Sonnet 5 client-side fallback chain to handle refusal stop-reasons on cyber-flagged requests, since the new safety router can now trigger on the default Sonnet alias."
+          },
+          "url": "https://github.com/coder/xum/issues/5087"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-29-meta-enterprise-platform",
+      "cluster_id": "meta-enterprise-platform-launch",
+      "models": [
+        "meta"
+      ],
+      "title": {
+        "ru": "Meta запускает Meta Enterprise Platform — продажу агентов и моделей Muse напрямую бизнесу",
+        "en": "Meta launches Meta Enterprise Platform, selling Muse agents and models directly to businesses"
+      },
+      "summary": {
+        "ru": "28 сентября Meta объявила о запуске Meta Enterprise Platform — нового бизнес-подразделения, которое упаковывает Muse (персонального ИИ-агента компании), Meta Business Agent, Muse API и Muse Code в единое предложение, продаваемое напрямую предприятиям и разработчикам — это первый выделенный B2B-канал продаж ИИ у Meta. Бывший CEO MongoDB Чирантан «Си-Джей» Десаи возглавил направление в роли Chief Enterprise Platform Officer с прямым подчинением Цукербергу, который назвал это «следующей главной опорой» бизнеса Meta после потребительского направления и рекламы.",
+        "en": "On September 28, Meta announced Meta Enterprise Platform, a new business unit that packages Muse (its personal AI agent), Meta Business Agent, Muse API and Muse Code into a single offering sold directly to enterprises and developers — Meta's first dedicated B2B AI sales channel. Former MongoDB CEO Chirantan \"CJ\" Desai joins as Chief Enterprise Platform Officer, reporting directly to Zuckerberg, who called it \"the next major pillar\" of Meta's business after consumer and ads."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Технически не меняет способ использования LLM, но открывает новый широкий канал доступа — выделенные продажи и поддержку для бизнеса — от которого зависит, смогут ли многие компании вообще внедрить агентов и модели; сила и мгновенность рыночной реакции (падение акций MongoDB) показывает, что сдвиг воспринимают всерьёз.",
+        "en": "Doesn't change how LLMs are used technically, but it opens a new, broad access path — a dedicated enterprise sales/support channel for agents and models — that determines whether and how a large swath of businesses can actually adopt them; the strength and immediacy of the market reaction (MongoDB's stock drop) shows the shift is being taken seriously."
+      },
+      "source_url": "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/",
+      "opinions": [
+        {
+          "author": "Mark Zuckerberg, CEO Meta",
+          "stance": "positive",
+          "quote": {
+            "ru": "Meta Enterprise Platform опирается на наши сильные стороны, которых мало у кого есть: продвинутые модели, ведущие агенты, инфраструктура большого масштаба и годы тесной работы с множеством компаний.",
+            "en": "Meta Enterprise Platform will use our strengths that few other companies have: advanced models, leading agents, large-scale infrastructure, and years of working closely with many businesses."
+          },
+          "url": "https://x.com/finkd/status/2104550611068793173"
+        },
+        {
+          "author": "Gizmodo",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Meta делает ва-банк на ИИ для бизнеса — как раз перед тем, как с Muse всё может пойти совсем не так.",
+            "en": "Meta Goes All-In On AI for Businesses Before Muse Goes Horribly Wrong."
+          },
+          "url": "https://gizmodo.com/meta-goes-all-in-on-ai-for-businesses-before-muse-goes-horribly-wrong-2000818432"
+        },
+        {
+          "author": "Cryptonomist",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Запуск корпоративной ИИ-платформы Meta обрушил акции MongoDB на 17%.",
+            "en": "Meta's enterprise AI platform launch sends MongoDB stock plunging 17%."
+          },
+          "url": "https://en.cryptonomist.ch/2026/09/28/meta-enterprise-ai-platform/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Бизнес получает единую точку входа — Meta Business Agent — для обработки обращений клиентов и рутинных задач, вместо того чтобы интегрировать модели Meta по частям.",
+            "en": "Businesses get a single point of entry — Meta Business Agent — to handle customer conversations and routine tasks, instead of integrating Meta's models piecemeal."
+          },
+          "url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/"
+        },
+        {
+          "text": {
+            "ru": "Разработчики получают прямой доступ к API и кодинг-агенту (Muse API, Muse Code) в рамках того же корпоративного пакета с выделенной поддержкой — вместо изначального пути через потребительское приложение Muse.",
+            "en": "Developers get direct API/coding-agent access (Muse API, Muse Code) under the same enterprise umbrella with dedicated support, instead of the consumer-app path Muse originally shipped through."
+          },
+          "url": "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}
