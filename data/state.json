@@ -464,13 +464,6 @@
         "ru": "27 августа Google выпустила Gemini Omni 1.1 Flash: сцены до 40 секунд, управление первым/последним кадром, апскейл до 4K."
       }
     },
-    "google-gemini-robotics-2": {
-      "last_date": "2026-07-31",
-      "summary": {
-        "en": "Google DeepMind ships Gemini Robotics 2 — three models giving unified whole-body humanoid control (a VLA model, an embodied-reasoning model for planning and multi-robot coordination, a compact on-device version), adapting to a new robot body within hours of training",
-        "ru": "Google DeepMind выпускает Gemini Robotics 2 — три модели, дающие единое управление всем телом гуманоида (VLA-модель, embodied-reasoning для планирования и координации нескольких роботов, компактная on-device версия), с адаптацией к новому телу за часы обучения"
-      }
-    },
     "google-gemini-windows-app": {
       "last_date": "2026-09-12",
       "summary": {
@@ -714,7 +707,7 @@
       }
     },
     "openai-gpt-6-sol-luna": {
-      "last_date": "2026-09-23",
+      "last_date": "2026-09-30",
       "summary": {
         "en": "OpenAI ships GPT-6 Sol and Luna (Sep 22, 90 minutes after Opus 5.5) — half the price of GPT-5.6; some benchmarks (OSWorld 2.0, DeepSWE) score below GPT-5.6 Sol, the win is mostly cost-per-task.",
         "ru": "OpenAI выпускает GPT-6 Sol и Luna (22 сент., через 90 минут после Opus 5.5) — цены вдвое ниже GPT-5.6; часть бенчмарков (OSWorld 2.0, DeepSWE) ниже, чем у GPT-5.6 Sol, выигрыш в основном по стоимости за задачу."
@@ -965,6 +958,27 @@
         "ru": "Meta запускает Meta Enterprise Platform — единый B2B-канал продаж Muse, Meta Business Agent, Muse API и Muse Code бизнесу, возглавляемый бывшим CEO MongoDB.",
         "en": "Meta launches Meta Enterprise Platform, a unified B2B sales channel for Muse, Meta Business Agent, Muse API and Muse Code, led by former MongoDB CEO CJ Desai."
       }
+    },
+    "openai-devday-2026-dots-space": {
+      "last_date": "2026-09-30",
+      "summary": {
+        "ru": "OpenAI выпустила Dots — постоянно активных персональных агентов на базе GPT-6 Astra с доступом к 4000+ приложениям через Slack/Teams — и ChatGPT Space, общее рабочее пространство для людей, ChatGPT, Codex и Dots.",
+        "en": "OpenAI shipped Dots, always-on personal agents built on GPT-6 Astra with access to 4,000+ apps via Slack/Teams, plus ChatGPT Space, a shared workspace for people, ChatGPT, Codex and Dots."
+      }
+    },
+    "meta-muse-small-business": {
+      "last_date": "2026-09-30",
+      "summary": {
+        "ru": "Meta выпустила Muse for Small Business — версию Muse для владельцев малого бизнеса, подключаемую к Shopify, QuickBooks, Stripe и рекламным аккаунтам.",
+        "en": "Meta shipped Muse for Small Business, a version of Muse for small-business owners wired into Shopify, QuickBooks, Stripe and ad accounts."
+      }
+    },
+    "america-gov-ai-portal-launch": {
+      "last_date": "2026-09-30",
+      "summary": {
+        "ru": "Администрация Трампа запустила America.gov — ИИ-чат-бот на Gemini и Grok как единую точку входа к ~29000 федеральным госсайтам.",
+        "en": "The Trump administration launched America.gov, an AI chatbot on Gemini and Grok serving as a single front door to ~29,000 federal government sites."
+      }
     }
   },
   "seen_urls": {
@@ -1017,12 +1031,10 @@
     "https://cursor.com/blog/projects": "2026-09-15",
     "https://cyberscoop.com/openai-agents-malicious-rubygems-packages/": "2026-09-12",
     "https://darioamodei.com/post/we-must-pace-the-frontier": "2026-09-13",
-    "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/": "2026-07-31",
     "https://deepmind.google/models/model-cards/gemini-3-8-audio/": "2026-09-17",
     "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/": "2026-08-29",
     "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
     "https://every.to/context-window/evals-for-everyone": "2026-09-21",
-    "https://every.to/p/openai-infrastructure": "2026-07-31",
     "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/": "2026-09-02",
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
     "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
@@ -1055,7 +1067,6 @@
     "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
     "https://novee.security/blog/critical-flaws-in-anthropic-google-and-openais-coding-agents/": "2026-08-10",
     "https://openai.com/index/advancing-content-provenance/": "2026-08-01",
-    "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/": "2026-07-31",
     "https://openai.com/index/an-alien-mind/": "2026-09-07",
     "https://openai.com/index/astra-for-law/": "2026-09-20",
     "https://openai.com/index/chatgpt-for-teens/": "2026-08-19",
@@ -1106,7 +1117,6 @@
     "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
-    "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/": "2026-07-31",
     "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/": "2026-08-01",
     "https://simonwillison.net/2026/Jul/31/stateless-mcp/": "2026-08-01",
     "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/": "2026-09-02",
@@ -1139,7 +1149,6 @@
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
-    "https://thezvi.substack.com/p/ai-179-part-1-a-louder-fire-alarm": "2026-07-31",
     "https://thezvi.substack.com/p/ai-179-part-2-hearing-the-fire-alarm": "2026-08-01",
     "https://thezvi.substack.com/p/ai-180-no-longer-in-charge": "2026-08-07",
     "https://thezvi.substack.com/p/ai-181-astra-goes-cyber-critical": "2026-08-14",
@@ -1174,7 +1183,6 @@
     "https://www.anthropic.com/institute/measuring-pace-of-ai-development": "2026-09-18",
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-24",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-29",
-    "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-30",
     "https://www.anthropic.com/research/Claude-accelerates-protein-design": "2026-08-20",
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-06",
@@ -1259,7 +1267,6 @@
     "https://x.com/OpenAI/status/2087231350134980830": "2026-08-17",
     "https://x.com/OpenAI/status/2087996496088297746": "2026-08-16",
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
-    "https://x.com/ThePrimeagen/status/2081066227619836308": "2026-07-31",
     "https://x.com/bot/status/2092664183334846840": "2026-08-27",
     "https://x.com/claudeai/status/2086891169217122586": "2026-08-16",
     "https://x.com/deepseek_ai/status/2087864589895798968": "2026-08-14",
@@ -1362,6 +1369,14 @@
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
     "https://www.anthropic.com/claude-sonnet-5-5": "2026-09-29",
-    "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/": "2026-09-29"
+    "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/": "2026-09-29",
+    "https://openai.com/index/devday-2026-recap/": "2026-09-30",
+    "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
+    "https://about.fb.com/news/2026/09/introducing-muse-small-business/": "2026-09-30",
+    "https://www.america.gov": "2026-09-30",
+    "https://www.youtube.com/watch?v=Xc6ERvZM1NY": "2026-09-30",
+    "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
+    "https://www.youtube.com/watch?v=IZAlq-V19U8": "2026-09-30",
+    "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30"
   }
 }

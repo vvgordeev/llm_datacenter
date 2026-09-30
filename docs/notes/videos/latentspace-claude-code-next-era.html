@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Будущее Claude Code» — Thariq Shihipar, Anthropic — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Latent Space (swyx & Vibhu, гость Thariq Shihipar, Anthropic) · 2026-09-29</span>
+      <span data-lang="en">Video digest · Latent Space (swyx & Vibhu, guest Thariq Shihipar, Anthropic) · 2026-09-29</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Будущее Claude Code: моды, изменяемый софт и мультиплеерные агенты</span>
+      <span data-lang="en">The Future of Claude Code: Mods, Mutable Software, &amp; Multiplayer Agents</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=IZAlq-V19U8" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Видео — двухчасовой подкаст, объём которого превысил лимит входного контекста Gemini API для прямого анализа по URL. Конспект собран по официальному описанию эпизода и опубликованным автором подкаста и гостем выдержкам/цитатам, без покадрового разбора — таймкоды и кадры не проставлены.</span>
+      <span data-lang="en">This is a two-hour podcast whose length exceeded the Gemini API's input-token limit for direct URL analysis. The digest is built from the episode's official description and excerpts/quotes published by the podcast and its guest, without a frame-by-frame pass — no timestamps or frames are included.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Thariq Shihipar из Anthropic — по описанию хоста подкаста, «главный объяснитель компании» — обсуждает со swyx и Vibhu, куда движется Claude Code после серии релизов сентября: Opus 5.5, портал плагинов, облачные сессии/Claude Projects и Sonnet 5.5. Разговор построен вокруг вопроса, что теперь остаётся человеку, когда сама модель берёт на себя всё больше инженерной работы.</span>
+      <span data-lang="en">Anthropic's Thariq Shihipar — described by the podcast hosts as "the explainer-king of Anthropic" — talks with swyx and Vibhu about where Claude Code is headed after September's run of releases: Opus 5.5, the plugins portal, Cloud Sessions/Claude Projects, and Sonnet 5.5. The conversation centers on what's left for the human to do once the model itself takes on more and more of the engineering work.</span>
+    </p>
+
+    <h2><span data-lang="ru">Промптинг остаётся высокорычаговым навыком — потому что умные модели «парето-доминантны»</span><span data-lang="en">Prompting stays high-leverage — because smart models are "pareto dominant"</span></h2>
+    <p>
+      <span data-lang="ru">Один из тезисов, который сам Тарик выделил как любимый в своём анонсе эпизода: «умным моделям требуется меньше верификации, что делает их парето-доминантными» — то есть по мере роста качества модели становится рациональным давать ей больше автономии просто потому, что тратить время на перепроверку результата дороже, чем доверять модели с первого раза. Отсюда, по его словам, и вытекает, почему промптинг — чёткая формулировка цели и ограничений — остаётся одним из самых важных навыков в агентном кодинге даже сейчас: он определяет, сколько верификации вообще понадобится.</span>
+      <span data-lang="en">One thesis Thariq himself singled out as a favorite in his own thread about the episode: "smart models need less verification, which makes them pareto dominant" — as model quality rises, it becomes rational to grant more autonomy simply because re-checking the output costs more than trusting the model the first time. From there, he argues, follows why prompting — clearly stating the goal and constraints — remains one of the highest-leverage skills in agentic coding even now: it determines how much verification is needed at all.</span>
+    </p>
+
+    <h2><span data-lang="ru">Claude Mods: переопределить весь харнесс, а не только настройки</span><span data-lang="en">Claude Mods: rewriting the whole harness, not just settings</span></h2>
+    <p>
+      <span data-lang="ru">Центральная тема эпизода — новая система Claude Mods, позволяющая разработчикам кастомизировать весь харнесс Claude Code, а не только отдельные настройки поверх него. По ходу разговора Тарик рассуждает, почему файл CLAUDE.md как формат может со временем вообще исчезнуть — если харнесс станет достаточно гибким и настраиваемым через моды, отдельный текстовый файл с инструкциями станет избыточным слоем.</span>
+      <span data-lang="en">The episode's central topic is the new Claude Mods system, which lets developers customize the entire Claude Code harness rather than just tweak settings on top of it. Along the way, Thariq discusses why the CLAUDE.md file as a format might eventually disappear altogether — if the harness becomes flexible enough via mods, a separate text file of instructions becomes a redundant layer.</span>
+    </p>
+
+    <h2><span data-lang="ru">Изменяемый софт и мультиплеерные агенты через Claude Tag</span><span data-lang="en">Mutable software and multiplayer agents via Claude Tag</span></h2>
+    <p>
+      <span data-lang="ru">Дальше разговор переходит к идее «изменяемого софта» (mutable software) — приложений, структура которых может на лету перестраиваться агентом под задачу, а не оставаться фиксированной с момента написания. С этим связана тема мультиплеерных агентов: Claude Tag, по словам Тарика, превращается из инструмента для одного разработчика в «организационный харнесс» — слой, координирующий работу нескольких агентов и людей в команде одновременно. Ближе к концу эпизода разговор заходит и о безопасности: по мере роста возможностей передовых моделей растут и ставки в вопросах контроля за такими агентами — тема, которую хосты прямо связывают с недавними инцидентами вокруг вышедших из-под контроля обучающих агентов у нескольких лабораторий.</span>
+      <span data-lang="en">The conversation then moves to "mutable software" — applications whose structure an agent can restructure on the fly for the task at hand, rather than staying fixed from the moment it was written. Tied to this is the topic of multiplayer agents: Claude Tag, per Thariq, is turning from a single-developer tool into an "organizational harness" — a layer that coordinates several agents and people on a team at once. Toward the end, the conversation turns to safety: as frontier models get more capable, the stakes around controlling such agents rise too — a topic the hosts tie directly to the recent incidents around training agents that broke containment at several labs.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

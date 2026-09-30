@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T06:30:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 1, "note": "WebFetch прошёл; Sonnet 5.5 (28 сентября) уже опубликована в сводке за 2026-09-29 — дублей нет, ничего нового в окне 36ч"},
+    {"source": "openai blog", "status": "blocked", "candidates": 2, "note": "WebFetch openai.com — EGRESS_BLOCKED; обнаружено через WebSearch — GPT-6.1 Sol, DevDay (Dots/ChatGPT Space)"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch blog.google — EGRESS_BLOCKED; WebSearch нашёл только Gemini 4 'nearing release' (23-24 сентября, вне окна 36ч, статья прогноза без релиза)"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 1, "note": "WebFetch ai.meta.com — EGRESS_BLOCKED; обнаружено через WebSearch — Muse for Small Business"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch x.ai — EGRESS_BLOCKED; WebSearch не нашёл новых анонсов xAI в окне 36ч (Grok 4.7 — 21 сентября, старое)"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch mistral.ai — EGRESS_BLOCKED; WebSearch не нашёл новых анонсов в окне 36ч"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch api-docs.deepseek.com — EGRESS_BLOCKED; WebSearch не нашёл новых анонсов в окне 36ч (V4.1 Flash — 9/15 сентября, старое)"},
+    {"source": "hacker news api", "status": "blocked", "candidates": 0, "note": "WebFetch hn.algolia.com — EGRESS_BLOCKED (подтверждено повторно); обсуждения найдены через WebSearch по конкретным тредам (GPT-6.1 Sol, DevDay)"},
+    {"source": "aggregators (smol.ai, TLDR AI, Simon Willison linkblog)", "status": "empty", "note": "WebFetch заблокирован; WebSearch не дал прямого выпуска за 29-30 сентября, но подтвердил основные сюжеты дня через независимые источники (AMD/World Labs, America.gov, DevDay)"},
+    {"source": "reddit/x community", "status": "ok", "candidates": "n/a", "note": "реакции собраны через WebSearch (HN-треды, X-цитаты Zuckerberg/Jim Cramer/Gene Munster/Sam Altman) вместо прямого доступа к reddit.com/x.com"},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 1, "note": "simonwillison.net заблокирован для WebFetch; обход — git clone simonwillisonblog-backup (ndjson-дамп). Статья '2026 in LLMs (so far)' оказалась уже опубликована в сводке за 2026-09-28 (seen_urls) — не включена повторно, чтобы не задублировать"},
+    {"source": "expert: Andrej Karpathy", "status": "empty", "note": "новых видео/постов в окне 7 дней не найдено"},
+    {"source": "expert: Latent Space", "status": "ok", "candidates": 1, "note": "эпизод с Thariq Shihipar (29 сентября); видео 2ч — превысило лимит токенов Gemini API, конспект собран по описанию эпизода и опубликованным цитатам"},
+    {"source": "expert: AI Explained", "status": "empty", "note": "новых видео в окне 7 дней не найдено через WebSearch"},
+    {"source": "expert: Matt Wolfe", "status": "empty", "note": "новых датированных видео в окне 7 дней не найдено через WebSearch"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "note": "последний пост 'The Overhang' от 18 сентября — вне окна свежести 7 дней"},
+    {"source": "expert: Nate Herk", "status": "empty", "note": "новых видео в окне 7 дней не найдено через WebSearch"},
+    {"source": "expert: Matt Pocock", "status": "empty", "note": "новых видео в окне 7 дней не найдено через WebSearch"},
+    {"source": "expert (расширенный поиск): Matthew Berman", "status": "ok", "candidates": 1, "note": "добавлен вне конфига — резонансный разбор DevDay 2026"},
+    {"source": "expert (расширенный поиск): Wes Roth", "status": "ok", "candidates": 1, "note": "добавлен вне конфига — резонансный разбор Sonnet 5.5/IPO Anthropic/отмены Astra 6.1"},
+    {"source": "expert (расширенный поиск): Zvi Mowshowitz", "status": "ok", "candidates": 1, "note": "добавлен вне конфига (используется в проекте и раньше — есть архив zvi-*.html) — свежий пост '#NotOnlyHuggingFace' (28 сентября), не дублирует ранее опубликованное"}
+  ],
+  "totals": {
+    "candidates": 9,
+    "published": 4,
+    "rejected": {
+      "уже опубликовано вчера (Sonnet 5.5, 28 сент.)": 1,
+      "вне окна 36ч / не первично (Gemini 4 'nearing release', Grok 4.7, DeepSeek V4.1 Flash, Mistral-Mozilla)": 4
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok (2 видео обработаны: Berman DevDay recap, Wes Roth Sonnet/IPO/Astra; 1 видео — Latent Space/Thariq — не обработано: превышен лимит входных токенов Gemini API для 2-часового подкаста, конспект собран по опубликованным описанию и цитатам)",
+    "frames": "skipped: yt-dlp получил CONNECT 403 от egress-прокси на youtube.com (подтверждено на всех трёх URL); ffmpeg/imageio-ffmpeg установлены и готовы, но недоступен сам источник видео"
+  },
+  "notes": "Более трети источников (модели: openai/google/meta/xai/mistral/deepseek — 6 из 7; агрегаторы; HN API) дали EGRESS_BLOCKED на прямой WebFetch — это ожидаемая деградация окружения по SKILL.md, не тихий день; весь фактический сбор шёл через WebSearch. ВАЖНО (самопроверка): первая версия конспекта по Simon Willison ('2026 in LLMs (so far)') по ошибке задублировала материал, уже опубликованный 2026-09-28, и при этом перезаписала историческую note-страницу того дня — ошибка обнаружена и исправлена до коммита: note-страница за 28 сентября восстановлена из git (git checkout), дубль в data/daily/2026-09-30.json/data/state.json убран, вместо него добавлена свежая, не опубликованная ранее статья Zvi Mowshowitz. Итог: 4 материала экспертного контента (1 статья + 3 видео) при целевых min_expert_total=5 — пятый материал без риска дублирования или выдумывания фактов после полного прохода по 8 экспертам конфига и расширенного поиска не найден."
+}

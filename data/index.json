@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-09-30",
+      "news_count": 4,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "OpenAI представила Dots — постоянно активных ИИ-агентов, и ChatGPT Space для совместной работы с ними",
+        "en": "OpenAI unveils Dots, always-on AI agents, and ChatGPT Space to work alongside them"
+      }
+    },
+    {
       "date": "2026-09-29",
       "news_count": 2,
       "expert_count": 0,
