@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-01",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Google выпускает Gemini 4 Argon — но доступ пока только у киберзащитников",
+        "en": "Google ships Gemini 4 Argon, but access starts with cyber defenders only"
+      }
+    },
+    {
       "date": "2026-09-30",
       "news_count": 4,
       "expert_count": 4,

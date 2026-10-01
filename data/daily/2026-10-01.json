@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T07:40:00Z",
+  "news": [
+    {
+      "id": "2026-10-01-google-gemini-4-argon",
+      "cluster_id": "google-gemini-4-post-training",
+      "models": ["google"],
+      "title": {
+        "ru": "Google выпускает Gemini 4 Argon — но доступ пока только у киберзащитников",
+        "en": "Google ships Gemini 4 Argon, but access starts with cyber defenders only"
+      },
+      "summary": {
+        "ru": "30 сентября Google DeepMind выпустила Gemini 4 Argon — первую новую флагманскую модель после ухода Демиса Хассабиса с поста CEO. Модель пишет до 1 млн выходных токенов, лидирует или делит первое место в 13 из 18 раскрытых бенчмарков против GPT-6 Astra и Claude Opus 5.5 (новый рекорд 77.9% на DeepSWE v1.1), но отстаёт на части других — FrontierSWE v2 и Terminal-Bench 4.0, местами на 9-10 пунктов. Доступ пока только у проверенных киберзащитников по программе Fairwind и у внутренних команд безопасности Google; дата открытия для разработчиков, бизнеса и обычных пользователей не названа, стартовая цена — $2/$10 за млн токенов ввода/вывода, затем $4/$20.",
+        "en": "On September 30, Google DeepMind shipped Gemini 4 Argon — the first new flagship model since Demis Hassabis stepped down as CEO. It writes up to 1M output tokens and leads or ties in 13 of 18 disclosed benchmarks against GPT-6 Astra and Claude Opus 5.5 (a new state of the art, 77.9% on DeepSWE v1.1), but trails on others — FrontierSWE v2 and Terminal-Bench 4.0 — by as much as 9-10 points. Access starts only with vetted cyber defenders through the Fairwind Program and Google's own security teams; there's no date yet for developers, businesses or consumers. Introductory pricing is $2/$10 per million input/output tokens, rising to $4/$20."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Настоящая новая флагманская модель, вернувшая Google лидерство по широте бенчмарков — заметный сдвиг в гонке лабораторий. Но это не новый подход к использованию LLM, а выпущена она с ограниченным доступом для узкой аудитории безопасников, так что для большинства пользователей пока ничего не меняется.",
+        "en": "A genuine new flagship that hands Google the benchmark lead on breadth — a real shift in the lab race. But it isn't a new way of using LLMs, and it ships gated to a narrow cybersecurity audience, so nothing changes yet for most users."
+      },
+      "source_url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence",
+      "opinions": [
+        {
+          "author": "The New Stack",
+          "stance": "positive",
+          "quote": {
+            "ru": "Gemini 4 Argon уже здесь — он великолепен, и вам его пока не видать.",
+            "en": "Gemini 4 Argon is here: it's great, and you can't have it yet."
+          },
+          "url": "https://thenewstack.io/google-gemini-4-argon/"
+        },
+        {
+          "author": "Bloomberg (со ссылкой на сотрудников Google)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Внутри компании нет единого мнения: часть сотрудников считает Argon по-настоящему фронтирной моделью, другие — что Claude и GPT прогрессируют быстрее, а бенчмарки не отражают, как модель справляется с реальными задачами по кодингу.",
+            "en": "There's no internal consensus: some employees see Argon as genuinely frontier, others believe Claude's and OpenAI's models are improving faster, and that the benchmarks don't reflect how the model performs on real coding tasks."
+          },
+          "url": "https://www.japantimes.co.jp/business/2026/10/01/tech/google-employee-skepticism-gemini-4/"
+        },
+        {
+          "author": "VentureBeat",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Гонка фронтиров остаётся плотной: Google теперь может утверждать, что лидирует по широте, но там, где Argon отстаёт — особенно на FrontierSWE v2 и Terminal-Bench 4.0 — разрыв достигает 10 пунктов.",
+            "en": "The frontier race remains close: Google can now argue it leads on breadth, but where Argon trails — especially FrontierSWE v2 and Terminal-Bench 4.0 — the gap runs as high as 10 points."
+          },
+          "url": "https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Wiz (облачная security-компания, принадлежит Google) в рамках бесплатной программы Scan for Good уже использовала Argon и нашла в больничном ПО критическую уязвимость, раскрывавшую персональные данные пациентов — её не заметили более ранние фронтирные модели.",
+            "en": "Wiz (the Google-owned cloud security company) used Argon under its free Scan for Good program and found a critical vulnerability in hospital software exposing patient personal data — one earlier frontier models had missed."
+          },
+          "url": "https://www.helpnetsecurity.com/2026/10/01/google-gemini-4-argon/"
+        },
+        {
+          "text": {
+            "ru": "Внутри Google агенты на Argon уже высвободили более 300 ТиБ памяти в дата-центрах и переносят C/C++ код на безопасный по памяти Rust — включая 800 000+ строк ядра Fuchsia Zircon.",
+            "en": "Internally, Argon-based agents have already freed more than 300 TiB of memory across Google's data centers and are porting C/C++ code to the memory-safe Rust — including the 800,000+ lines of the Fuchsia Zircon kernel."
+          },
+          "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-01-anthropic-claude-for-government-ga",
+      "cluster_id": "anthropic-claude-for-government-ga",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude for Government выходит в общий доступ на FedRAMP High",
+        "en": "Claude for Government reaches general availability on FedRAMP High"
+      },
+      "summary": {
+        "ru": "30 сентября Anthropic перевела Claude for Government из публичной беты (работала с июля) в полный общий доступ для федеральных, штатных и местных ведомств США. Среда авторизована по FedRAMP High и даёт агентствам те же кодинговые и агентные возможности, что и коммерческим клиентам Claude — десктоп-приложение, Claude Code CLI и Claude для Microsoft 365 в раннем доступе, навыки, плагины и проекты — плюс управленческие инструменты под специфику госсектора: администрирование по департаментам, выделение бюджетов, жёсткие лимиты расходов и защищённые от подделки журналы аудита. Оплата — по использованию, без платы за места; действующие бета-клиенты могут перенести приложения и историю переписки.",
+        "en": "On September 30, Anthropic moved Claude for Government out of public beta (running since July) into full general availability for US federal, state and local agencies. The FedRAMP High authorized environment gives agencies the same coding and agentic capabilities as Claude's commercial customers — a desktop app, Claude Code CLI and Claude for Microsoft 365 in early access, skills, plugins and projects — plus governance tooling built for the public sector: department-level administration, spend allocation, hard spending caps, and tamper-proof audit logs. Billing is usage-based with no seat fees; existing beta customers can migrate their desktop apps and conversation history."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Расширение уже существующего продукта до общей доступности для нового сегмента клиентов со специфичными для госсектора инструментами управления — заметная веха для доступа и бизнеса, но не новый подход к использованию LLM.",
+        "en": "Expanding an existing product to general availability for a new customer segment with public-sector-specific governance tools — a notable access/business milestone, not a new approach to using LLMs."
+      },
+      "source_url": "https://claude.com/blog/claude-for-government-is-now-generally-available",
+      "opinions": [
+        {
+          "author": "Newsquawk",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Подобные анонсы доступности сигнализируют о позиции вендора в канале государственных закупок, где аккредитованные развёртывания исторически дают устойчивое конкурентное преимущество; реакция, скорее всего, будет зависеть от конкретных контрактов, а не от самого запуска.",
+            "en": "Availability announcements of this kind signal a vendor's position in the government procurement channel, where cleared and accredited deployments have historically been a durable competitive advantage; reaction is likely to depend on concrete contract vehicles rather than the launch itself."
+          },
+          "url": "https://www.newsquawk.com/headlines/anthropic-announces-claude-for-government-is-now-generally-available"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Администраторы агентства могут распределять бюджеты и жёсткие лимиты расходов по департаментам и получать защищённые от подделки журналы аудита для процедур комплаенса в госзакупках.",
+            "en": "Agency administrators can allocate budgets and hard spending caps by department and pull tamper-proof audit logs for government-procurement compliance workflows."
+          },
+          "url": "https://claude.com/blog/claude-for-government-is-now-generally-available"
+        },
+        {
+          "text": {
+            "ru": "Существующие клиенты беты Claude for Government переносят десктоп-приложения и историю переписки в GA-среду без потери данных.",
+            "en": "Existing Claude for Government beta customers migrate their desktop apps and conversation history into the GA environment without losing data."
+          },
+          "url": "https://claude.com/blog/claude-for-government-is-now-generally-available"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-01-pocock-pr-bottleneck",
+      "type": "video",
+      "author": "Matt Pocock",
+      "title": {
+        "ru": "Как починить затор на ревью пулл-реквестов в эпоху кодинг-агентов",
+        "en": "Fixing the PR bottleneck in the age of coding agents"
+      },
+      "url": "https://www.youtube.com/watch?v=LlgiOCmFG_w",
+      "summary": {
+        "ru": "Покок показывает трёхуровневую модель ревью (автоматические проверки → автоматизированное ревью агентом → человек) для команд, где агенты генерируют код быстрее, чем люди успевают его просматривать, и объясняет, почему стандарты кодирования должны проверяться отдельным агентом-ревьюером, а не тем же агентом, который пишет код.",
+        "en": "Pocock lays out a three-layer review model (automated checks → agent-based automated review → human) for teams where agents generate code faster than people can read it, and explains why coding standards should be enforced by a separate reviewer agent, not the one writing the code."
+      },
+      "note_page": "notes/videos/pocock-pr-bottleneck.html"
+    },
+    {
+      "id": "2026-10-01-nateherk-dots-vs-muse",
+      "type": "video",
+      "author": "Nate Herk",
+      "title": {
+        "ru": "Dots против Muse на практике: что на самом деле получаешь за deus ex machina",
+        "en": "Dots vs. Muse, hands-on: what you actually get behind the always-on-agent pitch"
+      },
+      "url": "https://www.youtube.com/watch?v=BvvfZKKz4Yo",
+      "summary": {
+        "ru": "Неделя реального использования обоих «постоянно активных» агентов: Dots сильнее за счёт базовой модели GPT-6 Astra и интеграции в Slack, но путается в собственном расписании задач; Muse удобнее для нетехнического пользователя за счёт редактируемой памяти и настраиваемой ленты. Вывод — выбор зависит от рабочего процесса, а не от того, какой агент «лучше».",
+        "en": "A week of hands-on use of both always-on agents: Dots is stronger thanks to its GPT-6 Astra base model and Slack integration, but gets confused about its own task schedule; Muse is friendlier for non-technical users thanks to editable memory and a customizable feed. The takeaway: the right choice depends on your workflow, not on which agent is objectively 'better'."
+      },
+      "note_page": "notes/videos/nateherk-dots-vs-muse.html"
+    }
+  ]
+}

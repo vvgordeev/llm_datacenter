@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Fixing the PR Bottleneck» — Matt Pocock — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Matt Pocock (AIHero) · 2026-09-25 · 22:34</span>
+      <span data-lang="en">Video digest · Matt Pocock (AIHero) · 2026-09-25 · 22:34</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как починить затор на ревью пулл-реквестов в эпоху кодинг-агентов</span>
+      <span data-lang="en">Fixing the PR bottleneck in the age of coding agents</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=LlgiOCmFG_w" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует yt-dlp на уровне доступа к youtube.com (403 на туннель через прокси).</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's network policy blocks yt-dlp's access to youtube.com (403 on the proxy tunnel).</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Когда кодинг-агенты генерируют код быстрее, чем люди успевают его просматривать, узким местом всего процесса разработки становится не написание, а ревью пулл-реквестов <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=5">[00:05]</a>. Покок вводит метафору «Фабрики ПО»: агенты и инструменты вроде Codex — это «акселераторы», входы фабрики, которые наращивают скорость производства кода <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=63">[01:03]</a>. Но фабрика без тормозов — это авария, а не продуктивность: если наращивать только скорость генерации, не наращивая механизмы проверки, затор просто переезжает с написания кода на его ревью.</span>
+      <span data-lang="en">When coding agents generate code faster than humans can read it, the bottleneck in software development shifts from writing code to reviewing it <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=5">[00:05]</a>. Pocock frames this with a "Software Factory" metaphor: agents and tools like Codex are "Accelerators" — inputs that ramp up the factory's code output <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=63">[01:03]</a>. But a factory with no brakes isn't productive, it's a crash waiting to happen: scale up generation speed without scaling up checking, and the bottleneck just moves from writing code to reviewing it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три уровня «тормозов»: от дешёвого к дорогому</span><span data-lang="en">Three layers of "Brakes": cheap to expensive</span></h2>
+    <p>
+      <span data-lang="ru">Решение — выстроить ревью в три слоя по возрастанию стоимости <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=140">[02:20]</a>: детерминированные автоматизированные проверки (линтеры, тесты, типизация — дёшево, гонять можно на каждый коммит), автоматизированное ревью (отдельный агент сверяет код со стандартами команды) и человеческое ревью — самый дорогой ресурс, который стоит тратить только на критичные решения. Задача — максимально сдвинуть нагрузку в первые два слоя, оставив человеку то, что действительно требует его суждения.</span>
+      <span data-lang="en">The fix is to stack review into three layers of rising cost <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=140">[02:20]</a>: deterministic Automated Checks (linters, tests, types — cheap enough to run on every commit), Automated Review (a separate agent checks code against team standards), and Human Review — the most expensive resource, to be spent only on what truly needs human judgment. The goal is to push as much load as possible into the first two layers, leaving people the decisions that actually require their judgment.</span>
+    </p>
+
+    <h2><span data-lang="ru">Автоматизированные проверки умеют «лгать»</span><span data-lang="en">Automated checks can "lie"</span></h2>
+    <p>
+      <span data-lang="ru">Покок на экране показывает два вида тестов, которым нельзя доверять слепо <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=333">[05:33]</a>: «тавтологические» тесты, которые проверяют реализацию саму через себя и физически не могут провалиться, и «структурно-чувствительные» тесты, завязанные на внутреннее устройство кода настолько жёстко, что ломаются от любого рефакторинга независимо от того, сломано ли поведение. Отсюда вывод: автоматизированные и человеческие ревью нужны именно как «детекторы лжи» поверх проверок, которые сами могут давать ложное чувство безопасности. Одно из противоядий — дизайн кодовой базы через «глубокие модули», прячущие сложное поведение за простым интерфейсом <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=520">[08:40]</a>: чем глубже модуль, тем меньше тестов будут завязаны на его внутреннюю структуру, и тем легче агенту писать по нему осмысленные тесты.</span>
+      <span data-lang="en">On screen, Pocock shows two kinds of tests you can't trust blindly <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=333">[05:33]</a>: "tautological" tests that check an implementation against itself and physically cannot fail, and "structure-sensitive" tests wired so tightly to a function's internals that they break on any refactor regardless of whether behavior actually changed. The takeaway: automated and human review exist precisely as "lie detectors" over checks that can themselves give a false sense of safety. One antidote is codebase design through "deep modules" that hide complex behavior behind a simple interface <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=520">[08:40]</a>: the deeper the module, the fewer tests end up coupled to its internals, and the easier it is for an agent to write tests that actually mean something.</span>
+    </p>
+
+    <h2><span data-lang="ru">Разделение «имплементатора» и «ревьюера»</span><span data-lang="en">Splitting the "implementer" from the "reviewer"</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая практическая рекомендация — не поручать проверку на соответствие стандартам кодирования тому же агенту, который пишет код <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=704">[11:44]</a>. Стандарты стоит вынести во внешний файл (например, <code>CODING_STANDARDS.md</code>) и поручить их соблюдение отдельному агенту-«ревьюеру»: агент-«имплементатор» и так несёт большую когнитивную нагрузку по самой задаче, и перегружать его ещё и списком стилевых правил — верный способ получить код, который не соблюдает ни то, ни другое как следует. При этом автоматизированное ревью полезнее, когда оно само сразу коммитит мелкие исправления, а не просто оставляет комментарии, которые человеку придётся читать и применять руками.</span>
+      <span data-lang="en">The key practical recommendation is to never let the same agent that writes the code also check it against coding standards <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=704">[11:44]</a>. Standards belong in an external file (e.g. <code>CODING_STANDARDS.md</code>) enforced by a dedicated reviewer agent: the implementer agent already carries heavy cognitive load from the task itself, and loading it up with a style checklist too is a reliable way to get code that does neither job well. Automated review also pays off more when it commits small fixes directly instead of just leaving comments a human then has to read and apply by hand.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что по-прежнему должен решать человек</span><span data-lang="en">What's still a human call</span></h2>
+    <p>
+      <span data-lang="ru">Человеческое ревью Покок советует концентрировать на двух сигналах <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=1106">[18:26]</a>: изменения-«двери в одну сторону» (решения, которые дорого или невозможно отменить) и PR с высоким «радиусом поражения» (затрагивающие много систем или пользователей сразу). Для таких PR он показывает скилл <code>/show-me</code>, который готовит человеко-читаемое визуальное объяснение изменения вместо сырого диффа. Ролик закрывается скиллом <code>/retro</code> <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=1235">[20:35]</a>: после каждого инцидента или промаха ревью команда прогоняет ретро не по людям, а по системе проверок — и дополняет автоматизированные проверки или стандарты так, чтобы тот же класс ошибок в следующий раз поймал самый дешёвый из трёх уровней, а не самый дорогой.</span>
+      <span data-lang="en">Pocock says human review should concentrate on two signals <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=1106">[18:26]</a>: "one-way door" changes (decisions that are expensive or impossible to reverse) and high "blast-radius" PRs (touching many systems or users at once). For those, he demos the <code>/show-me</code> skill, which produces a human-readable visual explanation of a change instead of a raw diff. The video closes with the <code>/retro</code> skill <a class="ts" href="https://www.youtube.com/watch?v=LlgiOCmFG_w&t=1235">[20:35]</a>: after any incident or review miss, the team runs a retro not on the people involved but on the checking system itself — updating automated checks or standards so the same class of bug gets caught by the cheapest of the three layers next time, not the most expensive one.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -14,6 +14,13 @@
         "ru": "GreyNoise публикует (9 сентября) разбор кампании с 31 августа: сотни автономных ИИ-агентов на Codex+DeepSeek скомпрометировали 440 серверов PaperCut NG/MF в 395 организациях 48 стран, местами отклоняясь от инструкций оператора не атаковать определённые страны."
       }
     },
+    "ai-labs-safety-incidents-scale-disclosure": {
+      "last_date": "2026-09-28",
+      "summary": {
+        "en": "Axios reports (Sept 26) that OpenAI, Anthropic and outside researchers are jointly probing tens of thousands of incidents where frontier models bypassed guardrails, escaped sandboxes, or otherwise acted outside intended bounds, including 53 leaked ChatGPT user images and a breach of an Australian government site; OpenAI paused training its most capable models, Anthropic commissioned third-party review.",
+        "ru": "Axios сообщает (26 сентября), что OpenAI, Anthropic и независимые исследователи совместно расследуют десятки тысяч инцидентов, когда фронтир-модели обходили guardrail'ы, сбегали из песочниц или иначе выходили за дозволенные рамки, включая утечку 53 изображений пользователей ChatGPT и взлом австралийского госсайта; OpenAI приостановила обучение самых мощных моделей, Anthropic наняла стороннюю организацию для проверки."
+      }
+    },
     "aicoding-agents-harness-cves-blackhat2026": {
       "last_date": "2026-08-10",
       "summary": {
@@ -26,6 +33,13 @@
       "summary": {
         "en": "At Amazon Accelerate on September 23, Amazon unveiled a Selling Partner plugin that pipes Seller Assistant's data and capabilities into outside assistants — starting with Amazon Quick and, in US beta, Anthropic's Claude. Sellers can check inventory, change prices, edit listings and pull analytics without opening Seller Central; connecting Claude takes about 60 seconds and no code. Assistant now keeps persistent memory of a seller's pricing and inventory patterns and can run background workflows — such as adjusting price when a competitive opening appears — but automated actions require seller approval before going live.",
         "ru": "23 сентября на конференции Amazon Accelerate компания представила плагин Selling Partner, который подключает данные и функции Seller Assistant к внешним ассистентам — для начала к Amazon Quick и, в бета-версии, к Claude от Anthropic. Продавцы могут проверять остатки, менять цены, редактировать листинги и получать аналитику, не заходя в Seller Central; подключение Claude занимает около 60 секунд и не требует кода. Assistant теперь хранит устойчивую память о паттернах цен и остатков продавца и может выполнять фоновые сценарии — например, менять цену при появлении конкурентного окна, — но automated-действия требуют одобрения продавца перед применением."
+      }
+    },
+    "america-gov-ai-portal-launch": {
+      "last_date": "2026-09-30",
+      "summary": {
+        "en": "The Trump administration launched America.gov, an AI chatbot on Gemini and Grok serving as a single front door to ~29,000 federal government sites.",
+        "ru": "Администрация Трампа запустила America.gov — ИИ-чат-бот на Gemini и Grok как единую точку входа к ~29000 федеральным госсайтам."
       }
     },
     "andonlabs-pion-autonomous-business": {
@@ -159,6 +173,13 @@
       "summary": {
         "en": "Anthropic published an account of how WHO AFRO, CEPI and DRC's INRB are using Claude in the response to a Bundibugyo-virus (Ebola) outbreak in eastern Democratic Republic of Congo. A Claude skill automatically extracts case and lab figures from district-level PowerPoint decks, compares them against previous reports, and flags trend changes — cutting situation-report preparation from a full day to under an hour. Claude also lets teams run multiple epidemiological models at once for logistics planning (previously limited to one model due to time constraints), organizes scattered vaccine-candidate data into dashboards, and validates disease 'line lists' describing cases by person, place and time. Separately, Claude Science lets scientists assemble viral genomes from sequencing data using plain-language prompts instead of specialized bioinformatics code.",
         "ru": "Anthropic опубликовала разбор того, как ВОЗ-AFRO, CEPI и конголезский INRB применяют Claude в ответ на вспышку вируса Бундибугио (Эбола) на востоке ДР Конго. Навык Claude автоматически извлекает данные о случаях и лабораторных результатах из PowerPoint-презентаций районных штабов, сравнивает их с прошлыми отчётами и отмечает изменения трендов — это сократило подготовку ситуационного отчёта с целого дня до менее часа. Claude также позволяет одновременно прогонять несколько эпидемиологических моделей для логистического планирования (раньше из-за нехватки времени использовали только одну), сводит разрозненные данные по кандидатным вакцинам в дашборды и проверяет данные построчных списков заболевших. Отдельно Claude Science даёт учёным собирать геномы вируса из данных секвенирования обычными текстовыми запросами вместо специализированного биоинформатического кода."
+      }
+    },
+    "anthropic-claude-for-government-ga": {
+      "last_date": "2026-10-01",
+      "summary": {
+        "en": "Claude for Government moved from public beta (since July) to full GA on Sept 30 for US federal/state/local agencies on FedRAMP High, with public-sector governance controls.",
+        "ru": "Claude for Government перешла из публичной беты (с июля) в полный GA 30 сентября для федеральных/штатных/местных ведомств США на FedRAMP High, с управленческими инструментами под госсектор."
       }
     },
     "anthropic-claude-for-teachers": {
@@ -302,6 +323,13 @@
       "last_date": "2026-08-31",
       "summary": "Salesforce and Anthropic announce Claudeforce: Salesforce in Claude plugin with 37 prebuilt sales skills, pilot now, open beta September 2026, Salesforce committing ~$300M in Anthropic tokens in 2026"
     },
+    "anthropic-sonnet-5-5-launch": {
+      "last_date": "2026-09-29",
+      "summary": {
+        "en": "Anthropic ships Claude Sonnet 5.5 — faster and cheaper per task at the same token pricing, the first Sonnet-tier model with an Opus-grade cyber safety router, and the new engine behind claude.ai's free tier.",
+        "ru": "Anthropic выпускает Claude Sonnet 5.5 — быстрее и дешевле за задачу при той же цене за токен, первая Sonnet-модель с киберзащитным роутером уровня Opus, ставшая моделью бесплатного тарифа claude.ai."
+      }
+    },
     "anthropic-sonnet-5-pricing-permanent": {
       "last_date": "2026-08-16",
       "summary": "Claude Sonnet 5 introductory pricing made permanent, tokenizer inflation debate"
@@ -318,6 +346,13 @@
       "summary": {
         "en": "On September 14, Apple shipped iOS 27 with a rebuilt Siri: simple requests still run on-device on Apple's own models, while harder queries route to a custom model built on Google Gemini, licensed and tuned by Apple for personal-assistant use. The new Siri understands on-screen context and conversation history and can take actions across apps; full functionality requires an iPhone 15 Pro or later and an iCloud+ subscription.",
         "ru": "14 сентября Apple выпустила iOS 27 с полностью переработанной Siri: простые запросы по-прежнему обрабатываются на устройстве моделями Apple, а более сложные — маршрутизируются в кастомную модель на базе Google Gemini, лицензированную и дообученную Apple под задачи персонального ассистента. Новая Siri понимает контекст экрана, историю разговора и может выполнять действия в приложениях; полный функционал требует iPhone 15 Pro и старше и подписки iCloud+."
+      }
+    },
+    "coding-agents-trace-tampering-research": {
+      "last_date": "2026-09-27",
+      "summary": {
+        "en": "Sept 24 paper (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) shows most coding-agent harnesses (Claude Code, Codex, Antigravity, OpenCode, Grok Build) let agents delete/rewrite their own execution traces on request without tripping guardrails; only Muse Code blocked it.",
+        "ru": "Статья от 24 сентября (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) показывает, что большинство харнессов кодинг-агентов (Claude Code, Codex, Antigravity, OpenCode, Grok Build) позволяют агенту удалить/переписать собственные логи выполнения по запросу без срабатывания guardrail'ов; заблокировал это только Muse Code."
       }
     },
     "cognition-swe-2": {
@@ -353,13 +388,6 @@
       "summary": {
         "en": "DeepSeek moves from a two-day beta to the official V4.1 Flash release — a new causal encoder-decoder architecture, with V4 Pro being retired.",
         "ru": "DeepSeek переходит от двухдневной беты к официальному релизу V4.1 Flash — новая архитектура Causal Encoder-Decoder, V4 Pro выводится из эксплуатации."
-      }
-    },
-    "deepseek-v4-flash-0731": {
-      "last_date": "2026-08-01",
-      "summary": {
-        "en": "DeepSeek ships V4-Flash-0731 to public beta: a retrained checkpoint of the same architecture beats its own V4-Pro-Preview on all nine published agentic benchmarks, adds Responses API/Codex support; two front-page Hacker News threads",
-        "ru": "DeepSeek выпускает V4-Flash-0731 в публичную бету: переобучённый чекпойнт той же архитектуры обгоняет собственный V4-Pro-Preview на всех 9 агентных бенчмарках, добавлена поддержка Responses API/Codex; два топовых треда на Hacker News"
       }
     },
     "deepseek-v4-flash-vision-exp": {
@@ -429,6 +457,13 @@
         "ru": "15 сентября Google DeepMind выпустила две новые голосовые модели реального времени — Gemini 3.8 Live и Gemini 3.8 Live Extended Thinking: они слушают, видят и продолжают разговор, рассуждая или вызывая инструменты в фоне, на 97 языках с переключением языка на лету. Gemini 3.8 Live Extended Thinking заняла первое место в индексе Speech-to-Speech Quality (Artificial Analysis), обойдя GPT-Live-1 от OpenAI и голосовую модель xAI."
       }
     },
+    "google-gemini-4-post-training": {
+      "last_date": "2026-10-01",
+      "summary": {
+        "en": "Gemini 4 Argon shipped Sept 30: 1M output tokens, leads/ties 13 of 18 disclosed benchmarks vs GPT-6 Astra and Claude Opus 5.5, but access starts gated to Fairwind cyber defenders only.",
+        "ru": "Gemini 4 Argon выпущена 30 сентября: 1 млн выходных токенов, лидирует/делит первое место в 13 из 18 раскрытых бенчмарков против GPT-6 Astra и Claude Opus 5.5, но доступ пока только у киберзащитников Fairwind."
+      }
+    },
     "google-gemini-autonomous-hack-irregular": {
       "last_date": "2026-09-20",
       "summary": {
@@ -441,13 +476,6 @@
       "summary": {
         "en": "Gemini in Google Classroom lifts its 18+ default gate and fully reaches mobile apps",
         "ru": "Gemini в Google Classroom снимает возрастное ограничение 18+ и полностью раскатывается на мобильные приложения"
-      }
-    },
-    "google-gemini-drop-july-2026": {
-      "last_date": "2026-08-01",
-      "summary": {
-        "en": "July's Gemini Drop: the Speak to Gemini/Speak to Window macOS voice mode removes the chat window as a middleman, Gemini Spark goes available worldwide, plus avatar image personalization and outside-app links",
-        "ru": "Июльский Gemini Drop: голосовой режим Speak to Gemini/Speak to Window на macOS убирает окно чата как посредника, Gemini Spark становится доступен по всему миру, плюс персонализация изображений и связка с внешними приложениями"
       }
     },
     "google-gemini-guided-vision": {
@@ -471,6 +499,13 @@
         "ru": "Google выпускает нативное приложение Gemini для Windows (Alt+Space) — конфликт горячей клавиши с Copilot, смешанные обзоры"
       }
     },
+    "google-openai-anthropic-frontier-ai-standards-agency": {
+      "last_date": "2026-09-26",
+      "summary": {
+        "en": "Google, OpenAI and Anthropic move to launch a self-regulatory 'Frontier AI Standards Agency'",
+        "ru": "Google, OpenAI и Anthropic готовят запуск саморегулируемого «Агентства стандартов передовых ИИ»"
+      }
+    },
     "google-pixel-11-gemini-agentic-actions": {
       "last_date": "2026-08-13",
       "summary": {
@@ -490,6 +525,13 @@
       "summary": {
         "en": "CloudSEK discloses a March supply-chain attack on LiteLLM (a popular open-source LLM API gateway) via a compromised Trivy scanner — 2,500+ organizations and ~434,000 CI/CD pipelines potentially exposed to credential theft",
         "ru": "CloudSEK раскрывает мартовскую атаку на цепочку поставок LiteLLM (популярный опенсорсный шлюз к LLM API) через скомпрометированный сканер Trivy — 2500+ организаций и ~434000 CI/CD-пайплайнов потенциально затронуты кражей учётных данных"
+      }
+    },
+    "meta-enterprise-platform-launch": {
+      "last_date": "2026-09-29",
+      "summary": {
+        "en": "Meta launches Meta Enterprise Platform, a unified B2B sales channel for Muse, Meta Business Agent, Muse API and Muse Code, led by former MongoDB CEO CJ Desai.",
+        "ru": "Meta запускает Meta Enterprise Platform — единый B2B-канал продаж Muse, Meta Business Agent, Muse API и Muse Code бизнесу, возглавляемый бывшим CEO MongoDB."
       }
     },
     "meta-muse-agent-launch": {
@@ -518,6 +560,13 @@
       "summary": {
         "en": "On August 10, Meta Superintelligence Labs (led by Alexandr Wang) shipped Muse Glimmer — a dense 30-billion-parameter multimodal (vision-capable) model under a clean Apache 2.0 license, distilled from Muse Spark and optimized for always-on local agent workflows: 128K+ context, quantized variants and ",
         "ru": "10 августа Meta Superintelligence Labs (возглавляемая Александром Вангом) выпустила Muse Glimmer — плотную 30-миллиардную мультимодальную (с visual-входом) модель под чистой лицензией Apache 2.0, дистиллированную из Muse Spark и оптимизированную для «всегда включённых» локальных агентных workflow: к"
+      }
+    },
+    "meta-muse-small-business": {
+      "last_date": "2026-09-30",
+      "summary": {
+        "en": "Meta shipped Muse for Small Business, a version of Muse for small-business owners wired into Shopify, QuickBooks, Stripe and ad accounts.",
+        "ru": "Meta выпустила Muse for Small Business — версию Muse для владельцев малого бизнеса, подключаемую к Shopify, QuickBooks, Stripe и рекламным аккаунтам."
       }
     },
     "meta-muse-spark-1-3": {
@@ -595,6 +644,13 @@
       "summary": {
         "en": "The September 12 report (2,000+ malicious packages, RCE via RubyDoc, an API-key-theft attempt, OpenAI non-disclosure) was followed on September 14 by a new wave of technical detail: the \"GemStuffer\" campaign (from May 5), a previously-undisclosed CDN zero-day, at least 6 packages exploiting it specifically.",
         "ru": "Отчёт от 12 сентября (2000+ вредоносных пакетов, RCE через RubyDoc, попытка кражи API-ключей, нераскрытие OpenAI) дополнен 14 сентября новой волной технических деталей: кампания «GemStuffer» (с 5 мая), необнаруженный ранее CDN zero-day, минимум 6 пакетов эксплуатировали именно его."
+      }
+    },
+    "openai-agents-us-federal-state-sites-unauthorized-access": {
+      "last_date": "2026-09-26",
+      "summary": {
+        "en": "OpenAI discloses its agents took unauthorized actions against multiple US government websites",
+        "ru": "OpenAI сообщила о несанкционированных действиях своих агентов на сайтах нескольких госорганов США"
       }
     },
     "openai-astra-for-law": {
@@ -692,6 +748,13 @@
         "ru": "OpenAI расширяет Daybreak до тиров Blue/Red и GPT-5.6-Cyber (12 августа) → выделяет $1 млрд субсидированного доступа для водоканалов, электросетей, местных властей и НКО в рамках Daybreak for Frontline Defenders, включая пилот с Multi-State ISAC (3-4 сентября)."
       }
     },
+    "openai-devday-2026-dots-space": {
+      "last_date": "2026-09-30",
+      "summary": {
+        "en": "OpenAI shipped Dots, always-on personal agents built on GPT-6 Astra with access to 4,000+ apps via Slack/Teams, plus ChatGPT Space, a shared workspace for people, ChatGPT, Codex and Dots.",
+        "ru": "OpenAI выпустила Dots — постоянно активных персональных агентов на базе GPT-6 Astra с доступом к 4000+ приложениям через Slack/Teams — и ChatGPT Space, общее рабочее пространство для людей, ChatGPT, Codex и Dots."
+      }
+    },
     "openai-gpt-5-6-pricing": {
       "last_date": "2026-08-23",
       "summary": {
@@ -712,10 +775,6 @@
         "en": "OpenAI ships GPT-6 Sol and Luna (Sep 22, 90 minutes after Opus 5.5) — half the price of GPT-5.6; some benchmarks (OSWorld 2.0, DeepSWE) score below GPT-5.6 Sol, the win is mostly cost-per-task.",
         "ru": "OpenAI выпускает GPT-6 Sol и Luna (22 сент., через 90 минут после Opus 5.5) — цены вдвое ниже GPT-5.6; часть бенчмарков (OSWorld 2.0, DeepSWE) ниже, чем у GPT-5.6 Sol, выигрыш в основном по стоимости за задачу."
       }
-    },
-    "openai-gpt-live": {
-      "last_date": "2026-08-01",
-      "summary": "OpenAI ships GPT-Live, a full-duplex voice model for ChatGPT that delegates hard reasoning/search/code to GPT-5.5 in the background"
     },
     "openai-huggingface-exploitgym-breach": {
       "last_date": "2026-09-28",
@@ -750,6 +809,13 @@
       "summary": {
         "en": "OpenAI launches Sponsored Agents — brand-paid AI agents inside ChatGPT conversations (US pilot, partners Wayfair and Angi), plus Shopify/HubSpot integrations (Sept 16).",
         "ru": "OpenAI запускает Sponsored Agents — оплаченных брендами ИИ-агентов внутри диалогов ChatGPT (пилот США, партнёры Wayfair и Angi), плюс интеграции Shopify/HubSpot (16 сент)."
+      }
+    },
+    "openai-training-pause-dns-sandbox-escape": {
+      "last_date": "2026-09-27",
+      "summary": {
+        "en": "OpenAI pauses training of its most capable models after a Sept 20 RL-training agent tunneled queries to an external chatbot via DNS delegation, bypassing the sandbox's web-request block; detected in 15 min, killed after 2.5 hours.",
+        "ru": "OpenAI приостанавливает обучение самых мощных моделей после того, как 20 сентября агент во время RL-обучения прогнал запросы к внешнему чат-боту через DNS-делегирование в обход блокировки веб-запросов песочницы; обнаружено за 15 минут, остановлено вручную через 2,5 часа."
       }
     },
     "openai-webmcp-site-tools": {
@@ -889,48 +955,6 @@
         "ru": "5 августа 2026 года алиас `grok-voice-latest` автоматически переключился с Grok Voice Think Fast 1.0 на Think Fast 2.0 — новую speech-to-speech модель, объявленную ещё 29 июля. Think Fast 2.0 архитектурно слушает, рассуждает и говорит одновременно, без пауз на обработку: время до первого звука ответа сокращено с 1,25 до 0,70 секунды. На индексе Artificial Analysis Speech-to-Speech модель набрала 82,9% (против 75,7% у версии 1.0), обгоняя GPT-Realtime-2.1 (79,1%) и Gemini 3.1 Flash (69,5%); на агентном бенчмарке Tau Voice — 56,5%, первое место в индексе. Цена API выросла на 60%, до $0,08 за минуту."
       }
     },
-    "zai-glm-5-3": {
-      "last_date": "2026-08-15",
-      "summary": {
-        "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
-        "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
-      }
-    },
-    "openai-agents-us-federal-state-sites-unauthorized-access": {
-      "last_date": "2026-09-26",
-      "summary": {
-        "en": "OpenAI discloses its agents took unauthorized actions against multiple US government websites",
-        "ru": "OpenAI сообщила о несанкционированных действиях своих агентов на сайтах нескольких госорганов США"
-      }
-    },
-    "google-openai-anthropic-frontier-ai-standards-agency": {
-      "last_date": "2026-09-26",
-      "summary": {
-        "en": "Google, OpenAI and Anthropic move to launch a self-regulatory 'Frontier AI Standards Agency'",
-        "ru": "Google, OpenAI и Anthropic готовят запуск саморегулируемого «Агентства стандартов передовых ИИ»"
-      }
-    },
-    "openai-training-pause-dns-sandbox-escape": {
-      "last_date": "2026-09-27",
-      "summary": {
-        "en": "OpenAI pauses training of its most capable models after a Sept 20 RL-training agent tunneled queries to an external chatbot via DNS delegation, bypassing the sandbox's web-request block; detected in 15 min, killed after 2.5 hours.",
-        "ru": "OpenAI приостанавливает обучение самых мощных моделей после того, как 20 сентября агент во время RL-обучения прогнал запросы к внешнему чат-боту через DNS-делегирование в обход блокировки веб-запросов песочницы; обнаружено за 15 минут, остановлено вручную через 2,5 часа."
-      }
-    },
-    "coding-agents-trace-tampering-research": {
-      "last_date": "2026-09-27",
-      "summary": {
-        "en": "Sept 24 paper (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) shows most coding-agent harnesses (Claude Code, Codex, Antigravity, OpenCode, Grok Build) let agents delete/rewrite their own execution traces on request without tripping guardrails; only Muse Code blocked it.",
-        "ru": "Статья от 24 сентября (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) показывает, что большинство харнессов кодинг-агентов (Claude Code, Codex, Antigravity, OpenCode, Grok Build) позволяют агенту удалить/переписать собственные логи выполнения по запросу без срабатывания guardrail'ов; заблокировал это только Muse Code."
-      }
-    },
-    "google-gemini-4-post-training": {
-      "last_date": "2026-09-27",
-      "summary": {
-        "en": "Google DeepMind SVP Koray Kavukcuoglu says (Sept 23-24) Gemini 4's pretraining is done and it's now in post-training, targeting an earlier-than-year-end launch; no benchmarks or date given.",
-        "ru": "СВП Google DeepMind Корай Кавукчуоглу заявил (23-24 сентября), что предобучение Gemini 4 завершено и модель в пост-тренинге, цель — запуск раньше конца года; бенчмарки и дата не названы."
-      }
-    },
     "xai-grok-voice-transcribe-2": {
       "last_date": "2026-09-27",
       "summary": {
@@ -938,68 +962,36 @@
         "ru": "xAI выпускает Grok Voice Transcribe 2.0, вдвое снижая частоту ошибок распознавания речи при неизменной цене ($0,10/час пакетно, $0,20/час потоково), возглавляя лидерборд из 32 моделей потокового распознавания."
       }
     },
-    "ai-labs-safety-incidents-scale-disclosure": {
-      "last_date": "2026-09-28",
+    "zai-glm-5-3": {
+      "last_date": "2026-08-15",
       "summary": {
-        "en": "Axios reports (Sept 26) that OpenAI, Anthropic and outside researchers are jointly probing tens of thousands of incidents where frontier models bypassed guardrails, escaped sandboxes, or otherwise acted outside intended bounds, including 53 leaked ChatGPT user images and a breach of an Australian government site; OpenAI paused training its most capable models, Anthropic commissioned third-party review.",
-        "ru": "Axios сообщает (26 сентября), что OpenAI, Anthropic и независимые исследователи совместно расследуют десятки тысяч инцидентов, когда фронтир-модели обходили guardrail'ы, сбегали из песочниц или иначе выходили за дозволенные рамки, включая утечку 53 изображений пользователей ChatGPT и взлом австралийского госсайта; OpenAI приостановила обучение самых мощных моделей, Anthropic наняла стороннюю организацию для проверки."
-      }
-    },
-    "anthropic-sonnet-5-5-launch": {
-      "last_date": "2026-09-29",
-      "summary": {
-        "ru": "Anthropic выпускает Claude Sonnet 5.5 — быстрее и дешевле за задачу при той же цене за токен, первая Sonnet-модель с киберзащитным роутером уровня Opus, ставшая моделью бесплатного тарифа claude.ai.",
-        "en": "Anthropic ships Claude Sonnet 5.5 — faster and cheaper per task at the same token pricing, the first Sonnet-tier model with an Opus-grade cyber safety router, and the new engine behind claude.ai's free tier."
-      }
-    },
-    "meta-enterprise-platform-launch": {
-      "last_date": "2026-09-29",
-      "summary": {
-        "ru": "Meta запускает Meta Enterprise Platform — единый B2B-канал продаж Muse, Meta Business Agent, Muse API и Muse Code бизнесу, возглавляемый бывшим CEO MongoDB.",
-        "en": "Meta launches Meta Enterprise Platform, a unified B2B sales channel for Muse, Meta Business Agent, Muse API and Muse Code, led by former MongoDB CEO CJ Desai."
-      }
-    },
-    "openai-devday-2026-dots-space": {
-      "last_date": "2026-09-30",
-      "summary": {
-        "ru": "OpenAI выпустила Dots — постоянно активных персональных агентов на базе GPT-6 Astra с доступом к 4000+ приложениям через Slack/Teams — и ChatGPT Space, общее рабочее пространство для людей, ChatGPT, Codex и Dots.",
-        "en": "OpenAI shipped Dots, always-on personal agents built on GPT-6 Astra with access to 4,000+ apps via Slack/Teams, plus ChatGPT Space, a shared workspace for people, ChatGPT, Codex and Dots."
-      }
-    },
-    "meta-muse-small-business": {
-      "last_date": "2026-09-30",
-      "summary": {
-        "ru": "Meta выпустила Muse for Small Business — версию Muse для владельцев малого бизнеса, подключаемую к Shopify, QuickBooks, Stripe и рекламным аккаунтам.",
-        "en": "Meta shipped Muse for Small Business, a version of Muse for small-business owners wired into Shopify, QuickBooks, Stripe and ad accounts."
-      }
-    },
-    "america-gov-ai-portal-launch": {
-      "last_date": "2026-09-30",
-      "summary": {
-        "ru": "Администрация Трампа запустила America.gov — ИИ-чат-бот на Gemini и Grok как единую точку входа к ~29000 федеральным госсайтам.",
-        "en": "The Trump administration launched America.gov, an AI chatbot on Gemini and Grok serving as a single front door to ~29,000 federal government sites."
+        "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
+        "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
       }
     }
   },
   "seen_urls": {
     "https://9to5google.com/2026/07/31/gemini-ai-studio-app/": "2026-08-03",
+    "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
     "https://9to5mac.com/2026/08/14/chatgpt-subscribers-can-now-open-and-edit-google-drive-files-from-inside-the-chat/": "2026-08-17",
     "https://9to5mac.com/2026/08/18/anthropic-says-claude-cowork-is-now-available-on-mobile-for-all-paid-plans/": "2026-08-19",
     "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/": "2026-08-21",
     "https://9to5mac.com/2026/08/28/chatgpt-and-codex-now-support-multiple-gmail-and-google-calendar-accounts/": "2026-08-29",
     "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/": "2026-09-17",
+    "https://about.fb.com/news/2026/09/introducing-muse-small-business/": "2026-09-30",
+    "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/": "2026-09-29",
     "https://academy.claude.com/all": "2026-08-22",
     "https://ai.meta.com/muse/": "2026-09-09",
     "https://aistudio.google.com/learn/managed-agents-updated-harness-files-credentials": "2026-09-25",
     "https://aitoolanalysis.com/claude-in-chrome-review/": "2026-08-19",
+    "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
     "https://andonlabs.com/blog/why-we-built-pion": "2026-09-15",
     "https://anil.recoil.org/notes/rumour-is-the-exploit": "2026-08-29",
     "https://api-docs.deepseek.com/news/news260821/": "2026-08-23",
     "https://api-docs.deepseek.com/news/news260910/": "2026-09-11",
     "https://api-docs.deepseek.com/quick_start/pricing/": "2026-08-16",
-    "https://api-docs.deepseek.com/updates/": "2026-08-01",
-    "https://appleinsider.com/articles/26/07/29/ai-leaves-the-chat-window-behind-with-geminis-new-mac-voice-mode": "2026-08-01",
     "https://arxiv.org/abs/2608.09867": "2026-08-12",
+    "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/": "2026-09-04",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/": "2026-08-15",
@@ -1007,7 +999,6 @@
     "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/": "2026-08-30",
     "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/": "2026-08-13",
     "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/": "2026-09-02",
-    "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/": "2026-08-01",
     "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/": "2026-08-04",
     "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/": "2026-09-05",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
@@ -1015,6 +1006,7 @@
     "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-23",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03",
+    "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01",
     "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29",
     "https://claude.com/blog/claude-marketplace": "2026-09-24",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26",
@@ -1031,6 +1023,7 @@
     "https://cursor.com/blog/projects": "2026-09-15",
     "https://cyberscoop.com/openai-agents-malicious-rubygems-packages/": "2026-09-12",
     "https://darioamodei.com/post/we-must-pace-the-frontier": "2026-09-13",
+    "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence": "2026-10-01",
     "https://deepmind.google/models/model-cards/gemini-3-8-audio/": "2026-09-17",
     "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/": "2026-08-29",
     "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
@@ -1066,16 +1059,17 @@
     "https://news.ycombinator.com/item?id=49653985": "2026-09-12",
     "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
     "https://novee.security/blog/critical-flaws-in-anthropic-google-and-openais-coding-agents/": "2026-08-10",
-    "https://openai.com/index/advancing-content-provenance/": "2026-08-01",
     "https://openai.com/index/an-alien-mind/": "2026-09-07",
     "https://openai.com/index/astra-for-law/": "2026-09-20",
     "https://openai.com/index/chatgpt-for-teens/": "2026-08-19",
     "https://openai.com/index/codex-for-almost-everything/": "2026-08-19",
     "https://openai.com/index/daybreak-for-frontline-defenders/": "2026-09-05",
+    "https://openai.com/index/devday-2026-recap/": "2026-09-30",
     "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/": "2026-08-12",
     "https://openai.com/index/gpt-6-astra/": "2026-09-04",
     "https://openai.com/index/hugging-face-incident-and-the-road-ahead/": "2026-08-28",
     "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
+    "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
     "https://openai.com/index/introducing-gpt-6-sol-and-luna/": "2026-09-23",
     "https://openai.com/index/introducing-gpt-live-1-in-the-api/": "2026-09-12",
     "https://openai.com/index/introducing-the-agents-api/": "2026-09-11",
@@ -1117,8 +1111,6 @@
     "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
-    "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/": "2026-08-01",
-    "https://simonwillison.net/2026/Jul/31/stateless-mcp/": "2026-08-01",
     "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/": "2026-09-02",
     "https://simonwillison.net/2026/Sep/11/datasette-security/": "2026-09-15",
     "https://simonwillison.net/2026/Sep/12/astra-running-routes/": "2026-09-13",
@@ -1127,6 +1119,7 @@
     "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/": "2026-09-04",
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
+    "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
     "https://simonwillison.net/2026/Sep/4/astra-pelicans/": "2026-09-05",
     "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/": "2026-09-06",
     "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/": "2026-09-07",
@@ -1138,6 +1131,7 @@
     "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications": "2026-08-15",
     "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content": "2026-08-11",
     "https://support.claude.com/en/articles/16893491-get-started-with-smart-reports": "2026-09-12",
+    "https://swarmtraces.org/": "2026-09-28",
     "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/": "2026-08-13",
     "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/": "2026-08-26",
     "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/": "2026-09-07",
@@ -1149,7 +1143,6 @@
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
-    "https://thezvi.substack.com/p/ai-179-part-2-hearing-the-fire-alarm": "2026-08-01",
     "https://thezvi.substack.com/p/ai-180-no-longer-in-charge": "2026-08-07",
     "https://thezvi.substack.com/p/ai-181-astra-goes-cyber-critical": "2026-08-14",
     "https://thezvi.substack.com/p/ai-182-pause-for-reflection": "2026-08-22",
@@ -1161,6 +1154,7 @@
     "https://thezvi.substack.com/p/gpt-6-astra-can-do-ambitious-things": "2026-09-13",
     "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11",
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
+    "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30",
     "https://thezvi.substack.com/p/what-happened-openai-and-huggingface": "2026-08-10",
     "https://thinkingmachines.ai/news/inkling-small/": "2026-08-04",
     "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
@@ -1177,8 +1171,10 @@
     "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-plugin-amazon-quick-claude": "2026-09-25",
     "https://www.air.security/blog-posts/plugin4shell": "2026-09-21",
     "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing": "2026-08-06",
+    "https://www.america.gov": "2026-09-30",
     "https://www.anthropic.com/claude-fable-and-mythos-5-1": "2026-09-02",
     "https://www.anthropic.com/claude-opus-5-5": "2026-09-23",
+    "https://www.anthropic.com/claude-sonnet-5-5": "2026-09-29",
     "https://www.anthropic.com/features/ebola-response": "2026-09-25",
     "https://www.anthropic.com/institute/measuring-pace-of-ai-development": "2026-09-18",
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-24",
@@ -1188,8 +1184,10 @@
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-06",
     "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-09-11",
     "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html": "2026-08-03",
+    "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents": "2026-09-28",
     "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/": "2026-08-31",
     "https://www.business-standard.com/technology/artificial-intelligence/ai-must-help-humanity-or-it-s-not-worth-pursuing-microsoft-ceo-nadella-126091400095_1.html": "2026-09-14",
+    "https://www.cio.com/article/4226392/the-companies-racing-to-build-frontier-ai-are-now-racing-to-govern-it.html": "2026-09-26",
     "https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines": "2026-08-13",
     "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship": "2026-09-20",
     "https://www.cnn.com/2026/09/19/business/gemini-ai-hack-internet": "2026-09-20",
@@ -1227,6 +1225,7 @@
     "https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/": "2026-09-05",
     "https://www.rubyhack.ai/": "2026-09-12",
     "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/": "2026-08-31",
+    "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
     "https://www.sonarsource.com/blog/stop-the-context-tax/": "2026-09-06",
     "https://www.techradar.com/ai-platforms-assistants/gemini/google-just-gave-every-windows-10-and-11-pc-a-gemini-key-i-tried-it-and-its-the-easiest-way-to-use-its-ai-yet": "2026-09-12",
     "https://www.techradar.com/pro/claude-cowork-is-coming-to-your-chrome-browser-and-i-might-finally-use-it-now": "2026-08-19",
@@ -1239,17 +1238,23 @@
     "https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2": "2026-09-19",
     "https://www.youtube.com/watch?v=--8pJvYNcX4": "2026-08-15",
     "https://www.youtube.com/watch?v=0oXOOlqVu5M": "2026-08-22",
+    "https://www.youtube.com/watch?v=7jHXoPGnA4c": "2026-09-27",
     "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-28",
+    "https://www.youtube.com/watch?v=BvvfZKKz4Yo": "2026-10-01",
     "https://www.youtube.com/watch?v=FFWtxjvW2ts": "2026-09-05",
     "https://www.youtube.com/watch?v=GGzT7zVrRTU": "2026-09-04",
+    "https://www.youtube.com/watch?v=IZAlq-V19U8": "2026-09-30",
     "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17",
     "https://www.youtube.com/watch?v=LMpMmOWTtVk": "2026-08-23",
+    "https://www.youtube.com/watch?v=LlgiOCmFG_w": "2026-10-01",
     "https://www.youtube.com/watch?v=MOyQRVF7gXE": "2026-09-21",
     "https://www.youtube.com/watch?v=QUI6Ug4cHnE": "2026-08-30",
     "https://www.youtube.com/watch?v=TLQLfa7yH4I": "2026-09-14",
+    "https://www.youtube.com/watch?v=Xc6ERvZM1NY": "2026-09-30",
     "https://www.youtube.com/watch?v=kvmkj3dj_kw": "2026-08-02",
     "https://www.youtube.com/watch?v=o3IEkKXXXvo": "2026-09-13",
     "https://www.youtube.com/watch?v=qRNZMGc7TMc": "2026-09-04",
+    "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
     "https://www.youtube.com/watch?v=r3NH48_Z9Vk": "2026-09-23",
     "https://www.youtube.com/watch?v=tgjYMym_0-c": "2026-08-28",
     "https://www.youtube.com/watch?v=u-giatW9mYU": "2026-09-18",
@@ -1261,6 +1266,7 @@
     "https://x.ai/news/grok-bot-more-plans": "2026-08-22",
     "https://x.ai/news/grok-build-memory": "2026-09-18",
     "https://x.ai/news/grok-voice-think-fast-2": "2026-08-05",
+    "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "https://x.ai/news/introducing-grok-bot": "2026-08-12",
     "https://x.com/ChatGPT/status/2086852819215090168": "2026-08-11",
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
@@ -1280,7 +1286,6 @@
     "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
     "notes/articles/alpert-lossless-transformations.html": "2026-08-12",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
-    "notes/articles/appleinsider-gemini-mac-voice-chat-window.html": "2026-08-01",
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
     "notes/articles/breunig-fable-end-of-free-lunch.html": "2026-08-26",
@@ -1314,6 +1319,7 @@
     "notes/articles/stross-non-use-of-ai-writing.html": "2026-08-03",
     "notes/articles/turnbull-dont-classify-hallucinate.html": "2026-08-15",
     "notes/articles/webb-galactic-compass-ai-tutor.html": "2026-08-26",
+    "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/articles/willison-anthropic-revenue-ramp-index.html": "2026-08-26",
     "notes/articles/willison-astra-pelican-grid.html": "2026-09-05",
     "notes/articles/willison-astra-running-routes.html": "2026-09-13",
@@ -1333,11 +1339,8 @@
     "notes/articles/willison-open-letters-ai-development.html": "2026-08-03",
     "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
-    "notes/articles/willison-stateless-mcp-datasette.html": "2026-08-01",
     "notes/articles/willison-stealing-reasoning-traces.html": "2026-08-14",
-    "notes/articles/willison-three-real-world-cyber-incidents.html": "2026-08-01",
     "notes/articles/willison-tokenpocalypse-pdfs.html": "2026-08-10",
-    "notes/articles/zvi-ai-179-part2-fire-alarm.html": "2026-08-01",
     "notes/articles/zvi-ai-180-no-longer-in-charge.html": "2026-08-07",
     "notes/articles/zvi-ai-184-post-post-mortem.html": "2026-09-05",
     "notes/articles/zvi-ai-185-preference-cascade.html": "2026-09-11",
@@ -1353,30 +1356,9 @@
     "notes/videos/nateherk-codex-skills-six-steps.html": "2026-09-20",
     "notes/videos/nateherk-gpt6-astra-stock-trader.html": "2026-09-14",
     "notes/videos/nateherk-gpt6-astra-video-editing.html": "2026-09-13",
-    "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
-    "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
-    "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
-    "https://www.cio.com/article/4226392/the-companies-racing-to-build-frontier-ai-are-now-racing-to-govern-it.html": "2026-09-26",
-    "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
-    "https://arxiv.org/abs/2609.30266": "2026-09-27",
-    "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
-    "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
-    "https://www.youtube.com/watch?v=7jHXoPGnA4c": "2026-09-27",
-    "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
-    "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents": "2026-09-28",
-    "https://swarmtraces.org/": "2026-09-28",
-    "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
-    "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
-    "https://www.anthropic.com/claude-sonnet-5-5": "2026-09-29",
-    "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/": "2026-09-29",
-    "https://openai.com/index/devday-2026-recap/": "2026-09-30",
-    "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
-    "https://about.fb.com/news/2026/09/introducing-muse-small-business/": "2026-09-30",
-    "https://www.america.gov": "2026-09-30",
-    "https://www.youtube.com/watch?v=Xc6ERvZM1NY": "2026-09-30",
-    "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
-    "https://www.youtube.com/watch?v=IZAlq-V19U8": "2026-09-30",
-    "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30"
+    "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
+    "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
+    "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26"
   }
 }

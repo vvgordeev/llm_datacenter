@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «I Tested OpenAI's Dots vs. Meta's Muse» — Nate Herk — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-09-30 · 16:30</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-09-30 · 16:30</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Dots против Muse на практике: что на самом деле получаешь за deus ex machina</span>
+      <span data-lang="en">Dots vs. Muse, hands-on: what you actually get behind the always-on-agent pitch</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=BvvfZKKz4Yo" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует yt-dlp на уровне доступа к youtube.com (403 на туннель через прокси).</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's network policy blocks yt-dlp's access to youtube.com (403 on the proxy tunnel).</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нейт Герк кладёт рядом два «постоянно активных» агента, выпущенных почти одновременно, — Dots от OpenAI и Muse Spark 1.3 от Meta — и честно признаётся с первых секунд: Dots ощущается как продукт, который OpenAI выпустила второпях, чтобы догнать конкурентов <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=22">[00:22]</a>. В подтверждение он показывает запись живого провала демонстрации Dots прямо на DevDay <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=43">[00:43]</a> — наглядный контраст с обычно отполированными презентациями OpenAI.</span>
+      <span data-lang="en">Nate Herk puts two almost-simultaneously-launched "always-on" agents side by side — OpenAI's Dots and Meta's Muse Spark 1.3 — and is upfront from the first seconds: Dots feels like a product OpenAI rushed out to catch up with competitors <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=22">[00:22]</a>. He backs this up with footage of Dots' live demo failing on stage at DevDay <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=43">[00:43]</a> — a stark contrast to OpenAI's usually polished launches.</span>
+    </p>
+
+    <h2><span data-lang="ru">Разные базовые модели — разная специализация</span><span data-lang="en">Different base models, different strengths</span></h2>
+    <p>
+      <span data-lang="ru">Сравнивая базовые модели <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=101">[01:41]</a>, Герк отмечает, что Dots работает на GPT-6 Astra — более мощной модели для сложных задач: кодинга, разработки ПО, многошаговой автоматизации. Muse Spark 1.3, напротив, сильнее в общей работе со знаниями и рутинной помощи, но не предназначена тягаться с Astra на инженерных задачах. Разница в базовых моделях задаёт и разницу в сценариях использования, которую видео разбирает дальше.</span>
+      <span data-lang="en">Comparing the underlying models <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=101">[01:41]</a>, Herk notes that Dots runs on GPT-6 Astra — the stronger model for hard tasks like coding, software development and multi-step automation. Muse Spark 1.3, by contrast, is better at general knowledge work and routine assistance but isn't built to compete with Astra on engineering tasks. That gap in base models drives the gap in use cases the rest of the video walks through.</span>
+    </p>
+
+    <h2><span data-lang="ru">Muse выигрывает интерфейсом, Dots — интеграцией с рабочими инструментами</span><span data-lang="en">Muse wins on interface, Dots on integrating with work tools</span></h2>
+    <p>
+      <span data-lang="ru">Герк показывает библиотеку артефактов Muse и её редактируемые файлы памяти — так называемые «soul files», которые пользователь может открыть и поправить вручную <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=149">[02:29]</a>, а также удобные для нетехнического пользователя функции — постановку целей, генерацию идей и настраиваемую ленту <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=578">[09:38]</a>. У Dots сильная сторона — не интерфейс, а бесшовная интеграция в Slack для командной коммуникации <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=283">[04:43]</a>: агент встроен туда, где технические команды и так работают, а не требует отдельного приложения.</span>
+      <span data-lang="en">Herk shows Muse's artifact library and its editable memory files — the so-called "soul files" a user can open and edit by hand <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=149">[02:29]</a> — plus features aimed at non-technical users: goal-setting, idea generation, and a customizable feed <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=578">[09:38]</a>. Dots' strength isn't the interface — it's seamless Slack integration for team communication <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=283">[04:43]</a>: the agent sits where technical teams already work instead of demanding a separate app.</span>
+    </p>
+
+    <h2><span data-lang="ru">Главная слабость Dots: не держит собственное расписание задач</span><span data-lang="en">Dots' core weakness: it doesn't track its own task schedule</span></h2>
+    <p>
+      <span data-lang="ru">Самая практичная часть ролика — список реальных ограничений Dots на первой неделе использования <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=695">[11:35]</a>: агент путается в уже запланированных задачах и не всегда понимает собственный рабочий процесс — то берётся повторно за то, что уже сделал, то теряет контекст запланированного на потом. Герк подводит итог так <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=809">[13:29]</a>: выбор между Dots и Muse — это не вопрос «какой агент лучше», а вопрос существующего рабочего процесса пользователя. Технической команде, уже живущей в экосистеме ChatGPT/Codex, Dots встраивается без трений; тем, кому нужен более доступный личный помощник с опорой на соцсети Meta и мягкий, настраиваемый интерфейс — ближе Muse.</span>
+      <span data-lang="en">The most practical part of the video is Herk's running list of Dots' real-world limitations in its first week <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=695">[11:35]</a>: the agent gets confused about tasks it has already scheduled and doesn't always track its own workflow — redoing work it already finished, or losing track of what it deferred for later. Herk's bottom line <a class="ts" href="https://www.youtube.com/watch?v=BvvfZKKz4Yo&t=809">[13:29]</a>: choosing between Dots and Muse isn't about which agent is "better" — it's about the user's existing workflow. A technical team already living in the ChatGPT/Codex ecosystem gets Dots with no friction; anyone wanting a more accessible personal assistant with Meta's social integrations and a softer, customizable interface is better served by Muse.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
