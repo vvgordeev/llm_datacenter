@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Почему Дваркеш неправ насчёт Computer Use» — Latent Space — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект эпизода подкаста · Latent Space · 2026-09-30</span>
+      <span data-lang="en">Podcast episode digest · Latent Space · 2026-09-30</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Почему Дваркеш неправ насчёт Computer Use + как OpenAI за неделю выпустила конкурента Jev</span>
+      <span data-lang="en">Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/devday-2026" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал эпизода ↗</span><span data-lang="en">Original episode ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ведущие Latent Space (swyx и Alessio Fanelli) разбирают анонсы OpenAI DevDay 2026 вместе с Ари Вайнштейном, который руководит продуктом и инженерией в команде Computer Use. Отправная точка разговора — полемика с тезисом Дваркеша Пателя о том, что агенты, управляющие компьютером «как человек» (через экран, мышь и клавиатуру), — тупиковый и переоценённый путь по сравнению с API-ориентированными агентами. Гости подкаста с этим не согласны и используют свежие релизы DevDay как аргумент: Computer Use из нишевой демонстрации за год превратился в кодовую инфраструктуру, на которой строятся сразу несколько продуктов OpenAI.</span>
+      <span data-lang="en">Latent Space's hosts (swyx and Alessio Fanelli) walk through OpenAI DevDay 2026's announcements with Ari Weinstein, who leads product and engineering for Computer Use. The conversation's starting point is pushback against Dwarkesh Patel's claim that agents operating a computer "the way a human does" (through the screen, mouse and keyboard) are a dead-end, overhyped approach compared to API-native agents. The guest disagrees, and uses the fresh DevDay releases as the counter-argument: over a year, Computer Use went from a niche demo to shared infrastructure underpinning several OpenAI products at once.</span>
+    </p>
+
+    <h2><span data-lang="ru">Computer Use как общая инфраструктура, а не отдельная фича</span><span data-lang="en">Computer Use as shared infrastructure, not a standalone feature</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой довод эпизода: Computer Use в Agents API — это тот же механизм, что уже работает внутри Codex и ChatGPT, вынесенный наружу как платформенная возможность для сторонних разработчиков. В подкасте демонстрируется «app shots» — способ взять контекст того, чем пользователь занят прямо сейчас на экране, и передать его в Codex или ChatGPT, чтобы агент продолжил работу с места, где человек остановился, а не начинал заново с текстового описания задачи. Это иллюстрирует общий подход команды: вместо того чтобы для каждого продукта придумывать свой способ «видеть» экран пользователя, один и тот же слой Computer Use переиспользуется везде.</span>
+      <span data-lang="en">The episode's central claim: Computer Use in the Agents API is the same mechanism already running inside Codex and ChatGPT, exposed outward as a platform capability for third-party developers. The podcast walks through "app shots" — a way to grab the context of whatever the user is doing on screen right now and hand it to Codex or ChatGPT, so the agent continues from where the person left off instead of starting over from a text description of the task. It illustrates the team's general approach: rather than inventing a bespoke way to "see" the screen for every product, the same Computer Use layer gets reused everywhere.</span>
+    </p>
+
+    <h2><span data-lang="ru">Decisions API: более быстрый и дешёвый путь для простых решений</span><span data-lang="en">The Decisions API: a faster, cheaper path for simple decisions</span></h2>
+    <p>
+      <span data-lang="ru">Вторая часть разговора — о Decisions API, новом сопутствующем интерфейсе. Его отличие от полного Computer Use: параллельный инференс, отсутствие обязательного шага рассуждения («reasoning») и меньшая, более быстрая модель под капотом. Идея в том, что далеко не каждое действие агента на экране требует многошагового обдумывания — для большого класса простых, быстрых решений (кликнуть нужную кнопку, выбрать значение в списке) выгоднее использовать лёгкий и дешёвый путь, оставляя тяжёлое рассуждение для действительно сложных шагов. По словам гостя, GPT-6.1 Sol особенно хорошо подходит для Computer Use именно по экономике: он обходится примерно впятеро дешевле Astra в целом и всемеро дешевле конкретно для задач Computer Use.</span>
+      <span data-lang="en">The second half of the conversation covers the Decisions API, a new companion interface. Unlike full Computer Use, it runs parallel inference, skips the mandatory reasoning step, and uses a smaller, faster model under the hood. The idea: not every on-screen action an agent takes needs multi-step deliberation — for a large class of fast, simple decisions (click the right button, pick a value from a list), a lighter, cheaper path pays off, saving heavy reasoning for the steps that actually need it. The guest notes that GPT-6.1 Sol is particularly well suited to Computer Use on pure economics: it runs at roughly a fifth of Astra's cost overall, and a seventh of the cost specifically for Computer Use workloads.</span>
+    </p>
+
+    <h2><span data-lang="ru">Неделя на ответ конкуренту: как родился этот подход</span><span data-lang="en">A week to respond to a competitor: how the approach came together</span></h2>
+    <p>
+      <span data-lang="ru">Название эпизода отсылает к конкретному эпизоду конкурентной гонки: вскоре после того, как другая лаборатория представила Jev — модель-«решатель» нового типа (так называемый System One, модель для быстрых решений без полноценного рассуждения, разобранная Саймоном Уиллисоном в отдельном посте), команда OpenAI собрала и выпустила собственный аналог — Decisions API — в пределах одной недели. Для подкаста это не просто курьёз о скорости разработки, а иллюстрация общего тезиса эпизода: индустрия быстро сходится на том, что «агенту для каждого чиха нужна полноценная модель с рассуждением» — это не универсальный подход, и специализированные быстрые модели для простых решений становятся отдельным, повторяемым архитектурным паттерном, а не разовым трюком одной лаборатории.</span>
+      <span data-lang="en">The episode's title refers to a specific beat in the competitive race: shortly after a rival lab shipped Jev — a new kind of "decision" model (a so-called System One, a model for fast decisions without full reasoning, covered separately by Simon Willison) — the OpenAI team put together and shipped its own counterpart, the Decisions API, within a single week. For the podcast, that's not just a trivia note about development speed; it illustrates the episode's broader point: the industry is converging fast on the idea that "every agent action needs a full reasoning model" isn't a universal rule, and specialized fast models for simple decisions are becoming a recurring architectural pattern rather than one lab's one-off trick.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Я дал GPT-6 Astra $10,000 на торговлю акциями» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-09-29</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-09-29</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Я дал GPT-6 Astra $10,000 на торговлю акциями... и вот что случилось</span>
+      <span data-lang="en">I Gave GPT 6 Astra $10,000 to Trade Stocks...And This Happened</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=eg_1NXDcoPk" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нате Херк ставит себе ограниченный эксперимент: дать GPT-6 Astra реальные $10,000 и семь дней на самостоятельную торговлю акциями — модель сама придумывает стратегию и ежедневный распорядок действий, человек выступает только оператором исполнения <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=20">[00:20]</a>. Astra быстро формулирует план на все семь дней — с правилами входа в позицию, стоп-лоссами и регулярной сверкой с бенчмарком S&P 500 <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=67">[01:07]</a>.</span>
+      <span data-lang="en">Nate Herk sets up a bounded experiment: give GPT-6 Astra a real $10,000 and seven days to trade stocks on its own — the model comes up with the strategy and the daily routine itself, with the human acting only as the execution operator <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=20">[00:20]</a>. Astra quickly lays out a plan for all seven days — entry rules, stop-losses, and a regular check against the S&P 500 benchmark <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=67">[01:07]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Техническое ограничение: модели не дают торговать напрямую</span><span data-lang="en">The technical snag: the model isn't allowed to trade directly</span></h2>
+    <p>
+      <span data-lang="ru">День 1 проходит спокойно: портфель слегка просел на $9, Astra купила Tesla, сработал стоп-лосс <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=178">[02:58]</a>. На второй день эксперимент упирается в ограничение платформы: встроенные правила безопасности не дают Astra исполнять сделки напрямую, и Херку приходится подключать стороннего бота (на базе Grok) как посредника, который получает рекомендацию от Astra и уже сам нажимает кнопку сделки на бирже <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=260">[04:20]</a>. Это самый практичный урок ролика: «агент планирует — исполняет не всегда тот же агент» — для реальных денег у лабораторий встроены ограничители, которые нужно обходить дополнительной прослойкой, а не считать, что модель может напрямую управлять счётом.</span>
+      <span data-lang="en">Day 1 goes quietly: the portfolio dips slightly by $9, Astra buys Tesla, the stop-loss fires <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=178">[02:58]</a>. On day two the experiment runs into a platform limitation: built-in safety rules keep Astra from executing trades directly, forcing Herk to bring in a third-party bot (built on Grok) as a go-between that takes Astra's recommendation and actually presses the trade button on the exchange <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=260">[04:20]</a>. That's the video's most practical lesson: "the agent plans, but it isn't always the same agent that executes" — for real money, labs build in guardrails you have to route around with an extra layer, rather than assume the model can drive the account directly.</span>
+    </p>
+
+    <h2><span data-lang="ru">Семь дней, нервная торговля и итог хуже рынка</span><span data-lang="en">Seven days, jittery trading, and a result worse than the market</span></h2>
+    <p>
+      <span data-lang="ru">Дальше ролик показывает день за днём, как план расходится с реальностью. На третий день портфель вырос на $18, но 60% капитала Astra всё ещё держит в кэше, явно осторожничая <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=381">[06:21]</a>. На четвёртый день модель резко меняет поведение на противоположное — доля активных позиций вырастает до 80%, и портфель проседает на $225 <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=488">[08:08]</a>. К пятому дню, несмотря на то что именно в этот день портфель обогнал S&P 500, по сумме недели отставание от индекса остаётся на уровне $100 <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=672">[11:12]</a>. Финал: по итогам всех семи дней портфель в минусе на $100 и проигрывает S&P 500 <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=1007">[16:47]</a>.</span>
+      <span data-lang="en">The rest of the video tracks day by day how the plan diverges from reality. On day three the portfolio is up $18, but Astra is still holding 60% of the capital in cash, clearly playing it safe <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=381">[06:21]</a>. On day four the model swings sharply the other way — active positions jump to 80% of capital, and the portfolio drops $225 <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=488">[08:08]</a>. By day five, even though the portfolio beats the S&P 500 on that single day, it's still down $100 against the index for the week overall <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=672">[11:12]</a>. The finish: after all seven days, the portfolio is down $100 overall and loses to the S&P 500 <a class="ts" href="https://www.youtube.com/watch?v=eg_1NXDcoPk&t=1007">[16:47]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Вывод: семь дней — слишком короткий тест для вывода о модели</span><span data-lang="en">The takeaway: seven days is too short a test to judge the model</span></h2>
+    <p>
+      <span data-lang="ru">Херк честно признаёт ограничения собственного эксперимента: недельный срок и $10,000 капитала — слишком малая выборка, чтобы делать далеко идущие выводы о том, способна ли модель устойчиво обыгрывать рынок, а резкие скачки доли активных позиций между днями (от 60% в кэше до 80% в позициях) говорят скорее о нестабильности текущей настройки стратегии, чем о фундаментальной силе или слабости модели как трейдера. Отдельно он подчёркивает важность непрерывности контекста между ежедневными запусками агента: именно разрывы в передаче состояния между «сессиями» Astra, а не сама логика выбора акций, по его мнению, стали источником части неоптимальных решений.</span>
+      <span data-lang="en">Herk is upfront about the limits of his own experiment: a one-week window and $10,000 of capital are too small a sample to draw sweeping conclusions about whether the model can reliably beat the market, and the sharp day-to-day swings in active-position share (from 60% in cash to 80% in positions) point more to instability in the current strategy setup than to any fundamental strength or weakness of the model as a trader. He separately stresses the importance of context continuity between the agent's daily runs: in his view, gaps in handing off state between Astra's "sessions" — not the stock-picking logic itself — were the source of some of the suboptimal calls.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

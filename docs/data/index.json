@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-02",
+      "news_count": 4,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Anthropic открывает Claude Code для модов на TypeScript",
+        "en": "Anthropic opens Claude Code up to TypeScript mods"
+      }
+    },
+    {
       "date": "2026-10-01",
       "news_count": 2,
       "expert_count": 2,

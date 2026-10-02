@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Sonnet 5.5 против Opus 5.5» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-09-30</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-09-30</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Я протестировал Sonnet 5.5 против Opus 5.5. Вот что нужно знать</span>
+      <span data-lang="en">I Tested Sonnet 5.5 vs Opus 5.5. What You Need to Know.</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=7eo-11K2e3c" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: сетевая политика окружения блокирует прямой доступ к youtube.com, необходимый yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Нате Херк открывает ролик разбором цены и скорости: Claude Sonnet 5.5 не просто дешевле Opus 5.5 — он обходится примерно вдвое дешевле и по входным, и по выходным токенам, а по скорости выигрывает больше 30% <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=27">[00:27]</a>. Дальше он разбирает официальные рекомендации Anthropic по выбору модели и переводит их в практический критерий: если результат задачи можно объективно проверить («сделано» или «не сделано» видно сразу), нужен Sonnet; если задача требует вкуса, суждения и роли «партнёра по мысли», которому не всё расписано заранее, — нужен Opus <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=99">[01:39]</a>.</span>
+      <span data-lang="en">Nate Herk opens with a cost-and-speed breakdown: Claude Sonnet 5.5 isn't just cheaper than Opus 5.5 — it runs at roughly half the cost on both input and output tokens, and over 30% faster <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=27">[00:27]</a>. He then walks through Anthropic's own model-choice guidance and translates it into a practical rule: if a task's outcome can be checked objectively (you can tell "done" from "not done" at a glance), reach for Sonnet; if the task needs taste, judgment, and a "thought partner" who isn't handed every detail upfront, reach for Opus <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=99">[01:39]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Семь задач «в лоб»: лендинг, моушн-шоурил, дорожная карта</span><span data-lang="en">Seven head-to-head tasks: a landing page, a motion showreel, a roadmap</span></h2>
+    <p>
+      <span data-lang="ru">Чтобы проверить правило на практике, Херк прогоняет обе модели через семь реальных рабочих задач и сравнивает результат, скорость и стоимость. Первая — лендинг для проекта Perkform: обе модели справляются с задачей, но Херк разбирает, где именно Opus добавляет более продуманные детали верстки и текста, а где эта разница не стоит переплаты <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=318">[05:18]</a>. Вторая показательная задача — моушн-шоурил для проекта Glaido: здесь видно наибольший разрыв в качестве в пользу Opus — задача требует эстетического суждения, а не только исполнения инструкции <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=562">[09:22]</a>. Третья — построение дорожной карты продукта: формально хорошо определённая задача, где Sonnet выдаёт практически такой же результат за меньшие деньги <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=777">[12:57]</a>.</span>
+      <span data-lang="en">To test the rule in practice, Herk runs both models through seven real work tasks and compares output quality, speed, and cost. The first is a landing page for the Perkform project: both models handle it, but Herk points out exactly where Opus adds more thoughtfully considered layout and copy details, and where that difference isn't worth the extra spend <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=318">[05:18]</a>. The second telling case is a motion showreel for the Glaido project: this is where the quality gap in Opus's favor is widest, since the task calls for aesthetic judgment rather than just instruction-following <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=562">[09:22]</a>. The third is building a product roadmap: a formally well-defined task where Sonnet delivers essentially the same result for less money <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=777">[12:57]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Итог: правило выбора модели по типу задачи, а не по умолчанию</span><span data-lang="en">The takeaway: pick the model by task type, not by default habit</span></h2>
+    <p>
+      <span data-lang="ru">В финальной части Херк сводит все семь экспериментов в одну таблицу и повторяет практический вывод: чёткие, объёмные, хорошо определённые задачи — к Sonnet 5.5, а сложная, долгая или требующая творческого суждения работа — к Opus 5.5, несмотря на более высокую цену <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=1501">[25:01]</a>. Главный практический сдвиг, который он предлагает зрителям: перестать по умолчанию брать самую дорогую модель «на всякий случай» и вместо этого явно классифицировать задачу перед тем, как её делегировать — ясные промпты и повторно используемые «навыки» (skills) при этом, по его наблюдению, сильнее влияют на выбор модели, чем интуиция о том, «какая модель умнее».</span>
+      <span data-lang="en">In the closing section, Herk rolls all seven experiments into a single table and repeats the practical rule: clear, high-volume, well-defined work goes to Sonnet 5.5, while complex, long-running, or creatively demanding work goes to Opus 5.5 despite the higher price <a class="ts" href="https://www.youtube.com/watch?v=7eo-11K2e3c&t=1501">[25:01]</a>. The main practical shift he's pushing viewers toward: stop defaulting to the most expensive model "just in case," and instead classify the task explicitly before delegating it — in his experience, clear prompts and reusable skills move the needle more than any gut feeling about "which model is smarter."</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

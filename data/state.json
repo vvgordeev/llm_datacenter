@@ -968,6 +968,34 @@
         "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
         "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
       }
+    },
+    "anthropic-claude-code-mods": {
+      "last_date": "2026-10-02",
+      "summary": {
+        "ru": "1 октября Anthropic выпустила «моды» для Claude Code — небольшие функции на TypeScript, которые перехватывают внутренние события агента (вызов инструмента, запрос разрешения, рендер интерфейса) и могут выполниться до, после или вместо них. Мод можно написать самому или попросить написать его Claude Code; моды ставятся как часть плагинов, а часть встроенных функций (например, панель /diff) теперь сама реализована как мод, который можно отключить или заменить.",
+        "en": "On October 1, Anthropic shipped 'mods' for Claude Code — small TypeScript functions that hook into the agent's internal events (a tool call, a permission request, a UI render) and can run before, after, or instead of them. You can write a mod yourself or ask Claude Code to write it; mods ship inside plugins, and some built-in features (the /diff pane, for instance) are now themselves implemented as mods you can disable or replace."
+      }
+    },
+    "anthropic-claude-shaped-science-bootloops": {
+      "last_date": "2026-10-02",
+      "summary": {
+        "ru": "1 октября Anthropic опубликовала гостевой пост физика-теоретика Мэттью Шварца о BootLoops — открытом инструментарии для точных количественных расчётов, который вырос из его работы над амплитудами рассеяния. Идея в том, чтобы не заставлять Claude работать как человек-учёный, а искать «Claude-shaped» задачи — с широким охватом знаний, большим объёмом вычислений и строго проверяемым результатом; за три месяца так было выпущено 36 рукописей с 19 соавторами из пула в 400 кандидатных задач, а BootLoops 1.0 в тот же день вышел под лицензией MIT.",
+        "en": "On October 1, Anthropic published a guest post by theoretical physicist Matthew Schwartz about BootLoops, an open-source toolkit for exact quantitative calculations that grew out of his work on scattering amplitudes. The idea is not to force Claude to work like a human scientist, but to find 'Claude-shaped' problems — ones with broad knowledge demands, heavy computation, and strictly verifiable results; over three months that approach produced 36 manuscripts with 19 co-authors out of a pool of 400 candidate problems, and BootLoops 1.0 shipped the same day under the MIT license."
+      }
+    },
+    "openai-chatgpt-tryon-shopping": {
+      "last_date": "2026-10-02",
+      "summary": {
+        "ru": "1 октября OpenAI выкатила глобально кнопку «Try on» в шопинг-функциях ChatGPT: пользователь загружает селфи или фото в полный рост, а ChatGPT на модели Images 2.5 генерирует визуализацию того, как на нём будет смотреться вещь — свою или найденная по скриншоту витрины. Фото-референс сохраняется в настройках для повторного использования, а понравившиеся товары можно откладывать в раздел Favorites библиотеки ChatGPT.",
+        "en": "On October 1, OpenAI rolled out a global 'Try on' button in ChatGPT's shopping features: the user uploads a selfie or full-body photo, and ChatGPT, running on the Images 2.5 model, generates a visualization of how an item — their own or found via a storefront screenshot — would look on them. The reference photo is saved in settings for reuse, and liked items can be saved to a Favorites section of the ChatGPT library."
+      }
+    },
+    "anthropic-barclays-claude-enterprise": {
+      "last_date": "2026-10-02",
+      "summary": {
+        "ru": "1 октября Anthropic и Barclays объявили о расширении стратегического партнёрства: банк нацелен на то, чтобы Claude Code использовали 50% его разработчиков к концу 2026 года, а в 2027-м — большинство инженеров. Помимо кодинга, Claude встраивается в поиск по внутренним знаниям сотрудников, триаж почты Global Markets и модернизацию устаревших систем — в рамках более широкой программы эффективности с целевой экономией около £2 млрд.",
+        "en": "On October 1, Anthropic and Barclays announced an expanded strategic partnership: the bank is targeting 50% Claude Code adoption among its developers by the end of 2026, rising to a majority of engineers in 2027. Beyond coding, Claude is being put into staff knowledge retrieval, Global Markets email triage, and legacy-system modernization, inside a wider efficiency program targeting roughly £2 billion in savings."
+      }
     }
   },
   "seen_urls": {
@@ -1359,6 +1387,18 @@
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
     "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
-    "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26"
+    "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
+    "https://claude.com/blog/claude-code-mods": "2026-10-02",
+    "https://www.anthropic.com/research/claude-shaped-science": "2026-10-02",
+    "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": "2026-10-02",
+    "https://www.anthropic.com/news/barclays-scales-claude": "2026-10-02",
+    "https://www.oneusefulthing.org/p/the-dot-and-the-swarm": "2026-10-02",
+    "notes/articles/mollick-dot-and-the-swarm.html": "2026-10-02",
+    "https://www.latent.space/p/devday-2026": "2026-10-02",
+    "notes/articles/latentspace-devday-2026-computer-use.html": "2026-10-02",
+    "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
+    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
+    "https://www.youtube.com/watch?v=eg_1NXDcoPk": "2026-10-02",
+    "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02"
   }
 }

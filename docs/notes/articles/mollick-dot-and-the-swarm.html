@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Точка и рой» — Ethan Mollick — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Ethan Mollick · 2026-10-01</span>
+      <span data-lang="en">Article digest · Ethan Mollick · 2026-10-01</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Точка и рой: как извлечь пользу из «горького урока»</span>
+      <span data-lang="en">The Dot and the Swarm: Benefitting from the Bitter Lesson</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.oneusefulthing.org/p/the-dot-and-the-swarm" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Итан Моллик начинает с признания собственной ошибки в прогнозах. Он долго полагал, что для эффективной совместной работы ИИ-агентов потребуется человеческий подход «менеджера»: продуманная организационная структура, распределение ролей, протоколы коммуникации — примерно то, что нужно при построении компании с нуля. Оказалось, что это не так: организация совместной работы — это просто ещё одна задача, с которой справляется сам ИИ, без необходимости заранее выстраивать для него управленческую иерархию.</span>
+      <span data-lang="en">Ethan Mollick opens by admitting he got a prediction wrong. He long assumed that getting AI agents to work well together would require a human-style "manager" approach: a deliberate org structure, role assignment, communication protocols — roughly what it takes to build a company from scratch. It turns out that isn't so: organizing collaborative work is just one more task AI itself can handle, without needing a management hierarchy built for it in advance.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Горький урок» применительно к координации агентов</span><span data-lang="en">The Bitter Lesson applied to agent coordination</span></h2>
+    <p>
+      <span data-lang="ru">Моллик переносит на эту ситуацию известный тезис Ричарда Саттона о «горьком уроке»: раз за разом оказывается, что задачи, которые, казалось бы, требуют проработанных человеческих правил и схем, решаются грубой силой более совершенных систем машинного обучения — без ручной инженерии структуры. По его наблюдению, то же работает и для групп агентов: львиная доля менеджмента в обычных организациях нужна для того, чтобы гасить присущие людям проблемы совместной работы — эго, политику, недопонимание, расхождение стимулов. У ИИ-агентов этих патологий просто нет, поэтому и менеджмент, придуманный для их устранения, агентам в том виде, в каком он существует для людей, не нужен: они самоорганизуются сами.</span>
+      <span data-lang="en">Mollick maps this onto Richard Sutton's well-known "Bitter Lesson": again and again, problems that seemed to require elaborate human rules and structure turn out to be solved by the brute force of better machine-learning systems, without hand-engineered structure. He argues the same holds for groups of agents: most of what management does in a human organization exists to mitigate problems specific to people working together — ego, politics, miscommunication, misaligned incentives. AI agents simply don't have those pathologies, so the management built to cure them doesn't need to be replicated for agents in its human form: they organize themselves instead.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Clawlikes»: агент с доступом к компьютеру и аккаунтам</span><span data-lang="en">"Clawlikes": an agent with access to your computer and accounts</span></h2>
+    <p>
+      <span data-lang="ru">Разбор опирается на новый класс продуктов, который Моллик называет «clawlikes» (по аналогии с проектом с открытым кодом OpenClaw) — личные агенты вроде Meta Muse и OpenAI dots. Их общая черта: агенту дают доступ к компьютеру и к пользовательским аккаунтам (почта, финансовые сервисы и т. п.), и он анализирует происходящее и реагирует на него в реальном времени, даже когда пользователь не смотрит на экран. Взаимодействие устроено не как работа с инструментом, а как переписка с человеком — пользователь пишет агенту в Slack, SMS или WhatsApp, а агент может и сам выходить на связь первым, как это сделал бы коллега.</span>
+      <span data-lang="en">The piece builds on a new product category Mollick calls "clawlikes" (after the open-source OpenClaw project) — personal agents like Meta's Muse and OpenAI's dots. Their shared trait: the agent gets access to a computer and to the user's own accounts (email, financial services, and so on), and it analyzes and reacts to what's happening in real time, even when nobody is watching the screen. The interaction model isn't tool-use, it's correspondence with a person — you message the agent on Slack, SMS, or WhatsApp, and the agent can reach out to you first, the way a colleague would.</span>
+    </p>
+
+    <h2><span data-lang="ru">Рои агентов: самоорганизация без назначенного менеджера</span><span data-lang="en">Agent swarms: self-organizing without an assigned manager</span></h2>
+    <p>
+      <span data-lang="ru">Центральная часть эссе — о том, что происходит, когда таких агентов становится много и им дают общую задачу, а не расписанный план. Моллик описывает эксперименты, в которых рой агентов самостоятельно обменивается сообщениями — счёт идёт на миллионы сообщений за десятки часов работы, — вырабатывая разделение труда и способы координации, которые никто заранее не прописывал. Практический вывод: роль человека смещается от «постройки организации» к постановке цели, обеспечению агентов доступом к нужным инструментам и данным и последующей проверке результата — остальное агенты, по наблюдению Моллика, в значительной мере берут на себя сами.</span>
+      <span data-lang="en">The essay's core section is about what happens once there are many such agents working a shared goal rather than a scripted plan. Mollick describes experiments where a swarm of agents exchanges messages on its own — millions of messages over tens of hours of work — and arrives at a division of labor and coordination patterns that nobody scripted in advance. The practical upshot: the human's role shifts from "building the org chart" to setting the goal, giving agents access to the right tools and data, and checking the result afterward — the rest, in Mollick's account, the agents largely work out themselves.</span>
+    </p>
+
+    <h2><span data-lang="ru">Оговорка: удобно — не значит безопасно или готово к продакшену</span><span data-lang="en">The caveat: convenient isn't the same as safe or production-ready</span></h2>
+    <p>
+      <span data-lang="ru">Моллик не преподносит это как чистое благо без оговорок. Отказ от жёсткой человеческой структуры означает и отказ от привычных точек контроля — непонятно, как проверять по пути то, что делает рой, и где вставлять человека в контур, если агенты всё активнее действуют и координируются без явных указаний. Эссе явно адресовано тем, кто проектирует подобные системы сейчас: если «горький урок» применим и к организации труда агентов, то усилия, вложенные в ручное конструирование их иерархии и протоколов, рискуют оказаться потраченными впустую — выигрывает тот, кто вместо этого вкладывается в постановку цели, доступ к данным и инструментам и последующую проверку результата.</span>
+      <span data-lang="en">Mollick doesn't present this as an unqualified good. Giving up rigid human structure also means giving up familiar checkpoints — it's unclear how to audit what a swarm is doing along the way, or where to put a human in the loop as agents act and coordinate more and more without explicit instructions. The essay is explicitly addressed to people designing such systems today: if the Bitter Lesson holds for organizing agent labor too, then effort spent hand-engineering their hierarchy and protocols risks being wasted — the winning move is instead to invest in setting the goal, wiring up access to data and tools, and checking the result afterward.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T07:40:00Z",
+  "news": [
+    {
+      "id": "2026-10-02-anthropic-claude-code-mods",
+      "cluster_id": "anthropic-claude-code-mods",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Anthropic открывает Claude Code для модов на TypeScript",
+        "en": "Anthropic opens Claude Code up to TypeScript mods"
+      },
+      "summary": {
+        "ru": "1 октября Anthropic выпустила «моды» для Claude Code — небольшие функции на TypeScript, которые перехватывают внутренние события агента (вызов инструмента, запрос разрешения, рендер интерфейса) и могут выполниться до, после или вместо них. Мод можно написать самому или попросить написать его Claude Code; моды ставятся как часть плагинов, а часть встроенных функций (например, панель /diff) теперь сама реализована как мод, который можно отключить или заменить.",
+        "en": "On October 1, Anthropic shipped 'mods' for Claude Code — small TypeScript functions that hook into the agent's internal events (a tool call, a permission request, a UI render) and can run before, after, or instead of them. You can write a mod yourself or ask Claude Code to write it; mods ship inside plugins, and some built-in features (the /diff pane, for instance) are now themselves implemented as mods you can disable or replace."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — community-экосистему расширений, меняющих саму логику агента, а не только его инструменты или промпты, и затрагивает всех пользователей Claude Code. Но это развитие существующего подхода к агентам-кодерам, а не смена парадигмы использования LLM в целом.",
+        "en": "Opens a new class of scenarios — a community ecosystem of extensions that change the agent's own logic rather than just its tools or prompts, and it touches every Claude Code user. But it's an evolution of the existing coding-agent approach, not a paradigm shift in how LLMs get used overall."
+      },
+      "source_url": "https://claude.com/blog/claude-code-mods",
+      "opinions": [
+        {
+          "author": "Ado (@adocomplete, X)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Моды — это полная смена правил игры для глубокой кастомизации Claude Code. Жду этого с нетерпением.",
+            "en": "Claude Mods is a total game changer for deeper customization of Claude Code. Super excited for this one."
+          },
+          "url": "https://x.com/adocomplete/status/2099558965910913423"
+        },
+        {
+          "author": "Pluto Security (исследовательский блог)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Мод работает прямо на пути между намерением пользователя, решениями модели и исполнением на хосте и может дотянуться до всего, что Claude Code предоставляет: инструменты, файлы, процессы, промпты, данные сессии, MCP, интерфейс. Мы нашли четыре класса рисков — от тихого доступа к секретам и подмены интерфейса до выполнения удалённого кода.",
+            "en": "A mod sits directly on the path between user intent, model decisions, and execution on the host, and can reach everything Claude Code exposes: tools, files, processes, prompts, session data, MCPs, UI. We found four classes of risk, from silent secret access and UI spoofing to remote code execution."
+          },
+          "url": "https://pluto.security/blog/claude-code-function-hooks-security/"
+        },
+        {
+          "author": "Vox (@Voxyz_ai, X)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Claude Code выкатывает Mods — теперь можно попросить Claude добавить функции самому себе. Мод — это плагин, который меняет интерфейс и поведение Claude Code.",
+            "en": "Claude Code is rolling out Mods, so you can ask Claude to add features to itself. A Mod is a plugin that customizes Claude Code's interface and behavior."
+          },
+          "url": "https://x.com/Voxyz_ai/status/2099564071972450641"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пошаговое руководство Anthropic показывает мод «Token Weather» — живой прогноз заполнения контекстного окна прямо над полем ввода, собранный примерно за 80 строк кода.",
+            "en": "Anthropic's getting-started guide walks through a 'Token Weather' mod — a live forecast of context-window usage drawn right above the prompt, built in about 80 lines of code."
+          },
+          "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
+        },
+        {
+          "text": {
+            "ru": "В самом анонсе Anthropic приводит корпоративные примеры: панель статуса CI/CD рядом с диалогом, обязательное подтверждение перед командами, затрагивающими продакшен, и сквозной аудит-лог вызовов функций всех установленных модов.",
+            "en": "Anthropic's own announcement lists enterprise examples: a CI/CD status panel next to the conversation, mandatory confirmation before production-touching commands, and an audit log spanning every installed mod's function calls."
+          },
+          "url": "https://claude.com/blog/claude-code-mods"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-anthropic-claude-shaped-science-bootloops",
+      "cluster_id": "anthropic-claude-shaped-science-bootloops",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "«Claude-shaped science»: физик Мэттью Шварц выпускает BootLoops — харнесс Claude для точных научных расчётов",
+        "en": "'Claude-shaped science': physicist Matthew Schwartz ships BootLoops, a Claude harness for exact scientific calculations"
+      },
+      "summary": {
+        "ru": "1 октября Anthropic опубликовала гостевой пост физика-теоретика Мэттью Шварца о BootLoops — открытом инструментарии для точных количественных расчётов, который вырос из его работы над амплитудами рассеяния. Идея в том, чтобы не заставлять Claude работать как человек-учёный, а искать «Claude-shaped» задачи — с широким охватом знаний, большим объёмом вычислений и строго проверяемым результатом; за три месяца так было выпущено 36 рукописей с 19 соавторами из пула в 400 кандидатных задач, а BootLoops 1.0 в тот же день вышел под лицензией MIT.",
+        "en": "On October 1, Anthropic published a guest post by theoretical physicist Matthew Schwartz about BootLoops, an open-source toolkit for exact quantitative calculations that grew out of his work on scattering amplitudes. The idea is not to force Claude to work like a human scientist, but to find 'Claude-shaped' problems — ones with broad knowledge demands, heavy computation, and strictly verifiable results; over three months that approach produced 36 manuscripts with 19 co-authors out of a pool of 400 candidate problems, and BootLoops 1.0 shipped the same day under the MIT license."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Описывает воспроизводимый метод применения LLM в количественной науке с конкретными, проверяемыми результатами (36 публикаций) — это открывает новый класс сценариев использования для исследователей. Понижает оценку то, что аудитория узкая (количественные науки), а не все пользователи LLM.",
+        "en": "Describes a reproducible method for applying LLMs to quantitative science with concrete, checkable results (36 publications) — that opens a genuinely new class of usage scenarios for researchers. What caps the score is the narrow audience (quantitative science), not all LLM users."
+      },
+      "source_url": "https://www.anthropic.com/research/claude-shaped-science",
+      "opinions": [
+        {
+          "author": "Мэттью Шварц (автор BootLoops)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Claude технически оказывался прав, но результат не был по-настоящему интересным, пока за дело не брался эксперт, задававший направление.",
+            "en": "Claude was technically correct, but the result was not all that interesting until the expert helped steer us."
+          },
+          "url": "https://www.anthropic.com/research/claude-shaped-science"
+        },
+        {
+          "author": "Джеймс О'Дуайер (биолог-эколог, соавтор)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Первая версия результата, скорее всего, была бы встречена пожатием плеч большинства экологов — пока он не предложил вычесть нейтральный прогноз и посмотреть, что останется.",
+            "en": "The first version would likely be met with a shrug by many ecologists — until he proposed subtracting the neutral prediction and studying what was left."
+          },
+          "url": "https://www.unite.ai/schwartz-releases-bootloops-1-0-an-open-source-llm-harness-for-science/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "В физике Claude с BootLoops воспроизвёл результат одной из статей Шварца примерно за 20 минут против нескольких недель ручной работы — и указал на более эффективный алгоритм, о котором сам автор не знал.",
+            "en": "In physics, Claude with BootLoops reproduced the result of one of Schwartz's own papers in about 20 minutes, against the weeks he'd spent writing the original code — and surfaced a more efficient algorithm he wasn't aware of."
+          },
+          "url": "https://www.anthropic.com/research/claude-shaped-science"
+        },
+        {
+          "text": {
+            "ru": "В экологии инструментарий помог переформулировать задачу о видовом разнообразии так, чтобы результат стал содержательным для специалистов, а не просто технически корректным числом.",
+            "en": "In ecology, the toolkit helped reframe a species-diversity question so the result became meaningful to domain specialists rather than just a technically correct number."
+          },
+          "url": "https://www.unite.ai/schwartz-releases-bootloops-1-0-an-open-source-llm-harness-for-science/"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-openai-chatgpt-tryon-shopping",
+      "cluster_id": "openai-chatgpt-tryon-shopping",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "ChatGPT учится примерять одежду по селфи",
+        "en": "ChatGPT learns to try clothes on from a selfie"
+      },
+      "summary": {
+        "ru": "1 октября OpenAI выкатила глобально кнопку «Try on» в шопинг-функциях ChatGPT: пользователь загружает селфи или фото в полный рост, а ChatGPT на модели Images 2.5 генерирует визуализацию того, как на нём будет смотреться вещь — свою или найденная по скриншоту витрины. Фото-референс сохраняется в настройках для повторного использования, а понравившиеся товары можно откладывать в раздел Favorites библиотеки ChatGPT.",
+        "en": "On October 1, OpenAI rolled out a global 'Try on' button in ChatGPT's shopping features: the user uploads a selfie or full-body photo, and ChatGPT, running on the Images 2.5 model, generates a visualization of how an item — their own or found via a storefront screenshot — would look on them. The reference photo is saved in settings for reuse, and liked items can be saved to a Favorites section of the ChatGPT library."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Удобная, но узкая по применимости фича одного вертикального сценария (шопинг одежды), не меняющая подходы к использованию LLM в целом; к тому же экономика похожих шопинг-функций ChatGPT, по данным ритейлеров, пока слабая.",
+        "en": "A convenient but narrowly scoped feature for one vertical (clothes shopping) that doesn't change broader approaches to using LLMs — and retailers report the economics of similar ChatGPT shopping features have so far been weak."
+      },
+      "source_url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+      "opinions": [
+        {
+          "author": "B&T (маркетинговое издание)",
+          "stance": "positive",
+          "quote": {
+            "ru": "ChatGPT идёт за деньгами модной индустрии с новой функцией виртуальной примерки.",
+            "en": "ChatGPT goes after fashion dollars with the new virtual 'try on' feature."
+          },
+          "url": "https://bandt.com.au/chatgpt-goes-after-fashion-dollars-with-new-virtual-try-on-feature"
+        },
+        {
+          "author": "Modern Retail",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Переходы из ChatGPT конвертируются в покупки заметно хуже традиционных каналов; у Walmart конверсия у товаров, продаваемых прямо внутри ChatGPT, оказалась втрое ниже, чем при переходе на собственный сайт для оформления заказа.",
+            "en": "Referral traffic from ChatGPT converts far worse than traditional marketing channels; Walmart found conversion rates for products sold directly in ChatGPT were three times lower than for flows that rerouted users to its own site for checkout."
+          },
+          "url": "https://www.modernretail.co/technology/e-commerce-sites-see-low-sales-from-chatgpt-traffic-study-finds-but-that-could-change/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Можно загрузить не только собственное селфи, но и скриншот вещи с чужого сайта — и попросить ChatGPT «примерить» именно её.",
+            "en": "You can upload not just your own selfie but a screenshot of an item from another site, and ask ChatGPT to 'try on' that specific piece."
+          },
+          "url": "https://www.engadget.com/2275295/chatgpt-can-now-help-you-virtually-try-on-clothes/"
+        },
+        {
+          "text": {
+            "ru": "Понравившиеся товары и примерки сохраняются рядом в Favorites библиотеки ChatGPT, чтобы вернуться к ним позже.",
+            "en": "Liked products and try-on images are saved side by side in the ChatGPT library's Favorites, to come back to later."
+          },
+          "url": "https://www.seroundtable.com/chatgpt-virtually-try-on-42215.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-anthropic-barclays-claude-enterprise",
+      "cluster_id": "anthropic-barclays-claude-enterprise",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Barclays расширяет использование Claude по всему банку",
+        "en": "Barclays scales Claude across the bank"
+      },
+      "summary": {
+        "ru": "1 октября Anthropic и Barclays объявили о расширении стратегического партнёрства: банк нацелен на то, чтобы Claude Code использовали 50% его разработчиков к концу 2026 года, а в 2027-м — большинство инженеров. Помимо кодинга, Claude встраивается в поиск по внутренним знаниям сотрудников, триаж почты Global Markets и модернизацию устаревших систем — в рамках более широкой программы эффективности с целевой экономией около £2 млрд.",
+        "en": "On October 1, Anthropic and Barclays announced an expanded strategic partnership: the bank is targeting 50% Claude Code adoption among its developers by the end of 2026, rising to a majority of engineers in 2027. Beyond coding, Claude is being put into staff knowledge retrieval, Global Markets email triage, and legacy-system modernization, inside a wider efficiency program targeting roughly £2 billion in savings."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Крупное корпоративное внедрение в регулируемой отрасли — хороший сигнал зрелости продукта, но это история про масштаб развёртывания существующих возможностей, а не про новый подход к использованию LLM.",
+        "en": "A large enterprise deployment in a regulated industry is a good maturity signal, but it's a story about scaling an existing capability's rollout, not a new way of using LLMs."
+      },
+      "source_url": "https://www.anthropic.com/news/barclays-scales-claude",
+      "opinions": [
+        {
+          "author": "PYMNTS",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Barclays ускоряет развёртывание ИИ, опираясь на Claude Code от Anthropic — часть многолетней программы эффективности банка.",
+            "en": "Barclays accelerates its AI rollout with Anthropic's Claude Code, as part of the bank's multi-year efficiency program."
+          },
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/barclays-accelerates-ai-rollout-with-anthropic-claude-code/"
+        },
+        {
+          "author": "Superpower Daily",
+          "stance": "positive",
+          "quote": {
+            "ru": "Barclays расширяет Claude по всему банку, нацеливаясь на половину разработчиков к концу года.",
+            "en": "Barclays extends Claude across the bank, targeting half its developers by year-end."
+          },
+          "url": "https://superpowerdaily.com/posts/barclays-extends-claude-across-the-bank-targeting-half-its-developers-by-year-end"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Claude используется для модернизации унаследованных систем и ускорения разработки ПО внутри банка.",
+            "en": "Claude is used to modernize legacy systems and speed up software development inside the bank."
+          },
+          "url": "https://www.anthropic.com/news/barclays-scales-claude"
+        },
+        {
+          "text": {
+            "ru": "Отдельные внедрения — поиск по внутренним знаниям сотрудников и триаж почты в подразделении Global Markets.",
+            "en": "Separate deployments cover staff knowledge retrieval and email triage inside the Global Markets division."
+          },
+          "url": "https://www.anthropic.com/news/barclays-scales-claude"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-02-mollick-dot-and-the-swarm",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "Точка и рой: как извлечь пользу из «горького урока»",
+        "en": "The Dot and the Swarm: Benefitting from the Bitter Lesson"
+      },
+      "url": "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
+      "summary": {
+        "ru": "Моллик признаёт, что ошибался: он ждал, что агентам потребуется человеческий менеджмент, а оказалось, что самоорганизация — ещё одна задача, с которой справляется сам ИИ, поскольку у агентов нет присущих людям организационных патологий (эго, политика), ради которых менеджмент и придумывался.",
+        "en": "Mollick admits he got it wrong: he expected agents would need human-style management, but it turns out self-organization is just another task AI can handle, since agents lack the human organizational pathologies (ego, politics) management exists to solve."
+      },
+      "note_page": "notes/articles/mollick-dot-and-the-swarm.html"
+    },
+    {
+      "id": "2026-10-02-latentspace-devday-2026-computer-use",
+      "type": "article",
+      "author": "Latent Space (swyx и Alessio Fanelli, с Ари Вайнштейном из OpenAI)",
+      "title": {
+        "ru": "Почему Дваркеш неправ насчёт Computer Use + как OpenAI за неделю выпустила конкурента Jev",
+        "en": "Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week"
+      },
+      "url": "https://www.latent.space/p/devday-2026",
+      "summary": {
+        "ru": "Гость подкаста Ари Вайнштейн защищает Computer Use как общую инфраструктуру OpenAI (а не нишевую фичу) и представляет Decisions API — более дешёвый и быстрый путь для простых решений без полноценного рассуждения, собранный всего за неделю в ответ на конкурирующую модель Jev.",
+        "en": "Guest Ari Weinstein defends Computer Use as shared OpenAI infrastructure rather than a niche feature, and introduces the Decisions API — a cheaper, faster path for simple decisions without full reasoning, built in just a week in response to the rival Jev model."
+      },
+      "note_page": "notes/articles/latentspace-devday-2026-computer-use.html"
+    },
+    {
+      "id": "2026-10-02-natherk-sonnet-55-vs-opus-55",
+      "type": "video",
+      "author": "Nate Herk",
+      "title": {
+        "ru": "Я протестировал Sonnet 5.5 против Opus 5.5. Вот что нужно знать",
+        "en": "I Tested Sonnet 5.5 vs Opus 5.5. What You Need to Know."
+      },
+      "url": "https://www.youtube.com/watch?v=7eo-11K2e3c",
+      "summary": {
+        "ru": "Семь практических задач «в лоб» подтверждают правило Anthropic: объективно проверяемую, объёмную работу стоит отдавать Sonnet 5.5 (вдвое дешевле, на треть быстрее), а творческую, долгую или требующую вкуса — Opus 5.5, несмотря на более высокую цену.",
+        "en": "Seven head-to-head practical tasks confirm Anthropic's rule: hand well-defined, high-volume work to Sonnet 5.5 (half the cost, a third faster), and creative, long or taste-dependent work to Opus 5.5 despite the higher price."
+      },
+      "note_page": "notes/videos/natherk-sonnet-55-vs-opus-55.html"
+    },
+    {
+      "id": "2026-10-02-natherk-gpt6-astra-stock-trading",
+      "type": "video",
+      "author": "Nate Herk",
+      "title": {
+        "ru": "Я дал GPT-6 Astra $10,000 на торговлю акциями... и вот что случилось",
+        "en": "I Gave GPT 6 Astra $10,000 to Trade Stocks...And This Happened"
+      },
+      "url": "https://www.youtube.com/watch?v=eg_1NXDcoPk",
+      "summary": {
+        "ru": "Недельный эксперимент с автономной торговлей акциями наталкивается на встроенное ограничение — Astra не может исполнять сделки напрямую и нуждается в боте-посреднике, — а по итогам семи дней проигрывает S&P 500, хотя автор честно отмечает, что срок и капитал слишком малы для выводов.",
+        "en": "A week-long autonomous stock-trading experiment runs into a built-in limitation — Astra can't execute trades directly and needs a go-between bot — and ends up losing to the S&P 500 after seven days, though the author is upfront that the timeframe and capital are too small to draw firm conclusions."
+      },
+      "note_page": "notes/videos/natherk-gpt6-astra-stock-trading.html"
+    }
+  ]
+}

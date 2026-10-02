@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T07:40:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 3, "note": "WebFetch anthropic.com/news прошёл напрямую; за окно нашлись Claude Code Mods, Claude-shaped science/BootLoops и Barclays scales Claude (1 октября) — все три опубликованы"},
+    {"source": "openai blog", "status": "blocked", "candidates": 1, "note": "WebFetch openai.com — EGRESS_BLOCKED; через WebSearch нашлась глобальная раскатка ChatGPT 'Try on' (1 октября) — опубликована; остальное (Dots, ChatGPT Space, GPT-6.1 Sol, Agents API) — продолжение DevDay 29 сентября, уже опубликовано вчера/позавчера — дубль"},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch blog.google — EGRESS_BLOCKED; WebSearch повторно нашёл только Gemini 4 Argon — он уже опубликован вчера (2026-10-01) как продолжение кластера google-gemini-4-post-training — дубль, не включено. Проверенный кандидат Google Mantis (open-source toolkit) оказался от 9 сентября — вне окна, не включено"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ai.meta.com — EGRESS_BLOCKED; WebSearch не нашёл анонсов в окне 36ч"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch x.ai — EGRESS_BLOCKED; WebSearch нашёл только общие заявления о скорости (без деталей) и дистрибуцию Grok 4.7 на стороннюю платформу — не продуктовая новость, не включено"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch mistral.ai — EGRESS_BLOCKED; WebSearch изначально выдал 'AI Now Summit' с Airbus/BMW/ASML как будто свежее событие, но проверка (france24, статья от 20260528) показала, что это Summit от 28 мая 2026 — старая новость, индексы просто продолжают её пересказывать; отклонено как устаревшее"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch api-docs.deepseek.com — EGRESS_BLOCKED; WebSearch не нашёл новых анонсов, последний релиз (V4.1 Flash) — от 9 сентября"},
+    {"source": "hacker news api", "status": "blocked", "candidates": 0, "note": "WebFetch hn.algolia.com — EGRESS_BLOCKED (подтверждено на CONNECT); реакции на Claude Code Mods найдены через WebSearch по X/Twitter и специализированным security-блогам, а не через HN API"},
+    {"source": "aggregator: smol.ai / AI News digest", "status": "ok-via-websearch", "candidates": 0, "note": "WebSearch нашёл выпуск от 1 октября (OpenAI Dots, LlamaIndex Extract v2.5, Nvidia Open Agent Safety Platform и др.) — все релевантные LLM-пункты либо дубли вчерашнего DevDay, либо не по теме (сторонние стартапы вне sources.yaml)"},
+    {"source": "aggregator: tldr.tech", "status": "ok-via-websearch", "candidates": 0, "note": "Выпуск TLDR AI от 1 октября — заглавные темы (Gemini 4 Argon, OpenAI чип, дистилляция) либо дубли, либо не по модели из конфига"},
+    {"source": "aggregator: simonwillison linkblog", "status": "ok-via-git-backup", "candidates": 0, "note": "git-бэкап simonwillisonblog-backup склонирован; последняя запись blog_entry — 'OpenAI DevDay 2026 live blog' (29.09), но тело поста в бэкапе — заглушка на 368 символов без содержательного текста (живые обновления на самой странице бэкапом не захвачены); для конспекта непригодно, не включено"},
+    {"source": "expert: Simon Willison (article)", "status": "empty", "candidates": 0, "note": "Лучшая статья недели (2026-in-llms-so-far, 27.09) уже опубликована позавчера; DevDay live blog (29.09) слишком тонкий для конспекта (см. выше)"},
+    {"source": "expert: Andrej Karpathy (video)", "status": "empty", "candidates": 0, "note": "RSS youtube.com заблокирован (403 CONNECT, проверено); WebSearch нашёл только старые материалы — Sequoia Ascent fireside chat (30 апреля) и подкаст Dwarkesh (октябрь 2025), оба вне окна свежести"},
+    {"source": "expert: Latent Space (article)", "status": "ok", "candidates": 1, "note": "Эпизод 'Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week' (30.09, Ари Вайнштейн) — опубликован; эпизоды с OpenRouter и 'Lab of the Future' старше или менее релевантны теме подходов к использованию LLM"},
+    {"source": "expert: AI Explained (video)", "status": "empty", "candidates": 0, "note": "RSS заблокирован; WebSearch нашёл упоминание видео про безопасность OpenAI через вторичный агрегатор (ai-tldr.dev), но сам сайт заблокирован и точный YouTube URL/дата не подтвердились напрямую — не включено, чтобы не выдумывать ссылку"},
+    {"source": "expert: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "Последнее найденное видео (26.09) — еженедельный новостной обзор анонсов, не разбор подхода — не включено по правилам отбора; видео за 1-2 октября не нашлось"},
+    {"source": "expert: Ethan Mollick (article)", "status": "ok", "candidates": 1, "note": "'The Dot and the Swarm' (1 октября) — опубликована; предыдущая статья 'The Overhang' (18.09) уже отклонялась позавчера как вне окна"},
+    {"source": "expert: Nate Herk (video)", "status": "ok", "candidates": 2, "note": "RSS заблокирован, но WebSearch нашёл два свежих видео вне дублей архива: 'I Tested Sonnet 5.5 vs Opus 5.5' (30.09) и 'I Gave GPT 6 Astra $10,000 to Trade Stocks' (29.09) — оба опубликованы"},
+    {"source": "expert: Matt Pocock (video)", "status": "empty", "candidates": 0, "note": "RSS заблокирован; WebSearch не нашёл загрузок свежее уже опубликованного 25.09 ('Fixing the PR Bottleneck')"},
+    {"source": "broadened search: LLM news / coding agent releases this week", "status": "ok-via-websearch", "candidates": 0, "note": "Доп. проход ('LLM news October 2026', 'AI model release', 'coding agent update') не дал новых кандидатов сверх уже найденных — остальные пункты либо вне sources.yaml (LlamaIndex, Yellow.ai, Nvidia), либо дубли DevDay"}
+  ],
+  "totals": {
+    "candidates": 13,
+    "published": 8,
+    "rejected": {
+      "уже опубликовано вчера/позавчера (Gemini 4 Argon, DevDay Dots/Space/GPT-6.1 Sol/Agents API, Latent Space Thariq Shihipar, Willison 2026-in-llms)": 6,
+      "устаревшая новость, ошибочно всплывшая в поиске по дате (Mistral AI Now Summit — на деле 28 мая)": 1,
+      "вне окна/темы (Google Mantis — 9 сентября; Matt Wolfe — новостной пересказ, не подход; Karpathy — старые материалы)": 3,
+      "не подтверждён точный URL/дата, чтобы не выдумывать ссылку (AI Explained OpenAI security video)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok — оба видео Nate Herk успешно проанализированы через generativelanguage.googleapis.com (gemini-2.5-flash); первый запрос упёрся в rate limit 429 на бесплатном тарифе, повтор через ~45 секунд прошёл",
+    "frames": "skipped: yt-dlp получил 'Unable to connect to proxy... Tunnel connection failed: 403 Forbidden' при обращении к youtube.com через egress-прокси — кадры не извлечены ни для одного видео, отмечено на страницах конспектов"
+  },
+  "notes": "min_expert_total (5) не достигнут — опубликовано 4 материала вместо 5. Причина: из восьми настроенных экспертов содержательный свежий материал в окне 7 дней дали только Mollick, Latent Space и Nate Herk (два видео); у Willison лучшая статья уже была в архиве, а DevDay live-blog оказался пустой заглушкой в git-бэкапе; Karpathy, AI Explained, Matt Wolfe и Matt Pocock не публиковали ничего нового и релевантного в окне. Более трети обойдённых источников (все блоги моделей, кроме Anthropic, HN API, часть агрегаторов) — blocked на уровне egress-прокси; discovery шёл через WebSearch и, для Anthropic, напрямую через WebFetch. Отдельно стоит отметить находку: WebSearch выдал Mistral 'AI Now Summit' (Airbus/BMW/ASML) как будто актуальное событие начала октября — проверка первоисточника (france24) показала дату 28 мая 2026; без перепроверки это стало бы ложной новостью в сводке."
+}
