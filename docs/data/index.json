@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-03",
+      "news_count": 4,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Meta открывает исходный код Muse Gadgets — своё железо для личного агента Muse может собрать кто угодно",
+        "en": "Meta open-sources Muse Gadgets, letting anyone build their own hardware for its Muse agent"
+      }
+    },
+    {
       "date": "2026-10-02",
       "news_count": 4,
       "expert_count": 4,

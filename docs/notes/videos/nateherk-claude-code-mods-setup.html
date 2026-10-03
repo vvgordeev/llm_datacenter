@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: «Claude Code Mods Are Game Changers» — Nate Herk — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Nate Herk · 2026-10-02 · 11:19</span>
+      <span data-lang="en">Video digest · Nate Herk · 2026-10-02 · 11:19</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Моды для Claude Code меняют всё: пять модов, которые стоит поставить прямо сейчас</span>
+      <span data-lang="en">Claude Code Mods Are Game Changers: five mods to set up right now</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=9hetShMMp2s" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует yt-dlp на уровне доступа к youtube.com (403 на туннель через прокси).</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's network policy blocks yt-dlp's access to youtube.com (403 on the proxy tunnel).</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Отталкиваясь от только что выпущенной Anthropic системы Claude Code Mods — плагинов, позволяющих переопределять интерфейс и поведение настольного приложения Claude Code, — Нейт Герк показывает, что главное в модах не официальные примеры (Token Weather, Blast Radius, Replay Theater) <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=11">[00:11]</a>, а то, что моды можно создавать и редактировать обычным естественным языком. Это резко снижает порог входа: написать себе рабочий инструмент под Claude Code больше не требует фронтенд-разработки — достаточно описать, чего хочешь, самому Claude.</span>
+      <span data-lang="en">Building on Anthropic's freshly shipped Claude Code Mods system — plugins that let you override the Claude Code desktop app's interface and behavior — Nate Herk's point is that the headline isn't the official sample mods (Token Weather, Blast Radius, Replay Theater) <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=11">[00:11]</a>, it's that mods can be created and edited in plain natural language. That sharply lowers the barrier to entry: building yourself a working tool for Claude Code no longer requires front-end development — describing what you want to Claude is enough.</span>
+    </p>
+
+    <h2><span data-lang="ru">Next Steps и Cache Keeper: подсказки по действиям и контроль за расходами</span><span data-lang="en">Next Steps and Cache Keeper: action hints and cost control</span></h2>
+    <p>
+      <span data-lang="ru">Первый мод живьём — «Next Steps» <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=49">[00:49]</a>: после ответа агента он предлагает 2–3 конкретных следующих действия, так что не нужно каждый раз самому придумывать, что написать дальше. Второй — «Cache Keeper» <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=173">[02:53]</a>, решающий практичную и дорогостоящую проблему: он отслеживает состояние контекстного окна и кеша сессии и предупреждает до того, как случайное действие (например, резкая смена темы) сбросит накопленный дешёвый кешированный контекст и переведёт следующие запросы на полную, более дорогую цену токенов.</span>
+      <span data-lang="en">The first live mod is "Next Steps" <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=49">[00:49]</a>: after the agent responds, it suggests 2-3 concrete next actions, so you don't have to invent what to type next every single time. The second is "Cache Keeper" <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=173">[02:53]</a>, which solves a practical and costly problem: it tracks the state of the context window and session cache and warns before an action (like an abrupt topic switch) silently resets the accumulated cheap cached context and bumps subsequent requests to full, more expensive token pricing.</span>
+    </p>
+
+    <h2><span data-lang="ru">Recording Mode: приватность на лету при записи экрана</span><span data-lang="en">Recording Mode: on-the-fly privacy while screen-recording</span></h2>
+    <p>
+      <span data-lang="ru">«Recording Mode» <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=328">[05:28]</a> нацелен на создателей контента и на тех, кто делится экраном на созвонах: мод автоматически размывает чувствительную информацию (ключи API, токены, личные данные) прямо во время записи экрана, так что не нужно потом вручную вырезать такие фрагменты при монтаже или останавливать демонстрацию, наткнувшись на секрет на экране.</span>
+      <span data-lang="en">"Recording Mode" <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=328">[05:28]</a> targets content creators and anyone screen-sharing on a call: the mod automatically blurs sensitive information (API keys, tokens, personal data) live during screen recording, so there's no need to manually cut such moments in editing later or stop a demo because a secret is visible on screen.</span>
+    </p>
+
+    <h2><span data-lang="ru">Goal Meter и Collision Guard: долгие цели и безопасность командной работы</span><span data-lang="en">Goal Meter and Collision Guard: long-running goals and team safety</span></h2>
+    <p>
+      <span data-lang="ru">«Goal Meter» <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=444">[07:24]</a> визуализирует прогресс по многошаговой задаче, заданной заранее, — полезно, когда работа над целью растягивается на несколько сессий и легко потерять из виду, сколько уже сделано. Последний мод, «Collision Guard» <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=551">[09:11]</a>, решает проблему командной работы с агентами: он отслеживает, какие файлы недавно редактировались в ДРУГОЙ сессии Claude Code (например, коллегой или параллельным агентом), и предупреждает об этом до того, как текущая сессия перезапишет чужие изменения. Герк закрывает ролик указанием, где взять все пять модов бесплатно <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=635">[10:35]</a>, подчёркивая, что лучший способ освоить систему модов — не копировать чужие, а написать свой под собственную рутину.</span>
+      <span data-lang="en">"Goal Meter" <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=444">[07:24]</a> visualizes progress against a multi-step goal set in advance — useful when work toward that goal stretches across several sessions and it's easy to lose track of how much is actually done. The last mod, "Collision Guard" <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=551">[09:11]</a>, addresses a team-work problem with agents: it tracks which files were recently edited in a DIFFERENT Claude Code session (say, by a teammate or a parallel agent) and warns before the current session overwrites someone else's changes. Herk closes by pointing to where to grab all five mods for free <a class="ts" href="https://www.youtube.com/watch?v=9hetShMMp2s&t=635">[10:35]</a>, stressing that the best way to learn the mods system isn't copying someone else's mods but writing your own for your own routine.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Academia is for Ambition» — Alex Zhang (Latent Space) — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи/подкаста · Latent Space (гость — Alex Zhang, MIT) · 2026-10-02</span>
+      <span data-lang="en">Article/podcast digest · Latent Space (guest: Alex Zhang, MIT) · 2026-10-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Академия — для амбиций: Алекс Чжан о рекурсивных языковых моделях и о том, что мы теряем, заворачивая LLM в примитивные харнессы</span>
+      <span data-lang="en">Academia is for Ambition: Alex Zhang on Recursive Language Models and the capability we're leaving on the table</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/rlm" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал эпизода ↗</span><span data-lang="en">Original episode ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Алекс Чжан — аспирант MIT CSAIL (научные руководители — Омар Хаттаб и Тим Краска), соруководитель сообщества GPU Mode и автор бенчмарка KernelBench для оценки способности LLM писать быстрые и корректные GPU-ядра. В разговоре с ведущими Latent Space он формулирует центральный тезис: подавляющее большинство сегодняшних агентных харнессов — не предел возможностей моделей, а их искусственное сужение. По его словам, доминирующие сегодня харнессы — Claude Code от Anthropic, Codex от OpenAI и большинство популярных альтернатив — «если честно, все одинаковые»: вариации одного и того же паттерна, где вся траектория работы агента целиком закачивается обратно в контекст модели на каждом шаге.</span>
+      <span data-lang="en">Alex Zhang is an MIT CSAIL PhD student (advised by Omar Khattab and Tim Kraska), a co-lead of the GPU Mode community, and the author of KernelBench, a benchmark for how well LLMs write fast, correct GPU kernels. In conversation with the Latent Space hosts, he lays out a central claim: most of today's agent harnesses aren't a ceiling on what models can do, they're an artificial narrowing of it. In his view, today's dominant harnesses — Anthropic's Claude Code, OpenAI's Codex, and most popular alternatives — are, "to be honest, all the same": variations on one pattern where the agent's entire trajectory gets fed straight back into the model's context at every step.</span>
+    </p>
+
+    <h2><span data-lang="ru">Рекурсивные языковые модели: контекст как переменная, а не как текст в окне</span><span data-lang="en">Recursive Language Models: context as a variable, not text in a window</span></h2>
+    <p>
+      <span data-lang="ru">Альтернативу Чжан строит на собственной работе над Recursive Language Models (RLM) — методе, где весь контекст живёт не в окне модели, а в памяти среды исполнения (файловая система, Python REPL или bash REPL), а модель пишет код, который обращается к этому контексту и обрабатывает его программно. Это называется context offloading: вместо того чтобы впихивать всю историю диалога и все найденные документы в промпт, агент хранит их как переменные во внешней среде и достаёт ровно то, что нужно для конкретного шага, через код. Модель при этом может рекурсивно вызывать саму себя на подзадачах — отсюда «рекурсивные» в названии.</span>
+      <span data-lang="en">Zhang builds his alternative on his own work on Recursive Language Models (RLM), a method where the entire context doesn't live in the model's window at all — it lives in the memory of the execution environment (a filesystem, a Python REPL, or a bash REPL), and the model writes code that reaches into that context and processes it programmatically. This is called context offloading: instead of cramming the full conversation history and every retrieved document into the prompt, the agent keeps them as variables in the outside environment and pulls in exactly what a given step needs, via code. The model can recursively call itself on sub-tasks this way — hence "recursive" in the name.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Локально типичные» вызовы: почему код как единственный инструмент помогает модели обобщать</span><span data-lang="en">"Locally in-distribution" calls: why code-as-the-only-tool helps models generalize</span></h2>
+    <p>
+      <span data-lang="ru">Ключевое теоретическое объяснение, почему это работает, Чжан формулирует через понятие «locally in-distribution» вызовов: если ограничить модель средой, где единственный доступный инструмент — код (как в его собственном харнессе Prime Agent, использующем IPython как единственный инструмент), то каждый отдельный вызов модели остаётся в пределах того, на чём она хорошо обучена, даже когда вся задача целиком выходит далеко за пределы обучающего распределения. Практическое следствие — компоновочное обобщение (compositional generalization): стратегии, которым модель научилась на коротких задачах, переносятся на задачи в 8–30 раз длиннее, потому что каждый шаг внутри них по-прежнему «типичен» для модели, даже если всё дерево вызовов — нет.</span>
+      <span data-lang="en">Zhang's core theoretical explanation for why this works turns on what he calls "locally in-distribution" calls: if you restrict the model to an environment where the only available tool is code (as in his own Prime Agent harness, which uses IPython as its sole tool), each individual model call stays within what it's well-trained on, even when the task as a whole falls far outside the training distribution. The practical payoff is compositional generalization: strategies the model learned on short tasks transfer to tasks 8 to 30 times longer, because every step inside them is still "typical" for the model, even though the full call tree isn't.</span>
+    </p>
+
+    <h2><span data-lang="ru">Prime Agent: харнесс, который переписывает сам себя</span><span data-lang="en">Prime Agent: a harness that rewrites itself</span></h2>
+    <p>
+      <span data-lang="ru">Prime Agent — собственный самоулучшающийся RLM-харнесс Чжана для кодинга и долгоживущих автономных задач, спроектированный одновременно экономным по токенам и выразительным: программные вызовы инструментов, контекст как переменная среды, обмен сообщениями между несколькими агентами и изменяемое состояние самого харнесса. Отдельная особенность — «continual harness»: система способна модифицировать собственные скиллы и системный промпт по ходу работы, а не только выполнять задачи в его неизменных рамках. Харнесс поддерживает персистентных сабагентов, которые продолжают существовать и работать дольше, чем время жизни породившего их родительского агента — то есть задача не обязана укладываться в одну сессию одного процесса.</span>
+      <span data-lang="en">Prime Agent is Zhang's own self-improving RLM harness for coding and long-running autonomous tasks, designed to be simultaneously token-efficient and expressive: programmatic tool calls, context held as an environment variable, multi-agent messaging, and a self-modifiable harness state. A distinct feature is the "continual harness": the system can modify its own skills and system prompt as it works, rather than only executing tasks inside a fixed frame. The harness supports persistent subagents that keep running longer than the parent agent that spawned them stays alive — meaning a task no longer has to fit inside one session of one process.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Мismanaged geniuses»: способности уже есть, их прячет харнесс</span><span data-lang="en">"Mismanaged geniuses": the capability is already there, the harness hides it</span></h2>
+    <p>
+      <span data-lang="ru">Гипотезу, которую Чжан называет «mismanaged geniuses» («неправильно управляемые гении»), он формулирует так: уже внутри «типичного» для фронтир-моделей поведения существует мощная общая система, способная решать нетиповые задачи из вполне типовых отдельных вызовов — проблема не в недостатке возможностей модели, а в том, что господствующий сегодня дизайн харнессов (вся история — обратно в контекст) не даёт этой способности раскрыться. Отсюда и его резкая оценка нынешней конвергенции индустрии на одном паттерне агентного харнесса: она не подтверждает, что найден правильный дизайн, а скорее говорит, что лаборатории пока не рискнули проверить альтернативы вроде RLM на фронтир-масштабе.</span>
+      <span data-lang="en">Zhang frames what he calls the "mismanaged geniuses" hypothesis this way: already within what counts as "in-distribution" behavior for frontier models, there exists a powerful general system capable of solving out-of-distribution problems using only in-distribution individual calls — the limitation isn't the model's raw capability, it's that today's dominant harness design (dump the whole history back into context) never lets that capability surface. That's also behind his sharp read on the industry's current convergence on a single harness pattern: it isn't evidence the right design has been found, so much as evidence that labs haven't yet risked testing alternatives like RLM at frontier scale.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

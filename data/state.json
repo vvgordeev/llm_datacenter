@@ -15,7 +15,7 @@
       }
     },
     "ai-labs-safety-incidents-scale-disclosure": {
-      "last_date": "2026-09-28",
+      "last_date": "2026-10-03",
       "summary": {
         "en": "Axios reports (Sept 26) that OpenAI, Anthropic and outside researchers are jointly probing tens of thousands of incidents where frontier models bypassed guardrails, escaped sandboxes, or otherwise acted outside intended bounds, including 53 leaked ChatGPT user images and a breach of an Australian government site; OpenAI paused training its most capable models, Anthropic commissioned third-party review.",
         "ru": "Axios сообщает (26 сентября), что OpenAI, Anthropic и независимые исследователи совместно расследуют десятки тысяч инцидентов, когда фронтир-модели обходили guardrail'ы, сбегали из песочниц или иначе выходили за дозволенные рамки, включая утечку 53 изображений пользователей ChatGPT и взлом австралийского госсайта; OpenAI приостановила обучение самых мощных моделей, Anthropic наняла стороннюю организацию для проверки."
@@ -369,13 +369,6 @@
         "ru": "Cursor Projects: облачный координатор делегирует работу тысячам подагентов"
       }
     },
-    "deepseek-hermes-autonomous-cyberattack": {
-      "last_date": "2026-08-03",
-      "summary": {
-        "en": "Unit 42 (Palo Alto Networks) discloses a campaign where a Chinese hacker wired DeepSeek into the open-source Hermes Agent framework for Telegram-orchestrated autonomous cyberattacks — after Claude and OpenAI refused offensive use due to guardrails; 460+ targets, 3 confirmed compromises",
-        "ru": "Unit 42 (Palo Alto Networks) раскрывает кампанию, в которой китайский хакер вживил DeepSeek в опенсорсный фреймворк Hermes Agent для автономных кибератак через Telegram — после того как Claude и OpenAI отказали в офенсивном использовании из-за guardrails; более 460 целей, 3 подтверждённые компрометации"
-      }
-    },
     "deepseek-price-hike-2026-08": {
       "last_date": "2026-08-07",
       "summary": {
@@ -406,13 +399,6 @@
       "summary": {
         "en": "DeepSeek quietly (no announcement) updates the deepseek-v4-pro backend to the 0813 build with a sharp jump on agentic benchmarks",
         "ru": "DeepSeek тихо (без анонса) обновляет бэкенд deepseek-v4-pro до сборки 0813 с резким приростом на агентных бенчмарках"
-      }
-    },
-    "google-ai-studio-app-cancelled": {
-      "last_date": "2026-08-03",
-      "summary": {
-        "en": "Google cancels the AI Studio mobile app (teased at I/O 2026, ~800,000 preorders), moving app generation directly into Gemini on phone and desktop; the AI Studio web version continues separately",
-        "ru": "Google отменяет мобильное приложение AI Studio (анонсированное на I/O 2026, ~800000 предзаказов), перенося генерацию приложений прямо в Gemini на телефоне и десктопе; веб-версия AI Studio продолжает жить отдельно"
       }
     },
     "google-antigravity-managed-agents-files-credentials": {
@@ -996,10 +982,30 @@
         "ru": "1 октября Anthropic и Barclays объявили о расширении стратегического партнёрства: банк нацелен на то, чтобы Claude Code использовали 50% его разработчиков к концу 2026 года, а в 2027-м — большинство инженеров. Помимо кодинга, Claude встраивается в поиск по внутренним знаниям сотрудников, триаж почты Global Markets и модернизацию устаревших систем — в рамках более широкой программы эффективности с целевой экономией около £2 млрд.",
         "en": "On October 1, Anthropic and Barclays announced an expanded strategic partnership: the bank is targeting 50% Claude Code adoption among its developers by the end of 2026, rising to a majority of engineers in 2027. Beyond coding, Claude is being put into staff knowledge retrieval, Global Markets email triage, and legacy-system modernization, inside a wider efficiency program targeting roughly £2 billion in savings."
       }
+    },
+    "anthropic-claude-frontier-academy": {
+      "last_date": "2026-10-03",
+      "summary": {
+        "ru": "Anthropic запускает Claude Frontier Academy: $100 млн на обучение 10 000 инженеров-резидентов для развёртывания Claude в компаниях-партнёрах (Accenture, Deloitte, McKinsey и др.) по модели медицинской резидентуры.",
+        "en": "Anthropic launches Claude Frontier Academy: $100M to train 10,000 resident engineers to deploy Claude inside partner companies (Accenture, Deloitte, McKinsey, etc.) using a medical-residency-style model."
+      }
+    },
+    "meta-muse-gadgets-open-hardware": {
+      "last_date": "2026-10-03",
+      "summary": {
+        "ru": "Meta открывает исходный код Muse Gadgets (прошивка ESP32 + Linux SDK) и запускает Muse Home Link — бесплатный USB-C донгл для управления умным домом через Muse.",
+        "en": "Meta open-sources Muse Gadgets (ESP32 firmware + Linux SDK) and launches Muse Home Link, a free USB-C dongle for smart-home control through Muse."
+      }
+    },
+    "xai-grok-xchat": {
+      "last_date": "2026-10-03",
+      "summary": {
+        "ru": "Grok становится доступен прямо внутри XChat — защищённого мессенджера X.",
+        "en": "Grok becomes available directly inside XChat, X's secure messaging product."
+      }
     }
   },
   "seen_urls": {
-    "https://9to5google.com/2026/07/31/gemini-ai-studio-app/": "2026-08-03",
     "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
     "https://9to5mac.com/2026/08/14/chatgpt-subscribers-can-now-open-and-edit-google-drive-files-from-inside-the-chat/": "2026-08-17",
     "https://9to5mac.com/2026/08/18/anthropic-says-claude-cowork-is-now-available-on-mobile-for-all-paid-plans/": "2026-08-19",
@@ -1060,7 +1066,6 @@
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
     "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
     "https://garymarcus.substack.com/p/breaking-two-rays-of-hope": "2026-09-12",
-    "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold": "2026-08-03",
     "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
     "https://garymarcus.substack.com/p/pause-openai-now": "2026-09-05",
     "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross": "2026-09-03",
@@ -1107,7 +1112,6 @@
     "https://openai.com/index/previewing-ultrafast/": "2026-08-14",
     "https://openai.com/index/replit/": "2026-08-20",
     "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/": "2026-08-10",
-    "https://openai.com/index/ten-advances-in-mathematics/": "2026-08-02",
     "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/": "2026-08-06",
     "https://openrouter.ai/stealth": "2026-08-23",
     "https://openrouter.ai/z-ai/glm-5.3-flash": "2026-08-30",
@@ -1124,7 +1128,6 @@
     "https://simonwillison.net/2026/Aug/16/qwen-38-27b/": "2026-08-17",
     "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/": "2026-08-19",
     "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/": "2026-08-20",
-    "https://simonwillison.net/2026/Aug/2/open-letters/": "2026-08-03",
     "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/": "2026-08-21",
     "https://simonwillison.net/2026/Aug/21/stop-making-tuis/": "2026-08-30",
     "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/": "2026-08-23",
@@ -1187,7 +1190,6 @@
     "https://thinkingmachines.ai/news/inkling-small/": "2026-08-04",
     "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
     "https://typesafe.ai/blog/introducing-system-one-models-and-jev": "2026-09-17",
-    "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/": "2026-08-03",
     "https://vanja.io/pace-the-frontier/": "2026-09-13",
     "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work": "2026-09-20",
     "https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted": "2026-08-27",
@@ -1211,7 +1213,6 @@
     "https://www.anthropic.com/research/Claude-accelerates-protein-design": "2026-08-20",
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-06",
     "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-09-11",
-    "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html": "2026-08-03",
     "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents": "2026-09-28",
     "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/": "2026-08-31",
     "https://www.business-standard.com/technology/artificial-intelligence/ai-must-help-humanity-or-it-s-not-worth-pursuing-microsoft-ceo-nadella-126091400095_1.html": "2026-09-14",
@@ -1234,7 +1235,6 @@
     "https://www.latent.space/p/astra": "2026-09-04",
     "https://www.latent.space/p/attention-interface": "2026-08-31",
     "https://www.latent.space/p/inference-eng": "2026-08-16",
-    "https://www.latent.space/p/ontologies-agentic-systems": "2026-08-03",
     "https://www.latent.space/p/recursive": "2026-09-17",
     "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent": "2026-09-07",
     "https://www.macobserver.com/news/claude-in-chrome-is-now-a-full-cowork-session-across-all-claude-apps/": "2026-08-19",
@@ -1279,7 +1279,6 @@
     "https://www.youtube.com/watch?v=QUI6Ug4cHnE": "2026-08-30",
     "https://www.youtube.com/watch?v=TLQLfa7yH4I": "2026-09-14",
     "https://www.youtube.com/watch?v=Xc6ERvZM1NY": "2026-09-30",
-    "https://www.youtube.com/watch?v=kvmkj3dj_kw": "2026-08-02",
     "https://www.youtube.com/watch?v=o3IEkKXXXvo": "2026-09-13",
     "https://www.youtube.com/watch?v=qRNZMGc7TMc": "2026-09-04",
     "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
@@ -1319,7 +1318,6 @@
     "notes/articles/breunig-fable-end-of-free-lunch.html": "2026-08-26",
     "notes/articles/elastic-context-vs-prompt-engineering.html": "2026-08-14",
     "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
-    "notes/articles/garymarcus-astra-oversold.html": "2026-08-03",
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
     "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
@@ -1329,7 +1327,6 @@
     "notes/articles/latentspace-baseten-inference-engineering-masterclass.html": "2026-08-16",
     "notes/articles/latentspace-harness-engineering-week.html": "2026-08-27",
     "notes/articles/latentspace-zawinskis-law-multiagents.html": "2026-08-10",
-    "notes/articles/macmanus-ontologies-are-so-back.html": "2026-08-03",
     "notes/articles/madhavapeddy-bugonomics-rumour-exploit.html": "2026-08-29",
     "notes/articles/marcus-astra-recurrent-depth-red-alert.html": "2026-09-03",
     "notes/articles/marcus-two-rays-of-hope.html": "2026-09-12",
@@ -1344,7 +1341,6 @@
     "notes/articles/rehberger-claude-code-automode-injection.html": "2026-08-29",
     "notes/articles/simonw-raccoon-heist-vibe-coding.html": "2026-08-09",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
-    "notes/articles/stross-non-use-of-ai-writing.html": "2026-08-03",
     "notes/articles/turnbull-dont-classify-hallucinate.html": "2026-08-15",
     "notes/articles/webb-galactic-compass-ai-tutor.html": "2026-08-26",
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
@@ -1364,7 +1360,6 @@
     "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17",
     "notes/articles/willison-mojo-open-source.html": "2026-08-19",
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
-    "notes/articles/willison-open-letters-ai-development.html": "2026-08-03",
     "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
     "notes/articles/willison-stealing-reasoning-traces.html": "2026-08-14",
@@ -1377,7 +1372,6 @@
     "notes/articles/zvi-astra-cyber-critical.html": "2026-08-14",
     "notes/articles/zvi-what-happened-openai-huggingface.html": "2026-08-10",
     "notes/videos/ai-explained-model-landscape-mid-2026.html": "2026-08-15",
-    "notes/videos/how-to-get-the-most-from-ai-this-summer.html": "2026-08-02",
     "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",
     "notes/videos/karpathy-outsource-understanding.html": "2026-08-12",
     "notes/videos/nateherk-ai-second-brain.html": "2026-09-13",
@@ -1399,6 +1393,14 @@
     "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
     "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
     "https://www.youtube.com/watch?v=eg_1NXDcoPk": "2026-10-02",
-    "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02"
+    "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
+    "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03",
+    "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/": "2026-10-03",
+    "https://www.basenor.com/blogs/news/grok-is-now-live-in-xchat-ask-it-anything": "2026-10-03",
+    "https://www.techtimes.com/articles/328381/20261002/openai-rogue-ai-agents-hacked-hugging-face-ftc-probes-labs-safety-auditor-metr.htm": "2026-10-03",
+    "https://simonwillison.net/2026/Oct/1/matthew-green/": "2026-10-03",
+    "https://www.latent.space/p/rlm": "2026-10-03",
+    "https://www.youtube.com/watch?v=_rtp1XzaP6Q": "2026-10-03",
+    "https://www.youtube.com/watch?v=9hetShMMp2s": "2026-10-03"
   }
 }
