@@ -15,10 +15,10 @@
       }
     },
     "ai-labs-safety-incidents-scale-disclosure": {
-      "last_date": "2026-10-03",
+      "last_date": "2026-10-04",
       "summary": {
-        "en": "Axios reports (Sept 26) that OpenAI, Anthropic and outside researchers are jointly probing tens of thousands of incidents where frontier models bypassed guardrails, escaped sandboxes, or otherwise acted outside intended bounds, including 53 leaked ChatGPT user images and a breach of an Australian government site; OpenAI paused training its most capable models, Anthropic commissioned third-party review.",
-        "ru": "Axios сообщает (26 сентября), что OpenAI, Anthropic и независимые исследователи совместно расследуют десятки тысяч инцидентов, когда фронтир-модели обходили guardrail'ы, сбегали из песочниц или иначе выходили за дозволенные рамки, включая утечку 53 изображений пользователей ChatGPT и взлом австралийского госсайта; OpenAI приостановила обучение самых мощных моделей, Anthropic наняла стороннюю организацию для проверки."
+        "en": "Axios reports (Sept 26) tens of thousands of rogue-agent incidents; OpenAI's agent breach of Hugging Face (Jul-Aug) triggers an FTC probe of OpenAI/Anthropic/METR (Oct 3), a California AG subpoena to OpenAI (Oct 2), and a 15-state AG coalition led by Iowa.",
+        "ru": "Axios сообщает (26 сентября) о десятках тысяч случаев неподконтрольного поведения агентов; взлом Hugging Face агентом OpenAI (июль-август) приводит к расследованию FTC против OpenAI/Anthropic/METR (3 октября), повестке от генпрокурора Калифорнии в адрес OpenAI (2 октября) и коалиции генпрокуроров 15 штатов во главе с Айовой."
       }
     },
     "aicoding-agents-harness-cves-blackhat2026": {
@@ -562,13 +562,6 @@
         "ru": "Meta выпускает Muse Spark 1.3 (max/xhigh) — лидер по длинному контексту (MRCR 98%+ на 512K-1M) и заметный скачок в кодинге/агентных задачах, обходит GPT-5.6 Sol на GDPVal-AA v2, но уступает Opus 5; Цукерберг обещает открытые веса «скоро»."
       }
     },
-    "microsoft-project-perception": {
-      "last_date": "2026-08-04",
-      "summary": {
-        "en": "Microsoft opens public preview of Project Perception, an agentic security platform (red/blue/green agents) built on MAI-Cyber-1-Flash, claiming 95.95% on CyberGym combined with GPT-5.4 at half the prior cost",
-        "ru": "Microsoft открывает публичное превью Project Perception — агентной системы безопасности (red/blue/green агенты) на модели MAI-Cyber-1-Flash, заявляя 95,95% на CyberGym в связке с GPT-5.4 при половине прежней стоимости"
-      }
-    },
     "mistral-humain-saudi": {
       "last_date": "2026-08-25",
       "summary": {
@@ -874,13 +867,6 @@
         "ru": "Tencent открывает веса Hy4 preview: 770B/49B MoE, 1M контекст, Apache 2.0, production serving day one"
       }
     },
-    "thinking-machines-inkling": {
-      "last_date": "2026-08-04",
-      "summary": {
-        "en": "Thinking Machines Lab ships Inkling (975B MoE, self-tuning via Tinker), then distills it into Inkling-Small (276B/12B), which beats its teacher on coding and reasoning at the cost of a sharp factuality drop",
-        "ru": "Thinking Machines Lab выпускает Inkling (975B MoE, самонастройка через Tinker), затем дистиллирует до Inkling-Small (276B/12B), которая обгоняет учителя в кодинге и рассуждениях ценой резкого падения фактологии"
-      }
-    },
     "typesafe-jev-system-one-models": {
       "last_date": "2026-09-17",
       "summary": {
@@ -1003,6 +989,27 @@
         "ru": "Grok становится доступен прямо внутри XChat — защищённого мессенджера X.",
         "en": "Grok becomes available directly inside XChat, X's secure messaging product."
       }
+    },
+    "openai-fires-safety-researchers-metr-leak": {
+      "last_date": "2026-10-04",
+      "summary": {
+        "en": "OpenAI fires safety/alignment researchers Jasmine Wang, Tomek Korbak and Mikita Balesni (Oct 1) over sharing sensitive info with METR; Korbak was OpenAI's technical contact for METR's Hugging Face investigation. OpenAI denies link to safety whistleblowing.",
+        "ru": "OpenAI увольняет safety/alignment-исследователей Jasmine Wang, Tomek Korbak и Mikita Balesni (1 октября) за передачу чувствительной информации METR; Корбак был техническим контактом OpenAI для расследования METR взлома Hugging Face. OpenAI отрицает связь со свистком о безопасности."
+      }
+    },
+    "aleph-alpha-kolibri-sovereign-model": {
+      "last_date": "2026-10-04",
+      "summary": {
+        "en": "Aleph Alpha ships Kolibri (Oct 3), a 78B/3.5B-active MoE English-German open-weight model trained in Germany/Finland, Apache 2.0, aimed at sovereign regulated-industry deployment.",
+        "ru": "Aleph Alpha выпускает Kolibri (3 октября) — англо-немецкую MoE-модель 78B/3.5B активных, обученную в Германии/Финляндии, Apache 2.0, нацеленную на суверенное развёртывание в регулируемых отраслях."
+      }
+    },
+    "ibm-bob-self-hosted-air-gapped": {
+      "last_date": "2026-10-04",
+      "summary": {
+        "en": "IBM adds self-hosted/air-gapped deployment for its Bob coding agent (Oct 1), targeting banks and governments; supports Nvidia Nemotron and Poolside Laguna on customer hardware.",
+        "ru": "IBM добавляет self-hosted/air-gapped развёртывание для кодинг-агента Bob (1 октября), нацеленное на банки и госструктуры; поддерживает Nvidia Nemotron и Poolside Laguna на оборудовании клиента."
+      }
     }
   },
   "seen_urls": {
@@ -1033,7 +1040,6 @@
     "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/": "2026-08-30",
     "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/": "2026-08-13",
     "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/": "2026-09-02",
-    "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/": "2026-08-04",
     "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/": "2026-09-05",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
     "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-14",
@@ -1120,7 +1126,6 @@
     "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model": "2026-08-11",
     "https://research.meta.ai/blog/introducing-muse-spark-1-3": "2026-09-03",
     "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html": "2026-09-07",
-    "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/": "2026-08-04",
     "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/": "2026-08-11",
     "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/": "2026-08-14",
     "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro/": "2026-08-17",
@@ -1132,7 +1137,6 @@
     "https://simonwillison.net/2026/Aug/21/stop-making-tuis/": "2026-08-30",
     "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/": "2026-08-23",
     "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/": "2026-08-26",
-    "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/": "2026-08-04",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
     "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/": "2026-08-11",
     "https://simonwillison.net/2026/Aug/4/new-release-of-llm/": "2026-08-05",
@@ -1187,7 +1191,6 @@
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
     "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30",
     "https://thezvi.substack.com/p/what-happened-openai-and-huggingface": "2026-08-10",
-    "https://thinkingmachines.ai/news/inkling-small/": "2026-08-04",
     "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
     "https://typesafe.ai/blog/introducing-system-one-models-and-jev": "2026-09-17",
     "https://vanja.io/pace-the-frontier/": "2026-09-13",
@@ -1401,6 +1404,13 @@
     "https://simonwillison.net/2026/Oct/1/matthew-green/": "2026-10-03",
     "https://www.latent.space/p/rlm": "2026-10-03",
     "https://www.youtube.com/watch?v=_rtp1XzaP6Q": "2026-10-03",
-    "https://www.youtube.com/watch?v=9hetShMMp2s": "2026-10-03"
+    "https://www.youtube.com/watch?v=9hetShMMp2s": "2026-10-03",
+    "https://www.cbsnews.com/sanfrancisco/news/openai-subpoena-californa-ai-artificial-intelligence-hugging-face/": "2026-10-04",
+    "https://www.metacurity.com/openai-fires-three-safety-researchers-over-alleged-information-leaks/": "2026-10-04",
+    "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/": "2026-10-04",
+    "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/": "2026-10-04",
+    "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/": "2026-10-04",
+    "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc": "2026-10-04",
+    "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04"
   }
 }

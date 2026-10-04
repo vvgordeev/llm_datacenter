@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Pi 1.0 и Pi Durable — минималистичный харнесс для агентов — Latent Space — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (AINews) · 2026-10-02</span>
+      <span data-lang="en">Article digest · Latent Space (AINews) · 2026-10-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Pi 1.0 и Pi Durable: минималистичный харнесс для агентов становится стабильным — и переезжает на TypeScript</span>
+      <span data-lang="en">Pi 1.0 and Pi Durable: the minimalist agent harness goes stable — and TypeScript</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ежедневный выпуск AINews от Latent Space разбирает релиз Pi 1.0 — минималистичного харнесса для агентов, который вместе с сопутствующим Pi Durable вышел на первую страницу Hacker News и встал в один ряд с уже признанным проектом Earendil. Главный тезис материала: Pi — это не очередной фреймворк с большим количеством абстракций, а узкий, стабилизировавшийся слой поверх моделей и инструментов, который теперь можно считать production-ready, и который при этом переписан на TypeScript.</span>
+      <span data-lang="en">Latent Space's daily AINews roundup covers the release of Pi 1.0 — a minimalist agent harness that, together with its companion Pi Durable, hit the Hacker News front page alongside the already well-regarded Earendil project. The piece's core point: Pi isn't another framework piling on abstractions, but a narrow, now-stabilized layer over models and tools that can be called production-ready — and it's been rewritten in TypeScript.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что входит в Pi 1.0</span><span data-lang="en">What's in Pi 1.0</span></h2>
+    <p>
+      <span data-lang="ru">Pi 1.0 добавляет нативную поддержку MCP, модели Jev и моделей для работы с изображениями, расширяемость через виртуальные модели, отложенную (ленивую) загрузку инструментов — то есть описания инструментов подгружаются по необходимости, а не все сразу в системный промпт, — прогрев кэша специально под модели Anthropic и возможность вставлять системные сообщения в середине диалога, а не только в его начале. По отдельности каждая деталь невелика, но вместе они решают конкретную операционную боль: харнесс с большим количеством подключённых инструментов и длинными разговорами перестаёт деградировать по стоимости и задержке по мере роста контекста.</span>
+      <span data-lang="en">Pi 1.0 adds native support for MCP, Jev and image models, extensibility via virtual models, deferred ("lazy") tool loading — tool descriptions get pulled in on demand rather than all at once into the system prompt — cache warming tuned specifically for Anthropic models, and the ability to insert system messages mid-conversation rather than only at the start. Each detail is small on its own, but together they address a concrete operational pain: a harness with many connected tools and long conversations stops degrading in cost and latency as the context grows.</span>
+    </p>
+
+    <h2><span data-lang="ru">Pi Durable: метод — чекпоинты на каждом шаге вместо «рестарт с нуля»</span><span data-lang="en">Pi Durable: the method is checkpointing every step instead of "restart from zero"</span></h2>
+    <p>
+      <span data-lang="ru">Pi Durable — это отдельный слой, который решает проблему долгоживущих агентов: что происходит, когда процесс падает или перезапускается посреди многошаговой задачи. Метод прост: каждый шаг записывается как чекпоинтнутая задача, и если процесс падает или перезапускается, агенты и под-агенты автоматически возобновляются с точного последнего состояния, а не стартуют заново. Технически Pi Durable работает поверх любого JS-рантайма и подключаемых бэкендов хранения — это сделано намеренно, чтобы не привязывать разработчика к конкретной базе данных или облаку. Отдельная возможность — один харнесс может вести несколько параллельных, ветвящихся диалогов, не блокируя друг друга, что важно для сценариев, где один агент порождает несколько под-агентов для разных подзадач одновременно.</span>
+      <span data-lang="en">Pi Durable is a separate layer that solves the long-running-agent problem: what happens when the process crashes or restarts mid-task. The method is simple: every step is recorded as a checkpointed task, and if the process crashes or restarts, agents and subagents automatically resume from their exact last state instead of starting over. Technically, Pi Durable runs on top of any JS runtime and pluggable storage backends — a deliberate choice so developers aren't locked into one database or cloud. A separate capability lets a single harness run multiple parallel, branching conversations without blocking one another, which matters for scenarios where one agent spins up several subagents for different subtasks at once.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Когда применять: Pi Durable явно нацелен на агентов, которые работают долго и не могут позволить себе потерять прогресс при сбое инфраструктуры — фоновые задачи, многошаговые пайплайны, агентов, развёрнутых на серверах, а не в интерактивной сессии разработчика. Для короткоживущих разговоров в духе «вопрос-ответ» эта инфраструктура, по сути, избыточна. Разработчикам также доступны устанавливаемые «Extensions» — пакеты, в которые можно упаковать собственные системные промпты, инструменты, хуки и durable-задачи, чтобы переиспользовать целый настроенный агентный сетап, а не собирать его заново в каждом проекте.</span>
+      <span data-lang="en">When to use it: Pi Durable is explicitly aimed at agents that run for a long time and can't afford to lose progress to an infrastructure failure — background jobs, multi-step pipelines, agents deployed on servers rather than in an interactive dev session. For short question-answer conversations, this infrastructure is effectively overkill. Developers also get installable "Extensions" — packages that bundle custom system prompts, tools, hooks, and durable tasks together, so a whole configured agent setup can be reused rather than rebuilt from scratch in every project.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

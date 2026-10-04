@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Нужны жёсткие лимиты бюджета по умолчанию» — Simon Willison — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-10-03</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-10-03</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Нужны жёсткие лимиты бюджета по умолчанию — почти везде</span>
+      <span data-lang="en">We're going to need default hard budget caps on pretty much everything</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон формулирует продуктовое требование, которое, по его мнению, индустрии понадобится в ближайшие годы повсеместно: жёсткий лимит бюджета по умолчанию (default hard budget cap) — функция сервисов и API с оплатой по использованию, которая говорит «после $X в месяц отключи сервис и возвращай ошибки». Ключевое слово — «жёсткий»: мягкие лимиты вида «после $X пришли предупреждение на почту» не решают проблему, потому что предупреждение, пришедшее в полночь, не остановит уже запущенный процесс.</span>
+      <span data-lang="en">Simon Willison states a product requirement he believes the industry will need everywhere in the coming years: a default hard budget cap — a feature of pay-by-usage services and APIs that says "after $X per month, cut this thing off and return errors." The key word is "hard": soft caps along the lines of "after $X, send a warning email" don't solve the problem, because a midnight warning email won't stop a process that's already running.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это стало срочным именно сейчас: агенты снижают трение</span><span data-lang="en">Why this got urgent now: agents lower the friction</span></h2>
+    <p>
+      <span data-lang="ru">Причина, по которой тема актуальна именно сейчас, — кодинг-агенты и персональные агенты (те же кодинг-агенты, обёрнутые в менее пугающий интерфейс). Они резко снижают трение для того, чтобы быстро развернуть код, который делает что-то полезное — а «полезное» сплошь и рядом означает платные вызовы API, хостинг веб-приложений или системы, которые выставляют счёт за дополнительное хранилище и вычисления. Раньше барьер входа в такие интеграции был выше, и человек успевал подумать о лимитах; агент пишет и разворачивает рабочий код за минуты, и бюджетная защита, которую раньше добавляли вручную «между делом», в эту скорость просто не попадает.</span>
+      <span data-lang="en">The reason this matters right now is coding agents and personal agents (coding agents wrapped in a less threatening UI). They sharply reduce the friction of spinning up code that does something useful — and "useful" routinely means paid API calls, hosted web apps, or systems that bill for extra storage and compute. The barrier to such integrations used to be high enough that a person had time to think about limits; an agent writes and deploys working code in minutes, and the budget guardrails people used to bolt on "along the way" simply don't fit into that speed.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Никто не хочет проснуться от письма, отправленного в полночь с предупреждением о превышении бюджета, и обнаружить, что пока он спал, взбесившийся сервис потратил ещё несколько сотен или тысяч долларов сверху. Стандартное возражение — что бизнес не хочет, чтобы продакшен-приложение начало отдавать ошибки из-за превышения бюджета, — Уиллисон отводит: по его опыту, большинство людей и компаний предпочли бы ошибки неожиданному счёту на $10 000+.</span>
+      <span data-lang="en">Nobody wants to wake up to a midnight email warning about a budget overage and discover that, while they slept, a rogue service burned through several hundred or several thousand additional dollars. The standard objection — that a business doesn't want its production app to start throwing errors because some budget was exceeded — Willison sets aside: in his experience, most people and companies would rather eat the errors than a surprise $10,000+ bill.</span>
+    </p>
+
+    <h2><span data-lang="ru">Предлагаемый подход: hard cap по умолчанию, opt-out через явный чекбокс</span><span data-lang="en">The proposed approach: hard cap by default, opt-out via an explicit checkbox</span></h2>
+    <p>
+      <span data-lang="ru">Метод, который предлагает Уиллисон, прост по формулировке: жёсткие лимиты должны быть настройкой по умолчанию. Если кто-то хочет «жить опасно» — без лимита, рискуя получить огромный счёт, — это должно быть осознанным действием, доступным только через явный opt-in: чекбокс вида «Снять лимит бюджета. Моё приложение не будет остановлено при превышении настроенного лимита, и я беру на себя ответственность за дальнейшие траты». Сервис, от которого он больше всего хочет увидеть такую функцию, — AWS: он слышал много историй о людях, которые вообще отказываются использовать AWS для личных проектов именно из обоснованного страха, что вышедший из-под контроля сервис может их разорить, и столько же историй о тех, кто не предвидел этого и серьёзно пострадал.</span>
+      <span data-lang="en">The method Willison proposes is simple to state: hard limits should be the default setting. If someone wants to "live dangerously" — no limit, risking a huge bill — that should be a deliberate action, available only via explicit opt-in: a checkbox reading "Remove the budget cap. My application will not be shut down if I exceed the configured budget limit, and I will be responsible for subsequent charges." The service he most wants to see this from is AWS: he's heard plenty of stories of people who refuse to use AWS for personal projects out of justified fear that a runaway service could bankrupt them, and just as many stories from people who didn't anticipate it and got seriously burned.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Тут он отмечает, что AWS уже сделал первый шаг: 16 сентября компания анонсировала «New AWS Builder Experience», которая позволяет при переходе на платный план задать месячный лимит трат на основе паттернов использования — и если проект достигает лимита, он приостанавливается на этот месяц. Правда, по собственному предупреждению AWS, новый опыт пока раскатывается только на ограниченное число клиентов. Google Cloud пошёл похожим путём ещё в июле, выпустив Spend Caps — лимит трат на конкретные сервисы внутри проекта. Уиллисон читает это как складывающийся тренд, а не единичный случай.</span>
+      <span data-lang="en">He notes AWS has already taken a first step: on September 16 the company announced the "New AWS Builder Experience," which lets you set a monthly spend limit based on usage patterns once you upgrade to a paid plan — and if a project hits that limit, it's paused for the month. By AWS's own caveat, though, the new experience is still rolling out to a limited number of customers. Google Cloud moved similarly back in July with Spend Caps — a monthly financial cap on specific services within a project. Willison reads this as an emerging trend rather than an isolated case.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения и где подход неполон</span><span data-lang="en">Limits — where the approach is still incomplete</span></h2>
+    <p>
+      <span data-lang="ru">Сам Уиллисон не выдаёт это за решённую задачу: пока жёсткие лимиты по умолчанию — не отраслевой стандарт, а раскатывающаяся «limited availability» фича даже у AWS и Google Cloud, и большинство провайдеров API вообще не предлагают ничего подобного. Он завершает эссе идеей на будущее, а не готовым рецептом: в идеальном мире сами агенты помогали бы с этой проблемой — например, по умолчанию рекомендовали разработчику провайдеров с жёсткими лимитами бюджета и явно предупреждали неопытных авторов при развёртывании на сервисах без таких ограничений.</span>
+      <span data-lang="en">Willison doesn't present this as a solved problem: hard caps by default aren't yet an industry standard — even at AWS and Google Cloud it's a rolling-out, limited-availability feature, and most API providers offer nothing like it at all. He closes with a forward-looking idea rather than a finished recipe: in an ideal world, agents themselves would help with this — by default recommending providers with hard budget caps and explicitly warning inexperienced builders when they deploy on services without such limits.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

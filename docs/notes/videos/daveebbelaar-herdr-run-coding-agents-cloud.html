@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект видео: запуск кодинг-агентов в облаке через Herdr — Dave Ebbelaar — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Dave Ebbelaar · 2026-09-28 · 25:50</span>
+      <span data-lang="en">Video digest · Dave Ebbelaar · 2026-09-28 · 25:50</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Запускаем кодинг-агентов в облаке с Herdr</span>
+      <span data-lang="en">Run Your Coding Agents in the Cloud with Herdr</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=s4stoQM_LT8" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (без скачивания ролика). Кадры не извлечены: в этом прогоне сетевая политика окружения блокирует прямой доступ к youtube.com на уровне CONNECT, который нужен yt-dlp для скачивания видео.</span>
+      <span data-lang="en">Digest built via Gemini API video analysis (no download of the clip). Frames were not extracted: this run's environment network policy blocks direct CONNECT-level access to youtube.com, which yt-dlp needs to download the video.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Дейв Эббелаар разбирает конкретный приём: как перенести кодинг-агентов (Claude Code, Codex) с ноутбука на виртуальный частный сервер (VPS), чтобы они продолжали работать, пока ноутбук закрыт <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=0">[00:00]</a>. Идея в том, что долгие агентные задачи — многошаговый рефакторинг, фоновые прогоны тестов, длительные исследовательские сессии — плохо совместимы с тем, что сессия обрывается при закрытии крышки лэптопа или потере Wi-Fi; постоянный облачный воркспейс снимает эту зависимость.</span>
+      <span data-lang="en">Dave Ebbelaar walks through a specific technique: moving coding agents (Claude Code, Codex) off a laptop and onto a Virtual Private Server (VPS) so they keep running while the laptop is closed <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=0">[00:00]</a>. The idea is that long agentic tasks — multi-step refactors, background test runs, long research sessions — don't mix well with a session that dies when you close the lid or lose Wi-Fi; a persistent cloud workspace removes that dependency.</span>
+    </p>
+
+    <h2><span data-lang="ru">Herdr как мультиплексор терминалов для агентов</span><span data-lang="en">Herdr as a terminal multiplexer for agents</span></h2>
+    <p>
+      <span data-lang="ru">Центральный инструмент — Herdr, который автор описывает как мультиплексор терминалов, спроектированный специально под ИИ-агентов (по сути, аналог tmux, но заточенный под агентные сессии): он позволяет запускать несколько агентов параллельно и сохраняет состояние каждой SSH-сессии между подключениями <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=39">[00:39]</a>. Автор показывает пошаговую настройку VPS на Hostinger — выбор тарифа, создание инстанса, первое подключение по SSH <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=157">[02:37]</a>.</span>
+      <span data-lang="en">The central tool is Herdr, which the author describes as a terminal multiplexer purpose-built for AI agents (effectively a tmux analog tuned for agent sessions): it runs multiple agents in parallel and preserves each SSH session's state across reconnects <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=39">[00:39]</a>. He walks through setting up a VPS on Hostinger step by step — picking a plan, spinning up the instance, the first SSH connection <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=157">[02:37]</a>.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод защиты: от пароля root до файрвола по белому списку</span><span data-lang="en">The security method: from a root password to a firewall allowlist</span></h2>
+    <p>
+      <span data-lang="ru">Заметная часть видео посвящена именно безопасности облачного рабочего места, а не самому Herdr. Эббелаар настаивает на конкретной последовательности шагов: сначала — надёжный пароль root и переход на аутентификацию по SSH-ключам вместо пароля <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=340">[05:40]</a>, затем — настройка файрвола так, чтобы входящий трафик принимался только с разрешённых («белый список») IP-адресов <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=769">[12:49]</a>. Логика метода: сервер, на котором агент может выполнять произвольный код и имеет доступ к приватным репозиториям, — это по сути ещё одна точка входа в инфраструктуру разработчика, и её нельзя оставлять с настройками по умолчанию.</span>
+      <span data-lang="en">A substantial chunk of the video is about securing the cloud workspace itself, not about Herdr per se. Ebbelaar insists on a specific sequence: first, a strong root password and a switch to SSH-key authentication instead of password login <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=340">[05:40]</a>, then a firewall configured to accept inbound traffic only from an allowlisted set of IPs <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=769">[12:49]</a>. The logic of the method: a server where an agent can execute arbitrary code and reach private repos is effectively another entry point into a developer's infrastructure, and it can't be left on default settings.</span>
+    </p>
+
+    <h2><span data-lang="ru">Подключение инструментов и ежедневный рабочий процесс</span><span data-lang="en">Wiring up the tools and the daily workflow</span></h2>
+    <p>
+      <span data-lang="ru">Дальше идёт установка и авторизация GitHub CLI, Claude Code и Codex прямо на сервере <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=950">[15:50]</a>, а затем — подключение локального редактора (Cursor или VS Code) к удалённому инстансу Herdr по SSH, чтобы работать с кодом, гит-историей и агентами через привычный графический интерфейс, а не голый терминал <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=1403">[23:23]</a>. Закрывает видео набор практических советов по ежедневному обслуживанию такого сервера <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=1507">[25:07]</a>. Ограничение подхода, которое напрашивается из самого видео: он рассчитан на разработчиков, готовых взять на себя администрирование своего VPS (обновления, мониторинг, резервные копии) — это не управляемый сервис, а самостоятельно поддерживаемая инфраструктура.</span>
+      <span data-lang="en">Next comes installing and authenticating GitHub CLI, Claude Code, and Codex directly on the server <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=950">[15:50]</a>, followed by connecting a local editor (Cursor or VS Code) to the remote Herdr instance over SSH, so you can work with code, git history, and agents through a familiar GUI rather than a bare terminal <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=1403">[23:23]</a>. The video closes with practical day-to-day maintenance tips for a server like this <a class="ts" href="https://www.youtube.com/watch?v=s4stoQM_LT8&t=1507">[25:07]</a>. A limit of the approach that follows from the video itself: it assumes a developer willing to take on their own VPS administration (updates, monitoring, backups) — this is self-managed infrastructure, not a managed service.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

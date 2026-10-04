@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-04",
+      "news_count": 4,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Aleph Alpha выпускает Kolibri — суверенную модель с открытыми весами",
+        "en": "Aleph Alpha ships Kolibri, a sovereign open-weight model"
+      }
+    },
+    {
       "date": "2026-10-03",
       "news_count": 4,
       "expert_count": 4,
