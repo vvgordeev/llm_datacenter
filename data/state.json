@@ -920,13 +920,6 @@
         "ru": "xAI добавляет в Grok Build долговременную кросс-сессионную память проекта с командой /memory (16 сент)."
       }
     },
-    "xai-grok-voice-think-fast-2": {
-      "last_date": "2026-08-05",
-      "summary": {
-        "en": "On August 5, 2026, the `grok-voice-latest` alias automatically switched from Grok Voice Think Fast 1.0 to Think Fast 2.0 — a new speech-to-speech model first announced on July 29. Think Fast 2.0 listens, reasons and speaks simultaneously with no processing pause; time to first audio dropped from 1.25 to 0.70 seconds. On the Artificial Analysis Speech-to-Speech Index it scores 82.9% (versus 75.7% for version 1.0), ahead of GPT-Realtime-2.1 (79.1%) and Gemini 3.1 Flash (69.5%); on the agentic Tau Voice benchmark it scores 56.5%, ranking first in the index. API pricing rose 60% to $0.08/minute.",
-        "ru": "5 августа 2026 года алиас `grok-voice-latest` автоматически переключился с Grok Voice Think Fast 1.0 на Think Fast 2.0 — новую speech-to-speech модель, объявленную ещё 29 июля. Think Fast 2.0 архитектурно слушает, рассуждает и говорит одновременно, без пауз на обработку: время до первого звука ответа сокращено с 1,25 до 0,70 секунды. На индексе Artificial Analysis Speech-to-Speech модель набрала 82,9% (против 75,7% у версии 1.0), обгоняя GPT-Realtime-2.1 (79,1%) и Gemini 3.1 Flash (69,5%); на агентном бенчмарке Tau Voice — 56,5%, первое место в индексе. Цена API выросла на 60%, до $0,08 за минуту."
-      }
-    },
     "xai-grok-voice-transcribe-2": {
       "last_date": "2026-09-27",
       "summary": {
@@ -1010,6 +1003,34 @@
         "en": "IBM adds self-hosted/air-gapped deployment for its Bob coding agent (Oct 1), targeting banks and governments; supports Nvidia Nemotron and Poolside Laguna on customer hardware.",
         "ru": "IBM добавляет self-hosted/air-gapped развёртывание для кодинг-агента Bob (1 октября), нацеленное на банки и госструктуры; поддерживает Nvidia Nemotron и Poolside Laguna на оборудовании клиента."
       }
+    },
+    "meta-muse-spark-math-research-papers": {
+      "last_date": "2026-10-05",
+      "summary": {
+        "en": "Meta Superintelligence Labs published six research papers co-authored by working mathematicians and Muse Spark 1.1/1.2 — using nothing but the standard Meta.ai chat interface in Thinking Mode, no custom research scaffold or agent harness. Five of the six resolve genuinely open problems: a sharp threshold for Gaussian ellipsoid fitting (probability), finite-time blow-up for the mass-critical biharmonic NLS (a question open since 2015), a 384-element counterexample to a 2024 conjecture found via model-generated GAP search code (group theory), plus results in optimization, arithmetic physics and non-associative algebra. Mathematicians chose the problems and are accountable for the final arguments; a separate group reviewed each paper, and the text marks which passages were drafted by humans versus the model.",
+        "ru": "Meta Superintelligence Labs опубликовала шесть исследовательских работ, написанных в соавторстве практикующими математиками и Muse Spark 1.1/1.2 — без какой-либо кастомной исследовательской обвязки или агентского харнесса, просто через обычный чат Meta.ai в режиме Thinking. Пять из шести статей решают действительно открытые проблемы: точный порог для подгонки гауссовых эллипсоидов (теория вероятностей), коллапс за конечное время для массово-критического бигармонического НУШ (вопрос открыт с 2015 года), контрпример из 384 элементов к гипотезе 2024 года, найденный через сгенерированный моделью код поиска на GAP (теория групп), а также результаты в оптимизации, арифметической физике и неассоциативной алгебре. Математики сами выбирали задачи и несут ответственность за итоговые доказательства; каждую статью рецензировала отдельная группа математиков, а в тексте помечено, какие фрагменты написаны людьми, а какие — моделью."
+      }
+    },
+    "anthropic-malaysia-election-manipulation": {
+      "last_date": "2026-10-05",
+      "summary": {
+        "en": "In its September report on countering AI misuse, Anthropic describes disrupting an account (GTG-84005) that used Claude to run a commercial 'influence-as-a-service' platform sold by Istanbul-based BBS Bilisim Teknolojileri, marketed as a 'military-grade, AI-driven, real-time political operations ecosystem.' The operation fed census and electoral data for all 222 Malaysian parliamentary constituencies into Claude to profile voters along racial, religious and royalty fault lines, used Claude Code to build a dashboard managing roughly 1,000 fake X accounts and a fake news site, 'Malaysia Pulse,' that rewrote real reporting through an AI pipeline, and produced fabricated intelligence dossiers on opposition figures. Anthropic rated the campaign 'Category Two' on its Breakout Scale — spread across platforms, with no evidence it broke into authentic communities.",
+        "ru": "В сентябрьском отчёте о противодействии злоупотреблениям Anthropic описывает, как заблокировала аккаунт (GTG-84005), использовавший Claude для работы коммерческой платформы «influence-as-a-service», которую продавала стамбульская компания BBS Bilisim Teknolojileri, позиционируя её как «военного уровня ИИ-экосистему политических операций в реальном времени». Операция скармливала Claude переписные и электоральные данные по всем 222 избирательным округам Малайзии для профилирования избирателей по расовым, религиозным линиям и линии монархии, использовала Claude Code для сборки дашборда управления примерно 1000 поддельных аккаунтов в X и фейкового новостного сайта «Malaysia Pulse», переписывающего настоящие репортажи через ИИ-конвейер, и готовила сфабрикованные разведдосье на оппозиционных политиков. Anthropic оценила кампанию на «вторую категорию» по своей Breakout Scale — распространение по площадкам без признаков проникновения в настоящие сообщества."
+      }
+    },
+    "google-gemini-skills-replace-gems": {
+      "last_date": "2026-10-05",
+      "summary": {
+        "en": "Google is phasing out Gemini Gems in favor of Skills — reusable sets of instructions and context that can be invoked with \"/\" right in the prompt box, combined with each other, and created directly from an ordinary chat. Rollout begins October 5 in Workspace and October 13 in the consumer Gemini app; existing Gems start migrating automatically on November 17 for personal accounts (March 2027 for Workspace business/enterprise, June 2027 for education accounts). Skills don't yet work with Canvas, Deep Research, video/music generation or Guided Learning.",
+        "ru": "Google сворачивает Gemini Gems в пользу Skills — переиспользуемых наборов инструкций и контекста, которые можно вызывать через «/» прямо в поле ввода, комбинировать друг с другом и создавать прямо из обычного чата. Раскатка начинается 5 октября в Workspace и 13 октября в потребительском приложении Gemini; существующие Gems начнут автоматически мигрировать с 17 ноября для личных аккаунтов (март 2027 — для Workspace business/enterprise, июнь 2027 — для образовательных аккаунтов). Skills пока не работают с Canvas, Deep Research, генерацией видео/музыки и Guided Learning."
+      }
+    },
+    "google-gemini-effort-levels-tier-limits": {
+      "last_date": "2026-10-05",
+      "summary": {
+        "en": "Google is adding low/medium/high \"effort levels\" to every model in the Gemini app, letting users trade latency for depth on a per-query basis — the same three-tier control already available in AI Studio and Antigravity. The rollout lands alongside an October 9 tightening of tier access: free users keep only Flash-Lite (losing Flash and Pro), AI Plus ($4.99/mo) keeps Flash-Lite and Flash but loses Pro, and AI Pro gains Deep Think, previously exclusive to Ultra.",
+        "ru": "Google добавляет в приложение Gemini «уровни усилий» low/medium/high для каждой модели, позволяя пользователю самому выбирать баланс скорости и глубины ответа под конкретный запрос — тот же трёхступенчатый контроль, что уже есть в AI Studio и Antigravity. Раскатка идёт одновременно с сокращением доступа по тарифам с 9 октября: бесплатным пользователям останется только Flash-Lite (без Flash и Pro), AI Plus ($4.99/мес) сохранит Flash-Lite и Flash, но потеряет Pro, а AI Pro получит Deep Think, прежде доступный только в Ultra."
+      }
     }
   },
   "seen_urls": {
@@ -1075,7 +1096,6 @@
     "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
     "https://garymarcus.substack.com/p/pause-openai-now": "2026-09-05",
     "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross": "2026-09-03",
-    "https://garymarcus.substack.com/p/two-critical-updates-re-astra-and": "2026-08-05",
     "https://github.com/Tencent-Hunyuan/Hy4-preview": "2026-09-01",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.236": "2026-08-20",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.238": "2026-08-21",
@@ -1139,7 +1159,6 @@
     "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/": "2026-08-26",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
     "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/": "2026-08-11",
-    "https://simonwillison.net/2026/Aug/4/new-release-of-llm/": "2026-08-05",
     "https://simonwillison.net/2026/Aug/5/raccoon-heist/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/": "2026-08-11",
     "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/": "2026-08-09",
@@ -1215,7 +1234,7 @@
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-30",
     "https://www.anthropic.com/research/Claude-accelerates-protein-design": "2026-08-20",
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-06",
-    "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-09-11",
+    "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-10-05",
     "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents": "2026-09-28",
     "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/": "2026-08-31",
     "https://www.business-standard.com/technology/artificial-intelligence/ai-must-help-humanity-or-it-s-not-worth-pursuing-microsoft-ceo-nadella-126091400095_1.html": "2026-09-14",
@@ -1295,7 +1314,6 @@
     "https://x.ai/news/grok-bot-for-enterprise": "2026-09-05",
     "https://x.ai/news/grok-bot-more-plans": "2026-08-22",
     "https://x.ai/news/grok-build-memory": "2026-09-18",
-    "https://x.ai/news/grok-voice-think-fast-2": "2026-08-05",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "https://x.ai/news/introducing-grok-bot": "2026-08-12",
     "https://x.com/ChatGPT/status/2086852819215090168": "2026-08-11",
@@ -1411,6 +1429,17 @@
     "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/": "2026-10-04",
     "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/": "2026-10-04",
     "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc": "2026-10-04",
-    "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04"
+    "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
+    "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
+    "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html": "2026-10-05",
+    "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/": "2026-10-05",
+    "https://thezvi.substack.com/p/ai-188-gemini-dot-argon": "2026-10-05",
+    "notes/articles/zvi-ai-188-gemini-dot-argon.html": "2026-10-05",
+    "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer": "2026-10-05",
+    "notes/articles/latentspace-gemini-4-argon-1m-output.html": "2026-10-05",
+    "https://www.youtube.com/watch?v=dDgncbBAA0c": "2026-10-05",
+    "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html": "2026-10-05",
+    "https://www.youtube.com/watch?v=W-vJvssrwh0": "2026-10-05",
+    "notes/videos/aiexplained-somethings-off.html": "2026-10-05"
   }
 }

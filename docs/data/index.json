@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-05",
+      "news_count": 4,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Математики Meta решают пять открытых проблем, используя обычный чат с Muse Spark",
+        "en": "Meta mathematicians use plain Muse Spark chat to crack five open problems"
+      }
+    },
+    {
       "date": "2026-10-04",
       "news_count": 4,
       "expert_count": 3,

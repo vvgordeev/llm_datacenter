@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T06:10:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 1, "note": "Claude Frontier Academy item — WebFetch direct succeeded; already published 2026-10-03, and the one other item found (training investment) is non-product, rejected"},
+    {"source": "openai news", "status": "blocked", "candidates": 0, "note": "WebFetch 403 (egress proxy); covered via WebSearch instead — GPT-6.1 Sol/Dots/Decisions API all already published 2026-09-29..10-02"},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 2, "note": "WebFetch 403; WebSearch found Gemini Skills (replacing Gems) and effort-levels/tier-limits — both new, published today"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 1, "note": "WebFetch 403; WebSearch found Muse Spark math-papers story (research.meta.ai, Oct 2) — new, published today"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch found only Grok 4.7/XChat, already covered 2026-10-03"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch results referenced AI Now Summit (actually from May 2026) and a Ministral release that search misdated to Dec 2025 — both stale, rejected"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch 403; WebSearch shows no October release, latest is V4.1 Flash from Sept 9"},
+    {"source": "AI News (smol.ai)", "status": "blocked", "candidates": 0, "note": "WebFetch 403, no WebSearch substitute content found distinct from other channels"},
+    {"source": "TLDR AI", "status": "blocked", "candidates": 0, "note": "WebFetch 403, no WebSearch substitute content found distinct from other channels"},
+    {"source": "Simon Willison linkblog/aggregator", "status": "ok", "candidates": 0, "note": "git-cloned simonwillisonblog-backup (ndjson dump); newest entry (default-hard-budget-caps, Oct 3) and newest blogmark (Claude Sonnet 5.5, Sep 28) already published in prior days' digests — no new candidate"},
+    {"source": "Hacker News API", "status": "error", "candidates": 0, "note": "hn.algolia.com unreachable this run (curl exit, no HTTP response) — covered via WebSearch site:news.ycombinator.com queries instead"},
+    {"source": "community (Reddit/X)", "status": "ok", "candidates": 0, "note": "used as opinion sources for published news items, not as standalone discovery"},
+    {"source": "widened search (anthropic/openai/meta misuse + safety)", "status": "ok", "candidates": 1, "note": "Anthropic's Sept 2026 threat-intel report (Malaysia election-manipulation platform, GTG-84005) — new, not yet published"},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 0, "note": "no fresh (within 7-day window) unpublished article"},
+    {"source": "expert: Andrej Karpathy", "status": "ok", "candidates": 0, "note": "trending clip traced to a Sequoia Ascent talk from April 2026, already covered 2026-08-12 — rejected as stale, not a new upload"},
+    {"source": "expert: Latent Space", "status": "ok", "candidates": 2, "note": "AINews Gemini 4 Argon post (Oct 2) used; Thariq Shihipar podcast episode found but already published 2026-09-30 — rejected as duplicate"},
+    {"source": "expert: AI Explained", "status": "ok", "candidates": 1, "note": "youtube.com RSS blocked (CONNECT 403, confirmed via curl); found via WebSearch — 'Something's Off' video (~Oct 3)"},
+    {"source": "expert: Matt Wolfe", "status": "ok", "candidates": 1, "note": "youtube.com RSS blocked; found via WebSearch — weekly AI news roundup (Oct 2)"},
+    {"source": "expert: Nate Herk", "status": "ok", "candidates": 0, "note": "youtube.com RSS blocked; no unpublished video confidently matched via WebSearch"},
+    {"source": "expert: Matt Pocock", "status": "ok", "candidates": 0, "note": "skills v1.3 announcement video reportedly due 'Monday' (today) but not yet indexed by search at run time"},
+    {"source": "expert: Ethan Mollick", "status": "ok", "candidates": 0, "note": "latest post ('The Dot and the Swarm', Oct 1) already published 2026-10-02; no newer post found"},
+    {"source": "widened expert search", "status": "ok", "candidates": 1, "note": "Zvi Mowshowitz, 'AI #188: Gemini Dot Argon' (Oct 1) — not in config but a recurring widened-search source in this archive; new, not yet published"}
+  ],
+  "totals": {
+    "candidates": 10,
+    "published": 4,
+    "rejected": {
+      "уже опубликовано в прошлые дни": 5,
+      "не по теме/устарело по дате": 3,
+      "не нашли подтверждённый источник/URL": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "ok (gemini_video.py succeeded for both videos after one 429 rate-limit retry)",
+    "frames": "skipped: youtube.com blocked at the egress-proxy CONNECT level (403), confirmed both via curl RSS check and yt-dlp stream_url failure — noted on both video note pages"
+  },
+  "notes": "Only 4 expert_content items published against the min_expert_total=5 target. Verified reason: this is a Monday digest, and the week's major LLM stories (Gemini 4 Argon, GPT-6.1 Sol, Sonnet 5.5, Dots, DevDay) were already thoroughly covered across the prior four days (2026-10-01..04), including by the same recurring experts (Simon Willison, Latent Space, Nate Herk, AI Explained, Matt Pocock) — most of their fresh output this week had already been consumed. Widened search past the configured expert list (Zvi Mowshowitz) to partially close the gap, but did not fabricate additional entries beyond what was independently verifiable."
+}

@@ -1,0 +1,249 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T06:10:00Z",
+  "news": [
+    {
+      "id": "2026-10-05-meta-muse-spark-math-papers",
+      "cluster_id": "meta-muse-spark-math-research-papers",
+      "models": ["meta"],
+      "title": {
+        "ru": "Математики Meta решают пять открытых проблем, используя обычный чат с Muse Spark",
+        "en": "Meta mathematicians use plain Muse Spark chat to crack five open problems"
+      },
+      "summary": {
+        "ru": "Meta Superintelligence Labs опубликовала шесть исследовательских работ, написанных в соавторстве практикующими математиками и Muse Spark 1.1/1.2 — без какой-либо кастомной исследовательской обвязки или агентского харнесса, просто через обычный чат Meta.ai в режиме Thinking. Пять из шести статей решают действительно открытые проблемы: точный порог для подгонки гауссовых эллипсоидов (теория вероятностей), коллапс за конечное время для массово-критического бигармонического НУШ (вопрос открыт с 2015 года), контрпример из 384 элементов к гипотезе 2024 года, найденный через сгенерированный моделью код поиска на GAP (теория групп), а также результаты в оптимизации, арифметической физике и неассоциативной алгебре. Математики сами выбирали задачи и несут ответственность за итоговые доказательства; каждую статью рецензировала отдельная группа математиков, а в тексте помечено, какие фрагменты написаны людьми, а какие — моделью.",
+        "en": "Meta Superintelligence Labs published six research papers co-authored by working mathematicians and Muse Spark 1.1/1.2 — using nothing but the standard Meta.ai chat interface in Thinking Mode, no custom research scaffold or agent harness. Five of the six resolve genuinely open problems: a sharp threshold for Gaussian ellipsoid fitting (probability), finite-time blow-up for the mass-critical biharmonic NLS (a question open since 2015), a 384-element counterexample to a 2024 conjecture found via model-generated GAP search code (group theory), plus results in optimization, arithmetic physics and non-associative algebra. Mathematicians chose the problems and are accountable for the final arguments; a separate group reviewed each paper, and the text marks which passages were drafted by humans versus the model."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Это действительно новый класс использования: передовая модель через обычный чат-интерфейс, без специальной обвязки, помогает решать открытые исследовательские задачи в математике — пусть аудитория (практикующие математики) и узкая, а выбор задач и проверку результата по-прежнему делают люди.",
+        "en": "This is a genuinely new class of usage — a frontier model contributing to open research-level math problems through an ordinary chat interface, with no bespoke tooling — even though the audience (research mathematicians) is narrow and humans still drove problem selection and verification."
+      },
+      "source_url": "https://research.meta.ai/blog/solving-open-research-problems-together",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Поиск контрпримера к опубликованной гипотезе: математик формулирует гипотезу для проверки, модель пишет и прогоняет код поиска в специализированном инструменте (GAP) и находит конкретный контрпример.",
+            "en": "Searching for a counterexample to a published conjecture: the mathematician frames the hypothesis to test, the model writes and runs search code in a specialized tool (GAP) and finds a concrete counterexample."
+          },
+          "url": "https://research.meta.ai/blog/solving-open-research-problems-together"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-05-anthropic-malaysia-election-manipulation",
+      "cluster_id": "anthropic-malaysia-election-manipulation",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic раскрывает платформу манипуляции выборами на базе Claude, нацеленную на Малайзию",
+        "en": "Anthropic discloses a Claude-powered election-manipulation platform targeting Malaysia"
+      },
+      "summary": {
+        "ru": "В сентябрьском отчёте о противодействии злоупотреблениям Anthropic описывает, как заблокировала аккаунт (GTG-84005), использовавший Claude для работы коммерческой платформы «influence-as-a-service», которую продавала стамбульская компания BBS Bilisim Teknolojileri, позиционируя её как «военного уровня ИИ-экосистему политических операций в реальном времени». Операция скармливала Claude переписные и электоральные данные по всем 222 избирательным округам Малайзии для профилирования избирателей по расовым, религиозным линиям и линии монархии, использовала Claude Code для сборки дашборда управления примерно 1000 поддельных аккаунтов в X и фейкового новостного сайта «Malaysia Pulse», переписывающего настоящие репортажи через ИИ-конвейер, и готовила сфабрикованные разведдосье на оппозиционных политиков. Anthropic оценила кампанию на «вторую категорию» по своей Breakout Scale — распространение по площадкам без признаков проникновения в настоящие сообщества.",
+        "en": "In its September report on countering AI misuse, Anthropic describes disrupting an account (GTG-84005) that used Claude to run a commercial 'influence-as-a-service' platform sold by Istanbul-based BBS Bilisim Teknolojileri, marketed as a 'military-grade, AI-driven, real-time political operations ecosystem.' The operation fed census and electoral data for all 222 Malaysian parliamentary constituencies into Claude to profile voters along racial, religious and royalty fault lines, used Claude Code to build a dashboard managing roughly 1,000 fake X accounts and a fake news site, 'Malaysia Pulse,' that rewrote real reporting through an AI pipeline, and produced fabricated intelligence dossiers on opposition figures. Anthropic rated the campaign 'Category Two' on its Breakout Scale — spread across platforms, with no evidence it broke into authentic communities."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Не новая возможность, а конкретный, хорошо задокументированный случай использования агентных кодинг-инструментов (Claude Code) для управления дезинформационной инфраструктурой в масштабе национальных выборов — важный сигнал для того, насколько серьёзно индустрии стоит относиться к мониторингу злоупотреблений, хотя сама кампания, по данным отчёта, реального успеха не добилась.",
+        "en": "Not a new capability but a concrete, well-documented case of agentic coding tools (Claude Code) being used to run disinformation infrastructure at national-election scale — a meaningful signal for how seriously the industry needs to take misuse monitoring, even though this specific campaign reportedly gained no real traction."
+      },
+      "source_url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "opinions": [
+        {
+          "author": "South China Morning Post (анализ)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Использование миллионов записей избирателей, поддельных аккаунтов, синтетического новостного сайта и сфабрикованных досье указывает на более глубокий риск: слабые гарантии защиты данных и укоренившиеся этнические и религиозные разломы могут позволить политическим акторам нацеливаться на избирателей быстрее, чем регуляторы или площадки успеют отреагировать.",
+            "en": "The use of millions of voter records, fake social media accounts, a synthetic news site and fabricated dossiers points to a deeper risk: weak data safeguards and entrenched ethnic and religious fault lines could let political actors target voters faster than regulators or platforms can respond."
+          },
+          "url": "https://www.scmp.com/week-asia/politics/article/3367440/how-ai-plot-targeted-malaysias-elections-and-exposed-deep-data-risks"
+        },
+        {
+          "author": "BBS Bilisim Teknolojileri (цит. по Malaysiakini)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Компания отрицает какую-либо причастность, осведомлённость или одобрение в отношении деятельности, описанной в отчёте Anthropic.",
+            "en": "The company denies any involvement, knowledge, or approval regarding the activities detailed in Anthropic's report."
+          },
+          "url": "https://www.malaysiakini.com/news/885073-istanbul-tech-firm-rejects-claims-it-abused-claude-ai-to-sway-msian-politics"
+        }
+      ],
+      "use_cases": []
+    },
+    {
+      "id": "2026-10-05-google-gemini-skills-replace-gems",
+      "cluster_id": "google-gemini-skills-replace-gems",
+      "models": ["google"],
+      "title": {
+        "ru": "Google начинает заменять Gemini Gems на составные переиспользуемые Skills",
+        "en": "Google begins replacing Gemini Gems with stackable, reusable Skills"
+      },
+      "summary": {
+        "ru": "Google сворачивает Gemini Gems в пользу Skills — переиспользуемых наборов инструкций и контекста, которые можно вызывать через «/» прямо в поле ввода, комбинировать друг с другом и создавать прямо из обычного чата. Раскатка начинается 5 октября в Workspace и 13 октября в потребительском приложении Gemini; существующие Gems начнут автоматически мигрировать с 17 ноября для личных аккаунтов (март 2027 — для Workspace business/enterprise, июнь 2027 — для образовательных аккаунтов). Skills пока не работают с Canvas, Deep Research, генерацией видео/музыки и Guided Learning.",
+        "en": "Google is phasing out Gemini Gems in favor of Skills — reusable sets of instructions and context that can be invoked with \"/\" right in the prompt box, combined with each other, and created directly from an ordinary chat. Rollout begins October 5 in Workspace and October 13 in the consumer Gemini app; existing Gems start migrating automatically on November 17 for personal accounts (March 2027 for Workspace business/enterprise, June 2027 for education accounts). Skills don't yet work with Canvas, Deep Research, video/music generation or Guided Learning."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Не принципиально новая возможность, а переработка существующей в более составной и заметный примитив — но меняет слой кастомизации, которым пользуется огромная доля аудитории Gemini, а паттерн «стекования» нескольких skills повторяет общий вектор развития агентных инструментов в индустрии.",
+        "en": "Not a new capability so much as a consolidation of an existing one into a more composable, discoverable primitive — but it touches the customization layer used by a very large share of Gemini's user base, and the 'stack multiple skills' pattern mirrors where agent tooling across the industry is heading."
+      },
+      "source_url": "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html",
+      "opinions": [
+        {
+          "author": "пользователь Reddit (цит. по eesel.ai)",
+          "stance": "positive",
+          "quote": {
+            "ru": "После перехода с Gem на Skill результат стал заметно лучше во всём — старая проблема Gems была в том, что модель воспринимала Gem как нечто необязательное.",
+            "en": "Output is much better across the board after switching from a Gem to a Skill — the old issue with Gems was that the underlying model treated the Gem as optional."
+          },
+          "url": "https://www.eesel.ai/blog/gemini-skills"
+        },
+        {
+          "author": "пользователь Reddit (цит. по PCWorld)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Вот это обидно. У меня есть подробный gem для работы, который я полгода настраивал, чтобы довести до идеала.",
+            "en": "Oh that really sucks. I actually use an extensive gem for my job that I tweaked over six months to get it to the point where I feel it's perfect."
+          },
+          "url": "https://www.pcworld.com/article/3245691/gemini-gems-appear-to-be-on-their-way-out-reddit-screenshots-show.html"
+        },
+        {
+          "author": "9to5Google",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Skills проще вызывать через «/» прямо в поле ввода, причём можно задействовать сразу несколько — это удобнее, чем прежде заходить в Gems через боковую панель.",
+            "en": "Skills are more easily invoked with a \"/\" in the prompt box, and multiple can be used at the same time — broader access than first navigating to Gems in the side panel."
+          },
+          "url": "https://9to5google.com/2026/09/27/gemini-gems-skills/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Комбинировать skill «фирменный стиль» со skill «еженедельная рассылка», чтобы оба набора инструкций применялись к одному черновику одновременно.",
+            "en": "Stacking a 'brand voice' skill together with a 'weekly newsletter' skill so both sets of instructions apply to the same draft at once."
+          },
+          "url": "https://blog.buildfastwithai.com/gemini-skills-vs-gems"
+        },
+        {
+          "text": {
+            "ru": "Превращать полезную переписку в чате сразу в переиспользуемый Skill, не открывая отдельный конструктор Gem.",
+            "en": "Turning a useful chat exchange directly into a reusable Skill without opening a separate Gem-builder flow."
+          },
+          "url": "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-05-google-gemini-effort-levels-tier-limits",
+      "cluster_id": "google-gemini-effort-levels-tier-limits",
+      "models": ["google"],
+      "title": {
+        "ru": "В приложении Gemini появляются «уровни усилий» — одновременно с сокращением бесплатного доступа",
+        "en": "Gemini app gets per-query \"effort levels\" as Google narrows free-tier model access"
+      },
+      "summary": {
+        "ru": "Google добавляет в приложение Gemini «уровни усилий» low/medium/high для каждой модели, позволяя пользователю самому выбирать баланс скорости и глубины ответа под конкретный запрос — тот же трёхступенчатый контроль, что уже есть в AI Studio и Antigravity. Раскатка идёт одновременно с сокращением доступа по тарифам с 9 октября: бесплатным пользователям останется только Flash-Lite (без Flash и Pro), AI Plus ($4.99/мес) сохранит Flash-Lite и Flash, но потеряет Pro, а AI Pro получит Deep Think, прежде доступный только в Ultra.",
+        "en": "Google is adding low/medium/high \"effort levels\" to every model in the Gemini app, letting users trade latency for depth on a per-query basis — the same three-tier control already available in AI Studio and Antigravity. The rollout lands alongside an October 9 tightening of tier access: free users keep only Flash-Lite (losing Flash and Pro), AI Plus ($4.99/mo) keeps Flash-Lite and Flash but loses Pro, and AI Pro gains Deep Think, previously exclusive to Ultra."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Явный контроль над «усилием» модели для каждого отдельного запроса — это реальное изменение способа использования, повторяющее общий тренд индустрии (reasoning_effort у OpenAI, бюджеты «размышлений» у Anthropic), и касается всех пользователей Gemini — но это донастройка, а не новый класс сценариев, а сопутствующее урезание тарифов — это про цены, а не про возможности.",
+        "en": "Giving users explicit, per-query control over reasoning effort is a genuine usage-pattern change that mirrors a broader industry trend (OpenAI's reasoning_effort, Anthropic's thinking budgets) and touches every Gemini user — but it's additive tuning, not a new class of application, and the accompanying tier downgrade is a pricing move rather than a capability one."
+      },
+      "source_url": "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/",
+      "opinions": [
+        {
+          "author": "пользователь X (цит. по Digital Trends)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Невероятный провал, который стоит изучить — у Google даже нет выпущенной для потребителей лидирующей модели, а они делают подобные вещи, это безумие.",
+            "en": "Incredible downfall that needs to be studied — Google doesn't even have a consumer-released leading model and they're doing stuff like this, which is nuts."
+          },
+          "url": "https://www.digitaltrends.com/computing/geminis-free-tier-is-getting-a-major-downgrade-on-october-9/"
+        },
+        {
+          "author": "The Decoder",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Изменение следует майскому переходу Google на лимиты, основанные на вычислительной стоимости, а не на фиксированном числе сообщений, — а более крупные модели потребляют больше вычислительных ресурсов, так что ограничение самых тяжёлых моделей платными планами согласуется с этим подходом.",
+            "en": "The change follows Google's switch in May to usage limits based on computing cost rather than a fixed number of messages, and larger models consume more inference resources, so restricting the heaviest models to paid plans is consistent with that approach."
+          },
+          "url": "https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Выбирать high-уровень усилия для сложной многошаговой задачи по коду или исследованию и low — для простого рерайта или рутинной сортировки, явно управляя тем, сколько лимита плана уйдёт на запрос.",
+            "en": "Picking the high effort level for a hard multi-step coding or research task and low for a simple rewrite or routine sorting job, explicitly controlling how much of the plan's limit a query consumes."
+          },
+          "url": "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-05-zvi-ai-188-gemini-dot-argon",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #188: Gemini Dot Argon",
+        "en": "AI #188: Gemini Dot Argon"
+      },
+      "url": "https://thezvi.substack.com/p/ai-188-gemini-dot-argon",
+      "summary": {
+        "ru": "Еженедельный обзор увязывает осторожную реакцию на Gemini 4 Argon (доступ пока только у киберзащитников) с провалом GPT-6.1 Astra и ценовым совпадением Sol и Argon, добровольным соглашением Белого дома по безопасности ИИ, повседневным переходом автора на Opus 5.5 и утечкой проспекта IPO Anthropic с формулировками об экзистенциальных рисках.",
+        "en": "The weekly roundup ties a cautious read of Gemini 4 Argon (still cyber-defenders-only access) to the GPT-6.1 Astra pullback and Sol/Argon's pricing coincidence, the White House's voluntary AI-safety accord, the author's own shift to Opus 5.5 as a daily driver, and the leaked Anthropic IPO prospectus's existential-risk language."
+      },
+      "note_page": "notes/articles/zvi-ai-188-gemini-dot-argon.html"
+    },
+    {
+      "id": "2026-10-05-latentspace-gemini-4-argon",
+      "type": "article",
+      "author": "Latent Space (AINews)",
+      "title": {
+        "ru": "Gemini 4 Argon: ответ GDM на Astra/Fable, с выходом в 1M токенов",
+        "en": "Gemini 4 Argon: GDM's answer to Astra/Fable, with 1M output"
+      },
+      "url": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+      "summary": {
+        "ru": "Разбор показывает, что заявленный 1M-токенный выход Argon — не лимит одного запроса, а результат API-функции Long Decode Continuation, автоматически продолжающей ответ через цепочку вызовов; прямой лимит одного запроса — около 262К токенов. Приводятся внутренние кейсы Google (обработка 800К+ строк ядра Fuchsia) и оговорка об ограниченном доступе модели.",
+        "en": "The piece shows Argon's headline 1M-token output isn't a single request's limit but the product of a Long Decode Continuation API feature that auto-continues a response across a chain of calls; the direct single-request ceiling is about 262K tokens. It cites internal Google examples (processing 800K+ lines of the Fuchsia kernel) and flags the model's still-limited access."
+      },
+      "note_page": "notes/articles/latentspace-gemini-4-argon-1m-output.html"
+    },
+    {
+      "id": "2026-10-05-mattwolfe-ai-news-recap",
+      "type": "video",
+      "author": "Matt Wolfe",
+      "title": {
+        "ru": "AI News: Dots, GPT-6.1 Sol, Sonnet 5.5, Gemini 4 — и всё остальное за неделю",
+        "en": "AI News: Dots, GPT-6.1 Sol, Sonnet 5.5, Gemini 4, and everything you need to know"
+      },
+      "url": "https://www.youtube.com/watch?v=dDgncbBAA0c",
+      "summary": {
+        "ru": "Еженедельный обзор проходит по демо Dots в ChatGPT, ценовой политике OpenAI, практичному доводу в пользу GPT-6.1 Sol вместо топовых моделей для рутины, спору о сопоставимости бенчмарков между Sonnet 5.5 и Gemini 4 Argon, и коротко — по соглашению Белого дома об управлении ИИ.",
+        "en": "The weekly recap walks through a ChatGPT Dots demo, OpenAI's tiered pricing, a practical case for GPT-6.1 Sol over top-tier models for routine work, the benchmark-comparability debate around Sonnet 5.5 and Gemini 4 Argon, and briefly the White House AI-governance accord."
+      },
+      "note_page": "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html"
+    },
+    {
+      "id": "2026-10-05-aiexplained-somethings-off",
+      "type": "video",
+      "author": "AI Explained",
+      "title": {
+        "ru": "Gemini 4, Sonnet 5.5, GPT-6.1… Что-то не так",
+        "en": "Gemini 4, Sonnet 5.5, GPT-6.1… Something's Off"
+      },
+      "url": "https://www.youtube.com/watch?v=W-vJvssrwh0",
+      "summary": {
+        "ru": "Автор связывает одновременный выход трёх передовых моделей с сокращением медианного интервала между релизами до ≈11 дней, разбирает разрыв между бенчмарками Gemini 4 Argon и её почти нулевой доступностью, ценовую логику Sonnet 5.5/Sol и завершает примером реального применения GPT-6 Astra — расшифровкой 217-летнего письма.",
+        "en": "The author ties the simultaneous release of three frontier models to a shrinking median gap between releases (~11 days), unpacks the gap between Gemini 4 Argon's benchmarks and its near-zero availability, covers the pricing logic behind Sonnet 5.5/Sol, and closes on a real-world example — GPT-6 Astra deciphering a 217-year-old letter."
+      },
+      "note_page": "notes/videos/aiexplained-somethings-off.html"
+    }
+  ]
+}

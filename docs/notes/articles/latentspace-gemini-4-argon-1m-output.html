@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Gemini 4 Argon — ответ GDM на Astra/Fable — Latent Space — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (AINews) · 2026-10-02</span>
+      <span data-lang="en">Article digest · Latent Space (AINews) · 2026-10-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Gemini 4 Argon: ответ GDM на Astra/Fable, с выходом в 1M токенов</span>
+      <span data-lang="en">Gemini 4 Argon: GDM's answer to Astra/Fable, with 1M output</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ежедневный выпуск AINews от Latent Space разбирает Gemini 4 Argon как ход Google DeepMind в ответ на модели класса GPT-6 Astra и Claude Fable: по собственным бенчмаркам Google модель лидирует на 12–13 из 18–19 показателей, которые авторы называют заслуживающими доверия, и заметно обходит конкурентов по доле галлюцинаций. Но материал не ограничивается пересказом пресс-релиза — главный акцент сделан на том, откуда на самом деле берётся заявленный «1 миллион токенов на выходе» и что это означает практически.</span>
+      <span data-lang="en">Latent Space's daily AINews roundup frames Gemini 4 Argon as Google DeepMind's move against GPT-6 Astra- and Claude Fable-class models: by Google's own benchmarks, the model leads on 12–13 of the 18–19 scores the authors consider credible, and it clears competitors by a wide margin on hallucination rate. But the piece doesn't just repeat the press release — its real focus is where the headline "1 million output tokens" figure actually comes from and what it means in practice.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: Long Decode Continuation — не один запрос, а автоматическая эстафета</span><span data-lang="en">The method: Long Decode Continuation isn't one request, it's an automatic relay</span></h2>
+    <p>
+      <span data-lang="ru">Разгадка в том, что миллион токенов на выходе — это не лимит одного запроса, а результат новой функции API под названием Long Decode Continuation: она автоматически «ставит на паузу» слишком длинный ответ перед тем, как тот упрётся в таймаут запроса, и прозрачно возобновляет его в следующем вызове API, склеивая рассуждение модели в единый, формально непрерывный поток. На практике максимум, который модель выдаёт за один прямой запрос без продолжения, — около 262 000 токенов (всё равно в четыре раза больше прежнего лимита в 64 000), а полный миллион достигается только цепочкой продолжений. Это важное отличие для разработчика: рассчитывать на «один вызов — миллион токенов» нельзя, нужно явно обрабатывать механизм продолжения в своём коде.</span>
+      <span data-lang="en">The trick is that the million-token output isn't a single request's limit — it comes from a new API feature called Long Decode Continuation: it automatically pauses an overly long response before it hits a request timeout and transparently resumes it on the next API call, stitching the model's reasoning into one formally continuous stream. In practice, the most a single direct request produces without continuation is about 262,000 tokens — still four times the old 64,000-token ceiling — and the full million is only reached through a chain of continuations. That's a meaningful distinction for developers: you can't assume "one call equals a million tokens"; the continuation mechanism has to be handled explicitly in your own code.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это нужно: реальные внутренние примеры</span><span data-lang="en">Why it matters: real internal examples</span></h2>
+    <p>
+      <span data-lang="ru">Материал приводит конкретные внутренние кейсы Google, которые демонстрируют, для чего вообще нужен такой длинный непрерывный вывод: обработка более 800 тысяч строк кода ядра Fuchsia Zircon за один проход, замена 32 000 строк SIMD-кода в видеодекодере libgav1 (что дало ускорение в 2,7 раза) и поиск оптимизаций памяти, которые, по оценке Google, способны высвободить более 300 ТиБ в её дата-центрах. Именно такие задачи — анализ и переписывание огромных массивов кода целиком, а не по частям — и оправдывают длинный выход как отдельную инженерную характеристику, а не просто маркетинговую цифру.</span>
+      <span data-lang="en">The piece cites concrete internal Google examples that show what such long, continuous output is actually for: processing over 800,000 lines of the Fuchsia Zircon kernel in a single pass, replacing 32,000 lines of SIMD code in the libgav1 video decoder (yielding a 2.7x speedup), and finding memory optimizations Google estimates could free up more than 300 TiB across its data centers. It's precisely these tasks — analyzing and rewriting huge codebases whole rather than in chunks — that justify long output as a real engineering capability rather than just a marketing number.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения: доступ и осторожность с цифрой</span><span data-lang="en">Limitations: access and caution around the headline figure</span></h2>
+    <p>
+      <span data-lang="ru">Автор напоминает об ограничении, которое снижает значимость всех этих бенчмарков прямо сейчас: Gemini 4 Argon доступна только проверенным киберзащитникам в рамках программы Fairwind, а не разработчикам, предприятиям или массовым пользователям — Google объясняет это необходимостью сперва отладить защитные барьеры. Отдельно материал призывает аккуратно относиться к заявленному лимиту в 1M: разные методики измерения в индустрии дают разные цифры для «эффективного» выходного контекста, и заголовочное число Google — это, по сути, лучший случай при использовании Long Decode Continuation, а не гарантированный лимит для любого запроса.</span>
+      <span data-lang="en">The author flags a limitation that undercuts all these benchmarks for now: Gemini 4 Argon is only available to vetted cyber defenders under the Fairwind program, not to developers, enterprises or consumers — Google frames this as needing to tune guardrails first. The piece also urges caution around the headline 1M figure specifically: different measurement methodologies across the industry produce different numbers for "effective" output context, and Google's headline figure is essentially a best case under Long Decode Continuation, not a guaranteed ceiling for every request.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по доступному описанию статьи (WebSearch) — прямой WebFetch на latent.space из облачной песочницы даёт 403 на egress-прокси.</span>
+      <span data-lang="en">Digest built from the article's available description (WebSearch) — a direct WebFetch to latent.space from this cloud sandbox returns a 403 at the egress proxy.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
