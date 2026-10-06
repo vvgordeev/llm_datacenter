@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Исследование: Qwen3.8 27B складывает числа словами» — Simon Willison — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-10-04</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-10-04</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Исследование: Qwen3.8 27B складывает числа и записывает ответ словами</span>
+      <span data-lang="en">Research: Qwen3.8 27B addition in words</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон провёл локальный эксперимент над моделью Qwen3.8-27B-Q4_K_M.gguf, чтобы отделить две разные способности, которые легко перепутать: умение модели следовать формату ответа и умение модели реально посчитать правильно. Задача была предельно простая на вид — сложить два положительных целых числа и записать результат словами по-английски, без каких-либо иных пояснений в ответе.</span>
+      <span data-lang="en">Simon Willison ran a local experiment on the Qwen3.8-27B-Q4_K_M.gguf model to separate two abilities that are easy to conflate: a model's ability to follow a response format, and its ability to actually get the arithmetic right. The task looked deceptively simple — add two positive integers and write the result out in English words, with nothing else in the response.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: 169 ячеек, 5070 промптов, без рассуждений</span><span data-lang="en">The method: 169 cells, 5,070 prompts, no reasoning</span></h2>
+    <p>
+      <span data-lang="ru">Промпт был зафиксирован одним шаблоном: «What is {a} + {b}? Please write your answer in words. Do not include any other text or information, just the answer in words». Для каждой упорядоченной комбинации длины слагаемых от одной до тринадцати цифр (169 ячеек в таблице) бралось по 30 случайных пар чисел — итого 5070 промптов — и результаты собирались в тепловую карту точности от тёмно-зелёного (высокая точность) до тёмно-красного (низкая). Reasoning у модели был выключен для основного прогона, чтобы увидеть именно «интуитивную», а не вычисленную через цепочку рассуждений арифметику.</span>
+      <span data-lang="en">The prompt was fixed to a single template: "What is {a} + {b}? Please write your answer in words. Do not include any other text or information, just the answer in words." For every ordered combination of operand lengths from one to thirteen digits (169 cells in the grid), 30 random pairs were sampled — 5,070 prompts in total — and results were plotted as a heatmap from dark green (high accuracy) to dark red (low). Reasoning was switched off for the main run, specifically to see the model's "intuitive" arithmetic rather than arithmetic worked out through a chain of reasoning.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Результат без рассуждений: формат ответа модель соблюдала почти всегда (96.17% ответов — корректно записанные английские числа), но итоговая точность самого сложения составила лишь 23.57%, причём она резко падает по мере роста длины чисел — с 97.04% для операндов в 1–3 цифры до 6.44% для операндов в 10–13 цифр. То есть модель почти всегда «выглядит» как будто ответила правильно по форме, но для длинных чисел почти всегда ошибается в самом числе.</span>
+      <span data-lang="en">Without reasoning: the model followed the format almost perfectly (96.17% of responses were validly formatted English numbers), but overall addition accuracy was only 23.57%, and it dropped sharply as operand length grew — from 97.04% for 1–3 digit operands down to 6.44% for 10–13 digit operands. In other words, the model's answers almost always "look" correctly formatted, while for long numbers the actual number is wrong almost every time.</span>
+    </p>
+
+    <h2><span data-lang="ru">С включённым рассуждением точность почти удваивается — на тех же задачах</span><span data-lang="en">Turning reasoning on nearly quadruples accuracy — on the same problems</span></h2>
+    <p>
+      <span data-lang="ru">На той же выборке из 169 задач (по одной паре на ячейку, так как рассуждение работает значительно медленнее) Уиллисон повторил эксперимент с включённым режимом «medium reasoning»: точность выросла с 45 из 169 верных (26.63%) до 167 из 169 (98.82%). Разница настолько велика, что делает практический вывод однозначным: для задач, где важен именно численный, а не форматный результат, недостаточно смотреть на то, что модель «похоже» ответила правильно — нужно либо включать режим рассуждения, либо выносить арифметику во внешний инструмент (калькулятор, код), а не доверять прямому числовому выводу модели.</span>
+      <span data-lang="en">On the same set of 169 problems (one pair per cell this time, since reasoning runs much slower), Willison reran the experiment with "medium reasoning" turned on: accuracy rose from 45 of 169 correct (26.63%) to 167 of 169 (98.82%). The gap is large enough to make the practical takeaway unambiguous: for tasks where the numeric result matters, not just the formatting, it isn't enough that a model's answer "looks" right — you either need reasoning mode turned on, or you need to offload the arithmetic to an external tool (a calculator, code), rather than trust the model's direct numeric output.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

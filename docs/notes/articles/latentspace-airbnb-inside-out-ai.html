@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «ИИ изнутри наружу: как перестраивают Airbnb» — Latent Space — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space · 2026-10-02</span>
+      <span data-lang="en">Article digest · Latent Space · 2026-10-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">ИИ изнутри наружу: как перестраивают Airbnb — за кулисами и в опыте гостя</span>
+      <span data-lang="en">Inside-Out AI: Rebuilding Airbnb Behind the Scenes and Across the Guest Experience</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/airbnb" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Latent Space поговорили с Ахмадом Аль-Дахле, который до прихода в Airbnb на позицию CTO возглавлял генеративный ИИ в Meta и стоял у истоков линейки Llama. Его тезис — подход «inside-out AI»: сначала компания использует ИИ внутри, чтобы радикально ускорить разработку продукта, и только затем те же наработанные возможности и инфраструктура переносятся наружу — в сервис, с которым напрямую взаимодействует гость.</span>
+      <span data-lang="en">Latent Space spoke with Ahmad Al-Dahle, who led generative AI at Meta and helped build the Llama line before joining Airbnb as CTO. His thesis is an "inside-out AI" approach: the company first uses AI internally to radically speed up product development, and only then carries the same capabilities and infrastructure outward, into the experience the guest interacts with directly.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: код как общий артефакт для продукта, дизайна и инженерии</span><span data-lang="en">The method: code as the shared artifact for product, design and engineering</span></h2>
+    <p>
+      <span data-lang="ru">Ключевое организационное изменение — команды продукта, дизайна и разработки переходят к совместной работе сразу с прототипами: вместо того чтобы дизайнер передавал макет инженеру, а тот интерпретировал его в код, все три роли рассуждают над одним и тем же работающим кодом как общим артефактом. Это возможно именно потому, что генерация кода ИИ-агентами стала достаточно быстрой и дешёвой, чтобы прототип на коде создавался так же легко, как раньше — макет в Figma.</span>
+      <span data-lang="en">The key organizational shift: product, design and engineering move to working directly with prototypes together — instead of a designer handing a mockup to an engineer who then interprets it into code, all three roles reason over the same working code as a shared artifact. This is possible precisely because AI agent code generation has become fast and cheap enough that a working-code prototype is as easy to produce as a Figma mockup used to be.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Количественные результаты, которые приводит Аль-Дахле: 60% нового кода Airbnb сейчас написано ИИ, число выпущенных фич и улучшений выросло почти на 80% год к году, а пропускная способность по pull request'ам на одного инженера выросла примерно в 1.6 раза. Отдельно отмечается внутренний «граф контекста» Everest, который хранит знания о продукте и пользователях и позволяет быстро собирать новые сервисы: например, запуск трансфера из аэропорта занял около шести недель против восьми-девяти месяцев на запуск доставки продуктов ранее.</span>
+      <span data-lang="en">The quantitative results Al-Dahle cites: 60% of Airbnb's new code is now AI-authored, the number of shipped features and improvements is up nearly 80% year over year, and pull-request throughput per engineer is up roughly 1.6x. The piece also highlights an internal "context graph" called Everest that stores product and user knowledge and lets new services be assembled quickly: launching airport pickup took about six weeks, versus eight to nine months for the earlier grocery-delivery launch.</span>
+    </p>
+
+    <h2><span data-lang="ru">Перенос наружу: поддержка гостей и разговорный поиск</span><span data-lang="en">Carrying it outward: guest support and conversational search</span></h2>
+    <p>
+      <span data-lang="ru">Та же внутренняя инфраструктура переносится в продукт для гостей: ИИ-поддержка сейчас закрывает примерно половину обращений, а перед выводом в прод новые сценарии поддержки проверяются на синтетических данных, чтобы не тестировать правки сразу на живых пользователях. Главный практический вывод для других компаний: «inside-out AI» — это не отдельный ИИ-проект для внешнего продукта, а сначала перестройка внутренних процессов разработки, из которой органически вырастают и пользовательские ИИ-функции, и инфраструктура для их быстрого создания.</span>
+      <span data-lang="en">The same internal infrastructure carries over to the guest-facing product: AI support now resolves roughly half of tickets, and new support scenarios are validated against synthetic data before shipping, rather than testing changes directly on live users. The main practical takeaway for other companies: "inside-out AI" isn't a separate AI project bolted onto the external product — it's rebuilding internal development processes first, out of which both user-facing AI features and the infrastructure to build them quickly grow organically.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

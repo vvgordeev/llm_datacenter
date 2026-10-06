@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-06",
+      "news_count": 5,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Reflection AI представляет Beam — открытую модель на 501 млрд параметров против китайских лабораторий",
+        "en": "Reflection AI debuts Beam, a 501B-parameter open-weight model to rival Chinese labs"
+      }
+    },
+    {
       "date": "2026-10-05",
       "news_count": 4,
       "expert_count": 4,
