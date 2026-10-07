@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Le chonk» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект заметки · Simon Willison · 2026-10-06</span>
+      <span data-lang="en">Note digest · Simon Willison · 2026-10-06</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Le chonk: Mistral Large 4 и тест пеликаном</span>
+      <span data-lang="en">Le chonk: Mistral Large 4 and the pelican test</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/6/le-chonk/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original note ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон коротко разбирает превью Mistral Large 4 — модели с внутренним прозвищем «Le chonk», которую Mistral выпустила 6 октября. Это модель смешанных экспертов (MoE) на 1 триллион параметров с 49 миллиардами активных на каждый токен, обученная на собственном кластере из 3800 GPU NVIDIA Grace Blackwell. Превью доступно только через API; веса модели Mistral обещает открыть «в конце этого месяца». Уиллисон отмечает главную особенность интерфейса: вместо привычной шкалы уровней рассуждения модель поддерживает только два режима — «none» и «high», без промежуточных вариантов.</span>
+      <span data-lang="en">Simon Willison gives a short first look at the preview of Mistral Large 4 — internally nicknamed "Le chonk" — which Mistral released on October 6th. It's a mixture-of-experts model with 1 trillion total parameters and 49 billion active per token, trained on Mistral's own cluster of 3,800 NVIDIA Grace Blackwell GPUs. The preview is API-only for now; Mistral says it will publish the open weights "at the end of this month". Willison flags one interface quirk right away: instead of a graded reasoning-effort scale, the model only exposes two modes — "none" and "high" — with nothing in between.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: пеликан на велосипеде</span><span data-lang="en">The method: a pelican riding a bicycle</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон традиционно проверяет новые модели одним и тем же неформальным тестом — просит сгенерировать SVG-изображение «пеликана на велосипеде» — и сравнивает результат с историей прошлых моделей того же вендора. Для Le chonk он прогнал тест в обоих режимах рассуждения: вариант «high» получился заметно аккуратнее (мешок пеликана на месте, рама велосипеда нужного размера, педали с ногами), чем «none», и, что удивило автора, потребовал при этом меньше токенов на выходе — 2717 против 3275. Это частная, невоспроизводимая строгим бенчмарком деталь, но она подсказывает, что режим «high» у Le chonk не просто «думает дольше», а меняет сам способ генерации ответа.</span>
+      <span data-lang="en">Willison's standing way of taking a new model for a spin is the same informal test every time: ask it to draw an SVG of "a pelican riding a bicycle" and compare the result against that vendor's past models. For Le chonk he ran it in both reasoning modes: the "high" variant came out noticeably cleaner — the pouch is right, the bicycle frame is a sensible size, both pedals have feet on them — than "none", and surprisingly used fewer output tokens to get there: 2,717 versus 3,275. It's an informal, non-benchmarked observation, but it suggests "high" mode on Le chonk isn't just "thinking longer" — it changes how the answer gets generated.</span>
+    </p>
+
+    <h2><span data-lang="ru">Место на карте: не фронтир, но реванш</span><span data-lang="en">Where it lands: not frontier, but a comeback</span></h2>
+    <p>
+      <span data-lang="ru">На независимом индексе Artificial Analysis Le chonk набирает 38 баллов — чуть ниже DeepSeek 4.1 Flash (модели на 552 млрд параметров), но это огромный скачок по сравнению с декабрьским Mistral Large 3, который на том же тесте нарисовал откровенно неудачного пеликана и получил всего 9 баллов. Вывод Уиллисона сдержанный: Le chonk «определённо не модель уровня Fable», то есть не претендует на фронтир рядом с топовыми моделями Anthropic, OpenAI или Google, — но важен сам факт, что Mistral вернулась в игру и сократила отставание примерно до шести месяцев от передового края, а не года и более, как было в предыдущем поколении.</span>
+      <span data-lang="en">On the independent Artificial Analysis index, Le chonk scores 38 — just behind DeepSeek 4.1 Flash, a 552B model — but that's a huge jump from last December's Mistral Large 3, which drew a genuinely bad pelican on the same test and scored only 9. Willison's verdict is measured: Le chonk is "certainly not a Fable-class model" — it isn't claiming a frontier spot next to the top Anthropic, OpenAI or Google models — but the real news is that Mistral is back in the game, closing the gap to roughly six months behind the frontier instead of a year or more, as it was with the previous generation.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

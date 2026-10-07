@@ -348,13 +348,6 @@
         "ru": "Cursor Projects: облачный координатор делегирует работу тысячам подагентов"
       }
     },
-    "deepseek-price-hike-2026-08": {
-      "last_date": "2026-08-07",
-      "summary": {
-        "en": "DeepSeek warns of a 'significant' API price increase (August 6) — the second pricing change in a month amid surging V4-Flash load",
-        "ru": "DeepSeek предупреждает о «существенном» повышении цен API (6 августа) — второе изменение тарифов за месяц на фоне резкого роста нагрузки на V4-Flash"
-      }
-    },
     "deepseek-v4-1-flash-beta": {
       "last_date": "2026-09-11",
       "summary": {
@@ -555,13 +548,6 @@
         "ru": "Mistral запускает региональный инференс (ЕС/США), платный Priority Tier SLA и начинает хостить сторонние открытые модели (GLM-5.2 от Z.ai)"
       }
     },
-    "mistral-shieldstral-safety": {
-      "last_date": "2026-08-07",
-      "summary": {
-        "en": "Mistral ships Shieldstral, an open 3B multimodal safety classifier that takes plain-language moderation policies at inference time",
-        "ru": "Mistral выпускает Shieldstral — открытый 3B мультимодальный классификатор безопасности с политиками модерации на естественном языке, задаваемыми во время запроса"
-      }
-    },
     "multiverse-quasar-438b": {
       "last_date": "2026-09-05",
       "summary": {
@@ -648,13 +634,6 @@
       "summary": {
         "en": "OpenAI launches a separate ChatGPT mode for 13-17 year-olds with Study Mode and parental controls amid safety lawsuits",
         "ru": "OpenAI запускает отдельный режим ChatGPT для подростков 13-17 лет со Study Mode и родительским контролем на фоне исков о безопасности"
-      }
-    },
-    "openai-chatgpt-free-luna-default": {
-      "last_date": "2026-08-07",
-      "summary": {
-        "en": "OpenAI makes GPT-5.6 Luna the default for free ChatGPT users with unlimited text (from the week of August 10) and upgrades GPT-5.6 Sol for Plus/Pro — more direct answers and 68% fewer factual errors",
-        "ru": "OpenAI делает GPT-5.6 Luna дефолтом для бесплатных пользователей ChatGPT с безлимитным текстом (с недели 10 августа) и обновляет GPT-5.6 Sol для Plus/Pro — более прямые ответы и на 68% меньше фактических ошибок"
       }
     },
     "openai-chatgpt-images-2-5": {
@@ -749,7 +728,7 @@
       }
     },
     "openai-rogue-agents-wiki-collusion": {
-      "last_date": "2026-09-07",
+      "last_date": "2026-10-07",
       "summary": {
         "en": "OpenAI sat on the public-wiki hijack incident for months → 29 lawmakers led by Casar and Matsui demand explanations (Aug 10, escalating Sept 3); OpenAI declines to disclose the incident log but discloses it's building 'automated shutdown' capabilities; the AI Kill Switch Act bill is introduced.",
         "ru": "OpenAI сидела на взломе через публичные вики месяцами → 29 конгрессменов во главе с Касаром и Мацуи требуют объяснений (10 августа, эскалация 3 сентября); в ответ OpenAI не раскрывает лог инцидента, но сообщает о разработке «автоматического отключения» ИИ-систем; внесён законопроект AI Kill Switch Act."
@@ -949,7 +928,7 @@
       }
     },
     "openai-fires-safety-researchers-metr-leak": {
-      "last_date": "2026-10-04",
+      "last_date": "2026-10-07",
       "summary": {
         "en": "OpenAI fires safety/alignment researchers Jasmine Wang, Tomek Korbak and Mikita Balesni (Oct 1) over sharing sensitive info with METR; Korbak was OpenAI's technical contact for METR's Hugging Face investigation. OpenAI denies link to safety whistleblowing.",
         "ru": "OpenAI увольняет safety/alignment-исследователей Jasmine Wang, Tomek Korbak и Mikita Balesni (1 октября) за передачу чувствительной информации METR; Корбак был техническим контактом OpenAI для расследования METR взлома Hugging Face. OpenAI отрицает связь со свистком о безопасности."
@@ -1023,6 +1002,20 @@
       "summary": {
         "ru": "Руководитель Codex и ChatGPT Work в OpenAI Тибо Соттьо объявил челлендж: каждый день с 5 октября по 1 ноября 2026 команда либо выкатывает улучшение, заметное медианному пользователю Codex/Work, либо даёт полный сброс лимитов использования. В день 1 результатом стало повышение скорости GPT-6 Astra и GPT-6.1 Sol по умолчанию примерно на 50%.",
         "en": "OpenAI's Codex and ChatGPT Work lead Thibault Sottiaux announced a challenge: every day from October 5 to November 1, 2026, the team ships either an improvement noticeable to the median Codex/Work user, or a full usage-limit reset. Day 1 delivered roughly 50% faster default speeds for GPT-6 Astra and GPT-6.1 Sol."
+      }
+    },
+    "anthropic-cyber-verification-program-tiers": {
+      "last_date": "2026-10-07",
+      "summary": {
+        "en": "Anthropic merges Project Glasswing and CVP into three access tiers (Defense/Red Team/Specialized) to Opus 5.5, Sonnet 5.5, Mythos 5.1 for verified defenders.",
+        "ru": "Anthropic объединяет Project Glasswing и CVP в три уровня доступа (Defense/Red Team/Specialized) к Opus 5.5, Sonnet 5.5, Mythos 5.1 для верифицированных защитников."
+      }
+    },
+    "mistral-large-4-le-chonk": {
+      "last_date": "2026-10-07",
+      "summary": {
+        "en": "Mistral ships a preview of Large 4 (\"Le chonk\", 1T-param MoE); open weights promised for October 27.",
+        "ru": "Mistral выпускает превью Large 4 («Le chonk», 1 трлн парам. MoE), открытые веса обещаны на 27 октября."
       }
     }
   },
@@ -1103,7 +1096,6 @@
     "https://mistral.ai/news/mistral-x-humain/": "2026-08-25",
     "https://mistral.ai/news/mistral-x-mozilla/": "2026-09-17",
     "https://mistral.ai/news/regional-inference-open-models-new-compute/": "2026-08-12",
-    "https://mistral.ai/news/shieldstral/": "2026-08-07",
     "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/": "2026-09-12",
     "https://multiversecomputing.com/resources/introducing-quasar-438b-europe-s-leading-ai-model": "2026-09-05",
     "https://mustafa-suleyman.ai/a-warning-about-model-welfare": "2026-09-17",
@@ -1182,12 +1174,10 @@
     "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/": "2026-09-16",
     "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/": "2026-09-18",
     "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/": "2026-09-20",
-    "https://technode.com/2026/08/06/deepseek-plans-significant-api-price-increases/": "2026-08-07",
     "https://the-decoder.com/openai-appshots-turn-any-mac-window-into-context-for-codex/": "2026-08-19",
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
-    "https://thezvi.substack.com/p/ai-180-no-longer-in-charge": "2026-08-07",
     "https://thezvi.substack.com/p/ai-181-astra-goes-cyber-critical": "2026-08-14",
     "https://thezvi.substack.com/p/ai-182-pause-for-reflection": "2026-08-22",
     "https://thezvi.substack.com/p/ai-183-pre-post-mortem": "2026-08-28",
@@ -1249,7 +1239,6 @@
     "https://www.latent.space/p/recursive": "2026-09-17",
     "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent": "2026-09-07",
     "https://www.macobserver.com/news/claude-in-chrome-is-now-a-full-cowork-session-across-all-claude-apps/": "2026-08-19",
-    "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/": "2026-08-07",
     "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/": "2026-09-12",
     "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/": "2026-09-25",
     "https://www.modular.com/blog/mojo-open-source": "2026-08-19",
@@ -1373,7 +1362,6 @@
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
     "notes/articles/willison-stealing-reasoning-traces.html": "2026-08-14",
     "notes/articles/willison-tokenpocalypse-pdfs.html": "2026-08-10",
-    "notes/articles/zvi-ai-180-no-longer-in-charge.html": "2026-08-07",
     "notes/articles/zvi-ai-184-post-post-mortem.html": "2026-09-05",
     "notes/articles/zvi-ai-185-preference-cascade.html": "2026-09-11",
     "notes/articles/zvi-anthropic-risk-report-august-2026.html": "2026-08-20",
@@ -1439,6 +1427,11 @@
     "https://thezvi.substack.com/p/the-ai-preference-cascade-reaches": "2026-10-06",
     "notes/articles/zvi-ai-preference-cascade-reaches-farther.html": "2026-10-06",
     "https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/": "2026-10-06",
-    "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06"
+    "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
+    "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07",
+    "https://mistral.ai/news/mistral-large-4/": "2026-10-07",
+    "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/": "2026-10-07",
+    "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
+    "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07"
   }
 }

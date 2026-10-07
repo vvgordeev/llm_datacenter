@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-07",
+      "news_count": 4,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "Anthropic объединяет Project Glasswing и CVP в три уровня доступа для защитников",
+        "en": "Anthropic folds Project Glasswing into a three-tier Cyber Verification Program"
+      }
+    },
+    {
       "date": "2026-10-06",
       "news_count": 5,
       "expert_count": 3,
