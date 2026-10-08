@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-08",
+      "news_count": 1,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "Anthropic выпустила Claude Haiku 5.5 — на 75% дешевле и заметно умнее Haiku 4.5",
+        "en": "Anthropic ships Claude Haiku 5.5 — about 75% cheaper and markedly smarter than Haiku 4.5"
+      }
+    },
+    {
       "date": "2026-10-07",
       "news_count": 4,
       "expert_count": 1,

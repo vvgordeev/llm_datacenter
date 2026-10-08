@@ -1017,6 +1017,13 @@
         "en": "Mistral ships a preview of Large 4 (\"Le chonk\", 1T-param MoE); open weights promised for October 27.",
         "ru": "Mistral выпускает превью Large 4 («Le chonk», 1 трлн парам. MoE), открытые веса обещаны на 27 октября."
       }
+    },
+    "anthropic-claude-haiku-5-5-launch": {
+      "last_date": "2026-10-08",
+      "summary": {
+        "ru": "Anthropic выпустила Claude Haiku 5.5 — на 75% дешевле и заметно умнее Haiku 4.5, с регулируемым уровнем усилия рассуждения.",
+        "en": "Anthropic shipped Claude Haiku 5.5 — about 75% cheaper and markedly smarter than Haiku 4.5, with an adjustable reasoning-effort dial."
+      }
     }
   },
   "seen_urls": {
@@ -1432,6 +1439,8 @@
     "https://mistral.ai/news/mistral-large-4/": "2026-10-07",
     "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/": "2026-10-07",
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
-    "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07"
+    "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
+    "https://www.anthropic.com/claude-haiku-5-5": "2026-10-08",
+    "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08"
   }
 }

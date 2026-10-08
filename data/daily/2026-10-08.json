@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T05:16:25Z",
+  "news": [
+    {
+      "id": "2026-10-08-claude-haiku-5-5",
+      "cluster_id": "anthropic-claude-haiku-5-5-launch",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic выпустила Claude Haiku 5.5 — на 75% дешевле и заметно умнее Haiku 4.5",
+        "en": "Anthropic ships Claude Haiku 5.5 — about 75% cheaper and markedly smarter than Haiku 4.5"
+      },
+      "summary": {
+        "ru": "Anthropic представила Claude Haiku 5.5 — третью модель линейки 5.5 после Opus и Sonnet, позиционируемую как самая быстрая, дешёвая и способная младшая модель компании. Цена упала в среднем на 75% относительно Haiku 4.5 (до $0.10/$0.50 за млн токенов вход/выход при запросах до 100k токенов), а оценки на бенчмарках (GDPval-AA, OSWorld, Terminal-Bench и др.) выросли в разы. Это первая модель уровня Haiku с регулируемым уровнем усилия рассуждения (low…max) и рекомендуемый выбор для субагентов, классификации и высокообъёмных задач рядом с Opus 5.5 и Sonnet 5.5.",
+        "en": "Anthropic introduced Claude Haiku 5.5, the third model in its 5.5 lineup after Opus and Sonnet, positioned as the company's fastest, cheapest and most capable small model yet. Pricing dropped about 75% on average versus Haiku 4.5 (to $0.10/$0.50 per million input/output tokens for requests up to 100k tokens), while benchmark scores (GDPval-AA, OSWorld, Terminal-Bench and others) jumped several-fold. It's the first Haiku-class model with an adjustable reasoning-effort dial (low…max), pitched as the cost-sensitive subagent alongside Opus 5.5 and Sonnet 5.5 for high-volume tasks and classification."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Крупный шаг вперёд в рамках существующего подхода «дешёвая модель-субагент»: резкое снижение цены и рост качества расширяют круг задач, где выгодно использовать маленькую модель, но парадигму использования LLM не меняет.",
+        "en": "A substantial step within the existing 'cheap subagent model' approach: the sharp price cut and quality jump widen where a small model becomes the economical choice, but it doesn't change the underlying paradigm of how LLMs are used."
+      },
+      "source_url": "https://www.anthropic.com/claude-haiku-5-5",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Если ваши задачи укладываются в 100 000 токенов, Haiku стоит столько же, сколько Luna, и показывает более высокие баллы в бенчмарках. Выше 100 000 токенов Luna выглядит намного выгоднее — а новый, менее щедрый токенизатор Haiku 5.5 означает скрытое повышение цены: тот же промпт теперь использует примерно в 1.25 раза больше токенов.",
+            "en": "If your workloads fit in 100,000 tokens, Haiku is the same price as [GPT-6] Luna and reports higher benchmark scores. Above 100,000 tokens, Luna looks like a much better deal — and Haiku 5.5's new, less generous tokenizer means a hidden price increase: the same prompt now uses around 1.25x as many tokens."
+          },
+          "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Asana сообщила о снижении задержки ответа на 30% при переходе на Haiku 5.5 в продакшен-сценариях.",
+            "en": "Asana reported a 30% latency reduction after moving production workloads to Haiku 5.5."
+          },
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        },
+        {
+          "text": {
+            "ru": "HubSpot получил средний балл 92.8% по трём прогонам на внутреннем CRM-тесте — заметный рост по сравнению с Haiku 4.5.",
+            "en": "HubSpot measured a 92.8% average score across three runs on its internal CRM evaluation — a marked improvement over Haiku 4.5."
+          },
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        },
+        {
+          "text": {
+            "ru": "AlphaSense зафиксировал рост внутренней метрики качества с 0.76 (Haiku 4.5) до 0.84 (Haiku 5.5).",
+            "en": "AlphaSense saw its internal quality metric rise from 0.76 (Haiku 4.5) to 0.84 (Haiku 5.5)."
+          },
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-08-willison-haiku-5-5",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Claude Haiku 5.5: быстрее и дешевле — но не всегда",
+        "en": "Claude Haiku 5.5: faster and cheaper — but not always"
+      },
+      "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
+      "summary": {
+        "ru": "Разбор свежего релиза Claude Haiku 5.5: сравнение цены с GPT-6 Luna (паритет только до 100k токенов), скрытое удорожание из-за нового токенизатора, тест «пеликан на велосипеде» на всех пяти уровнях рассуждения и щедрая схема API-кредитов для подписчиков Max/Team.",
+        "en": "A hands-on look at the fresh Claude Haiku 5.5 release: pricing compared against GPT-6 Luna (parity only up to 100k tokens), a hidden cost increase from the new tokenizer, the 'pelican on a bicycle' test run across all five reasoning-effort levels, and a generous new API credit scheme for Max/Team subscribers."
+      },
+      "note_page": "notes/articles/willison-claude-haiku-5-5.html"
+    }
+  ]
+}

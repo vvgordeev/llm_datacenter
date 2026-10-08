@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Claude Haiku 5.5 — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект заметки · Simon Willison · 2026-10-07</span>
+      <span data-lang="en">Note digest · Simon Willison · 2026-10-07</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Claude Haiku 5.5: быстрее и дешевле — но не всегда</span>
+      <span data-lang="en">Claude Haiku 5.5: faster and cheaper — but not always</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original note ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В день релиза Саймон Уиллисон разбирает Claude Haiku 5.5 — третью модель в серии 5.5 вслед за Opus и Sonnet. Годовалый Haiku 4.5 стоил $1/$5 за миллион токенов (вход/выход) — дорого даже по меркам прошлого года и в 10 раз дороже вышедшего месяцем ранее GPT-6 Luna. Новый Haiku ровно повторяет цену Luna — $0.10/$0.50 — но только до 100 000 токенов в запросе: дальше цена вырастает в 5 раз, до $0.50/$2.50, тогда как у Luna порог выше (272 000 токенов) и рост мягче (до $0.20/$0.75). Есть и менее заметная деталь: Haiku 5.5 считает токены новым, менее щедрым токенизатором — один и тот же длинный промпт превращается примерно в 1.25 раза больше токенов, чем на Haiku 4.5. Формально цена за токен упала резко, но часть экономии съедается самим способом подсчёта.</span>
+      <span data-lang="en">On release day, Simon Willison takes Claude Haiku 5.5 for a spin — the third model in the 5.5 line after Opus and Sonnet. The year-old Haiku 4.5 cost $1/$5 per million tokens (input/output) — expensive even by last year's standards, and 10x the price of GPT-6 Luna, which shipped a month earlier. The new Haiku exactly matches Luna's price — $0.10/$0.50 — but only up to 100,000 tokens per request: beyond that it jumps 5x to $0.50/$2.50, while Luna's threshold sits higher (272,000 tokens) with a gentler increase (to $0.20/$0.75). There's a subtler catch too: Haiku 5.5 counts tokens with a new, less generous tokenizer — the same long prompt comes out to roughly 1.25x more tokens than on Haiku 4.5. The sticker price per token fell sharply, but part of that saving is quietly clawed back by how tokens are counted.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: пеликан на велосипеде, теперь с шкалой усилия</span><span data-lang="en">The method: a pelican on a bicycle, now with an effort dial</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон годами проверяет новые модели одним и тем же неформальным тестом: просит нарисовать SVG «пеликана на велосипеде» и сравнивает с прошлыми моделями того же вендора — быстрый визуальный ориентир, а не строгий бенчмарк. Через свой CLI-инструмент <code>llm</code> (с плагином <code>llm-anthropic</code>) он прогнал Haiku 5.5 на всех пяти уровнях рассуждения — low, medium, high, xhigh, max, — которые модель открывает как регулятор «цена против качества». В отличие от некоторых других моделей, Haiku 5.5 не даёт полностью отключить рассуждение: по умолчанию стоит medium. Уже «low» дал узнаваемую раму велосипеда — результат обошёлся в 0.0936 цента и занял 7 секунд. «Max» потребовал больше 5 минут размышлений, но благодаря низкой цене модели итоговый счёт составил всего 3.38 цента. Ограничение метода Уиллисон называет сам: в цепочке рассуждений модели на «max» явно видно, что она узнаёт тестовое задание («classic pelican-on-bicycle SVG test») — то есть качество рисунка отчасти отражает не общие способности модели, а то, что подобные примеры есть в обучающих данных.</span>
+      <span data-lang="en">Willison has run the same informal check on new models for years: ask for an SVG of "a pelican riding a bicycle" and compare it against that vendor's past models — a quick visual gut-check, not a rigorous benchmark. Through his <code>llm</code> CLI tool (via the <code>llm-anthropic</code> plugin) he ran Haiku 5.5 at all five reasoning levels it exposes as a cost-versus-quality dial — low, medium, high, xhigh, max. Unlike some other models, Haiku 5.5 won't let you turn reasoning off entirely; it defaults to medium. Even "low" produced a recognisable bicycle frame — it cost 0.0936 cents and took 7 seconds. "Max" took over 5 minutes of thinking, but thanks to the model's low price the whole thing still cost only 3.38 cents. Willison flags the method's own limitation: the model's reasoning trace at "max" openly recognizes the prompt as "the classic pelican-on-bicycle SVG test" — meaning the drawing quality partly reflects the model having seen this exact benchmark in training, not raw general capability.</span>
+    </p>
+
+    <h2><span data-lang="ru">Щедрые API-кредиты для подписчиков</span><span data-lang="en">Generous API credits for subscribers</span></h2>
+    <p>
+      <span data-lang="ru">Вместе с Haiku 5.5 Anthropic вдвое снизила цену кэш-чтений для Sonnet 5.5 и добавила подписчикам Max и Team ежемесячные API-кредиты на платформе Claude: $100 для Max 5x, $200 для Max 20x и до $500 (в складчину на команду) для Team — суммы, которые ровно совпадают со стоимостью самой подписки. Уиллисон считает это по-настоящему щедрым шагом: он сильно упрощает переход подписчиков к прямому использованию API. Отдельно он хвалит возможность отключить автопополнение баланса — тогда запросы просто останавливаются, когда кредиты кончились, без риска «неприятного сюрприза в счёте» (с отсылкой к его же посту о жёстких лимитах бюджета от 3 октября). Для сравнения он вспоминает, что у OpenAI подписка на Codex и так позволяет пользоваться личным API — и видит в новой схеме Anthropic попытку хотя бы отчасти сократить это отставание.</span>
+      <span data-lang="en">Alongside Haiku 5.5, Anthropic halved cache-read pricing for Sonnet 5.5 and added monthly API credits on the Claude Platform for Max and Team subscribers: $100 for Max 5x, $200 for Max 20x, and up to $500 (pooled across a team) for Team plans — amounts that exactly match what the subscription itself costs. Willison calls this genuinely generous: it makes it much easier for subscribers to also use the API directly. He separately praises the option to disable balance auto-reload, so requests simply stop once the credits run out, with no risk of "a nasty billing surprise" (referencing his own October 3rd post on hard budget caps). For comparison, he notes that OpenAI's Codex subscription already lets subscribers use their personal API — and reads Anthropic's new scheme as an attempt to at least partly close that gap.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

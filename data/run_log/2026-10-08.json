@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T05:16:25Z",
+  "environment_note": "Сильная деградация прямого egress в этом прогоне: WebFetch вернул getaddrinfo ENOTFOUND (DNS-уровень, не обычный 403) почти для всех доменов — openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, simonwillison.net, latent.space, oneusefulthing.org, youtube.com, news.ycombinator.com, hn.algolia.com, news.smol.ai, tldr.tech, newsletter.pragmaticengineer.com, videohighlight.com. Работали только anthropic.com (WebFetch) и github.com (git clone). WebSearch оставался единственным рабочим каналом обнаружения, но его индекс отстаёт на 1-2 дня от вчерашнего релиза (Claude Haiku 5.5, 7 окт) — поэтому реакций сообщества почти не нашлось. Это отличается от обычного «тихого дня»: деградация окружения, а не отсутствие новостей.",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 2, "note": "WebFetch прошёл. Claude Haiku 5.5 (7 окт) — новая, опубликована. Cyber Verification Program (6 окт) — уже опубликовано вчера (seen_urls), дубль, пропущено."},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; покрыто 2x WebSearch — ничего за 36ч, только неподтверждённые слухи о GPT-6 Astra"},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — Gemini 4 анонсирован как «близко», даты нет"},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — ничего нового, только старые слухи про Muse Spark/Avocado"},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — ничего за 36ч, Grok 4.6 от августа"},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — Mistral Large 4 (6 окт) уже опубликован вчера, дубль"},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — V4.1-Flash от 10 сентября, не свежее"},
+    {"source": "aggregator: news.smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND"},
+    {"source": "aggregator: tldr.tech/ai", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND"},
+    {"source": "aggregator: simonwillison.net linkblog", "status": "ok-via-backup", "candidates": 1, "note": "Прямой WebFetch ENOTFOUND; обход через git clone simonwillisonblog-backup (ndjson-дамп) сработал. Нашёл его отдельный пост-эссе про Claude Haiku 5.5 (7 окт) — использован как экспертная статья и источник мнения. Остальные blogmark за окно (Wikimedia rogue agent, Mistral Large 4) уже опубликованы вчера, дубли."},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "CONNECT 403 через curl, ENOTFOUND через WebFetch; WebSearch по HN не дал релевантных тредов за сегодня (индекс не успел проиндексировать)"},
+    {"source": "community: reddit/x", "status": "empty", "candidates": 0, "note": "WebSearch не нашёл реакций на Haiku 5.5 — релиз слишком свежий (вышел вчера вечером UTC), индекс поиска отстаёт"},
+    {"source": "expert: Simon Willison", "status": "ok-via-backup", "candidates": 1, "note": "см. выше — эссе про Claude Haiku 5.5 за 7 окт"},
+    {"source": "expert: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch — ничего за 7 дней, последний найденный апдейт из мая/июня"},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch — последний выпуск AINews датирован 23-24 сентября, вне окна 7 дней"},
+    {"source": "expert: AI Explained", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch — последнее найденное видео от 6 августа"},
+    {"source": "expert: Matt Wolfe", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch не дал свежих дат"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch — ничего за 7 дней, только анонс книги Co-Existence на 20 октября (будущее событие)"},
+    {"source": "expert: Nate Herk", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch не дал свежих дат"},
+    {"source": "expert: Matt Pocock", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; нашёлся подкаст Pragmatic Engineer с ним, но от 17 сентября — вне окна 7 дней"}
+  ],
+  "totals": {
+    "candidates": 5,
+    "published": 1,
+    "rejected": {
+      "дубль с предыдущим прогоном (seen_urls)": 3,
+      "не по теме / слухи без первоисточника": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not_used: ни один видео-кандидат не прошёл фильтр свежести/релевантности",
+    "frames": "not_used: видео-кандидатов не было",
+    "tooling": "yt-dlp + imageio-ffmpeg установлены через pip (ffmpeg системный уже был); не потребовались"
+  }
+}
