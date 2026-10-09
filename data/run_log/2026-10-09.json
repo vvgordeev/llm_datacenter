@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T06:40:00Z",
+  "environment_note": "Сильная деградация прямого egress в этом прогоне, как и 2026-10-08: WebFetch вернул getaddrinfo ENOTFOUND (DNS-уровень) для openai.com, blog.google, ai.google.dev, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, simonwillison.net, karpathy.bearblog.dev, www.latent.space, news.latent.space, www.oneusefulthing.org, thezvi.substack.com, www.youtube.com (все RSS/видео), news.smol.ai, tldr.tech. Работали только anthropic.com (WebFetch) и github.com (git clone). curl к hn.algolia.com дал CONNECT timeout (HTTP 000). WebSearch — единственный рабочий канал обнаружения, но его результаты в этом прогоне оказались заметно ненадёжнее обычного: несколько кандидатов пришлось отклонить после перепроверки как неподтверждённые или противоречащие независимым источникам (см. totals.rejected) — это сильнее обычного дрейфа индекса на 1-2 дня, похоже на рост доли низкокачественных/синтетических агрегаторов в выдаче.",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 5, "note": "WebFetch прошёл. Haiku 5.5 (7 окт) и расширение Cyber Verification Program (6 окт) — уже опубликованы вчера/позавчера, дубли (seen_urls). 2026 Usage Policy update (8 окт) и Genesis Mission commitment (8 окт) — проверены WebFetch, отклонены: политика использования и финансовое обязательство без продуктовой части, не проходят критерий 'новая функция/релиз/подход к использованию LLM'. Anthropic Cyber Mission (8 окт, CIDP + OSS Scanner) — проверен WebFetch, опубликован."},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch за 36ч — ничего подтверждённого. Отдельно всплыл неподтверждённый кандидат 'GPT-6 для всех / Intelligent UI' (якобы 7-8 окт) из нескольких низкокачественных агрегаторов (aiweekly.co, riorundown.substack.com) — при прямой перепроверке ('OpenAI GPT-6 launch date official announcement', 'ChatGPT GPT-6 rollout interactive UI... TechCrunch') не нашлось ни одного независимого/первичного подтверждения, а конкурирующие источники показывают, что GPT-6 Astra уже вышел в начале сентября. Отклонён как неподтверждённый, см. totals.rejected."},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND (blog.google, ai.google.dev); 2x WebSearch — Gemini 4 всё ещё 'близко', даты нет. Отдельно всплыл кандидат 'Gemini Nano Banana 2.1' (образо-модель, якобы официально анонсирована 6 окт) — при прямой перепроверке качества/анонса нашёлся противоречащий источник: модель появилась в UI Flow без анонса компании ('the company announced nothing'), а процитированные ai.google.dev/blog.google страницы не подтверждаются независимо (fetch заблокирован). Отклонён как неподтверждённый."},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — ничего нового за 36ч, только неподтверждённые слухи про 'Hatch'/'Watermelon'."},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — ничего за 36ч, последнее подтверждённое — Grok 4.6 (авг)."},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — ничего нового, Mistral Large 4 уже опубликован 7 окт, дубль."},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — V4.1-Flash от 10 сентября, не свежее."},
+    {"source": "aggregator: news.smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch по содержимому не нашёл выпуска за 8-9 окт."},
+    {"source": "aggregator: tldr.tech/ai", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND"},
+    {"source": "aggregator: simonwillison.net linkblog", "status": "ok-via-backup", "candidates": 0, "note": "Прямой WebFetch ENOTFOUND; обход через git clone simonwillisonblog-backup сработал, но последняя запись (blog_entry/blog_blogmark/blog_note) датирована 7 октября — ничего нового за 8-9 окт, похоже бэкап/блог ещё не обновлялись."},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "curl: CONNECT timeout (HTTP 000); WebSearch 'site:news.ycombinator.com LLM October 2026' не дал релевантных тредов."},
+    {"source": "community: reddit/x", "status": "empty", "candidates": 0, "note": "WebSearch по r/ClaudeAI и r/LocalLLaMA не нашёл обсуждений свежее конца сентября; реакций на Anthropic Cyber Mission не найдено (слишком свежий анонс)."},
+    {"source": "expert: Simon Willison", "status": "empty", "candidates": 0, "note": "Последнее эссе (Haiku 5.5, 7 окт) уже опубликовано вчера; новых записей в backup и через WebSearch не найдено."},
+    {"source": "expert: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "RSS и личный блог ENOTFOUND; WebSearch — ничего нового за 7 дней (последнее найденное — майский пост о присоединении к Anthropic)."},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "WebFetch ENOTFOUND (latent.space, news.latent.space); WebSearch не дал ничего свежее мая."},
+    {"source": "expert: AI Explained", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch не дал видео за 7 дней."},
+    {"source": "expert: Matt Wolfe", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch не дал релевантных результатов (сайт даёт в основном тёзок)."},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch — ничего за 7 дней, только анонс книги Co-Existence на 20 октября (будущее событие)."},
+    {"source": "expert: Nate Herk", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch — ничего датированного октябрём."},
+    {"source": "expert: Matt Pocock", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch не дал релевантных результатов."},
+    {"source": "expert fallback: best/popular LLM article/video this week", "status": "empty", "candidates": 0, "note": "WebSearch по общим запросам не дал ничего датированного и не дублирующего уже опубликованное."}
+  ],
+  "totals": {
+    "candidates": 8,
+    "published": 1,
+    "rejected": {
+      "дубль с предыдущими прогонами (seen_urls)": 2,
+      "не продуктовая новость (политика/финансирование без продуктовой части)": 2,
+      "не подтверждено независимо при перепроверке / противоречит другим источникам": 2,
+      "не по теме / слухи без первоисточника": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not_used: ни один видео-кандидат не прошёл discovery (YouTube RSS/WebFetch заблокирован, WebSearch не нашёл релевантных свежих видео)",
+    "frames": "not_used: видео-кандидатов не было",
+    "tooling": "yt-dlp + imageio-ffmpeg установлены через pip (системный ffmpeg уже был); не потребовались"
+  }
+}

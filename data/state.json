@@ -1024,6 +1024,13 @@
         "ru": "Anthropic выпустила Claude Haiku 5.5 — на 75% дешевле и заметно умнее Haiku 4.5, с регулируемым уровнем усилия рассуждения.",
         "en": "Anthropic shipped Claude Haiku 5.5 — about 75% cheaper and markedly smarter than Haiku 4.5, with an adjustable reasoning-effort dial."
       }
+    },
+    "anthropic-cyber-mission": {
+      "last_date": "2026-10-09",
+      "summary": {
+        "ru": "Anthropic запускает Cyber Mission: Critical Infrastructure Defense Program (CIDP) для провайдеров безопасности ОТ-систем и бесплатный OSS Scanner для сканирования open source на уязвимости.",
+        "en": "Anthropic launches the Cyber Mission: the Critical Infrastructure Defense Program (CIDP) for OT security providers, and a free OSS Scanner for open-source vulnerability scanning."
+      }
     }
   },
   "seen_urls": {
@@ -1148,10 +1155,7 @@
     "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/": "2026-08-26",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
     "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/": "2026-08-11",
-    "https://simonwillison.net/2026/Aug/5/raccoon-heist/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/": "2026-08-11",
-    "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/": "2026-08-09",
-    "https://simonwillison.net/2026/Aug/7/openai-timeline/": "2026-08-09",
     "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": "2026-08-10",
     "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": "2026-08-10",
     "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/": "2026-09-02",
@@ -1344,7 +1348,6 @@
     "notes/articles/petreski-name-the-speed-limit.html": "2026-09-13",
     "notes/articles/raschka-astra-looped-transformers.html": "2026-09-07",
     "notes/articles/rehberger-claude-code-automode-injection.html": "2026-08-29",
-    "notes/articles/simonw-raccoon-heist-vibe-coding.html": "2026-08-09",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
     "notes/articles/turnbull-dont-classify-hallucinate.html": "2026-08-15",
     "notes/articles/webb-galactic-compass-ai-tutor.html": "2026-08-26",
@@ -1441,6 +1444,7 @@
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
     "https://www.anthropic.com/claude-haiku-5-5": "2026-10-08",
-    "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08"
+    "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08",
+    "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09"
   }
 }

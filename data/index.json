@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-09",
+      "news_count": 1,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Anthropic запускает Cyber Mission: защита критической инфраструктуры и бесплатный ИИ-сканер уязвимостей для open source",
+        "en": "Anthropic launches the Cyber Mission: a critical-infrastructure defense program and a free AI vulnerability scanner for open source"
+      }
+    },
+    {
       "date": "2026-10-08",
       "news_count": 1,
       "expert_count": 1,

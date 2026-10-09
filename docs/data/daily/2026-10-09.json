@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T06:40:00Z",
+  "news": [
+    {
+      "id": "2026-10-09-anthropic-cyber-mission",
+      "cluster_id": "anthropic-cyber-mission",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic запускает Cyber Mission: защита критической инфраструктуры и бесплатный ИИ-сканер уязвимостей для open source",
+        "en": "Anthropic launches the Cyber Mission: a critical-infrastructure defense program and a free AI vulnerability scanner for open source"
+      },
+      "summary": {
+        "ru": "Anthropic объявила Cyber Mission — долгосрочную программу поддержки защитников. В неё входят Critical Infrastructure Defense Program (CIDP), дающая трастовым провайдерам безопасности, работающим с энергосетями, водоснабжением, транспортом и госсистемами, доступ к топовым моделям Claude, инженерам Anthropic на площадке и threat-исследованиям (партнёры на старте — Accenture, Booz Allen, CrowdStrike, Deloitte, Dragos, Hitachi, Insane Cyber, Nozomi Networks, Palo Alto Networks, PwC, Rockwell Automation), и OSS Scanner — бесплатный опциональный сервис по образцу Google OSS-Fuzz, который периодически сканирует open-source проекты моделями Anthropic и присылает отчёт с proof-of-concept, объяснением и предложенным фиксом (отчёты формируются без проверки человеком, ожидаемая точность выше 90%).",
+        "en": "Anthropic announced the Cyber Mission, a long-term program to support infrastructure defenders. It includes the Critical Infrastructure Defense Program (CIDP), which gives trusted security providers working on power grids, water systems, transportation and government systems access to frontier Claude models, on-site Anthropic engineers and threat research (founding partners include Accenture, Booz Allen, CrowdStrike, Deloitte, Dragos, Hitachi, Insane Cyber, Nozomi Networks, Palo Alto Networks, PwC and Rockwell Automation), and OSS Scanner, a free opt-in service modeled on Google's OSS-Fuzz that periodically scans open-source projects with Anthropic's most capable models and returns a report with a proof-of-concept, an explanation and a suggested fix (reports are generated without human review, with an expected true-positive rate above 90%)."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает практичный массовый сценарий применения LLM — бесплатное автоматическое сканирование open source на уязвимости с готовым PoC и фиксом, плюс структурный канал поддержки защиты критической инфраструктуры — но аудитория специализированная (security-команды и мейнтейнеры), а не все пользователи LLM, а сам подход (агент-сканер уязвимостей) для Anthropic не новый.",
+        "en": "Opens a practical, large-scale use case for LLMs — free automated open-source vulnerability scanning with a ready PoC and fix suggestion, plus a structured channel for critical-infrastructure defense support — but the audience is specialized (security teams and maintainers) rather than general LLM users, and the underlying approach (an agentic vulnerability scanner) isn't new for Anthropic."
+      },
+      "source_url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Провайдеры безопасности критической инфраструктуры (энергосети, транспорт, госсистемы) подают заявку на участие в CIDP и получают доступ к топовым моделям Claude и инженерам Anthropic на площадке для разбора уязвимостей в операционных технологиях.",
+            "en": "Security providers for critical infrastructure (power grids, transportation, government systems) apply to join CIDP to get access to frontier Claude models and on-site Anthropic engineers for triaging vulnerabilities in operational technology."
+          },
+          "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+        },
+        {
+          "text": {
+            "ru": "Мейнтейнеры open-source проектов бесплатно подключают OSS Scanner и получают периодические отчёты об уязвимостях с proof-of-concept и предложенным фиксом, не имея собственных security-ресурсов.",
+            "en": "Open-source maintainers opt into OSS Scanner for free to receive periodic vulnerability reports with a proof-of-concept and a suggested fix, without needing their own dedicated security resources."
+          },
+          "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}
