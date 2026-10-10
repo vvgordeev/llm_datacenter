@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-10",
+  "generated_at": "2026-10-10T06:30:00Z",
+  "environment_note": "Та же деградация прямого egress, что и 2026-10-08/09: WebFetch вернул getaddrinfo ENOTFOUND для openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, news.smol.ai, tldr.tech, www.youtube.com и youtube.com (включая RSS). Работал только anthropic.com (WebFetch) и github.com (git clone). hn.algolia.com дал connect_rejected через egress-прокси (не timeout, а явный отказ по политике). WebSearch и git-clone обхода simonwillisonblog-backup — единственные рабочие каналы discovery.",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 0, "note": "WebFetch прошёл, получен список из 15 анонсов. Все — дубли, уже опубликованные в прогонах 2026-10-01..09 (Haiku 5.5, Cyber Verification Program, Cyber Mission и т.д.) или не продуктовые (2026 Usage Policy update, Genesis Mission commitment — без технической части, отклонены как и 8 окт)."},
+    {"source": "openai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch за lookback. Всплыл тот же неподтверждённый кандидат 'GPT-6 для всех / Intelligent UI' (якобы 7 окт) с тех же низкокачественных агрегаторов (letsdatascience.com, iclarified.com), что и в прогоне 2026-10-09 — там он уже был проверен и отклонён как неподтверждённый; повторно не включён."},
+    {"source": "google deepmind blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; 2x WebSearch — Gemini 4 всё ещё 'близко к релизу' (сентябрьские репорты The Verge/The Information), конкретной даты или объявления нет."},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch — ничего нового за lookback, только неподтверждённые слухи про Avocado/Muse."},
+    {"source": "xai news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch — ничего нового, последнее подтверждённое по-прежнему Grok 4.6 (август)."},
+    {"source": "mistral news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch подтвердил, что Mistral Large 4 (6 окт) уже опубликован в прогоне 2026-10-07 — дубль. Анонсированное открытие весов (конец октября) — будущее событие, не новость на сегодня."},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch — последнее подтверждённое по-прежнему V4.1-Flash (10 сентября), ничего нового."},
+    {"source": "aggregator: news.smol.ai", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch по содержимому ничего не дал."},
+    {"source": "aggregator: tldr.tech/ai", "status": "blocked", "candidates": 0, "note": "WebFetch ENOTFOUND."},
+    {"source": "aggregator: simonwillison.net linkblog", "status": "ok-via-backup", "candidates": 1, "note": "Прямой WebFetch не пробовался (известный 403, см. SKILL); обход через git clone simonwillisonblog-backup сработал. Свежие blogmark'и за 6-9 окт — Deno/Cloudflare, анти-паттерны блогинга, OpenAI-Wikimedia (уже дубль с 7 окт), Mistral Large 4 (уже дубль с 7 окт) — ни один не новый продуктовый сюжет по теме LLM."},
+    {"source": "hn algolia api", "status": "blocked", "candidates": 0, "note": "curl: connect_rejected через egress-прокси (explicit policy refusal, не timeout); WebSearch 'site:news.ycombinator.com LLM October 2026' и общий запрос про обсуждения HN за неделю — ничего релевантного и датированного."},
+    {"source": "community: reddit/x", "status": "empty", "candidates": 0, "note": "WebSearch по r/LocalLLaMA — индекс не новее весны/августа 2026, ничего датированного текущей неделей."},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 1, "note": "Через backup найдена статья 'A new feature for my blog, built using my voice' (9 окт) — про сборку фичи блога голосом через Codex voice mode (GPT-6 Astra High). Опубликована как экспертная статья."},
+    {"source": "expert: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch — ничего нового за 7 дней, только старые материалы (апрель/март)."},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch не дал ничего свежее середины июля."},
+    {"source": "expert: AI Explained", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch не нашёл релевантных результатов с канала."},
+    {"source": "expert: Matt Wolfe", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch — последнее найденное видео от 26 сентября, не за 7 дней."},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 0, "note": "WebFetch ENOTFOUND; WebSearch — ничего за 7 дней, только анонс книги Co-Existence на 20 октября (будущее событие)."},
+    {"source": "expert: Nate Herk", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch не дал ничего датированного октябрём."},
+    {"source": "expert: Matt Pocock", "status": "empty", "candidates": 0, "note": "RSS ENOTFOUND; WebSearch — последнее найденное от июля, ничего за 7 дней."},
+    {"source": "expert fallback: best/popular LLM article/video this week", "status": "empty", "candidates": 0, "note": "Расширенный WebSearch (extended) по общим запросам ('best/popular LLM article this week', 'how I use Claude Code/Codex workflow', 'context engineering new technique', 'r/LocalLLaMA this week') не дал дополнительных материалов с точной датой в пределах недели, не дублирующих уже опубликованное."}
+  ],
+  "totals": {
+    "candidates": 4,
+    "published": 1,
+    "rejected": {
+      "дубль с предыдущими прогонами (seen_urls)": 2,
+      "не подтверждено независимо при перепроверке / противоречит другим источникам": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not_used: ни один видео-кандидат не прошёл discovery (YouTube RSS/WebFetch заблокирован на уровне DNS, WebSearch не нашёл релевантных свежих видео ни у одного видео-эксперта)",
+    "frames": "not_used: видео-кандидатов не было",
+    "tooling": "yt-dlp + imageio-ffmpeg установлены через pip (системный ffmpeg уже был), не потребовались; pytest и ruff также пришлось доустановить в окружении"
+  }
+}

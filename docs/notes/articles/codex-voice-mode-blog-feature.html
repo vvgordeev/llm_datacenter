@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Built using my voice» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект заметки · Simon Willison · 2026-10-09</span>
+      <span data-lang="en">Note digest · Simon Willison · 2026-10-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Фича для блога, собранная голосом: Codex на кухне</span>
+      <span data-lang="en">Shipping a blog feature by voice, with Codex running in the kitchen</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original note ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон описывает, как построил новую страницу своего блога — индекс всех выпущенных им рассылок (еженедельного бесплатного Substack и платных ежемесячных для спонсоров) — почти полностью голосом, разговаривая с ноутбуком, пока готовил ужин. Инструмент — вкладка Codex в десктопном приложении ChatGPT в режиме голосового диалога, запущенная против локальной копии его блога на Django.</span>
+      <span data-lang="en">Simon Willison describes building a new page for his blog — an index of every newsletter he's sent, both the free weekly Substack and the paid monthly sponsors-only one — almost entirely by talking to his laptop while cooking dinner. The tool was the Codex tab in the ChatGPT desktop app, in voice conversation mode, pointed at a local checkout of his Django-powered blog.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: голосовой Codex поверх локального дев-сервера</span><span data-lang="en">The method: voice-mode Codex against a local dev server</span></h2>
+    <p>
+      <span data-lang="ru">Сессия начинается как обычно, с текстовой команды «Start dev server and open in browser» — это даёт живой превью сайта, по которому потом удобно отслеживать прогресс модели. Дальше включается не кнопка микрофона, а отдельная кнопка «Start new voice chat» рядом с ней: она запускает полноценный голосовой диалог с агентом, который видит код проекта и открытый в соседней колонке предпросмотр. Модель в сессии — GPT-6 Astra High. Задача была нетривиальной лишь отчасти: новая Django-модель, миграция, view-функции, шаблоны и несколько импортёров данных из внешних источников — работа, которую Уиллисон заранее представлял себе достаточно чётко, чтобы доверить её голосовому описанию.</span>
+      <span data-lang="en">The session starts the normal way, with a typed "Start dev server and open in browser" — that gives a live preview to track the model's progress against. Then, instead of the microphone button, a separate "Start new voice chat" button next to it kicks off a full voice conversation with an agent that can see the project's code and a live preview panel alongside the chat. The model behind it was GPT-6 Astra High. The task itself was only moderately complex: a new Django model, a migration, view code, templates, and a handful of import functions pulling data from external sources — work Willison had thought through well enough beforehand to describe out loud rather than type.</span>
+    </p>
+
+    <h2><span data-lang="ru">Неидеальная речь — рабочий промпт</span><span data-lang="en">Disfluent speech still works as a prompt</span></h2>
+    <p>
+      <span data-lang="ru">Опубликованная расшифровка голосового потока полна «ну», оговорок и исправлений на лету — Уиллисон на ходу решает, должны ли новые записи попадать на страницы тегов, на главную блога, на дневные архивные страницы, и должны ли они индексироваться поиском. Несмотря на это, модель поняла задачу и начала работать. Диалог продолжался около получаса — ровно столько, сколько готовился ужин, — модель изредка уточняла детали и правила код по ходу разговора. За это время агент голосом собрал модель и миграцию для нового типа контента, админку Django для неё, четыре независимых импортёра (последние записи Substack через RSS, остальные — через недокументированный API Substack, для пагинации которого модель сама нашла стороннюю статью с описанием; архив ежемесячных рассылок из одного GitHub-репозитория и последнюю приватную рассылку спонсоров — из другого), публичные страницы архива рассылок, появление новых записей на дневных/месячных архивных страницах при отсутствии на страницах тегов и главной, и интеграцию с поиском по сайту.</span>
+      <span data-lang="en">The published transcript of the voice session is full of "um"s, false starts and live corrections — Willison figures out on the fly whether new entries should show up on tag pages, on the blog homepage, on day-based archive pages, and whether they should be searchable. The model understood the brief anyway and got to work. The conversation ran for about half an hour, the time it took to cook dinner, with the model occasionally asking clarifying questions and editing code as they talked. In that window the agent built, entirely by voice, a new content-type model and migration, Django Admin configuration for it, four separate importers (recent Substack posts via RSS; older Substack posts via Substack's undocumented API, whose pagination the model figured out by finding a third-party writeup on its own; the archive of monthly newsletters from one GitHub repo; and the latest private sponsors-only newsletter from another), the public newsletter archive pages, newsletters appearing on day/month archive pages while staying off tag pages and the homepage, and integration with the site's search engine.</span>
+    </p>
+
+    <h2><span data-lang="ru">Где голос уступает клавиатуре</span><span data-lang="en">Where voice gives way to the keyboard</span></h2>
+    <p>
+      <span data-lang="ru">К концу готовки фича была почти готова к публикации, но не полностью: для одного из импортов, тянущего данные из приватного репозитория, модель предложила использовать git как подпроцесс, тогда как Уиллисон хотел импорт через API — и для создания нужного API-ключа всё равно пришлось сесть за клавиатуру. Он попросил Codex открыть ветку и пул-реквест, просмотрел код в интерфейсе GitHub и доработал детали уже печатая — это заняло ещё около получаса. Итоговые правки видны отдельными коммитами поверх PR, собранного голосом.</span>
+      <span data-lang="en">By the time dinner was done, the feature was nearly shippable but not quite: for one import that needed to reach a private repository, the model had opted to shell out to git as a subprocess, where Willison wanted an API-based import instead — and creating the necessary API key meant sitting down at the keyboard regardless. He had Codex open a branch and a pull request, reviewed the code in GitHub's PR interface, and typed out the remaining fixes himself, which took another half hour. Those fixes show up as extra commits on top of the voice-built PR.</span>
+    </p>
+
+    <h2><span data-lang="ru">Вывод: хорошо для многозадачности, не для повседневной работы</span><span data-lang="en">Verdict: good for multitasking, not a daily driver</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон и раньше использовал голосовой режим ChatGPT на телефоне во время прогулок с собакой — в основном для ресёрча и мозгового штурма, изредка для реальной разработки. Сессия с Codex ощущается иначе: добавление визуального превью рядом с диалогом и возможность в любой момент переключиться на печать для того, что неудобно описывать словами (вставить сообщение об ошибке, указать конкретный фрагмент кода), делает такой способ работы с агентом заметно мощнее телефонного голосового режима. При этом он прямо говорит, что не сделает это ежедневным инструментом: как только дело доходит до деталей, печатать и вставлять примеры эффективнее, чем проговаривать их. Главная ценность для него — в многозадачности: вместо подкаста или TikTok во время готовки теперь можно собирать реальную фичу, но сам подход требует домашней обстановки — разговаривать с ноутбуком в открытом офисе он бы не стал.</span>
+      <span data-lang="en">Willison has used ChatGPT's phone voice mode before, mostly for research and brainstorming during dog walks and occasionally for actual coding. The Codex session feels different: pairing the voice conversation with a live visual preview, plus the ability to drop into typing whenever something is awkward to say out loud (pasting an error message, pointing at a specific piece of code), makes it a noticeably more capable way to drive a coding agent than voice mode on a phone. He's still clear that it won't become a daily habit — once you're down in the details, typing and pasting examples beats describing them verbally. The real payoff for him is multitasking: instead of half-listening to a podcast or TikTok while cooking, he can actually ship something — though the approach only works at home, since he wouldn't want to talk to his laptop like this in a shared office.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

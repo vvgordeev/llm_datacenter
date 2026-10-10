@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-10",
+  "generated_at": "2026-10-10T06:30:00Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-10-10-willison-codex-voice-mode",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Фича для блога, собранная голосом: Codex на кухне",
+        "en": "Shipping a blog feature by voice, with Codex running in the kitchen"
+      },
+      "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+      "summary": {
+        "ru": "Уиллисон голосом, через voice-режим Codex в ChatGPT, построил новую страницу Newsletters в своём блоге на Django, пока готовил ужин: GPT-6 Astra High по устным, не всегда внятным инструкциям сама сделала модель данных, миграцию, шаблоны и четыре импортёра данных, а финальную правку одного импорта и мердж PR он уже делал печатая.",
+        "en": "Willison shipped a new Newsletters page on his Django-powered blog almost entirely via ChatGPT's Codex voice mode while cooking dinner: GPT-6 Astra High built the data model, migration, templates and four separate import pipelines from spoken, disfluent instructions, and he switched back to typing to fix one import and land the PR."
+      },
+      "note_page": "notes/articles/codex-voice-mode-blog-feature.html"
+    }
+  ]
+}
