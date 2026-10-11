@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Haiku 5.5 против GPT-6 Luna на Intelligence Index — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект заметки · Latent Space (AINews) · 2026-10-08</span>
+      <span data-lang="en">Note digest · Latent Space (AINews) · 2026-10-08</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Haiku 5.5 обходит GPT-6 Luna по баллам — но генерирует втрое больше токенов на ту же задачу</span>
+      <span data-lang="en">Haiku 5.5 beats GPT-6 Luna on the scoreboard — by generating three times as many tokens per task</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.latent.space/p/ainews-claude-haiku-55-better-than" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original note ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Сеть в этом прогоне не отдавала полный HTML latent.space (прямой WebFetch возвращал ошибку DNS) — конспект собран по проверенным через повторный поиск фрагментам заметки и независимым данным Artificial Analysis, без доступа к полному тексту оригинала.</span>
+      <span data-lang="en">This run's network couldn't fetch latent.space's full HTML (direct WebFetch returned a DNS error) — this digest is built from the note's indexed excerpts, cross-checked via a second search, plus independent Artificial Analysis data, without access to the original's full text.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ежедневный ролл-ап AINews от Latent Space разбирает дневной релиз Claude Haiku 5.5 (см. вчерашнюю сводку) не через маркетинговые заявления Anthropic, а через независимый замер Artificial Analysis: на его Intelligence Index новая Haiku набрала 43 балла — на 26 больше, чем у предыдущей Haiku, и чуть выше конкурентов из того же «бюджетного» класса (GLM-5.3 Flash — 42, Gemini 3.8 Flash — 41, GPT-6 Luna — 38). При этом Haiku 5.5 цена в цену с Luna, а Anthropic в тот же день снизила цены на Sonnet 5.5 и на подписки.</span>
+      <span data-lang="en">Latent Space's daily AINews roll-up covers the Claude Haiku 5.5 release (see yesterday's digest) not through Anthropic's own marketing claims but through an independent measurement from Artificial Analysis: on its Intelligence Index, the new Haiku scored 43 — up 26 points from the previous Haiku, and slightly ahead of same-tier competitors (GLM-5.3 Flash at 42, Gemini 3.8 Flash at 41, GPT-6 Luna at 38). Haiku 5.5 is priced to match Luna exactly, and Anthropic cut Sonnet 5.5 and subscription pricing the same day.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: не верь баллу, пока не посчитал токены</span><span data-lang="en">The method: don't trust the score until you've counted the tokens</span></h2>
+    <p>
+      <span data-lang="ru">Главный тезис заметки — методологический, а не про саму модель: сырой балл на бенчмарке вроде Intelligence Index сравним между моделями, только если сопоставим и расход токенов на задачу. Haiku 5.5 на максимальном уровне усилия потратила на прохождение теста около 162 000 выходных токенов — почти втрое больше, чем 50 000 токенов у GPT-6 Luna. Независимый подсчёт по всему прогону индекса даёт 440 млн токенов, сгенерированных Haiku 5.5, против 140 млн у Luna. То есть прирост в 5 баллов индекса Haiku купила ценой многократно более многословных рассуждений — а раз цена за токен у обеих моделей одинакова, итоговая стоимость решения задачи у Haiku 5.5 на максимальном усилии может оказаться выше, чем у формально более слабой по баллу Luna.</span>
+      <span data-lang="en">The note's central point is methodological rather than about the model itself: a raw score on a benchmark like the Intelligence Index is only comparable across models if token spend per task is comparable too. At maximum effort, Haiku 5.5 spent about 162,000 output tokens getting through the test — nearly three times GPT-6 Luna's 50,000. An independent tally across the whole index run puts Haiku 5.5 at 440M generated tokens against Luna's 140M. In other words, Haiku bought its 5-point index lead with far more verbose reasoning — and since both models charge the same per token, the actual cost of solving a task with Haiku 5.5 at max effort can end up higher than with the lower-scoring Luna.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Вывод для практики: при выборе «бюджетной» субагентной модели для высокообъёмных задач (ради чего Anthropic и позиционирует Haiku 5.5 — как дешёвого напарника Opus 5.5 и Sonnet 5.5) агрегированный балл на лидерборде — плохой ориентир сам по себе. Нужно сверять его с уровнем усилия, на котором он получен, и с фактическим расходом токенов: модель с более низким баллом, но втрое более компактными ответами на уровне «low»/«medium» часто обойдётся дешевле на реальном потоке запросов, чем модель-лидер на «max». Отдельно заметка приводит результат Haiku 5.5 в 35% на бенчмарке AutomationBench-AA — заметно ниже остальных показателей — и связывает это с багом чрезмерных отказов (over-refusal) в предрелизной версии модели, то есть с инженерной недоработкой, а не фундаментальным ограничением подхода.</span>
+      <span data-lang="en">The practical takeaway: when picking a "budget" subagent model for high-volume work — exactly how Anthropic pitches Haiku 5.5, as the cheap partner to Opus 5.5 and Sonnet 5.5 — an aggregate leaderboard score is a poor guide on its own. It needs to be checked against the effort level it was measured at and the actual token spend: a lower-scoring model that answers three times more compactly at "low"/"medium" effort often costs less in production than the leaderboard leader running at "max". Separately, the note flags a 35% score for Haiku 5.5 on the AutomationBench-AA benchmark — markedly below its other results — and ties it to an over-refusal bug in the pre-release build, i.e. an engineering rough edge rather than a fundamental limitation of the approach.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

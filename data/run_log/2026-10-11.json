@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-11",
+  "generated_at": "2026-10-11T05:30:00Z",
+  "sources": [
+    {"source": "anthropic blog", "status": "ok", "candidates": 1, "note": "WebSearch only (direct blog fetch not attempted, 403 pattern established in prior runs); единственный кандидат — Claude Haiku 5.5, уже опубликован 2026-10-08, дубль, отфильтрован"},
+    {"source": "openai blog", "status": "ok", "candidates": 2, "note": "GPT-6 Intelligent UI rollout (новый, опубликован) + Codex CLI GPT-6.1 default (только сторонний агрегатор havoptic.com, недостаточно надёжный источник — отклонён)"},
+    {"source": "google deepmind blog", "status": "empty", "candidates": 1, "note": "Gemini Live Guided Vision — повторная статья Oct 1 о фиче, уже закрытой кластером google-gemini-guided-vision (last_date 2026-09-02); не включено как устаревшее/дубль"},
+    {"source": "meta ai blog", "status": "empty", "candidates": 0, "note": "ничего в окне; ближайшее анонсированное событие (Ray-Ban Meta Audio) датировано 13 октября — будущее, не включено"},
+    {"source": "xai news", "status": "empty", "candidates": 0, "note": "последние найденные новости xAI/Grok — август 2026"},
+    {"source": "mistral news", "status": "ok", "candidates": 1, "note": "продолжение кластера mistral-large-4-le-chonk — волна независимых бенчмарков (Vals Index, apidog, eesel.ai), опубликовано"},
+    {"source": "deepseek news", "status": "empty", "candidates": 1, "note": "только финансовый слух о раунде на $80B юаней — отфильтровано как не продуктовая новость"},
+    {"source": "aggregator: news.smol.ai", "status": "error", "candidates": 0, "note": "site: оператор не дал релевантных результатов"},
+    {"source": "aggregator: TLDR AI", "status": "empty", "candidates": 0, "note": "10 октября — суббота, выпуска в этот день нет"},
+    {"source": "aggregator: simonwillison.net linkblog", "status": "ok", "candidates": 0, "note": "без новых фактов сверх уже найденного"},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "error", "candidates": 0, "note": "DNS недоступен (getaddrinfo ENOTFOUND) из песочницы в этом прогоне; fallback на WebSearch не дал обсуждений"},
+    {"source": "Reddit (r/LocalLLaMA, r/ClaudeAI)", "status": "empty", "candidates": 0, "note": "поиск не возвращает содержимое самого Reddit"},
+    {"source": "X / Twitter", "status": "empty", "candidates": 0, "note": "не проверялось отдельно — покрыто через реакции в составе других источников"},
+    {"source": "expert: Simon Willison", "status": "ok", "candidates": 3, "note": "все 3 найденных материала (built-using-my-voice 9 окт, claude-haiku-5-5 7 окт, default-hard-budget-caps 3 окт) уже опубликованы в прошлых сводках (2026-10-10, 2026-10-08, 2026-10-04) — дубли, отфильтрованы"},
+    {"source": "expert: Andrej Karpathy (YouTube)", "status": "empty", "candidates": 0, "note": "RSS недоступен (WebFetch DNS-ошибка), WebSearch не нашёл видео за окно — последнее найденное из августа"},
+    {"source": "expert: Latent Space", "status": "ok", "candidates": 2, "note": "AINews-разбор Haiku 5.5 vs GPT-6 Luna (новый, опубликован); RLM-эпизод с Alex Zhang — уже опубликован 2026-10-03, дубль"},
+    {"source": "expert: AI Explained (YouTube)", "status": "empty", "candidates": 0, "note": "RSS недоступен, WebSearch не нашёл видео в окне; ближайшее — подкаст-эпизод 1 окт (вне окна)"},
+    {"source": "expert: Matt Wolfe (YouTube)", "status": "error", "candidates": 0, "note": "подтверждено существование видео от 9 окт, но точный watch-URL не найден через WebSearch — не включено без проверенной ссылки"},
+    {"source": "expert: Ethan Mollick", "status": "empty", "candidates": 1, "note": "The Dot and the Swarm (1 окт) уже опубликован 2026-10-02 — дубль"},
+    {"source": "expert: Nate Herk (YouTube)", "status": "empty", "candidates": 0, "note": "единственный найденный материал оказался старым видео (апрель 2026) под похожим названием"},
+    {"source": "expert: Matt Pocock (YouTube)", "status": "empty", "candidates": 0, "note": "ничего в октябре; самые свежие материалы — сентябрь"},
+    {"source": "WebSearch расширенный проход (эксперты)", "status": "empty", "candidates": 0, "note": "\"best/popular LLM article/video this week\" не дал новых находок сверх уже перечисленных"}
+  ],
+  "totals": {
+    "candidates": 18,
+    "published": 3,
+    "rejected": {
+      "дубли (уже опубликовано ранее)": 8,
+      "ненадёжный источник (только сторонний агрегатор)": 3,
+      "не продуктовая/финансовая новость": 1,
+      "будущее событие / слишком старое": 2,
+      "не удалось подтвердить точную ссылку": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — за окно не нашлось ни одного подтверждённого свежего видео (не дубль) от экспертов из конфига",
+    "frames": "not used (video_pipeline не запускался)"
+  },
+  "degradation_note": "WebFetch в этом прогоне возвращал DNS-ошибку (getaddrinfo ENOTFOUND) на большинство доменов (simonwillison.net, latent.space, eesel.ai, apidog.com, youtube RSS, hn.algolia.com, google.com) — явно больше трети обойдённых источников; discovery вёлся почти целиком через WebSearch. Основная причина тонкой сводки за день — не отсутствие новостей, а то, что большинство найденных через WebSearch материалов (включая топовые у Simon Willison и Latent Space) оказались уже опубликованы в сводках за 2026-10-02 — 2026-10-10: индекс поиска за последние 24-48 часов почти не содержит новых материалов, отстающих от реального потока на несколько дней."
+}

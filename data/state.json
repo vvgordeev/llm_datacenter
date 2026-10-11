@@ -583,13 +583,6 @@
         "ru": "Meta открывает исходный код Muse Gadgets (прошивка ESP32 + Linux SDK) и запускает Muse Home Link — бесплатный USB-C донгл для управления умным домом через Muse."
       }
     },
-    "meta-muse-glimmer-open-weight": {
-      "last_date": "2026-08-11",
-      "summary": {
-        "en": "On August 10, Meta Superintelligence Labs (led by Alexandr Wang) shipped Muse Glimmer — a dense 30-billion-parameter multimodal (vision-capable) model under a clean Apache 2.0 license, distilled from Muse Spark and optimized for always-on local agent workflows: 128K+ context, quantized variants and ",
-        "ru": "10 августа Meta Superintelligence Labs (возглавляемая Александром Вангом) выпустила Muse Glimmer — плотную 30-миллиардную мультимодальную (с visual-входом) модель под чистой лицензией Apache 2.0, дистиллированную из Muse Spark и оптимизированную для «всегда включённых» локальных агентных workflow: к"
-      }
-    },
     "meta-muse-small-business": {
       "last_date": "2026-09-30",
       "summary": {
@@ -619,10 +612,10 @@
       }
     },
     "mistral-large-4-le-chonk": {
-      "last_date": "2026-10-07",
+      "last_date": "2026-10-11",
       "summary": {
-        "en": "Mistral ships a preview of Large 4 (\"Le chonk\", 1T-param MoE); open weights promised for October 27.",
-        "ru": "Mistral выпускает превью Large 4 («Le chonk», 1 трлн парам. MoE), открытые веса обещаны на 27 октября."
+        "ru": "Mistral выпускает превью Large 4 («Le chonk», 7 окт); к 11 окт независимые бенчмарки (Vals Index, apidog Terminal-Bench, eesel.ai) показывают отставание от заявлений Mistral и от конкурентов (Kimi K3, GLM-5.3, Claude Opus 5.5).",
+        "en": "Mistral ships a Large 4 preview (\"Le chonk\", Oct 7); by Oct 11 independent benchmarks (Vals Index, apidog's Terminal-Bench, eesel.ai) show it trailing Mistral's own claims and rivals (Kimi K3, GLM-5.3, Claude Opus 5.5)."
       }
     },
     "mistral-mozilla-firefox-smart-window": {
@@ -746,13 +739,6 @@
       "summary": {
         "en": "OpenAI adds support for multiple Gmail/Calendar/Contacts accounts in ChatGPT and Codex",
         "ru": "OpenAI добавляет поддержку нескольких аккаунтов Gmail/Calendar/Contacts в ChatGPT и Codex"
-      }
-    },
-    "openai-chatgpt-reservations-commerce": {
-      "last_date": "2026-08-11",
-      "summary": {
-        "en": "On August 10, OpenAI added restaurant booking to ChatGPT through partnerships with OpenTable (available worldwide), Resy (US), and Yelp (US and Canada, plus waitlists): a user describes a city, time, party size, and cuisine or atmosphere preferences, and ChatGPT surfaces real available slots and com",
-        "ru": "10 августа OpenAI включила в ChatGPT бронирование столиков через партнёрство с OpenTable (доступно по всему миру), Resy (США) и Yelp (США и Канада, плюс лист ожидания): пользователь описывает город, время, число гостей и предпочтения по кухне или атмосфере, а ChatGPT показывает реально доступные сло"
       }
     },
     "openai-chatgpt-tryon-shopping": {
@@ -1003,6 +989,13 @@
         "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
         "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
       }
+    },
+    "openai-gpt6-intelligent-ui": {
+      "last_date": "2026-10-11",
+      "summary": {
+        "ru": "OpenAI выкатывает Intelligent UI — ChatGPT сам выбирает между обычным текстом и интерактивным интерфейсом (графики, кнопки, формы) в чат-режиме; платные тарифы получили фичу с GPT-6 Sol 7 октября, бесплатные — с GPT-6 Luna 8 октября.",
+        "en": "OpenAI rolls out Intelligent UI — ChatGPT itself chooses between plain text and an interactive interface (charts, buttons, forms) in chat mode; paid tiers got it with GPT-6 Sol on Oct 7, free tiers with GPT-6 Luna on Oct 8."
+      }
     }
   },
   "seen_urls": {
@@ -1113,11 +1106,9 @@
     "https://openrouter.ai/stealth": "2026-08-23",
     "https://openrouter.ai/z-ai/glm-5.3-flash": "2026-08-30",
     "https://pasqualepillitteri.it/en/news/3135/codex-appshots-command-command-mac": "2026-08-19",
-    "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model": "2026-08-11",
     "https://research.meta.ai/blog/introducing-muse-spark-1-3": "2026-09-03",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
     "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html": "2026-09-07",
-    "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/": "2026-08-11",
     "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/": "2026-08-14",
     "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro/": "2026-08-17",
     "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/": "2026-08-17",
@@ -1129,8 +1120,6 @@
     "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/": "2026-08-23",
     "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/": "2026-08-26",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
-    "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/": "2026-08-11",
-    "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/": "2026-08-11",
     "https://simonwillison.net/2026/Oct/1/matthew-green/": "2026-10-03",
     "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/": "2026-10-04",
     "https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/": "2026-10-06",
@@ -1155,7 +1144,6 @@
     "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/": "2026-08-22",
     "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
     "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications": "2026-08-15",
-    "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content": "2026-08-11",
     "https://support.claude.com/en/articles/16893491-get-started-with-smart-reports": "2026-09-12",
     "https://swarmtraces.org/": "2026-09-28",
     "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/": "2026-08-13",
@@ -1181,7 +1169,6 @@
     "https://thezvi.substack.com/p/anthropic-risk-report-august-2026": "2026-08-20",
     "https://thezvi.substack.com/p/gpt-6-astra-can-do-ambitious-things": "2026-09-13",
     "https://thezvi.substack.com/p/the-ai-preference-cascade-reaches": "2026-10-06",
-    "https://thezvi.substack.com/p/the-three-ai-pills": "2026-08-11",
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
     "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30",
     "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
@@ -1314,7 +1301,6 @@
     "https://x.ai/news/grok-build-memory": "2026-09-18",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "https://x.ai/news/introducing-grok-bot": "2026-08-12",
-    "https://x.com/ChatGPT/status/2086852819215090168": "2026-08-11",
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
     "https://x.com/OpenAI/status/2087231350134980830": "2026-08-17",
     "https://x.com/OpenAI/status/2087996496088297746": "2026-08-16",
@@ -1405,6 +1391,9 @@
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
     "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
-    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02"
+    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
+    "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
+    "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
+    "https://www.latent.space/p/ainews-claude-haiku-55-better-than": "2026-10-11"
   }
 }

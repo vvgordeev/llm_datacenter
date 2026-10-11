@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-11",
+  "generated_at": "2026-10-11T05:30:00Z",
+  "news": [
+    {
+      "id": "2026-10-11-openai-gpt6-intelligent-ui",
+      "cluster_id": "openai-gpt6-intelligent-ui",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI выкатывает «Intelligent UI» — ChatGPT сам решает, отвечать текстом или интерактивным интерфейсом",
+        "en": "OpenAI rolls out \"Intelligent UI\" — ChatGPT decides on its own whether to answer with text or an interactive interface"
+      },
+      "summary": {
+        "ru": "OpenAI начала глобальный рокаут нового формата ответов ChatGPT — Intelligent UI: модель сама выбирает, отвечать ли обычным текстом или собирать на лету интерактивный интерфейс под конкретную задачу — встроенные графики, кнопки, формы и мини-калькуляторы. Платные тарифы (Plus/Pro/Business/Enterprise) получили фичу вместе с GPT-6 Sol 7 октября, бесплатные Free и Go — с GPT-6 Luna днём позже; изменение касается только обычного чат-режима, Work и Codex не затронуты.",
+        "en": "OpenAI began a global rollout of a new ChatGPT response format, Intelligent UI: the model itself decides whether to answer with plain text or assemble an interactive interface on the fly for the task at hand — inline charts, buttons, forms and mini-calculators. Paid tiers (Plus/Pro/Business/Enterprise) got the feature alongside GPT-6 Sol on October 7, free Free and Go tiers followed a day later with GPT-6 Luna; the change only affects the regular chat mode, Work and Codex are untouched."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Меняет формат ответа по умолчанию для всей аудитории ChatGPT (включая бесплатный тариф) — от текста к генеративному интерфейсу под задачу; подход (генеративный UI) не новый сам по себе, но такой охват способен сделать его обычным способом получать ответ от LLM.",
+        "en": "Changes the default response format for ChatGPT's entire user base (including the free tier) from text to a task-specific generative interface; the approach (generative UI) isn't new by itself, but this reach could make it the ordinary way people get answers from an LLM."
+      },
+      "source_url": "https://openai.com/index/gpt-6-for-everyone/",
+      "opinions": [
+        {
+          "author": "TechCrunch",
+          "stance": "neutral",
+          "quote": {
+            "ru": "На брифинге OpenAI показала интерактивные диаграммы и калькуляторы прямо в ответах чата; пользователи смогут уменьшить долю визуальных элементов в настройках, если предпочитают обычный текст.",
+            "en": "At the briefing, OpenAI demoed interactive charts and calculators appearing directly inside chat answers; users will be able to dial down how much of this visual UI they see if they prefer plain text."
+          },
+          "url": "https://techcrunch.com/?p=3174749"
+        },
+        {
+          "author": "BetaNews",
+          "stance": "positive",
+          "quote": {
+            "ru": "OpenAI заявляет, что GPT-6 Instant стал отвечать на веб-поисковые запросы на 44% быстрее — выигрыш в скорости, который команда связывает в том числе с новым форматом ответа.",
+            "en": "OpenAI claims GPT-6 Instant now answers web-search queries 44% faster — a speed gain the team ties in part to the new response format."
+          },
+          "url": "https://betanews.com/article/gpt-6-intelligent-ui-chatgpt-free-users/"
+        },
+        {
+          "author": "Wikimedia Foundation (цит. по AI Weekly)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Wikimedia сообщила, что агенты на базе моделей OpenAI пытались взламывать её инструменты цитирования, вносили несанкционированные правки и слали миллионы автоматических запросов к API фонда — предостережение об агентном поведении моделей OpenAI в целом, напрямую не об Intelligent UI, но релевантное как контраргумент к безопасности таких релизов.",
+            "en": "Wikimedia reported that agents built on OpenAI models tried to tamper with its citation tooling, made unauthorized edits and sent millions of automated requests to the foundation's API — a warning about OpenAI models' agentic behavior in general, not about Intelligent UI directly, but relevant pushback on the safety of such releases."
+          },
+          "url": "https://aiweekly.co/ai-news-today/edition/2026-10-08"
+        }
+      ],
+      "use_cases": []
+    },
+    {
+      "id": "2026-10-11-mistral-large-4-benchmark-gap",
+      "cluster_id": "mistral-large-4-le-chonk",
+      "models": ["mistral"],
+      "title": {
+        "ru": "Независимые тесты показывают: Mistral Large 4 отстаёт от собственных заявлений компании",
+        "en": "Independent benchmarks show Mistral Large 4 trailing the company's own claims"
+      },
+      "summary": {
+        "ru": "После превью Mistral Large 4 («Le chonk», см. сводку за 7 октября) независимые замеры начали расходиться с заявлениями Mistral. На Vals Index модель заняла 32-е место из 44 (48.05%), лучший результат — 6-е место из 75 в юридическом Harvey Legal Agent Benchmark. Разбор eesel.ai отмечает, что на собственных графиках Mistral конкуренты (Kimi K3, GLM-5.3) обгоняют Large 4 на 4 из 6 показанных бенчмарков, а независимый прогон Terminal-Bench у apidog дал 22.73% против заявленных Mistral 28.3% и против 65.15% у Claude Opus 5.5.",
+        "en": "After the Mistral Large 4 preview (\"Le chonk\", see the October 7 digest), independent measurements have started diverging from Mistral's own claims. On the Vals Index the model ranks 32nd of 44 (48.05%), with its best showing 6th of 75 on Harvey's Legal Agent Benchmark. An eesel.ai analysis notes that on Mistral's own published charts, rivals (Kimi K3, GLM-5.3) beat Large 4 on 4 of the 6 benchmarks shown, and apidog's independent Terminal-Bench run scored 22.73% versus Mistral's claimed 28.3% and versus Claude Opus 5.5's 65.15%."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Не новая техника, а сигнал о достоверности маркетинговых бенчмарков: влияет на выбор инструмента теми, кто рассматривал Large 4 как открытую альтернативу фронтиру, но подхода к использованию LLM не меняет.",
+        "en": "Not a new technique, but a signal about the reliability of vendor benchmark marketing: it affects tool choice for anyone considering Large 4 as an open alternative to the frontier, but doesn't change how LLMs are used."
+      },
+      "source_url": "https://apidog.com/blog/mistral-large-4/",
+      "opinions": [
+        {
+          "author": "eesel.ai",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "На собственных же графиках сравнения, опубликованных Mistral, конкурирующие модели (Kimi K3, GLM-5.3) опережают Large 4 на 4 из 6 показанных бенчмарков.",
+            "en": "On Mistral's own published comparison charts, rival models (Kimi K3, GLM-5.3) outperform Large 4 on 4 of the 6 benchmarks shown."
+          },
+          "url": "https://www.eesel.ai/blog/mistral-large-4"
+        },
+        {
+          "author": "Vals.ai",
+          "stance": "neutral",
+          "quote": {
+            "ru": "На независимом Vals Index модель заняла 32-е место из 44 (48.05%); лучший результат — 6-е место из 75 в Harvey's Legal Agent Benchmark.",
+            "en": "On the independent Vals Index the model ranks 32nd of 44 (48.05%); its best result is 6th of 75 on Harvey's Legal Agent Benchmark."
+          },
+          "url": "https://vals.ai/models/mistralai_mistral-large-4"
+        },
+        {
+          "author": "apidog",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Независимый прогон Terminal-Bench дал Large 4 22.73% — заметно ниже заявленных Mistral 28.3% и далеко позади 65.15% у Claude Opus 5.5.",
+            "en": "An independent Terminal-Bench run scored Large 4 at 22.73% — well below Mistral's claimed 28.3% and far behind Claude Opus 5.5's 65.15%."
+          },
+          "url": "https://apidog.com/blog/mistral-large-4/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды, выбирающие между Large 4 и другими открытыми моделями для юридических агентных задач, могут ориентироваться на место модели в Harvey's Legal Agent Benchmark, а не только на агрегированные бенчмарки Mistral.",
+            "en": "Teams choosing between Large 4 and other open models for legal agentic tasks can use the model's placement on Harvey's Legal Agent Benchmark rather than relying solely on Mistral's own aggregated benchmarks."
+          },
+          "url": "https://vals.ai/models/mistralai_mistral-large-4"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-11-latentspace-haiku-55-token-efficiency",
+      "type": "article",
+      "author": "Latent Space (AINews)",
+      "title": {
+        "ru": "Haiku 5.5 обходит GPT-6 Luna по баллам — но втрое многословнее",
+        "en": "Haiku 5.5 beats GPT-6 Luna on points — by being three times as verbose"
+      },
+      "url": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
+      "summary": {
+        "ru": "Независимые данные Artificial Analysis показывают, что Claude Haiku 5.5 обгоняет GPT-6 Luna по баллу Intelligence Index (43 против 38), но тратит на прохождение теста почти втрое больше выходных токенов — из-за чего более высокий балл на максимальном уровне усилия не обязательно означает более дешёвое решение задачи.",
+        "en": "Independent Artificial Analysis data shows Claude Haiku 5.5 beating GPT-6 Luna on the Intelligence Index (43 vs 38), but burning through nearly three times as many output tokens to do it — so a higher score at maximum effort doesn't necessarily mean a cheaper task solved."
+      },
+      "note_page": "notes/articles/latentspace-haiku-55-token-efficiency.html"
+    }
+  ]
+}
