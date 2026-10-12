@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T05:20:00Z",
+  "news": [
+    {
+      "id": "2026-10-12-anthropic-claude-dashboards-motion",
+      "cluster_id": "anthropic-claude-dashboards-motion",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic запускает Claude Dashboards и Claude Motion, а Docs/Slides/Design выходят из беты для всех",
+        "en": "Anthropic launches Claude Dashboards and Claude Motion, takes Docs/Slides/Design out of beta for everyone"
+      },
+      "summary": {
+        "ru": "8 октября Anthropic представила два новых типа артефактов в бете: Claude Dashboards превращает вопрос на естественном языке о данных компании (подключённых Redshift, BigQuery, Snowflake, Databricks, ClickHouse, Salesforce) в живую панель, которая обновляется вместе с источником и позволяет открыть запрос за любой цифрой; Claude Motion пишет редактируемый код, чтобы превратить отчёт или график в короткий анимированный ролик и экспортировать его в MP4 — без модели генерации видео. Dashboards доступен в бете на платных тарифах, Motion — только на Team/Enterprise, а Docs, Slides и Design (на них уже создано более 45 млн документов) вышли из беты и стали доступны на всех тарифах, включая бесплатный.",
+        "en": "On October 8, Anthropic introduced two new artifact types in beta: Claude Dashboards turns a plain-language question about a company's connected data (Redshift, BigQuery, Snowflake, Databricks, ClickHouse, Salesforce) into a live dashboard that refreshes as the source updates and lets users inspect the query behind any number; Claude Motion writes editable code to turn a report or chart into a short animated explainer exported as an MP4, without using a video-generation model. Dashboards is in beta on paid plans, Motion only on Team/Enterprise, while Docs, Slides, and Design — already used to create more than 45 million documents — leave beta and become available on every plan, including Free."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Расширяет Claude от генерации документов до живых BI-панелей и кодового видео — новый класс повседневных сценариев (чат → дашборд, чат → видео-объяснение), который Anthropic сразу выводит на самую широкую аудиторию, открыв Docs/Slides/Design на бесплатном тарифе; подход «чат → артефакт» не новый сам по себе, поэтому не дотягивает до смены парадигмы.",
+        "en": "Extends Claude from document generation into live BI-style dashboards and code-driven video — a new everyday-use category (chat-to-dashboard, chat-to-explainer-video) that Anthropic immediately pushes to its broadest audience by freeing Docs/Slides/Design for every plan; the underlying chat-to-artifact pattern itself isn't new, so this is a major expansion rather than a paradigm shift."
+      },
+      "source_url": "https://claude.com/resources/articles/dashboards-and-motion",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Подключить склад данных (Snowflake, BigQuery, Redshift, Databricks, ClickHouse) или Salesforce и получить живую панель метрик из обычного вопроса на естественном языке",
+            "en": "Connect a data warehouse (Snowflake, BigQuery, Redshift, Databricks, ClickHouse) or Salesforce and get a live metrics dashboard from a plain-language question"
+          },
+          "url": "https://claude.com/resources/articles/dashboards-and-motion"
+        },
+        {
+          "text": {
+            "ru": "Превратить квартальный отчёт или график в 30-секундный анимированный ролик для all-hands или борда через команду «/motion», с полностью редактируемыми текстом и таймингом",
+            "en": "Turn a quarterly report or chart into a 30-second animated explainer for an all-hands or board deck via the \"/motion\" command, with fully editable text and timing"
+          },
+          "url": "https://claude.com/resources/articles/dashboards-and-motion"
+        },
+        {
+          "text": {
+            "ru": "Совместно редактировать документы, презентации, дизайны и дашборды с Claude на бесплатном тарифе и экспортировать их в PowerPoint/PDF или Google Slides",
+            "en": "Co-edit documents, decks, designs, and dashboards with Claude on the Free plan and export them to PowerPoint/PDF or Google Slides"
+          },
+          "url": "https://claude.com/resources/articles/dashboards-and-motion"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

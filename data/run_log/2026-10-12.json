@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T05:20:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "ok", "candidates": 0, "note": "anthropic.com/news доступен напрямую (единственный из блогов моделей); новых пунктов за окно нет, последние — за 8 октября (уже учтены в прошлых прогонах), кроме Dashboards/Motion — см. ниже"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND openai.com"},
+    {"source": "google deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND blog.google"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND ai.meta.com"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND x.ai"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND mistral.ai"},
+    {"source": "deepseek news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND api-docs.deepseek.com"},
+    {"source": "anthropic WebSearch (2+ queries)", "status": "ok", "candidates": 1, "note": "нашли неучтённый запуск Claude Dashboards/Motion (8 окт, не попал в прогоны 8-11 окт); подтвердили первоисточником claude.com/resources/articles/dashboards-and-motion"},
+    {"source": "openai WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "ничего нового за 11-12 окт; GPT-6 Astra/Sol/Luna уже учтены ранее"},
+    {"source": "google WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "Gemini 4 — только слухи/прогнозы без даты; Nano Banana 2.1 (6 окт) — единственный слабый вторичный источник, не стали включать без первоисточника"},
+    {"source": "meta WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "ничего нового, только устаревшие Llama 3/прогнозы Llama 5"},
+    {"source": "xai WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "Grok 4.6/Skills — уже старые (авг-сен); Grok 5 не выпущен"},
+    {"source": "mistral WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "Mistral Large 4 уже учтена 11 окт"},
+    {"source": "deepseek WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "последний релиз V4.1-Flash — 10 сентября, ничего новее"},
+    {"source": "aggregators (smol.ai, TLDR AI, simonwillison linkblog)", "status": "blocked", "candidates": 0, "note": "прямой fetch доменов недоступен (DNS); WebSearch широким запросом ничего датированного 11-12 окт не дал"},
+    {"source": "Hacker News API / hn.algolia.com", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND hn.algolia.com; hnrss.org тоже недоступен; WebSearch site:news.ycombinator.com не сработал как фильтр"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "blocked", "candidates": 0, "note": "reddit.com недоступен напрямую; WebSearch реакций по теме дня не нашёл"},
+    {"source": "расширенный проход (LLM news/AI model release/coding agent — широкие запросы)", "status": "empty", "candidates": 0, "note": "сделан из-за <5 кандидатов; выдал только SEO-спам и устаревшие материалы"},
+    {"source": "Simon Willison (article)", "status": "ok", "candidates": 0, "note": "прямой fetch simonwillison.net заблокирован (DNS); использован git-бэкап simonwillisonblog-backup — последняя полноценная запись 9 окт и блогмарк 10 окт, обе уже опубликованы в прошлых прогонах (8 и 10 окт), новых записей нет"},
+    {"source": "Latent Space (article)", "status": "blocked", "candidates": 0, "note": "latent.space недоступен напрямую (DNS); WebSearch не нашёл выпуск AINews за 10-12 окт"},
+    {"source": "Ethan Mollick / One Useful Thing (article)", "status": "blocked", "candidates": 0, "note": "oneusefulthing.org недоступен напрямую; WebSearch не нашёл октябрьский пост"},
+    {"source": "Andrej Karpathy (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен сегодня (getaddrinfo ENOTFOUND, задокументированная нестабильность); WebSearch не нашёл октябрьских роликов"},
+    {"source": "AI Explained (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch ничего релевантного не дал"},
+    {"source": "Matt Wolfe (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch — последнее найденное видео от 3 сентября"},
+    {"source": "Nate Herk (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch ничего не дал"},
+    {"source": "Matt Pocock (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch спутал с однофамильцами"}
+  ],
+  "totals": {
+    "candidates": 1,
+    "published": 1,
+    "rejected": {
+      "уже опубликовано ранее (дубль по seen_urls)": 4,
+      "не подтверждено первоисточником / единственный слабый вторичный источник": 2,
+      "слишком старое для окна (вне 36ч/7д)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — не нашли ни одного нового релевантного видео экспертов за окно",
+    "frames": "not used — see gemini"
+  },
+  "degradation_note": "Существенная деградация окружения: прямой fetch недоступен (DNS не резолвится) для ВСЕХ доменов, кроме anthropic.com, claude.com и github.com — это более 1/3 (фактически почти все) настроенных источников. youtube.com сегодня тоже недоступен (RSS и yt-dlp). WebSearch был единственным рабочим каналом обнаружения; его результаты для конкретных дат 11-12 октября 2026 преимущественно состояли из SEO-спама, прогнозов и статей месячной/недельной давности. Единственная подтверждённая новость дня (Claude Dashboards/Motion, фактически от 8 октября) была пропущена предыдущими прогонами и найдена сейчас через перекрёстную проверку множества WebSearch-запросов с финальным подтверждением по первоисточнику claude.com. Экспертный контент (min_expert_total=5) не набран: ни один из 8 источников в config/sources.yaml не дал новых, ещё не опубликованных материалов за 7-дневное окно свежести при доступных каналах (прямой fetch блокирован, YouTube недоступен, WebSearch не индексирует настолько свежий контент)."
+}

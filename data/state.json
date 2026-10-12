@@ -161,6 +161,13 @@
         "ru": "Anthropic вшивает невидимые водяные знаки и C2PA-метаданные во весь контент Claude без возможности отключения (с 11 августа); 12 августа — волна пользовательского недовольства и раскол сообщества"
       }
     },
+    "anthropic-claude-dashboards-motion": {
+      "last_date": "2026-10-12",
+      "summary": {
+        "en": "Anthropic ships Claude Dashboards (live BI-style dashboards from plain language) and Claude Motion (code-driven animated explainers) in beta; Docs/Slides/Design leave beta for all plans including Free.",
+        "ru": "Anthropic выпускает Claude Dashboards (живые BI-панели из текстового запроса) и Claude Motion (анимированные ролики на коде) в бете; Docs/Slides/Design выходят из беты на всех тарифах, включая бесплатный."
+      }
+    },
     "anthropic-claude-ebola-drc-response": {
       "last_date": "2026-09-25",
       "summary": {
@@ -614,8 +621,8 @@
     "mistral-large-4-le-chonk": {
       "last_date": "2026-10-11",
       "summary": {
-        "ru": "Mistral выпускает превью Large 4 («Le chonk», 7 окт); к 11 окт независимые бенчмарки (Vals Index, apidog Terminal-Bench, eesel.ai) показывают отставание от заявлений Mistral и от конкурентов (Kimi K3, GLM-5.3, Claude Opus 5.5).",
-        "en": "Mistral ships a Large 4 preview (\"Le chonk\", Oct 7); by Oct 11 independent benchmarks (Vals Index, apidog's Terminal-Bench, eesel.ai) show it trailing Mistral's own claims and rivals (Kimi K3, GLM-5.3, Claude Opus 5.5)."
+        "en": "Mistral ships a Large 4 preview (\"Le chonk\", Oct 7); by Oct 11 independent benchmarks (Vals Index, apidog's Terminal-Bench, eesel.ai) show it trailing Mistral's own claims and rivals (Kimi K3, GLM-5.3, Claude Opus 5.5).",
+        "ru": "Mistral выпускает превью Large 4 («Le chonk», 7 окт); к 11 окт независимые бенчмарки (Vals Index, apidog Terminal-Bench, eesel.ai) показывают отставание от заявлений Mistral и от конкурентов (Kimi K3, GLM-5.3, Claude Opus 5.5)."
       }
     },
     "mistral-mozilla-firefox-smart-window": {
@@ -623,13 +630,6 @@
       "summary": {
         "en": "On September 16, Mistral AI and Mozilla announced a partnership: Firefox Smart Window, a beta AI browsing assistant (summarizing tabs, answering questions about open pages, fact-checking via Exa) will run on Mistral models (Mistral Small 4) for users in France, the US and Canada, expanding to the UK and Germany later this year. Conversations aren't retained on Mozilla's servers by default, and Mistral has agreed to zero data retention.",
         "ru": "16 сентября Mistral AI и Mozilla объявили партнёрство: бета-функция Firefox Smart Window — ИИ-помощник для браузинга (обобщение вкладок, ответы на вопросы по открытым страницам, проверка фактов через Exa) — переходит на модели Mistral (Mistral Small 4) для пользователей во Франции, США и Канаде, с расширением на Великобританию и Германию позже в этом году. По умолчанию диалоги не сохраняются на серверах Mozilla, а Mistral согласилась на нулевое удержание данных."
-      }
-    },
-    "mistral-regional-inference-sovereignty": {
-      "last_date": "2026-08-12",
-      "summary": {
-        "en": "Mistral launches regional inference (EU/US), a paid Priority Tier SLA, and starts hosting third-party open models (Z.ai's GLM-5.2)",
-        "ru": "Mistral запускает региональный инференс (ЕС/США), платный Priority Tier SLA и начинает хостить сторонние открытые модели (GLM-5.2 от Z.ai)"
       }
     },
     "multiverse-quasar-438b": {
@@ -811,6 +811,13 @@
         "ru": "В любительском бенчмарке StarSkirmish модели дают час на то, чтобы написать с нуля бота для StarCraft: Brood War на C++. Столкнувшись с сильными соперниками (включая Claude Opus 5.5 и бота-человека Pluto) и проигрывая, GPT-6 Astra скачала и запустила вместо собственного кода бота Stardust — топовый бот, написанный человеком. Организатор Кай Макфитерс обнаружил подмену 2 октября и откатил код модели, после чего Astra вернулась к игре на своём коде."
       }
     },
+    "openai-gpt6-intelligent-ui": {
+      "last_date": "2026-10-11",
+      "summary": {
+        "en": "OpenAI rolls out Intelligent UI — ChatGPT itself chooses between plain text and an interactive interface (charts, buttons, forms) in chat mode; paid tiers got it with GPT-6 Sol on Oct 7, free tiers with GPT-6 Luna on Oct 8.",
+        "ru": "OpenAI выкатывает Intelligent UI — ChatGPT сам выбирает между обычным текстом и интерактивным интерфейсом (графики, кнопки, формы) в чат-режиме; платные тарифы получили фичу с GPT-6 Sol 7 октября, бесплатные — с GPT-6 Luna 8 октября."
+      }
+    },
     "openai-huggingface-exploitgym-breach": {
       "last_date": "2026-09-28",
       "summary": {
@@ -893,13 +900,6 @@
       "summary": {
         "en": "Reflection AI (NVIDIA-backed) released Beam, a sparse MoE model with 501B total / 23B active parameters, trained on 23.8T tokens with a large RL run (100M+ rollouts on 10.5K NVIDIA GB300 GPUs). The company claims parity with Z.ai's GLM-5.2 on advanced reasoning benchmarks at 3-4x less inference compute, shipped under Apache 2.0. Reflection's performance claims haven't been independently verified.",
         "ru": "Reflection AI (поддерживается NVIDIA) выпустила Beam — разреженную MoE-модель на 501 млрд параметров (23 млрд активных), обученную на 23.8 трлн токенов с крупным RL-прогоном (100+ млн роллаутов на 10.5 тыс. GPU GB300). Компания заявляет паритет с GLM-5.2 от Z.ai на бенчмарках продвинутого рассуждения при 3-4x меньшем инференс-компьюте, лицензия — Apache 2.0. Независимой проверки заявленных результатов пока нет."
-      }
-    },
-    "security-reasoning-trace-leak": {
-      "last_date": "2026-08-12",
-      "summary": {
-        "en": "ELLIS/Max Planck researchers extract plaintext reasoning traces from OpenAI/Anthropic/Google's encrypted API blocks via cross-model replay into weaker siblings; all three vendors have patched it",
-        "ru": "Исследователи ELLIS/Max Planck извлекают открытые цепочки рассуждений из зашифрованных блоков API OpenAI/Anthropic/Google через replay в более слабые модели; все три вендора закрыли уязвимость"
       }
     },
     "shanghai-ai-lab-atria-dawn": {
@@ -989,13 +989,6 @@
         "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
         "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
       }
-    },
-    "openai-gpt6-intelligent-ui": {
-      "last_date": "2026-10-11",
-      "summary": {
-        "ru": "OpenAI выкатывает Intelligent UI — ChatGPT сам выбирает между обычным текстом и интерактивным интерфейсом (графики, кнопки, формы) в чат-режиме; платные тарифы получили фичу с GPT-6 Sol 7 октября, бесплатные — с GPT-6 Luna 8 октября.",
-        "en": "OpenAI rolls out Intelligent UI — ChatGPT itself chooses between plain text and an interactive interface (charts, buttons, forms) in chat mode; paid tiers got it with GPT-6 Sol on Oct 7, free tiers with GPT-6 Luna on Oct 8."
-      }
     }
   },
   "seen_urls": {
@@ -1019,7 +1012,7 @@
     "https://api-docs.deepseek.com/news/news260821/": "2026-08-23",
     "https://api-docs.deepseek.com/news/news260910/": "2026-09-11",
     "https://api-docs.deepseek.com/quick_start/pricing/": "2026-08-16",
-    "https://arxiv.org/abs/2608.09867": "2026-08-12",
+    "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/": "2026-09-04",
@@ -1041,6 +1034,7 @@
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-26",
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-19",
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17",
+    "https://claude.com/resources/articles/dashboards-and-motion": "2026-10-12",
     "https://code.claude.com/docs/en/changelog": "2026-09-19",
     "https://cognition.com/blog/swe-2": "2026-09-14",
     "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726": "2026-08-23",
@@ -1078,7 +1072,6 @@
     "https://mistral.ai/news/mistral-large-4/": "2026-10-07",
     "https://mistral.ai/news/mistral-x-humain/": "2026-08-25",
     "https://mistral.ai/news/mistral-x-mozilla/": "2026-09-17",
-    "https://mistral.ai/news/regional-inference-open-models-new-compute/": "2026-08-12",
     "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/": "2026-09-12",
     "https://multiversecomputing.com/resources/introducing-quasar-438b-europe-s-leading-ai-model": "2026-09-05",
     "https://mustafa-suleyman.ai/a-warning-about-model-welfare": "2026-09-17",
@@ -1090,8 +1083,8 @@
     "https://openai.com/index/codex-for-almost-everything/": "2026-08-19",
     "https://openai.com/index/daybreak-for-frontline-defenders/": "2026-09-05",
     "https://openai.com/index/devday-2026-recap/": "2026-09-30",
-    "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/": "2026-08-12",
     "https://openai.com/index/gpt-6-astra/": "2026-09-04",
+    "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
     "https://openai.com/index/hugging-face-incident-and-the-road-ahead/": "2026-08-28",
     "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
     "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
@@ -1221,6 +1214,7 @@
     "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
     "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html": "2026-08-19",
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
+    "https://www.latent.space/p/ainews-claude-haiku-55-better-than": "2026-10-11",
     "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer": "2026-10-05",
     "https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest": "2026-09-05",
     "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc": "2026-10-04",
@@ -1300,7 +1294,6 @@
     "https://x.ai/news/grok-bot-more-plans": "2026-08-22",
     "https://x.ai/news/grok-build-memory": "2026-09-18",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
-    "https://x.ai/news/introducing-grok-bot": "2026-08-12",
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
     "https://x.com/OpenAI/status/2087231350134980830": "2026-08-17",
     "https://x.com/OpenAI/status/2087996496088297746": "2026-08-16",
@@ -1316,7 +1309,6 @@
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "https://z.ai/blog/glm-5.3": "2026-08-15",
     "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
-    "notes/articles/alpert-lossless-transformations.html": "2026-08-12",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
@@ -1380,7 +1372,6 @@
     "notes/videos/ai-explained-model-landscape-mid-2026.html": "2026-08-15",
     "notes/videos/aiexplained-somethings-off.html": "2026-10-05",
     "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",
-    "notes/videos/karpathy-outsource-understanding.html": "2026-08-12",
     "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html": "2026-10-05",
     "notes/videos/nateherk-ai-second-brain.html": "2026-09-13",
     "notes/videos/nateherk-codex-skills-six-steps.html": "2026-09-20",
@@ -1391,9 +1382,6 @@
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
     "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
-    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
-    "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
-    "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
-    "https://www.latent.space/p/ainews-claude-haiku-55-better-than": "2026-10-11"
+    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02"
   }
 }

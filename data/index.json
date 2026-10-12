@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-12",
+      "news_count": 1,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Anthropic запускает Claude Dashboards и Claude Motion, а Docs/Slides/Design выходят из беты для всех",
+        "en": "Anthropic launches Claude Dashboards and Claude Motion, takes Docs/Slides/Design out of beta for everyone"
+      }
+    },
+    {
       "date": "2026-10-11",
       "news_count": 2,
       "expert_count": 1,
