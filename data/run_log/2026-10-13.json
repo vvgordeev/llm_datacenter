@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T05:15:41Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "ok", "candidates": 0, "note": "anthropic.com/news и claude.com/blog доступны напрямую (единственные домены моделей, не считая github.com); новых пунктов нет, последние — 8 окт (уже опубликованы в прошлых прогонах)"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND openai.com"},
+    {"source": "google deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND blog.google"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND ai.meta.com"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND x.ai"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND mistral.ai"},
+    {"source": "deepseek news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND api-docs.deepseek.com"},
+    {"source": "anthropic WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "ничего нового за 11-13 окт помимо уже опубликованного (8 окт)"},
+    {"source": "openai WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "только слухи/прогнозы о GPT-6 Astra без первоисточника и без даты в окне"},
+    {"source": "google WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "Gemini 4 — только прогнозы \"скоро\" без даты релиза"},
+    {"source": "meta WebSearch (2+ queries) + broad follow-up", "status": "ok", "candidates": 1, "note": "найден и подтверждён Muse Wonder/Muse Wonder Full (12 окт) через research.meta.ai (первоисточник, упомянут в выдаче), TechCrunch, CNBC, Artificial Analysis (X) — согласованные цифры бенчмарка (52/56 vs 48) в разных независимых выдачах; ОСТОРОЖНО: один заход WebSearch перепутал Muse Wonder с апрельским Muse Spark (задокументированный класс ошибки ИИ-пересказа) — перепроверено отдельным уточняющим запросом"},
+    {"source": "xai WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "Grok Imagine Video 1.5 Lite — даты релиза противоречат друг другу (1/6/8 окт) у разных вторичных источников, первоисточника x.ai не нашли — отклонено"},
+    {"source": "mistral WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "Mistral Large 4 уже опубликована 7 окт, новых пунктов нет"},
+    {"source": "deepseek WebSearch (2+ queries)", "status": "empty", "candidates": 0, "note": "только репортаж о раунде финансирования (не продуктовая новость)"},
+    {"source": "aggregators (smol.ai, TLDR AI)", "status": "blocked", "candidates": 0, "note": "прямой fetch недоступен (DNS)"},
+    {"source": "Hacker News API / hn.algolia.com", "status": "blocked", "candidates": 0, "note": "DNS не резолвится; curl тоже не прошёл (HTTP_CODE 000)"},
+    {"source": "reddit r/LocalLLaMA (WebSearch)", "status": "ok", "candidates": 0, "note": "нашли утверждение про \"Anthropic отключила Fable 5/Mythos 5 по приказу США\" — проверка показала, что это событие ИЮНЯ 2026, уже давно опубликованное и архивное; GummySearch-пересказ исказил дату. Отклонено как дубль/устаревшее"},
+    {"source": "расширенный проход (LLM news/AI model release/coding agent/\"AI news today\")", "status": "ok", "candidates": 1, "note": "широкий запрос \"AI news today\" вывел на Muse Wonder (единственный реальный продуктовый кандидат дня); также встретились непродуктовые темы (иски об авторских правах, чипы Maia/AMD, заявление Nadella) — не включены, не по теме продукта"},
+    {"source": "Linus Torvalds / kernel + Claude Code (проверка слуха из широкого поиска)", "status": "empty", "candidates": 0, "note": "не подтверждено ни одним источником — отклонено"},
+    {"source": "Simon Willison (article, git-бэкап simonwillisonblog-backup)", "status": "ok", "candidates": 0, "note": "последние записи — 12 окт (Python 3.15, не про LLM) и 9 окт (built-using-my-voice, про LLM, но уже опубликовано 10 окт); нового по теме LLM-подходов нет"},
+    {"source": "Latent Space (article)", "status": "blocked", "candidates": 0, "note": "latent.space недоступен напрямую; WebSearch — последний найденный выпуск AINews за 23-24 сентября, октябрьского не нашли"},
+    {"source": "Ethan Mollick / One Useful Thing (article)", "status": "blocked", "candidates": 0, "note": "oneusefulthing.org недоступен напрямую; WebSearch октябрьского поста не нашёл"},
+    {"source": "Andrej Karpathy (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен (getaddrinfo ENOTFOUND), WebSearch октябрьских видео не нашёл"},
+    {"source": "AI Explained (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch ничего релевантного не дал"},
+    {"source": "Matt Wolfe (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch попал на однофамильцев"},
+    {"source": "Nate Herk (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch — последние данные за август"},
+    {"source": "Matt Pocock (video, RSS)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch — последние найденные материалы за март-апрель"}
+  ],
+  "totals": {
+    "candidates": 5,
+    "published": 1,
+    "rejected": {
+      "нет первоисточника / противоречащие даты у вторичных источников (Grok Imagine Video 1.5 Lite)": 1,
+      "устаревшее, уже опубликовано ранее под другой датой из-за ошибки ИИ-пересказа (Fable 5/Mythos 5 suspension — июнь 2026)": 1,
+      "не подтверждено ни одним источником (Torvalds/kernel/Claude Code)": 1,
+      "не продуктовая новость (финансирование DeepSeek, иски об авторских правах, чипы Maia/AMD, заявление Nadella)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — не нашли ни одного нового релевантного видео экспертов за 7-дневное окно (youtube.com недоступен, WebSearch отстаёт)",
+    "frames": "not used — see gemini"
+  },
+  "degradation_note": "Повторная и усугубившаяся деградация окружения (как и 2026-10-12): прямой fetch недоступен для ВСЕХ доменов источников, кроме anthropic.com/claude.com и github.com — это более 1/3 (фактически почти все) настроенных источников заблокированы на уровне DNS. youtube.com сегодня тоже недоступен (RSS, WebFetch). HN API и curl к hn.algolia.com не проходят (HTTP_CODE 000). WebSearch — единственный рабочий канал обнаружения; при этом дважды встретилась документированная проблема путаницы ИИ-пересказа дат/моделей (Muse Wonder vs Muse Spark; дата приостановки Fable 5/Mythos 5) — обе перепроверены дополнительными уточняющими запросами перед принятием решения. Экспертный контент (min_expert_total=5) не набран: ни один из 8 источников не дал новых материалов за 7-дневное окно при доступных каналах (git-бэкап Simon Willison проверен, нового по теме нет; остальные либо заблокированы, либо WebSearch-индекс отстаёт)."
+}

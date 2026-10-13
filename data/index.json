@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-13",
+      "news_count": 1,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Meta выпускает Muse Wonder — модель с постоянной памятью агента поверх линейки Muse Spark",
+        "en": "Meta launches Muse Wonder, an agent model with persistent memory built on the Muse Spark line"
+      }
+    },
+    {
       "date": "2026-10-12",
       "news_count": 1,
       "expert_count": 0,

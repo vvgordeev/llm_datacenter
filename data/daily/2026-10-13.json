@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T05:15:41Z",
+  "news": [
+    {
+      "id": "2026-10-13-meta-muse-wonder",
+      "cluster_id": "meta-muse-wonder-frontier-model",
+      "models": ["meta"],
+      "title": {
+        "ru": "Meta выпускает Muse Wonder — модель с постоянной памятью агента поверх линейки Muse Spark",
+        "en": "Meta launches Muse Wonder, an agent model with persistent memory built on the Muse Spark line"
+      },
+      "summary": {
+        "ru": "Meta Superintelligence Labs 12 октября выпустила Muse Wonder и Muse Wonder Full — агентные модели с контекстом 1 млн токенов и двумя новыми функциями: Active Memory (память между разными беседами) и Active Focus (модель сама доводит задачу до цели и уточняет у пользователя только важные решения). По индексу Artificial Analysis Intelligence Index модели набрали 52 и 56 баллов (режим max reasoning) против 48 у предыдущей Muse Spark 1.3.",
+        "en": "Meta Superintelligence Labs released Muse Wonder and Muse Wonder Full on October 12, agent-oriented models with a 1M-token context window and two new capabilities: Active Memory (keeps context across separate conversations) and Active Focus (keeps working toward a goal and checks in with the user only before important actions). On Artificial Analysis's Intelligence Index the models scored 52 and 56 at max reasoning effort, up from 48 for the earlier Muse Spark 1.3."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметный прирост по независимому бенчмарку и новый подход к постоянной памяти агента, но это развитие уже известных агентных паттернов, а не новый класс сценариев; независимые рейтинги по-прежнему ставят модель позади лидеров (Claude Opus 5.5 и др.).",
+        "en": "A real benchmark jump and a new take on persistent agent memory, but it extends existing agentic patterns rather than opening a new class of use — and independent rankings still place it behind frontier leaders like Claude Opus 5.5."
+      },
+      "source_url": "https://research.meta.ai/blog/muse-wonder",
+      "opinions": [],
+      "use_cases": []
+    }
+  ],
+  "expert_content": []
+}
