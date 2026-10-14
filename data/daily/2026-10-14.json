@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T05:13:19Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-10-14-anthropic-scion",
+      "type": "article",
+      "author": "Anthropic Engineering",
+      "title": {
+        "ru": "Anthropic переизобретает систему контроля версий: Scion вместо git",
+        "en": "Redesigning source control at Anthropic: Scion replaces git"
+      },
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "summary": {
+        "ru": "Anthropic описывает, как агентный темп разработки с Claude увеличил число мёрджей в монорепозиторий с ~2500 в день в мае 2026 до более 30 000 к сентябрю, сделав git узким местом. Команда из семи человек за пять месяцев построила Scion — собственную систему контроля версий с клиент-серверной асимметрией и постоянным онлайн-доступом вместо децентрализованной модели git — и перевела на неё монорепозиторий, при этом сам Claude переписал прототип конвейера миграции и нашёл алгоритмические оптимизации.",
+        "en": "Anthropic describes how agentic development with Claude pushed merges into its monorepo from roughly 2,500/day in May 2026 to over 30,000/day by September, turning git into a bottleneck. A seven-person team spent five months building Scion, an in-house version control system built around always-online clients and client-server asymmetry instead of git's decentralized model, and migrated the monorepo onto it — with Claude itself rewriting the migration pipeline prototype and finding algorithmic optimizations along the way."
+      },
+      "note_page": "notes/articles/redesigning-source-control-at-anthropic.html"
+    }
+  ]
+}

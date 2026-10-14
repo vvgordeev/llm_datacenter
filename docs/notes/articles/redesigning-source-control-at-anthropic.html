@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Anthropic переизобретает систему контроля версий — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Anthropic Engineering · 2026-10-13</span>
+      <span data-lang="en">Article digest · Anthropic Engineering · 2026-10-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Переизобретая систему контроля версий в Anthropic: как Scion заменил git</span>
+      <span data-lang="en">Redesigning source control at Anthropic: how Scion replaced git</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.anthropic.com/engineering/redesigning-source-control" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Статья инженерной команды Anthropic описывает, как собственное же использование Claude для написания кода довело git до предела. Число мёрджей в единый монорепозиторий выросло примерно с 2500 в день в мае 2026 года до более 30 000 в день к сентябрю — агенты стали почти всеми клиентами системы контроля версий. Децентрализованная, офлайн-ориентированная модель git плохо подходит для такой нагрузки: история основной ветки разрослась почти до 100 ГБ, а CI совершал около 25 миллионов чекаутов в день. Сотни git-зеркал, «посевных» копий репозитория, мелких и частичных клонов какое-то время компенсировали нагрузку, но с ростом объёма мёрджей становились всё труднее в эксплуатации.</span>
+      <span data-lang="en">The Anthropic engineering team's post describes how the company's own use of Claude for writing code pushed git to its limits. Merges into the single monorepo grew from roughly 2,500 per day in May 2026 to over 30,000 per day by September — agents became nearly all of version control's clients. Git's decentralized, offline-first design is a poor fit for that load: the main branch's history grew to nearly 100 GB, and CI ran about 25 million checkouts a day. Hundreds of git mirrors, repository seeds, and shallow or sparse clones compensated for a while, but became harder to operate as merge volume kept climbing.</span>
+    </p>
+
+    <h2><span data-lang="ru">Scion: клиент-серверная асимметрия вместо децентрализации</span><span data-lang="en">Scion: client-server asymmetry instead of decentralization</span></h2>
+    <p>
+      <span data-lang="ru">Вместо того чтобы и дальше подпирать git, команда из семи человек за пять месяцев построила с нуля Scion — собственную систему контроля версий — вместе с системой код-ревью Antique, поиском по коду и IAM-слоем для доступа к репозиторию, и полностью перевела на неё монорепозиторий. Ключевой принцип Scion: раз агенты и CI-задачи всегда онлайн, клиенту не нужна полная копия репозитория — он запрашивает данные по требованию. Сервер хранит всю историю, blame и операции слияния; клиент держит только ограниченный локальный кеш и рабочие файлы. Запросы к системе контроля версий устроены как API, поэтому многим CI-задачам вообще не нужен локальный репозиторий. Коммиты, ребейзы и слияния выполняются на сервере без блокировок, а их стоимость масштабируется с размером изменения, а не с размером всего репозитория — в отличие от git, где операции неизбежно затрагивают полную историю.</span>
+      <span data-lang="en">Rather than keep propping up git, a seven-person team spent five months building Scion from scratch — an in-house version control system — along with Antique (code review), code search, and an IAM layer for repository access, and fully migrated the monorepo onto it. Scion's core principle: since agents and CI jobs are always online, a client doesn't need a full copy of the repository — it fetches data on demand. The server holds all history, blame, and merge operations; the client keeps only a bounded local cache and working files. Source-control queries are exposed as APIs, so many CI jobs need no local repository at all. Commits, rebases, and merges happen server-side without locking, and their cost scales with the size of the change rather than the size of the whole repository — unlike git, where operations inevitably touch the full history.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Технически ядро системы — «ченджсет» (changeset) в журнале предзаписи: он хранит изменённые файлы относительно первого родителя через content-addressed указатели на блобы и создаётся на сервере без координации между узлами. Перемещение ссылки (ref) — это отдельная compare-and-swap операция над одной строкой в Spanner. Производные структуры — blame, история по пути, graph-индексы для коммитов — вычисляются рекурсивно от родительских значений через единый общий механизм, который можно считать и лениво, и заранее, не затрагивая клиентов при изменении внутренней реализации. Архитектура разделена на три уровня: scion-daemon на каждом узле, региональный scion-cache и авторитетный scion-server поверх Spanner и облачного хранилища — с одинаковым RPC-интерфейсом на всех уровнях и строгой изоляцией отказов, чтобы проблема в региональном кеше не обрушила сервер выше по цепочке.</span>
+      <span data-lang="en">Technically, the system's core unit is the "changeset," stored in a write-ahead log: it records changed files relative to the first parent via content-addressed pointers to blobs, and is created server-side with no cross-node coordination. Moving a ref is a separate compare-and-swap operation on a single Spanner row. Derived structures — blame, per-path history, commit-graph skip lists — are computed recursively from parent values through one shared mechanism that can be evaluated either lazily or eagerly without touching clients when the internal implementation changes. The architecture is tiered: a per-node scion-daemon, a regional scion-cache, and an authoritative scion-server backed by Spanner and cloud storage — all sharing identical RPCs, with strict tiering so a regional cache problem can't cascade upstream.</span>
+    </p>
+
+    <h2><span data-lang="ru">Роль Claude в проекте и результат</span><span data-lang="en">Claude's role in the project, and the payoff</span></h2>
+    <p>
+      <span data-lang="ru">Авторы отдельно описывают, как сам Claude участвовал в строительстве Scion: он переписал вручную собранный прототип конвейера переноса данных из git, снизив потребление памяти в 20 раз и ускорив работу в 4 раза при сохранении всех инвариантов порядка операций; нашёл алгоритмические узкие места (например, пропущенный индекс в запросе истории предков); помогал строить герметичные симуляции, фаззинг и рейт-лимитинг для тестирования системы. «Фан»-агенты Claude, запущенные через Claude Tag, постоянно следят за телеметрией и логами каждого компонента. При этом инженеры-люди задавали архитектуру и компромиссы и нередко говорили Claude «нет», когда тот нарушал системные ограничения — состязательное код-ревью иногда вело к переусложнению, и людям приходилось направлять Claude в сторону более простых решений; ревью сместилось с построчной проверки на проверку намерения изменений.</span>
+      <span data-lang="en">The authors describe Claude's own role in building Scion in some detail: it rewrote a hand-built prototype of the git-to-Scion migration pipeline, cutting memory use 20x and running 4x faster while preserving all the ordering invariants; it found algorithmic bottlenecks (such as a missing index in an ancestry query); and it helped build hermetic simulations, fuzzing, and rate limiting for testing the system. "Superfan" Claude agents, run via Claude Tag, continuously watch each component's telemetry and logs. At the same time, human engineers set the architecture and tradeoffs and often had to tell Claude "no" when it violated system constraints — adversarial review sometimes led to over-engineering, and engineers had to steer Claude toward simpler solutions; review shifted from line-by-line checking to checking the intent of a change.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Результат: CPU- и memory-footprint Scion примерно в 200 раз меньше, чем у прежней инфраструктуры git-зеркал, CI и исследовательские чекауты занимают секунды вместо минут, а CI в целом получил около 25% дополнительной процессорной мощности — при том что традиционную глобальную очередь слияний пришлось заменить пост-мёрдж и пре-деплой автотестированием, потому что очередь не выдерживает темп слияний агентного масштаба; конфликтующие параллельные изменения теперь обычно разрешает сам Claude быстрее, чем их успевает заметить человек. Anthropic подчёркивает, что Scion — не универсальная замена git и не выпускается публично, поскольку требует полной замены цепочки инструментов разработки; вместо этого компания намерена делиться идеями, чтобы платформы вроде GitHub и GitLab могли перенять отдельные элементы модели — например, серверные RPC и более гибкие частичные чекауты.</span>
+      <span data-lang="en">The payoff: Scion's CPU and memory footprint is about 200x smaller than the previous git-mirror infrastructure, CI and research checkouts run in seconds rather than minutes, and CI overall gained roughly 25% more CPU capacity — while the traditional global merge queue had to be replaced with post-merge and pre-deploy automated testing, since a queue can't keep up with agent-scale merge rates; conflicting concurrent changes are now typically resolved by Claude itself faster than a human could even notice them. Anthropic stresses that Scion is not a general git replacement and isn't being released publicly, since adopting it requires replacing the whole development toolchain; instead, the company plans to share the underlying ideas so platforms like GitHub and GitLab can adopt pieces of the model — such as server-side RPCs and more composable sparse and shallow checkouts.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

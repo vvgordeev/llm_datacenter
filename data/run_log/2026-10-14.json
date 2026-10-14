@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T05:13:19Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "ok", "candidates": 0, "note": "anthropic.com/news доступен напрямую; новых пунктов после 8 окт нет (уже опубликованы в прошлых прогонах)"},
+    {"source": "anthropic WebSearch (2+ запроса)", "status": "empty", "candidates": 0, "note": "ничего нового за 12-14 окт сверх уже опубликованного"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND openai.com"},
+    {"source": "openai WebSearch (2+ запроса)", "status": "empty", "candidates": 0, "note": "только слухи о GPT-6 Astra без даты в окне; реальных новых пунктов нет"},
+    {"source": "google deepmind blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND blog.google"},
+    {"source": "google WebSearch (2+ запроса)", "status": "empty", "candidates": 0, "note": "Gemini 4 — только прогнозы \"скоро\", уже отражённые в прошлых прогонах (кластер google-gemini-4-post-training)"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND ai.meta.com"},
+    {"source": "meta WebSearch (2+ запроса)", "status": "empty", "candidates": 0, "note": "все найденные пункты Muse Spark/Wonder/Image уже в кластерах прошлых прогонов"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND x.ai"},
+    {"source": "xai WebSearch (2+ запроса)", "status": "empty", "candidates": 1, "note": "Grok Imagine Video 1.5 Lite (~8-9 окт) найден, но старше lookback_hours и не похож на continuation известного кластера с новым контентом — не включён"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND mistral.ai"},
+    {"source": "mistral WebSearch (2+ запроса)", "status": "empty", "candidates": 0, "note": "Mistral Large 4 \"Le Chonk\" (6 окт) уже опубликован (кластер mistral-large-4-le-chonk)"},
+    {"source": "deepseek news (direct fetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND api-docs.deepseek.com"},
+    {"source": "deepseek WebSearch (2+ запроса)", "status": "empty", "candidates": 0, "note": "только неподтверждённые слухи о раунде финансирования (не продуктовая новость)"},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "CONNECT 403 на hn.algolia.com (egress-прокси); WebSearch site:news.ycombinator.com не вернул рабочих тредов"},
+    {"source": "аггрегаторы (smol.ai, tldr.tech)", "status": "blocked", "candidates": 0, "note": "CONNECT 403 на news.smol.ai и tldr.tech; WebSearch не нашёл конкретных выпусков за 12-14 окт"},
+    {"source": "расширенный проход (LLM news <дата>, AI model release <дата>, AI coding agent update)", "status": "empty", "candidates": 0, "note": "подтверждает: реальных новых продуктовых новостей за 12-14 окт не найдено, не только узость запроса"},
+    {"source": "Simon Willison (ndjson-бэкап simonwillisonblog-backup)", "status": "ok", "candidates": 1, "note": "WebFetch simonwillison.net даёt 403 как и раньше; git clone бэкапа сработал, формат — sqlite-diffable ndjson (не плоский ndjson, как в прошлых прогонах — README репозитория обновился). Найдена статья Anthropic Engineering 'Redesigning source control' (13 окт) через его linkblog, не опубликованная ранее — включена. Остальные посты Willison за 7 дней (built-using-my-voice, claude-haiku-5-5, default-hard-budget-caps) уже в seen_urls"},
+    {"source": "Andrej Karpathy (RSS/WebFetch/yt-dlp)", "status": "blocked", "candidates": 0, "note": "youtube.com целиком недоступен: WebFetch и RSS — ENOTFOUND, yt-dlp -J — CONNECT 403 на уровне egress-прокси (подтверждено явной проверкой). WebSearch не дал конкретного видео с датой в окне"},
+    {"source": "AI Explained (RSS/WebFetch/yt-dlp)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен (см. выше); WebSearch — только общие описания канала без датированного ролика"},
+    {"source": "Matt Wolfe (RSS/WebFetch/yt-dlp)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch — нет датированного ролика за неделю"},
+    {"source": "Nate Herk (RSS/WebFetch/yt-dlp)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch — самые свежие упоминания от конца августа"},
+    {"source": "Matt Pocock (RSS/WebFetch/yt-dlp)", "status": "blocked", "candidates": 0, "note": "youtube.com недоступен; WebSearch — самые свежие датированные ролики от марта 2026"},
+    {"source": "Latent Space (WebFetch latent.space/www.latent.space/latentspace.substack.com)", "status": "blocked", "candidates": 0, "note": "все варианты домена — ENOTFOUND; WebSearch нашёл только платный пост от 10 окт (анонс митапа, без текста) и подтвердил, что статья от 5 окт уже опубликована (notes/articles/latentspace-gemini-4-argon-1m-output.html)"},
+    {"source": "Ethan Mollick / One Useful Thing (WebFetch oneusefulthing.org/www.oneusefulthing.org/oneusefulthing.substack.com)", "status": "blocked", "candidates": 0, "note": "все варианты домена — ENOTFOUND; WebSearch не нашёл конкретной статьи с датой в окне 7 дней"},
+    {"source": "reddit.com (r/LocalLLaMA, r/ClaudeAI)", "status": "blocked", "candidates": 0, "note": "WebFetch на reddit.com отклонён инструментом; WebSearch не нашёл тредов с датой в окне"}
+  ],
+  "totals": {
+    "candidates": 20,
+    "published": 1,
+    "rejected": {
+      "уже опубликовано в прошлых прогонах": 9,
+      "слухи/не продуктовая новость": 2,
+      "старше lookback без признаков continuation": 1,
+      "не найдено (пустой результат широкого поиска)": 7
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: youtube.com полностью недоступен в этом прогоне (CONNECT 403 через egress-прокси, подтверждено yt-dlp -J), ни одного кандидата-видео с реальным URL и датой в окне не найдено ни через RSS, ни через WebSearch",
+    "frames": "skipped: тот же блок youtube.com; ffmpeg и yt-dlp (pip, 2026.8.19) в PATH, GEMINI_API_KEY установлен, generativelanguage.googleapis.com доступен (проверено) — пайплайн технически готов, не хватило именно discovery видео"
+  },
+  "environment_degradation": "СИЛЬНАЯ: из 7 блогов моделей напрямую доступен только anthropic.com; весь youtube.com (WebFetch/RSS/yt-dlp) заблокирован на уровне egress-прокси; hn.algolia.com и агрегаторы (smol.ai, tldr.tech) — CONNECT 403; latent.space и oneusefulthing.org во всех вариантах домена — ENOTFOUND; reddit.com — отклонено инструментом WebFetch. Это degraded-day, а не тихий день: доля blocked/error источников значительно превышает 1/3."
+}

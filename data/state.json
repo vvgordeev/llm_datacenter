@@ -119,13 +119,6 @@
         "ru": "Claude Code 2.1.277 (18 сентября): поддержка AGENTS.md как fallback, переменная для прокси-шлюзов с единой границей egress, карта headers, UI-пометка готовой фоновой задачи, фикс зависания claude -p."
       }
     },
-    "anthropic-claude-code-auto-mode-default": {
-      "last_date": "2026-08-14",
-      "summary": {
-        "en": "Anthropic makes Auto Mode the default permission mode in Claude Code for Pro/Max/Team starting August 14; the live rollout is confirmed with new production-incident data (6.3% vs 2.4%) and an Apollo Research red-team pilot (7% miss rate)",
-        "ru": "Anthropic делает Auto Mode дефолтным режимом разрешений в Claude Code для Pro/Max/Team с 14 августа; live-раскатка подтверждена новыми данными о продакшн-инцидентах (6,3% vs 2,4%) и пилотом Apollo Research (7% пропусков на редтиме)"
-      }
-    },
     "anthropic-claude-code-mods": {
       "last_date": "2026-10-02",
       "summary": {
@@ -762,13 +755,6 @@
         "ru": "21 августа OpenAI объявила снижение цены GPT-5.6 Sol в API, кредитах Codex и ChatGPT Work более чем на 20% на ближайшие три месяца: входные токены — с $5 до $4 за миллион, выходные — с $30 до $20, кэшированные входные — с $0.50 до $0.40. После снижения Sol становится дешевле Claude Opus 5 по обоим показателям; цена подписок ChatGPT Plus/Pro/Business не меняется. Это не первое ценовое движение вокруг Sol за месяц (после тира Ultrafast от Cerebras 14 августа) — конкуренция с Anthropic и китайскими лабораториями продолжает давить на цену, а не на возможности модели."
       }
     },
-    "openai-gpt-5-6-sol-ultrafast": {
-      "last_date": "2026-08-14",
-      "summary": {
-        "en": "OpenAI and Cerebras ship Ultrafast, a 750 tok/s (up to 14x) API tier for GPT-5.6 Sol with no quality loss; limited preview access, standard Sol pricing",
-        "ru": "OpenAI и Cerebras выпускают Ultrafast — тир API на 750 tok/s (до 14x) для GPT-5.6 Sol без потери качества; ограниченный превью-доступ, цена как у обычного Sol"
-      }
-    },
     "openai-gpt-6-sol-luna": {
       "last_date": "2026-09-30",
       "summary": {
@@ -994,7 +980,6 @@
     "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/": "2026-09-02",
     "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/": "2026-09-05",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
-    "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-14",
     "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-23",
     "https://claude.com/blog/claude-code-mods": "2026-10-02",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03",
@@ -1065,7 +1050,6 @@
     "https://openai.com/index/navier-stokes-solution/": "2026-09-09",
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models/": "2026-08-20",
     "https://openai.com/index/path-to-astra/": "2026-09-03",
-    "https://openai.com/index/previewing-ultrafast/": "2026-08-14",
     "https://openai.com/index/replit/": "2026-08-20",
     "https://openrouter.ai/stealth": "2026-08-23",
     "https://openrouter.ai/z-ai/glm-5.3-flash": "2026-08-30",
@@ -1073,7 +1057,6 @@
     "https://research.meta.ai/blog/introducing-muse-spark-1-3": "2026-09-03",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
     "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html": "2026-09-07",
-    "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/": "2026-08-14",
     "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro/": "2026-08-17",
     "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/": "2026-08-17",
     "https://simonwillison.net/2026/Aug/16/qwen-38-27b/": "2026-08-17",
@@ -1122,7 +1105,6 @@
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
-    "https://thezvi.substack.com/p/ai-181-astra-goes-cyber-critical": "2026-08-14",
     "https://thezvi.substack.com/p/ai-182-pause-for-reflection": "2026-08-22",
     "https://thezvi.substack.com/p/ai-183-pre-post-mortem": "2026-08-28",
     "https://thezvi.substack.com/p/ai-184-post-post-mortem": "2026-09-05",
@@ -1178,7 +1160,6 @@
     "https://www.commonsensemedia.org/press-releases/common-sense-media-report-finds-chatgpt-and-sora-pose-risks-to-teens-despite-safety-features": "2026-08-19",
     "https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html": "2026-08-26",
     "https://www.edtechinnovationhub.com/news/openai-introduces-chatgpt-for-teens-with-study-hours-and-stronger-safeguards": "2026-08-19",
-    "https://www.elastic.co/search-labs/blog/context-engineering-vs-prompt-engineering": "2026-08-14",
     "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf": "2026-09-13",
     "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
     "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html": "2026-08-19",
@@ -1267,7 +1248,6 @@
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "https://x.com/bot/status/2092664183334846840": "2026-08-27",
     "https://x.com/claudeai/status/2086891169217122586": "2026-08-16",
-    "https://x.com/deepseek_ai/status/2087864589895798968": "2026-08-14",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
     "https://x.com/hilbertspaess/status/2097476196791709843": "2026-09-11",
     "https://x.com/oikon48/status/2090694214447468649": "2026-08-26",
@@ -1280,7 +1260,6 @@
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
     "notes/articles/breunig-fable-end-of-free-lunch.html": "2026-08-26",
-    "notes/articles/elastic-context-vs-prompt-engineering.html": "2026-08-14",
     "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
     "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
@@ -1328,14 +1307,12 @@
     "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
-    "notes/articles/willison-stealing-reasoning-traces.html": "2026-08-14",
     "notes/articles/zvi-ai-184-post-post-mortem.html": "2026-09-05",
     "notes/articles/zvi-ai-185-preference-cascade.html": "2026-09-11",
     "notes/articles/zvi-ai-188-gemini-dot-argon.html": "2026-10-05",
     "notes/articles/zvi-ai-preference-cascade-reaches-farther.html": "2026-10-06",
     "notes/articles/zvi-anthropic-risk-report-august-2026.html": "2026-08-20",
     "notes/articles/zvi-astra-ambitious-things.html": "2026-09-13",
-    "notes/articles/zvi-astra-cyber-critical.html": "2026-08-14",
     "notes/videos/ai-explained-model-landscape-mid-2026.html": "2026-08-15",
     "notes/videos/aiexplained-somethings-off.html": "2026-10-05",
     "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",
@@ -1350,6 +1327,8 @@
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
     "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
     "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
-    "https://research.meta.ai/blog/muse-wonder": "2026-10-13"
+    "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
+    "https://www.anthropic.com/engineering/redesigning-source-control": "2026-10-14",
+    "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14"
   }
 }
