@@ -429,13 +429,6 @@
         "ru": "Google DeepMind запускает DeepMind Institute — публичную площадку эссе о подготовке общества к AGI (Хассабис, Легг, Манyика), совпало с сообщениями о застопорившихся планах госнадзора за ИИ в США (16 сент)."
       }
     },
-    "google-gemini-3-7-flash": {
-      "last_date": "2026-08-15",
-      "summary": {
-        "en": "Google ships Gemini 3.7 Flash, a coding/agent workhorse with benchmark gains and half the price, just 3 weeks after 3.6 Flash",
-        "ru": "Google выпускает Gemini 3.7 Flash — рабочую лошадку для кода и агентов с ростом на бенчмарках и вдвое ниже ценой, всего через 3 недели после 3.6 Flash"
-      }
-    },
     "google-gemini-3-8-flash-cyber": {
       "last_date": "2026-09-04",
       "summary": {
@@ -934,18 +927,25 @@
         "ru": "Grok становится доступен прямо внутри XChat — защищённого мессенджера X."
       }
     },
-    "zai-glm-5-3": {
-      "last_date": "2026-08-15",
-      "summary": {
-        "en": "Z.ai ships GLM-5.3, SOTA among open-weights coding models from post-training scale, with an emergent exploit-chaining capability; weights delayed 2 weeks",
-        "ru": "Z.ai выпускает GLM-5.3 — SOTA среди открытых кодинг-моделей за счёт пост-тренинга, с возникшей способностью строить цепочки эксплойтов; веса задержаны на 2 недели"
-      }
-    },
     "meta-muse-wonder-frontier-model": {
       "last_date": "2026-10-13",
       "summary": {
         "ru": "Meta выпускает Muse Wonder/Muse Wonder Full — новую линейку агентных моделей с постоянной памятью (Active Memory/Active Focus) поверх Muse Spark.",
         "en": "Meta launches Muse Wonder/Muse Wonder Full, a new agent model line with persistent memory (Active Memory/Active Focus) built on top of Muse Spark."
+      }
+    },
+    "anthropic-managed-agents-dynamic-workflows": {
+      "last_date": "2026-10-15",
+      "summary": {
+        "ru": "Anthropic перенесла динамические workflow — ранее доступные только как research preview в Claude Code, где сценарий выполнялся на машине пользователя, — в API Managed Agents в виде публичной беты (9 октября). Теперь агент сам пишет многоэтапную программу, которая распределяет работу между другими агентами (до 1000 за всё время запуска, 64 одновременно), объединяет их результаты и продолжает разговор с пользователем, пока сервер выполняет сценарий в фоне. В собственном тесте Anthropic на кодовой базе с 70 намеренно внесёнными багами один агент находил 14-27 из них за три прогона, а workflow-запуск — 66 каждый раз.",
+        "en": "Anthropic brought dynamic workflows — until now a Claude Code research preview that ran on the user's machine — to the Managed Agents API as a public beta (October 9). An agent can now write its own multi-phase program that fans work out to other agents (up to 1,000 over a run's lifetime, 64 running at once), merges their results, and keeps talking to the user while the server executes the program in the background. In Anthropic's own test on a codebase with 70 planted bugs, a single agent found 14-27 of them across three runs; a workflow run found 66 each time."
+      }
+    },
+    "meta-muse-wonder-launch": {
+      "last_date": "2026-10-15",
+      "summary": {
+        "ru": "Meta Superintelligence Labs 12 октября выпустила Muse Wonder и более мощную Muse Wonder Full — первую серьёзную попытку Meta создать frontier-модель, нацеленную на персональные и профессиональные агентные задачи. Обе модели принимают текст, изображения, видео и аудио с окном контекста 1 млн токенов и делают акцент на двух новых функциях: Active Memory (модель сама решает, когда переносить детали между диалогами) и Active Focus (упорство в многошаговых задачах, пробование альтернативных подходов, сверка перед рискованными действиями). Wonder доступна через API Meta ($4/$20 за million токенов на вход/выход); Wonder Full — только для подписчиков Muse Code.",
+        "en": "Meta Superintelligence Labs released Muse Wonder and the more capable Muse Wonder Full on October 12 — Meta's first real attempt at a frontier-class model, aimed at personal and professional agentic tasks. Both take text, images, video and audio as input with a 1M-token context window, and headline two new features: Active Memory (the model decides on its own when to carry details across conversations) and Active Focus (persisting through multi-step tasks, trying alternate approaches, checking in before risky actions). Wonder is available via Meta's API ($4/$20 per million input/output tokens); Wonder Full is limited to Muse Code subscribers."
       }
     }
   },
@@ -974,7 +974,6 @@
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/": "2026-09-04",
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/": "2026-08-15",
     "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/": "2026-09-12",
     "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/": "2026-08-30",
     "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/": "2026-09-02",
@@ -1072,7 +1071,7 @@
     "https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/": "2026-10-06",
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
     "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08",
-    "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-10",
+    "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-15",
     "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/": "2026-09-02",
     "https://simonwillison.net/2026/Sep/11/datasette-security/": "2026-09-15",
     "https://simonwillison.net/2026/Sep/12/astra-running-routes/": "2026-09-13",
@@ -1090,7 +1089,6 @@
     "https://simonwillison.net/2026/Sep/9/blender-viewer/": "2026-09-11",
     "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/": "2026-08-22",
     "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
-    "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications": "2026-08-15",
     "https://support.claude.com/en/articles/16893491-get-started-with-smart-reports": "2026-09-12",
     "https://swarmtraces.org/": "2026-09-28",
     "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/": "2026-08-26",
@@ -1189,7 +1187,7 @@
     "https://www.nxcode.io/resources/news/claude-platform-agent-tools-ga-browser-skills-files-2026": "2026-08-26",
     "https://www.oneusefulthing.org/p/agency-and-agents": "2026-09-04",
     "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22": "2026-09-06",
-    "https://www.oneusefulthing.org/p/the-dot-and-the-swarm": "2026-10-02",
+    "https://www.oneusefulthing.org/p/the-dot-and-the-swarm": "2026-10-15",
     "https://www.oneusefulthing.org/p/the-overhang": "2026-09-23",
     "https://www.pcgamer.com/software/ai/an-openai-model-was-caught-trying-to-cheat-at-starcraft-and-of-course-it-did-it-by-stealing-a-humans-work/": "2026-10-06",
     "https://www.pcworld.com/article/3232453/i-tried-the-gemini-app-for-windows-it-wasted-my-time.html": "2026-09-12",
@@ -1207,7 +1205,6 @@
     "https://www.unite.ai/sam-altman-apologizes-as-gpt-6-astra-staged-launch-denies-paid-access/": "2026-09-05",
     "https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/googles-gemini-app-for-windows-11-uses-the-same-keyboard-shortcut-as-copilot": "2026-09-12",
     "https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2": "2026-09-19",
-    "https://www.youtube.com/watch?v=--8pJvYNcX4": "2026-08-15",
     "https://www.youtube.com/watch?v=0oXOOlqVu5M": "2026-08-22",
     "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
     "https://www.youtube.com/watch?v=7jHXoPGnA4c": "2026-09-27",
@@ -1254,7 +1251,6 @@
     "https://x.com/plotarmordev/status/2097247035099640216": "2026-09-09",
     "https://x.com/thlarsen/status/2098544270361964576": "2026-09-12",
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
-    "https://z.ai/blog/glm-5.3": "2026-08-15",
     "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
@@ -1286,7 +1282,6 @@
     "notes/articles/raschka-astra-looped-transformers.html": "2026-09-07",
     "notes/articles/rehberger-claude-code-automode-injection.html": "2026-08-29",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
-    "notes/articles/turnbull-dont-classify-hallucinate.html": "2026-08-15",
     "notes/articles/webb-galactic-compass-ai-tutor.html": "2026-08-26",
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/articles/willison-anthropic-revenue-ramp-index.html": "2026-08-26",
@@ -1313,7 +1308,6 @@
     "notes/articles/zvi-ai-preference-cascade-reaches-farther.html": "2026-10-06",
     "notes/articles/zvi-anthropic-risk-report-august-2026.html": "2026-08-20",
     "notes/articles/zvi-astra-ambitious-things.html": "2026-09-13",
-    "notes/videos/ai-explained-model-landscape-mid-2026.html": "2026-08-15",
     "notes/videos/aiexplained-somethings-off.html": "2026-10-05",
     "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",
     "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html": "2026-10-05",
@@ -1329,6 +1323,9 @@
     "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://www.anthropic.com/engineering/redesigning-source-control": "2026-10-14",
-    "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14"
+    "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
+    "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
+    "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/": "2026-10-15",
+    "https://vanja.io/managed-agents-dynamic-workflows/": "2026-10-15"
   }
 }

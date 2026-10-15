@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: динамические workflow переезжают на сервер — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · vanja.io · 2026-10-09</span>
+      <span data-lang="en">Article digest · vanja.io · 2026-10-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Динамические workflow переезжают на сервер: что меняется, когда Claude сам планирует мультиагентный прогон</span>
+      <span data-lang="en">Dynamic workflows move to the server: what changes when Claude plans a multi-agent run itself</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://vanja.io/managed-agents-dynamic-workflows/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Статья разбирает фичу, которая в тот же день, 9 октября, вышла в публичную бету в Claude Managed Agents — хостинговом API Anthropic для долгоживущих агентов. Идея та же, что и в «динамических workflow» Claude Code, запущенных ещё в мае: агент сам пишет программу, которая распределяет работу между другими агентами, а не просто вызывает их по одному. Разница в том, где эта программа выполняется. В Claude Code скрипт запускается на машине разработчика — его можно открыть, отредактировать и перезапустить. В Managed Agents он выполняется на серверах Anthropic: агент сам решает, когда его запустить, а разработчик платит за это и задаёт бюджет на уровне сессии.</span>
+      <span data-lang="en">The article walks through a feature that went into public beta the same day, October 9, in Claude Managed Agents — Anthropic's hosted API for long-running agents. The idea is the same as Claude Code's "dynamic workflows," shipped back in May: the agent writes its own program that fans work out to other agents, rather than just calling them one at a time. The difference is where that program runs. In Claude Code the script runs on the developer's machine — you can open it, edit it, and rerun it. In Managed Agents it runs on Anthropic's servers: the agent decides on its own when to start it, and the developer pays for it and sets a budget at the session level.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как устроен прогон</span><span data-lang="en">How a run is structured</span></h2>
+    <p>
+      <span data-lang="ru">Workflow делится на фазы — именованные этапы вроде «прочитать контракты» или «свести находки». Внутри фазы программа запускает агентов параллельно (fan-out), каждый — в своём потоке сессии; результаты каждого агента возвращаются программе, а не основному агенту, и программа сама решает, что делать дальше и кому передать результат. Пока прогон выполняется в фоне, основной агент может либо продолжать разговор с пользователем, либо ждать завершения — и в любой момент может проверить статус. Разработчик следит за ходом прогона через события вида workflow_run.* в общем потоке событий сессии: создание прогона, старт и конец каждой фазы, финальный статус.</span>
+      <span data-lang="en">A workflow is divided into phases — named stages like "read the contracts" or "reconcile the findings." Within a phase, the program runs agents in parallel (fanning out), each in its own session thread; each agent's result goes back to the program rather than to the main agent, and the program itself decides what happens next and who gets the result. While the run executes in the background, the main agent can either keep talking to the user or wait — and can check on the run's status at any point. Developers follow a run's progress through workflow_run.* events on the session's shared event stream: the run being created, each phase starting and ending, the final status.</span>
+    </p>
+
+    <h2><span data-lang="ru">Чем это отличается от обычных субагентов</span><span data-lang="en">How this differs from ordinary subagents</span></h2>
+    <p>
+      <span data-lang="ru">С обычными субагентами основной агент решает, что делать дальше, после каждого отчёта: выдал задачу, прочитал результат, выбрал следующий шаг — цикл пошаговый и интерактивный. С динамическим workflow весь многоэтапный план пишется программой заранее, целиком, а основной поток освобождается и может заниматься другими вещами, пока workflow выполняется сам. Это делает workflow подходящим инструментом именно для задач, которые физически не помещаются в один диалог — например, просмотреть сотни документов, — а не для задач, где каждый следующий шаг зависит от тонкого суждения по ходу дела.</span>
+      <span data-lang="en">With ordinary subagents, the main agent decides what to do next after every report: hand out a task, read the result, pick the next step — an incremental, interactive loop. With a dynamic workflow, the whole multi-phase plan is written by the program up front, all at once, and the main thread is freed to do other things while the workflow runs on its own. That makes workflows a good fit specifically for work that doesn't physically fit into one conversation — reviewing hundreds of documents, for instance — rather than for tasks where each next step depends on fine-grained judgment as you go.</span>
+    </p>
+
+    <h2><span data-lang="ru">Лимиты, стоимость и на что обратить внимание</span><span data-lang="en">Limits, cost, and what to watch for</span></h2>
+    <p>
+      <span data-lang="ru">Конкретные цифры: не более 64 потоков работают одновременно в рамках одного прогона, не более 1000 агентов — за всё время жизни прогона, время жизни прогона по умолчанию — 24 часа, и не более 10 открытых прогонов на сессию одновременно. Токены агентов внутри workflow оплачиваются по обычным ставкам моделей и, по данным статьи, добавляется плата за каждый час работы сессии, пока прогон активен. Автор отдельно подчёркивает важный нюанс: статус «completed» у прогона не означает, что вся работа внутри него прошла успешно — часть агентов могла завершиться с ошибкой, и чтобы это узнать, нужно отдельно проверять результат каждого потока прогона, а не полагаться на общий статус.</span>
+      <span data-lang="en">The concrete numbers: at most 64 threads run at once within a single run, at most 1,000 agents over a run's entire lifetime, a default run lifetime of 24 hours, and at most 10 open runs per session at a time. Agents' tokens inside a workflow are billed at ordinary model rates, and per the article there's an added per-session-hour charge while a run is active. The author flags an important nuance: a run's "completed" status doesn't mean every piece of work inside it succeeded — some agents may have failed — and finding that out means checking each run thread's own result individually rather than trusting the overall status.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

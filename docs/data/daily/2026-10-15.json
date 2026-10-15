@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T05:21:26Z",
+  "news": [
+    {
+      "id": "2026-10-15-anthropic-managed-agents-dynamic-workflows",
+      "cluster_id": "anthropic-managed-agents-dynamic-workflows",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Managed Agents получил динамические workflow: агент сам пишет сценарий на 1000 субагентов",
+        "en": "Claude Managed Agents gets dynamic workflows: an agent can now script up to 1,000 sub-agents"
+      },
+      "summary": {
+        "ru": "Anthropic перенесла динамические workflow — ранее доступные только как research preview в Claude Code, где сценарий выполнялся на машине пользователя, — в API Managed Agents в виде публичной беты (9 октября). Теперь агент сам пишет многоэтапную программу, которая распределяет работу между другими агентами (до 1000 за всё время запуска, 64 одновременно), объединяет их результаты и продолжает разговор с пользователем, пока сервер выполняет сценарий в фоне. В собственном тесте Anthropic на кодовой базе с 70 намеренно внесёнными багами один агент находил 14-27 из них за три прогона, а workflow-запуск — 66 каждый раз.",
+        "en": "Anthropic brought dynamic workflows — until now a Claude Code research preview that ran on the user's machine — to the Managed Agents API as a public beta (October 9). An agent can now write its own multi-phase program that fans work out to other agents (up to 1,000 over a run's lifetime, 64 running at once), merges their results, and keeps talking to the user while the server executes the program in the background. In Anthropic's own test on a codebase with 70 planted bugs, a single agent found 14-27 of them across three runs; a workflow run found 66 each time."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Переводит оркестрацию мультиагентных сценариев из CLI-only research preview в общий серверный API-примитив — открывая масштабные fan-out-задачи (ревью документов, аудит кодовых баз) любому разработчику Managed Agents, а не только пользователям Claude Code — но это расширение уже существующего паттерна, а не новый подход, и ранние обзоры отмечают открытые вопросы по стоимости и надёжности.",
+        "en": "Turns multi-agent orchestration from a CLI-only research preview into a general server-side API primitive — opening large fan-out tasks (document review, codebase audits) to any Managed Agents developer, not just Claude Code users — though it's an extension of an existing pattern rather than a new one, and early coverage flags real open questions about cost and reliability."
+      },
+      "source_url": "https://platform.claude.com/docs/en/managed-agents/workflow-runs",
+      "opinions": [
+        {
+          "author": "AI Practitioner (Substack)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Автор считает, что фича в основном формализует паттерны оркестрации, которые разработчики и так уже собирали вручную — агенты, распределяющие работу и проверяющие результаты друг друга, — и даёт этому паттерну управляемый, возобновляемый дом на серверах Anthropic вместо самодельного клея из кода.",
+            "en": "Argues the feature mostly formalizes orchestration patterns developers were already assembling by hand — agents fanning out, checking each other's work, merging results — and gives that pattern a managed, resumable home on Anthropic's servers instead of bespoke glue code."
+          },
+          "url": "https://aipractitioner.substack.com/p/claude-dynamic-workflows-scaling"
+        },
+        {
+          "author": "XenoSpectrum",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Отмечает, что заявленная Anthropic цифра «до 1000 агентов за прогон» не означает, что 1000 агентов работают одновременно (параллельно выполняется лишь 64), а бенчмарк по поиску багов ничего не говорит о том, сколько целей осталось непроверенными и сколько реально стоил прогон — практическая ценность, по мнению автора, зависит именно от этих цифр, а не от сырого числа найденных багов.",
+            "en": "Points out that Anthropic's headline 1,000-agents-per-run figure doesn't mean 1,000 agents work simultaneously (only 64 run concurrently), and that the bug-finding benchmark says nothing about how many targets went uninvestigated or what each run actually cost — the practical value, the piece argues, hinges on those numbers, not the raw bug count."
+          },
+          "url": "https://xenospectrum.com/en/claude-managed-agents-dynamic-workflows/"
+        },
+        {
+          "author": "FourWeekMBA",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Описывает сравнение Anthropic «14-27 против 66 найденных багов» как собственный неконтролируемый тест компании — заявление вендора, а не независимый бенчмарк, — но при этом отмечает, что сама архитектура (агенты распределяют работу, программа объединяет результаты, основной поток свободен и продолжает разговор с пользователем) — это действительно новый способ строить то, что раньше было одним длинным диалогом с агентом.",
+            "en": "Reports Anthropic's 14-27-vs-66-bugs comparison as the company's own uncontrolled test — a vendor claim rather than an independent benchmark — while noting the underlying architecture (agents fan out, a program merges results, the primary thread stays free to keep talking to the user) is a genuinely new way to structure what used to be one long agent conversation."
+          },
+          "url": "https://fourweekmba.com/ai-claude-managed-agents-adds-workflows-of-up-to-1000-agents/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пример из документации Anthropic: агента просят найти, в каких из 300 контрактов есть пункт о смене контроля — он запускает workflow, который параллельно читает контракты на первом этапе и сверяет находки по всем документам на втором.",
+            "en": "Anthropic's own documented example: an agent asked which of 300 contracts contain a change-of-control clause starts a workflow that reads the contracts in parallel in one phase, then reconciles the findings across all of them in a second phase."
+          },
+          "url": "https://platform.claude.com/docs/en/managed-agents/workflow-runs"
+        },
+        {
+          "text": {
+            "ru": "Масштабный аудит кодовой базы: во внутреннем тесте Anthropic множество агентов параллельно проверяли кодовую базу с намеренно внесёнными багами и находили заметно больше проблем за прогон, чем один агент в одиночку.",
+            "en": "Large-scale codebase audits: Anthropic's internal test ran many agents in parallel across a planted-bug codebase, catching far more issues per run than a single agent working alone."
+          },
+          "url": "https://fourweekmba.com/ai-claude-managed-agents-adds-workflows-of-up-to-1000-agents/"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15-meta-muse-wonder-wonder-full",
+      "cluster_id": "meta-muse-wonder-launch",
+      "models": ["meta"],
+      "title": {
+        "ru": "Meta выпускает свои первые frontier-модели: Muse Wonder и Muse Wonder Full",
+        "en": "Meta launches its first frontier models: Muse Wonder and Muse Wonder Full"
+      },
+      "summary": {
+        "ru": "Meta Superintelligence Labs 12 октября выпустила Muse Wonder и более мощную Muse Wonder Full — первую серьёзную попытку Meta создать frontier-модель, нацеленную на персональные и профессиональные агентные задачи. Обе модели принимают текст, изображения, видео и аудио с окном контекста 1 млн токенов и делают акцент на двух новых функциях: Active Memory (модель сама решает, когда переносить детали между диалогами) и Active Focus (упорство в многошаговых задачах, пробование альтернативных подходов, сверка перед рискованными действиями). Wonder доступна через API Meta ($4/$20 за million токенов на вход/выход); Wonder Full — только для подписчиков Muse Code.",
+        "en": "Meta Superintelligence Labs released Muse Wonder and the more capable Muse Wonder Full on October 12 — Meta's first real attempt at a frontier-class model, aimed at personal and professional agentic tasks. Both take text, images, video and audio as input with a 1M-token context window, and headline two new features: Active Memory (the model decides on its own when to carry details across conversations) and Active Focus (persisting through multi-step tasks, trying alternate approaches, checking in before risky actions). Wonder is available via Meta's API ($4/$20 per million input/output tokens); Wonder Full is limited to Muse Code subscribers."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Реальный новый игрок среди frontier-моделей агентного класса с действительно самобытным акцентом на память/фокус, но независимые бенчмарки (Artificial Analysis: 52-56 против 58 у Claude Opus 5.5) ставят её позади лидеров по общим способностям, а баги с квотами в первый день говорят о не до конца отлаженном релизе — заметно для конкурентного ландшафта, но пока не меняет подходы к использованию LLM.",
+        "en": "A real new entrant among frontier-scale agentic models with a genuinely distinct memory/focus angle, but independent benchmarks (Artificial Analysis: 52-56 vs Claude Opus 5.5's 58) put it behind the leaders on general capability, and day-one quota bugs suggest the rollout wasn't fully baked — notable for the competitive landscape, not yet a changed approach to using LLMs."
+      },
+      "source_url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+      "opinions": [
+        {
+          "author": "Artificial Analysis",
+          "stance": "neutral",
+          "quote": {
+            "ru": "По независимому индексу Intelligence Index v4.3 Muse Wonder Full получает 56 баллов, а базовая Muse Wonder — 52 — рост на 8 баллов по сравнению с предыдущей Muse Spark 1.3, но всё ещё позади 58 баллов у Claude Opus 5.5 по тому же индексу.",
+            "en": "Independent Intelligence Index v4.3 scoring places Muse Wonder Full at 56 and the standard Muse Wonder at 52 — an 8-point jump over Meta's previous Muse Spark 1.3, but still behind Claude Opus 5.5's 58 on the same index."
+          },
+          "url": "https://artificialanalysis.ai/articles/muse-wonder"
+        },
+        {
+          "author": "braindetox",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Призывает сверять условия тестирования прежде чем доверять заявленным баллам: сравнение проводилось на собственной тестовой платформе Meta, а настройки и инструменты моделей-конкурентов могли быть выставлены не оптимально — стандартная оговорка для любых самостоятельно опубликованных вендором бенчмарков.",
+            "en": "Cautions readers to check the evaluation conditions before trusting the headline scores: Meta ran the comparisons on its own testing platform, and competing models' settings and tools may not have been optimally configured — a standard caveat for any vendor's self-reported benchmark comparisons."
+          },
+          "url": "https://braindetox.kr/en/posts/meta_muse_wonder_agent_models_release_2026.html"
+        },
+        {
+          "author": "Techno-Edge",
+          "stance": "positive",
+          "quote": {
+            "ru": "Описывает Active Memory и Active Focus как ставку Meta на практическую надёжность агентов вместо эффектных демо, указывая на собственный показатель MemoryBench у Meta — 85.6 у Wonder против 81.5 у Claude Opus 5.5 и 81.4 у GPT-6 Astra — как доказательство того, что акцент именно на память реален, даже если по общим способностям модель всё ещё отстаёт.",
+            "en": "Frames Active Memory and Active Focus as Meta prioritizing practical agent reliability over flashy demos, pointing to Meta's own MemoryBench figure of 85.6 for Wonder versus 81.5 for Claude Opus 5.5 and 81.4 for GPT-6 Astra as evidence the memory-specific push is real, even if general capability still trails."
+          },
+          "url": "https://www.techno-edge.net/article/2026/10/13/5580.html"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разработчики могут обращаться к Muse Wonder напрямую через Model API Meta для агентных и профессиональных сценариев, которым нужен длинный мультимодальный контекст (текст, изображения, видео, аудио), по цене $4/$20 за million входных/выходных токенов.",
+            "en": "Developers can call Muse Wonder directly through Meta's Model API for agentic and professional workflows that need long multimodal context (text, image, video, audio) at $4/$20 per million input/output tokens."
+          },
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        },
+        {
+          "text": {
+            "ru": "Подписчики Muse Code получают доступ к более мощной Muse Wonder Full для сложных задач по написанию кода и планированию, опирающихся на агентное использование инструментов моделью.",
+            "en": "Muse Code subscribers get access to the larger Muse Wonder Full for complex coding and planning tasks that lean on the model's agentic tool use."
+          },
+          "url": "https://letsdatascience.com/news/meta-launches-muse-wonder-and-muse-wonder-full-for-agentic-t-41113cca"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-15-willison-built-using-my-voice",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Фича для блога, собранная голосом",
+        "en": "A new feature for my blog, built using my voice"
+      },
+      "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+      "summary": {
+        "ru": "Уиллисон собрал страницу с указателем своих рассылок почти целиком голосом — через голосовой режим ChatGPT Codex, пока готовил ужин. Конспект разбирает сам паттерн: голос снимает узкое место на этапе формулирования намерения и реакции на код агента, а не печати как таковой — и честно называет контекст, в котором это сработало (личный проект, невысокие ставки).",
+        "en": "Willison built a newsletters-index page for his blog almost entirely by voice — using ChatGPT Codex's voice mode while cooking dinner. The note unpacks the pattern itself: voice removes the bottleneck at the intent-stating and reacting-to-the-agent stage, not typing per se — and is upfront about the low-stakes, personal-project context where it worked."
+      },
+      "note_page": "notes/articles/built-using-my-voice.html"
+    },
+    {
+      "id": "2026-10-15-vanja-dynamic-workflows-managed-agents",
+      "type": "article",
+      "author": "vanja.io",
+      "title": {
+        "ru": "Динамические workflow переезжают на сервер",
+        "en": "Dynamic Workflows Move to the Server"
+      },
+      "url": "https://vanja.io/managed-agents-dynamic-workflows/",
+      "summary": {
+        "ru": "Технический разбор того же релиза, что и в сегодняшней новости об Anthropic Managed Agents: как устроен прогон workflow по фазам и потокам, чем это отличается от обычных субагентов, какие у фичи конкретные лимиты и в чём подвох статуса «completed».",
+        "en": "A technical breakdown of the same release as today's Anthropic Managed Agents news: how a workflow run is structured into phases and threads, how it differs from ordinary subagents, the feature's concrete limits, and the catch in its 'completed' status."
+      },
+      "note_page": "notes/articles/dynamic-workflows-move-to-the-server.html"
+    },
+    {
+      "id": "2026-10-15-mollick-the-dot-and-the-swarm",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "Точка и рой",
+        "en": "The Dot and the Swarm"
+      },
+      "url": "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
+      "summary": {
+        "ru": "Отталкиваясь от демо OpenAI с тысячами агентов-«точек», Моллик утверждает: большая часть человеческого менеджмента решает проблемы, специфичные для людей (эго, мотивация, политика), а не саму задачу координации — и перенос этих практик на рои агентов, скорее всего, решает не ту проблему.",
+        "en": "Starting from OpenAI's demo of thousands of agent 'dots,' Mollick argues most human management solves problems specific to being human (ego, motivation, politics) rather than coordination itself — and porting those practices onto agent swarms is likely solving the wrong problem."
+      },
+      "note_page": "notes/articles/the-dot-and-the-swarm.html"
+    }
+  ]
+}

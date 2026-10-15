@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: точка и рой — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Ethan Mollick, One Useful Thing · 2026-10-01</span>
+      <span data-lang="en">Article digest · Ethan Mollick, One Useful Thing · 2026-10-01</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Точка и рой: почему рою агентов может понадобиться своя модель управления</span>
+      <span data-lang="en">The dot and the swarm: why agent swarms may need their own kind of management</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.oneusefulthing.org/p/the-dot-and-the-swarm" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Поводом для эссе Итана Моллика стала демонстрация OpenAI под названием «dots»: рой из, по сообщениям, тысяч агентов совместно атакует одну сложную математическую задачу. Моллик задаётся вопросом, который редко звучит в разговорах про мультиагентные системы: что происходит с самим понятием «менеджмента», когда исполнители — не люди? Большая часть того, что организации называют управлением, по его мнению, существует не потому, что это объективно нужно для координации работы, а потому, что люди — это люди: у них есть эго, которое нужно ублажать, мотивация, которую нужно поддерживать, офисная политика, ограниченное внимание и пропускная способность коммуникации, карьерные стимулы. У агентов роя ничего из этого нет.</span>
+      <span data-lang="en">Ethan Mollick's essay is prompted by an OpenAI demo called "dots": a swarm of, reportedly, thousands of agents collaboratively attacking one hard math problem. Mollick asks a question that rarely comes up in conversations about multi-agent systems: what happens to the very idea of "management" once the workers aren't people? Most of what organizations call management, he argues, doesn't exist because coordinating work objectively requires it — it exists because people are people: they have egos that need managing, motivation that needs sustaining, office politics, limited attention and communication bandwidth, career incentives. Agents in a swarm have none of that.</span>
+    </p>
+
+    <h2><span data-lang="ru">Главный тезис</span><span data-lang="en">The core argument</span></h2>
+    <p>
+      <span data-lang="ru">Отсюда вывод: если бездумно перенести на рой агентов стандартные практики управления людьми — иерархии, статус-митинги, системы мотивации, распределение ответственности по принципу «кто кому подчиняется», — велик риск решать не ту проблему. Задача координации тысячи агентов на одной математической задаче куда ближе к задаче из области распределённых систем или оптимизации компилятора: как разбить работу на части, как проверять промежуточные результаты, как сливать выходы разных веток воедино, как обрабатывать отказы отдельных исполнителей, — чем к задаче построения оргструктуры.</span>
+      <span data-lang="en">From this follows the core claim: if you uncritically port standard human-management practices onto a swarm of agents — hierarchies, status meetings, motivation systems, reporting lines based on who answers to whom — you risk solving the wrong problem. Coordinating a thousand agents on one math problem looks a lot more like a distributed-systems or compiler-optimization problem — how to decompose the work, how to verify intermediate results, how to merge outputs from different branches, how to handle a failed worker — than like building an org chart.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что из этого следует для практики</span><span data-lang="en">What this means in practice</span></h2>
+    <p>
+      <span data-lang="ru">Моллик не утверждает, что рою агентов вообще не нужна структура — наоборот, координация явно необходима. Его тезис тоньше: конкретные формы человеческого менеджмента несут в себе множество скрытых допущений о природе исполнителей, и бездумный перенос этих форм на агентов, скорее всего, притащит с собой допущения, которые агентам попросту не подходят. Это прямо касается и свежих инженерных решений вроде server-side «динамических workflow», которые недавно получили API-агенты Anthropic: там координация роя тоже написана не как организационная схема с начальниками, а как программа — с фазами, параллельным выполнением и объединением результатов, то есть именно в духе того «инженерного», а не «управленческого» подхода, о котором пишет Моллик.</span>
+      <span data-lang="en">Mollick isn't claiming a swarm of agents needs no structure at all — coordination is clearly necessary. His point is subtler: specific forms of human management carry a lot of hidden assumptions about the nature of the workers involved, and uncritically porting those forms onto agents will likely drag those unfitting assumptions along with them. This connects directly to recent engineering moves like the server-side "dynamic workflows" Anthropic's API agents just gained: there too, swarm coordination is written not as an org chart with managers, but as a program — with phases, parallel execution, and merged results — exactly the "engineering," not "management," framing Mollick is arguing for.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

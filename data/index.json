@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-15",
+      "news_count": 2,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Claude Managed Agents получил динамические workflow: агент сам пишет сценарий на 1000 субагентов",
+        "en": "Claude Managed Agents gets dynamic workflows: an agent can now script up to 1,000 sub-agents"
+      }
+    },
+    {
       "date": "2026-10-14",
       "news_count": 0,
       "expert_count": 1,

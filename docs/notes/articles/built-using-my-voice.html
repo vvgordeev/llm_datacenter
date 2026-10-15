@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: фича для блога, собранная голосом — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-10-09</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-10-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Фича для блога, собранная голосом: кодинг за готовкой ужина</span>
+      <span data-lang="en">A blog feature built by voice: coding while cooking dinner</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон выпустил для своего блога страницу «Newsletters» — указатель, объединяющий его бесплатную еженедельную рассылку в Substack и платную ежемесячную рассылку для спонсоров. Под капотом это обычная для его блога задача: модель Django, миграция, настройка админки и четыре независимых источника импорта — RSS-лента, собственный API Substack, публичный архив на GitHub и приватный репозиторий для спонсоров. Любопытна не сама фича, а то, как она была собрана: почти целиком голосом, через голосовой режим вкладки Codex в десктопном приложении ChatGPT, пока автор готовил ужин.</span>
+      <span data-lang="en">Simon Willison shipped a "Newsletters" page for his blog — an index that pulls together his free weekly Substack posts and his paid monthly sponsors-only newsletter. Under the hood it's an ordinary task for his site: a Django model, a migration, admin configuration, and four separate import paths — an RSS feed, Substack's own API, a public GitHub archive, and a private sponsors-only repo. What's notable isn't the feature itself but how it was built: almost entirely by voice, through the voice-conversation mode of the ChatGPT desktop app's Codex tab, while he was cooking dinner.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как это работало на практике</span><span data-lang="en">How it actually worked</span></h2>
+    <p>
+      <span data-lang="ru">Метод простой: Уиллисон проговаривал вслух, что хочет получить, работая против своего локального окружения разработки. Модель время от времени уточняла детали голосом же, а затем уходила вносить изменения в код — Django-модель и миграцию, конфигурацию в админке, обработку всех четырёх источников импорта, шаблоны страниц архива. Он возвращался, смотрел на получившийся diff, давал следующую порцию голосовых указаний — и так по кругу, пока фича не была готова. По сути это тот же цикл «опиши — посмотри — поправь», что и при обычной агентной разработке в терминале, только канал ввода — речь, а не клавиатура.</span>
+      <span data-lang="en">The method itself is simple: Willison talked through what he wanted out loud, working against his local development environment running in the background. The model occasionally asked clarifying questions, also by voice, then went off to modify code — the Django model and migration, the admin configuration, handling for all four import sources, the archive page templates. He'd come back, look at the resulting diff, give the next round of spoken instructions, and repeat until the feature was done. It's the same describe-review-redirect loop as ordinary agentic coding in a terminal, just with speech instead of a keyboard as the input channel.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что это меняет — и чего не меняет</span><span data-lang="en">What this changes — and what it doesn't</span></h2>
+    <p>
+      <span data-lang="ru">Смысл не в том, что голос быстрее печати вообще, а в том, что он снимает узкое место именно на этапе «управления» агентом — формулирования намерения и реакции на то, что агент уже сделал, — пока саму печать кода всё ещё выполняет модель. Для человека, который и так привык проговаривать технические задачи вслух — на созвонах, коллегам, — голосовой ввод для агента может оказаться быстрее, чем сначала записывать то же самое текстом. Руки при этом остаются свободными для совершенно не связанной с кодом задачи — в данном случае для готовки.</span>
+      <span data-lang="en">The point isn't that speaking is faster than typing in general — it's that voice removes the bottleneck specifically at the "steering" stage of agentic coding: stating intent and reacting to what the agent already produced, while the model still does the actual typing of code. For someone already comfortable describing technical tasks out loud — in calls, to colleagues — talking to an agent can be faster than writing the same thing down first. And it frees your hands for a task that has nothing to do with code — in this case, dinner.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Автор не преподносит это как универсальный рецепт «голос лучше клавиатуры». Контекст важен: руки заняты другим делом, задача — личный проект с невысокими ставками, где получить результат «в целом верный» и доработать его в следующей сессии — нормально. О том, как часто голосовые инструкции понимались неверно и приходилось переделывать, в посте ничего не говорится — то есть это демонстрация рабочего паттерна, а не измеренная оценка его надёжности для продакшен-кода с высокой ценой ошибки.</span>
+      <span data-lang="en">The author doesn't present this as a general "voice beats keyboard" recipe. Context matters: his hands were busy with something else, the task was a low-stakes personal project where landing something "roughly right" and fixing it up next session is fine. The post says nothing about how often spoken instructions were misunderstood and had to be redone — so it's a demonstration of a working pattern, not a measured verdict on its reliability for high-stakes production code.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
