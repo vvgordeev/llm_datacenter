@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T05:17:50Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-10-16-huntley-agency-verification-hooks",
+      "type": "article",
+      "author": "Geoffrey Huntley",
+      "title": {
+        "ru": "«Больше никто не должен печатать код руками. Вот что остаётся»",
+        "en": "\"Nobody should type code by hand anymore. Here's what's left.\""
+      },
+      "url": "https://ghuntley.com/agency/",
+      "summary": {
+        "ru": "Эссе-спутник к разговору с Джошем Вулфом на подкасте Agentic Engineering: автор техники Ralph описывает приём, которым заменяет статичный AGENTS.md, — pre-commit хук, проверяющий диффы агента на нарушение конвенций (например, прямые вызовы модулей логирования в обход диагностического модуля) и возвращающий агенту корректирующий промпт при провале коммита, что подняло соблюдение правила до «десять из десяти».",
+        "en": "A companion piece to a conversation with Josh Wulf on the Agentic Engineering podcast: the creator of the Ralph technique describes replacing a static AGENTS.md with a pre-commit hook that checks an agent's diffs for convention violations (e.g. direct calls to logging modules that bypass a diagnostics wrapper) and feeds a corrective prompt back to the agent on a failed commit, taking compliance to \"ten out of ten.\""
+      },
+      "note_page": "notes/articles/agency-verification-hooks-not-agents-md.html"
+    }
+  ]
+}

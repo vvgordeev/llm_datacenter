@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: nobody should type code by hand anymore — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Geoffrey Huntley · 2026-10-13</span>
+      <span data-lang="en">Article digest · Geoffrey Huntley · 2026-10-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Больше никто не должен печатать код руками. Вот что остаётся»</span>
+      <span data-lang="en">"Nobody should type code by hand anymore. Here's what's left."</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://ghuntley.com/agency/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Сам сайт ghuntley.com был недоступен из песочницы в этом прогоне (сетевая деградация окружения затронула почти все домены, кроме anthropic.com и github.com — см. run_log за 2026-10-16). Конспект построен на точной цитате и названии, которые привёл в своём блоге 13 октября Саймон Уиллисон (подтверждено независимо через бэкап его блога simonw/simonwillisonblog-backup), плюс контекст статьи — сопровождающий пост к разговору с Джошем Вулфом на подкасте Agentic Engineering, независимо подтверждённый отдельным источником. Метод изложен только в объёме процитированного фрагмента; остальные разделы эссе не проверялись и не пересказываются.</span>
+      <span data-lang="en">ghuntley.com itself was unreachable from the sandbox this run (this cycle's environment network degradation affected nearly every domain except anthropic.com and github.com — see the 2026-10-16 run_log). This digest is built from the exact quote and title Simon Willison posted on his blog on October 13 (independently confirmed via the simonw/simonwillisonblog-backup mirror), plus the article's context — a companion post to a conversation with Josh Wulf on the Agentic Engineering podcast, confirmed independently elsewhere. The method is covered only to the extent of the quoted excerpt; the rest of the essay was not verified and is not summarized here.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Джеффри Хантли — автор известной в кругах «агентного кодинга» техники Ralph (простой цикл, в котором агент перезапускается с нуля, а память переносится через файлы на диске) и один из авторов термина «loop engineering». Разобранное здесь эссе — сопроводительный пост к разговору с Джошем Вулфом на подкасте Agentic Engineering; его заголовок прямо формулирует тезис: раз написание кода руками больше не узкое место, единственное, что остаётся инженеру-человеку, — это то, что нельзя делегировать агенту целиком.</span>
+      <span data-lang="en">Geoffrey Huntley is known in agentic-coding circles for Ralph — a deliberately simple loop where the agent restarts from scratch each time and memory is carried only through files on disk — and is one of the people credited with the term "loop engineering." The essay digested here is a companion post to a conversation with Josh Wulf on the Agentic Engineering podcast; its title states the thesis directly: once typing code by hand stops being the bottleneck, whatever is left for a human engineer is whatever can't simply be handed to an agent.</span>
+    </p>
+    <h2>
+      <span data-lang="ru">Приём: не инструкция, а хук, который проверяет и чинит</span>
+      <span data-lang="en">The technique: not an instruction file, but a hook that checks and corrects</span>
+    </h2>
+    <p>
+      <span data-lang="ru">Единственный подтверждённый дословной цитатой фрагмент эссе описывает конкретную проблему и её решение. Проблема: файл с инструкциями для агента (AGENTS.md) должен описывать принятые в проекте соглашения — например, что весь код обязан идти через собственный модуль диагностики, а не обращаться к модулям логирования/мониторинга напрямую, — но по мере того как агент пишет всё больше кода, такой файл неизбежно расходится с реальностью: его можно подправить вручную, но разрыв («delta») всё равно будет накапливаться и «дрейфовать». Решение, которое приводит Хантли: вместо того чтобы полагаться на статичный файл инструкций, он пишет pre-commit хук, который проверяет git diff на прямые обращения к модулям логирования в обход диагностического модуля. Если хук находит нарушение, коммит проваливается, а агенту тут же возвращается промпт с указанием использовать диагностический модуль вместо прямого вызова. По словам автора, после этого соблюдение соглашения выросло до «десять из десяти» — то есть из разового пожелания в файле инструкций правило превращается в механическую проверку, которую нельзя обойти молча.</span>
+      <span data-lang="en">The one part of the essay confirmed by a verbatim quote describes a specific problem and its fix. The problem: an agent instructions file (AGENTS.md) is supposed to encode a project's conventions — for instance, that all code must go through an in-house diagnostics module rather than calling logging/observability modules directly — but as an agent writes more and more code, that file inevitably drifts out of sync with reality; you can patch it by hand, but the gap ("delta") keeps accumulating. Huntley's fix: instead of relying on a static instructions file, he writes a pre-commit hook that inspects the git diff for direct calls to observability modules that bypass the diagnostics module. When the hook finds a violation, it fails the commit and immediately feeds a prompt back to the agent telling it to use the diagnostics module instead. By his account, compliance then went to "ten out of ten" — turning a one-off wish stated in an instructions file into a mechanical check that can't be silently skipped.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ограничение, которое следует из самой формы приёма (а не домыслено отдельно): он имеет смысл там, где объём и темп написанного агентом кода уже сделали ручной контроль соглашений нежизнеспособным, и требует, чтобы сама проверка (хук, тест) могла быть выражена как механическое правило, а не как смысловое суждение, — то есть годится не для любых соглашений, а для тех, что можно формально детектировать по диффу.</span>
+      <span data-lang="en">The limitation follows directly from the shape of the technique itself (not inferred separately): it only makes sense once the volume and pace of agent-written code have already made manual convention-checking unworkable, and it requires the check itself (a hook, a test) to be expressible as a mechanical rule rather than a judgment call — so it fits conventions that can be formally detected from a diff, not arbitrary ones.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

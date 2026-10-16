@@ -351,10 +351,6 @@
         "ru": "Anthropic выпускает Claude Sonnet 5.5 — быстрее и дешевле за задачу при той же цене за токен, первая Sonnet-модель с киберзащитным роутером уровня Opus, ставшая моделью бесплатного тарифа claude.ai."
       }
     },
-    "anthropic-sonnet-5-pricing-permanent": {
-      "last_date": "2026-08-16",
-      "summary": "Claude Sonnet 5 introductory pricing made permanent, tokenizer inflation debate"
-    },
     "anthropic-threat-intel-sept2026": {
       "last_date": "2026-09-11",
       "summary": {
@@ -403,10 +399,6 @@
         "en": "On August 21 DeepSeek shipped DeepSeek-V4-Flash-Vision-Exp, an experimental multimodal variant of V4-Flash (a mixture-of-experts model, 13B active of 284B total parameters) with image understanding. It keeps V4-Flash's text performance while making a real jump on vision-agent benchmarks, closing in on Claude Opus 4.8 and beating it on some of them (DeepSWE, Agents' Last Exam, ZeroBench Pass@5). It's available via Chat Completions/Messages/Responses at V4-Flash pricing (images cost up to 384 tokens each), and DeepSeek opened its image Files API for free.",
         "ru": "21 августа DeepSeek выпустила DeepSeek-V4-Flash-Vision-Exp — экспериментальный мультимодальный вариант V4-Flash (MoE, 13B активных параметров из 284B) с пониманием изображений. Модель сохраняет текстовые результаты V4-Flash, но заметно продвигается на визуальных агентных бенчмарках: приближается к Claude Opus 4.8 и обгоняет его на части тестов (DeepSWE, Agents' Last Exam, ZeroBench Pass@5). Доступна через Chat Completions/Messages/Responses по цене V4-Flash (изображение — до 384 токенов), а Files API для загрузки изображений открыт бесплатно."
       }
-    },
-    "deepseek-v4-price-hike": {
-      "last_date": "2026-08-16",
-      "summary": "DeepSeek V4 peak/off-peak repricing (announced Aug14, effective Aug16)"
     },
     "google-antigravity-managed-agents-files-credentials": {
       "last_date": "2026-09-25",
@@ -659,10 +651,6 @@
         "en": "ChatGPT (desktop, Apple Silicon) gets an Apple Messages plugin: searching, reading, and sending iMessage/SMS/RCS inside ChatGPT Work and Codex, with per-message or per-conversation approval",
         "ru": "ChatGPT (desktop, Apple Silicon) получает плагин Apple Messages: поиск, чтение и отправка iMessage/SMS/RCS внутри ChatGPT Work и Codex, с подтверждением на сообщение или на беседу"
       }
-    },
-    "openai-chatgpt-computer-history": {
-      "last_date": "2026-08-16",
-      "summary": "ChatGPT Computer History: memory of Mac activity for ChatGPT/Codex"
     },
     "openai-chatgpt-drive-library": {
       "last_date": "2026-08-17",
@@ -969,7 +957,6 @@
     "https://anil.recoil.org/notes/rumour-is-the-exploit": "2026-08-29",
     "https://api-docs.deepseek.com/news/news260821/": "2026-08-23",
     "https://api-docs.deepseek.com/news/news260910/": "2026-09-11",
-    "https://api-docs.deepseek.com/quick_start/pricing/": "2026-08-16",
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
@@ -1172,7 +1159,6 @@
     "https://www.latent.space/p/astra": "2026-09-04",
     "https://www.latent.space/p/attention-interface": "2026-08-31",
     "https://www.latent.space/p/devday-2026": "2026-10-02",
-    "https://www.latent.space/p/inference-eng": "2026-08-16",
     "https://www.latent.space/p/recursive": "2026-09-17",
     "https://www.latent.space/p/rlm": "2026-10-03",
     "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent": "2026-09-07",
@@ -1241,10 +1227,8 @@
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
     "https://x.com/OpenAI/status/2087231350134980830": "2026-08-17",
-    "https://x.com/OpenAI/status/2087996496088297746": "2026-08-16",
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "https://x.com/bot/status/2092664183334846840": "2026-08-27",
-    "https://x.com/claudeai/status/2086891169217122586": "2026-08-16",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
     "https://x.com/hilbertspaess/status/2097476196791709843": "2026-09-11",
     "https://x.com/oikon48/status/2090694214447468649": "2026-08-26",
@@ -1264,7 +1248,6 @@
     "notes/articles/latentspace-ainews-astra-biggest-launch.html": "2026-09-05",
     "notes/articles/latentspace-airbnb-inside-out-ai.html": "2026-10-06",
     "notes/articles/latentspace-anandkumar-weather-foundation-model.html": "2026-09-06",
-    "notes/articles/latentspace-baseten-inference-engineering-masterclass.html": "2026-08-16",
     "notes/articles/latentspace-devday-2026-computer-use.html": "2026-10-02",
     "notes/articles/latentspace-gemini-4-argon-1m-output.html": "2026-10-05",
     "notes/articles/latentspace-harness-engineering-week.html": "2026-08-27",
@@ -1326,6 +1309,8 @@
     "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
     "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
     "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/": "2026-10-15",
-    "https://vanja.io/managed-agents-dynamic-workflows/": "2026-10-15"
+    "https://vanja.io/managed-agents-dynamic-workflows/": "2026-10-15",
+    "https://ghuntley.com/agency/": "2026-10-16",
+    "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16"
   }
 }
