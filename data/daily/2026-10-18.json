@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-18",
+  "generated_at": "2026-10-18T05:30:00Z",
+  "news": [
+    {
+      "id": "2026-10-18-deepseek-v4-1-flash-1017",
+      "cluster_id": "deepseek-v4-1-flash-beta",
+      "models": ["deepseek"],
+      "title": {
+        "ru": "DeepSeek выпустил патч V4.1-Flash-1017: быстрее и с более длинным выводом без роста цены",
+        "en": "DeepSeek ships V4.1-Flash-1017 patch: faster, longer output, same price"
+      },
+      "summary": {
+        "ru": "В субботу, 17 октября, DeepSeek тихо выпустила обновлённую сборку своей открытой модели V4.1-Flash — V4.1-Flash-1017, объявив о ней постами в X. Компания называет апдейт «парето-улучшением»: по её данным выросли оценки на агентных и кодовых бенчмарках (DeepSWE v1.1: 77.0 против 74.2; Automation-Bench: 60.5 против 54.8) и увеличилась длина полезного вывода, а цена в API осталась прежней.",
+        "en": "On Saturday, October 17, DeepSeek quietly shipped an updated build of its open V4.1-Flash model — V4.1-Flash-1017 — announcing it via posts on X. The company frames the update as a \"Pareto improvement\": it reports higher scores on agentic and coding benchmarks (DeepSWE v1.1: 77.0 vs. 74.2; Automation-Bench: 60.5 vs. 54.8) and longer usable output, with no change to API pricing."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Полезное развитие в рамках уже известного подхода (та же открытая модель, тот же API/цена) — заметно для выбора инструментов командами, которые уже используют V4.1-Flash для кодовых агентов, но не меняет парадигму.",
+        "en": "Useful development within an already-known approach (same open model, same API/price) — relevant to tool choice for teams already running V4.1-Flash for coding agents, but doesn't change the paradigm."
+      },
+      "source_url": "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Команды, уже использующие DeepSeek V4.1-Flash как дешёвую основу для кодовых агентов, получают обновление «бесплатно»: та же цена в API, но более высокий балл на агентном бенчмарке Automation-Bench и более длинные ответы — не нужно менять интеграцию или переоценивать стоимость.",
+            "en": "Teams already using DeepSeek V4.1-Flash as a low-cost backbone for coding agents get the upgrade \"for free\": same API price, but a higher Automation-Bench agentic score and longer responses — no need to change the integration or re-budget."
+          },
+          "url": "https://www.digitaltoday.co.kr/en/view/115917/deepseek-unveils-faster-lighter-v41-flash-1017"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

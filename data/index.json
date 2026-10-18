@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-18",
+      "news_count": 1,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "DeepSeek выпустил патч V4.1-Flash-1017: быстрее и с более длинным выводом без роста цены",
+        "en": "DeepSeek ships V4.1-Flash-1017 patch: faster, longer output, same price"
+      }
+    },
+    {
       "date": "2026-10-16",
       "news_count": 0,
       "expert_count": 1,

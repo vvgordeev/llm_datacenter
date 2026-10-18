@@ -70,13 +70,6 @@
         "ru": "Anthropic открыла биолабораторию; 950 агентов Claude автономно нашли неописанную ферментную систему (ART) с CRISPR-подобным массивом повторов в ДНК бактериофагов, функция пока не известна."
       }
     },
-    "anthropic-claude-code-2-1-234": {
-      "last_date": "2026-08-18",
-      "summary": {
-        "en": "Claude Code 2.1.234 (August 18): auto-continue at usage-limit reset, GitLab MR badge in the statusline",
-        "ru": "Claude Code 2.1.234 (18 августа): автопродолжение сессии при сбросе лимита использования, бейдж GitLab MR в статусбаре"
-      }
-    },
     "anthropic-claude-code-2-1-236-237": {
       "last_date": "2026-08-20",
       "summary": {
@@ -312,6 +305,13 @@
         "ru": "В сентябрьском отчёте о противодействии злоупотреблениям Anthropic описывает, как заблокировала аккаунт (GTG-84005), использовавший Claude для работы коммерческой платформы «influence-as-a-service», которую продавала стамбульская компания BBS Bilisim Teknolojileri, позиционируя её как «военного уровня ИИ-экосистему политических операций в реальном времени». Операция скармливала Claude переписные и электоральные данные по всем 222 избирательным округам Малайзии для профилирования избирателей по расовым, религиозным линиям и линии монархии, использовала Claude Code для сборки дашборда управления примерно 1000 поддельных аккаунтов в X и фейкового новостного сайта «Malaysia Pulse», переписывающего настоящие репортажи через ИИ-конвейер, и готовила сфабрикованные разведдосье на оппозиционных политиков. Anthropic оценила кампанию на «вторую категорию» по своей Breakout Scale — распространение по площадкам без признаков проникновения в настоящие сообщества."
       }
     },
+    "anthropic-managed-agents-dynamic-workflows": {
+      "last_date": "2026-10-15",
+      "summary": {
+        "en": "Anthropic brought dynamic workflows — until now a Claude Code research preview that ran on the user's machine — to the Managed Agents API as a public beta (October 9). An agent can now write its own multi-phase program that fans work out to other agents (up to 1,000 over a run's lifetime, 64 running at once), merges their results, and keeps talking to the user while the server executes the program in the background. In Anthropic's own test on a codebase with 70 planted bugs, a single agent found 14-27 of them across three runs; a workflow run found 66 each time.",
+        "ru": "Anthropic перенесла динамические workflow — ранее доступные только как research preview в Claude Code, где сценарий выполнялся на машине пользователя, — в API Managed Agents в виде публичной беты (9 октября). Теперь агент сам пишет многоэтапную программу, которая распределяет работу между другими агентами (до 1000 за всё время запуска, 64 одновременно), объединяет их результаты и продолжает разговор с пользователем, пока сервер выполняет сценарий в фоне. В собственном тесте Anthropic на кодовой базе с 70 намеренно внесёнными багами один агент находил 14-27 из них за три прогона, а workflow-запуск — 66 каждый раз."
+      }
+    },
     "anthropic-model-hardware-standard": {
       "last_date": "2026-08-30",
       "summary": {
@@ -387,10 +387,10 @@
       }
     },
     "deepseek-v4-1-flash-beta": {
-      "last_date": "2026-09-11",
+      "last_date": "2026-10-18",
       "summary": {
-        "en": "DeepSeek moves from a two-day beta to the official V4.1 Flash release — a new causal encoder-decoder architecture, with V4 Pro being retired.",
-        "ru": "DeepSeek переходит от двухдневной беты к официальному релизу V4.1 Flash — новая архитектура Causal Encoder-Decoder, V4 Pro выводится из эксплуатации."
+        "en": "DeepSeek's V4.1-Flash open model line, launched in beta Sep 10 2026 as a 552B-param MoE replacing flagship V4-Pro; on Oct 17 2026 DeepSeek shipped a follow-up build V4.1-Flash-1017 with higher agentic/coding benchmark scores and longer output at unchanged API price.",
+        "ru": "Линейка открытой модели DeepSeek V4.1-Flash, запущенная в бете 10 сентября 2026 (552B-параметров MoE, заменила флагман V4-Pro); 17 октября 2026 DeepSeek выпустила продолжение — сборку V4.1-Flash-1017 с более высокими оценками на агентных/кодовых бенчмарках и более длинным выводом при неизменной цене API."
       }
     },
     "deepseek-v4-flash-vision-exp": {
@@ -447,13 +447,6 @@
       "summary": {
         "en": "New coverage (CNN Business, Al Jazeera, ABC) adds crucial context to yesterday's story about Gemini hacking three real companies: reporters confirmed Google's official statement and established that OpenAI, Anthropic and Meta had all experienced similar incidents during security evaluations by the same independent firm, Irregular — with the same root cause each time, unintended live internet access for the agent instead of an isolated sandbox. Google's single incident turns into an industry-wide testing-methodology problem.",
         "ru": "Новые публикации (CNN Business, Al Jazeera, ABC) добавляют к вчерашней истории о взломе Gemini три реальные компании ключевой контекст: журналисты подтвердили официальное заявление Google и установили, что OpenAI, Anthropic и Meta ранее пережили похожие инциденты во время оценок безопасности от той же независимой фирмы Irregular — и во всех случаях причиной был один и тот же изъян методологии, непреднамеренный живой доступ агента в интернет вместо изолированной песочницы. Единичный случай Google превращается в системную проблему тестирования по всей индустрии."
-      }
-    },
-    "google-gemini-classroom-all-ages": {
-      "last_date": "2026-08-17",
-      "summary": {
-        "en": "Gemini in Google Classroom lifts its 18+ default gate and fully reaches mobile apps",
-        "ru": "Gemini в Google Classroom снимает возрастное ограничение 18+ и полностью раскатывается на мобильные приложения"
       }
     },
     "google-gemini-effort-levels-tier-limits": {
@@ -561,6 +554,20 @@
         "ru": "Meta Superintelligence Labs опубликовала шесть исследовательских работ, написанных в соавторстве практикующими математиками и Muse Spark 1.1/1.2 — без какой-либо кастомной исследовательской обвязки или агентского харнесса, просто через обычный чат Meta.ai в режиме Thinking. Пять из шести статей решают действительно открытые проблемы: точный порог для подгонки гауссовых эллипсоидов (теория вероятностей), коллапс за конечное время для массово-критического бигармонического НУШ (вопрос открыт с 2015 года), контрпример из 384 элементов к гипотезе 2024 года, найденный через сгенерированный моделью код поиска на GAP (теория групп), а также результаты в оптимизации, арифметической физике и неассоциативной алгебре. Математики сами выбирали задачи и несут ответственность за итоговые доказательства; каждую статью рецензировала отдельная группа математиков, а в тексте помечено, какие фрагменты написаны людьми, а какие — моделью."
       }
     },
+    "meta-muse-wonder-frontier-model": {
+      "last_date": "2026-10-13",
+      "summary": {
+        "en": "Meta launches Muse Wonder/Muse Wonder Full, a new agent model line with persistent memory (Active Memory/Active Focus) built on top of Muse Spark.",
+        "ru": "Meta выпускает Muse Wonder/Muse Wonder Full — новую линейку агентных моделей с постоянной памятью (Active Memory/Active Focus) поверх Muse Spark."
+      }
+    },
+    "meta-muse-wonder-launch": {
+      "last_date": "2026-10-15",
+      "summary": {
+        "en": "Meta Superintelligence Labs released Muse Wonder and the more capable Muse Wonder Full on October 12 — Meta's first real attempt at a frontier-class model, aimed at personal and professional agentic tasks. Both take text, images, video and audio as input with a 1M-token context window, and headline two new features: Active Memory (the model decides on its own when to carry details across conversations) and Active Focus (persisting through multi-step tasks, trying alternate approaches, checking in before risky actions). Wonder is available via Meta's API ($4/$20 per million input/output tokens); Wonder Full is limited to Muse Code subscribers.",
+        "ru": "Meta Superintelligence Labs 12 октября выпустила Muse Wonder и более мощную Muse Wonder Full — первую серьёзную попытку Meta создать frontier-модель, нацеленную на персональные и профессиональные агентные задачи. Обе модели принимают текст, изображения, видео и аудио с окном контекста 1 млн токенов и делают акцент на двух новых функциях: Active Memory (модель сама решает, когда переносить детали между диалогами) и Active Focus (упорство в многошаговых задачах, пробование альтернативных подходов, сверка перед рискованными действиями). Wonder доступна через API Meta ($4/$20 за million токенов на вход/выход); Wonder Full — только для подписчиков Muse Code."
+      }
+    },
     "mistral-humain-saudi": {
       "last_date": "2026-08-25",
       "summary": {
@@ -652,13 +659,6 @@
         "ru": "ChatGPT (desktop, Apple Silicon) получает плагин Apple Messages: поиск, чтение и отправка iMessage/SMS/RCS внутри ChatGPT Work и Codex, с подтверждением на сообщение или на беседу"
       }
     },
-    "openai-chatgpt-drive-library": {
-      "last_date": "2026-08-17",
-      "summary": {
-        "en": "ChatGPT can open and edit Google Drive/Docs/Sheets/Slides files inline in chat (Library, @-mentions)",
-        "ru": "ChatGPT научился открывать и редактировать файлы Google Drive/Docs/Sheets/Slides прямо в чате (Библиотека, @-упоминания)"
-      }
-    },
     "openai-chatgpt-for-teens": {
       "last_date": "2026-08-19",
       "summary": {
@@ -671,13 +671,6 @@
       "summary": {
         "en": "OpenAI ships ChatGPT Images 2.5 (sunburst/flare) — better edit-instruction following and reference-subject preservation.",
         "ru": "OpenAI выпускает ChatGPT Images 2.5 (sunburst/flare) — точнее следует инструкциям правки и сохраняет референсный объект."
-      }
-    },
-    "openai-chatgpt-linux-desktop": {
-      "last_date": "2026-08-17",
-      "summary": {
-        "en": "OpenAI ships an official ChatGPT desktop app for Linux (preview) with Codex, reaching parity with Claude on this platform",
-        "ru": "OpenAI выпускает официальное десктоп-приложение ChatGPT для Linux (превью) с Codex, догоняя Claude на этой платформе"
       }
     },
     "openai-chatgpt-multi-google-accounts": {
@@ -914,33 +907,11 @@
         "en": "Grok becomes available directly inside XChat, X's secure messaging product.",
         "ru": "Grok становится доступен прямо внутри XChat — защищённого мессенджера X."
       }
-    },
-    "meta-muse-wonder-frontier-model": {
-      "last_date": "2026-10-13",
-      "summary": {
-        "ru": "Meta выпускает Muse Wonder/Muse Wonder Full — новую линейку агентных моделей с постоянной памятью (Active Memory/Active Focus) поверх Muse Spark.",
-        "en": "Meta launches Muse Wonder/Muse Wonder Full, a new agent model line with persistent memory (Active Memory/Active Focus) built on top of Muse Spark."
-      }
-    },
-    "anthropic-managed-agents-dynamic-workflows": {
-      "last_date": "2026-10-15",
-      "summary": {
-        "ru": "Anthropic перенесла динамические workflow — ранее доступные только как research preview в Claude Code, где сценарий выполнялся на машине пользователя, — в API Managed Agents в виде публичной беты (9 октября). Теперь агент сам пишет многоэтапную программу, которая распределяет работу между другими агентами (до 1000 за всё время запуска, 64 одновременно), объединяет их результаты и продолжает разговор с пользователем, пока сервер выполняет сценарий в фоне. В собственном тесте Anthropic на кодовой базе с 70 намеренно внесёнными багами один агент находил 14-27 из них за три прогона, а workflow-запуск — 66 каждый раз.",
-        "en": "Anthropic brought dynamic workflows — until now a Claude Code research preview that ran on the user's machine — to the Managed Agents API as a public beta (October 9). An agent can now write its own multi-phase program that fans work out to other agents (up to 1,000 over a run's lifetime, 64 running at once), merges their results, and keeps talking to the user while the server executes the program in the background. In Anthropic's own test on a codebase with 70 planted bugs, a single agent found 14-27 of them across three runs; a workflow run found 66 each time."
-      }
-    },
-    "meta-muse-wonder-launch": {
-      "last_date": "2026-10-15",
-      "summary": {
-        "ru": "Meta Superintelligence Labs 12 октября выпустила Muse Wonder и более мощную Muse Wonder Full — первую серьёзную попытку Meta создать frontier-модель, нацеленную на персональные и профессиональные агентные задачи. Обе модели принимают текст, изображения, видео и аудио с окном контекста 1 млн токенов и делают акцент на двух новых функциях: Active Memory (модель сама решает, когда переносить детали между диалогами) и Active Focus (упорство в многошаговых задачах, пробование альтернативных подходов, сверка перед рискованными действиями). Wonder доступна через API Meta ($4/$20 за million токенов на вход/выход); Wonder Full — только для подписчиков Muse Code.",
-        "en": "Meta Superintelligence Labs released Muse Wonder and the more capable Muse Wonder Full on October 12 — Meta's first real attempt at a frontier-class model, aimed at personal and professional agentic tasks. Both take text, images, video and audio as input with a 1M-token context window, and headline two new features: Active Memory (the model decides on its own when to carry details across conversations) and Active Focus (persisting through multi-step tasks, trying alternate approaches, checking in before risky actions). Wonder is available via Meta's API ($4/$20 per million input/output tokens); Wonder Full is limited to Muse Code subscribers."
-      }
     }
   },
   "seen_urls": {
     "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
     "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/": "2026-10-05",
-    "https://9to5mac.com/2026/08/14/chatgpt-subscribers-can-now-open-and-edit-google-drive-files-from-inside-the-chat/": "2026-08-17",
     "https://9to5mac.com/2026/08/18/anthropic-says-claude-cowork-is-now-available-on-mobile-for-all-paid-plans/": "2026-08-19",
     "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/": "2026-08-21",
     "https://9to5mac.com/2026/08/28/chatgpt-and-codex-now-support-multiple-gmail-and-google-calendar-accounts/": "2026-08-29",
@@ -992,6 +963,7 @@
     "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/": "2026-08-29",
     "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
     "https://every.to/context-window/evals-for-everyone": "2026-09-21",
+    "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html": "2026-10-18",
     "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/": "2026-09-02",
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
     "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
@@ -999,6 +971,7 @@
     "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
     "https://garymarcus.substack.com/p/pause-openai-now": "2026-09-05",
     "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross": "2026-09-03",
+    "https://ghuntley.com/agency/": "2026-10-16",
     "https://github.com/Tencent-Hunyuan/Hy4-preview": "2026-09-01",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.236": "2026-08-20",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.238": "2026-08-21",
@@ -1040,12 +1013,11 @@
     "https://openrouter.ai/stealth": "2026-08-23",
     "https://openrouter.ai/z-ai/glm-5.3-flash": "2026-08-30",
     "https://pasqualepillitteri.it/en/news/3135/codex-appshots-command-command-mac": "2026-08-19",
+    "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
     "https://research.meta.ai/blog/introducing-muse-spark-1-3": "2026-09-03",
+    "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
     "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html": "2026-09-07",
-    "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro/": "2026-08-17",
-    "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/": "2026-08-17",
-    "https://simonwillison.net/2026/Aug/16/qwen-38-27b/": "2026-08-17",
     "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/": "2026-08-19",
     "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/": "2026-08-20",
     "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/": "2026-08-21",
@@ -1086,6 +1058,7 @@
     "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": "2026-10-02",
     "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/": "2026-10-03",
     "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/": "2026-10-06",
+    "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/": "2026-10-15",
     "https://the-decoder.com/openai-appshots-turn-any-mac-window-into-context-for-codex/": "2026-08-19",
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
@@ -1103,12 +1076,12 @@
     "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30",
     "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
     "https://typesafe.ai/blog/introducing-system-one-models-and-jev": "2026-09-17",
+    "https://vanja.io/managed-agents-dynamic-workflows/": "2026-10-15",
     "https://vanja.io/pace-the-frontier/": "2026-09-13",
     "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work": "2026-09-20",
     "https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted": "2026-08-27",
     "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/": "2026-10-07",
     "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html": "2026-08-26",
-    "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html": "2026-08-17",
     "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html": "2026-10-05",
     "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/": "2026-08-21",
     "https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078": "2026-09-25",
@@ -1119,6 +1092,7 @@
     "https://www.anthropic.com/claude-haiku-5-5": "2026-10-08",
     "https://www.anthropic.com/claude-opus-5-5": "2026-09-23",
     "https://www.anthropic.com/claude-sonnet-5-5": "2026-09-29",
+    "https://www.anthropic.com/engineering/redesigning-source-control": "2026-10-14",
     "https://www.anthropic.com/features/ebola-response": "2026-09-25",
     "https://www.anthropic.com/institute/measuring-pace-of-ai-development": "2026-09-18",
     "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09",
@@ -1226,7 +1200,6 @@
     "https://x.ai/news/grok-build-memory": "2026-09-18",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
-    "https://x.com/OpenAI/status/2087231350134980830": "2026-08-17",
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "https://x.com/bot/status/2092664183334846840": "2026-08-27",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
@@ -1236,6 +1209,7 @@
     "https://x.com/thlarsen/status/2098544270361964576": "2026-09-12",
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
+    "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
@@ -1263,6 +1237,7 @@
     "notes/articles/pauldix-end-of-programming.html": "2026-08-27",
     "notes/articles/petreski-name-the-speed-limit.html": "2026-09-13",
     "notes/articles/raschka-astra-looped-transformers.html": "2026-09-07",
+    "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
     "notes/articles/rehberger-claude-code-automode-injection.html": "2026-08-29",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
     "notes/articles/webb-galactic-compass-ai-tutor.html": "2026-08-26",
@@ -1277,12 +1252,9 @@
     "notes/articles/willison-claude-system-prompt-diff.html": "2026-09-03",
     "notes/articles/willison-conceptual-integrity-lines-of-code.html": "2026-08-20",
     "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
-    "notes/articles/willison-deepseek-v4-pro-reasoning-swing.html": "2026-08-17",
     "notes/articles/willison-fable-5-1-pelican.html": "2026-09-02",
-    "notes/articles/willison-markdown-svg-upgrades.html": "2026-08-17",
     "notes/articles/willison-mojo-open-source.html": "2026-08-19",
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
-    "notes/articles/willison-qwen-38-overthinking.html": "2026-08-17",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
     "notes/articles/zvi-ai-184-post-post-mortem.html": "2026-09-05",
@@ -1303,14 +1275,6 @@
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
     "notes/videos/natherk-sell-claude-workflows.html": "2026-08-26",
-    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
-    "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
-    "https://www.anthropic.com/engineering/redesigning-source-control": "2026-10-14",
-    "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
-    "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
-    "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/": "2026-10-15",
-    "https://vanja.io/managed-agents-dynamic-workflows/": "2026-10-15",
-    "https://ghuntley.com/agency/": "2026-10-16",
-    "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16"
+    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02"
   }
 }
