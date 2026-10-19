@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: ИИ массово декомпилирует игры — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (ссылка на Popcar) · 2026-10-14</span>
+      <span data-lang="en">Article digest · Simon Willison (linking to Popcar) · 2026-10-14</span>
+    </p>
+    <h1>
+      <span data-lang="ru">ИИ массово декомпилирует игры — и это одновременно круто и страшно</span>
+      <span data-lang="en">AI is mass-decompiling games — and that's both awesome and scary</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/" target="_blank" rel="noopener">
+        <span data-lang="ru">Пост Саймона Уиллисона ↗</span><span data-lang="en">Simon Willison's post ↗</span>
+      </a>
+      ·
+      <a href="https://popcar.bearblog.dev/ai-is-mass-decompiling-games-thats-both-awesome-and-scary/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал (Popcar) ↗</span><span data-lang="en">Original (Popcar) ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон сослался на пост инди-разработчика под псевдонимом Popcar о волне декомпиляции видеоигр с помощью LLM, прокатившейся осенью 2026 года. Суть явления не в новом алгоритме: сама задача «превратить бинарник или байткод игры в читаемый исходный код» давно решается классическими декомпиляторами и, в последние пару лет, экспериментальными исследовательскими системами вроде WaDec и StackSight, которые пропускают WebAssembly через LLM и статический анализ, чтобы получить читаемый C++. Новость в другом: ту же задачу теперь массово решают обычные агентные кодинг-инструменты, а не узкоспециализированные research-проекты, — и порог входа упал настолько, что декомпиляция конкретной игры стала вопросом дней, а не лет кропотливой ручной реверс-инженерии.</span>
+      <span data-lang="en">Simon Willison linked to a post by an indie developer going by Popcar about a wave of LLM-assisted game decompilation that picked up in autumn 2026. The phenomenon isn't a new algorithm — turning a game's binary or bytecode into readable source has long been doable with classic decompilers and, in the last couple of years, experimental research systems like WaDec and StackSight, which run WebAssembly through an LLM plus static analysis to produce readable C++. What's new is that the same task is now being done at scale by ordinary agentic coding tools instead of narrow research projects — and the barrier to entry has dropped far enough that decompiling a specific game has become a matter of days, not years of painstaking manual reverse engineering.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему декомпиляция — удобная задача именно для LLM-агентов</span><span data-lang="en">Why decompilation suits LLM agents so well</span></h2>
+    <p>
+      <span data-lang="ru">Сторонний разбор этой темы, на который попутно вышел поиск, называет конкретную причину, почему декомпиляция оказалась настолько благодарной задачей для агентов: это «верифицируемый цикл» — результат агента можно объективно проверить, скомпилировав получившийся код и сравнив поведение с оригиналом (совпадение вывода, рендера, логики), а не полагаться на субъективную оценку «похоже на правильный код». Это тот же принцип, что делает агентов сильными в задачах с автоматическими тестами: чем точнее агент может сам проверить свой результат, тем меньше нужен человек в цикле на каждом шаге, и тем увереннее можно гонять задачу итеративно и параллельно.</span>
+      <span data-lang="en">A third-party analysis turned up alongside Willison's post names the specific reason decompilation has turned out to be such a rewarding task for agents: it's a "verifiable loop" — an agent's output can be objectively checked by compiling the resulting code and comparing its behavior to the original (matching output, rendering, logic), rather than relying on a subjective judgment that the code "looks right." That's the same principle that makes agents strong at tasks with automated tests: the more precisely an agent can verify its own result, the less a human needs to be in the loop at every step, and the more confidently the task can be run iteratively and in parallel.</span>
+    </p>
+
+    <h2><span data-lang="ru">Две стороны одной монеты</span><span data-lang="en">Two sides of the same coin</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон цитирует ключевой пассаж из поста Popcar, точно схватывающий обе стороны явления:</span>
+      <span data-lang="en">Willison quotes a key passage from Popcar's post that captures both sides neatly:</span>
+    </p>
+    <blockquote>
+      <span data-lang="ru">«Большинство уже осознали пугающую часть. Если ИИ способен декомпилировать игры и софт, вся техноиндустрия вот-вот взорвётся. Кто угодно сможет декомпилировать чужой софт и использовать его как захочет, и никто не сможет это остановить. Компании смогут красть друг у друга. Вашу платную игру или приложение могут открыть как опенсорс против вашей воли. Это касается не только старых видеоигр — это применимо к любому софту. [...] Это также большая победа для сохранения культурного наследия. Старые игры можно портировать, модифицировать, улучшать и делать гораздо доступнее, чем раньше. [...] На фоне того, что производители консолей делают ставку на цифровую дистрибуцию, а игры становятся неиграбельными из-за отключения серверов, это фантастическая новость. Мы сможем владеть купленным софтом независимо от того, что думает по этому поводу компания-издатель».</span>
+      <span data-lang="en">"Most people already realized the scary part by now. If AI can decompile games and software, then the entire tech industry is about to explode. Anybody can decompile other software and use it any way they'd like, and nobody can stop them. Companies can steal from competitors. Your paid game or app can be open-sourced against your will. This isn't exclusive to old video games, we can apply this to any software. [...] This is also a big win for preservation. Old games can be ported, modified, enhanced, and made much more accessible than before. [...] With console makers going all in on digital and games becoming entirely unplayable due to servers shutting down, this is fantastic news. We could own software we bought regardless of what the company thinks."</span>
+    </blockquote>
+    <p>
+      <span data-lang="ru">На стороне «круто» — реальные проекты по сохранению игр: энтузиасты портируют старые тайтлы в браузер через WebAssembly (пример такого подхода — проект декомпиляции pokeemerald, который годами воспроизводит оригинальный исходный код игры и сейчас добавляет WASM-порт), чтобы игры переживали отключение серверов издателя и запускались на оборудовании, для которого никогда не предназначались. На стороне «страшно» — то, что ровно тот же инструмент одинаково хорошо снимает защиту с кода, который автор защищать как раз хотел: закрытые форматы и бинарники перестают быть барьером, если львиную долю работы по реверс-инжинирингу теперь можно поручить агенту.</span>
+      <span data-lang="en">On the "awesome" side are real preservation projects: enthusiasts porting old titles to the browser via WebAssembly (one example is the pokeemerald decompilation project, which has spent years reconstructing the game's original source tree and is now adding a WASM port), so that games can outlive a publisher shutting down its servers and run on hardware they were never built for. On the "scary" side is the fact that the exact same tool is just as good at stripping protection from code its author actually wanted protected: closed formats and binaries stop being a real barrier once the bulk of the reverse-engineering work can be handed to an agent.</span>
+    </p>
+
+    <h2><span data-lang="ru">Это уже не гипотеза</span><span data-lang="en">This isn't hypothetical anymore</span></h2>
+    <p>
+      <span data-lang="ru">Независимое подтверждение того, что масштаб явления реален, а не единичный случай: по сообщению издания 404 Media, одно из сообществ, годами занимавшееся ручной реверс-инженерией видеоигр, объявило о закрытии именно потому, что ИИ сделал декомпиляцию слишком простой — приток материала и участников, использующих ИИ-инструменты, оказался больше, чем сообщество могло осмысленно модерировать и курировать вручную. Это ещё одна иллюстрация общего паттерна этой осени: агентные LLM-инструменты не просто ускоряют существующие ниши ручной экспертной работы — в нишах с «верифицируемым циклом» они обесценивают саму ручную экспертизу настолько быстро, что институты вокруг неё (сообщества, нормы, бизнес-модели) не успевают адаптироваться.</span>
+      <span data-lang="en">Independent confirmation that the scale here is real and not an isolated case: according to 404 Media, one community that had spent years doing manual video-game reverse engineering announced it was shutting down precisely because AI had made decompilation too easy — the influx of AI-assisted submissions and newcomers outpaced what the community could meaningfully moderate and curate by hand. It's another illustration of a broader pattern this autumn: agentic LLM tools don't just speed up existing niches of manual expert work — in niches with a "verifiable loop," they can devalue the manual expertise itself fast enough that the institutions built around it (communities, norms, business models) don't have time to adapt.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

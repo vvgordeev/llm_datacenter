@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T05:18:14Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-10-19-willison-ai-decompiling-games",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "ИИ массово декомпилирует игры — и это одновременно круто и страшно",
+        "en": "AI is mass-decompiling games — and that's both awesome and scary"
+      },
+      "url": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
+      "summary": {
+        "ru": "Уиллисон ссылается на пост инди-разработчика Popcar о волне декомпиляции видеоигр агентными LLM-инструментами: та же задача, что раньше решали узкие research-системы (WaDec, StackSight), теперь массово доступна благодаря тому, что декомпиляция — «верифицируемый цикл» (результат агента проверяется компиляцией и сравнением поведения с оригиналом). Одна сторона — бум сохранения старых игр (порты в браузер через WebAssembly), другая — любой закрытый бинарник теперь можно декомпилировать и переиспользовать без спроса; по данным 404 Media, одно из сообществ ручной реверс-инженерии игр уже объявило о закрытии именно из-за этого.",
+        "en": "Willison links to a post by indie developer Popcar on the wave of AI-assisted game decompilation: a task long handled by narrow research systems (WaDec, StackSight) is now available at scale because decompilation is a \"verifiable loop\" (an agent's output can be checked by compiling it and comparing behavior to the original). One side is a boom in game preservation (browser ports via WebAssembly); the other is that any closed binary can now be decompiled and reused without permission — per 404 Media, one manual game reverse-engineering community has already shut down because of exactly this."
+      },
+      "note_page": "notes/articles/ai-is-mass-decompiling-games.html"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T05:18:14Z",
+  "sources": [
+    {
+      "source": "anthropic blog (anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "WebFetch напрямую успешен, как и в прошлые дни (один из немногих доступных доменов). WebSearch (2+ запроса) ничего нового в окне lookback_hours=36 (с ~2026-10-17 17:00 UTC) не нашёл."
+    },
+    {
+      "source": "openai blog (openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403 от egress-прокси (policy denial), подтверждено через /__agentproxy/status. WebSearch ничего нового в окне — GPT-6 rollout уже отражён ранее (~7-8 окт)."
+    },
+    {
+      "source": "google/deepmind blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403. WebSearch — только неподтверждённые слухи про Gemini 4/4 Pro, без первоисточника и даты в окне."
+    },
+    {
+      "source": "meta ai blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403. WebSearch — ничего нового в окне; Muse Spark/Wonder уже отражены ранее."
+    },
+    {
+      "source": "xai news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403. WebSearch — Grok 4.6/4.7 уже отражены ранее, ничего нового в окне."
+    },
+    {
+      "source": "mistral news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403. WebSearch — Mistral Large 4 preview (~6 окт) вне окна и уже отражён ранее."
+    },
+    {
+      "source": "deepseek news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403. WebSearch — V4.1-Flash-1017 (17 окт) уже опубликован в сводке за 2026-10-18, повторно не беру."
+    },
+    {
+      "source": "AI News (smol.ai)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403. WebSearch по содержимому агрегатора — ничего продуктивного."
+    },
+    {
+      "source": "TLDR AI",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403. WebSearch — ничего продуктивного."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com)",
+      "status": "error",
+      "candidates": 0,
+      "note": "CONNECT 403 на API. WebSearch site:news.ycombinator.com — не дал новых проверяемых кандидатов в окне."
+    },
+    {
+      "source": "Reddit / X community",
+      "status": "ok (только WebSearch)",
+      "candidates": 0,
+      "note": "Общие материалы без привязки к конкретному событию в окне сбора новостей."
+    },
+    {
+      "source": "Simon Willison (simonwillisonblog-backup, github mirror)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "simonwillison.net напрямую заблокирован (CONNECT 403), но github-зеркало ndjson-дампа доступно и склонировано. Проверены blog_entry/blog_blogmark за 2026-10-12..19: 1 статья для LLM-подхода не публиковалась ранее — блогмарк «AI is mass decompiling games» (14 окт, ссылка на popcar.bearblog.dev). Остальные записи в окне — либо уже опубликованы раньше (redesigning-source-control, Oct 13), либо не по теме (Python 3.15, FT про выручку/IPO Anthropic — финансы без продукта, JS-трюк)."
+    },
+    {
+      "source": "popcar.bearblog.dev (первоисточник статьи Willison)",
+      "status": "blocked",
+      "candidates": "—",
+      "note": "CONNECT 403 на прямой WebFetch. Содержание восстановлено по полной цитате Уиллисона (из бэкап-дампа) + корроборации через WebSearch (404 Media, MindStudio, zeli.app)."
+    },
+    {
+      "source": "Andrej Karpathy (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com целиком недоступен на уровне CONNECT 403 (не антибот конкретной страницы — подтверждено и для RSS, и для прямого WebFetch, и для архива latent.space/oneusefulthing.org). WebSearch не нашёл подтверждённого ролика в окне."
+    },
+    {
+      "source": "AI Explained (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com заблокирован; WebSearch — ничего конкретного за октябрь с рабочим URL."
+    },
+    {
+      "source": "Matt Wolfe (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com заблокирован; WebSearch нашёл правдоподобное название ролика без проверяемого URL — не включено."
+    },
+    {
+      "source": "Nate Herk (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com заблокирован; WebSearch не дал конкретного названия/URL/даты."
+    },
+    {
+      "source": "Matt Pocock (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com заблокирован; WebSearch не дал конкретного названия/URL/даты."
+    },
+    {
+      "source": "Latent Space",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403 на latent.space и www.latent.space/archive. WebSearch — только платный анонс NYC-митапа (10 окт), без читаемого контента в окне."
+    },
+    {
+      "source": "Ethan Mollick / One Useful Thing",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT 403 на oneusefulthing.org и /archive. WebSearch — ничего в окне (анонс книги Co-Existence на 20 окт — не пост в блоге с проверяемым URL)."
+    }
+  ],
+  "totals": {
+    "candidates": 1,
+    "published": 1,
+    "rejected": {
+      "уже опубликовано ранее (DeepSeek V4.1-Flash-1017, Gemini/Mistral/xAI/Meta релизы вне окна)": 5,
+      "неподтверждённый URL/дата (видео Karpathy/Matt Wolfe/Nate Herk/Matt Pocock, Mollick Co-Existence essay)": 5,
+      "не по теме продукта (финансы/IPO Anthropic, Python 3.15, JS-трюк Willison)": 3,
+      "неподтверждённые слухи без первоисточника (Gemini 4/4 Pro, GPT-6.1 Sol/Astra наименования)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — ни один видео-кандидат не подтверждён URL/датой (youtube.com целиком недоступен весь прогон: CONNECT 403 и на RSS, и на прямой fetch, и на yt-dlp)",
+    "frames": "not used — видео-кандидатов нет",
+    "yt_dlp_install": "ok — pip install yt-dlp imageio-ffmpeg выполнен на шаге 0 (ffmpeg системный уже был, GEMINI_API_KEY присутствует), но не понадобился"
+  },
+  "notes": "Сегодняшний прогон (0 новостей, 1 экспертный материал — ниже min_expert_total=5) — продолжение подтверждённого паттерна деградации окружения последних дней (2026-10-16, 2026-10-18): egress-прокси отдаёт CONNECT 403 (policy denial, см. /__agentproxy/status) практически на все прямые домены, кроме anthropic.com и github.com; youtube.com полностью недоступен (RSS, WebFetch, yt-dlp) — не антибот конкретной страницы, а блокировка на уровне прокси. Для новостей: за узкое 36-часовое окно (с вечера 17 окт по утро 19 окт UTC) не нашлось ни одного события, отвечающего критериям кандидата (новая фича/релиз/подход) — расширенный проход («LLM news October 19 2026», по каждой модели отдельно) подтвердил пустоту, а не единичный недостаточный запрос; это задокументированный и ожидаемый исход «тихого дня» (см. CONVENTIONS/SKILL), а не признак новой поломки. Для экспертного контента предпринято расширенное усилие: два отдельных фоновых прохода (news+experts) плюс дополнительно ~10 прямых WebSearch/WebFetch запросов этой сессии поверх них, включая site:-поиск по latent.space и oneusefulthing.org и повторную проверку youtube.com через WebFetch напрямую — результат тот же везде. Единственный найденный и проверенный материал (Simon Willison → Popcar, декомпиляция игр ИИ) восстановлен из github-зеркала блога Уиллисона (simonwillisonblog-backup) с полной цитатой и корроборацией через 404 Media/MindStudio, без обращения к заблокированному первоисточнику popcar.bearblog.dev. Три прогона подряд (16, 18, 19 октября) с таким паттерном деградации — стоит сообщить пользователю: возможно, нужна ревизия сетевой политики окружения или прямых доменов в allowlist прокси для основных блогов моделей и youtube.com, иначе качество сводки будет и дальше зависеть почти исключительно от WebSearch-фолбэка."
+}

@@ -659,13 +659,6 @@
         "ru": "ChatGPT (desktop, Apple Silicon) получает плагин Apple Messages: поиск, чтение и отправка iMessage/SMS/RCS внутри ChatGPT Work и Codex, с подтверждением на сообщение или на беседу"
       }
     },
-    "openai-chatgpt-for-teens": {
-      "last_date": "2026-08-19",
-      "summary": {
-        "en": "OpenAI launches a separate ChatGPT mode for 13-17 year-olds with Study Mode and parental controls amid safety lawsuits",
-        "ru": "OpenAI запускает отдельный режим ChatGPT для подростков 13-17 лет со Study Mode и родительским контролем на фоне исков о безопасности"
-      }
-    },
     "openai-chatgpt-images-2-5": {
       "last_date": "2026-09-09",
       "summary": {
@@ -692,13 +685,6 @@
       "summary": {
         "en": "OpenAI's Codex and ChatGPT Work lead Thibault Sottiaux announced a challenge: every day from October 5 to November 1, 2026, the team ships either an improvement noticeable to the median Codex/Work user, or a full usage-limit reset. Day 1 delivered roughly 50% faster default speeds for GPT-6 Astra and GPT-6.1 Sol.",
         "ru": "Руководитель Codex и ChatGPT Work в OpenAI Тибо Соттьо объявил челлендж: каждый день с 5 октября по 1 ноября 2026 команда либо выкатывает улучшение, заметное медианному пользователю Codex/Work, либо даёт полный сброс лимитов использования. В день 1 результатом стало повышение скорости GPT-6 Astra и GPT-6.1 Sol по умолчанию примерно на 50%."
-      }
-    },
-    "openai-codex-appshots-computer-use": {
-      "last_date": "2026-08-19",
-      "summary": {
-        "en": "OpenAI ships Appshots for Codex (macOS/Windows): hotkey-driven app-window context capture instead of manual description, plus computer use, memory, and plugins",
-        "ru": "OpenAI выпускает Appshots для Codex (macOS/Windows): захват состояния окна приложения по горячей клавише вместо ручного описания контекста, плюс computer use, память и плагины"
       }
     },
     "openai-daybreak-gpt-5-6-cyber": {
@@ -912,7 +898,6 @@
   "seen_urls": {
     "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
     "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/": "2026-10-05",
-    "https://9to5mac.com/2026/08/18/anthropic-says-claude-cowork-is-now-available-on-mobile-for-all-paid-plans/": "2026-08-19",
     "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/": "2026-08-21",
     "https://9to5mac.com/2026/08/28/chatgpt-and-codex-now-support-multiple-gmail-and-google-calendar-accounts/": "2026-08-29",
     "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/": "2026-09-17",
@@ -921,7 +906,6 @@
     "https://academy.claude.com/all": "2026-08-22",
     "https://ai.meta.com/muse/": "2026-09-09",
     "https://aistudio.google.com/learn/managed-agents-updated-harness-files-credentials": "2026-09-25",
-    "https://aitoolanalysis.com/claude-in-chrome-review/": "2026-08-19",
     "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/": "2026-10-04",
     "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
     "https://andonlabs.com/blog/why-we-built-pion": "2026-09-15",
@@ -945,7 +929,6 @@
     "https://claude.com/blog/claude-marketplace": "2026-09-24",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26",
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-26",
-    "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-19",
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17",
     "https://claude.com/resources/articles/dashboards-and-motion": "2026-10-12",
     "https://code.claude.com/docs/en/changelog": "2026-09-19",
@@ -953,7 +936,6 @@
     "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726": "2026-08-23",
     "https://community.openai.com/t/build-agent-ready-websites-with-chatgpt/1392588": "2026-08-28",
     "https://community.openai.com/t/day-1-of-28-days-of-quality-of-life-improvements-or-a-full-reset/1403525": "2026-10-06",
-    "https://community.openai.com/t/privacy-incident-exposes-risks-in-screen-capable-agents/1383634": "2026-08-19",
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
     "https://cursor.com/blog/projects": "2026-09-15",
     "https://cyberscoop.com/openai-agents-malicious-rubygems-packages/": "2026-09-12",
@@ -982,7 +964,6 @@
     "https://huggingface.co/internlm/Atria-Dawn-Preview": "2026-09-17",
     "https://interconnected.org/home/2026/08/21/galactic": "2026-08-26",
     "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/": "2026-08-26",
-    "https://kingy.ai/news/appshots-inside-openai-codexs-new-command-command-trick-for-macos/": "2026-08-19",
     "https://martinfowler.com/articles/2026-dont-like-llms.html": "2026-09-19",
     "https://mistral.ai/news/mistral-large-4/": "2026-10-07",
     "https://mistral.ai/news/mistral-x-humain/": "2026-08-25",
@@ -994,8 +975,6 @@
     "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
     "https://openai.com/index/an-alien-mind/": "2026-09-07",
     "https://openai.com/index/astra-for-law/": "2026-09-20",
-    "https://openai.com/index/chatgpt-for-teens/": "2026-08-19",
-    "https://openai.com/index/codex-for-almost-everything/": "2026-08-19",
     "https://openai.com/index/daybreak-for-frontline-defenders/": "2026-09-05",
     "https://openai.com/index/devday-2026-recap/": "2026-09-30",
     "https://openai.com/index/gpt-6-astra/": "2026-09-04",
@@ -1012,13 +991,11 @@
     "https://openai.com/index/replit/": "2026-08-20",
     "https://openrouter.ai/stealth": "2026-08-23",
     "https://openrouter.ai/z-ai/glm-5.3-flash": "2026-08-30",
-    "https://pasqualepillitteri.it/en/news/3135/codex-appshots-command-command-mac": "2026-08-19",
     "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
     "https://research.meta.ai/blog/introducing-muse-spark-1-3": "2026-09-03",
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
     "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html": "2026-09-07",
-    "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/": "2026-08-19",
     "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/": "2026-08-20",
     "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/": "2026-08-21",
     "https://simonwillison.net/2026/Aug/21/stop-making-tuis/": "2026-08-30",
@@ -1026,6 +1003,7 @@
     "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/": "2026-08-26",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
     "https://simonwillison.net/2026/Oct/1/matthew-green/": "2026-10-03",
+    "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/": "2026-10-19",
     "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/": "2026-10-04",
     "https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/": "2026-10-06",
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
@@ -1059,7 +1037,6 @@
     "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/": "2026-10-03",
     "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/": "2026-10-06",
     "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/": "2026-10-15",
-    "https://the-decoder.com/openai-appshots-turn-any-mac-window-into-context-for-codex/": "2026-08-19",
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
@@ -1116,12 +1093,9 @@
     "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html": "2026-10-06",
     "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship": "2026-09-20",
     "https://www.cnn.com/2026/09/19/business/gemini-ai-hack-internet": "2026-09-20",
-    "https://www.commonsensemedia.org/press-releases/common-sense-media-report-finds-chatgpt-and-sora-pose-risks-to-teens-despite-safety-features": "2026-08-19",
     "https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html": "2026-08-26",
-    "https://www.edtechinnovationhub.com/news/openai-introduces-chatgpt-for-teens-with-study-hours-and-stronger-safeguards": "2026-08-19",
     "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf": "2026-09-13",
     "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
-    "https://www.journalgazette.net/ap/business/openai-introduces-chatgpt-for-teens-promising-a-more-age-appropriate-chatbot/article_4a2fcca9-ec1d-51b5-ad08-8e99cb7fb73c.html": "2026-08-19",
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
     "https://www.latent.space/p/ainews-claude-haiku-55-better-than": "2026-10-11",
     "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer": "2026-10-05",
@@ -1136,12 +1110,10 @@
     "https://www.latent.space/p/recursive": "2026-09-17",
     "https://www.latent.space/p/rlm": "2026-10-03",
     "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent": "2026-09-07",
-    "https://www.macobserver.com/news/claude-in-chrome-is-now-a-full-cowork-session-across-all-claude-apps/": "2026-08-19",
     "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/": "2026-09-12",
     "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/": "2026-10-04",
     "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/": "2026-09-25",
     "https://www.metacurity.com/openai-fires-three-safety-researchers-over-alleged-information-leaks/": "2026-10-04",
-    "https://www.modular.com/blog/mojo-open-source": "2026-08-19",
     "https://www.neowin.net/news/google-replaces-chat-side-panel-with-new-ask-gemini-integration/": "2026-08-26",
     "https://www.notateslaapp.com/news/4724/tesla-adds-grok-bot-to-vehicles-for-hands-free-errands-and-tasks": "2026-09-23",
     "https://www.nxcode.io/resources/news/claude-platform-agent-tools-ga-browser-skills-files-2026": "2026-08-26",
@@ -1157,7 +1129,6 @@
     "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
     "https://www.sonarsource.com/blog/stop-the-context-tax/": "2026-09-06",
     "https://www.techradar.com/ai-platforms-assistants/gemini/google-just-gave-every-windows-10-and-11-pc-a-gemini-key-i-tried-it-and-its-the-easiest-way-to-use-its-ai-yet": "2026-09-12",
-    "https://www.techradar.com/pro/claude-cowork-is-coming-to-your-chrome-browser-and-i-might-finally-use-it-now": "2026-08-19",
     "https://www.techtimes.com/articles/328381/20261002/openai-rogue-ai-agents-hacked-hugging-face-ftc-probes-labs-safety-auditor-metr.htm": "2026-10-03",
     "https://www.testingcatalog.com/grok-bot-to-get-templates-and-multi-account-support-soon/": "2026-08-31",
     "https://www.theregister.com/ai-and-ml/2026/08/25/claude-and-cowork-now-share-what-they-know-about-you/5292412": "2026-08-26",
@@ -1210,6 +1181,7 @@
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
+    "notes/articles/ai-is-mass-decompiling-games.html": "2026-10-19",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
@@ -1253,7 +1225,6 @@
     "notes/articles/willison-conceptual-integrity-lines-of-code.html": "2026-08-20",
     "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
     "notes/articles/willison-fable-5-1-pelican.html": "2026-09-02",
-    "notes/articles/willison-mojo-open-source.html": "2026-08-19",
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
