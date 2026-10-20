@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20T06:40:00Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-10-20-scheff-my-obituary-for-programming",
+      "type": "article",
+      "author": "Jeremy Scheff",
+      "title": {
+        "ru": "Мой некролог программированию",
+        "en": "My obituary for programming"
+      },
+      "url": "https://dumbmatter.com/2026/10/programming-obituary/",
+      "summary": {
+        "ru": "Независимый разработчик Джереми Шефф описывает программирование как головоломку без ограничений масштаба и честно признаёт: для программистов, которым нравилось решать задачу самостоятельно (а не просто получать работающую систему), ИИ-агенты для кода означают реальную потерю удовольствия от профессии — при том что сам автор агентами впечатлён, продолжает программировать вручную и говорит, что его бизнес в 2026 году переживает один из лучших годов. Обсуждение на Lobsters показывает, что тезис принят не всеми: часть комментаторов считает, что головоломка просто переместилась на уровень проектирования систем, которые пишет агент.",
+        "en": "Independent developer Jeremy Scheff describes programming as a puzzle with no cap on scope, and candidly argues that for programmers who enjoyed solving the problem themselves (rather than just getting a working system), AI coding agents mean a real loss of enjoyment in the job — even though the author himself is impressed by the agents, keeps programming by hand, and says his business is having one of its best years in 2026. The Lobsters discussion shows the thesis isn't universally accepted: some commenters argue the puzzle simply moved up to designing and verifying the systems an agent writes."
+      },
+      "note_page": "notes/articles/my-obituary-for-programming.html"
+    }
+  ]
+}

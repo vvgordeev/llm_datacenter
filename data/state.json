@@ -70,13 +70,6 @@
         "ru": "Anthropic открыла биолабораторию; 950 агентов Claude автономно нашли неописанную ферментную систему (ART) с CRISPR-подобным массивом повторов в ДНК бактериофагов, функция пока не известна."
       }
     },
-    "anthropic-claude-code-2-1-236-237": {
-      "last_date": "2026-08-20",
-      "summary": {
-        "en": "Claude Code 2.1.236-237 (Aug 19-20): notify_when_idle for cross-session SendMessage, the ANTHROPIC_DEFAULT_MODEL env var, and the Concise output style",
-        "ru": "Claude Code 2.1.236-237 (19-20 августа): notify_when_idle для кросс-сессионного SendMessage, переменная ANTHROPIC_DEFAULT_MODEL, стиль вывода Concise"
-      }
-    },
     "anthropic-claude-code-2-1-238": {
       "last_date": "2026-08-21",
       "summary": {
@@ -208,13 +201,6 @@
       "summary": {
         "en": "Computer use, browser use, the Skills API, and the Files API reach GA on the Claude Platform — batched actions cut round trips per task by 20-40%",
         "ru": "Computer use, browser use, Skills API и Files API выходят в GA на Claude Platform — батчинг действий даёт 20-40% меньше раундтрипов на задачу"
-      }
-    },
-    "anthropic-claude-protein-design": {
-      "last_date": "2026-08-20",
-      "summary": {
-        "en": "Anthropic and Adaptyv Bio show Claude Mythos Preview/Opus 4.8 autonomously designing working protein binders for 14 of 15 targets (26.8% hit rate vs. a typical 10-15%) and processing raw lab NMR/LC-MS data in 20-25 minutes",
-        "ru": "Anthropic и Adaptyv Bio показывают, что Claude Mythos Preview/Opus 4.8 самостоятельно спроектировали рабочие белковые связыватели для 14 из 15 мишеней (26,8% хитрейт против типичных 10-15%) и обрабатывают сырые лабораторные данные ЯМР/ЖХ-МС за 20-25 минут"
       }
     },
     "anthropic-claude-security-mythos-5": {
@@ -750,13 +736,6 @@
         "ru": "OpenAI заявляет, что внутренняя модель решила задачу Навье-Стокса силами ~10000 агентов; разгорается спор об авторстве с математиком NYU Бакмастером и его соавтором из Anthropic Алпёге."
       }
     },
-    "openai-replit-free-mode": {
-      "last_date": "2026-08-20",
-      "summary": {
-        "en": "Replit turns on Free Mode (GPT-5.6 Luna) by default for its Core/Pro tiers — routine tasks and chat no longer burn credits, with the agent escalating to a stronger model as needed",
-        "ru": "Replit включает по умолчанию Free Mode на GPT-5.6 Luna для тарифов Core/Pro — рутинные задачи и чат не тратят кредиты, агент эскалирует на более мощную модель по необходимости"
-      }
-    },
     "openai-rogue-agents-wiki-collusion": {
       "last_date": "2026-10-07",
       "summary": {
@@ -783,13 +762,6 @@
       "summary": {
         "en": "OpenAI adds WebMCP support to ChatGPT — sites declare their own tools for agents",
         "ru": "OpenAI добавляет поддержку WebMCP в ChatGPT — сайты сами объявляют инструменты для агентов"
-      }
-    },
-    "openai-zdr-private-safety-processing": {
-      "last_date": "2026-08-20",
-      "summary": {
-        "en": "OpenAI reaffirms zero data retention for frontier models and previews Private Safety Processing — risk monitoring across long agent sessions without staff access to prompt content; full rollout and a white paper are due in September",
-        "ru": "OpenAI подтверждает нулевое хранение данных для frontier-моделей и анонсирует превью Private Safety Processing — мониторинг риска в долгих агентных сессиях без доступа сотрудников к содержимому запросов; полный запуск и white paper — в сентябре"
       }
     },
     "openrouter-ox-alpha-stealth": {
@@ -942,20 +914,19 @@
     "https://darioamodei.com/post/we-must-pace-the-frontier": "2026-09-13",
     "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence": "2026-10-01",
     "https://deepmind.google/models/model-cards/gemini-3-8-audio/": "2026-09-17",
+    "https://dumbmatter.com/2026/10/programming-obituary/": "2026-10-20",
     "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/": "2026-08-29",
     "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
     "https://every.to/context-window/evals-for-everyone": "2026-09-21",
     "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html": "2026-10-18",
     "https://fortune.com/2026/09/01/pentagon-chatgpt-grok-government-military-ai-members-pete-hegseth-defense-department/": "2026-09-02",
     "https://garymarcus.substack.com/p/breaking-more-bad-news-for-the-frontier": "2026-08-24",
-    "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun": "2026-08-20",
     "https://garymarcus.substack.com/p/breaking-two-rays-of-hope": "2026-09-12",
     "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
     "https://garymarcus.substack.com/p/pause-openai-now": "2026-09-05",
     "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross": "2026-09-03",
     "https://ghuntley.com/agency/": "2026-10-16",
     "https://github.com/Tencent-Hunyuan/Hy4-preview": "2026-09-01",
-    "https://github.com/anthropics/claude-code/releases/tag/v2.1.236": "2026-08-20",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.238": "2026-08-21",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.247": "2026-08-27",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.260": "2026-09-05",
@@ -986,9 +957,7 @@
     "https://openai.com/index/introducing-gpt-live-1-in-the-api/": "2026-09-12",
     "https://openai.com/index/introducing-the-agents-api/": "2026-09-11",
     "https://openai.com/index/navier-stokes-solution/": "2026-09-09",
-    "https://openai.com/index/offering-zero-data-retention-for-frontier-models/": "2026-08-20",
     "https://openai.com/index/path-to-astra/": "2026-09-03",
-    "https://openai.com/index/replit/": "2026-08-20",
     "https://openrouter.ai/stealth": "2026-08-23",
     "https://openrouter.ai/z-ai/glm-5.3-flash": "2026-08-30",
     "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
@@ -996,7 +965,6 @@
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
     "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html": "2026-09-07",
-    "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/": "2026-08-20",
     "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/": "2026-08-21",
     "https://simonwillison.net/2026/Aug/21/stop-making-tuis/": "2026-08-30",
     "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/": "2026-08-23",
@@ -1046,12 +1014,10 @@
     "https://thezvi.substack.com/p/ai-185-preference-cascade": "2026-09-11",
     "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
     "https://thezvi.substack.com/p/ai-188-gemini-dot-argon": "2026-10-05",
-    "https://thezvi.substack.com/p/anthropic-risk-report-august-2026": "2026-08-20",
     "https://thezvi.substack.com/p/gpt-6-astra-can-do-ambitious-things": "2026-09-13",
     "https://thezvi.substack.com/p/the-ai-preference-cascade-reaches": "2026-10-06",
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
     "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30",
-    "https://time.com/article/2026/08/18/openai-slowing-training/": "2026-08-20",
     "https://typesafe.ai/blog/introducing-system-one-models-and-jev": "2026-09-17",
     "https://vanja.io/managed-agents-dynamic-workflows/": "2026-10-15",
     "https://vanja.io/pace-the-frontier/": "2026-09-13",
@@ -1079,7 +1045,6 @@
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-29",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-30",
-    "https://www.anthropic.com/research/Claude-accelerates-protein-design": "2026-08-20",
     "https://www.anthropic.com/research/claude-shaped-science": "2026-10-02",
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-06",
     "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-10-05",
@@ -1188,7 +1153,6 @@
     "notes/articles/breunig-fable-end-of-free-lunch.html": "2026-08-26",
     "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
-    "notes/articles/garymarcus-openai-unraveling-astra-pause.html": "2026-08-20",
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
     "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
     "notes/articles/latentspace-ainews-astra-biggest-launch.html": "2026-09-05",
@@ -1222,7 +1186,6 @@
     "notes/articles/willison-chatgpt-images-2-5.html": "2026-09-09",
     "notes/articles/willison-chatgpt-site-operator-fanouts.html": "2026-08-21",
     "notes/articles/willison-claude-system-prompt-diff.html": "2026-09-03",
-    "notes/articles/willison-conceptual-integrity-lines-of-code.html": "2026-08-20",
     "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
     "notes/articles/willison-fable-5-1-pelican.html": "2026-09-02",
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
@@ -1232,7 +1195,6 @@
     "notes/articles/zvi-ai-185-preference-cascade.html": "2026-09-11",
     "notes/articles/zvi-ai-188-gemini-dot-argon.html": "2026-10-05",
     "notes/articles/zvi-ai-preference-cascade-reaches-farther.html": "2026-10-06",
-    "notes/articles/zvi-anthropic-risk-report-august-2026.html": "2026-08-20",
     "notes/articles/zvi-astra-ambitious-things.html": "2026-09-13",
     "notes/videos/aiexplained-somethings-off.html": "2026-10-05",
     "notes/videos/karpathy-delete-everything-keep-graph.html": "2026-08-27",

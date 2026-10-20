@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20T06:40:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (anthropic.com/news)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Прямой WebFetch успешен (единственный рабочий вендорский домен). Нашёл один пост в окне — «Investing in the public benefit» (18 окт) — но это материал о корпоративном фонде/филантропии, без продуктовой составляющей; отклонён как финансовая/governance-новость без продукта. 2 WebSearch-запроса ничего продуктового не добавили."
+    },
+    {
+      "source": "openai blog (openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: getaddrinfo ENOTFOUND (DNS-уровень, не просто CONNECT 403 как раньше). 2 WebSearch-запроса — ничего нового в окне ~36ч; GPT-6/Intelligent UI уже отражён ранее (rollout с 7 окт)."
+    },
+    {
+      "source": "google/deepmind blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — только неподтверждённые/противоречивые вторичные заметки (Gemini 4 Argon, Map-инструмент 5 окт, Gemini Drops) без первоисточника и даты в окне сбора."
+    },
+    {
+      "source": "meta ai blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — ничего в окне; упоминания Facebook AI Search/Muse Spark относятся к середине 2026."
+    },
+    {
+      "source": "xai news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — Grok Build v1.0.52 (11 окт) вне окна; Grok 5 не подтверждён (только рынки предсказаний)."
+    },
+    {
+      "source": "mistral news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — Mistral Large 4 preview (6 окт) вне окна, уже отражён ранее."
+    },
+    {
+      "source": "deepseek news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — ничего нового в окне; V4.1-Flash и V4-Pro уже отражены ранее."
+    },
+    {
+      "source": "AI News (smol.ai)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND."
+    },
+    {
+      "source": "TLDR AI",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com)",
+      "status": "error",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. site:news.ycombinator.com через WebSearch — не дал проверяемых новых кандидатов в окне."
+    },
+    {
+      "source": "Reddit / X community",
+      "status": "ok (только WebSearch)",
+      "candidates": 0,
+      "note": "r/LocalLLaMA — только сторонние снапшоты без подтверждённых дат в окне."
+    },
+    {
+      "source": "расширенный проход (<5 кандидатов)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "«LLM news October 20 2026», «AI model release October 19 2026», «AI coding agent update this week October 2026» — результаты либо SEO-спам без дат, либо вне окна/неподтверждены. Пустой день по новостям подтверждён широким поиском."
+    },
+    {
+      "source": "Simon Willison (simonwillisonblog-backup, github mirror)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "simonwillison.net напрямую ENOTFOUND, но github-зеркало (git clone --depth 1) доступно. Проверены blog_entry/blog_blogmark за 2026-10-12..20: 1 новый материал — блогмарк «My obituary for programming» (19 окт, ссылка на dumbmatter.com, эссе Jeremy Scheff от 8 окт). Остальное в окне: «Redesigning source control at Anthropic» (уже опубликовано 14 окт), «Hello Python 3.15» и «Inline rendering with document.currentScript» (не по теме LLM), «Anthropic tells investors...» (финансы/IPO, без продукта)."
+    },
+    {
+      "source": "dumbmatter.com (первоисточник эссе Шеффа)",
+      "status": "blocked",
+      "candidates": "—",
+      "note": "WebFetch: ENOTFOUND. Содержание восстановлено по цитате в блогмарке Уиллисона + корроборации через WebSearch (детали эссе, Lobsters-обсуждение)."
+    },
+    {
+      "source": "Andrej Karpathy (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com целиком ENOTFOUND (RSS и прямой WebFetch). WebSearch не нашёл подтверждённого октябрьского ролика с URL."
+    },
+    {
+      "source": "AI Explained (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com ENOTFOUND; WebSearch — ничего конкретного за октябрь с проверяемым URL."
+    },
+    {
+      "source": "Matt Wolfe (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com ENOTFOUND; WebSearch — последнее подтверждённое видео от 3 сентября (GPT-6-Astra), вне окна."
+    },
+    {
+      "source": "Nate Herk (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com ENOTFOUND; WebSearch — только статистика канала, без конкретного названия/URL ролика."
+    },
+    {
+      "source": "Matt Pocock (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com ENOTFOUND; WebSearch — только более старые материалы (Claude Code skills), ничего октябрьского с URL."
+    },
+    {
+      "source": "Latent Space",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "latent.space ENOTFOUND. WebSearch — последний подтверждённый эпизод вне окна (середина 2026), сентябрьский тизер без полного выпуска."
+    },
+    {
+      "source": "Ethan Mollick / One Useful Thing",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "oneusefulthing.org ENOTFOUND. WebSearch — анонс книги Co-Existence (выход 20 окт), но это не пост в блоге с конкретным URL материала."
+    }
+  ],
+  "totals": {
+    "candidates": 2,
+    "published": 1,
+    "rejected": {
+      "финансы/governance без продуктовой части (Anthropic public benefit fund)": 1,
+      "уже опубликовано ранее (Redesigning source control at Anthropic)": 1,
+      "не по теме продукта (Python 3.15, JS-трюк currentScript, FT про IPO Anthropic)": 3,
+      "неподтверждённые/противоречивые вторичные источники без первоисточника и даты (Gemini 4 Argon, Grok 5, GPT-6.1 слухи)": 3
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — ни один видео-кандидат не подтверждён URL/датой (youtube.com целиком недоступен: CONNECT/DNS-уровня блокировка на RSS, прямой WebFetch и, как и раньше, вероятно на yt-dlp)",
+    "frames": "not used — видео-кандидатов нет",
+    "yt_dlp_install": "ok — pip install yt-dlp imageio-ffmpeg выполнен на шаге 0 (системный ffmpeg уже был, GEMINI_API_KEY присутствует), не понадобился"
+  },
+  "notes": "Пятый подряд зафиксированный прогон с сильной деградацией сетевого окружения (после 16, 18, 19 октября): на этот раз блокировка усилилась с CONNECT 403 до DNS-уровня ENOTFOUND практически для всех доменов, кроме anthropic.com и github.com — это видно даже на hn.algolia.com (ранее работал через JSON API) и youtube.com (ранее иногда проходил RSS). Единственные рабочие прямые каналы — anthropic.com/news (WebFetch) и github.com (клонирование зеркала блога Уиллисона). Для новостей проведён полный и расширенный проход по всем 7 включённым моделям + агрегаторам + HN — не найдено ни одного события, отвечающего критериям кандидата (новая фича/релиз/подход) в окне lookback_hours=36 с подтверждённым первоисточником и датой; единственный конкретный найденный пункт (Anthropic 'Investing in the public benefit') — фонд/governance, не продукт, отклонён по правилам. Для экспертного контента единственный проверяемый материал — эссе Джереми Шеффа о потере удовольствия от программирования из-за ИИ-агентов, обнаруженное через линкблог Уиллисона (github-зеркало); все 6 видео-экспертов и Latent Space/Mollick недоступны напрямую, а WebSearch не дал по ним ни одного материала с конкретным URL и датой в допустимом окне — только агрегированная статистика каналов и общие профили без конкретных выпусков. Итог (0 новостей, 1 экспертный материал — ниже лимитов limits) ниже нормы не из-за реального затишья в индустрии (вторичные источники упоминают GPT-6 rollout, Mistral Large 4, Gemini-обновления как продолжающиеся темы), а из-за невозможности подтвердить конкретные события первоисточником в это окно при нынешнем состоянии прокси. Рекомендация пользователю: пять прогонов подряд с нарастающей деградацией (403 → DNS ENOTFOUND) — стоит проверить политику egress-прокси этого облачного окружения и при возможности расширить allowlist для доменов блогов моделей, youtube.com и hn.algolia.com, иначе сводка будет и дальше зависеть почти исключительно от WebSearch, качество которого для 'последних 36 часов' низкое (SEO-спам, несовпадающие даты, вторичные пересказы)."
+}
