@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Нейросети уже чисты» — Nick Cammarata (Goodfire) — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Nick Cammarata, Goodfire · 2026-10-15</span>
+      <span data-lang="en">Article digest · Nick Cammarata, Goodfire · 2026-10-15</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Нейросети уже чисты</span>
+      <span data-lang="en">Neural Networks Are Already Clean</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.goodfire.ai/blog/neural-networks-are-already-clean" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ник Каммарата из исследовательской компании по интерпретируемости Goodfire выдвигает рабочую гипотезу, которая идёт вразрез с привычной картиной в его же области: нейроны внутри моделей на самом деле гораздо более интерпретируемы, чем принято считать, и большую часть «путаницы», которую якобы нужно распутывать сложными методами вроде разреженных автоэнкодеров, можно объяснить проще. Это важно для подхода к интерпретируемости как таковой: если автор прав, многие нейроны можно изучать напрямую, не выстраивая сначала дорогостоящий слой инструментов для их «расшифровки».</span>
+      <span data-lang="en">Nick Cammarata of interpretability research company Goodfire argues a working hypothesis that cuts against his own field's conventional wisdom: neurons inside models are, in fact, far more interpretable than commonly assumed, and most of the apparent "tangle" that supposedly needs unpacking with heavy machinery like sparse autoencoders has a simpler explanation. The stakes are about method: if he's right, many neurons can be studied directly, without first building an expensive layer of tooling just to decode them.</span>
+    </p>
+
+    <h2><span data-lang="ru">Классический пример «спутанного» нейрона пересмотрен</span><span data-lang="en">Revisiting the classic "tangled" neuron</span></h2>
+    <p>
+      <span data-lang="ru">Отправная точка — хрестоматийный пример полисемантичного нейрона из InceptionV1, который якобы одновременно реагирует на «кошек» и «машины» и который годами приводят как доказательство того, что отдельные нейроны смешивают несвязанные понятия. Каммарата пересматривает этот и похожие классические примеры и утверждает, что их изначально неверно прочитали: то, что выглядит как смешение двух разных концептов, на деле чаще оказывается одним основным «полюсом» активации с небольшими родственными ответвлениями, которые легко принять за вторую, не связанную функцию, если не присматриваться внимательно.</span>
+      <span data-lang="en">The starting point is the textbook example of a polysemantic InceptionV1 neuron supposedly firing on both "cats" and "cars," cited for years as proof that individual neurons blend unrelated concepts. Cammarata re-examines this and similar classic cases and argues they were misread from the start: what looks like a mash-up of two unrelated concepts usually turns out, on closer inspection, to be one dominant activation "pole" with small related offshoots that are easy to mistake for a second, unconnected function if you don't look carefully.</span>
+    </p>
+
+    <h2><span data-lang="ru">90% нейронов Qwen3-32B — с одной основной функцией</span><span data-lang="en">90% of Qwen3-32B's neurons have one main job</span></h2>
+    <p>
+      <span data-lang="ru">Чтобы проверить гипотезу не только на исторических примерах, Каммарата повторно обучает InceptionV1 и ConvNeXt в широком диапазоне размеров (разница по масштабу — около 300 раз), наблюдая, как именно нейроны формируются в процессе обучения, а затем проводит аудит нейронов уже на современной языковой модели — Qwen3-32B. Предварительные результаты: примерно у 90% «полюсов» нейронов есть одна основная функция (часто с мелкими родственными ответвлениями), ещё у около 7% — две связанные функции, и лишь 2–4% пока не поддаются объяснению. Для сравнения автор приводит автоматизированный проект интерпретируемости OpenAI 2023 года, который по самой щедрой метрике признавал интерпретируемыми лишь около 1,7% нейронов — то есть разрыв с прежними оценками на порядок.</span>
+      <span data-lang="en">To test the hypothesis beyond historical examples, Cammarata retrains InceptionV1 and ConvNeXt across a roughly 300x range of sizes, watching how neurons actually form during training, then audits neurons in a modern language model, Qwen3-32B. The preliminary numbers: around 90% of neuron "poles" have one main job (often with small related offshoots), another roughly 7% have two related jobs, and only 2–4% remain unexplained for now. For comparison, he cites OpenAI's 2023 automated interpretability project, which by its most generous measure found only about 1.7% of neurons interpretable — an order-of-magnitude gap from the earlier estimate.</span>
+    </p>
+
+    <h2><span data-lang="ru">Осторожная гипотеза, а не готовый результат</span><span data-lang="en">A hypothesis, not a finished result</span></h2>
+    <p>
+      <span data-lang="ru">Автор сам маркирует статью как рабочую гипотезу, а не окончательный вывод: сопроводительная техническая статья с полной методологией ещё не опубликована, а самый смелый, четвёртый шаг собственной аргументации Каммарата прямо называет «весьма спекулятивным». Практический смысл для тех, кто занимается интерпретируемостью моделей: если гипотеза подтвердится более строгими методами, часть индустрии сможет меньше инвестировать в тяжёлую инфраструктуру для «распутывания» нейронов и больше — в прямое изучение уже сформированных, относительно понятных единиц активации, что потенциально ускоряет и удешевляет аудит больших моделей на предмет нежелательного поведения.</span>
+      <span data-lang="en">Cammarata labels this a working hypothesis rather than a finished conclusion: the companion technical paper with full methodology hasn't shipped yet, and he explicitly calls the boldest, fourth step of his own argument "highly speculative." The practical upshot for people doing model interpretability: if the hypothesis holds up under more rigorous methods, part of the field could invest less in heavy infrastructure for "unscrambling" neurons and more in directly studying already-formed, relatively legible units of activation — potentially making large-model audits for unwanted behavior faster and cheaper.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

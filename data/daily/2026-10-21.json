@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T07:05:00Z",
+  "news": [
+    {
+      "id": "2026-10-21-meta-muse-spark-open",
+      "cluster_id": "meta-muse-spark-open",
+      "models": ["meta"],
+      "title": {
+        "ru": "Meta открывает веса Muse Spark Open — 816B-модель для агентов и кода",
+        "en": "Meta releases Muse Spark Open weights — an 816B model for agents and coding"
+      },
+      "summary": {
+        "ru": "15 октября Meta выложила веса Muse Spark Open — модели на 816 млрд параметров (42 млрд активных на токен) с окном контекста 1 млн токенов, позиционируемой как модель для кода и агентных сценариев. Веса доступны на Hugging Face, Amazon SageMaker AI, Google Cloud Model Garden и Microsoft Foundry Models, API — через Groq, OpenRouter и Together AI; локально модель можно запустить на связке из двух Mac Studio с чипом M5 Ultra. В отличие от обычных открытых весов, модель распространяется не по Apache 2.0, а по отдельной лицензии Muse Model License с требованием атрибуции и платным порогом для компаний с выручкой свыше $20 млн/год.",
+        "en": "On October 15 Meta released the weights for Muse Spark Open, an 816-billion-parameter model (42B active per token) with a 1M-token context window, positioned for coding and agentic use cases. Weights are available on Hugging Face, Amazon SageMaker AI, Google Cloud Model Garden and Microsoft Foundry Models, with API access via Groq, OpenRouter and Together AI; locally it can run on two linked Mac Studios with Apple's M5 Ultra chip. Unlike a standard open-weight release, it ships not under Apache 2.0 but under a separate Muse Model License requiring attribution and gating commercial use above $20M/year in revenue."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Полезное расширение выбора инструментов для команд, которым нужны открытые веса крупной агентной модели (self-hosting, альтернатива китайским open-weight моделям) — но не меняет подходы к использованию LLM: лицензия не Apache/MIT, а бенчмарки (#38 из 49 на Vals Index) не выводят модель в лидеры.",
+        "en": "A useful addition to the toolbox for teams that want open weights for a large agentic model (self-hosting, an alternative to Chinese open-weight models) — but it doesn't change approaches to using LLMs: the license isn't Apache/MIT, and benchmarks (#38 of 49 on the Vals Index) don't put it near the top."
+      },
+      "source_url": "https://thenewstack.io/meta-muse-spark-open/",
+      "opinions": [
+        {
+          "author": "Digg (сводка критики лицензии)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Часть комментаторов назвала лицензию Muse Model License неудачной: требование указывать бренд Muse, платный порог для сервисов на основе модели и ограничения по сферам применения делают её строже лицензии Llama 3.1.",
+            "en": "Some commenters called the Muse Model License a poor fit: the Muse branding requirement, the revenue-gated service clause and the usage restrictions make it stricter than the Llama 3.1 license."
+          },
+          "url": "https://digg.com/ai/f0ubd2d3"
+        },
+        {
+          "author": "pasqualepillitteri.it (разбор лицензии)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Формально это модель с открытыми весами, но с проприетарной лицензией — что и вызывает спор о том, можно ли вообще называть такой релиз «открытым».",
+            "en": "Formally it is an open-weights model with a proprietary license — which is exactly what fuels the dispute over whether such a release can be called 'open' at all."
+          },
+          "url": "https://pasqualepillitteri.it/en/news/24330/meta-muse-spark-open-816b-open-weights"
+        },
+        {
+          "author": "Let's Data Science",
+          "stance": "positive",
+          "quote": {
+            "ru": "Релиз подаётся как лучшая открытая модель из США на сегодняшний день — хотя ведущие китайские open-weight модели по характеристикам пока остаются впереди.",
+            "en": "The release is framed as America's best open model to date — even though leading Chinese open-weight models still stay ahead on the specs."
+          },
+          "url": "https://letsdatascience.com/blog/meta-muse-spark-open-americas-best-open-model-china-ahead"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Локальный инференс на пользовательском железе энтузиаста: связка из двух Mac Studio с M5 Ultra вместо дата-центрового GPU-кластера.",
+            "en": "Local inference on prosumer hardware: two linked Mac Studios with M5 Ultra instead of a data-center GPU cluster."
+          },
+          "url": "https://itdaily.com/news/innovation/meta-muse-spark-open-weigh/"
+        },
+        {
+          "text": {
+            "ru": "Доступ через облачные инференс-провайдеры (Groq, OpenRouter, Together AI) для команд, которые хотят открытые веса без собственной инфраструктуры.",
+            "en": "Access via cloud inference providers (Groq, OpenRouter, Together AI) for teams that want open weights without owning the infrastructure."
+          },
+          "url": "https://www.vals.ai/models/meta_muse-spark-open"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-21-anthropic-ecdsa-curve-origins",
+      "cluster_id": "anthropic-claude-ecdsa-curve-origins",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude раскрывает происхождение сид-значений кривых NIST ECDSA — загадке 25 лет",
+        "en": "Claude uncovers the origin of NIST ECDSA curve seeds — a 25-year-old mystery"
+      },
+      "summary": {
+        "ru": "Frontier Red Team Anthropic опубликовал 16 октября исследование о том, как Claude нашёл происхождение сид-значений для эллиптических кривых NIST (P-192, P-224, P-256, P-384, P-521) — вопрос, остававшийся открытым четверть века и подпитывавший подозрения о возможном бэкдоре от АНБ. Вместо версии о хэше шуточной фразы (её выдвигал бывший математик АНБ) Claude показал, что сиды — это выход генератора lrand48, инициализированного unix-таймстампом: модель угадала, какой генератор псевдослучайных чисел использовался в 1990-х, нашла статистический паттерн в битах сида и восстановила внутреннее состояние генератора через редукцию решётки (LLL). Код для воспроизведения опубликован.",
+        "en": "Anthropic's Frontier Red Team published research on October 16 describing how Claude traced the origin of the seed values behind NIST's elliptic curves (P-192, P-224, P-256, P-384, P-521) — a question that had stood open for a quarter century and fed suspicion of an NSA backdoor. Rather than confirming the long-standing theory that the seeds were a hash of a joke passphrase (floated by a former NSA mathematician), Claude showed the seeds are outputs of the lrand48 generator initialized with a Unix timestamp: it guessed which 1990s pseudorandom generator was used, spotted a statistical pattern in the seed bits, and recovered the generator's internal state via lattice reduction (LLL). Reproduction code was published alongside the write-up."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — многочасовое автономное историко-криптографическое расследование с восстановлением состояния генератора через решёточные методы — и получило широкий резонанс (топ Hacker News), но по применимости остаётся нишевым для разработчиков в целом, а не меняет повседневные подходы к использованию LLM.",
+            "en": "Opens a new class of scenario — hours-long autonomous historical-cryptography investigation recovering generator state via lattice methods — with broad resonance (a top Hacker News story), but stays niche for day-to-day developer use rather than changing everyday LLM workflows."
+      },
+      "source_url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "opinions": [
+        {
+          "author": "officechai.com",
+          "stance": "positive",
+          "quote": {
+            "ru": "Издание подаёт находку как решение 25-летней загадки вокруг кривых NIST — расследование, которое десятилетиями не удавалось довести до конца людям.",
+            "en": "The outlet frames the finding as closing a 25-year-old mystery around the NIST curves — an investigation that had gone unfinished by humans for decades."
+          },
+          "url": "https://officechai.com/ai/claude-solves-25-year-old-nist-cryptography-mystery-finds-origin-of-ecdsa-curve-seeds/"
+        },
+        {
+          "author": "Anthropic Frontier Red Team (из самой публикации)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Авторы сами оговариваются: объяснение найдено не для всех кривых — базовые точки P-224, P-256, P-384, P-521 и бинарных кривых NIST, а также сид B-163, остаются необъяснёнными; результат не доказывает отсутствие бэкдора, а лишь делает его менее правдоподобным.",
+            "en": "The authors caveat their own result: the base points for P-224, P-256, P-384, P-521 and the NIST binary curves, plus the B-163 seed, remain unexplained; the finding doesn't prove the absence of a backdoor, only makes one less plausible."
+          },
+          "url": "https://www.anthropic.com/research/ecdsa-curve-origins"
+        },
+        {
+          "author": "dealroom.co",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Материал напоминает, что загадку годами подпитывали работы криптографов Нила Коблица и Альфреда Менезеса, а денежный приз за её решение в своё время учредил криптограф Филиппо Вальсорда — приз пойдёт Internet Security Research Group.",
+            "en": "The coverage notes the mystery was long fed by work from cryptographers Neal Koblitz and Alfred Menezes, and that cryptographer Filippo Valsorda had put up a cash bounty for solving it — the bounty will go to the Internet Security Research Group."
+          },
+          "url": "https://dealroom.co/news/163484-claude-cracks-25-year-mystery-behind-nists-elliptic-curves/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Опубликованный Anthropic код регенерации сидов и базовых точек можно использовать как независимо проверяемый инструмент аудита происхождения стандартных кривых.",
+            "en": "The seed/base-point regeneration code Anthropic published can serve as an independently checkable audit tool for the provenance of standard curves."
+          },
+          "url": "https://www.anthropic.com/research/ecdsa-curve-origins"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-21-anthropic-claude-code-review-layers",
+      "cluster_id": "anthropic-claude-code-internal-review",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Как команда Claude Code устроила ревью кода, который на 90% пишет сам Claude",
+        "en": "How the Claude Code team reviews code that Claude itself writes 90% of"
+      },
+      "summary": {
+        "ru": "15 октября инженеры Anthropic (Эдди Османи, Морган Уэстли Лант, Цин Ван) опубликовали разбор того, как устроено ревью кода внутри команды Claude Code — притом что сам Claude пишет около 90% кода продукта. Процесс выстроен в семь слоёв: самопроверка агентом, ревью диффа отдельным субагентом со свежим контекстом, параллельные агенты поиска багов, обязательное блокирующее ревью безопасности, обязательный CI, риск-ориентированное человеческое одобрение и merge queue с поэтапным раскатыванием и быстрым откатом. Прошлые инциденты используются как eval-датасет: изменения в процессе ревью, которые снижают на нём качество, отклоняются. По отчётным данным Anthropic, доля PR, проходящих ревью с первого раунда, выросла с 65% до 78%, а доля PR, требующих пять и более раундов, упала с 8,9% до 1,5%.",
+        "en": "On October 15, Anthropic engineers (Addy Osmani, Morgan Westlee Lunt and Qing Wang) published a breakdown of how code review works inside the Claude Code team — in a codebase where Claude itself writes about 90% of the code. The process runs in seven layers: agent self-verification, a fresh-context subagent reviewing the diff, parallel bug-hunting agents, a mandatory blocking security review, required CI, risk-tiered human approval, and a merge queue with staged rollout and fast rollback. Past incidents double as an eval set: process changes that lower the score against it get dropped. By Anthropic's own reported figures, the share of PRs passing review in one round rose from 65% to 78%, while PRs needing five or more rounds fell from 8.9% to 1.5%."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Готовый, воспроизводимый шаблон многоуровневого ревью (агент → субагент → риск-гейт → человек) для команд, у которых доля кода от агентов уже велика — заметно меняет организацию процесса разработки для таких команд, хотя пока это описание внутренней практики одной компании, а не общепринятый стандарт.",
+        "en": "A ready, reproducible template for layered review (agent → subagent → risk gate → human) for teams where agent-written code is already a large share of the codebase — a meaningful change to how such teams organize development, though for now it's one company's internal practice, not yet an industry standard."
+      },
+      "source_url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Низкорисковые изменения (например, документация) автоматически попадают в merge после прохождения проверок без обязательного одобрения человека, а биллинг, автообновление и CI-воркфлоу всегда требуют ручного одобрения — пример разделения PR по риск-тирам на практике.",
+            "en": "Low-risk changes (e.g. docs) auto-merge once checks pass without mandatory human approval, while billing, the auto-updater and CI workflows always require manual sign-off — a concrete example of risk-tiering PRs in practice."
+          },
+          "url": "https://claude.dev/blog/solving-code-review-at-anthropic/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-21-willison-battle-drones",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Battle Drones — вайб-кодинговая RTS с мультиплеером по звуку",
+        "en": "Battle Drones — a vibe coded RTS with audio-based multiplayer"
+      },
+      "url": "https://simonwillison.net/2026/Oct/20/battledrones/",
+      "summary": {
+        "ru": "Подробный разбор того, как Уиллисон довёл игру, собранную почти полностью кодовыми агентами, от скучного прототипа до увлекательной RTS: пошаговая эскалация промтов, режим Ultracode для масштабных рефакторингов за ночь, встраивание шага критики в сам промт перед реализацией и мультиплеер через аудиосигналы между устройствами.",
+        "en": "A detailed account of how Willison took a game built almost entirely by coding agents from a boring prototype to a genuinely fun RTS: step-by-step prompt escalation, Ultracode mode for overnight large-scale refactors, building a critique step into the prompt before implementation, and multiplayer via audio signals between devices."
+      },
+      "note_page": "notes/articles/willison-battle-drones-vibe-coded-rts.html"
+    },
+    {
+      "id": "2026-10-21-goodfire-neural-networks-clean",
+      "type": "article",
+      "author": "Nick Cammarata (Goodfire)",
+      "title": {
+        "ru": "Нейросети уже чисты",
+        "en": "Neural Networks Are Already Clean"
+      },
+      "url": "https://www.goodfire.ai/blog/neural-networks-are-already-clean",
+      "summary": {
+        "ru": "Рабочая гипотеза о том, что нейроны моделей интерпретируемы гораздо лучше, чем принято считать: пересмотр классических «полисемантичных» примеров и аудит Qwen3-32B, показавший, что около 90% нейронов имеют одну основную функцию — против ~1,7% по прежней оценке 2023 года.",
+        "en": "A working hypothesis that model neurons are far more interpretable than commonly assumed: a re-examination of classic 'polysemantic' examples plus a Qwen3-32B audit finding roughly 90% of neurons have one main job — versus a prior 2023 estimate of about 1.7%."
+      },
+      "note_page": "notes/articles/goodfire-neural-networks-already-clean.html"
+    },
+    {
+      "id": "2026-10-21-alexwang-transformers-memory",
+      "type": "article",
+      "author": "Alex Wang",
+      "title": {
+        "ru": "Трансформер можно изобрести по памяти",
+        "en": "You could have invented transformers from memory"
+      },
+      "url": "https://alexwang.ai/posts/associative-memory/",
+      "summary": {
+        "ru": "Построение self-attention с нуля из идеи ассоциативной памяти: от простого хранилища на внешнем произведении (ёмкость ~64 пары) через least-squares и squared-ReLU (~2700 пар) к softmax-вниманию (~1,2 млн пар) — объяснение, зачем нужна каждая часть архитектуры.",
+        "en": "Building self-attention from scratch out of the associative-memory idea: from a simple outer-product store (~64-pair capacity) through least-squares and squared-ReLU (~2,700 pairs) to softmax attention (~1.2M pairs) — an explanation of why each architectural piece exists."
+      },
+      "note_page": "notes/articles/alexwang-transformers-from-memory.html"
+    },
+    {
+      "id": "2026-10-21-mercor-benchmark-map",
+      "type": "article",
+      "author": "Mercor Research",
+      "title": {
+        "ru": "Карта бенчмарков экономики США",
+        "en": "Benchmark Map of the US Economy"
+      },
+      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+      "summary": {
+        "ru": "Сопоставление 29 публичных ИИ-бенчмарков с профессиями и задачами O*NET: около 90% рабочих часов в экономике США приходится на задачи, плохо покрытые существующими бенчмарками — только 208 из 923 профессий имеют хотя бы одну хорошо измеренную задачу.",
+        "en": "Mapping 29 public AI benchmarks against O*NET occupations and tasks: roughly 90% of US working hours fall on tasks poorly covered by existing benchmarks — only 208 of 923 occupations have even one well-measured task."
+      },
+      "note_page": "notes/articles/mercor-benchmark-map-us-economy.html"
+    }
+  ]
+}

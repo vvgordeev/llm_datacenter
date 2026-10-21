@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-21",
+      "news_count": 3,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Claude раскрывает происхождение сид-значений кривых NIST ECDSA — загадке 25 лет",
+        "en": "Claude uncovers the origin of NIST ECDSA curve seeds — a 25-year-old mystery"
+      }
+    },
+    {
       "date": "2026-10-20",
       "news_count": 0,
       "expert_count": 1,

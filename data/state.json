@@ -70,13 +70,6 @@
         "ru": "Anthropic открыла биолабораторию; 950 агентов Claude автономно нашли неописанную ферментную систему (ART) с CRISPR-подобным массивом повторов в ДНК бактериофагов, функция пока не известна."
       }
     },
-    "anthropic-claude-code-2-1-238": {
-      "last_date": "2026-08-21",
-      "summary": {
-        "en": "Claude Code 2.1.238 (August 20): fixed memory leak in long sessions, keybindingFlavor, headersHelper for marketplaces, self-hosted runner flags for spot instances and egress proxies",
-        "ru": "Claude Code 2.1.238 (20 августа): исправлена утечка памяти в длинных сессиях, keybindingFlavor, headersHelper для маркетплейсов, флаги self-hosted runner для spot-инстансов и egress-прокси"
-      }
-    },
     "anthropic-claude-code-2-1-239": {
       "last_date": "2026-08-22",
       "summary": {
@@ -103,6 +96,13 @@
       "summary": {
         "en": "Claude Code 2.1.277 (September 18): AGENTS.md fallback support, a variable for gateway proxies with a single egress boundary, a headers map, a UI note for a finished background task, a fix for claude -p hanging.",
         "ru": "Claude Code 2.1.277 (18 сентября): поддержка AGENTS.md как fallback, переменная для прокси-шлюзов с единой границей egress, карта headers, UI-пометка готовой фоновой задачи, фикс зависания claude -p."
+      }
+    },
+    "anthropic-claude-code-internal-review": {
+      "last_date": "2026-10-21",
+      "summary": {
+        "en": "Anthropic publishes a breakdown of the Claude Code team's seven-layer internal code review process (Claude writes 90% of the code).",
+        "ru": "Anthropic публикует разбор семислойного процесса ревью кода внутри команды Claude Code (90% кода пишет сам Claude)."
       }
     },
     "anthropic-claude-code-mods": {
@@ -145,6 +145,13 @@
       "summary": {
         "en": "Anthropic published an account of how WHO AFRO, CEPI and DRC's INRB are using Claude in the response to a Bundibugyo-virus (Ebola) outbreak in eastern Democratic Republic of Congo. A Claude skill automatically extracts case and lab figures from district-level PowerPoint decks, compares them against previous reports, and flags trend changes — cutting situation-report preparation from a full day to under an hour. Claude also lets teams run multiple epidemiological models at once for logistics planning (previously limited to one model due to time constraints), organizes scattered vaccine-candidate data into dashboards, and validates disease 'line lists' describing cases by person, place and time. Separately, Claude Science lets scientists assemble viral genomes from sequencing data using plain-language prompts instead of specialized bioinformatics code.",
         "ru": "Anthropic опубликовала разбор того, как ВОЗ-AFRO, CEPI и конголезский INRB применяют Claude в ответ на вспышку вируса Бундибугио (Эбола) на востоке ДР Конго. Навык Claude автоматически извлекает данные о случаях и лабораторных результатах из PowerPoint-презентаций районных штабов, сравнивает их с прошлыми отчётами и отмечает изменения трендов — это сократило подготовку ситуационного отчёта с целого дня до менее часа. Claude также позволяет одновременно прогонять несколько эпидемиологических моделей для логистического планирования (раньше из-за нехватки времени использовали только одну), сводит разрозненные данные по кандидатным вакцинам в дашборды и проверяет данные построчных списков заболевших. Отдельно Claude Science даёт учёным собирать геномы вируса из данных секвенирования обычными текстовыми запросами вместо специализированного биоинформатического кода."
+      }
+    },
+    "anthropic-claude-ecdsa-curve-origins": {
+      "last_date": "2026-10-21",
+      "summary": {
+        "en": "Claude traces the origin of NIST ECDSA curve seeds (lrand48 generator + Unix timestamp), closing a 25-year-old mystery.",
+        "ru": "Claude находит происхождение сид-значений кривых NIST ECDSA (генератор lrand48 + unix-таймстамп), закрывая 25-летнюю загадку."
       }
     },
     "anthropic-claude-for-government-ga": {
@@ -540,6 +547,13 @@
         "ru": "Meta Superintelligence Labs опубликовала шесть исследовательских работ, написанных в соавторстве практикующими математиками и Muse Spark 1.1/1.2 — без какой-либо кастомной исследовательской обвязки или агентского харнесса, просто через обычный чат Meta.ai в режиме Thinking. Пять из шести статей решают действительно открытые проблемы: точный порог для подгонки гауссовых эллипсоидов (теория вероятностей), коллапс за конечное время для массово-критического бигармонического НУШ (вопрос открыт с 2015 года), контрпример из 384 элементов к гипотезе 2024 года, найденный через сгенерированный моделью код поиска на GAP (теория групп), а также результаты в оптимизации, арифметической физике и неассоциативной алгебре. Математики сами выбирали задачи и несут ответственность за итоговые доказательства; каждую статью рецензировала отдельная группа математиков, а в тексте помечено, какие фрагменты написаны людьми, а какие — моделью."
       }
     },
+    "meta-muse-spark-open": {
+      "last_date": "2026-10-21",
+      "summary": {
+        "en": "Meta releases Muse Spark Open weights (816B, 1M context) under a separate Muse Model License with a revenue-gated clause.",
+        "ru": "Meta открывает веса Muse Spark Open (816B, 1M контекст) под отдельной лицензией Muse Model License с порогом по выручке."
+      }
+    },
     "meta-muse-wonder-frontier-model": {
       "last_date": "2026-10-13",
       "summary": {
@@ -636,13 +650,6 @@
       "summary": {
         "en": "The Hacktron AI team (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) chained a heap-overflow bug in the libheif image decoder — via HEIC uploads on OpenAI's Discourse-based forum — with an SSO misconfiguration to reach the company's internal GitHub, Outlook and Slack within 72 hours, spending under $3,000 in AI tokens. Notably, the prior model Claude Opus 4.8 couldn't get a working exploit past memory protections, while Opus 5 produced one within hours of its release. This was authorized research: the team proved access with a harmless pull request and stopped; OpenAI confirmed the report, paid a $6,500 bounty, and patched the vulnerabilities.",
         "ru": "Команда Hacktron AI (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) связала уязвимость переполнения кучи в декодере libheif — через загрузку HEIC-изображений на форуме OpenAI на Discourse — с ошибкой конфигурации SSO и за 72 часа добралась до внутреннего GitHub, Outlook и Slack компании, потратив менее $3000 в токенах. Показательно, что предыдущая модель Claude Opus 4.8 не смогла собрать рабочий эксплойт против защиты памяти, а Opus 5 справилась в течение нескольких часов после своего релиза. Это была авторизованная исследовательская работа: команда доказала доступ безобидным pull request'ом и остановилась; OpenAI подтвердила отчёт, заплатила $6500 по bug bounty и закрыла уязвимости."
-      }
-    },
-    "openai-chatgpt-apple-messages": {
-      "last_date": "2026-08-21",
-      "summary": {
-        "en": "ChatGPT (desktop, Apple Silicon) gets an Apple Messages plugin: searching, reading, and sending iMessage/SMS/RCS inside ChatGPT Work and Codex, with per-message or per-conversation approval",
-        "ru": "ChatGPT (desktop, Apple Silicon) получает плагин Apple Messages: поиск, чтение и отправка iMessage/SMS/RCS внутри ChatGPT Work и Codex, с подтверждением на сообщение или на беседу"
       }
     },
     "openai-chatgpt-images-2-5": {
@@ -870,7 +877,6 @@
   "seen_urls": {
     "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
     "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/": "2026-10-05",
-    "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/": "2026-08-21",
     "https://9to5mac.com/2026/08/28/chatgpt-and-codex-now-support-multiple-gmail-and-google-calendar-accounts/": "2026-08-29",
     "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/": "2026-09-17",
     "https://about.fb.com/news/2026/09/introducing-muse-small-business/": "2026-09-30",
@@ -879,6 +885,7 @@
     "https://ai.meta.com/muse/": "2026-09-09",
     "https://aistudio.google.com/learn/managed-agents-updated-harness-files-credentials": "2026-09-25",
     "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/": "2026-10-04",
+    "https://alexwang.ai/posts/associative-memory/": "2026-10-21",
     "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
     "https://andonlabs.com/blog/why-we-built-pion": "2026-09-15",
     "https://anil.recoil.org/notes/rumour-is-the-exploit": "2026-08-29",
@@ -903,6 +910,7 @@
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-26",
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17",
     "https://claude.com/resources/articles/dashboards-and-motion": "2026-10-12",
+    "https://claude.dev/blog/solving-code-review-at-anthropic/": "2026-10-21",
     "https://code.claude.com/docs/en/changelog": "2026-09-19",
     "https://cognition.com/blog/swe-2": "2026-09-14",
     "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726": "2026-08-23",
@@ -927,7 +935,6 @@
     "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross": "2026-09-03",
     "https://ghuntley.com/agency/": "2026-10-16",
     "https://github.com/Tencent-Hunyuan/Hy4-preview": "2026-09-01",
-    "https://github.com/anthropics/claude-code/releases/tag/v2.1.238": "2026-08-21",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.247": "2026-08-27",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.260": "2026-09-05",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.261": "2026-09-07",
@@ -965,13 +972,13 @@
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
     "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html": "2026-09-07",
-    "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/": "2026-08-21",
     "https://simonwillison.net/2026/Aug/21/stop-making-tuis/": "2026-08-30",
     "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/": "2026-08-23",
     "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/": "2026-08-26",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
     "https://simonwillison.net/2026/Oct/1/matthew-green/": "2026-10-03",
     "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/": "2026-10-19",
+    "https://simonwillison.net/2026/Oct/20/battledrones/": "2026-10-21",
     "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/": "2026-10-04",
     "https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/": "2026-10-06",
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
@@ -1008,6 +1015,7 @@
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
+    "https://thenewstack.io/meta-muse-spark-open/": "2026-10-21",
     "https://thezvi.substack.com/p/ai-182-pause-for-reflection": "2026-08-22",
     "https://thezvi.substack.com/p/ai-183-pre-post-mortem": "2026-08-28",
     "https://thezvi.substack.com/p/ai-184-post-post-mortem": "2026-09-05",
@@ -1026,7 +1034,6 @@
     "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/": "2026-10-07",
     "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html": "2026-08-26",
     "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html": "2026-10-05",
-    "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/": "2026-08-21",
     "https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078": "2026-09-25",
     "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-plugin-amazon-quick-claude": "2026-09-25",
     "https://www.air.security/blog-posts/plugin4shell": "2026-09-21",
@@ -1046,6 +1053,7 @@
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-29",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-30",
     "https://www.anthropic.com/research/claude-shaped-science": "2026-10-02",
+    "https://www.anthropic.com/research/ecdsa-curve-origins": "2026-10-21",
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-06",
     "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-10-05",
     "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents": "2026-09-28",
@@ -1059,6 +1067,7 @@
     "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship": "2026-09-20",
     "https://www.cnn.com/2026/09/19/business/gemini-ai-hack-internet": "2026-09-20",
     "https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html": "2026-08-26",
+    "https://www.goodfire.ai/blog/neural-networks-are-already-clean": "2026-10-21",
     "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf": "2026-09-13",
     "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
@@ -1077,6 +1086,7 @@
     "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent": "2026-09-07",
     "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/": "2026-09-12",
     "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/": "2026-10-04",
+    "https://www.mercor.com/research/labor-index/benchmark-map/": "2026-10-21",
     "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/": "2026-09-25",
     "https://www.metacurity.com/openai-fires-three-safety-researchers-over-alleged-information-leaks/": "2026-10-04",
     "https://www.neowin.net/news/google-replaces-chat-side-panel-with-new-ask-gemini-integration/": "2026-08-26",
@@ -1144,9 +1154,9 @@
     "https://x.com/plotarmordev/status/2097247035099640216": "2026-09-09",
     "https://x.com/thlarsen/status/2098544270361964576": "2026-09-12",
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
-    "notes/articles/404media-amazon-rare-books-ai-training.html": "2026-08-21",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
     "notes/articles/ai-is-mass-decompiling-games.html": "2026-10-19",
+    "notes/articles/alexwang-transformers-from-memory.html": "2026-10-21",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
@@ -1154,6 +1164,7 @@
     "notes/articles/garymarcus-anthropic-revenue-doubts.html": "2026-08-24",
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
     "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
+    "notes/articles/goodfire-neural-networks-already-clean.html": "2026-10-21",
     "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
     "notes/articles/latentspace-ainews-astra-biggest-launch.html": "2026-09-05",
     "notes/articles/latentspace-airbnb-inside-out-ai.html": "2026-10-06",
@@ -1164,6 +1175,7 @@
     "notes/articles/madhavapeddy-bugonomics-rumour-exploit.html": "2026-08-29",
     "notes/articles/marcus-astra-recurrent-depth-red-alert.html": "2026-09-03",
     "notes/articles/marcus-two-rays-of-hope.html": "2026-09-12",
+    "notes/articles/mercor-benchmark-map-us-economy.html": "2026-10-21",
     "notes/articles/mollick-dot-and-the-swarm.html": "2026-10-02",
     "notes/articles/mollick-which-ai-to-use-summer-2026.html": "2026-09-06",
     "notes/articles/morrell-extensible-software-llms.html": "2026-08-26",
@@ -1181,10 +1193,10 @@
     "notes/articles/willison-anthropic-revenue-ramp-index.html": "2026-08-26",
     "notes/articles/willison-astra-pelican-grid.html": "2026-09-05",
     "notes/articles/willison-astra-running-routes.html": "2026-09-13",
+    "notes/articles/willison-battle-drones-vibe-coded-rts.html": "2026-10-21",
     "notes/articles/willison-blender-coding-agents-macos.html": "2026-09-06",
     "notes/articles/willison-blender-viewer-faberge.html": "2026-09-11",
     "notes/articles/willison-chatgpt-images-2-5.html": "2026-09-09",
-    "notes/articles/willison-chatgpt-site-operator-fanouts.html": "2026-08-21",
     "notes/articles/willison-claude-system-prompt-diff.html": "2026-09-03",
     "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
     "notes/articles/willison-fable-5-1-pelican.html": "2026-09-02",

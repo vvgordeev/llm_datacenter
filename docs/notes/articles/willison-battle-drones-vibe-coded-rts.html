@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Battle Drones — вайб-кодинговая RTS с мультиплеером по звуку» — Simon Willison — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-10-20</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-10-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Battle Drones — вайб-кодинговая RTS с мультиплеером по звуку</span>
+      <span data-lang="en">Battle Drones — a vibe coded RTS with audio-based multiplayer</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/20/battledrones/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон почти не пишет кода для своей новой игры Battle Drones — стратегии в реальном времени в духе Command &amp; Conquer, которую он собирает целиком «вайб-кодингом»: формулирует задачу на естественном языке и отдаёт её кодовым агентам (в основном Claude Code), почти не читая результат. За 12 крупных итераций и 321 коммит агентов игра прошла путь от едва играбельного прототипа до браузерной RTS с шестью картами, боевыми роботами-мехами и мультиплеером между двумя телефонами, синхронизирующими состояние игры через звук. Статья — не столько про саму игру, сколько про метод: как по шагам довести «вайб-кодинговый» проект до состояния, в котором в него реально интересно играть.</span>
+      <span data-lang="en">Simon Willison has reviewed almost none of the code behind his new game Battle Drones, a Command &amp; Conquer-style real-time strategy game he built entirely through "vibe coding" — describing what he wants in plain language and handing it to coding agents (mostly Claude Code) without reading most of the output. Across 12 major iterations and 321 agent commits, the game went from a barely playable prototype to a browser-based RTS with six maps, giant mech units and multiplayer between two phones that synchronize game state over audio. The piece is less about the game itself than about the method: how to steer a vibe-coded project, step by step, into something actually fun to play.</span>
+    </p>
+
+    <h2><span data-lang="ru">От прототипа к «сделай это намного веселее»</span><span data-lang="en">From prototype to "make it a lot more fun"</span></h2>
+    <p>
+      <span data-lang="ru">Первая версия (ещё на Claude Fable 5, июль) получилась узнаваемой RTS — со зданиями, выбором юнитов и примитивным ИИ-соперником, — но откровенно скучной. Следующие итерации добавляли полноценные спрайты (Claude сам прогенерировал их через OpenAI Image Generation API) и более разнообразный рельеф, однако играть по-прежнему было не увлекательно: модели хорошо строят то, что выглядит как игра, но не делают её по-настоящему затягивающей. Поворотной стала четвёртая итерация: Уиллисон, уже на Claude Opus 5.5, отдал агенту единственную инструкцию — «Сделай это намного веселее» — и запустил её в режиме Ultracode (динамические воркфлоу Claude Code, оркеструющие множество субагентов параллельно). Прогон занял всю ночь, но агент провёл более тысячи симулированных тестовых партий, перебалансировал юниты и добавил сразу набор фич: вступительный выбор стратегии, «спецспособности» (баррaж, ЭМИ, десант), трофеи и ландшафтные объекты для захвата. По метрикам из собственного отчёта агента, доля «подвисших» на 25 минут партий упала с 14% до 0,9%, а доля камбэков со отставания в 800+ ресурсов выросла с 24% до 46% — то есть промт «просто сделай веселее» на практике обернулся системной перебалансировкой всей игры.</span>
+      <span data-lang="en">Version one (built on Claude Fable 5 back in July) was a recognizable RTS — buildings, unit selection, a basic AI opponent — but honestly boring. The next iterations added full sprite art (Claude generated it itself via the OpenAI Image Generation API) and more varied terrain, yet it still wasn't fun: models are good at building something that looks like a game without making it genuinely compelling to play. The turning point was version four: now on Claude Opus 5.5, Willison gave the agent a single instruction — "This game isn't fun enough yet. Make it a LOT more fun" — and ran it in Ultracode mode (Claude Code's dynamic workflows, which orchestrate many subagents at once). The run took all night, but the agent played out more than a thousand simulated test matches, rebalanced the units, and shipped a whole batch of features: opening strategic choices, call-down powers (barrage, EMP, airdrops), salvage objectives and capturable terrain features. By the agent's own self-written release notes, games still undecided after 25 minutes fell from 14% to 0.9%, while comebacks from an 800+ resource deficit rose from 24% to 46% — the one-line prompt "make it more fun" turned, in practice, into a systematic rebalance of the whole game.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: брейншторм, критика, потом строим</span><span data-lang="en">The method: brainstorm, critique, then build</span></h2>
+    <p>
+      <span data-lang="ru">Дальше Уиллисон последовательно наращивал сложность задач, каждый раз меняя стиль промта под масштаб изменений. Для портирования игры в 3D (Three.js) хватило одной строки. А для новой карты «Архипелаг» с механикой, вынуждающей использовать десантные юниты и транспортные самолёты, он написал развёрнутый промт с описанием ограничений (ресурсы на изолированных островах, добраться до которых можно только по воздуху) и явно попросил агента: «Сначала изучи вопрос и раскритикуй дизайн. Строй только после того, как мы согласуем правки» — то есть встроил в сам промт шаг ревью перед реализацией. Похожим образом гигантские боевые мехи «Голиаф» появились через серию коротких брейнсторм-промтов, в которых Уиллисон на каждом шаге уточнял одну деталь (как мех теряет оружие при повреждениях, как его может поднять пара десантных самолётов), а не пытался описать всю фичу сразу.</span>
+      <span data-lang="en">From there Willison kept raising the complexity of what he asked for, matching the prompt's style to the size of the change. Porting the game to 3D (Three.js) took a single line. For a new "Archipelago" map built around a mechanic that forces players to use infantry and troop-carrying aircraft, he wrote a long prompt spelling out the constraints (resources on islands reachable only by air) and explicitly told the agent: "First research and then critique this design. Only build after we have agreed on any modifications" — building a review step into the prompt itself before any implementation. The giant "Goliath" mech units appeared the same way, through a series of short brainstorming prompts where Willison refined one detail at a time (how the mech loses weapons as it takes damage, how a pair of transport aircraft can carry it) instead of describing the whole feature up front.</span>
+    </p>
+
+    <h2><span data-lang="ru">LLM против LLM и мультиплеер по звуку</span><span data-lang="en">LLM vs. LLM, and multiplayer over sound</span></h2>
+    <p>
+      <span data-lang="ru">Одна из самых необычных фич — режим «битвы агентов», в котором разные модели (например, Claude Opus 5.5 и GPT-6 Sol) играют друг против друга: каждая получает инструмент с информацией об игре (без визуального канала, только то, что видно сквозь туман войны) и управляет своей армией через вызовы этого инструмента. Opus 5.5 сам написал техническое предложение по этой механике, реализовал и протестировал её, включая запись и воспроизведение партий для разбора. Последняя на момент публикации фича — мультиплеер между двумя устройствами в радиусе слышимости микрофона: игра кодирует состояние в звуковые сигналы, как в более раннем эксперименте Уиллисона Chirp Pong. Решение осознанно отказывается от сервера: автор предпочитает статический HTML, который ничего не стоит в хостинге и не требует поддержки, — а когда звуковой мультиплеер дал партнёрше автора головную боль от высокочастотных «модемных» звуков, агент за один проход добавил запасной вариант: сетевой мультиплеер через минимальный WebSocket-релей на Fly.io ценой около $2,19 в месяц.</span>
+      <span data-lang="en">One of the more unusual features is an "agent battles" mode where different models — say, Claude Opus 5.5 and GPT-6 Sol — play against each other: each gets a tool exposing game state (no visual channel, only what's visible through fog of war) and controls its army by calling that tool. Opus 5.5 wrote its own technical proposal for the mechanic, then implemented and tested it, including recording and replaying matches for later analysis. The newest feature as of publication is multiplayer between two devices within microphone range of each other: the game encodes state as audio signals, extending an earlier Willison experiment called Chirp Pong. The choice is deliberate — he prefers static HTML that costs nothing to host and needs no upkeep — but when the audio multiplayer gave his partner a headache from the high-pitched "modem" sounds, the agent added a fallback in a single pass: online multiplayer through a minimal stateless WebSocket relay on Fly.io, costing around $2.19 a month.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что из этого стоит взять с собой</span><span data-lang="en">Takeaways worth keeping</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон честно признаёт неловкость от результата: он почти ничего не понимает в геймдеве и не проверял большую часть кода, но получил вещь, которая реально работает и которую не стыдно показать. Из конкретных наблюдений: статический HTML/WebGL (Three.js, ранее Phaser) — отличная платформа для таких экспериментов, в том числе потому что получившаяся игра бесплатно становится оффлайн-доступным PWA; для воспроизводимости реплеев и синхронного мультиплеера пришлось заменить `Math.sin`/`Math.cos` на детерминированные версии, потому что разные браузеры дают чуть разные значения; а дополнительные отладочные инструменты (замер пропускной способности звукового канала, просмотрщик 3D-моделей, дебаггер реплеев) агент генерировал «бесплатно», по ходу дела, даже без явного запроса.</span>
+      <span data-lang="en">Willison is candid about feeling a bit of guilt over the result: he knows almost nothing about game development and reviewed almost none of the code, yet ended up with something that actually works and that he isn't embarrassed to show people. Concrete takeaways: static HTML/WebGL (Three.js, Phaser before it) is a great platform for this kind of experiment, partly because the resulting game becomes an offline-capable PWA for free; getting deterministic replays and synchronized multiplayer required swapping `Math.sin`/`Math.cos` for custom deterministic versions, since different browsers return slightly different values; and extra debugging tools (a bandwidth probe for the audio channel, a 3D model browser, a replay debugger) came "for free" along the way, generated by the agent without being explicitly asked for.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

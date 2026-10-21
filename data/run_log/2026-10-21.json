@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T07:05:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (anthropic.com/news)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Прямой WebFetch успешен. Последний пост в ленте — «Investing in the public benefit» (18 окт) — governance/филантропия, без продуктовой части, отклонён. 2 WebSearch-запроса по анонсам/фичам ничего нового в окне 36ч не добавили."
+    },
+    {
+      "source": "openai blog (openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND (DNS-уровень). 2 WebSearch-запроса — GPT-6 rollout (7-8 окт) уже отражён ранее, ничего нового в окне."
+    },
+    {
+      "source": "google/deepmind blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — Gemini 4 статус (пост-тренинг) уже отражён ранее (1 окт), ничего нового и подтверждённого в окне."
+    },
+    {
+      "source": "meta ai blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch по meta.ai/blog ничего в окне 36ч не дал; Muse Spark Open найден позже через широкий проход (см. ниже), событие от 15 окт — вне строгого окна, включено при расширении поиска."
+    },
+    {
+      "source": "xai news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — Grok Imagine Video 1.5 Lite (8 окт), SDK (2 окт) вне окна и уже не новы; Grok 5 не подтверждён."
+    },
+    {
+      "source": "mistral news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — Mistral Large 4 (6-11 окт) уже отражён ранее, ничего нового."
+    },
+    {
+      "source": "deepseek news",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: ENOTFOUND. WebSearch нашёл DeepSeek-V4.1-Flash-1017 (17 окт) — проверено: событие уже опубликовано 18 окт (data/daily/2026-10-18.json, кластер deepseek-v4-1-flash-beta), отклонено как дубль."
+    },
+    {
+      "source": "AI News (smol.ai)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND."
+    },
+    {
+      "source": "TLDR AI",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com)",
+      "status": "error",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. Прямой API недоступен."
+    },
+    {
+      "source": "Hacker News (через сторонний GitHub-дайджест agents-radar)",
+      "status": "ok",
+      "candidates": 16,
+      "note": "github.com доступен напрямую. Issue с дайджестом HN-историй за 2026-10-19 дал 16 кандидатов со ссылками, score и comment count. Из них выбрано 2 новых непубликовавшихся продуктовых/исследовательских события (Muse Spark Open, ECDSA curve origins — оба первоисточника независимо провалидированы WebFetch/WebSearch) + 1 методологический пост (Claude Code review process, провалидирован через claude.com/blog и 3 независимых вторичных источника). Остальные 13 — либо уже опубликованы ранее (DeepSeek V4.1-Flash-1017, Gemini 4 Argon StarCraft-демо — продолжение кластера google-gemini-4-post-training, решено не дублировать как отдельную новость из-за низкой значимости), либо не по критериям (политика/безопасность/финансы), либо стали материалом для экспертной секции (Cammarata/Goodfire, Alex Wang, Mercor)."
+    },
+    {
+      "source": "Reddit / X community",
+      "status": "ok (только WebSearch)",
+      "candidates": 0,
+      "note": "r/LocalLLaMA — только сторонние снапшоты без подтверждённых дат в окне."
+    },
+    {
+      "source": "расширенный проход (<5 кандидатов после основного прохода)",
+      "status": "ok",
+      "candidates": 3,
+      "note": "«AI news October 20/21 2026», «most popular Hacker News AI post October 19 20 2026», «best AI article this week» — дали зацепку на GitHub-дайджест agents-radar (см. выше), откуда и взяты 3 опубликованные новости и часть экспертного контента."
+    },
+    {
+      "source": "Simon Willison (simonwillisonblog-backup, github-зеркало)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "simonwillison.net напрямую ENOTFOUND, github-зеркало доступно (git clone --depth 1). Проверены blog_entry/blog_blogmark/blog_note/blog_quotation за 2026-10-14..21: новый материал — статья «Battle Drones» (20 окт, полный текст получен из дампа). Остальное в окне уже опубликовано ранее (My obituary for programming — 19/20 окт, Redesigning source control — 14 окт) или не по теме (eMudhra CA compromise, Python 3.15)."
+    },
+    {
+      "source": "Goodfire blog",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch goodfire.ai: ENOTFOUND. Содержание эссе Cammarata восстановлено через WebSearch/вторичные источники (fourweekmba.com, ai-tldr.dev, explainx.ai) — согласованные цифры (90%, ~1.7% в 2023) у нескольких независимых источников."
+    },
+    {
+      "source": "alexwang.ai",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: ENOTFOUND. Содержание восстановлено через WebSearch (конкретные числа ёмкости хранилищ — 64/~2700/~1.2M — совпадают у источника и у независимой академической линии работ)."
+    },
+    {
+      "source": "mercor.com",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: ENOTFOUND. Содержание восстановлено через WebSearch (несколько независимых пересказов: redreamality.com, runtimewire.com, zeli.app — цифры 90%, 208/923 совпадают)."
+    },
+    {
+      "source": "Andrej Karpathy (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com целиком ENOTFOUND. WebSearch: по косвенным данным (X-посты фанатов) канал не обновлялся видео уже больше года — активных кандидатов нет."
+    },
+    {
+      "source": "AI Explained (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com ENOTFOUND; WebSearch — ничего конкретного за октябрь с проверяемым URL и датой."
+    },
+    {
+      "source": "Matt Wolfe (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com ENOTFOUND; WebSearch нашёл заголовок ролика от 16 окт («All The AI News You Missed From The Past Week») на стороннем агрегаторе futuretools.io, но без доступного URL/транскрипта для конспекта — не включено, чтобы не выдумывать содержание."
+    },
+    {
+      "source": "Nate Herk (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com ENOTFOUND; WebSearch — последний подтверждённый ролик старше окна (конец августа)."
+    },
+    {
+      "source": "Matt Pocock (YouTube RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com ENOTFOUND; WebSearch нашёл ролик от 9 окт («Ship like the best engineers»), но это за пределами 7-дневного окна экспертной секции — не включено."
+    },
+    {
+      "source": "Latent Space",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "latent.space ENOTFOUND. WebSearch — последний найденный пост (NYC meetup, 10 окт) не по теме подходов к LLM, платный."
+    },
+    {
+      "source": "Ethan Mollick / One Useful Thing",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "oneusefulthing.org и oneusefulthing.substack.com — ENOTFOUND. WebSearch — только анонс книги Co-Existence (выход 20 окт), не пост в блоге с конкретным URL материала."
+    }
+  ],
+  "totals": {
+    "candidates": 24,
+    "published": 7,
+    "rejected": {
+      "уже опубликовано ранее (DeepSeek V4.1-Flash-1017, Redesigning source control, My obituary for programming)": 3,
+      "финансы/governance без продукта (Anthropic public benefit fund)": 1,
+      "низкая значимость/демо, решено не дублировать существующий кластер (Gemini 4 Argon играет в StarCraft)": 1,
+      "не по критериям — политика/безопасность без продуктовой части (AI safety bill, websites blocking agents, Terry Tao/math crisis)": 3,
+      "неподтверждённый URL/контент для конспекта (Matt Wolfe weekly roundup)": 1,
+      "вне 7-дневного окна экспертной секции (Matt Pocock Oct 9, Ethan Mollick anonce без поста)": 2,
+      "неподтверждённые/противоречивые слухи без первоисточника, не считались отдельными кандидатами (Grok 5, Gemini 4 Pro октябрьский релиз, предиктивные рынки)": 0
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — ни один видео-кандидат не подтверждён URL/транскриптом в допустимом окне (youtube.com полностью недоступен на уровне DNS: RSS, прямой WebFetch, вероятно и yt-dlp)",
+    "frames": "not used — видео-кандидатов нет",
+    "yt_dlp_install": "ok — pip install yt-dlp imageio-ffmpeg выполнен на шаге 0 (системный ffmpeg уже был, GEMINI_API_KEY присутствует), не понадобился из-за отсутствия видео-кандидатов"
+  },
+  "notes": "Сетевая деградация окружения сохраняется на уровне DNS ENOTFOUND почти для всех доменов (блоги моделей, youtube.com, hn.algolia.com, latent.space, oneusefulthing.org, simonwillison.net, goodfire.ai, alexwang.ai, mercor.com) — больше 1/3 обойдённых источников заблокированы напрямую, деградация окружения подтверждена и отмечается третий день подряд. Рабочие прямые каналы на этот раз шире, чем в прошлых прогонах: anthropic.com/news, claude.com/blog и github.com (включая зеркало блога Уиллисона и сторонний HN-дайджест agents-radar) — именно через github.com удалось обойти блокировку hn.algolia.com и найти реальные, датированные, независимо провалидированные кандидаты (Muse Spark Open, ECDSA curve origins, Claude Code review process), которых WebSearch сам по себе не находил из-за зашумлённости индекса. Для новостей это дало 3 публикации вместо ожидаемого нуля; для экспертной секции — 4 статьи (Willison, Cammarata/Goodfire, Alex Wang, Mercor), что НИЖЕ конфигурационного минимума limits.min_expert_total=5, несмотря на широкий проход по всем 8 экспертам конфига плюс расширенный поиск: видеоэкспертов (6 из 8 источников) подтвердить не удалось — либо канал не публиковал новое в окне (Karpathy — более года без видео), либо WebSearch не даёт точного URL/даты для конспекта (AI Explained, Nate Herk), либо найденный кандидат оказывается за пределами 7-дневного окна (Matt Pocock — 9 окт, на 3 дня старше допустимого). Решено не дотягивать до 5 искусственно (например, включив Matt Pocock с нарушением окна свежести или Mercor с натянутой квотой — хотя Mercor и так уже пограничный случай, это исследовательский отчёт компании, а не персональный блог эксперта, включён по правилу 'резонансные материалы недели' из SKILL.md) — качество и честность важнее количества. Рекомендация пользователю: сохраняется смысл добавить в allowlist egress-прокси хотя бы youtube.com (видео — системно самая слабая категория пайплайна уже третий прогон подряд) и ключевые блоги экспертов (simonwillison.net, oneusefulthing.org, goodfire.ai) — image GitHub остаётся надёжным обходным каналом только для контента, зеркалируемого на GitHub."
+}

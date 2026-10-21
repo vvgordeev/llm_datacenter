@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Карта бенчмарков против экономики США» — Mercor Research — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект исследования · Mercor Research · 2026-10-19</span>
+      <span data-lang="en">Research digest · Mercor Research · 2026-10-19</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Карта бенчмарков экономики США: 90% рабочих часов ИИ почти не измерен</span>
+      <span data-lang="en">Benchmark Map of the US Economy: 90% of work hours barely measured by AI benchmarks</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.mercor.com/research/labor-index/benchmark-map/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал исследования ↗</span><span data-lang="en">Original research ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Исследовательская команда Mercor сопоставила 29 публичных бенчмарков для ИИ-моделей с полным перечнем профессий и задач американского классификатора занятости O*NET — и получила результат, который стоит держать в голове при любом разговоре о том, «что ИИ уже умеет»: около 90% реальных рабочих часов в экономике США приходится на задачи, которые существующие бенчмарки покрывают плохо или не покрывают вовсе. Это не статья о конкретной модели, а материал о методе измерения прогресса LLM — ровно то, что нужно командам, выбирающим, каким цифрам о возможностях моделей можно доверять.</span>
+      <span data-lang="en">Mercor's research team mapped 29 public AI benchmarks against the full set of occupations and tasks in the US O*NET occupational taxonomy — and the result is worth keeping in mind in any conversation about "what AI can already do": roughly 90% of actual US working hours fall on tasks that existing benchmarks cover poorly or not at all. This isn't a piece about any one model; it's about the method for measuring LLM progress — exactly what teams need when deciding which capability numbers to trust.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как считали: бенчмарки против задач, а не против профессий целиком</span><span data-lang="en">The method: benchmarks against tasks, not whole occupations</span></h2>
+    <p>
+      <span data-lang="ru">Вместо того чтобы напрямую спрашивать «покрыт ли бенчмарками такой-то бенчмарк такую-то профессию», авторы разбивают каждую профессию из O*NET на составляющие задачи и сопоставляют каждую задачу с конкретными бенчмарками с помощью LLM-судьи, а затем проверяют качество этого сопоставления на подвыборке APEX, размеченной людьми-экспертами. Такой подход точнее грубой оценки «эта профессия в принципе про ИИ», но зависит от полноты списка из 29 бенчмарков и от качества самого LLM-судьи — авторы сами называют результат предварительным.</span>
+      <span data-lang="en">Rather than asking directly whether a given benchmark covers a given occupation, the authors break every O*NET occupation down into its component tasks and match each task to specific benchmarks using an LLM judge, then validate that matching against a human-expert-annotated subset called APEX. That's more precise than a blunt "is this occupation AI-relevant" judgment, but it depends on how complete the 29-benchmark list is and on the quality of the LLM judge itself — the authors themselves call the result provisional.</span>
+    </p>
+
+    <h2><span data-lang="ru">208 из 923 профессий имеют хоть одну хорошо покрытую задачу</span><span data-lang="en">Only 208 of 923 occupations have one well-covered task</span></h2>
+    <p>
+      <span data-lang="ru">Конкретные цифры жёстче общего вывода о 90% часов: только 208 из 923 профессий в классификаторе имеют хотя бы одну задачу, которую можно назвать хорошо покрытой существующими бенчмарками, а в шести из 22 крупных профессиональных семейств покрытия нет вовсе. Иначе говоря, разрыв не распределён равномерно по экономике — целые кластеры занятости остаются полностью «неизмеренными» при любом количестве новых цифр из MMLU, SWE-bench или подобных наборов.</span>
+      <span data-lang="en">The specific numbers are starker than the headline 90%-of-hours figure: only 208 of the 923 occupations in the taxonomy have even one task that counts as well covered by existing benchmarks, and six of the 22 major occupational families have no coverage at all. The gap, in other words, isn't spread evenly across the economy — whole clusters of jobs stay fully "unmeasured" no matter how many new numbers come out of MMLU, SWE-bench or similar suites.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что это значит и чего не значит</span><span data-lang="en">What it does and doesn't mean</span></h2>
+    <p>
+      <span data-lang="ru">Важная оговорка, которую отмечают и сторонние разборы материала: вывод не в том, что ИИ «не справляется» с 90% работы, — он в том, что по 90% рабочих часов просто нет стандартизированных свидетельств ни в одну, ни в другую сторону. Стоит учитывать и конфликт интересов: Mercor зарабатывает на продаже данных для оценки моделей, то есть коммерчески заинтересована в выводе о нехватке измерений. Тем не менее практический урок для команд, которые выбирают модель под конкретную задачу, звучит трезво: высокий балл модели на популярном бенчмарке почти ничего не говорит о её пригодности для большинства реальных рабочих задач, если эта задача не входит в узкий список уже измеренного, — и перед внедрением стоит отдельно проверять модель на собственных, специфичных для задачи кейсах, а не полагаться на общие лидерборды.</span>
+      <span data-lang="en">An important caveat that outside write-ups of the work also flag: the conclusion isn't that AI "fails" at 90% of work — it's that for 90% of working hours there's simply no standardized evidence either way. Worth weighing too: Mercor sells model-evaluation data, giving it a commercial interest in a conclusion about measurement gaps. Still, the practical lesson for teams picking a model for a specific job is a sober one: a high score on a popular benchmark says almost nothing about fitness for most real work tasks unless that task happens to fall in the narrow slice that's actually measured — and before deployment it's worth testing a model on your own task-specific cases rather than leaning on general leaderboards.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

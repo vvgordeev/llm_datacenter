@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Трансформер можно изобрести по памяти» — Alex Wang — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Alex Wang · 2026-10-19</span>
+      <span data-lang="en">Article digest · Alex Wang · 2026-10-19</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Трансформер можно изобрести по памяти</span>
+      <span data-lang="en">You could have invented transformers from memory</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://alexwang.ai/posts/associative-memory/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Алекс Ванг предлагает способ заново «изобрести» архитектуру трансформера, отталкиваясь не от истории её появления, а от одной простой идеи: каждый блок сети — это хранилище, которое запоминает пары ключ-значение и затем восстанавливает значение по сходству ключа с запросом. Вместо того чтобы вводить attention как данность, автор шаг за шагом наращивает простейшую схему памяти, на каждом шаге решая конкретную проблему с ёмкостью, — и в итоге приходит к механизму, устройство которого по сути совпадает с self-attention. Это именно тот тип материала, который объясняет не что появилось, а откуда вообще взялось устройство метода и зачем нужна каждая его часть.</span>
+      <span data-lang="en">Alex Wang offers a way to "reinvent" the transformer architecture, starting not from its historical origin story but from one simple idea: every block in the network is a store that memorizes key-value pairs and later recalls a value by matching a query against stored keys. Rather than presenting attention as a given, he builds up the simplest possible memory scheme one step at a time, fixing a specific capacity problem at each step — and ends up at a mechanism whose structure matches self-attention. It's exactly the kind of piece that explains not what shipped, but where a method's design actually comes from and why each piece of it exists.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаг 1: простейшее хранилище на внешнем произведении</span><span data-lang="en">Step one: the simplest outer-product store</span></h2>
+    <p>
+      <span data-lang="ru">Базовая конструкция — хранилище, которое запоминает пару (ключ, значение), суммируя внешние произведения векторов ключа и значения в одну матрицу; чтобы вспомнить значение, матрицу умножают на вектор запроса. У такой схемы жёсткий потолок по числу воспоминаний, которые можно хранить без заметных искажений: при размерности ключа 64 — это порядка 64 независимых пар. Переход от простого суммирования к хранилищу, обучаемому методом наименьших квадратов, примерно удваивает эту ёмкость — то есть уже первая модификация показывает: форма хранения памяти, а не только её «размер», определяет, сколько фактов модель способна удержать.</span>
+      <span data-lang="en">The base construction is a store that memorizes a (key, value) pair by summing the outer product of the key and value vectors into a single matrix; recall multiplies that matrix by a query vector. This scheme has a hard ceiling on how many memories it can hold without noticeable interference: at a key dimension of 64, that's roughly 64 independent pairs. Switching from plain summation to a least-squares-fitted store roughly doubles that capacity — the first modification already shows that the shape of the memory store, not just its raw size, determines how many facts a model can hold.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шаг 2: нелинейность и переход к softmax-вниманию</span><span data-lang="en">Step two: a nonlinearity, then softmax attention</span></h2>
+    <p>
+      <span data-lang="ru">Следующий шаг — добавить нелинейность. Переход на squared-ReLU поднимает ёмкость хранилища той же размерности примерно до 2700 запомненных пар — на два порядка больше, чем у исходной линейной схемы. Но решающий скачок происходит, когда вместо фиксированной нелинейности по отдельным элементам вводится softmax по сходству запроса со всеми хранимыми ключами сразу: такое хранилище при тех же 64 измерениях удерживает уже около 1,2 миллиона пар. Именно на этом шаге конструкция «памяти по ключу-значению» по структуре совпадает с attention-механизмом трансформера — то есть softmax в self-attention предстаёт не произвольным архитектурным решением, а прямым следствием задачи «впихнуть как можно больше пар ключ-значение в вектор фиксированной размерности».</span>
+      <span data-lang="en">The next step is to add a nonlinearity. Switching to squared-ReLU raises the same-dimensional store's capacity to roughly 2,700 memorized pairs — two orders of magnitude above the original linear scheme. But the decisive jump comes from replacing a fixed elementwise nonlinearity with a softmax over the query's similarity to every stored key at once: at the same 64 dimensions, that store holds around 1.2 million pairs. This is the step where the key-value memory construction becomes structurally identical to a transformer's attention mechanism — softmax attention stops looking like an arbitrary architectural choice and becomes a direct consequence of the problem "pack as many key-value pairs as possible into a fixed-size vector."</span>
+    </p>
+
+    <h2><span data-lang="ru">Чего эта рамка не объясняет</span><span data-lang="en">What the frame doesn't explain</span></h2>
+    <p>
+      <span data-lang="ru">Ванг сам оговаривает границы метода: оценки ёмкости показывают, сколько пар схема МОЖЕТ удержать в принципе, но ничего не говорят о том, что именно модель выучивает из реальных обучающих данных и насколько эффективно она использует эту теоретическую ёмкость на практике. То есть ассоциативная память — это язык для объяснения, зачем нужен каждый компонент архитектуры (линейное хранилище → нелинейность → softmax), а не инструмент предсказания качества конкретной обученной модели. Автор опирается на существующую академическую линию работ, которая формально описывает матрицы весов трансформера как ассоциативные памяти с ёмкостью, растущей линейно от числа параметров, — и собирает эти результаты в последовательное, доступное неспециалисту объяснение «снизу вверх».</span>
+      <span data-lang="en">Wang flags the frame's limits himself: these capacity estimates show what a scheme CAN hold in principle, but say nothing about what a model actually learns from real training data or how efficiently it uses that theoretical capacity in practice. Associative memory, in other words, is a language for explaining why each architectural component exists (linear store → nonlinearity → softmax), not a tool for predicting how good any specific trained model will be. The piece builds on an existing academic line of work that formally describes transformer weight matrices as associative memories whose capacity scales linearly with parameter count, and assembles those results into a sequential, accessible "bottom-up" explanation.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
