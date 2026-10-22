@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T05:10:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Прямой WebFetch успешен. Последний пост — «Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust» (21 окт) — governance, без продуктовой части, отклонён. 2 WebSearch-запроса по анонсам/моделям ничего нового в окне 36ч не добавили."
+    },
+    {
+      "source": "openai blog (openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND (DNS-уровень egress-прокси). 2 WebSearch — последнее заметное: GPT-6 Intelligent UI rollout (7-8 окт) и GPT-Live-1.1 голоса (15 окт), оба вне окна 36ч и уже не новы."
+    },
+    {
+      "source": "google/deepmind blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — только слухи/прогнозы по Gemini 4 (пост-тренинг, неподтверждённый «Argon» 13 окт), ничего подтверждённого в окне."
+    },
+    {
+      "source": "meta ai blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch не дал ничего нового после Muse Spark Open (уже опубликовано 21 окт)."
+    },
+    {
+      "source": "xai news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — Grok 4.6 (12 авг) вне окна, Grok 5 не подтверждён."
+    },
+    {
+      "source": "mistral news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — Mistral Large 4 (6 окт) уже отражён ранее; упоминание «Voxtral 3» в одном из расширенных поисков не подтвердилось отдельными источниками — отклонено как непроверяемое."
+    },
+    {
+      "source": "deepseek news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — V4.1-Flash-1017 (17 окт) уже опубликовано 18 окт (кластер deepseek-v4-1-flash-beta), дубль."
+    },
+    {
+      "source": "AI News (smol.ai)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND."
+    },
+    {
+      "source": "TLDR AI",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND."
+    },
+    {
+      "source": "Simon Willison linkblog (агрегатор)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "simonwillison.net сам WebFetch не прошёл (ENOTFOUND), обход — git clone simonwillisonblog-backup (свежий дамп, commit от 21 окт). Последняя запись blog_entry — «Battle Drones» (20 окт), уже опубликована 21 окт. Blogmarks после неё (PHP security release, Panache RTS) не по теме LLM."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "connect_rejected на уровне egress-прокси (как и в прошлых прогонах). WebSearch-обход по site:news.ycombinator.com не дал индексируемых тредов за окно; расширенный поиск нашёл только AI-сгенерированные агрегаторские пересказы HN-фронтпейджа 20 окт (DeepSeek inference framework, 'Voxtral 3') без проверяемых первоисточников — отклонены как непроверяемые."
+    },
+    {
+      "source": "Reddit / X (community, через WebSearch)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "r/LocalLLaMA — поиск вернул недатированные снэпшоты (GLM-5.2), не удалось подтвердить попадание в окно и релевантность LLM-вендорам из конфига."
+    },
+    {
+      "source": "эксперты: Andrej Karpathy (видео)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com полностью недоступен на уровне egress-прокси сегодня (ENOTFOUND на www.youtube.com, включая RSS /feeds/videos.xml) — как и в кейсе 2026-07-18 из SKILL.md. WebSearch не нашёл подтверждённого нового видео в окне 7 дней."
+    },
+    {
+      "source": "эксперты: AI Explained (видео)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com заблокирован. WebSearch не дал результатов за окно."
+    },
+    {
+      "source": "эксперты: Matt Wolfe (видео)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com заблокирован. WebSearch вернул нерелевантные результаты (однофамильцы)."
+    },
+    {
+      "source": "эксперты: Nate Herk (видео)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com заблокирован. WebSearch — только агрегаторская статистика канала без даты публикации нового ролика."
+    },
+    {
+      "source": "эксперты: Matt Pocock (видео)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com заблокирован. WebSearch: последний найденный апдейт канала — 'last upload 2 months ago' (на 7 окт)."
+    },
+    {
+      "source": "эксперты: Simon Willison (статьи)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "См. выше (github-бэкап) — ничего нового после уже опубликованного Battle Drones."
+    },
+    {
+      "source": "эксперты: Latent Space (статьи)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch latent.space: ENOTFOUND. WebSearch нашёл только платный тизер-пост (NYC meetup, 10 окт), не по теме."
+    },
+    {
+      "source": "эксперты: Ethan Mollick / One Useful Thing (статьи)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch oneusefulthing.org: ENOTFOUND. WebSearch нашёл только анонс книги «Co-Existence» (вышла 20 окт) без текста конкретного поста в индексе — не удалось подтвердить содержание, отклонено."
+    },
+    {
+      "source": "расширенный поиск экспертного контента (прочие авторы недели)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Проверены Zvi Mowshowitz, Dwarkesh Patel, Nathan Lambert/Interconnects, 'context engineering'/'vibe coding' тренды — ничего с проверяемой датой и URL в окне 7 дней; единственная реальная зацепка (интервью Cowen-Patel в NYT Interesting Times, 15 окт) вне темы «подходы к использованию LLM» и за платным доступом — не включено."
+    }
+  ],
+  "totals": {
+    "candidates": 0,
+    "published": 0,
+    "rejected": {
+      "дубли уже опубликованных сюжетов": 3,
+      "не продуктовая новость (governance/регулирование)": 1,
+      "непроверяемые агрегаторские пересказы": 2,
+      "вне темы «подходы к использованию LLM» или не удалось подтвердить текст": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used — youtube.com заблокирован egress-прокси, подходящих видео-кандидатов не найдено",
+    "frames": "not used — see above"
+  },
+  "degradation_note": "Существенная деградация окружения: из ~20 обойдённых источников прямой WebFetch сработал только для anthropic.com/news и github.com (simonwillisonblog-backup) — все остальные блоги/агрегаторы/youtube.com дали ENOTFOUND на уровне egress-прокси (DNS), HN API — connect_rejected. Это больше 1/3 источников в статусе blocked — отражено по правилу SKILL.md п.6.5 в финальном отчёте сессии."
+}
