@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T05:45:00Z",
+  "news": [
+    {
+      "id": "2026-10-23-anthropic-agent-skills-aaif",
+      "cluster_id": "anthropic-agent-skills-aaif-donation",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic передаёт стандарт Agent Skills фонду Agentic AI Foundation",
+        "en": "Anthropic donates the Agent Skills standard to the Agentic AI Foundation"
+      },
+      "summary": {
+        "ru": "22 октября Anthropic объявила о передаче стандарта Agent Skills (вместе с именем, логотипом, GitHub-организацией и доменом agentskills.io) фонду Agentic AI Foundation (AAIF) при Linux Foundation — тому же фонду, куда ранее был передан Model Context Protocol. С момента публикации спецификации в декабре 2025 года стандарт приняли более 70 агентных платформ (включая ChatGPT, Cursor, GitHub Copilot и VS Code), опубликовано около 1 млн скиллов с почти 280 млн установок. Управление переходит инженерам из Anthropic, Google, OpenAI и других компаний, работающим как независимые мейнтейнеры.",
+        "en": "On October 22 Anthropic announced it is donating the Agent Skills standard — along with its name, logo, GitHub organization and the agentskills.io domain — to the Agentic AI Foundation (AAIF) under the Linux Foundation, the same foundation that earlier received the Model Context Protocol. Since the spec was published in December 2025, more than 70 agent platforms (including ChatGPT, Cursor, GitHub Copilot and VS Code) have adopted it, with roughly 1 million skills published and nearly 280 million installs. Governance moves to engineers from Anthropic, Google, OpenAI and other companies acting as independent maintainers."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Governance-переход уже широко принятого стандарта (70+ платформ, ~280 млн установок) к нейтральному фонду — полезно для доверия и устойчивости экосистемы агентных инструментов, но сам способ использования LLM не меняет: это не новая функция, а смена управления уже существующим форматом.",
+        "en": "A governance transition of an already widely-adopted standard (70+ platforms, ~280M installs) to a neutral foundation — useful for trust and the long-term stability of the agent-tooling ecosystem, but it doesn't change how LLMs are actually used: it's a change of stewardship for an existing format, not a new capability."
+      },
+      "source_url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Я рад отметить, что предсказывал это ещё в декабре прошлого года, когда Anthropic впервые объявила skills „открытым стандартом“» — Уиллисон напоминает, что ещё в декабре 2025-го писал: «Не удивлюсь, если это закончится в AAIF — недавнем новом доме спецификации MCP».",
+            "en": "\"I'm pleased to note I called this one last December, when Anthropic first declared skills to be an 'open standard'\" — Willison recalls writing back in December 2025: \"I wouldn't be surprised to see this end up in the AAIF, recently the new home of the MCP specification.\""
+          },
+          "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Стандарт Agent Skills уже встроен в ChatGPT, Cursor, GitHub Copilot и VS Code — более 70 агентных платформ читают одни и те же файлы SKILL.md.",
+            "en": "The Agent Skills standard is already built into ChatGPT, Cursor, GitHub Copilot and VS Code — more than 70 agent platforms read the same SKILL.md files."
+          },
+          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}
