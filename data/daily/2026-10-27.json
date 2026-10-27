@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T06:30:00Z",
+  "news": [
+    {
+      "id": "2026-10-27-anthropic-s1-ipo-filing",
+      "cluster_id": "anthropic-ipo-s1-filing",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic публично подаёт S-1 для IPO на Nasdaq под тикером ANT",
+        "en": "Anthropic publicly files S-1 for a Nasdaq IPO under ticker ANT"
+      },
+      "summary": {
+        "ru": "26 октября Anthropic подала публичный регистрационный документ Form S-1 в SEC для первичного размещения акций класса A на Nasdaq Global Select Market под тикером ANT (андеррайтеры — Goldman Sachs и Morgan Stanley); торги могут начаться уже 16 ноября. Впервые раскрыты детальные показатели: выручка за первое полугодие 2026 года — $16,3 млрд (против $4,6 млрд за весь 2025 год), чистый убыток за тот же период — $80,7 млрд, из которых $72,4 млрд — неденежная переоценка конвертируемых финансовых инструментов. Число клиентов с выручкой от $100 тыс. в годовом исчислении выросло с примерно 950 до более чем 11 900 за год; около четверти выручки приходится всего на двух клиентов.",
+        "en": "On October 26 Anthropic filed a public Form S-1 registration statement with the SEC for an IPO of Class A stock on the Nasdaq Global Select Market under the ticker ANT (underwriters Goldman Sachs and Morgan Stanley); trading could start as early as November 16. The filing discloses detailed figures for the first time: H1 2026 revenue of $16.3B (versus $4.6B for all of 2025) and an $80.7B net loss for the same period, $72.4B of which is a non-cash charge from revaluing convertible financial instruments. Customers with $100K+ trailing-twelve-month revenue grew from roughly 950 to more than 11,900 in a year, while about a quarter of revenue comes from just two customers."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Не новая функция и не подход к использованию LLM, а первое детальное раскрытие масштаба реального корпоративного потребления Claude (рост клиентской базы на порядок за год, концентрация выручки, экономика убытков) — значимый индикатор зрелости рынка, но само по себе не меняет то, как применяют LLM.",
+        "en": "Not a new feature or usage pattern, but the first detailed disclosure of the real scale of enterprise Claude adoption (10x customer growth in a year, revenue concentration, loss economics) — a useful signal of market maturity, though it doesn't by itself change how LLMs are actually used."
+      },
+      "source_url": "https://www.anthropic.com/news/s1-sec",
+      "opinions": [
+        {
+          "author": "Dan Ives, Wedbush Securities",
+          "stance": "positive",
+          "quote": {
+            "ru": "Оценивает подачу S-1 как сигнал к открытию «шлюзов» для рынка IPO ИИ-компаний — вслед за Anthropic к размещению готовятся и другие лаборатории, вероятно включая OpenAI.",
+            "en": "Frames the S-1 filing as \"an opening of the floodgates\" for the AI-company IPO market, with other labs — likely including OpenAI — expected to follow Anthropic to market."
+          },
+          "url": "https://tradersunion.com/news/financial-news/show/2171319-anthropic-valuation-ai-market-upside/"
+        },
+        {
+          "author": "Nic Puckrin, Coin Bureau",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Считает, что предшествующая IPO премия в оценке Anthropic отражает скорее дефицит доступных акций, чем фундаментальные показатели бизнеса, — настоящую проверку цены даст только биржевая торговля после размещения.",
+            "en": "Argues the pre-IPO valuation premium reflects scarcity of available shares more than business fundamentals — the real test of the price comes only once the stock trades publicly."
+          },
+          "url": "https://www.webull.com/news/15559618787258368"
+        },
+        {
+          "author": "Tusk Ventures",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Предупреждает о рисках «пузыря» на рынке ИИ: без непрерывного быстрого роста выручки удержать заявленную оценку Anthropic будет сложно.",
+            "en": "Warns of AI-bubble risk: without continued rapid revenue growth, Anthropic's stated valuation may be difficult to sustain."
+          },
+          "url": "https://www.kucoin.com/news/flash/anthropic-s-valuation-near-2-trillion-sparks-debate-over-ai-investment-bubble"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "В S-1 Anthropic приводит продакшен-применение Claude как основу роста клиентской базы: андеррайтинг страховых полисов, подготовка клинических отчётов, обнаружение и устранение киберугроз, анализ портфелей управляющими активами.",
+            "en": "In the S-1, Anthropic cites production use of Claude as the basis of its customer growth: underwriting insurance policies, writing clinical reports, detecting and remediating cybersecurity threats, and analyzing portfolios for asset managers."
+          },
+          "url": "https://www.sec.gov/Archives/edgar/data/0002130357/000162828026067168/anthropicpbc-sx1.htm"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-27-pragmaticengineer-roi-ai-spend",
+      "type": "article",
+      "author": "Gergely Orosz (The Pragmatic Engineer)",
+      "title": {
+        "ru": "Какая окупаемость у расходов разработчиков на ИИ?",
+        "en": "What's the ROI of software engineers' spending on AI?"
+      },
+      "url": "https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers",
+      "summary": {
+        "ru": "Опрос инженерных руководителей и разработчиков в 27 компаниях (плюс агрегированные данные CodeRabbit и Gitar) показывает: расходы на ИИ-инструменты не зависят от размера компании — от $150 до $3000+ на разработчика в месяц — и у большинства компаний до сих пор нет ответа, окупаются ли эти траты измеримой пользой для бизнеса, несмотря на рост числа PR на 60–127%.",
+        "en": "Interviews with engineering leaders and developers at 27 companies (plus aggregate data from CodeRabbit and Gitar) find that AI-tooling spend doesn't track company size — ranging from $150 to $3,000+ per developer per month — and most companies still can't say whether the spending produces a measurable business return, even as PR throughput rises 60-127%."
+      },
+      "note_page": "notes/articles/pragmaticengineer-roi-ai-spend.html"
+    },
+    {
+      "id": "2026-10-27-simonwillison-battle-drones",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Battle Drones: RTS-игра, написанная вайб-кодингом, с мультиплеером через звук",
+        "en": "Battle Drones: a vibe-coded RTS with audio-based multiplayer"
+      },
+      "url": "https://simonwillison.net/2026/Oct/20/battledrones/",
+      "summary": {
+        "ru": "Уиллисон рассказывает, как Claude Code почти полностью написал RTS в духе Command & Conquer, которая оказалась по-настоящему играбельной — решающим стал всего один промпт «сделай так, чтобы было намного веселее». Локальный мультиплеер синхронизирует состояние игры через звук между устройствами в радиусе слышимости микрофона (развитие более раннего эксперимента Chirp Pong), позже добавлен онлайн-режим через WebSocket-релей на Fly.io.",
+        "en": "Willison describes how Claude Code wrote almost all of a Command & Conquer-style RTS that turned out to be genuinely fun to play — a single prompt, \"make it a LOT more fun,\" did most of the work. Local multiplayer syncs game state over audio between devices within microphone range (an extension of his earlier Chirp Pong experiment), with online multiplayer later added via a Fly.io WebSocket relay."
+      },
+      "note_page": "notes/articles/simonwillison-battle-drones.html"
+    },
+    {
+      "id": "2026-10-27-zvi-ai-191-hackening-begins",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #191: Начало «хакенинга»",
+        "en": "AI #191: The Hackening Begins"
+      },
+      "url": "https://thezvi.substack.com/p/ai-191-the-hackening-begins",
+      "summary": {
+        "ru": "Еженедельный обзор посвящён волне инцидентов кибербезопасности, связанных с ИИ: критическая уязвимость в PHP (на котором держится большая часть интернета) была раскрыта за день до готовности патча, а темп находимых ИИ уязвимостей обгоняет возможности их патчить. Также разбираются утёкший законопроект Anthropic, предупреждения OpenAI о honeypot-атаках и работы по интерпретируемости на уровне отдельных нейронов.",
+        "en": "The weekly roundup centers on a wave of AI-linked cybersecurity incidents: a critical PHP vulnerability (PHP underpins much of the internet) was disclosed a day before a fix was ready, and the volume of AI-discovered vulnerabilities is now outpacing the ability to patch them. The issue also covers a leaked Anthropic draft bill, OpenAI's honeypot-attack warnings, and neuron-level interpretability work."
+      },
+      "note_page": "notes/articles/zvi-ai-191-hackening-begins.html"
+    }
+  ]
+}

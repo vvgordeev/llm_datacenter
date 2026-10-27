@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T06:30:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (anthropic.com/news)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Прямой WebFetch сработал (единственный надёжно доступный вендорский домен, как и в прошлые дни). Нашёл 'Anthropic files S-1 with the SEC for proposed initial public offering' (26 окт) — опубликовано как новость после доп. проверки (не чистая финансовая новость: раскрывает масштаб продуктового использования Claude)."
+    },
+    {
+      "source": "openai blog (openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "getaddrinfo ENOTFOUND / CONNECT 403 от egress-прокси. 2 WebSearch-запроса: GPT-6/Intelligent UI rollout (7-8 окт, вне окна 36ч, уже отражён ранее). Отдельно всплыл яркий, но ПРОТИВОРЕЧИВЫЙ сюжет 'GPT-6.1 Terra' — один блок результатов WebSearch описывал его как официально выпущенную 26 окт модель (с ценами, доступностью, якобы openai.com/index/introducing-gpt-6-1-terra/), но 4 из 5 независимых повторных запросов стабильно показывали, что по состоянию на ~20 окт это лишь слух на основе одной смёрженной PR-строки judge_model в репозитории Microsoft + платный репорт The Information, с явным 'OpenAI ничего не публиковала под этим именем' и ожиданием переноса на ноябрь. Решил не включать: подозреваю, что благоприятный для 'релиза' результат — галлюцинация WebSearch-синтеза, а не реальный индексированный контент. Зафиксировано как явный риск качества источника для будущих прогонов — при противоречивых результатах перепроверять большинством независимых запросов, не одним удачным."
+    },
+    {
+      "source": "google/deepmind blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "getaddrinfo ENOTFOUND. WebSearch — ничего нового в окне 36ч; Gemini 4 Argon GA (13 окт) вне окна и уже отражён ранее."
+    },
+    {
+      "source": "meta ai blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "getaddrinfo ENOTFOUND. WebSearch — ничего в окне 36ч; Muse Wonder/Wonder Full (12 окт) вне окна."
+    },
+    {
+      "source": "xai news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "getaddrinfo ENOTFOUND. WebSearch — ничего нового; последние релизы (Voice 3.0, Imagine Lite) из начала-середины октября, вне окна."
+    },
+    {
+      "source": "mistral news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "getaddrinfo ENOTFOUND. WebSearch — ничего нового в окне; Mistral Large 4 preview (6 окт) вне окна, слабо подтверждён ранее."
+    },
+    {
+      "source": "deepseek news",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "getaddrinfo ENOTFOUND (api-docs.deepseek.com). WebSearch — только финансовые слухи о раунде и неподтверждённый 'DeepSeek-V4-Flash-Vision-Exp' без даты; не включено."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "CONNECT tunnel failed, 403 (подтверждено curl напрямую). WebSearch по сайту news.ycombinator.com вернул общий шум без релевантных LLM-тредов за 36ч."
+    },
+    {
+      "source": "aggregators (smol.ai, tldr.tech/ai, simonwillison linkblog)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "news.smol.ai и tldr.tech/ai не проиндексированы WebSearch на нужную дату; simonwillison.net заблокирован по DNS для прямого WebFetch (как и в прошлые дни), но через WebSearch нашёлся полезный архив его постов за октябрь, включая Battle Drones (20 окт) — взят в expert_content."
+    },
+    {
+      "source": "community (Reddit r/LocalLLaMA, r/ClaudeAI, X)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch не дал релевантных тредов/реакций за последние 36ч сверх уже использованных для новости об Anthropic S-1."
+    },
+    {
+      "source": "experts: Simon Willison (article)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Battle Drones (20 окт) — вайб-кодинг RTS с аудио-мультиплеером. Взят в сводку."
+    },
+    {
+      "source": "experts: Andrej Karpathy (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "YouTube полностью заблокирован по DNS (www.youtube.com ENOTFOUND), RSS-discovery недоступен. WebSearch не нашёл загрузок с его канала за последние 7 дней — только сторонние реакционные видео о нём."
+    },
+    {
+      "source": "experts: Latent Space (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "latent.space заблокирован по DNS. WebSearch нашёл только посты 10-дневной и более давности, подтверждённых материалов за последние 7 дней не найдено."
+    },
+    {
+      "source": "experts: AI Explained (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "YouTube заблокирован. WebSearch не дал проверяемого названия/URL видео за последние 7 дней (только 'выгружено 14 дней назад' без деталей)."
+    },
+    {
+      "source": "experts: Matt Wolfe (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "YouTube заблокирован. Нашёл название эпизода 'All The AI News You Missed From The Past Week' (23 окт, подтверждено 2 источниками), но не смог получить проверяемый youtube.com/watch URL и содержание — не стал включать без проверяемой ссылки и контента."
+    },
+    {
+      "source": "experts: Ethan Mollick (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "oneusefulthing.org заблокирован по DNS. Найденные посты либо вне 7-дневного окна (The Dot and the Swarm, 1 окт), либо недостаточно подтверждены содержательно (анонс книги Co-Existence, 20 окт, и 'the Exponential' пост — не нашёл текста)."
+    },
+    {
+      "source": "experts: Nate Herk (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "YouTube заблокирован; WebSearch не дал загрузок за последние 7 дней."
+    },
+    {
+      "source": "experts: Matt Pocock (video)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "YouTube заблокирован; WebSearch не дал загрузок за последние 7 дней."
+    },
+    {
+      "source": "experts: расширенный поиск (другие авторы)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "The Pragmatic Engineer (Gergely Orosz) — 'What's the ROI of software engineers' spending on AI?' (~20 окт, опрос 27 компаний) и Zvi Mowshowitz — 'AI #191: The Hackening Begins' (22 окт). Оба взяты в сводку."
+    }
+  ],
+  "totals": {
+    "candidates": 5,
+    "published": 1,
+    "rejected": {
+      "не по теме (финансовая новость без продуктовой части — не включено как новость)": 0,
+      "не подтверждено независимо (вероятный слух/галлюцинация поиска)": 1,
+      "вне окна сбора (уже отражено в прошлых сводках)": 6
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used: ни одного проверяемого видео-кандидата за окно не найдено (yt-dlp и imageio-ffmpeg установлены через pip на случай необходимости, ffmpeg системный тоже доступен)",
+    "frames": "not used: см. выше"
+  },
+  "degradation_note": "День сильной деградации окружения: все вендорские блоги (кроме anthropic.com) и все экспертные источники недоступны по DNS напрямую (openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, simonwillison.net, latent.space, oneusefulthing.org, www.youtube.com — все getaddrinfo ENOTFOUND), Hacker News API — CONNECT 403. Это выше порога 1/3 источников из правила skill. WebSearch как основной канал один раз дал внутренне противоречивый результат (см. запись про GPT-6.1 Terra) — решено консервативно не доверять одиночному благоприятному результату без независимого подтверждения."
+}

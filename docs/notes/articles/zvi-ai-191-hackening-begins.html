@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: AI #191 — Начало «хакенинга» — Zvi Mowshowitz — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Zvi Mowshowitz (Don't Worry About the Vase) · 2026-10-22</span>
+      <span data-lang="en">Article digest · Zvi Mowshowitz (Don't Worry About the Vase) · 2026-10-22</span>
+    </p>
+    <h1>
+      <span data-lang="ru">AI #191: Начало «хакенинга»</span>
+      <span data-lang="en">AI #191: The Hackening Begins</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thezvi.substack.com/p/ai-191-the-hackening-begins" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Очередной еженедельный выпуск Zvi Mowshowitz выстроен вокруг одной сквозной темы — волны инцидентов кибербезопасности, где ИИ выступает одновременно и источником новых угроз, и инструментом их обнаружения. Название выпуска — «Начало хакенинга» — указывает на тревогу автора: по его оценке, темп, с которым модели находят новые уязвимости, уже обгоняет темп, с которым индустрия успевает их закрывать.</span>
+      <span data-lang="en">Zvi Mowshowitz's latest weekly issue is built around one throughline — a wave of cybersecurity incidents in which AI is simultaneously a new source of threats and a tool for finding them. The issue's title, "The Hackening Begins," signals the author's concern: in his assessment, the rate at which models are finding new vulnerabilities is already outpacing the industry's ability to patch them.</span>
+    </p>
+
+    <h2><span data-lang="ru">Уязвимость в PHP, раскрытая на день раньше патча</span><span data-lang="en">A PHP vulnerability disclosed a day before the fix</span></h2>
+    <p>
+      <span data-lang="ru">Центральный сюжет выпуска — критическая уязвимость в PHP, на котором держится значительная часть интернета: информация о ней из-за утечки стала публичной на день раньше, чем был готов официальный патч. Zvi использует этот случай как иллюстрацию более общей проблемы: по мере того как ИИ-инструменты ускоряют поиск уязвимостей (в том числе силами атакующих), окно между раскрытием и исправлением становится критически коротким, а процессы раскрытия и патчинга в индустрии к этому не готовы.</span>
+      <span data-lang="en">The issue's central story is a critical vulnerability in PHP, which underpins a large share of the internet: a leak made information about it public a day before the official fix was ready. Zvi uses the case to illustrate a broader problem: as AI tools accelerate vulnerability discovery (including by attackers), the window between disclosure and a fix is shrinking to a dangerously short span, and the industry's disclosure and patching processes aren't built for that pace.</span>
+    </p>
+
+    <h2><span data-lang="ru">Утёкший законопроект Anthropic и предупреждения OpenAI о honeypot-атаках</span><span data-lang="en">Anthropic's leaked draft bill and OpenAI's honeypot warnings</span></h2>
+    <p>
+      <span data-lang="ru">Отдельный блок посвящён утечке законопроекта, который, по имеющимся у Zvi сведениям, Anthropic продвигала среди регуляторов — ещё один эпизод в его продолжающемся наблюдении за тем, как лаборатории пытаются влиять на регулирование ИИ непублично. Рядом разбираются предупреждения OpenAI о honeypot-атаках — попытках заманить модели или их операторов в ловушки, выдаваемые за легитимные задачи или данные, — которые Zvi увязывает с общей темой выпуска о растущей изобретательности атак, нацеленных именно на агентные ИИ-системы.</span>
+      <span data-lang="en">A separate section covers the leak of a draft bill that, per Zvi's sourcing, Anthropic had been shopping around to regulators — another episode in his ongoing tracking of how labs try to shape AI regulation out of public view. Alongside it, the issue covers OpenAI's warnings about honeypot attacks — attempts to lure models or their operators into traps disguised as legitimate tasks or data — which Zvi ties to the issue's broader theme of growing attacker sophistication aimed specifically at agentic AI systems.</span>
+    </p>
+
+    <h2><span data-lang="ru">Интерпретируемость на уровне нейронов</span><span data-lang="en">Neuron-level interpretability</span></h2>
+    <p>
+      <span data-lang="ru">Выпуск завершается разбором текущих работ по интерпретируемости на уровне отдельных нейронов — попыток понять, какие именно внутренние компоненты модели отвечают за конкретное поведение. Zvi рассматривает это направление как потенциальный (пока частичный) ответ на проблемы, поднятые в остальной части выпуска: если понимать, что происходит внутри модели, на порядок проще заранее находить пути для злоупотреблений, а не узнавать о них постфактум из утечек и инцидентов.</span>
+      <span data-lang="en">The issue closes with a review of current neuron-level interpretability work — efforts to understand which specific internal components of a model are responsible for particular behaviors. Zvi frames this line of research as a potential, if still partial, answer to the problems raised elsewhere in the issue: understanding what's happening inside a model makes it far easier to find avenues for misuse in advance, rather than learning about them after the fact from leaks and incidents.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по доступному описанию статьи (WebSearch, включая кросс-пост на LessWrong и пересказ подкаста DWAtV) — прямой WebFetch на thezvi.substack.com из облачной песочницы не проходит (DNS/прокси блокирует домен). Полный список мелких тем выпуска не проверялся.</span>
+      <span data-lang="en">Digest built from the article's available description (WebSearch, including its LessWrong cross-post and a DWAtV podcast recap) — a direct WebFetch to thezvi.substack.com fails from this cloud sandbox (the domain is blocked at the DNS/proxy level). The issue's full list of minor items was not independently verified.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

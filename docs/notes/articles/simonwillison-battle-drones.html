@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Battle Drones — Simon Willison — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-10-20</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-10-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Battle Drones: RTS-игра, написанная вайб-кодингом, с мультиплеером через звук</span>
+      <span data-lang="en">Battle Drones: a vibe-coded RTS with audio-based multiplayer</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/20/battledrones/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уиллисон описывает свой очередной «folly»-проект: Battle Drones — стратегия в реальном времени в духе классического Command & Conquer, которую почти целиком написал Claude Code. Главное в посте — не технические детали, а признание, что игра получилась по-настоящему играбельной, причём решающим оказался не архитектурный план, а один простой промпт.</span>
+      <span data-lang="en">Willison describes his latest "folly" project: Battle Drones, a real-time strategy game in the spirit of classic Command & Conquer, built almost entirely by Claude Code. The point of the post isn't the technical details so much as the admission that the game turned out genuinely playable — and that the decisive factor wasn't an architecture plan but one simple prompt.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Сделай так, чтобы было намного веселее»</span><span data-lang="en">"Make it a LOT more fun"</span></h2>
+    <p>
+      <span data-lang="ru">По словам Уиллисона, ранние версии игры были технически рабочими, но скучными — пока он не дал модели открытую инструкцию «сделай так, чтобы было намного веселее» без уточнения, как именно. Это простое указание, по его оценке, дало больше ощутимого улучшения игрового процесса, чем все предыдущие точечные правки, — наблюдение, которое он связывает с общим опытом вайб-кодинга: модели иногда лучше реагируют на открытую творческую цель, чем на детализированное техническое задание.</span>
+      <span data-lang="en">By Willison's account, early versions of the game were technically functional but boring — until he gave the model an open-ended instruction to "make it a LOT more fun" without specifying how. That one simple instruction, he says, produced more noticeable improvement to the gameplay than all of his previous targeted tweaks — an observation he ties to a broader vibe-coding pattern: models sometimes respond better to an open-ended creative goal than to a detailed technical spec.</span>
+    </p>
+
+    <h2><span data-lang="ru">Мультиплеер через звук — и позже через интернет</span><span data-lang="en">Audio-based multiplayer — and later, online play</span></h2>
+    <p>
+      <span data-lang="ru">Необычная часть проекта — локальный мультиплеер, который синхронизирует состояние игры между двумя устройствами через звук, передаваемый и улавливаемый микрофонами в пределах слышимости. Это развитие более раннего эксперимента Уиллисона Chirp Pong с тем же принципом аудио-синхронизации. Позже к игре добавили полноценный онлайн-режим через WebSocket-релей, развёрнутый на Fly.io; по оценке автора, хостинг обходится не дороже пары долларов в месяц.</span>
+      <span data-lang="en">The unusual part of the project is local multiplayer that syncs game state between two devices over audio, transmitted and picked up by microphones within range of each other — an extension of Willison's earlier Chirp Pong experiment, which used the same audio-sync principle. Online multiplayer was added later via a WebSocket relay deployed on Fly.io; by the author's estimate, hosting costs no more than a couple of dollars a month.</span>
+    </p>
+
+    <h2><span data-lang="ru">Скромная оценка собственной работы</span><span data-lang="en">A modest self-assessment</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон остаётся сдержан в оценке результата: он прямо говорит, что не стал бы выставлять Battle Drones на такую площадку, как Steam Next Fest. Пост стоит в ряду его регулярных экспериментов с «вайб-кодингом» — не как демонстрация готового продукта, а как практическая заметка о том, что получается и что не получается, когда код почти полностью пишет модель.</span>
+      <span data-lang="en">Willison stays modest about the result, saying outright that he wouldn't submit Battle Drones to something like Steam Next Fest. The post fits his ongoing series of vibe-coding experiments — not a demo of a finished product, but a practical note on what does and doesn't work when a model writes almost all of the code.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по доступному описанию статьи (WebSearch) — прямой WebFetch на simonwillison.net из облачной песочницы не проходит (DNS/прокси блокирует домен). Факты сверены по нескольким независимым пересказам публикации.</span>
+      <span data-lang="en">Digest built from the article's available description (WebSearch) — a direct WebFetch to simonwillison.net fails from this cloud sandbox (the domain is blocked at the DNS/proxy level). Facts were cross-checked across several independent summaries of the post.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

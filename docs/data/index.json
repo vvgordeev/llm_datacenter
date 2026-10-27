@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-27",
+      "news_count": 1,
+      "expert_count": 3,
+      "top_title": {
+        "ru": "Anthropic публично подаёт S-1 для IPO на Nasdaq под тикером ANT",
+        "en": "Anthropic publicly files S-1 for a Nasdaq IPO under ticker ANT"
+      }
+    },
+    {
       "date": "2026-10-23",
       "news_count": 1,
       "expert_count": 0,
