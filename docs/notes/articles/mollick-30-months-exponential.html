@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Итан Моллик — «30 месяцев на экспоненте» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Ethan Mollick · 2026-10-20</span>
+      <span data-lang="en">Article digest · Ethan Mollick · 2026-10-20</span>
+    </p>
+    <h1>
+      <span data-lang="ru">30 месяцев на экспоненте: что показывают графики роста возможностей ИИ</span>
+      <span data-lang="en">30 Months on the Exponential: what the AI-capability charts show</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Итан Моллик, профессор Уортона и автор «Co-Intelligence», выпустил эту статью в день выхода своей второй книги «Co-Existence» — ровно через 30 месяцев после первой. Повод для текста — не сама книга, а желание разложить по графикам, что именно изменилось в возможностях ИИ за эти два с половиной года, и показать, что интуитивное ощущение «всё ускоряется» подтверждается конкретными измерениями, а не только маркетингом лабораторий.</span>
+      <span data-lang="en">Ethan Mollick, a Wharton professor and author of "Co-Intelligence," published this piece on the release day of his second book, "Co-Existence" — exactly 30 months after the first. The occasion isn't the book itself but a wish to lay out, in charts, exactly what has changed in AI capability over those two and a half years, and to show that the gut feeling that "everything is accelerating" holds up under actual measurement, not just lab marketing.</span>
+    </p>
+
+    <h2><span data-lang="ru">METR Long Horizon: от 4 минут до «за пределами измеримого»</span><span data-lang="en">METR Long Horizon: from 4 minutes to "off the chart"</span></h2>
+    <p>
+      <span data-lang="ru">Центральный график статьи — METR Long Horizon Benchmark, который Моллик называет самым известным графиком в индустрии ИИ: он измеряет длительность задачи (в пересчёте на время, которое она заняла бы у человека), которую модель способна выполнить с вероятностью успеха не ниже 50% за один заход, без вмешательства человека в процессе. По приведённым в статье данным, этот показатель с 2024 года удваивался восемь раз подряд — с примерно 4 минут человеческой работы до около 17 часов к апрелю 2026 года. Ключевой поворот сюжета в том, что сама методология METR уперлась в потолок: авторы бенчмарка заявили, что больше не могут надёжно измерить, сколько работы способна выполнить модель за один заход их текущими методами, а по оценкам других исследований реальная цифра может быть значительно выше — вплоть до 17 недель условной человеческой работы.</span>
+      <span data-lang="en">The article's central chart is the METR Long Horizon Benchmark, which Mollick calls the most famous chart in AI: it measures task length (converted into how long a human would need) that a model can complete with at least a 50% success rate in a single pass, with no human intervention along the way. Per the figures in the post, this measure has doubled eight times in a row since 2024 — from roughly 4 minutes of human-equivalent work to about 17 hours by April 2026. The key plot twist is that METR's own methodology hit a ceiling: the benchmark's authors said they can no longer reliably measure how much work a model can do in one pass using their current methods, and other research suggests the real figure could be far higher — as much as 17 weeks of nominal human work.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Conjurer»: новый способ работы, когда бенчмарк уже не поспевает</span><span data-lang="en">The "conjurer": a new way of working once the benchmark can't keep up</span></h2>
+    <p>
+      <span data-lang="ru">Из этого наблюдения Моллик выводит практический вывод о подходе к использованию ИИ, который он называет режимом «conjurer» («заклинатель»): вместо пошагового диалога с моделью пользователь делегирует составную задачу агенту-оркестратору (в своей статье Моллик иллюстрирует это тем, что сами графики и сопроводительное видео для поста он получил, поручив работу Claude Opus 5.5 в роли такого оркестратора внутри Claude Projects), а затем оценивает уже готовый результат, а не проверяет каждый шаг. Это третий режим работы с ИИ в его собственной типологии — после «ко-пилота» (пошаговое соавторство) и делегирования одной конкретной задачи: «заклинатель» уместен именно тогда, когда горизонт возможностей модели стал настолько длинным, что контролировать процесс построчно уже нецелесообразно.</span>
+      <span data-lang="en">From this, Mollick draws a practical conclusion about how to work with AI, which he calls the "conjurer" mode: instead of a step-by-step dialogue with the model, the user delegates a composite task to an orchestrator agent (Mollick illustrates this in the piece by noting that the post's own charts and accompanying video were produced by handing the work to Claude Opus 5.5 acting as such an orchestrator inside Claude Projects), then evaluates the finished output rather than checking every step. It's the third mode in his own typology of working with AI — after "co-pilot" (step-by-step co-authoring) and delegating one specific task: the "conjurer" mode makes sense precisely once a model's capability horizon has grown so long that line-by-line oversight is no longer practical.</span>
+    </p>
+
+    <h2><span data-lang="ru">Оговорка: длина задачи — не то же самое, что качество результата</span><span data-lang="en">The caveat: task length isn't the same as output quality</span></h2>
+    <p>
+      <span data-lang="ru">Статья не обходится без встречной критики, которую сам Моллик приводит и не отбрасывает: в комментариях к посту читатели указывают, что бенчмарки «устойчивости к длинным задачам» измеряют лишь то, что модель довела процесс до конца, но не то, был ли результат корректным или осмысленным с точки зрения цели пользователя. Это разводит два разных вопроса — «может ли модель долго работать не отвлекаясь» и «можно ли доверять тому, что она сделала», — и именно второй вопрос, по мнению комментаторов, остаётся не закрытым растущими цифрами METR.</span>
+      <span data-lang="en">The article doesn't shy away from the pushback, which Mollick himself cites rather than dismisses: commenters on the post point out that "long-horizon persistence" benchmarks only measure that a model saw a process through to the end, not whether the result was correct or meaningful relative to the user's actual goal. That separates two different questions — "can the model keep working for a long time without derailing" and "can you trust what it produced" — and it's the second question that, per the commenters, the rising METR numbers don't settle.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по доступному описанию статьи (WebSearch) — прямой WebFetch на oneusefulthing.org из облачной песочницы не проходит (домен не резолвится через прокси). Факты сверены по нескольким независимым пересказам публикации и комментариям к ней.</span>
+      <span data-lang="en">Digest built from the article's available description (WebSearch) — a direct WebFetch to oneusefulthing.org fails from this cloud sandbox (the domain doesn't resolve through the proxy). Facts were cross-checked across several independent summaries of the post and its comments.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

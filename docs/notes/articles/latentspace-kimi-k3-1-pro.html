@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Latent Space о Kimi K3.1 Pro — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (AI News) · 2026-10-24</span>
+      <span data-lang="en">Article digest · Latent Space (AI News) · 2026-10-24</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Kimi K3.1 Pro: открытые веса на уровне Fable 5.1 сокращают отставание от закрытых лабораторий до месяца</span>
+      <span data-lang="en">Kimi K3.1 Pro: Fable-5.1-class open weights narrow the gap with closed labs to a month</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://latent.space/p/ainews-kimi-31/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ежедневная рубрика AI News в рассылке Latent Space разбирает релиз Kimi K3.1 Pro от Moonshot AI — китайской модели с 2,8 трлн параметров (104 млрд активных на токен, архитектура MoE) и окном контекста в 1 млн токенов. Главный тезис материала не в самих цифрах, а в том, что происходит с темпом: по оценке авторов, разрыв между лучшими открытыми китайскими моделями и закрытыми флагманами западных лабораторий (авторы сравнивают K3.1 Pro по уровню с Fable 5.1) сократился до примерно одного месяца — а значит, выбор между «подождать открытую модель» и «платить за закрытый API» для многих задач становится практически равноценным.</span>
+      <span data-lang="en">Latent Space's daily AI News roundup covers Moonshot AI's release of Kimi K3.1 Pro — a Chinese model with 2.8 trillion parameters (104 billion active per token, MoE architecture) and a 1M-token context window. The piece's real point isn't the numbers themselves but what they say about pace: by the authors' estimate, the gap between the best open Chinese models and closed frontier labs' flagships (they place K3.1 Pro at roughly Fable-5.1 class) has shrunk to about a month — which makes choosing between "wait for the open model" and "pay for the closed API" close to a wash for many tasks.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что заявлено: полнопроектный кодинг, 3D и финансы — и быстрый API уже сегодня</span><span data-lang="en">The claims: full-project coding, 3D, and finance — plus a fast API available today</span></h2>
+    <p>
+      <span data-lang="ru">Moonshot позиционирует модель не как универсального чат-бота, а как инструмент для «полнопроектного» кодинга — вплоть до сборки игровых сцен в Unreal, Unity и Godot, — параметрического 3D-моделирования в Blender и CAD, а также финансовых задач, где компания заявляет снижение частоты галлюцинаций на 65% по сравнению с предыдущей версией K3. Важная деталь, которую выделяет Latent Space: открытые веса модели ещё не опубликованы (Moonshot обещает выложить их к 4 ноября), но API уже работает — причём в режиме Pro Highspeed, в 2–3 раза быстрее обычного тарифа, то есть компания сознательно выводит скоростной платный доступ раньше открытой публикации.</span>
+      <span data-lang="en">Moonshot positions the model not as a general chatbot but as a tool for "full-project" coding — down to assembling game scenes in Unreal, Unity, and Godot — parametric 3D modeling in Blender and CAD, and finance work, where the company claims a 65% drop in hallucination rate versus the previous K3. A detail Latent Space flags: the model's open weights aren't published yet (Moonshot promises them by November 4), but the API is already live — in a "Pro Highspeed" mode, 2-3x faster than the standard tier, meaning the company is deliberately shipping fast paid access ahead of the open release.</span>
+    </p>
+
+    <h2><span data-lang="ru">Оговорка самих авторов: «открытые веса» ≠ «открытый исходный код»</span><span data-lang="en">The authors' own caveat: "open weights" ≠ "open source"</span></h2>
+    <p>
+      <span data-lang="ru">Latent Space отдельно подчёркивает терминологическую точность, которую легко потерять в заголовках: лицензия и условия передачи весов для Kimi K3.1 Pro пока не определены, поэтому корректнее говорить именно об «открытых весах», а не об «открытом исходном коде» — разница практична, а не формальна, потому что от итоговой лицензии зависит, можно ли дообучать и коммерчески использовать модель без ограничений. Материал также указывает на расхождения между сторонними источниками в деталях архитектуры (в частности, в оценке доли активируемых параметров), что для авторов служит поводом рекомендовать читателю относиться к не подтверждённым Moonshot бенчмаркам со сдержанным доверием до публикации весов и независимой проверки.</span>
+      <span data-lang="en">Latent Space is careful about a terminology distinction that's easy to lose in headlines: the license and weight-redistribution terms for Kimi K3.1 Pro aren't set yet, so "open weights" is the more accurate term, not "open source" — the difference is practical, not formal, since the eventual license determines whether the model can be fine-tuned and used commercially without restriction. The piece also notes disagreement among third-party sources on architecture details (specifically, the estimated share of active parameters), which the authors treat as a reason to keep any Moonshot-reported benchmark unconfirmed with measured skepticism until the weights ship and independent testing follows.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по доступному описанию статьи (WebSearch) — прямой WebFetch на latent.space из облачной песочницы не проходит (домен не резолвится через прокси). Отдельные технические цифры (доля активных параметров) расходятся между источниками и приведены с пометкой о неопределённости, как и в оригинальном материале.</span>
+      <span data-lang="en">Digest built from the article's available description (WebSearch) — a direct WebFetch to latent.space fails from this cloud sandbox (the domain doesn't resolve through the proxy). Some technical figures (the active-parameter share) disagree across sources and are flagged as uncertain here, as in the original piece.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

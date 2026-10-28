@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T09:40:00Z",
+  "news": [
+    {
+      "id": "2026-10-28-openai-gpt-6-1-terra",
+      "cluster_id": "openai-gpt-6-1-terra",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI выпускает GPT-6.1 Terra — вдвое дешевле и втрое быстрее для компьютерных агентов",
+        "en": "OpenAI ships GPT-6.1 Terra — half the price, 3x faster for computer-use agents"
+      },
+      "summary": {
+        "ru": "26 октября OpenAI выпустила GPT-6.1 Terra — модель среднего тяжа, нацеленную на визуальное рассуждение, точное управление компьютером и повседневную офисную работу. По собственным данным компании, модель выполняет задачи более чем втрое быстрее GPT-6 Astra и GPT-6.1 Sol при вдвое меньшей цене API ($1 за млн входных токенов, $5 за млн выходных) и набирает 50,3% на Terminal-Bench 4.0 при максимальном уровне рассуждений против 21,5% у предыдущей GPT-5.6 Terra. Модель уже доступна пользователям Plus, Pro, Enterprise и Edu в ChatGPT Work и Codex, а также через API.",
+        "en": "On October 26, OpenAI released GPT-6.1 Terra, a mid-tier model aimed at visual reasoning, precise computer use, and everyday office work. By the company's own figures, it completes tasks over three times faster than GPT-6 Astra and GPT-6.1 Sol at half the API price ($1 per million input tokens, $5 per million output tokens), and scores 50.3% on Terminal-Bench 4.0 at maximum reasoning effort versus 21.5% for the previous GPT-5.6 Terra. The model is already available to Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex, as well as through the API."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметное улучшение экономики агентных сценариев (цена/скорость) делает постоянно работающих компьютерных агентов практичнее в масштабе — полезное развитие в рамках текущего подхода (ещё один ценовой/скоростной тир в линейке), но судя по реакции сообщества, не меняет сам подход к использованию модели.",
+        "en": "A real improvement in agentic-use economics (price/speed) makes always-on computer-use agents more practical at scale — a useful development within the current approach (another tier in the lineup) rather than a new way of using the model, as the mixed community reaction suggests."
+      },
+      "source_url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "opinions": [
+        {
+          "author": "minimaxir, Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Называет Terra «странным средним ребёнком» в линейке и спрашивает, зачем выбирать её вместо Sol, учитывая результаты по стоимости на Terminal-Bench.",
+            "en": "Calls Terra a \"weird middle child\" in the lineup and questions why anyone would pick it over Sol, given the Terminal-Bench cost-per-task results."
+          },
+          "url": "https://news.ycombinator.com/item?id=50248124"
+        },
+        {
+          "author": "notenchange, Hacker News",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Попробовал более дешёвый тир Luna и остался недоволен результатами; планирует протестировать Terra, но отмечает как повод для беспокойства присвоенный модели уровень риска Critical по кибербезопасности.",
+            "en": "Tried the cheaper Luna tier and found the results weren't good enough; plans to test Terra next, but flags the model's Critical cybersecurity risk rating as a concern."
+          },
+          "url": "https://news.ycombinator.com/item?id=50248124"
+        },
+        {
+          "author": "Ted Sanders, OpenAI (в треде Hacker News)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Сотрудник OpenAI объясняет в треде логику компании: Terra рассчитана на сценарии компьютерного использования, автоматизации и технической письменной работы, а не на сложный софтверный кодинг, для которого по-прежнему рекомендуются Sol или Astra.",
+            "en": "An OpenAI employee explains the company's reasoning in the thread: Terra targets computer-use, automation, and technical-writing workloads rather than complex software coding, for which Sol or Astra are still recommended."
+          },
+          "url": "https://news.ycombinator.com/item?id=50248124"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Доступна в ChatGPT Work как модель для повседневных офисных задач с визуальным рассуждением и точным управлением компьютером (чтением экрана и выполнением действий в приложениях).",
+            "en": "Available in ChatGPT Work as a model for everyday office tasks involving visual reasoning and precise computer use (reading the screen and taking actions across apps)."
+          },
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+        },
+        {
+          "text": {
+            "ru": "Доступна в Codex как более дешёвый и быстрый вариант для несложных задач кодинга, когда полная мощность Sol или Astra не нужна.",
+            "en": "Available in Codex as a cheaper, faster option for less complex coding tasks where the full power of Sol or Astra isn't needed."
+          },
+          "url": "https://news.ycombinator.com/item?id=50248124"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-anthropic-drug-development-partnerships",
+      "cluster_id": "anthropic-drug-development-partnerships",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic публикует первые результаты встраивания Claude в разработку лекарств у шести партнёров",
+        "en": "Anthropic publishes early results of embedding Claude in drug development across six partners"
+      },
+      "summary": {
+        "ru": "27 октября Anthropic описала ранние, в основном доклинические результаты работы Claude у шести партнёров по разработке лекарств плюс собственную программу компании. Среди конкретных цифр: Claude почти автономно сгенерировал около 35 000 дизайнов антител для лечения пищевой аллергии за месяц (Divergence Labs); редизайн части CAR T-клеточной терапии оказался примерно на 70% короче стандартной версии и позволил клеткам производить в 10 раз больше рецепторов (Generate Biomedicines); на 1061 странице производственной документации Claude нашёл все 11 проблем, которые нашли люди-рецензенты, и ещё 7 пропущенных, сократив время проверки с 25+ часов до менее трёх (Enveda). Anthropic подчёркивает, что большая часть работы доклиническая и препараты ещё не тестировались на людях.",
+        "en": "On October 27, Anthropic described early, mostly preclinical results of embedding Claude with six drug-development partners, plus its own internal program. Among the concrete figures: Claude almost autonomously generated about 35,000 antibody designs for a food-allergy treatment in a month (Divergence Labs); a redesign of a CAR T-cell therapy component came out roughly 70% shorter than the standard version and let cells produce 10 times as many receptors (Generate Biomedicines); across 1,061 pages of manufacturing documentation, Claude caught all 11 issues human reviewers found plus 7 more they missed, cutting review time from 25+ hours to under three (Enveda). Anthropic stresses that most of this work is preclinical and the resulting treatments have not yet been tested in humans."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — агентный Claude, встроенный в сквозной процесс специализированной научной и регуляторной работы (автономная генерация тысяч дизайнов, проверка регуляторных документов) — с конкретными проверяемыми цифрами, а не только маркетингом; значимость при этом ограничена нишей наук о жизни, а не применима ко всем пользователям LLM.",
+        "en": "Opens a new class of scenarios — agentic Claude embedded end-to-end in specialized scientific and regulatory work (autonomous generation of thousands of designs, catching issues in regulatory filings) — backed by concrete, checkable numbers rather than just marketing; its significance is nonetheless confined to the life-sciences niche rather than applicable to LLM users broadly."
+      },
+      "source_url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "BigHat Biosciences подключила Claude к системе лабораторных данных: модель предложила изменения в двух лидах-фрагментах антител, лучшие версии которых после ~1010 протестированных вариантов связывались более чем в 10 раз прочнее.",
+            "en": "BigHat Biosciences connected Claude to its lab data system; the model proposed changes to two antibody fragment leads, and after roughly 1,010 tested variants, the best versions bound more than 10x more tightly."
+          },
+          "url": "https://www.anthropic.com/research/early-progress-drug-development"
+        },
+        {
+          "text": {
+            "ru": "Bristol Myers Squibb использует Claude для оценки планов клинических испытаний на ранней стадии и прогноза вероятности успеха; по словам представителя компании, модель выдаёт за один промпт анализ, на который иначе ушли бы дни.",
+            "en": "Bristol Myers Squibb uses Claude to assess early-stage clinical trial plans and estimate the likelihood of success; per a company executive, the model produces from a single prompt an analysis that would otherwise take days."
+          },
+          "url": "https://www.anthropic.com/research/early-progress-drug-development"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-28-zvi-anthropic-versus-anthropic",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "Anthropic против Anthropic: компания, которая сама себе противоречит",
+        "en": "Anthropic Versus Anthropic: a company that contradicts itself"
+      },
+      "url": "https://thezvi.substack.com/p/anthropic-versus-anthropic",
+      "summary": {
+        "ru": "Мошовиц разбирает ответ Дарио Амодея критику Натану Калвину по поводу утёкшего черновика ИИ-регулирования, а также разбор METR методологии риск-отчёта Anthropic и спорную формулировку в собственном «Отчёте об общественном благе» компании о том, что технические проблемы безопасности ИИ якобы «решены».",
+        "en": "Mowshowitz works through Dario Amodei's reply to critic Nathan Calvin over the leaked AI-regulation bill draft, plus METR's review of Anthropic's risk-report methodology and a contentious claim in the company's own Public Benefit Report that the technical problems of AI safety are effectively \"solved\"."
+      },
+      "note_page": "notes/articles/zvi-anthropic-versus-anthropic.html"
+    },
+    {
+      "id": "2026-10-28-zvi-gemini-4-argon-safety-cards",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "Gemini 4 Argon: модель сильна, а карточка безопасности — разочаровывает",
+        "en": "Gemini 4 Argon: a strong model, a disappointing safety card"
+      },
+      "url": "https://thezvi.substack.com/p/gemini-4-argon-the-model-and-safety",
+      "summary": {
+        "ru": "Мошовиц хвалит Gemini 4 Argon за устойчивость к промпт-инъекциям мирового уровня и снижение галлюцинаций, но критикует safety card Google за рост «eval awareness» модели и избирательные сравнения, которые он называет «спином», а не нейтральной отчётностью.",
+        "en": "Mowshowitz praises Gemini 4 Argon for world-class prompt-injection resistance and lower hallucinations, but criticizes Google's safety card for the model's rising \"eval awareness\" and selective comparisons he calls \"spin\" rather than neutral reporting."
+      },
+      "note_page": "notes/articles/zvi-gemini-4-argon-safety-cards.html"
+    },
+    {
+      "id": "2026-10-28-mollick-30-months-exponential",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "30 месяцев на экспоненте: что показывают графики роста возможностей ИИ",
+        "en": "30 Months on the Exponential: what the AI-capability charts show"
+      },
+      "url": "https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts",
+      "summary": {
+        "ru": "Моллик показывает, что METR Long Horizon Benchmark вырос с 4 минут до ~17 часов человеческой работы за 30 месяцев и уткнулся в потолок измеримости, и выводит из этого новый режим работы с ИИ — «conjurer»: делегирование составной задачи агенту-оркестратору вместо пошагового контроля.",
+        "en": "Mollick shows the METR Long Horizon Benchmark grew from 4 minutes to roughly 17 hours of human-equivalent work over 30 months and hit a measurement ceiling, and draws from it a new way of working with AI — the \"conjurer\" mode: delegating a composite task to an orchestrator agent instead of step-by-step oversight."
+      },
+      "note_page": "notes/articles/mollick-30-months-exponential.html"
+    },
+    {
+      "id": "2026-10-28-latentspace-kimi-k3-1-pro",
+      "type": "article",
+      "author": "Latent Space",
+      "title": {
+        "ru": "Kimi K3.1 Pro: открытые веса на уровне Fable 5.1 сокращают отставание от закрытых лабораторий до месяца",
+        "en": "Kimi K3.1 Pro: Fable-5.1-class open weights narrow the gap with closed labs to a month"
+      },
+      "url": "https://latent.space/p/ainews-kimi-31/",
+      "summary": {
+        "ru": "Latent Space разбирает релиз Kimi K3.1 Pro от Moonshot AI (2,8 трлн параметров, 104 млрд активных, контекст 1M токенов) и указывает, что разрыв между открытыми китайскими моделями и закрытыми западными флагманами сократился примерно до месяца — при этом открытые веса ещё не опубликованы, хотя быстрый платный API уже работает.",
+        "en": "Latent Space covers Moonshot AI's release of Kimi K3.1 Pro (2.8T parameters, 104B active, 1M-token context) and notes the gap between open Chinese models and closed Western flagships has narrowed to about a month — even though the open weights aren't published yet, while a fast paid API is already live."
+      },
+      "note_page": "notes/articles/latentspace-kimi-k3-1-pro.html"
+    }
+  ]
+}

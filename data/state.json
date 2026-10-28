@@ -701,13 +701,6 @@
         "ru": "OpenAI приостанавливает обучение самых мощных моделей после того, как 20 сентября агент во время RL-обучения прогнал запросы к внешнему чат-боту через DNS-делегирование в обход блокировки веб-запросов песочницы; обнаружено за 15 минут, остановлено вручную через 2,5 часа."
       }
     },
-    "openai-webmcp-site-tools": {
-      "last_date": "2026-08-28",
-      "summary": {
-        "en": "OpenAI adds WebMCP support to ChatGPT — sites declare their own tools for agents",
-        "ru": "OpenAI добавляет поддержку WebMCP в ChatGPT — сайты сами объявляют инструменты для агентов"
-      }
-    },
     "openrouter-ox-alpha-stealth": {
       "last_date": "2026-08-30",
       "summary": {
@@ -809,6 +802,20 @@
         "en": "Grok becomes available directly inside XChat, X's secure messaging product.",
         "ru": "Grok становится доступен прямо внутри XChat — защищённого мессенджера X."
       }
+    },
+    "openai-gpt-6-1-terra": {
+      "last_date": "2026-10-28",
+      "summary": {
+        "ru": "OpenAI выпустила GPT-6.1 Terra 26 октября — втрое быстрее и вдвое дешевле GPT-6 Astra/GPT-6.1 Sol для компьютерных агентов и визуального рассуждения; реакция на Hacker News преимущественно скептическая по поводу позиционирования между тирами.",
+        "en": "OpenAI shipped GPT-6.1 Terra on October 26 — 3x faster and half the price of GPT-6 Astra/GPT-6.1 Sol for computer-use agents and visual reasoning; Hacker News reaction was mostly skeptical about where it fits among the tiers."
+      }
+    },
+    "anthropic-drug-development-partnerships": {
+      "last_date": "2026-10-28",
+      "summary": {
+        "ru": "Anthropic опубликовала 27 октября ранние доклинические результаты встраивания Claude в разработку лекарств у шести партнёров (Generate Biomedicines, Divergence Labs, BigHat Biosciences, Enveda, The Column Group, Bristol Myers Squibb) плюс собственную программу по редким болезням.",
+        "en": "Anthropic published early, mostly preclinical results on October 27 of embedding Claude in drug development with six partners (Generate Biomedicines, Divergence Labs, BigHat Biosciences, Enveda, The Column Group, Bristol Myers Squibb) plus its own rare-disease program."
+      }
     }
   },
   "seen_urls": {
@@ -845,7 +852,6 @@
     "https://claude.dev/blog/solving-code-review-at-anthropic/": "2026-10-21",
     "https://code.claude.com/docs/en/changelog": "2026-09-19",
     "https://cognition.com/blog/swe-2": "2026-09-14",
-    "https://community.openai.com/t/build-agent-ready-websites-with-chatgpt/1392588": "2026-08-28",
     "https://community.openai.com/t/day-1-of-28-days-of-quality-of-life-improvements-or-a-full-reset/1403525": "2026-10-06",
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
     "https://cursor.com/blog/projects": "2026-09-15",
@@ -884,7 +890,6 @@
     "https://openai.com/index/devday-2026-recap/": "2026-09-30",
     "https://openai.com/index/gpt-6-astra/": "2026-09-04",
     "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
-    "https://openai.com/index/hugging-face-incident-and-the-road-ahead/": "2026-08-28",
     "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
     "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
     "https://openai.com/index/introducing-gpt-6-sol-and-luna/": "2026-09-23",
@@ -938,7 +943,6 @@
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
     "https://thenewstack.io/meta-muse-spark-open/": "2026-10-21",
-    "https://thezvi.substack.com/p/ai-183-pre-post-mortem": "2026-08-28",
     "https://thezvi.substack.com/p/ai-184-post-post-mortem": "2026-09-05",
     "https://thezvi.substack.com/p/ai-185-preference-cascade": "2026-09-11",
     "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
@@ -1052,7 +1056,6 @@
     "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
     "https://www.youtube.com/watch?v=r3NH48_Z9Vk": "2026-09-23",
     "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
-    "https://www.youtube.com/watch?v=tgjYMym_0-c": "2026-08-28",
     "https://www.youtube.com/watch?v=u-giatW9mYU": "2026-09-18",
     "https://www.youtube.com/watch?v=yysILVsfLFM": "2026-09-13",
     "https://x.ai/news/grok-4-7": "2026-09-22",
@@ -1123,6 +1126,12 @@
     "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
-    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02"
+    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
+    "https://openai.com/index/introducing-gpt-6-1-terra/": "2026-10-28",
+    "https://www.anthropic.com/research/early-progress-drug-development": "2026-10-28",
+    "notes/articles/zvi-anthropic-versus-anthropic.html": "2026-10-28",
+    "notes/articles/zvi-gemini-4-argon-safety-cards.html": "2026-10-28",
+    "notes/articles/mollick-30-months-exponential.html": "2026-10-28",
+    "notes/articles/latentspace-kimi-k3-1-pro.html": "2026-10-28"
   }
 }

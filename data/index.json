@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-28",
+      "news_count": 2,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Anthropic публикует первые результаты встраивания Claude в разработку лекарств у шести партнёров",
+        "en": "Anthropic publishes early results of embedding Claude in drug development across six partners"
+      }
+    },
+    {
       "date": "2026-10-27",
       "news_count": 1,
       "expert_count": 3,

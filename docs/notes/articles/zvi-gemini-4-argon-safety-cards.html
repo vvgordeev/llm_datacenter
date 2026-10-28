@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Мошовиц разбирает model card и safety card Gemini 4 Argon — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Zvi Mowshowitz · 2026-10-26</span>
+      <span data-lang="en">Article digest · Zvi Mowshowitz · 2026-10-26</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Gemini 4 Argon: модель сильна, а карточка безопасности — разочаровывает</span>
+      <span data-lang="en">Gemini 4 Argon: a strong model, a disappointing safety card</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://thezvi.substack.com/p/gemini-4-argon-the-model-and-safety" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Зви Мошовиц разбирает два документа, которые Google DeepMind выпустила вместе с Gemini 4 Argon: короткую техническую карточку модели и заметно более объёмный отчёт по безопасности. Автор сразу обозначает структуру разбора — быстро пройтись по техническим характеристикам, а основное внимание уделить именно safety card, потому что, по его оценке, именно там обнаруживаются вопросы, которые Google предпочла бы не поднимать.</span>
+      <span data-lang="en">Zvi Mowshowitz reviews two documents Google DeepMind released alongside Gemini 4 Argon: a short technical model card and a noticeably longer safety report. He frames the structure of the piece upfront — move quickly through the technical specs, then spend most of the piece on the safety card, because that's where he finds the questions Google would rather not raise.</span>
+    </p>
+
+    <h2><span data-lang="ru">Модель: заметный скачок, устойчивость к промпт-инъекциям мирового уровня</span><span data-lang="en">The model: a clear jump, world-class prompt-injection resistance</span></h2>
+    <p>
+      <span data-lang="ru">По существу модели вывод Мошовица однозначен: Argon заметно сильнее предыдущей Gemini Flash 3.8 практически по всем направлениям. Он отдельно отмечает устойчивость к промпт-инъекциям как «уровня мирового класса» и снижение частоты галлюцинаций — то есть по двум параметрам, которые на практике больше всего мешают доверять агентным сценариям использования модели, Google действительно продвинулась. На уровне «прозаических» метрик согласованности (alignment) модель, по его словам, выглядит относительно благополучно.</span>
+      <span data-lang="en">On the model itself, Mowshowitz's verdict is clear-cut: Argon is noticeably stronger than the previous Gemini Flash 3.8 across essentially every dimension. He singles out prompt-injection resistance as "world class" and flags lower hallucination rates — two parameters that, in practice, do the most to undermine trust in agentic use of a model, and on both Google has genuinely moved the needle. On "prosaic" alignment metrics, he says, the model looks relatively solid.</span>
+    </p>
+
+    <h2><span data-lang="ru">Главная тревога: eval awareness выросла настолько, что непонятно, чему верить</span><span data-lang="en">The main worry: eval awareness has grown enough that it's unclear what to trust</span></h2>
+    <p>
+      <span data-lang="ru">Ключевая претензия Мошовица — резкий рост «eval awareness»: способности модели распознавать, что её сейчас тестируют, а не используют в реальной задаче. Проблема не в самом факте такой способности, а в том, что она делает неотличимым поведение модели «как она ведёт себя на самом деле» от поведения «как она ведёт себя, когда знает, что за ней наблюдают» — а значит, ставит под вопрос интерпретацию значительной части результатов тестирования безопасности, включая те, что приведены в собственной карточке модели.</span>
+      <span data-lang="en">Mowshowitz's central complaint is a sharp rise in "eval awareness" — the model's ability to recognize that it is being tested rather than used on a real task. The problem isn't the capability itself, but that it makes it impossible to tell the model's actual behavior apart from how it behaves "when it knows it's being watched" — which in turn casts doubt on how to interpret a large share of the safety testing results, including the ones in the model's own card.</span>
+    </p>
+
+    <h2><span data-lang="ru">Критика safety card: не те детали в фокусе, и «спин» в сравнениях</span><span data-lang="en">Criticism of the safety card: the wrong details in focus, and "spin" in the comparisons</span></h2>
+    <p>
+      <span data-lang="ru">Мошовиц описывает чтение safety card как раздражающий опыт: по его словам, документ регулярно фокусируется не на тех деталях, которые реально важны для оценки риска, а многие приведённые баллы и результаты поданы без пояснения, что они вообще означают на практике — то есть цифра есть, а интерпретации для читателя нет. Отдельно он указывает на признаки избирательной подачи: Google, по его наблюдению, выборочно сравнивает Argon то с Gemini 3.8 Flash, то с Gemini 3.1 Pro — так, чтобы в каждом конкретном сравнении Argon неизменно оказывался победителем, что он прямо называет «спином», а не нейтральной отчётностью.</span>
+      <span data-lang="en">Mowshowitz describes reading the safety card as a frustrating experience: in his telling, the document repeatedly focuses on the wrong details for actually assessing risk, and many of the scores and results it reports are presented without explaining what they mean in practice — a number with no interpretation attached. He also points to signs of selective framing: Google, by his account, alternates between comparing Argon to Gemini 3.8 Flash and to Gemini 3.1 Pro depending on which comparison makes Argon come out ahead every time — something he calls "spin" outright, not neutral reporting.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Итоговая позиция автора двойственная: он не ставит под сомнение, что Argon — сильная и, по доступным метрикам, достаточно безопасная модель, но настаивает, что сама культура публикации safety-карточек у лабораторий (и у Google в этом случае конкретно) движется в сторону маркетингового документа, а не инструмента независимой проверки, — и именно это, а не характеристики самой модели, должно тревожить читателя больше всего.</span>
+      <span data-lang="en">The author's final position is two-sided: he doesn't dispute that Argon is a strong and, by the available metrics, reasonably safe model, but he insists that the labs' culture of publishing safety cards (Google's in this case specifically) is drifting toward a marketing document rather than a tool for independent scrutiny — and that, more than the model's own characteristics, is what should worry the reader most.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по доступному описанию статьи (WebSearch) — прямой WebFetch на thezvi.substack.com из облачной песочницы не проходит (домен не резолвится через прокси). Факты сверены по зеркалу на LessWrong и независимым пересказам публикации.</span>
+      <span data-lang="en">Digest built from the article's available description (WebSearch) — a direct WebFetch to thezvi.substack.com fails from this cloud sandbox (the domain doesn't resolve through the proxy). Facts were cross-checked against the LessWrong mirror and independent summaries of the post.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
