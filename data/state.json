@@ -147,13 +147,6 @@
         "ru": "Claude for Government перешла из публичной беты (с июля) в полный GA 30 сентября для федеральных/штатных/местных ведомств США на FedRAMP High, с управленческими инструментами под госсектор."
       }
     },
-    "anthropic-claude-for-teachers": {
-      "last_date": "2026-08-29",
-      "summary": {
-        "en": "Anthropic Claude for Teachers — from free individual K-12 educator access (July) to an Enterprise offering for schools/districts with SSO/RBAC (August)",
-        "ru": "Anthropic Claude for Teachers — от бесплатного доступа для отдельных K-12 учителей (июль) до Enterprise-предложения для школ и округов с SSO/RBAC (август)"
-      }
-    },
     "anthropic-claude-frontier-academy": {
       "last_date": "2026-10-03",
       "summary": {
@@ -194,13 +187,6 @@
       "summary": {
         "en": "Claude Enterprise ships Smart Reports (beta) — team usage, cost and friction analytics built on Claude, with recommendations for shared skills",
         "ru": "Claude Enterprise получает Smart Reports (бета) — аналитика использования, стоимости и трения команды поверх Claude, с рекомендациями по общим skills"
-      }
-    },
-    "anthropic-claude-team-scientists": {
-      "last_date": "2026-08-29",
-      "summary": {
-        "en": "Anthropic opens Claude Team plan for 10,000 scientists: free/discounted seats, expanding AI for Science into math, physics, engineering",
-        "ru": "Anthropic открывает Claude Team для 10 000 учёных: бесплатные/льготные места, расширение AI for Science на математику, физику, инженерию"
       }
     },
     "anthropic-claude-voice-data-training-optin": {
@@ -603,13 +589,6 @@
         "ru": "OpenAI выпускает ChatGPT Images 2.5 (sunburst/flare) — точнее следует инструкциям правки и сохраняет референсный объект."
       }
     },
-    "openai-chatgpt-multi-google-accounts": {
-      "last_date": "2026-08-29",
-      "summary": {
-        "en": "OpenAI adds support for multiple Gmail/Calendar/Contacts accounts in ChatGPT and Codex",
-        "ru": "OpenAI добавляет поддержку нескольких аккаунтов Gmail/Calendar/Contacts в ChatGPT и Codex"
-      }
-    },
     "openai-chatgpt-tryon-shopping": {
       "last_date": "2026-10-02",
       "summary": {
@@ -816,12 +795,18 @@
         "ru": "Anthropic опубликовала 27 октября ранние доклинические результаты встраивания Claude в разработку лекарств у шести партнёров (Generate Biomedicines, Divergence Labs, BigHat Biosciences, Enveda, The Column Group, Bristol Myers Squibb) плюс собственную программу по редким болезням.",
         "en": "Anthropic published early, mostly preclinical results on October 27 of embedding Claude in drug development with six partners (Generate Biomedicines, Divergence Labs, BigHat Biosciences, Enveda, The Column Group, Bristol Myers Squibb) plus its own rare-disease program."
       }
+    },
+    "anthropic-ai-for-science-institutions": {
+      "last_date": "2026-10-29",
+      "summary": {
+        "en": "Anthropic expands its AI for Science program from individual researchers to partnerships with funders (Simons Foundation, Schmidt Sciences, NSF), institutions (Wellcome Sanger, Francis Crick, EMBL), and research projects (FlyWire, gnomAD, LEAP), plus agent teams analyzing Allen Institute datasets.",
+        "ru": "Anthropic расширяет программу AI for Science с уровня отдельных исследователей до партнёрств с фондами (Simons Foundation, Schmidt Sciences, NSF), институтами (Wellcome Sanger, Francis Crick, EMBL) и проектами (FlyWire, gnomAD, LEAP), плюс агентные команды для анализа датасетов Allen Institute."
+      }
     }
   },
   "seen_urls": {
     "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
     "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/": "2026-10-05",
-    "https://9to5mac.com/2026/08/28/chatgpt-and-codex-now-support-multiple-gmail-and-google-calendar-accounts/": "2026-08-29",
     "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/": "2026-09-17",
     "https://about.fb.com/news/2026/09/introducing-muse-small-business/": "2026-09-30",
     "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/": "2026-09-29",
@@ -831,7 +816,6 @@
     "https://alexwang.ai/posts/associative-memory/": "2026-10-21",
     "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
     "https://andonlabs.com/blog/why-we-built-pion": "2026-09-15",
-    "https://anil.recoil.org/notes/rumour-is-the-exploit": "2026-08-29",
     "https://api-docs.deepseek.com/news/news260910/": "2026-09-11",
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
@@ -845,7 +829,6 @@
     "https://claude.com/blog/claude-code-mods": "2026-10-02",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01",
-    "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29",
     "https://claude.com/blog/claude-marketplace": "2026-09-24",
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17",
     "https://claude.com/resources/articles/dashboards-and-motion": "2026-10-12",
@@ -860,7 +843,6 @@
     "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence": "2026-10-01",
     "https://deepmind.google/models/model-cards/gemini-3-8-audio/": "2026-09-17",
     "https://dumbmatter.com/2026/10/programming-obituary/": "2026-10-20",
-    "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/": "2026-08-29",
     "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
     "https://every.to/context-window/evals-for-everyone": "2026-09-21",
     "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html": "2026-10-18",
@@ -975,7 +957,6 @@
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07",
     "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation": "2026-10-23",
-    "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-29",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-30",
     "https://www.anthropic.com/news/s1-sec": "2026-10-27",
     "https://www.anthropic.com/research/claude-shaped-science": "2026-10-02",
@@ -1084,7 +1065,6 @@
     "notes/articles/latentspace-anandkumar-weather-foundation-model.html": "2026-09-06",
     "notes/articles/latentspace-devday-2026-computer-use.html": "2026-10-02",
     "notes/articles/latentspace-gemini-4-argon-1m-output.html": "2026-10-05",
-    "notes/articles/madhavapeddy-bugonomics-rumour-exploit.html": "2026-08-29",
     "notes/articles/marcus-astra-recurrent-depth-red-alert.html": "2026-09-03",
     "notes/articles/marcus-two-rays-of-hope.html": "2026-09-12",
     "notes/articles/mercor-benchmark-map-us-economy.html": "2026-10-21",
@@ -1096,7 +1076,6 @@
     "notes/articles/petreski-name-the-speed-limit.html": "2026-09-13",
     "notes/articles/raschka-astra-looped-transformers.html": "2026-09-07",
     "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
-    "notes/articles/rehberger-claude-code-automode-injection.html": "2026-08-29",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/articles/willison-astra-pelican-grid.html": "2026-09-05",
@@ -1132,6 +1111,8 @@
     "notes/articles/zvi-anthropic-versus-anthropic.html": "2026-10-28",
     "notes/articles/zvi-gemini-4-argon-safety-cards.html": "2026-10-28",
     "notes/articles/mollick-30-months-exponential.html": "2026-10-28",
-    "notes/articles/latentspace-kimi-k3-1-pro.html": "2026-10-28"
+    "notes/articles/latentspace-kimi-k3-1-pro.html": "2026-10-28",
+    "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions": "2026-10-29",
+    "notes/articles/willison-vibe-game-development.html": "2026-10-29"
   }
 }

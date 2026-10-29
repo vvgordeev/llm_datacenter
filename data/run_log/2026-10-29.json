@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T05:15:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "ok", "candidates": 1, "note": "anthropic.com резолвился; единственный найденный пункт за 28 октября — AI for Science expansion"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "openai.com: getaddrinfo ENOTFOUND через прокси"},
+    {"source": "google/deepmind blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "blog.google: ENOTFOUND"},
+    {"source": "meta ai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "ai.meta.com: ENOTFOUND"},
+    {"source": "xai news (WebFetch)", "status": "blocked", "candidates": 0, "note": "x.ai: ENOTFOUND"},
+    {"source": "mistral news (WebFetch)", "status": "blocked", "candidates": 0, "note": "mistral.ai: ENOTFOUND"},
+    {"source": "deepseek news (WebFetch)", "status": "blocked", "candidates": 0, "note": "api-docs.deepseek.com: ENOTFOUND"},
+    {"source": "anthropic (WebSearch x2+)", "status": "ok", "candidates": 1, "note": "подтверждён AI for Science expansion (28 окт); остальное — старые/уже опубликованные сюжеты (Haiku 5.5, Claude Duet, S-1 IPO)"},
+    {"source": "openai (WebSearch x3)", "status": "ok", "candidates": 0, "note": "GPT-6.1 Terra уже опубликован вчера (2026-10-28.json); safety-дисклоужер про отключение мониторинга — от 21 окт, вне окна 36ч, пропущен как устаревший"},
+    {"source": "google/gemini (WebSearch x2)", "status": "ok", "candidates": 0, "note": "Gemini 4 post-training, Nano Banana 2.1, Fitbit-коуч — все уже в архиве или вне окна"},
+    {"source": "meta (WebSearch x2)", "status": "empty", "candidates": 0, "note": "ничего релевантного за 36ч не найдено"},
+    {"source": "xai (WebSearch x2)", "status": "ok", "candidates": 0, "note": "Grok Voice 3.0, X Subscription, Imagine Video 1.5 — все от 4-14 октября, уже должны были быть в предыдущих сводках, вне текущего окна"},
+    {"source": "mistral (WebSearch x3)", "status": "ok", "candidates": 0, "note": "Large 4 уже в архиве (mistral-large-4-le-chonk, 2026-10-11); открытые веса всё ещё не выложены на момент прогона"},
+    {"source": "deepseek (WebSearch x1)", "status": "empty", "candidates": 0, "note": "подтверждённых релизов за окно не найдено"},
+    {"source": "aggregators: smol.ai / tldr.tech (WebFetch)", "status": "blocked", "candidates": 0, "note": "news.smol.ai, tldr.tech: ENOTFOUND"},
+    {"source": "aggregators (WebSearch)", "status": "empty", "candidates": 0, "note": "индекс сильно зашумлён SEO-перепечатками; ничего верифицируемого за 28-29 окт не найдено"},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "hn.algolia.com: ENOTFOUND"},
+    {"source": "Hacker News (WebSearch)", "status": "empty", "candidates": 0, "note": "site:news.ycombinator.com не дал релевантных тредов за окно"},
+    {"source": "r/LocalLLaMA / r/ClaudeAI / X (WebSearch)", "status": "empty", "candidates": 0, "note": "ничего нового за окно, не перепечатка"},
+    {"source": "расширенный проход (WebSearch x4+)", "status": "empty", "candidates": 0, "note": "доп. запросы по моделям/коуд-агентам/Gemini 4 не дали новых фактов"},
+    {"source": "Simon Willison (git backup simonwillisonblog-backup)", "status": "ok", "candidates": 1, "note": "github.com резолвился; получен полный текст 'The October inflection point for vibe game development' (28 окт)"},
+    {"source": "Andrej Karpathy / AI Explained / Matt Wolfe / Nate Herk / Matt Pocock (YouTube RSS)", "status": "blocked", "candidates": 0, "note": "www.youtube.com: ENOTFOUND на уровне CONNECT — весь домен недоступен в этом прогоне"},
+    {"source": "видео-эксперты (WebSearch фолбэк)", "status": "empty", "candidates": 0, "note": "не удалось найти датированные публикации этой недели с достаточной уверенностью; решено не включать, чтобы не выдумывать детали"},
+    {"source": "Latent Space (WebFetch + WebSearch)", "status": "blocked", "candidates": 0, "note": "latent.space, www.latent.space: ENOTFOUND; WebSearch не дал ничего новее уже опубликованного вчера (ainews-kimi-31)"},
+    {"source": "Ethan Mollick / oneusefulthing.org (WebFetch + WebSearch)", "status": "blocked", "candidates": 0, "note": "oneusefulthing.org и oneusefulthing.substack.com: ENOTFOUND; WebSearch не нашёл постов новее уже опубликованного вчера"},
+    {"source": "Zvi Mowshowitz / thezvi.substack.com (WebFetch + WebSearch)", "status": "blocked", "candidates": 0, "note": "thezvi.substack.com, thezvi.wordpress.com, greaterwrong.com: ENOTFOUND; самый свежий найденный пост — 9 октября, уже вне окна"}
+  ],
+  "totals": {
+    "candidates": 20,
+    "published": 1,
+    "rejected": {
+      "уже опубликовано ранее / продолжение без новых фактов": 12,
+      "вне окна 36ч (lookback) без подтверждённой свежести": 5,
+      "неверифицируемо / противоречивые источники": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not_attempted: не найдено ни одного датированного видео-URL за окно свежести из-за блокировки youtube.com (CONNECT ENOTFOUND) и неинформативного WebSearch-фолбэка",
+    "frames": "not_attempted: см. выше"
+  },
+  "environment_note": "Существенная деградация сети в этом прогоне: прямой WebFetch не прошёл для ~20 из ~22 опробованных внешних доменов (resolve ENOTFOUND), включая youtube.com на уровне CONNECT и все эксперт-блоги кроме anthropic.com. Единственные стабильно доступные каналы — WebSearch и github.com (через который получен полный текст статьи Уиллисона). Это заметно ниже обычного уровня доступности и отражено в итоговом отчёте."
+}

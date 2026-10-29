@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T05:15:00Z",
+  "news": [
+    {
+      "id": "2026-10-29-anthropic-ai-for-science-institutions",
+      "cluster_id": "anthropic-ai-for-science-institutions",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic расширяет программу AI for Science на научные фонды и институты",
+        "en": "Anthropic expands its AI for Science program to funders and research institutions"
+      },
+      "summary": {
+        "ru": "28 октября Anthropic объявила о расширении программы AI for Science (бесплатные кредиты Claude для научных проектов, запущена в мае 2025) с уровня отдельных исследователей до партнёрств с фондами, институтами и исследовательскими группами. Среди новых партнёров — Simons Foundation, Schmidt Sciences, Wellcome Sanger Institute, Francis Crick Institute, EMBL и проекты вроде FlyWire (коннектомика, Принстон) и gnomAD (геномика, Broad Institute). Отдельно выделен кейс Allen Institute, который формирует команды ИИ-агентов для анализа открытых датасетов мозга и иммунной системы, и упоминание Model Hardware Standard — представленного в августе протокола, позволяющего агентам управлять лабораторным оборудованием.",
+        "en": "On October 28, Anthropic announced it is expanding its AI for Science program (free Claude credits for research projects, launched in May 2025) from individual researchers to partnerships with funders, institutions, and research groups. New partners include the Simons Foundation, Schmidt Sciences, the Wellcome Sanger Institute, the Francis Crick Institute, EMBL, and projects such as FlyWire (connectomics, Princeton) and gnomAD (genomics, Broad Institute). The announcement highlights the Allen Institute, which is building teams of AI agents to analyze its open brain and immune-system datasets, and references the Model Hardware Standard, the protocol introduced in August that lets agents operate physical lab equipment."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Заметное институциональное расширение существующей программы (больше партнёров, дисконтный план для учёных, агентные команды для анализа данных) — полезное развитие в узкой нише научных исследований, но не меняет подход к использованию LLM для большинства пользователей.",
+        "en": "A real institutional expansion of an existing program (more partners, a discounted plan for scientists, agent teams for dataset analysis) — a useful development within a narrow research-science niche, not a change in how most LLM users work."
+      },
+      "source_url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "FlyWire (Принстон) использует Claude в проекте по коннектомике и нейронаукам для анализа данных о связях нейронов.",
+            "en": "FlyWire (Princeton) uses Claude in a connectomics and neuroscience project to analyze neuron-connectivity data."
+          },
+          "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+        },
+        {
+          "text": {
+            "ru": "Allen Institute формирует команды ИИ-агентов, которые анализируют открытые датасеты по мозгу, клеткам и иммунной системе — по оценке Anthropic, это превращает месяцы ручного анализа в часы.",
+            "en": "The Allen Institute is building teams of AI agents to analyze its open brain, cell, and immune datasets — work Anthropic says can turn months of manual analysis into hours."
+          },
+          "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-10-29-willison-vibe-game-development",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Октябрьский перелом в вайб-разработке игр",
+        "en": "The October inflection point for vibe game development"
+      },
+      "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+      "summary": {
+        "ru": "Уиллисон описывает перелом, аналогичный ноябрю 2025 года для агентов-кодеров: в октябре 2026 связка Claude Opus 5.5 с простыми промптами вроде «сделай это веселее» впервые позволила ему собрать четыре по-настоящему играбельные игры (3D-угадайку, RPG, RTS и фермерский симулятор) полностью в браузере, без единого просмотра кода.",
+        "en": "Willison describes an inflection point akin to coding agents in November 2025: in October 2026, Claude Opus 5.5 combined with simple prompts like \"make it more fun\" let him build four genuinely playable games (a 3D spot-the-difference puzzle, an RPG, an RTS, and a farming sim), entirely in the browser, without reviewing a line of code."
+      },
+      "note_page": "notes/articles/willison-vibe-game-development.html"
+    }
+  ]
+}

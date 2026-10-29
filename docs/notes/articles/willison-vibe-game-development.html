@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Октябрьский перелом в вайб-разработке игр» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-10-28</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-10-28</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Октябрьский перелом в вайб-разработке игр</span>
+      <span data-lang="en">The October inflection point for vibe game development</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/28/vibe-game-development/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон проводит параллель со своим же прошлым наблюдением: в ноябре 2025 года связка Opus 4.5 и GPT-5.1 перешла рубеж, после которого агенты для кодинга стали надёжным повседневным инструментом программистов. По его оценке, в октябре 2026 года случился аналогичный перелом — но не для кода вообще, а конкретно для «вайб-кодинга» компьютерных игр: моделей, которым можно поручить игру целиком — код, арт, музыку и даже игровой дизайн — одной фразой вроде «сделай это намного веселее», и получить результат, в который реально интересно играть.</span>
+      <span data-lang="en">Simon Willison draws a parallel to his own earlier observation: in November 2025, the combination of Opus 4.5 and GPT-5.1 crossed a threshold after which coding agents became reliable daily-driver tools for programmers. In his assessment, October 2026 saw a similar inflection — not for code in general, but specifically for "vibe coding" computer games: models that can be handed an entire game — code, art, music, and even game design — with a one-line prompt like "make it a lot more fun," and that produce something genuinely fun to play.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему раньше не получалось: модели умели делать похожее на игру, но не весёлое</span><span data-lang="en">Why it didn't work before: models could fake a game, but not make it fun</span></h2>
+    <p>
+      <span data-lang="ru">Автор подчёркивает, что модели давно способны сгенерировать нечто, внешне похожее на игру — графику, интерфейс, базовую механику. Проблема была в игровом дизайне как таковом: придумать игровой цикл, который действительно увлекает, держит правильный уровень сложности и даёт ощущение прогресса — тонкое ремесло, в котором Уиллисон не считал модели компетентными. Перелом случился, когда он попробовал буквально одну фразу — «Make it a LOT more fun» («Сделай это НАМНОГО веселее») — адресованную Claude Opus 5.5, и модель действительно улучшила игру по этому расплывчатому, не техническому критерию. По его наблюдениям, GPT-6 Astra пока технически способен собрать игру, но «чувство веселья» у него слабее, чем у Opus 5.5; Уиллисон ожидает, что OpenAI подтянется к концу года.</span>
+      <span data-lang="en">Willison stresses that models have long been able to produce something that looks like a game — graphics, UI, basic mechanics. The problem was game design itself: crafting a gameplay loop that's genuinely engaging, pitched at the right difficulty, and gives a sense of progress is a subtle craft he didn't think models were equipped for. The turning point came when he tried one deliberately vague, non-technical instruction — "Make it a LOT more fun" — on Claude Opus 5.5, and the model actually improved the game by that fuzzy criterion. In his testing, GPT-6 Astra can technically assemble a game, but its sense of "fun" doesn't yet match Opus 5.5's; he expects OpenAI to catch up by year's end.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод на практике: четыре игры и общая схема промптинга</span><span data-lang="en">The method in practice: four games and a shared prompting pattern</span></h2>
+    <p>
+      <span data-lang="ru">Статья разбирает четыре проекта, все — на HTML/JavaScript, полностью в браузере, без единого просмотра кода автором (это принципиально для «вайб-кодинга» в его исходном определении). «Tree Appreciator» — игра на поиск отличий между двумя сгенерированными 3D-деревьями — получилась с одного запроса в обычном чате Claude, без агента для кодинга, с прямой просьбой использовать библиотеку three.js. «Emberwick» — top-down RPG про деревню и спящего тролля — собиралась итеративно: сперва движок и сеттинг, затем короткие правки («сделай рельеф не плоским», «добавь подвалы с туннелями»), и только когда прототип показал себя хорошо, финальный запрос «теперь сделай из этого настоящую игру, учетверив площадку, добавив сюжет без лишних штампов и систему магии». Доведение до играбельного состояния потребовало дополнительного плейтестинга — модель путала состояния квестов, когда сюжетные события меняли расположение персонажей. «Battle Drones» — RTS в духе Command & Conquer, где модели (включая разные LLM) могут играть друг против друга — прошла путь от рабочей, но не увлекательной версии на Claude Fable 5 до версии на three.js с мультиплеером через самодельный WebSocket-сервер, медалями, повторами и генератором карт — после той же фразы «сделай веселее» и переноса на three.js. Четвёртый проект, фермерский симулятор про гигантские тыквы «Quarter Sun Cove», начинался с отдельной сессии брейншторминга, давшей файл-спецификацию, по которому Opus 5.5 в режиме «Ultracode» работал почти двое суток.</span>
+      <span data-lang="en">The post walks through four projects, all HTML/JavaScript running entirely in the browser, with no code review by the author at any point (central to "vibe coding" in its original definition). "Tree Appreciator" — a spot-the-difference game between two generated 3D trees — came out of a single prompt in the plain Claude chat interface, no coding agent, explicitly asking for the three.js library. "Emberwick" — a top-down RPG about a village and a sleeping troll — was built iteratively: first an engine and setting, then short follow-ups ("make the terrain not flat," "add basements with a tunnel system"), and only once the prototype proved solid, a final instruction to "turn this into an actual game, quadruple the playable area, add a plot that isn't too cliché, and a magic system." Getting it playable took additional playtesting — the model confused quest states when story events moved characters around. "Battle Drones," a Command & Conquer-style RTS where different LLMs can play against each other, went from a working-but-dull version on Claude Fable 5 to a three.js rewrite with multiplayer over a vibe-coded WebSocket relay, medals, replays, and a map generator — triggered by the same "make it more fun" prompt plus a request to port it to three.js. The fourth project, a giant-pumpkin farming sim called "Quarter Sun Cove," started from a separate brainstorming session that produced a spec file, which Opus 5.5 in "Ultracode" mode then worked from for nearly two days.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения метода и к чему он применим</span><span data-lang="en">Limits of the method and what it's good for</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон прямо называет границы подхода. Он не считает свои игры достижением именно геймдизайнера — минимальный творческий вклад (до четырёх часов на проект) и готовность модели сделать всё за человека означают, по его словам, что он «не заслужил права» подавать эти игры на геймджемы или конкурсы. Жанр также собирает максимум претензий «slop»-критиков: здесь одновременно ИИ-арт, ИИ-музыка, ИИ-код и ИИ-сюжет — то есть то, против чего игровое сообщество уже возражало по отдельности, теперь сразу в одном продукте (автор ссылается на жалобы на Steam Next Fest). Главная практическая рекомендация — низкая цена ошибки: сломанный персональный вайб-кодед-проект почти ничем не грозит (кроме курьёзного случая, когда эксперимент с аудио для мультиплеера дал жене автора мигрень). Рецепт для старта: обычный чат (Claude или ChatGPT) с промптом вида «Build a mobile-friendly three.js game where...», без агента для кодинга на старте — агент (Codex или Claude Code) подключается уже после того, как концепция доказала жизнеспособность.</span>
+      <span data-lang="en">Willison is explicit about the limits. He doesn't consider the games an achievement in game design per se — minimal creative input (at most four hours per project) and letting the model do everything mean, in his words, he hasn't "earned the right" to enter these in game jams or competitions. The genre also draws the fullest force of "slop" criticism, since it stacks AI art, AI music, AI code, and AI-written plot all at once — everything the games community has already objected to piecemeal, now in a single product (he cites complaints about Steam Next Fest). His main practical point is the low cost of failure: a broken personal vibe-coded project risks almost nothing (bar one mishap where an audio-multiplayer experiment gave his wife a headache). His starting recipe: a plain chat interface (Claude or ChatGPT), a prompt like "Build a mobile-friendly three.js game where...", no coding agent at first — bringing in an agent (Codex or Claude Code) only once the concept has proven itself.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту статьи, полученному из ежедневного бэкапа блога Уиллисона (github.com/simonw/simonwillisonblog-backup) — прямой WebFetch на simonwillison.net из облачной песочницы не проходит (домен не резолвится через прокси в этом прогоне).</span>
+      <span data-lang="en">Digest built from the article's full text, obtained from the daily backup of Willison's blog (github.com/simonw/simonwillisonblog-backup) — a direct WebFetch to simonwillison.net fails from this cloud sandbox (the domain doesn't resolve through the proxy during this run).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
