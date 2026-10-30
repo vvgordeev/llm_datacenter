@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-10-30",
+      "news_count": 0,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "",
+        "en": ""
+      }
+    },
+    {
       "date": "2026-10-29",
       "news_count": 1,
       "expert_count": 1,

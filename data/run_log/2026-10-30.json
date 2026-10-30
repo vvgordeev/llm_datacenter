@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T05:12:00Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "ok", "candidates": 0, "note": "Резолвится (единственный блог-домен, доступный напрямую в этом прогоне). Полный список из 28 постов получен и сверен: новейший — 'AI for Science expands...' от 28 окт (уже опубликован 2026-10-29), ничего новее. 'Anthropic files S-1' (26 окт) — финансовая новость без продуктовой части, пропущена по правилу skill."},
+    {"source": "openai.com/news (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND — домен не резолвится через прокси в этом прогоне."},
+    {"source": "openai (WebSearch x2 + release notes)", "status": "ok", "candidates": 0, "note": "2 WebSearch + проверка release notes help.openai.com: новейший пункт — GPT-6.1 Terra (26 окт, уже опубликован 2026-10-28, есть в seen_urls). 'API credits benefit' (29 окт, из бэкапа Уиллисона) — чисто биллинговая страница без продуктовой части, пропущена."},
+    {"source": "blog.google / google-deepmind (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "google/gemini (WebSearch x2 + доп. проверки)", "status": "ok", "candidates": 0, "note": "Найдены 2 непроверяемых кандидата: (1) 'Gemini app can now edit documents' — по совокупности источников это пересказ апрельской фичи генерации файлов, а не новая функция редактирования от 29 окт; (2) 'Gemini 4 Carbon' (cybersecurity) — по множественным источникам это неподтверждённый утечкой слух о внутреннем чекпоинте, Google не комментировал. Оба не включены как недостаточно подтверждённые (риск выдумки)."},
+    {"source": "ai.meta.com (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "meta/llama (WebSearch x2)", "status": "empty", "candidates": 0, "note": "Ничего из окна 36ч; последнее релевантное — Muse Spark (апрель 2026)."},
+    {"source": "x.ai/news (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "xai/grok (WebSearch x2)", "status": "empty", "candidates": 0, "note": "Последние пункты (Grok Voice 3.0, X Subscription bundle) датированы 8-14 окт — вне окна 36ч и уже вне актуальности."},
+    {"source": "mistral.ai (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "mistral (WebSearch x3)", "status": "empty", "candidates": 0, "note": "Открытые веса Mistral Large 4 (1T), обещанные 'к концу октября', по состоянию на момент сбора ещё не подтверждены как выложенные (офиц. страница показывает 'Coming soon', дата не названа) — не включено как неподтверждённое."},
+    {"source": "api-docs.deepseek.com (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "deepseek (WebSearch x2)", "status": "empty", "candidates": 0, "note": "Последние пункты (Search/Fetch API, DeepInfer) датированы 17-20 окт — вне окна 36ч."},
+    {"source": "aggregators: smol.ai / tldr.tech (WebFetch + WebSearch)", "status": "blocked", "candidates": 0, "note": "WebFetch на оба домена — ENOTFOUND. WebSearch по обоим изданиям не дал индексированного содержимого за 29-30 окт."},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "curl на hn.algolia.com — connect_rejected через egress-прокси (подтверждено curl + agent-proxy status). WebSearch 'site:news.ycombinator.com' и прямые запросы по теме дня не дали релевантных индексированных тредов."},
+    {"source": "Reddit r/LocalLLaMA, r/ClaudeAI (WebSearch)", "status": "empty", "candidates": 0, "note": "Индекс не покрывает 29-30 окт для обоих сабреддитов (снэпшоты заканчиваются апрелем-маем)."},
+    {"source": "широкий проход: 'LLM news 30 окт', 'AI model release', \"'October 30, 2026' AI announcement\" (extended)", "status": "ok", "candidates": 0, "note": "Самый информативный запрос (extended) дал ряд пунктов, но все отсеяны: финансовые отчёты (Alphabet/Intel), сделки вне скоупа вендоров (Deepgram/Daily), приложение не-LLM (Meta Style Sketch), неподтверждённый слух (Gemini 4 Carbon), старое (DeepMind Genie 4 — анонс 27 окт, вне окна и не в сегодняшнем кластере)."},
+    {"source": "simonwillisonblog-backup (git clone, альтернативный канал)", "status": "ok", "candidates": 0, "note": "Клонирован и разобран (blog_entry + blog_blogmark за 20-29 окт). Новых новостных кандидатов не дал — блогмарки за 29 окт (твит, биллинг-страница OpenAI) не тянут на новость."},
+    {"source": "эксперты из конфига (Willison/Karpathy/Latent Space/AI Explained/Wolfe/Mollick/Herk/Pocock) — WebSearch x2 на каждого + RSS", "status": "blocked/empty", "candidates": 3, "note": "YouTube полностью недоступен в этом прогоне (RSS и WebFetch — ENOTFOUND на www.youtube.com): видео-дискавери не сработал ни для одного видео-эксперта, кандидатов 0. Из статейных экспертов за 7-дневное окно без дублей с прошлыми днями нашлось: Latent Space — 3 материала (см. ниже)."},
+    {"source": "расширение: Zvi Mowshowitz (внеконфигурный эксперт, используется и в прошлые дни)", "status": "ok", "candidates": 1, "note": "AI #192 (29 окт) — новый, не публиковался. Собран по WebSearch extended (прямой WebFetch на thezvi.substack.com заблокирован)."},
+    {"source": "видео-пайплайн (gemini_video.py / extract_frames.py)", "status": "skipped", "candidates": 0, "note": "Не запускался: ни одного конкретного URL свежего видео не найдено (YouTube полностью заблокирован на уровне DNS/прокси в этом прогоне, WebSearch по видео-экспертам индексирует только контент до середины осени). yt-dlp доставлен через pip, ffmpeg в PATH — инструменты готовы, но без обнаруженного видео не применялись."}
+  ],
+  "totals": {
+    "candidates": 11,
+    "published": 4,
+    "rejected": {
+      "уже опубликовано в прошлые дни": 3,
+      "неподтверждённый слух/утечка": 2,
+      "финансовая новость без продуктовой части": 2,
+      "вне окна lookback_hours и не продолжение сюжета": 2,
+      "биллинг без продуктовой части": 1,
+      "открытые веса ещё не выложены (не подтверждено)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not run: no candidate video URL found (YouTube unreachable this run)",
+    "frames": "not run: see above"
+  },
+  "notes": "Новостей за 2026-10-30 не найдено (news: []) после широкого прохода по всем 7 включённым моделям, 2 агрегаторам, HN API, Reddit и дополнительным extended-запросам — пустой день доказан, не является результатом единичного запроса. Степень деградации окружения в этом прогоне выше обычной: прямой WebFetch резолвится только на anthropic.com из всех проверенных вендорских/агрегаторных/экспертных доменов (openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, tldr.tech, news.smol.ai, news.ycombinator.com, www.youtube.com, thezvi.substack.com, latent.space, www.oneusefulthing.org, github.blog, unite.ai, theneuron.ai, r.jina.ai — все ENOTFOUND); HN API — connect_rejected. Это больше 1/3 обойдённых источников заблокировано — явный сигнал деградации сетевого окружения, а не тихого дня. WebSearch оставался рабочим на всём протяжении и был единственным каналом сбора. Экспертный контент (4 статьи, видео — 0) собран на минимуме от целевых min_expert_total=5 из-за полной недоступности YouTube; все 4 материала проверены по нескольким независимым WebSearch-запросам (включая extended) с точными цитатами и числами, прямых WebFetch-подтверждений текста получить не удалось — отмечено в note-hint каждой конспект-страницы."
+}

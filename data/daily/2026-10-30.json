@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T05:12:00Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-10-30-zvi-ai-192-anthropic-going-public",
+      "type": "article",
+      "author": "Zvi Mowshowitz",
+      "title": {
+        "ru": "AI #192: Anthropic выходит на биржу",
+        "en": "AI #192: Anthropic Is Going Public"
+      },
+      "url": "https://thezvi.substack.com/p/ai-192-anthropic-is-going-public",
+      "summary": {
+        "ru": "Еженедельный выпуск разбирает поданную Anthropic заявку S-1 для IPO (выручка за первую половину 2026 года ~16,3 млрд долларов), сделку на ~63 млрд долларов долгового финансирования под TPU, обновлённый рейтинг Artificial Analysis, утечку во внутреннем Slack компании и закон Делавэра, допускающий ИИ-агентов в роли директоров компаний.",
+        "en": "The weekly issue covers Anthropic's S-1 filing for its IPO (~$16.3B revenue in H1 2026), a roughly $63B TPU debt-financing deal, an updated Artificial Analysis model ranking, a breach of the company's internal Slack, and a Delaware law allowing AI agents to serve as company directors."
+      },
+      "note_page": "notes/articles/zvi-ai-192-anthropic-going-public.html"
+    },
+    {
+      "id": "2026-10-30-latentspace-anthropic-ends-coding-interviews",
+      "type": "article",
+      "author": "Latent Space",
+      "title": {
+        "ru": "Anthropic отказывается от кодинг-собеседований: «голод важнее стажа»",
+        "en": "Anthropic ends Coding Interviews: \"Hunger beats tenure\""
+      },
+      "url": "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure",
+      "summary": {
+        "ru": "Инженерный менеджер Anthropic Феликс Ризеберг убрал кодинг-собеседование из найма своей команды, потому что Claude теперь решает такие задачи лучше людей; вместо этого он ищет у кандидатов умение быстро довести одну полезную для бизнеса идею до рабочего прототипа.",
+        "en": "Anthropic engineering manager Felix Rieseberg dropped the coding interview from his team's hiring because Claude now solves such tasks better than people; instead he looks for candidates who can quickly turn one business-relevant idea into a working prototype."
+      },
+      "note_page": "notes/articles/latentspace-anthropic-ends-coding-interviews.html"
+    },
+    {
+      "id": "2026-10-30-latentspace-offline-coding-himalayas",
+      "type": "article",
+      "author": "Latent Space",
+      "title": {
+        "ru": "Кодинг в Гималаях с офлайн-ИИ-агентом",
+        "en": "Coding From the Himalayas With an Offline AI Agent"
+      },
+      "url": "https://latent.space/p/offline-coding/",
+      "summary": {
+        "ru": "Разбор практической настройки офлайн-агента для кодинга (OpenCode + Ollama + локальная модель Qwen3.5 9B, без доступа к сети) на примере поездки без интернета: агент нашёл баг и предложил рабочее исправление в небольшой задаче.",
+        "en": "A walkthrough of a practical offline coding-agent setup (OpenCode + Ollama + a local Qwen3.5 9B model, no network access) tested on an actual no-internet trip: the agent found a bug and proposed a working fix on a small task."
+      },
+      "note_page": "notes/articles/latentspace-offline-coding-himalayas.html"
+    },
+    {
+      "id": "2026-10-30-latentspace-elorian-decoy-visual-reasoning",
+      "type": "article",
+      "author": "Latent Space",
+      "title": {
+        "ru": "Видят ли топовые модели подвох? Elorian проверяет визуальное мышление",
+        "en": "Can Frontier Models See Past a Decoy? Elorian Tests Visual Reasoning"
+      },
+      "url": "https://latent.space/p/elorian/",
+      "summary": {
+        "ru": "Новый бенчмарк DecoyCount (Elorian и Mercor) показывает, что ни одна топовая модель не преодолела 50% точности на подсчёте объектов со встроенными визуальными подвохами — модели систематически предпочитают правдоподобный неверный ответ честному пересчёту.",
+        "en": "A new benchmark, DecoyCount (Elorian and Mercor), finds that no frontier model clears 50% accuracy on object-counting tasks with built-in visual decoys — models systematically prefer a plausible wrong answer over an honest recount."
+      },
+      "note_page": "notes/articles/latentspace-elorian-decoy-visual-reasoning.html"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Кодинг в Гималаях с офлайн-агентом — Latent Space — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space · 2026-10-27</span>
+      <span data-lang="en">Article digest · Latent Space · 2026-10-27</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Кодинг в Гималаях с офлайн-ИИ-агентом</span>
+      <span data-lang="en">Coding From the Himalayas With an Offline AI Agent</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://latent.space/p/offline-coding/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Автор материала (инженер Thomson Reuters) ставит простой практический вопрос: можно ли полноценно пользоваться агентом для кодинга, если интернета физически нет — в его случае буквально в поездке в Гималаях. Метод строится на связке из трёх частей: OpenCode как агентная оболочка, которая ведёт диалог и работает с проектом, Ollama — локальный сервер инференса, и небольшая открытая модель Qwen3.5 9B, которую заранее скачивают на ноутбук до отключения от сети.</span>
+      <span data-lang="en">The author (a Thomson Reuters engineer) asks a simple practical question: can you actually use a coding agent with no internet at all — in his case, literally on a trip through the Himalayas. The method is a three-part stack: OpenCode as the agent shell that drives the conversation and interacts with the project, Ollama as the local inference server, and a small open model, Qwen3.5 9B, downloaded onto the laptop ahead of time before going offline.</span>
+    </p>
+
+    <h2><span data-lang="ru">Настройка: версия, контекст, запрет на любые внешние вызовы</span><span data-lang="en">Setup: version, context window, and no external calls at all</span></h2>
+    <p>
+      <span data-lang="ru">Конфигурация описана предметно: OpenCode версии 1.19.4, у Ollama отключены все облачные функции, контекстное окно ограничено 64 тысячами токенов — ровно под то, что модель такого размера способна тянуть на локальном железе без деградации. Конфиг указывает только на локальный эндпоинт и явно блокирует любые веб-инструменты агента, чтобы случайно не полагаться на сеть там, где её нет. Это не теоретическая мера предосторожности: весь смысл эксперимента в том, чтобы агент гарантированно не мог «подсмотреть» в интернете, если локальная модель застрянет.</span>
+      <span data-lang="en">The setup is described concretely: OpenCode version 1.19.4, Ollama's cloud features disabled, and a context window capped at 64,000 tokens — matched to what a model of that size can carry on local hardware without degrading. The config points only at the local endpoint and explicitly blocks the agent's web tools, so it can't accidentally lean on the network where there isn't one. That's not a theoretical precaution: the whole point of the experiment is making sure the agent genuinely can't "peek" online if the local model gets stuck.</span>
+    </p>
+
+    <h2><span data-lang="ru">Результат на реальной задаче и честная оценка границ метода</span><span data-lang="en">A real-task result, and an honest read on the method's limits</span></h2>
+    <p>
+      <span data-lang="ru">На практике связка справилась с конкретной небольшой задачей: агент нашёл баг в калькуляторе расходов, предложил однострочное исправление, и тесты после этого прошли. Latent Space отмечает, что это доказывает работоспособность подхода именно на компактных, локально ограниченных задачах, а не на больших кодовых базах — ровно та ниша, где офлайн-агент реалистично полезен (путешествие, самолёт, зона без связи), а не замена полноценному облачному агенту на основном рабочем месте. В этом же материале приводится ссылка на отдельную препринт-работу, по которой OpenCode в сопоставимых задачах тратит примерно в 40 раз больше токенов на одну решённую задачу, чем агент Goose, — само по себе не вывод о качестве офлайн-подхода, но полезный ориентир по цене токенов для тех, кто планирует повторить такую настройку.</span>
+      <span data-lang="en">In practice the stack handled one concrete small task: the agent found a bug in an expense calculator, proposed a one-line fix, and the tests passed afterward. Latent Space notes this demonstrates the approach works for compact, locally-scoped tasks, not large codebases — exactly the niche where an offline agent is realistically useful (travel, a flight, a dead zone), not a replacement for a full cloud agent at your main workstation. The piece also cites a separate preprint reporting that OpenCode, on comparable tasks, used roughly 40 times more tokens per solved task than the Goose agent — not itself a verdict on the offline approach's quality, but a useful token-cost data point for anyone planning to replicate the setup.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по доступному описанию статьи, собранному через WebSearch (включая пересказы на daily.dev и explainx.ai) — прямой WebFetch на latent.space из облачной песочницы не проходит (домен не резолвится через прокси в этом прогоне).</span>
+      <span data-lang="en">Digest built from the article's available description gathered via WebSearch (including recaps on daily.dev and explainx.ai) — a direct WebFetch to latent.space fails from this cloud sandbox (the domain doesn't resolve through the proxy during this run).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

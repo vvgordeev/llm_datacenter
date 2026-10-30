@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Видят ли топ-модели подвох? Elorian тестирует визуальное мышление — Latent Space — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (по бенчмарку Elorian и Mercor) · 2026-10-29</span>
+      <span data-lang="en">Article digest · Latent Space (on a benchmark by Elorian and Mercor) · 2026-10-29</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Видят ли топовые модели подвох? Elorian проверяет визуальное мышление</span>
+      <span data-lang="en">Can Frontier Models See Past a Decoy? Elorian Tests Visual Reasoning</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://latent.space/p/elorian/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Материал разбирает новый бенчмарк DecoyCount, выпущенный совместно стартапом Elorian и компанией Mercor (научная статья доступна на arXiv, 2610.34855). Идея теста простая и прицельная: вместо абстрактных задач на подсчёт объектов используются реальные сцены с заранее заложенными «подвохами» — семью разными механизмами визуального обмана, каждый из которых подталкивает модель к правдоподобному, но неверному ответу. Смысл не в том, умеет ли модель считать вообще, а в том, ведётся ли она на ложную визуальную подсказку, когда та выглядит убедительно.</span>
+      <span data-lang="en">The piece covers a new benchmark, DecoyCount, released jointly by the startup Elorian and Mercor (the paper is on arXiv, 2610.34855). The idea is simple and targeted: instead of abstract object-counting tasks, it uses real-world scenes with deliberately engineered "decoys" — seven distinct visual-deception mechanisms, each nudging the model toward a plausible but wrong answer. The question isn't whether a model can count at all, but whether it gets fooled by a misleading visual cue when that cue looks convincing.</span>
+    </p>
+
+    <h2><span data-lang="ru">Результат: все топ-модели ошибаются чаще, чем отвечают верно</span><span data-lang="en">The result: every frontier model is wrong more often than right</span></h2>
+    <p>
+      <span data-lang="ru">Главный вывод статьи звучит жёстко: ни одна из протестированных топовых моделей не преодолела порог в 50% точности на этом бенчмарке, а разрыв между точностью на обычных и «подвохных» сценах составил от 11,8 до 22,1 процентных пункта. Лучший результат среди закрытых моделей показал GPT-6 Astra — 43,17%. При этом у пяти моделей из шести декой-ответ (правдоподобная, но неверная цифра) оказывался частым исходом чаще, чем правильный подсчёт — то есть модели не просто ошибаются случайно, а систематически предпочитают визуально убедительную неправду честному пересчёту.</span>
+      <span data-lang="en">The paper's headline finding is blunt: none of the frontier models tested crossed 50% accuracy on the benchmark, and the accuracy gap between plain and decoy scenes ran from 11.8 to 22.1 percentage points. The best closed-model score was GPT-6 Astra at 43.17%. For five of the six models tested, the decoy answer (a plausible but wrong count) came up more often than the correct count — meaning the models aren't failing randomly, they're systematically preferring a visually convincing wrong answer over an honest recount.</span>
+    </p>
+
+    <h2><span data-lang="ru">Модель Elorian и оговорка про сопоставимость результатов</span><span data-lang="en">Elorian's own model, and a caveat on comparability</span></h2>
+    <p>
+      <span data-lang="ru">Собственная модель Elorian, Glimpse, заявлена как единственная, преодолевшая планку 50% (по вторичным источникам — 50,48%). Latent Space описывает Glimpse как визуально-мыслящую VLM, которая прогоняет рекуррентные вычисления по латентным визуальным состояниям вместо обычной текстовой цепочки рассуждений. Здесь важна честная оговорка, которую отмечает и сама статья: результат Glimpse получен по одному прогону без агентной обвязки или инструментов, тогда как остальные модели усреднялись по трём прогонам, — то есть сравнение не вполне равное, и цифру стоит воспринимать как заявление разработчика бенчмарка о своей же модели, а не как независимо подтверждённый результат. Общий вывод авторов работы: более сильное общее рассуждение модели само по себе не переносится на согласованность именно визуального рассуждения.</span>
+      <span data-lang="en">Elorian's own model, Glimpse, is reported as the only one to clear 50% (50.48% per secondary sources). Latent Space describes Glimpse as a visual-thinking VLM that runs recurrent computation over latent visual states instead of plain text chain-of-thought. There's an important caveat the article itself flags: Glimpse's score came from a single run with no agent or tool harness, while the other models were averaged over three runs — so the comparison isn't quite apples-to-apples, and the figure is best read as the benchmark's own maker making a claim about its own model, not an independently verified result. The paper's own conclusion: stronger general reasoning in a model doesn't by itself carry over to aligned visual reasoning.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по доступному описанию статьи и первоисточнику на arXiv (2610.34855), собранным через WebSearch — прямой WebFetch на latent.space из облачной песочницы не проходит (домен не резолвится через прокси в этом прогоне). Цифра по модели Glimpse приводится из вторичных источников и требует проверки по самой статье.</span>
+      <span data-lang="en">Digest built from the article's available description and the arXiv primary source (2610.34855), gathered via WebSearch — a direct WebFetch to latent.space fails from this cloud sandbox (the domain doesn't resolve through the proxy during this run). The Glimpse figure comes from secondary sources and should be checked against the paper itself.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

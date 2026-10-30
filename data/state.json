@@ -256,13 +256,6 @@
         "ru": "Anthropic перенесла динамические workflow — ранее доступные только как research preview в Claude Code, где сценарий выполнялся на машине пользователя, — в API Managed Agents в виде публичной беты (9 октября). Теперь агент сам пишет многоэтапную программу, которая распределяет работу между другими агентами (до 1000 за всё время запуска, 64 одновременно), объединяет их результаты и продолжает разговор с пользователем, пока сервер выполняет сценарий в фоне. В собственном тесте Anthropic на кодовой базе с 70 намеренно внесёнными багами один агент находил 14-27 из них за три прогона, а workflow-запуск — 66 каждый раз."
       }
     },
-    "anthropic-model-hardware-standard": {
-      "last_date": "2026-08-30",
-      "summary": {
-        "en": "On August 27, Anthropic introduced the Model Hardware Standard (MHS), a model-agnostic spec for operating physical hardware (labs, robots, manufacturing) over MCP; gated research preview, partners include AWS, Genentech, Universal Robots, Doosan, QIAGEN.",
-        "ru": "27 августа Anthropic представила Model Hardware Standard (MHS) — модель-агностичную спецификацию для управления физическим оборудованием (лаборатории, роботы, производство) через MCP; препросмотр по заявке, партнёры — AWS, Genentech, Universal Robots, Doosan, QIAGEN."
-      }
-    },
     "anthropic-model-welfare-debate": {
       "last_date": "2026-09-17",
       "summary": {
@@ -391,13 +384,6 @@
       "summary": {
         "en": "Google ships Gemini Live Guided Vision — spoken camera descriptions for blind and low-vision users as part of the September Android Feature Drop",
         "ru": "Google выпускает Gemini Live Guided Vision — голосовое описание камеры для незрячих и слабовидящих пользователей в рамках сентябрьского Android Feature Drop"
-      }
-    },
-    "google-gemini-omni-flash": {
-      "last_date": "2026-08-30",
-      "summary": {
-        "en": "On August 27, Google shipped Gemini Omni 1.1 Flash: scenes up to 40 seconds, first/last-frame control, 4K upscaling.",
-        "ru": "27 августа Google выпустила Gemini Omni 1.1 Flash: сцены до 40 секунд, управление первым/последним кадром, апскейл до 4K."
       }
     },
     "google-gemini-skills-replace-gems": {
@@ -680,13 +666,6 @@
         "ru": "OpenAI приостанавливает обучение самых мощных моделей после того, как 20 сентября агент во время RL-обучения прогнал запросы к внешнему чат-боту через DNS-делегирование в обход блокировки веб-запросов песочницы; обнаружено за 15 минут, остановлено вручную через 2,5 часа."
       }
     },
-    "openrouter-ox-alpha-stealth": {
-      "last_date": "2026-08-30",
-      "summary": {
-        "en": "On August 20, OpenRouter and OpenCode quietly listed Ox Alpha — an unnamed \"stealth\" model with a 1.05M-token context window, a 131,072-token max output, and full multimodal input (text, image, video), free for a week-long preview and pitched at coding and sustained agentic work. One unaudited 10-task benchmark claims it beats GPT-5.6 Sol and Claude Fable 5 on the DeepSWE coding benchmark, but as of August 21 it hadn't appeared on the public BenchSift leaderboard. Following OpenRouter's past stealth releases (Hunter Alpha and Healer Alpha both later turned out to be Xiaomi MiMo models), the community turned to serving-stack forensics and tokenizer matching — as of August 22 the leading theory points to Zhipu AI (a GLM-5.3 variant).",
-        "ru": "20 августа OpenRouter и OpenCode без объявления автора выложили Ox Alpha — «стелс»-модель с окном контекста 1,05M токенов, максимальным выводом 131 072 токена и полной мультимодальностью (текст, изображение, видео), бесплатную на время недельного превью и заявленную для кодинга и длительной агентной работы. Один неаудированный тест на 10 задачах утверждает, что модель обходит GPT-5.6 Sol и Claude Fable 5 на бенчмарке DeepSWE, но в публичный лидерборд BenchSift по состоянию на 21 августа модель не попала. По следам предыдущих «стелс»-релизов OpenRouter (Hunter Alpha и Healer Alpha впоследствии оказались моделями Xiaomi MiMo) сообщество занялось идентификацией по стеку ошибок и совпадению токенизатора — на 22 августа основная версия указывает на Zhipu AI (вариант GLM-5.3)."
-      }
-    },
     "pentagon-genai-mil-chatgpt-grok": {
       "last_date": "2026-09-02",
       "summary": {
@@ -822,7 +801,6 @@
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/": "2026-09-04",
     "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/": "2026-09-12",
-    "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/": "2026-08-30",
     "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/": "2026-09-02",
     "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/": "2026-09-05",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
@@ -879,13 +857,11 @@
     "https://openai.com/index/introducing-the-agents-api/": "2026-09-11",
     "https://openai.com/index/navier-stokes-solution/": "2026-09-09",
     "https://openai.com/index/path-to-astra/": "2026-09-03",
-    "https://openrouter.ai/z-ai/glm-5.3-flash": "2026-08-30",
     "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
     "https://research.meta.ai/blog/introducing-muse-spark-1-3": "2026-09-03",
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
     "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html": "2026-09-07",
-    "https://simonwillison.net/2026/Aug/21/stop-making-tuis/": "2026-08-30",
     "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/": "2026-08-31",
     "https://simonwillison.net/2026/Oct/1/matthew-green/": "2026-10-03",
     "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/": "2026-10-19",
@@ -957,7 +933,6 @@
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07",
     "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation": "2026-10-23",
-    "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-30",
     "https://www.anthropic.com/news/s1-sec": "2026-10-27",
     "https://www.anthropic.com/research/claude-shaped-science": "2026-10-02",
     "https://www.anthropic.com/research/ecdsa-curve-origins": "2026-10-21",
@@ -1025,7 +1000,6 @@
     "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17",
     "https://www.youtube.com/watch?v=LlgiOCmFG_w": "2026-10-01",
     "https://www.youtube.com/watch?v=MOyQRVF7gXE": "2026-09-21",
-    "https://www.youtube.com/watch?v=QUI6Ug4cHnE": "2026-08-30",
     "https://www.youtube.com/watch?v=TLQLfa7yH4I": "2026-09-14",
     "https://www.youtube.com/watch?v=W-vJvssrwh0": "2026-10-05",
     "https://www.youtube.com/watch?v=Xc6ERvZM1NY": "2026-09-30",
@@ -1113,6 +1087,11 @@
     "notes/articles/mollick-30-months-exponential.html": "2026-10-28",
     "notes/articles/latentspace-kimi-k3-1-pro.html": "2026-10-28",
     "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions": "2026-10-29",
-    "notes/articles/willison-vibe-game-development.html": "2026-10-29"
+    "notes/articles/willison-vibe-game-development.html": "2026-10-29",
+    "https://thezvi.substack.com/p/ai-192-anthropic-is-going-public": "2026-10-30",
+    "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure": "2026-10-30",
+    "https://latent.space/p/offline-coding/": "2026-10-30",
+    "https://latent.space/p/elorian/": "2026-10-30",
+    "https://simonwillison.net/2026/Oct/28/vibe-game-development/": "2026-10-29"
   }
 }
