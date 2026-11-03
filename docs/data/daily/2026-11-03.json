@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T05:17:46Z",
+  "news": [
+    {
+      "id": "2026-11-03-google-gemini-4-carbon-cybersecurity",
+      "cluster_id": "google-gemini-4-carbon-cybersecurity",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "ru": "Google выпускает Gemini 4 Carbon — флагманскую модель для киберзащиты",
+        "en": "Google launches Gemini 4 Carbon, a frontier model built for cybersecurity defense"
+      },
+      "summary": {
+        "ru": "28 октября Google DeepMind представила Gemini 4 Carbon — модель на основе Gemini 4 Argon (вышла примерно двумя неделями ранее), заточенную под поиск уязвимостей в коде, оценку их эксплуатируемости и генерацию патчей. По данным Google, на специализированных бенчмарках без привычных guardrails модель показывает 88,2% на SEC-bench Pro (поиск уязвимостей), 54,8% на ExploitGym (оценка эксплуатируемости) и 71,0% на CWE-bench (патчинг). Доступ открывается поэтапно: сначала — отобранным специалистам по киберзащите в рамках программы Fairwind, затем — другим доверенным партнёрам; цена на старте $2/$10 за миллион входных/выходных токенов (после вводного периода — $4/$20). Независимые трекеры Artificial Analysis и Vals.ai также поставили Carbon на первые места своих общих рейтингов моделей.",
+        "en": "On October 28, Google DeepMind announced Gemini 4 Carbon, built on top of Gemini 4 Argon (released about two weeks earlier) and tuned specifically for finding software vulnerabilities, assessing whether they're exploitable, and generating patches. Google reports strong vendor benchmarks for the security-specific evals — SEC-bench Pro 88.2% for vulnerability discovery, ExploitGym 54.8% for exploitation assessment, and CWE-bench 71.0% for patching — run without the usual safety guardrails. Access is being rolled out in phases, starting with selected cyber defenders in Google's Fairwind Program before expanding to other trusted partners; pricing is $2/$10 per million input/output tokens at launch (rising to $4/$20 after an introductory period). Independent trackers Artificial Analysis and Vals.ai also placed Carbon at or near the top of their general-purpose leaderboards."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Модель топ-лаборатории, специально заточенная под наступательно-оборонительную безопасность (поиск уязвимостей, оценка эксплуатируемости, патчинг), открывает новый и довольно широкий класс сценариев автоматизации ИБ — но доступ пока ограничен проверенной программой партнёров, а не общедоступен.",
+        "en": "A frontier-lab model purpose-built for offensive/defensive security work (vuln-finding, exploit assessment, patching) opens a new, fairly wide class of security-automation use cases, though access is still limited to a vetted partner program rather than generally available."
+      },
+      "source_url": "https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/",
+      "opinions": [
+        {
+          "author": "VentureBeat",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Google представляет Gemini 4 Carbon, возвращая себе первое место в обновлённых, более сложных бенчмарках — но доступ к модели ограничен.",
+            "en": "Google unveils Gemini 4 Carbon, retaking the world's no. 1 spot on updated, harder benchmarks — but access is limited."
+          },
+          "url": "https://venturebeat.com/technology/google-unveils-gemini-4-carbon-retaking-the-worlds-no-1-spot-on-updated-harder-benchmarks-but-access-is-limited"
+        },
+        {
+          "author": "ThursdAI (Alex Volkov)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Gemini 4 Carbon — новый номер один, всего через две недели после модели Argon.",
+            "en": "Gemini 4 Carbon is the new #1, just two weeks after the Argon model."
+          },
+          "url": "https://sub.thursdai.news/p/thursdai-oct-29-gemini-4-carbon-is"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Партнёры программы Fairwind (проверенные специалисты по киберзащите) получают ранний доступ к Carbon для поиска уязвимостей и генерации патчей в собственном коде и инфраструктуре.",
+            "en": "Google's Fairwind Program partners (vetted cybersecurity defenders) get early access to use Carbon for vulnerability discovery and patch generation in their own code and infrastructure."
+          },
+          "url": "https://www.techrepublic.com/article/news-google-gemini-4-carbon-access/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-semianalysis-gdpx-benchmark",
+      "cluster_id": "semianalysis-gdpx-benchmark",
+      "models": [
+        "anthropic",
+        "openai"
+      ],
+      "title": {
+        "ru": "SemiAnalysis запускает бенчмарк GDPx: топовые модели решают лишь 12% реальных профессиональных агентных задач",
+        "en": "SemiAnalysis launches GDPx: frontier models clear just 12% on real-world professional agent tasks"
+      },
+      "summary": {
+        "ru": "2 ноября SemiAnalysis выпустила GDPx — новый бенчмарк агентных способностей, позиционируемый как преемник GDPval от OpenAI: 206 задач в 11 профессиональных областях (без госсектора и страхования), собранных с 14 партнёрами по данным, с оценкой по смешанной схеме pass/fail и частичного зачёта. На лидерборде v1.0 лучший результат — у Claude Opus 5.5, всего 12,0% в сумме, у GPT-6 Astra — 9,6%; по словам SemiAnalysis, итоговые цифры занижены в том числе из-за ограничений защитных классификаторов безопасности у самих моделей. Авторы планируют обновлять бенчмарк раз в 3-6 месяцев.",
+        "en": "On November 2, SemiAnalysis released GDPx, a new agentic-capability benchmark positioned as a successor to OpenAI's GDPval — 206 tasks across 11 professional domains (excluding government and insurance), built with 14 data partners, graded with a mix of pass/fail and partial credit. On the v1.0 leaderboard, the best-scoring model, Claude Opus 5.5, clears only 12.0% overall, with GPT-6 Astra at 9.6%; SemiAnalysis says the overall numbers are also held down by safety-classifier constraints on the models. The authors plan to refresh the benchmark every 3–6 months."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Тщательно выстроенный бенчмарк с несколькими партнёрами по данным, показывающий, что нынешние топ-агенты всё ещё далеки от надёжной работы над настоящими профессиональными задачами, даёт командам трезвый и широко цитируемый ориентир для выбора того, какие агентные задачи реально стоит доверять LLM уже сегодня.",
+        "en": "A rigorously constructed, multi-partner benchmark showing current frontier agents are still far from reliable at real professional work gives teams a sober, widely-cited reference point for deciding which agentic tasks to actually hand to LLMs today."
+      },
+      "source_url": "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Как и предшественник GDPval, GDPx даёт компаниям конкретный ориентир, какие профессиональные задачи (юридические, финансовые, инженерные) нынешние ИИ-агенты могут, а какие пока не могут надёжно выполнять, прежде чем внедрять их в продакшн.",
+            "en": "Like its predecessor GDPval, GDPx gives companies a concrete reference for which professional tasks (legal, finance, engineering) current AI agents can and can't yet reliably handle before putting them into production."
+          },
+          "url": "https://explainx.ai/blog/semianalysis-gdpx-benchmark-opus-5-5-12-percent-agents-fail-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-openai-chatgpt-canvas-sandbox-escape",
+      "cluster_id": "openai-chatgpt-canvas-sandbox-escape",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "Исследователи нашли побег из песочницы HTML-превью ChatGPT, позволявший захватывать аккаунт любого пользователя",
+        "en": "Researchers found a sandbox escape in ChatGPT's HTML previews that could hijack any signed-in user's account"
+      },
+      "summary": {
+        "ru": "Компания по безопасности Parameter Labs опубликовала (31 октября) подробный разбор связки уязвимостей в песочнице «HTML previews» ChatGPT (ранее называлась Canvas), где недоверенные пользовательские HTML-приложения выполняются во вложенном iframe. Используя обработчик postMessage виртуальной клавиатуры библиотеки MathLive (который вставляет HTML в родительскую страницу через innerHTML), а затем обходя CSP через эндпоинт oEmbed YouTube — один из немногих доменов, с которых ChatGPT разрешает загрузку скриптов, — атакующие могли добиться выполнения произвольного JavaScript уже в родительской странице ChatGPT. Этого было достаточно, чтобы прочитать приватные данные жертвы и выгрузить их через запрос картинки — для этого жертве было достаточно открыть вредоносную share-ссылку ChatGPT. OpenAI закрыла дыру и выплатила $5000 по программе bug bounty; пост вышел в топ Hacker News (300+ баллов).",
+        "en": "Security firm Parameter Labs published a detailed writeup (Oct 31) of a chained exploit against ChatGPT's sandboxed \"HTML previews\" feature (formerly Canvas), where untrusted custom HTML apps run inside an iframe. By abusing the MathLive virtual-keyboard postMessage handler (which injects HTML into the parent page via innerHTML) and then bouncing through YouTube's oEmbed endpoint — one of the few domains ChatGPT's CSP allows scripts from — attackers could get arbitrary JavaScript execution in the parent ChatGPT page. That was enough to read a victim's private data and exfiltrate it via an image request, triggered simply by that victim opening a malicious shared ChatGPT link. OpenAI fixed the hole and paid a $5,000 bug bounty; the post topped Hacker News with 300+ points."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Полноценная цепочка захвата аккаунта, запускаемая одной расшаренной ссылкой в одной из самых массовых функций ChatGPT (песочница пользовательских интерактивных приложений), — серьёзный и широко применимый урок по безопасности для всех, кто строит или полагается на интерактивные артефакты, сгенерированные LLM, даже притом что дыру уже закрыли.",
+        "en": "A full account-takeover chain triggerable by a single shared link in one of ChatGPT's most widely used features (sandboxed custom apps) is a serious, broadly applicable safety lesson for anyone building or relying on LLM-generated interactive artifacts — even though it's already patched."
+      },
+      "source_url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "OpenAI закрыла дыру и выплатила $5000 по программе bug bounty — на мой взгляд, это маловато для настолько серьёзной уязвимости.",
+            "en": "OpenAI closed the hole and paid out a $5,000 bug bounty, which I think was a bit cheap for a vulnerability this serious."
+          },
+          "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Разбор уже используется как референсный кейс для команд, которые строят собственные песочницы для интерактивных «артефактов» поверх LLM: он показывает, как обработчик postMessage и один разрешённый домен стороннего скрипта складываются в полный побег из песочницы.",
+            "en": "The writeup is already circulating as a reference case for teams building their own sandboxed \"artifact\"-style features on top of LLMs, showing how a postMessage handler and an allow-listed third-party script domain can combine into a full sandbox escape."
+          },
+          "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-anthropic-claude-blocks-game-recreation",
+      "cluster_id": "anthropic-claude-blocks-game-recreation",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Anthropic незаметно настраивает Claude Code отказываться воссоздавать существующие видеоигры",
+        "en": "Anthropic quietly tunes Claude Code to refuse recreating existing video games — and some legitimate reverse-engineering too"
+      },
+      "summary": {
+        "ru": "Около 26-27 октября Claude Code начал отказываться воссоздавать или клонировать конкретные существующие коммерческие видеоигры, даже если пользователь переименовывал проект или менял механики; по данным Game Developer, Anthropic подтвердила, что выпустила обновление, «направляющее» Claude Code не воссоздавать чужую конкретную игру, доставленное на уровне сервера под внутренним флагом, который некоторые издания называют «tengu_heron_brook». Оригинальные игры, клоны в рамках жанра и собственные разработки пользователя при этом не затрагиваются. Изменение продолжало вызывать реакцию всю следующую неделю: Tom's Hardware и другие издания сообщают, что пользователи натыкаются на тот же отказ в явно немалоциозных, общих задачах реверс-инжиниринга — например, при работе с прошивками смарт-ТВ — без задокументированного способа это отключить.",
+        "en": "Around October 26–27, Claude Code began refusing to recreate or clone specific existing commercial video games, even when a user renamed the project or tweaked mechanics; Game Developer reported that Anthropic confirmed it shipped an update to \"steer\" Claude Code away from recreating someone else's specific game, delivered server-side under an internal flag some outlets identified as \"tengu_heron_brook.\" Original games, genre clones, and a user's own designs are reportedly unaffected. The change kept generating reaction through the following week: Tom's Hardware and other outlets report users hitting the same refusal on clearly non-malicious, generic reverse-engineering tasks — such as working with smart-TV firmware — with no documented way to opt out."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Узкое, но реальное изменение поведения, затрагивающее конкретный, легко узнаваемый сценарий (реверс-инжиниринг игр и прошивок в Claude Code), уже вызвавшее задокументированные жалобы на избыточную блокировку — полезно знать этому сообществу, но не меняет подход к использованию LLM для большинства пользователей.",
+        "en": "A narrow but real behavior change that affects a specific, recognizable use case (game/firmware reverse-engineering with Claude Code) and has already generated documented over-blocking complaints — useful to know for that community, but it doesn't change how most LLM users work."
+      },
+      "source_url": "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games",
+      "opinions": [
+        {
+          "author": "Game Developer",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Anthropic подтвердила, что выпустила обновление Opus 5.5, «направляющее» Claude Code не воссоздавать чужую конкретную игру.",
+            "en": "Anthropic has confirmed it's released an update to Opus 5.5 to \"steer\" Claude Code away from recreating someone else's specific game."
+          },
+          "url": "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games"
+        },
+        {
+          "author": "Tom's Hardware",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Модель Anthropic теперь блокирует попытки воссоздания и клонирования видеоигр — пользователи также заявляют, что блокируются немалоциозные общие задачи реверс-инжиниринга.",
+            "en": "Anthropic's AI model is now blocking attempts at video game recreation and cloning — users also claim non-malicious generic reverse-engineering tasks are blocked."
+          },
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Моддеры и энтузиасты сохранения старых игр, использующие Claude Code для «чистого» декомпилирования и портирования ретро-игр, сообщают, что натыкаются на новый отказ даже в легитимных, не нарушающих авторские права задачах реверс-инжиниринга.",
+            "en": "Retro-gaming modders and preservationists who use Claude Code for clean-room decompilation and ports of old games report hitting the new refusal even on legitimate, non-infringing reverse-engineering work."
+          },
+          "url": "https://kotaku.com/claudes-reverse-engineering-capabilities-used-to-recompile-games-may-have-been-quietly-nerfed-2000749320"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-03-willison-census-bureau-super-intelligence",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Бюро переписи населения США и «супериинтеллект»",
+        "en": "The U.S. Census Bureau and \"Super Intelligence\""
+      },
+      "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+      "summary": {
+        "ru": "Уиллисон обновляет свой годичной давности график использования ИИ бизнесом в США по данным опроса Census Bureau, пересобрав его с помощью GPT-6 Astra: доля крупных компаний (250+ сотрудников), ответивших «да» на вопрос об использовании ИИ в любой функции бизнеса, выросла примерно с 30% до 40% с февраля по октябрь 2026 года. Разбирая сырые файлы опроса, он обнаруживает, что во исполнение указа №14434 само Бюро переписи с опроса от 19 октября заменило в анкете «искусственный интеллект» на «супериинтеллект (SI)», и опасается, что это может само по себе исказить ответы бизнеса.",
+        "en": "Willison updates his year-old chart of U.S. business AI adoption using the Census Bureau's survey, rebuilt with GPT-6 Astra: adoption under the broadened \"any business function\" wording climbed from roughly 30% to 40% for large (250+ employee) firms between February and October 2026. Digging into the raw survey files, he finds that — per Executive Order 14434 — the Bureau's own questionnaire has, from the October 19 collection onward, replaced \"Artificial Intelligence\" with \"Super Intelligence (SI)\" throughout, which he worries could itself skew how businesses answer."
+      },
+      "note_page": "notes/articles/willison-census-bureau-super-intelligence.html"
+    },
+    {
+      "id": "2026-11-03-willison-github-octoverse-2026",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "GitHub Octoverse 2026: агентная разработка в цифрах",
+        "en": "GitHub Octoverse 2026: agentic engineering by the numbers"
+      },
+      "url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+      "summary": {
+        "ru": "Ведя блог прямо с GitHub Universe, Уиллисон приводит цифры Octoverse 2026 от EVP GitHub Джея Парикха: число смёрженных pull request'ов утроилось менее чем за год до 220 млн в месяц, коммитов — выросло более чем втрое до 7,38 млрд в месяц (основной скачок — во втором полугодии), а новых репозиториев в этом году стало вдвое больше — 30,3 млн в месяц. Отдельно — новая разбивка по репозиториям, помеченным как «интероперабельность или реверс-инжиниринг», которую GitHub классифицировал с помощью LLM, читающей название, описание и README каждого репозитория.",
+        "en": "Live-blogging GitHub Universe, Willison relays GitHub EVP Jay Parikh's Octoverse 2026 numbers: merged pull requests tripled in under a year to 220 million/month, commits more than tripled to 7.38 billion/month (most of the jump in H2), and new repositories doubled this year to 30.3 million/month — alongside a new breakdown of repos tagged for \"interoperability or reverse engineering,\" classified via an LLM reading each repo's name, description, and README."
+      },
+      "note_page": "notes/articles/willison-github-octoverse-2026.html"
+    }
+  ]
+}

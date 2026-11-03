@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T05:17:46Z",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "ok", "candidates": 0, "note": "anthropic.com резолвится (единственный блог-домен, доступный напрямую). Полный список постов сверен: новейший — 'AI for Science expands...' от 28 окт, уже опубликован 2026-10-29; ничего новее на момент сбора."},
+    {"source": "openai.com/news (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "openai (WebSearch x3 + help.openai.com release notes)", "status": "ok", "candidates": 0, "note": "Новейшие записи release notes — 29 окт (Work/Codex usage allowance, биллинг без продуктовой части — пропущено по правилу skill), 28 окт ('Texting your dot' бета), 26 окт (GPT-6.1 Terra, уже в seen_urls). Ничего нового за окно не найдено по прямым запросам к блогу/релизам."},
+    {"source": "blog.google / google-deepmind (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "google/gemini (WebSearch x2 + расширение)", "status": "ok", "candidates": 1, "note": "Прямые запросы про 'ноябрь 2026' ничего не дали; расширенный проход нашёл Gemini 4 Carbon (анонс 28 окт) — пропущенную в прошлых прогонах историю (2026-10-30 run_log ошибочно счёл её неподтверждённым слухом). Перепроверено по 9+ независимым изданиям (9to5google, VentureBeat, TechRepublic, CyberSecurityNews, BusinessWorld и др.) — подтверждено, с ценами и бенчмарками. Включено в сводку."},
+    {"source": "ai.meta.com (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "meta/llama (WebSearch x2)", "status": "empty", "candidates": 0, "note": "Ничего за окно; последнее релевантное — Muse Spark (апрель 2026)."},
+    {"source": "x.ai/news (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "xai/grok (WebSearch x2)", "status": "empty", "candidates": 0, "note": "Последние пункты (Grok Voice 3.0, X Subscription) от 12-14 окт — вне окна, уже не свежие."},
+    {"source": "mistral.ai (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "mistral (WebSearch x2)", "status": "empty", "candidates": 0, "note": "Large 4 (релиз 29 окт по Wikipedia) уже должен быть в архиве/вне окна; собственного нового анонса за 1-3 ноября не найдено."},
+    {"source": "api-docs.deepseek.com (WebFetch)", "status": "blocked", "candidates": 0, "note": "getaddrinfo ENOTFOUND."},
+    {"source": "deepseek (WebSearch x1 + aggregator lead)", "status": "rejected", "candidates": 1, "note": "Агрегатор упомянул публикацию архитектуры автономного агента (dsh-superagent) на GitHub, но по официальному README проект уже давно в разработке (188k+ звёзд) — не свежая новость, риск выдать старое за новое. Не включено."},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "curl на hn.algolia.com — connect_rejected через egress-прокси (confirmed via curl + agent-proxy status)."},
+    {"source": "техmeme.com (WebFetch)", "status": "blocked", "candidates": 0, "note": "www.techmeme.com: ENOTFOUND (прямые даты-архивы тоже не резолвятся)."},
+    {"source": "aggregators: smol.ai / tldr.tech / llm-stats.com (WebFetch)", "status": "blocked", "candidates": 0, "note": "Все три домена ENOTFOUND."},
+    {"source": "альтернативный канал: GitHub-зеркала ежедневных HN AI-дайджестов (96loveslife/big_model_radar, boom7sss/agents-radar-personal — через WebFetch, github.com резолвится)", "status": "ok", "candidates": 16, "note": "Два выпуска за 2026-10-31 и 2026-11-01 дали реальные HN-треды со ссылками и баллами. Из них отобрано 2 кандидата (ChatGPT account takeover, уже найден через Willison; Claude игровой реверс-инжиниринг — новый). Остальное — финансовые новости об IPO Anthropic/OpenAI (пропущено по правилу skill), переименования тарифных планов (слишком мелко), неподтверждённый твит про баны аккаунтов за обучение моделей (единственный источник — твит, пропущено), заголовок про Talos/Volta-инфостилер не подтвердился при проверке (похоже на путаницу с другим вредоносом Dolphin X) — не включено."},
+    {"source": "эксперты из конфига: Willison/Karpathy/Latent Space/AI Explained/Wolfe/Mollick/Herk/Pocock — WebSearch x2 на каждого + RSS", "status": "blocked/empty", "candidates": 0, "note": "YouTube полностью недоступен (ENOTFOUND на уровне CONNECT для www.youtube.com) — видео-дискавери не сработал ни для одного видеоэксперта. Статейные эксперты (Latent Space, Ethan Mollick) напрямую не резолвятся (ENOTFOUND), WebSearch не дал подтверждаемых публикаций за окно свежести с достаточной детализацией."},
+    {"source": "simonwillisonblog-backup (git clone, альтернативный канал)", "status": "ok", "candidates": 2, "note": "Склонирован и разобран (blog_entry + blog_blogmark). Найдено 2 новых материала: статья 'The U.S. Census Bureau and Super Intelligence' (2 ноября) и заметка 'GitHub Octoverse 2026' (28 окт, в пределах 7-дневного окна, ранее не публиковалась). Блогмарк про parameter.ai/ChatGPT account takeover использован как источник для новости (не задублирован в expert_content)."},
+    {"source": "расширение: Pragmatic Engineer (Gergely Orosz) — найден через HN-дайджест", "status": "rejected", "candidates": 1, "note": "'When AI writes almost all code...' оказалась статьёй от 6 января 2026 — вне 7-дневного окна свежести, просто пересобрана HN-дайджестом 1 ноября. Не включено, чтобы не выдать старое за новое."},
+    {"source": "видео-пайплайн (gemini_video.py / extract_frames.py)", "status": "not_attempted", "candidates": 0, "note": "Ни одного датированного URL свежего видео не найдено (YouTube полностью заблокирован на уровне DNS/прокси). GEMINI_API_KEY доступен, ffmpeg в PATH; pip install yt-dlp завершился с ошибкой (ModuleNotFoundError после install) — не диагностировано подробно, так как видео-кандидата всё равно не было."}
+  ],
+  "totals": {
+    "candidates": 23,
+    "published": 4,
+    "rejected": {
+      "финансовая новость без продуктовой части (IPO/раунды/рейтинги)": 6,
+      "биллинг/тарифы без продуктовой части": 3,
+      "неподтверждённый источник (один твит)": 1,
+      "неподтверждённое название/спутанная атрибуция (Talos/Volta)": 1,
+      "не свежее — старая публикация, пересобранная агрегатором": 1,
+      "не свежее — проект уже давно существует, не новость": 1,
+      "уже опубликовано ранее": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not_attempted: no candidate video URL found (YouTube fully unreachable this run)",
+    "frames": "not_attempted: see above; yt-dlp pip install also failed (ModuleNotFoundError post-install), moot without a video URL"
+  },
+  "notes": "Экспертного контента собрано 2 из целевых min_expert_total=5 — ниже минимума. Причина: все видеоэксперты недоступны (YouTube полностью заблокирован на уровне DNS/CONNECT), большинство статейных экспертных блогов не резолвятся напрямую (ENOTFOUND), и единственный рабочий обходной канал (git-бэкап блога Уиллисона) дал только 2 новых материала за 7-дневное окно — остальной найденный материал (Pragmatic Engineer) оказался несвежим. Расширение на новых экспертов намеренно ограничено материалами с полным проверяемым текстом, чтобы не выдумывать детали. Новостная часть (4 материала) собрана широким проходом: прямые per-vendor запросы ничего не дали в окне lookback_hours=36, поэтому использован расширенный проход (включая альтернативные источники: git-зеркала HN-дайджестов и бэкап блога Уиллисона), который и дал все 4 опубликованные новости — ни одна не была видна по первому проходу. Отдельно стоит отметить: прогон от 2026-10-30 ошибочно отклонил Gemini 4 Carbon как неподтверждённый слух — при более широкой проверке в этом прогоне модель оказалась реальным, подробно задокументированным анонсом; это стоит иметь в виду при оценке консервативности прошлых 'пустых' дней. Деградация сети в этом прогоне на уровне прошлых дней: прямой WebFetch резолвится только на anthropic.com и github.com из всех опробованных внешних доменов; HN API, techmeme.com, llm-stats.com, YouTube, большинство блогов — ENOTFOUND/connect_rejected. WebSearch и два github.com-канала (архив Willison, зеркала HN-дайджестов) были единственными рабочими каналами сбора."
+}

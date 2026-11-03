@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Бюро переписи населения США и «супериинтеллект»» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-02</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-02</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Бюро переписи населения США и «супериинтеллект»</span>
+      <span data-lang="en">The U.S. Census Bureau and "Super Intelligence"</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Год назад Уиллисон использовал график Apollo Global Management об уровне внедрения ИИ в крупных компаниях США как учебный пример для анализа данных сначала на GPT-5, затем на Code Interpreter Claude. Решив пересчитать те же цифры спустя год, он обнаружил не только обновлённый график, но и неожиданный побочный сюжет: Бюро переписи населения США, источник исходных данных, само попало под действие указа о «новой эре супериинтеллекта».</span>
+      <span data-lang="en">A year ago, Willison used an Apollo Global Management chart on U.S. corporate AI adoption as a worked example for data analysis, first with GPT-5 and later with Claude's Code Interpreter. Deciding to re-run the same numbers a year later, he found not just an updated chart, but an unexpected side story: the Census Bureau, the source of the underlying data, had itself been caught up in an executive order "inaugurating the era of Super Intelligence."</span>
+    </p>
+
+    <h2><span data-lang="ru">Опрос BTOS и обновлённый график</span><span data-lang="en">The BTOS survey and the updated chart</span></h2>
+    <p>
+      <span data-lang="ru">Источник данных — Business Trends and Outlook Survey (BTOS), который Бюро переписи проводит раз в две недели: каждый раз опрашивается 200 000 из 1,2 млн предприятий, причём конкретная компания попадает в выборку в среднем раз в двенадцать недель. Используя самые свежие данные (релиз от 22 октября 2026 года) и транскрипт работы с GPT-6 Astra в режиме Extra High, Уиллисон пересобрал график использования ИИ по размеру фирмы за последние двенадцать месяцев. Для крупных компаний (250+ сотрудников) доля ответивших «да» на вопрос об использовании ИИ «в любой функции бизнеса» выросла примерно с 30% в феврале 2026 года до около 40% в октябре. Это несопоставимо с цифрой годичной давности (около 12% в сентябре 2025 года) по другой причине, чем органический рост: 17 ноября 2025 года Бюро расширило саму формулировку вопроса — с «использование ИИ в производстве товаров или услуг» на «использование ИИ в любой функции бизнеса», — что делает данные до и после этой даты несравнимыми напрямую.</span>
+      <span data-lang="en">The data source is the Business Trends and Outlook Survey (BTOS), which the Census Bureau runs every two weeks: each round surveys 200,000 of 1.2 million businesses, with any individual business cycling back into the panel roughly every twelve weeks. Using the latest release (October 22, 2026) and a GPT-6 Astra Extra High transcript to do the analysis, Willison rebuilt the AI-adoption-by-firm-size chart for the trailing twelve months. For large firms (250+ employees), the share answering "yes" to using AI "in any business function" climbed from about 30% in February 2026 to roughly 40% by October. That isn't directly comparable to the year-ago figure (about 12% in September 2025) for a reason other than organic growth: on November 17, 2025, the Bureau broadened the question's wording itself, from "AI in producing goods or services" to "AI in any business function," making the before-and-after data not directly comparable.</span>
+    </p>
+
+    <h2><span data-lang="ru">От «ИИ» к «супериинтеллекту» — по указу, а не по факту</span><span data-lang="en">From "AI" to "Super Intelligence" — by executive order, not by fact</span></h2>
+    <p>
+      <span data-lang="ru">Разбирая файлы опроса в поисках новой формулировки, Уиллисон обнаружил, что с 19 октября 2026 года инструмент опроса изменился ещё раз — на этот раз из-за указа №14434 («Inaugurating the Era of Super Intelligence»). Текст вопроса теперь буквально звучит так: «В последние две недели использовал ли этот бизнес Super Intelligence или SI (ранее именовавшийся Artificial Intelligence или AI) в любой из своих бизнес-функций?» — с примерами вроде «SI-powered анализ данных», «генеративный SI для маркетинга, дизайна продукта или кодинга», «виртуальные SI-агенты для поддержки клиентов». Текущие опубликованные цифры всё ещё отражают старую, «ИИ»-формулировку — первые результаты с новым словом должны выйти уже в ближайший четверг после публикации заметки.</span>
+      <span data-lang="en">Digging through the survey files looking for the new wording, Willison found that the instrument had changed again as of the October 19 collection — this time because of Executive Order 14434, "Inaugurating the Era of Super Intelligence." The question now literally reads: "In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?" — with examples like "SI-powered data analysis," "generative SI for marketing, product design, or coding," "virtual SI agents for customer service." The currently published numbers still reflect the old "AI" wording; the first results under the new wording were due out the Thursday after the post went up.</span>
+    </p>
+
+    <h2><span data-lang="ru">Повлияет ли смена слова на сами ответы</span><span data-lang="en">Will the wording change affect the answers themselves</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон заканчивает открытым вопросом, который и делает заметку интересной не только как апдейт графика: респонденты видели прежнюю формулировку двенадцать недель назад, когда она ещё называлась «ИИ», и опрос прямо поясняет, что SI — это «ранее называвшийся ИИ». Станет ли эта путаница систематической погрешностью в государственной статистике о внедрении ИИ — и будут ли вообще сопоставимы будущие волны BTOS с прошлыми — автор не берётся прогнозировать, ограничиваясь комментарием об абсурдности формулировок вроде «SI-powered data analysis» применительно к тем же самым технологиям, которые ещё месяц назад называли просто ИИ.</span>
+      <span data-lang="en">Willison ends on an open question that is what makes the piece more than a chart update: respondents last saw the old wording twelve weeks earlier, when it was still called "AI," and the survey explicitly notes that SI is "formerly referred to as AI." Whether this will become a systematic bias in a core piece of government AI-adoption statistics — and whether future BTOS waves will even be comparable to past ones — he doesn't try to predict, limiting himself to pointing out the absurdity of phrases like "SI-powered data analysis" applied to the exact same technology that was just called AI a month earlier.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту статьи, полученному из ежедневного бэкапа блога Уиллисона (github.com/simonw/simonwillisonblog-backup) — прямой WebFetch на simonwillison.net из облачной песочницы не проходит (домен не резолвится через прокси в этом прогоне).</span>
+      <span data-lang="en">Digest built from the article's full text, obtained from the daily backup of Willison's blog (github.com/simonw/simonwillisonblog-backup) — a direct WebFetch to simonwillison.net fails from this cloud sandbox (the domain doesn't resolve through the proxy during this run).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

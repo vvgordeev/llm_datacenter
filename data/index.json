@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-03",
+      "news_count": 4,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Google выпускает Gemini 4 Carbon — флагманскую модель для киберзащиты",
+        "en": "Google launches Gemini 4 Carbon, a frontier model built for cybersecurity defense"
+      }
+    },
+    {
       "date": "2026-10-30",
       "news_count": 0,
       "expert_count": 4,

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «GitHub Octoverse 2026» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект заметки · Simon Willison · 2026-10-28</span>
+      <span data-lang="en">Note digest · Simon Willison · 2026-10-28</span>
+    </p>
+    <h1>
+      <span data-lang="ru">GitHub Octoverse 2026: агентная разработка в цифрах</span>
+      <span data-lang="en">GitHub Octoverse 2026: agentic engineering by the numbers</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Oct/28/github-octoverse-2026/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original note ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уиллисон ведёт репортаж прямо с конференции GitHub Universe (бесплатный билет он получил по программе GitHub Stars) и приводит цифры из годового отчёта Octoverse 2026, которые со сцены представил EVP GitHub Джей Парикх. Главный тезис заметки — то, насколько резко агентная разработка изменила форму всех трёх базовых графиков платформы: вместо плавного роста все три линии почти горизонтальны до середины 2025 года, а затем круто уходят вверх.</span>
+      <span data-lang="en">Willison is reporting live from GitHub Universe (he got a free ticket through the GitHub Stars program) and relays figures from the Octoverse 2026 annual report, presented on stage by GitHub EVP Jay Parikh. The note's central point is how sharply agentic engineering has bent the shape of all three of the platform's core charts: instead of smooth growth, each line stays nearly flat until mid-2025 and then turns sharply upward.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три графика: pull request'ы, коммиты, репозитории</span><span data-lang="en">Three charts: pull requests, commits, repositories</span></h2>
+    <p>
+      <span data-lang="ru">Число смёрженных pull request'ов в 2026 году утроилось менее чем за год и достигло 220 миллионов в месяц. Число коммитов выросло более чем втрое — до 7,38 миллиарда в месяц, причём основная часть этого роста пришлась на вторую половину года (на фотографии со сцены именно эта линия даёт самый крутой, почти вертикальный финальный скачок). Темп создания новых репозиториев удвоился за этот же год — до 30,3 миллиона в месяц. Уиллисон прямо называет это наглядным представлением влияния агентной разработки на GitHub: не постепенное улучшение инструментов, а структурный перелом в том, как быстро и как много кода пишется и публикуется.</span>
+      <span data-lang="en">Merged pull requests in 2026 tripled in under a year to 220 million per month. Commits grew more than threefold, to 7.38 billion per month, with most of that increase concentrated in the second half of the year (in the on-stage photo, this is the line with the steepest, almost vertical final spike). The rate of new repository creation doubled over the same year, to 30.3 million per month. Willison calls this a stark representation of agentic engineering's impact on GitHub — not a gradual tooling improvement, but a structural break in how fast and how much code gets written and published.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как считали «интероперабельность и реверс-инжиниринг»</span><span data-lang="en">How "interoperability and reverse engineering" was measured</span></h2>
+    <p>
+      <span data-lang="ru">Отдельный интерес у Уиллисона вызывает методология отчёта: Octoverse 2026 впервые разбивает репозитории по отраслям и отдельно считает репозитории, связанные с «интероперабельностью или реверс-инжинирингом». По методологии GitHub, страновая принадлежность пушей в публичные репозитории уточняется с помощью LLM-классификации профиля пользователя (чтобы скорректировать погрешность от использования VPN), отраслевая категория каждого репозитория 2022–2026 годов присваивается через доученную мультиязычную embedding-модель по названию, описанию, темам и README, а сами репозитории по интероперабельности/реверс-инжинирингу отбираются по упоминанию в названии, описании, темах или README таких терминов, как «clean room implementation», «drop-in replacement» или «protocol re-implementation». Уиллисон приводит эти методологические детали без собственной оценки — как любопытный пример того, что сам инструментарий аналитики (LLM и embedding-модели) теперь используется для измерения последствий распространения этого же инструментария.</span>
+      <span data-lang="en">Willison is particularly interested in the report's methodology: Octoverse 2026, for the first time, breaks repositories out by industry and separately counts repositories tied to "interoperability or reverse engineering." By GitHub's methodology, the country attribution of pushes to public repositories is refined using LLM classification of the user's profile (to correct for VPN-related bias), each repository created between 2022 and 2026 is sorted into an industry sector by a fine-tuned multilingual embedding model reading its name, description, topics, and README, and interoperability/reverse-engineering repositories are flagged by mentions in those same fields of terms like "clean room implementation," "drop-in replacement," or "protocol re-implementation." Willison presents these methodology details without much editorializing — as a notable example of the analysis tooling itself (LLMs and embedding models) now being used to measure the fallout of that same tooling's spread.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту заметки, полученному из ежедневного бэкапа блога Уиллисона (github.com/simonw/simonwillisonblog-backup) — прямой WebFetch на simonwillison.net из облачной песочницы не проходит (домен не резолвится через прокси в этом прогоне). Полный текст отчёта Octoverse 2026 и детали методологии не проверялись напрямую (github.blog резолвится, но страница отчёта не запрашивалась отдельно).</span>
+      <span data-lang="en">Digest built from the note's full text, obtained from the daily backup of Willison's blog (github.com/simonw/simonwillisonblog-backup) — a direct WebFetch to simonwillison.net fails from this cloud sandbox (the domain doesn't resolve through the proxy during this run). The full Octoverse 2026 report and its methodology section were not independently fetched (github.blog resolves, but the report page itself wasn't requested separately).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
