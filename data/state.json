@@ -322,13 +322,6 @@
         "ru": "Google DeepMind запускает DeepMind Institute — публичную площадку эссе о подготовке общества к AGI (Хассабис, Легг, Манyика), совпало с сообщениями о застопорившихся планах госнадзора за ИИ в США (16 сент)."
       }
     },
-    "google-gemini-3-8-flash-cyber": {
-      "last_date": "2026-09-04",
-      "summary": {
-        "en": "Google ships Gemini 3.8 Flash and a gated Cyber variant for autonomous vulnerability patching via the Fairwind Program.",
-        "ru": "Google выпускает Gemini 3.8 Flash и закрытую Cyber-версию для автономного патчинга уязвимостей через программу Fairwind."
-      }
-    },
     "google-gemini-3-8-live": {
       "last_date": "2026-09-17",
       "summary": {
@@ -755,6 +748,13 @@
         "en": "Anthropic quietly updated Claude Code (~Oct 26-27) to refuse recreating specific existing video games, with users reporting over-blocking of legitimate reverse-engineering tasks through Oct 31.",
         "ru": "Anthropic незаметно обновила Claude Code (~26-27 октября), чтобы он отказывался воссоздавать конкретные существующие видеоигры; пользователи сообщают об избыточной блокировке легитимного реверс-инжиниринга вплоть до 31 октября."
       }
+    },
+    "anthropic-flashprove-provable-inference": {
+      "last_date": "2026-11-04",
+      "summary": {
+        "en": "Anthropic released FlashProve, an open-source zk-SNARK prototype that lets an inference provider cryptographically prove a response came from one committed set of model weights without revealing them.",
+        "ru": "Anthropic выпустила FlashProve — открытый zk-SNARK-прототип, позволяющий провайдеру инференса криптографически доказать, что ответ получен от конкретного закоммиченного набора весов модели, не раскрывая их."
+      }
     }
   },
   "seen_urls": {
@@ -773,7 +773,6 @@
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/": "2026-09-04",
     "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/": "2026-09-12",
     "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/": "2026-09-05",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
@@ -817,7 +816,6 @@
     "https://openai.com/index/astra-for-law/": "2026-09-20",
     "https://openai.com/index/daybreak-for-frontline-defenders/": "2026-09-05",
     "https://openai.com/index/devday-2026-recap/": "2026-09-30",
-    "https://openai.com/index/gpt-6-astra/": "2026-09-04",
     "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
     "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
     "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
@@ -841,7 +839,6 @@
     "https://simonwillison.net/2026/Sep/12/astra-running-routes/": "2026-09-13",
     "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/": "2026-09-12",
     "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
-    "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/": "2026-09-04",
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
@@ -922,7 +919,6 @@
     "https://www.latent.space/p/airbnb": "2026-10-06",
     "https://www.latent.space/p/aiuc": "2026-09-19",
     "https://www.latent.space/p/anima": "2026-09-06",
-    "https://www.latent.space/p/astra": "2026-09-04",
     "https://www.latent.space/p/devday-2026": "2026-10-02",
     "https://www.latent.space/p/recursive": "2026-09-17",
     "https://www.latent.space/p/rlm": "2026-10-03",
@@ -933,7 +929,6 @@
     "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/": "2026-09-25",
     "https://www.metacurity.com/openai-fires-three-safety-researchers-over-alleged-information-leaks/": "2026-10-04",
     "https://www.notateslaapp.com/news/4724/tesla-adds-grok-bot-to-vehicles-for-hands-free-errands-and-tasks": "2026-09-23",
-    "https://www.oneusefulthing.org/p/agency-and-agents": "2026-09-04",
     "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22": "2026-09-06",
     "https://www.oneusefulthing.org/p/the-dot-and-the-swarm": "2026-10-15",
     "https://www.oneusefulthing.org/p/the-overhang": "2026-09-23",
@@ -955,7 +950,6 @@
     "https://www.youtube.com/watch?v=9hetShMMp2s": "2026-10-03",
     "https://www.youtube.com/watch?v=BvvfZKKz4Yo": "2026-10-01",
     "https://www.youtube.com/watch?v=FFWtxjvW2ts": "2026-09-05",
-    "https://www.youtube.com/watch?v=GGzT7zVrRTU": "2026-09-04",
     "https://www.youtube.com/watch?v=IZAlq-V19U8": "2026-09-30",
     "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17",
     "https://www.youtube.com/watch?v=LlgiOCmFG_w": "2026-10-01",
@@ -967,7 +961,6 @@
     "https://www.youtube.com/watch?v=dDgncbBAA0c": "2026-10-05",
     "https://www.youtube.com/watch?v=eg_1NXDcoPk": "2026-10-02",
     "https://www.youtube.com/watch?v=o3IEkKXXXvo": "2026-09-13",
-    "https://www.youtube.com/watch?v=qRNZMGc7TMc": "2026-09-04",
     "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
     "https://www.youtube.com/watch?v=r3NH48_Z9Vk": "2026-09-23",
     "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
@@ -1055,6 +1048,9 @@
     "https://www.parameter.ai/labs/we-found-a-gap-at-openai": "2026-11-03",
     "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games": "2026-11-03",
     "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/": "2026-11-03",
-    "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/": "2026-11-03"
+    "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/": "2026-11-03",
+    "https://www.anthropic.com/research/provable-inference": "2026-11-04",
+    "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/": "2026-11-04",
+    "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/": "2026-11-04"
   }
 }

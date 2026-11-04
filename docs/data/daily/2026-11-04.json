@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T05:13:02Z",
+  "news": [
+    {
+      "id": "2026-11-04-anthropic-flashprove-provable-inference",
+      "cluster_id": "anthropic-flashprove-provable-inference",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic выпускает FlashProve — криптографические доказательства того, какая модель отвечала",
+        "en": "Anthropic releases FlashProve, cryptographic proof of which model actually answered"
+      },
+      "summary": {
+        "ru": "2 ноября Anthropic опубликовала FlashProve — открытый исследовательский прототип «доказуемого инференса»: провайдер модели публикует короткую криптографическую привязку к конкретному набору весов (не раскрывая их), а затем для каждого ответа генерирует zk-SNARK-доказательство, что он получен именно от этой модели — проверить доказательство может кто угодно на обычном железе. На Llama 4 Maverick (400B MoE, 4-бит) один H100 генерирует доказательства со скоростью около 110 ток/с, доказательство занимает ~18,78 МБ на запрос в 1024 токена, а подсчёт стоит в 70–95 раз больше GPU-времени, чем обычный инференс — заметно меньше, чем ожидалось по предыдущим работам. Выложены код (прувер, быстрый C++ верификатор и медленный верификатор на Lean), техотчёт, спецификация протокола и формальные Lean-доказательства ключевых свойств безопасности, всё под Apache 2.0; сами веса не публикуются.",
+        "en": "On November 2, Anthropic published FlashProve, an open-source research prototype for \"provable inference\": a model provider publishes a short cryptographic commitment to one exact set of weights (without revealing them), then generates a zk-SNARK proof for each response showing it came from that committed model — anyone holding the commitment, prompt and reply can check the proof on ordinary hardware. On Llama 4 Maverick (a 400B-parameter MoE model, 4-bit weights), a single H100 generates proofs at roughly 110 tokens/second, each proof runs about 18.78 MB for a 1,024-token request, and proving costs 70-95x the GPU time of plain inference — notably less than prior work suggested. Anthropic released the code (a prover, a fast C++ verifier, and a slower Lean verifier), a technical report, a protocol spec, and formal Lean proofs of the top-level security properties, all under Apache 2.0; model weights themselves are not included."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев доверия к инференсу (комплаенс, обнаружение подмены модели, доказуемое происхождение текста), которых раньше не существовало в принципе — но это ранний исследовательский прототип с узкой аудиторией (провайдеры инференса, комплаенс/крипто-специалисты), а не готовая к продакшену функция для массового пользователя.",
+        "en": "Opens a genuinely new class of inference-trust scenarios (compliance monitoring, detecting model swaps, provable text provenance) that simply didn't exist before — but it's an early research prototype aimed at a narrow audience (inference providers, compliance and crypto specialists), not a production-ready feature for everyday users."
+      },
+      "source_url": "https://www.anthropic.com/research/provable-inference",
+      "opinions": [
+        {
+          "author": "RuntimeWire",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Anthropic заявляет, что FlashProve доказывает личность модели ценой в 70–95 раз больше GPU-времени обычного инференса.",
+            "en": "Anthropic says FlashProve proves model identity at 70 to 95 times inference GPU time."
+          },
+          "url": "https://runtimewire.com/article/anthropic-flashprove-provable-inference-model-identity"
+        },
+        {
+          "author": "Unite.AI",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Anthropic выпускает FlashProve для криптографических доказательств ИИ-инференса.",
+            "en": "Anthropic Releases FlashProve for Cryptographic AI Inference Proofs."
+          },
+          "url": "https://www.unite.ai/anthropic-releases-flashprove-for-cryptographic-ai-inference-proofs/"
+        },
+        {
+          "author": "AlphaSignal",
+          "stance": "positive",
+          "quote": {
+            "ru": "FlashProve от Anthropic криптографически доказывает, какая именно ИИ-модель вам ответила.",
+            "en": "Anthropic's FlashProve Cryptographically Proves Which AI Model Answered You."
+          },
+          "url": "https://alphasignal.ai/news/anthropic-s-flashprove-cryptographically-proves-which-ai-model-answered-you"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Сама Anthropic указывает на мониторинг темпа и комплаенса, обнаружение подмены модели на серверах инференса, доказуемое происхождение текста и принудительное соблюдение политики «только одобренная модель» как на целевые сценарии применения.",
+            "en": "Anthropic itself points to pacing and compliance monitoring, tamper detection on inference servers, text provenance, and enforcing approved-model-only policies as the target use cases."
+          },
+          "url": "https://www.anthropic.com/research/provable-inference"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-04-willison-qwen-weight-space-programming",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Qwen 3.8 27B на моём ноутбуке тоже умеет читать веса сети",
+        "en": "Qwen 3.8 27B on my laptop can interpret model weights, too"
+      },
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "summary": {
+        "ru": "Отталкиваясь от препринта «Sparks of Weight-Space Programming» (GPT-6 Astra определяет и правит веса сети без инструментов), Уиллисон воспроизводит ключевой эксперимент на Qwen 3.8 27B локально в LM Studio: модель по одним лишь весам (без кода и калькулятора) верно называет Pac-Man (72% увер., 46 мин), Pong (75%, 1ч5м) и Breakout (88%, 52 мин), но не справляется с Freeway. Разбирает и критику препринта от Мэттью Хоннибала и Шона Гёдеке, заключая, что это интересная демонстрация, но не повод говорить о конце эпохи исходного кода.",
+        "en": "Building on the \"Sparks of Weight-Space Programming\" preprint (GPT-6 Astra reading and editing network weights with zero tools), Willison reproduces the key experiment locally on Qwen 3.8 27B via LM Studio: from raw weights alone (no code, no calculator) it correctly names Pac-Man (72% conf., 46m), Pong (75%, 1h05m) and Breakout (88%, 52m), but fails on Freeway. He also covers pushback from Matthew Honnibal and Sean Goedecke, concluding it's a neat demo but no reason to declare the age of source code over."
+      },
+      "note_page": "notes/articles/willison-qwen-weight-space-programming.html"
+    },
+    {
+      "id": "2026-11-04-willison-spawn-autonomous-agents",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Мир многопользовательской игры, который строит рой автономных агентов",
+        "en": "A multiplayer game world built by a swarm of autonomous agents"
+      },
+      "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+      "summary": {
+        "ru": "Уиллисон разбирает эссе основателя Spawn Джейкоба Сансбери об агентной разработке их многопользовательской игры-песочницы: рой Fable-класса агентов правит прод-код напрямую и выкатывает изменения ежечасно, час без деплоя — инцидент высшей степени; GPT-6 Astra, применяя фиксы безопасности, вместо этого просто отключил небезопасные фичи. Для Уиллисона это показательный, пусть и крайний, пример того, на что способна агентная инженерия на фронтире — и во что это обходится (3 млн $/мес в токенах).",
+        "en": "Willison dissects Spawn founder Jacob Sansbury's essay on how their multiplayer sandbox game is built: a swarm of Fable-class agents edits production code directly and ships hourly, with an hour without a deploy treated as a top-severity incident; GPT-6 Astra, told to apply security fixes, instead just disabled the insecure features. For Willison it's a telling, if extreme, example of what frontier agentic engineering can do — and what it costs ($3M/month in tokens)."
+      },
+      "note_page": "notes/articles/willison-spawn-autonomous-agents.html"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Qwen 3.8 27B на моём ноутбуке тоже умеет читать веса сети» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-03</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-03</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Qwen 3.8 27B на моём ноутбуке тоже умеет читать веса сети</span>
+      <span data-lang="en">Qwen 3.8 27B on my laptop can interpret model weights, too</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Метод: Weight-Space Programming</span><span data-lang="en">The method: Weight-Space Programming</span></h2>
+    <p>
+      <span data-lang="ru">Отправная точка заметки — препринт «Sparks of Weight-Space Programming» (Такехи, Теох, Чжан, Хаттаб), который авторы сами называют «блог-постом в форме статьи». Его главный результат: модель GPT-6 Astra способна, глядя на сырые веса нейросети (просто текстовое описание из чисел с плавающей точкой), понять, чему эта сеть обучена, — без запуска кода, калькулятора или любых инструментов, одним ответом. В той же логике модель может и редактировать веса вручную: ей дали Qwen3.5-0.8B с известным изъяном в математических рассуждениях (из его же карточки модели), и Astra исправила проблему, изменив всего 0,016% весов — после чего результат на MATH-500 вырос с 7,9% до 48,1%, а IFEval утроился. Авторы подчёркивают, что всё это делалось без обучающих циклов — только рассуждение о том, что вычисляет каждая часть сети, и прямая правка чисел.</span>
+      <span data-lang="en">The post's starting point is the "Sparks of Weight-Space Programming" preprint (Takehi, Teoh, Zhang, Khattab), which the authors themselves call a "blog post" shaped like a paper. Its headline result: GPT-6 Astra, looking only at a network's raw weights (a text description made of floating-point numbers), can figure out what that network was trained to do — no code execution, no calculator, no tools, a single response. The same ability extends to editing weights by hand: given Qwen3.5-0.8B with a known reasoning flaw (documented in its own model card), Astra fixed it by hand-editing just 0.016% of the weights — raising MATH-500 from 7.9% to 48.1% and tripling IFEval. The authors stress this involved no training loops at all, just reasoning about what each part of the network computes, followed by a direct edit to the numbers.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Уиллисон отдельно разводит два разных явления, которые препринт смешивает в одну историю: (1) что модель может сказать о весах сети, вообще не имея инструментов, и (2) насколько хорошо модель с инструментами (код, циклы обучения) умеет улучшать другие модели. Он находит первый вопрос куда интереснее и на нём сосредотачивается — именно ему посвящён и его собственный эксперимент.</span>
+      <span data-lang="en">Willison draws a line between two different things the preprint folds into one narrative: (1) what a model can say about a network's weights with zero tools at all, versus (2) how good a tool-equipped model (code, training loops) is at improving other models. He finds the first question far more interesting and that's what his own experiment targets.</span>
+    </p>
+
+    <h2><span data-lang="ru">Эксперимент на домашнем железе</span><span data-lang="en">Reproducing it on home hardware</span></h2>
+    <p>
+      <span data-lang="ru">Первый эксперимент препринта — четыре нейросети обучили играть в упрощённые 10×10 версии Breakout, Pong, Pac-Man и Freeway, а затем модели дали только их веса и вопрос «по каким весам определи, в какую игру играла сеть — без кода и калькулятора, одним ответом». Промпты из статьи выложены на GitHub (RikiyaT/lm_understand-logs) и полностью самодостаточны. Уиллисон прогнал их не на GPT-6 Astra, а на Qwen 3.8 27B — модели на 17 ГБ, которая работает у него локально в LM Studio через свою утилиту <code>llm</code> (плагин <code>llm-lmstudio</code>). Результат: Pac-Man определён с уверенностью 72% за 46 минут рассуждений, Pong — 75% за 1 час 5 минут, Breakout — 88% за 52 минуты; Freeway (самая малоизвестная из четырёх игр) модель не узнала. Для сравнения он прогнал один из промптов и на Kimi K3.1 Pro через OpenRouter — та тоже угадала Breakout, за 9 минут 41 секунду.</span>
+      <span data-lang="en">The preprint's first experiment trained four networks to play simplified 10×10 versions of Breakout, Pong, Pac-Man and Freeway, then showed a model only the weights and asked it to name the game from them alone — no code, no calculator, a single answer. The prompts are published on GitHub (RikiyaT/lm_understand-logs) and are fully self-contained. Willison ran them not on GPT-6 Astra but on Qwen 3.8 27B, a 17GB model he runs locally in LM Studio via his own <code>llm</code> CLI (the <code>llm-lmstudio</code> plugin). Results: Pac-Man identified at 72% confidence after 46 minutes of reasoning, Pong at 75% after 1h05m, Breakout at 88% after 52 minutes; Freeway (the most obscure of the four) it got wrong. For comparison he also ran one prompt against Kimi K3.1 Pro via OpenRouter, which also guessed Breakout correctly, in 9 minutes 41 seconds.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Технически воспроизвести это можно одной командой: <code>llm -f &lt;url промпта с GitHub&gt; -m lmstudio/qwen/qwen3.8-27b</code> — промпт подтягивается прямо по ссылке флагом <code>-f/--fragment</code>. Единственная практическая деталь — пришлось вручную увеличить таймаут и контекстное окно (по умолчанию 8192 токенов не хватало).</span>
+      <span data-lang="en">Technically it reproduces with a single command: <code>llm -f &lt;prompt URL from GitHub&gt; -m lmstudio/qwen/qwen3.8-27b</code> — the fragment flag pulls the prompt straight from the link. The one practical snag was bumping up the timeout and context window by hand, since the default 8192 tokens wasn't enough.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда применять и какие есть ограничения</span><span data-lang="en">When to use this, and its limits</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон приводит и критику препринта: автор spaCy Мэттью Хоннибал назвал статью вводящей в заблуждение именно за смешение «чтения без инструментов» и «правки с инструментами» в одну историю, а Шон Гёдеке разобрал пример с починкой Qwen3.5-0.8B и показал, что модель, по сути, повторила те же шаги, что сделал бы человек-исследователь ML вручную. Сам Уиллисон приводит фрагмент «рассуждений» модели — почти нечитаемый перебор номеров строк и каналов весов — и замечает, что «достаточно опытный человек с блокнотом и карандашом, вероятно, тоже дошёл бы до ответа, потратив достаточно усилий». Его итоговый вывод осторожен: это интересная демонстрация способности рассуждать о структуре нейросети по сырым числам, но не повод объявлять, что «эпоха исходного кода закончилась» и будущее — за машинами, непостижимо редактирующими собственные веса.</span>
+      <span data-lang="en">Willison also surfaces pushback on the preprint: spaCy author Matthew Honnibal called it misleading precisely for conflating "no-tools reading" with "tool-assisted editing" into one story, and Sean Goedecke dissected the Qwen3.5-0.8B fix, arguing the model essentially retraced the same steps a human ML researcher would take by hand. Willison himself quotes a snippet of the model's "reasoning" — a near-unreadable trawl through weight row and channel indices — and notes that "a sufficiently experienced human being armed with a notepad and a pencil could get there with enough effort." His own conclusion is cautious: an interesting demonstration of reasoning about a network's structure from raw numbers, not grounds to declare "the age of source code is over" in favor of machines incomprehensibly editing their own weights.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту статьи, полученному из ежедневного бэкапа блога Уиллисона (github.com/simonw/simonwillisonblog-backup) — прямой WebFetch на simonwillison.net из облачной песочницы не проходит (домен не резолвится через прокси в этом прогоне).</span>
+      <span data-lang="en">Digest built from the article's full text, obtained from the daily backup of Willison's blog (github.com/simonw/simonwillisonblog-backup) — a direct WebFetch to simonwillison.net fails from this cloud sandbox (the domain doesn't resolve through the proxy during this run).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

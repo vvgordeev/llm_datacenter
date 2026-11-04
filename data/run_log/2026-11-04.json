@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T05:13:02Z",
+  "sources": [
+    {"source": "anthropic blog + research (WebFetch)", "status": "ok", "candidates": 1, "note": "anthropic.com/news и anthropic.com/research резолвятся напрямую (единственный вендорный домен, доступный из песочницы). /news ничего новее 28 окт не показал, но /research содержал 'Progress on provable inference for large language models' (2 ноя) — это и есть FlashProve. Подтверждено прямым WebFetch содержимого поста."},
+    {"source": "openai.com/news + help.openai.com (WebFetch + WebSearch x3)", "status": "blocked/empty", "candidates": 0, "note": "WebFetch — ENOTFOUND. WebSearch (3 запроса) не нашёл ничего датированного 2-4 ноября; память/голосовые функции и DevDay — вне окна."},
+    {"source": "blog.google / google-deepmind (WebFetch + WebSearch x2)", "status": "blocked/empty", "candidates": 0, "note": "WebFetch — ENOTFOUND. WebSearch не дал ничего новее Gemini 4 Carbon (28 окт, уже в архиве за 2026-11-03)."},
+    {"source": "ai.meta.com (WebFetch + WebSearch x2)", "status": "blocked/empty", "candidates": 0, "note": "WebFetch — ENOTFOUND. WebSearch — пусто за окно, последнее релевантное — Muse Spark (апрель 2026)."},
+    {"source": "x.ai/news (WebFetch + WebSearch x2)", "status": "blocked/empty", "candidates": 0, "note": "WebFetch — ENOTFOUND. WebSearch — последние пункты от 12-14 окт, вне окна."},
+    {"source": "mistral.ai (WebFetch + WebSearch x2)", "status": "blocked/empty", "candidates": 0, "note": "WebFetch — ENOTFOUND. WebSearch — Large 4 (29 окт) уже вне окна/в архиве, нового анонса нет."},
+    {"source": "api-docs.deepseek.com (WebFetch + WebSearch x2)", "status": "blocked/empty", "candidates": 0, "note": "WebFetch — ENOTFOUND. WebSearch — ничего нового за окно; неподтверждённый твит про релиз 'на выходных' без деталей не включён."},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "connect_rejected на уровне egress-прокси (подтверждено статусом прокси и прямым curl)."},
+    {"source": "aggregators: smol.ai / tldr.tech / Willison linkblog (WebFetch)", "status": "blocked", "candidates": 0, "note": "Все три — connect_rejected/ENOTFOUND."},
+    {"source": "GitHub-зеркала HN/community-дайджестов (boom7sss/agents-radar-personal, WebFetch)", "status": "ok", "candidates": 1, "note": "github.com резолвится. Выпуск за 2026-11-03 дал FlashProve как лид (перепроверен и подтверждён напрямую на anthropic.com); остальные записи — финансовые новости (IPO) или не по теме LLM-функций, отклонены."},
+    {"source": "community: r/LocalLLaMA, r/ClaudeAI, X (WebSearch)", "status": "empty", "candidates": 0, "note": "Найденные посты либо без дат ноября, либо повторяют уже отклонённые/опубликованные темы."},
+    {"source": "расширенный проход: 'LLM news Nov 3-4 2026', 'AI model release this week', 'AI coding agent update November 2026', плюс точечные проверки продолжения вчерашних сюжетов (game-recreation cluster, GDPx)", "status": "ok", "candidates": 0, "note": "Ничего нового по содержанию сверх уже опубликованного 2026-11-03: найденные материалы либо пересказывают вчерашние сюжеты без новых фактов, либо не датированы/не подтверждаются первоисточником (LongCat-2.5 Preview от Meituan — не в списке отслеживаемых моделей, не проверен по первоисточнику)."},
+    {"source": "эксперты из конфига: Simon Willison (simonwillisonblog-backup, git clone)", "status": "ok", "candidates": 2, "note": "simonwillison.net сам не резолвится, но github.com — да. Полный текст двух материалов в 7-дневном окне, ранее не публиковавшихся: 'Qwen 3.8 27B can interpret model weights, too' (3 ноя) и блогмарк-комментарий 'Building a multiplayer game world with autonomous Fable-class models' / Spawn (29 окт)."},
+    {"source": "эксперты из конфига: Karpathy, AI Explained, Matt Wolfe, Nate Herk, Matt Pocock (видео, RSS/WebSearch)", "status": "blocked", "candidates": 0, "note": "youtube.com полностью недоступен на уровне CONNECT (403 от egress-прокси, подтверждено прямым curl на RSS feed) — ни RSS, ни WebFetch, ни yt-dlp не работают. WebSearch не дал датированных ноябрём 2026 видео ни по одному каналу."},
+    {"source": "эксперты из конфига: Latent Space, Ethan Mollick (WebFetch + WebSearch)", "status": "blocked/empty", "candidates": 0, "note": "latent.space и oneusefulthing.org — ENOTFOUND. WebSearch не нашёл ничего датированного ноябрём 2026 (Latent Space — последний найденный эпизод июнь 2026; Mollick — февраль/апрель 2026); Apple Podcasts страница с возможной свежей датой тоже не резолвится."},
+    {"source": "расширение экспертов: interconnects.ai, thezvi.substack.com, seangoedecke.com, divagr.com, github.blog (WebFetch/WebSearch)", "status": "blocked/empty", "candidates": 0, "note": "Все перечисленные домены — ENOTFOUND; WebSearch по ним либо не датирован, либо вне окна. Содержимое seangoedecke.com использовано только косвенно, как цитата внутри уже проверенной статьи Уиллисона (не как отдельный элемент)."},
+    {"source": "видео-пайплайн (gemini_video.py / extract_frames.py)", "status": "not_attempted", "candidates": 0, "note": "yt-dlp и imageio-ffmpeg установлены через pip (GEMINI_API_KEY и системный ffmpeg доступны), но ни одного видео-кандидата не найдено — youtube.com полностью заблокирован на уровне CONNECT egress-прокси, видео-дискавери невозможен в этом прогоне."}
+  ],
+  "totals": {
+    "candidates": 20,
+    "published": 1,
+    "rejected": {
+      "не по теме / не продуктовая часть (финансы, инфраструктура, политика)": 6,
+      "вне окна свежести (релизы конца октября, уже в архиве)": 8,
+      "не подтверждено первоисточником (один твит/неатрибутированный лид)": 2,
+      "пересказ вчерашнего сюжета без новых фактов": 2,
+      "уже опубликовано ранее (дубль source_url)": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not_attempted: no candidate video URL found (youtube.com unreachable at CONNECT level this run)",
+    "frames": "not_attempted: see above; yt-dlp/imageio-ffmpeg installed successfully via pip but moot without a video URL"
+  },
+  "notes": "Деградация сети подтверждена и соответствует паттерну прошлых прогонов (см. run_log за 2026-11-03): из внешних доменов напрямую резолвятся только anthropic.com и github.com (и его raw/API), всё остальное — ENOTFOUND или connect_rejected на уровне egress-прокси, включая youtube.com (подтверждено прямым curl на RSS-эндпоинт: CONNECT вернул 403). WebSearch и github-зеркала (boom7sss/agents-radar-personal, simonwillisonblog-backup) были единственными рабочими каналами discovery. Новостная часть: собран и подтверждён 1 реальный кандидат (FlashProve, Anthropic, 2 ноя) — широкий проход по всем 7 enabled моделям, агрегаторам, HN и community дополнительно расширялся точечными проверками (продолжение вчерашних сюжетов game-recreation и GDPx — не нашли нового контента, не включены как дубли по смыслу) и общими запросами 'LLM news November 2026' — новых подтверждаемых событий сверх FlashProve не нашлось. Это мало, но по правилу skill лучше 1 настоящая новость, чем натянутые. Экспертный контент: 2 из целевых min_expert_total=5 — ниже минимума, по той же причине, что и 2026-11-03 (видео полностью недоступно, большинство статейных экспертов из конфига не резолвятся напрямую). Собраны оба материала по полному тексту (через git-бэкап блога Уиллисона), без выдумывания контента; попытки расширить на новых авторов (interconnects.ai, thezvi, seangoedecke.com и др.) не удались из-за тех же сетевых ограничений. ≥1/3 опрошенных источников заблокированы/недоступны — это сигнал деградации окружения, а не тихий день; подробности см. в разделе sources."
+}
