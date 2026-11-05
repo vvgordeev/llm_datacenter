@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T05:16:10Z",
+  "sources": [
+    {"source": "anthropic.com/news + anthropic.com/research (WebFetch)", "status": "ok", "candidates": 1, "note": "Оба домена резолвятся напрямую. /research показал 'Investigating vault particles with Claude' (4 ноя, в окне) — подтверждён прямым WebFetch полного текста. /news новее 28 окт не показал."},
+    {"source": "openai blog (WebFetch напрямую + WebSearch x4, в т.ч. extended)", "status": "blocked/unverifiable", "candidates": 0, "note": "openai.com — ENOTFOUND. WebSearch (extended) выдал историю про 'ChatGPT Images 2.6' (4 ноя) с прямой ссылкой на openai.com, но: WebFetch по этой ссылке и по двум вторичным источникам (aiweekly.co, cryptobriefing.com) — ENOTFOUND; повторный точечный поиск по 'GPT-Image-2.6' не нашёл НИ ОДНОГО независимого подтверждения версии 2.6 (только 2.5, сентябрь 2026). Решено не включать как непроверенное — похоже на ту же ошибку ИИ-пересказа поиска, что описана в SKILL.md для Willison/Muse Spark."},
+    {"source": "google deepmind blog (WebSearch x2)", "status": "blocked/empty", "candidates": 0, "note": "blog.google — ENOTFOUND. WebSearch — ничего новее конца октября."},
+    {"source": "meta ai blog (WebSearch x2)", "status": "blocked/empty", "candidates": 0, "note": "ai.meta.com — ENOTFOUND. WebSearch — последнее релевантное далеко вне окна."},
+    {"source": "xai news (WebSearch x2)", "status": "empty", "candidates": 0, "note": "x.ai — не фетчился напрямую (пройдено через WebSearch в суб-агенте). Единственный ноябрьский пункт — депрекация grok-imagine-image-quality (2 ноя), не новая функция, не кандидат."},
+    {"source": "mistral news (WebSearch x2)", "status": "empty", "candidates": 0, "note": "Large 4 — публичный превью был 6 окт, не ноябрь; даты открытых весов (конец окт/31 окт) расходятся по источникам и не подтверждены первоисточником. Вне окна, не включено."},
+    {"source": "deepseek news (WebSearch x2)", "status": "empty", "candidates": 0, "note": "Последнее найденное — август 2026, вне окна."},
+    {"source": "qwen / alibaba", "status": "skipped", "candidates": 0, "note": "enabled: false в sources.yaml."},
+    {"source": "AI News (smol.ai) / TLDR AI / Simon Willison linkblog (WebFetch)", "status": "blocked", "candidates": 0, "note": "ENOTFOUND на все три."},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "ENOTFOUND (сетевой уровень, не 403)."},
+    {"source": "Hacker News (WebSearch fallback) + community r/LocalLLaMA, r/ClaudeAI, X", "status": "empty", "candidates": 0, "note": "Широкие запросы не дали ничего датированного в окне."},
+    {"source": "расширенный проход: 'LLM news 2026-11-05', 'AI model release November 2026', 'AI coding agent update', точечные запросы по 4-5 ноября", "status": "ok", "candidates": 0, "note": "Ничего нового сверх уже найденного (vault particles) и уже отфильтрованного (Images 2.6 неподтверждён, Grok-деприкация не кандидат)."},
+    {"source": "эксперты: Simon Willison (git clone simonwillisonblog-backup)", "status": "ok", "candidates": 1, "note": "Проверены все записи blog_entry/blog_blogmark с 30 окт по 4 ноя. Единственная подходящая статья за период — 'Qwen 3.8 27B can interpret model weights, too' (3 ноя) — УЖЕ опубликована в сводке за 2026-11-04 (есть в seen_urls на дату 2026-11-04), дубль, не включена повторно. Остальные записи — не про LLM-подходы (Census Bureau, security writeup) либо просто ссылки на чужой контент."},
+    {"source": "эксперты: Latent Space (WebSearch + 2 попытки WebFetch на разные домены)", "status": "blocked/unverifiable", "candidates": 0, "note": "www.latent.space и latentspace.substack.com — оба ENOTFOUND. WebSearch нашёл заголовок эпизода с Jacob Lauritzen (Legora, датирован вторичным источником 2 ноя), но без полного текста содержание непроверяемо — не включено, чтобы не выдумывать детали."},
+    {"source": "эксперты: Ethan Mollick / oneusefulthing.org (WebFetch + WebSearch)", "status": "blocked/empty", "candidates": 0, "note": "ENOTFOUND. WebSearch не дал ничего датированного в окне."},
+    {"source": "эксперты: видео — Karpathy, AI Explained, Matt Wolfe, Nate Herk, Matt Pocock (RSS + WebSearch)", "status": "blocked", "candidates": 0, "note": "youtube.com и googlevideo.com — CONNECT 403 на уровне egress-прокси (RSS и WebFetch), подтверждено дважды независимо (две суб-разведки). WebSearch не дал датированных ноябрём видео ни по одному каналу."},
+    {"source": "видео-пайплайн (gemini_video.py / extract_frames.py)", "status": "not_attempted", "candidates": 0, "note": "yt-dlp и imageio-ffmpeg установлены через pip, GEMINI_API_KEY доступен, системный ffmpeg есть — но ни одного видео-кандидата не найдено (youtube.com недоступен), пайплайн не запускался за отсутствием входа."}
+  ],
+  "totals": {
+    "candidates": 23,
+    "published": 1,
+    "rejected": {
+      "вне окна свежести": 6,
+      "не подтверждено первоисточником / похоже на ошибку ИИ-пересказа поиска": 2,
+      "депрекация API, не новая функция": 1,
+      "уже опубликовано ранее (дубль source_url)": 1,
+      "непроверяемо (нет доступа к полному тексту)": 1,
+      "не по теме (не продуктовая часть / не подход к LLM)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not_attempted: no candidate video URL found (youtube.com/googlevideo.com unreachable at CONNECT level this run)",
+    "frames": "not_attempted: see above; yt-dlp/imageio-ffmpeg installed successfully via pip but moot without a video URL"
+  },
+  "notes": "Сетевая картина прогона: прямым WebFetch резолвятся только anthropic.com и github.com (и его raw/API) — тот же паттерн, что и 2026-11-03/04. Почти все остальные вендорные домены, агрегаторы и HN API — ENOTFOUND на уровне egress-прокси; youtube.com/googlevideo.com — CONNECT 403. Это ≥1/3 опрошенных источников заблокированы — явный сигнал деградации окружения, не тихий день сам по себе. Несмотря на это, широкий проход (2 параллельные суб-разведки read-only + собственная проверка) нашёл 1 реальный, подтверждённый по первоисточнику новостной кандидат (vault particles, Anthropic, 4 ноя, найден через /research, который резолвится напрямую) — опубликован. Отдельно проверена и ОТКЛОНЕНА как непроверенная история про 'ChatGPT Images 2.6': WebSearch (extended) выдал подробный, но при перепроверке точечным поиском не подтверждаемый независимо сюжет (нашлась только версия 2.5, сентябрь 2026); решено не включать, чтобы не повторить ошибку путаницы версий, описанную в SKILL.md для случая Willison/Muse Spark. Экспертный контент: 0 из целевых min_expert_total=5 — ниже минимума. Причина: единственный найденный подходящий материал (статья Уиллисона про Qwen и веса моделей) уже был опубликован в сводке за 2026-11-04; видео полностью недоступны (youtube.com блокирован); Latent Space и Ethan Mollick — сетевая недоступность без возможности проверить содержание через WebSearch-пересказ. Решено не выдумывать и не добавлять непроверяемый материал (кандидат с Jacob Lauritzen из Legora) — по аналогии с решением про Images 2.6."
+}

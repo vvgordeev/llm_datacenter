@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T05:16:10Z",
+  "news": [
+    {
+      "id": "2026-11-05-anthropic-claude-vault-particles-structure",
+      "cluster_id": "anthropic-vault-particles-structure",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Anthropic прогнала весь исследовательский цикл — от поиска белков до структуры крио-ЭМ — через агентов Claude",
+        "en": "Anthropic runs a full research pipeline, from sequence search to cryo-EM structure, through Claude agents"
+      },
+      "summary": {
+        "ru": "4 ноября Anthropic опубликовала разбор проекта, где Claude провёл весь цикл структурной биологии по неизвестным ранее «вольт»-частицам: нашёл родственные белки среди ~15 млрд предсказанных последовательностей (29 бактериальных и 4 архейных типа), спроектировал конструкции для экспрессии, выбрал метод очистки и запустил обработку крио-ЭМ во внутреннем мультиагентном харнессе — люди только консультировали по ключевым решениям. В итоге нашли новую частицу L05 (96 копий, ~9,5 МДа, крупнее по внутреннему объёму, чем у млекопитающих), очистка ускорилась с ~3 дней до ~90 минут, а первая модель структуры появилась за 34 часа вместо недель; в посте честно описаны и провалы Claude — например, пропущенный шаг в обработке крио-ЭМ, давший «зеркальную» артефактную карту.",
+        "en": "On November 4, Anthropic published a writeup of a project where Claude ran an entire structural-biology research cycle on a previously uncharacterized class of 'vault' particles: it searched roughly 15 billion predicted proteins for relatives (finding them across 29 bacterial and 4 archaeal phyla), designed expression constructs, chose a purification method, and ran cryo-EM processing in an internal multi-agent harness, with humans advising only on key decisions. The result was a novel particle, L05 (96 copies, ~9.5 MDa, enclosing more volume than mammalian vaults), with purification time dropping from ~3 days to ~90 minutes and a first structural model appearing in 34 hours instead of weeks; the post also candidly documents Claude's failures, including a skipped cryo-EM processing step that produced a mirror-image artifact map."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Показывает воспроизводимый, количественно подтверждённый метод использования LLM как автономного соисследователя на всём цикле — от вычислений до мокрой лаборатории и крио-ЭМ — с честно описанными провалами. Балл не выше: аудитория узкая (структурная биология), а не общий сценарий для всех пользователей LLM.",
+        "en": "Demonstrates a reproducible, quantified method of using an LLM as an autonomous co-researcher across an entire pipeline — from computation to wet-lab work to cryo-EM — with honestly reported failure modes. Score capped because the audience is narrow (structural biology), not a scenario relevant to all LLM users."
+      },
+      "source_url": "https://www.anthropic.com/news/investigating-vault-particles-with-claude",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Очистка белка от клеток до сетки для микроскопа сократилась примерно с 3 дней до 90 минут, а первая модель структуры по данным крио-ЭМ — с недель до 34 часов.",
+            "en": "Protein purification from cells to a microscopy grid dropped from about 3 days to 90 minutes, and a first cryo-EM structural model went from weeks to 34 hours."
+          },
+          "url": "https://www.anthropic.com/news/investigating-vault-particles-with-claude"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

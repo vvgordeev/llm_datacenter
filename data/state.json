@@ -462,20 +462,6 @@
         "ru": "16 сентября Mistral AI и Mozilla объявили партнёрство: бета-функция Firefox Smart Window — ИИ-помощник для браузинга (обобщение вкладок, ответы на вопросы по открытым страницам, проверка фактов через Exa) — переходит на модели Mistral (Mistral Small 4) для пользователей во Франции, США и Канаде, с расширением на Великобританию и Германию позже в этом году. По умолчанию диалоги не сохраняются на серверах Mozilla, а Mistral согласилась на нулевое удержание данных."
       }
     },
-    "multiverse-quasar-438b": {
-      "last_date": "2026-09-05",
-      "summary": {
-        "en": "Spain's Multiverse Computing ships Quasar 438B, its first large model, claimed as the top European model on the Artificial Analysis Intelligence Index (score 43), available via the CompactifAI API; independent reviewers note it trails the global frontier substantially.",
-        "ru": "Multiverse Computing (Испания) выпускает Quasar 438B — первую крупную модель компании, заявленную как лучшую европейскую по Artificial Analysis Intelligence Index (43 балла), доступную через CompactifAI API; независимые обозреватели отмечают заметное отставание от мирового фронтира."
-      }
-    },
-    "nvidia-huggingface-acquisition": {
-      "last_date": "2026-09-05",
-      "summary": {
-        "en": "Nvidia buys Hugging Face for ~$12.9B (announced Sept 3) — Nvidia's second-biggest deal ever; Huang pledges to keep the platform open and hardware-neutral, while the community splits between those who see sound business logic and those fearing vendor lock-in.",
-        "ru": "Nvidia покупает Hugging Face за ~$12,9 млрд (объявлено 3 сентября) — вторая по размеру сделка в истории Nvidia; Хуанг обещает сохранить платформу открытой и нейтральной к железу, сообщество разделилось на сторонников бизнес-логики сделки и опасающихся vendor lock-in."
-      }
-    },
     "openai-agent-medicare-australia-breach": {
       "last_date": "2026-09-25",
       "summary": {
@@ -511,13 +497,6 @@
         "ru": "OpenAI выпустила Astra for Law — конфигурацию GPT-6 Astra, настроенную под юридический ресёрч и drafting, с индексом судебной практики, статутов, нормативных актов и судебных постановлений США (более 230 млн URL, ежедневно пополняется). На бенчмарке Vals AI Legal Research Bench конфигурация прошла проверку на корректность в 54% из 200 вопросов против 38.7% у обычного GPT-6 Astra с веб-поиском. Доступ пока даётся избранным юрфирмам через программу Trusted Access в ChatGPT/Codex, с 26 партнёрскими плагинами (Thomson Reuters, Harvey, Legora и другие)."
       }
     },
-    "openai-astra-math-proofs": {
-      "last_date": "2026-09-05",
-      "summary": {
-        "en": "GPT-6 Astra: full release (Sept 3, SOTA on computer-use/coding/math, acknowledged drop in reasoning monitorability) → the next day a messy staged rollout locks paid Pro subscribers out, Altman apologizes and promises compensation, and chief scientist Pachocki publicly admits reasoning monitoring is 'fragile' and worsening.",
-        "ru": "GPT-6 Astra: полноценный релиз (3 сентября, SOTA по компьютерному управлению/кодингу/математике, признанное падение мониторируемости рассуждений) → на следующий день хаотичный поэтапный роллаут лишает платных Pro-подписчиков доступа, Альтман извиняется и обещает компенсацию, а главный научный сотрудник Пахоцки публично признаёт, что мониторинг рассуждений «хрупкий» и ухудшается."
-      }
-    },
     "openai-breach-claude-opus5-exploit": {
       "last_date": "2026-09-20",
       "summary": {
@@ -544,13 +523,6 @@
       "summary": {
         "en": "OpenAI's Codex and ChatGPT Work lead Thibault Sottiaux announced a challenge: every day from October 5 to November 1, 2026, the team ships either an improvement noticeable to the median Codex/Work user, or a full usage-limit reset. Day 1 delivered roughly 50% faster default speeds for GPT-6 Astra and GPT-6.1 Sol.",
         "ru": "Руководитель Codex и ChatGPT Work в OpenAI Тибо Соттьо объявил челлендж: каждый день с 5 октября по 1 ноября 2026 команда либо выкатывает улучшение, заметное медианному пользователю Codex/Work, либо даёт полный сброс лимитов использования. В день 1 результатом стало повышение скорости GPT-6 Astra и GPT-6.1 Sol по умолчанию примерно на 50%."
-      }
-    },
-    "openai-daybreak-gpt-5-6-cyber": {
-      "last_date": "2026-09-05",
-      "summary": {
-        "en": "OpenAI expands Daybreak into Blue/Red tiers and ships GPT-5.6-Cyber (Aug 12) → commits $1B in subsidized access for water utilities, power grids, local governments and nonprofits via Daybreak for Frontline Defenders, including an MS-ISAC pilot (Sept 3-4).",
-        "ru": "OpenAI расширяет Daybreak до тиров Blue/Red и GPT-5.6-Cyber (12 августа) → выделяет $1 млрд субсидированного доступа для водоканалов, электросетей, местных властей и НКО в рамках Daybreak for Frontline Defenders, включая пилот с Multi-State ISAC (3-4 сентября)."
       }
     },
     "openai-devday-2026-dots-space": {
@@ -755,6 +727,13 @@
         "en": "Anthropic released FlashProve, an open-source zk-SNARK prototype that lets an inference provider cryptographically prove a response came from one committed set of model weights without revealing them.",
         "ru": "Anthropic выпустила FlashProve — открытый zk-SNARK-прототип, позволяющий провайдеру инференса криптографически доказать, что ответ получен от конкретного закоммиченного набора весов модели, не раскрывая их."
       }
+    },
+    "anthropic-vault-particles-structure": {
+      "last_date": "2026-11-05",
+      "summary": {
+        "ru": "Anthropic прогнала Claude по всему циклу структурной биологии (поиск белков -> экспрессия -> очистка -> крио-ЭМ) и нашла новую частицу L05.",
+        "en": "Anthropic ran Claude through a full structural-biology pipeline (sequence search -> expression -> purification -> cryo-EM) and found a novel L05 particle."
+      }
     }
   },
   "seen_urls": {
@@ -774,7 +753,6 @@
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
     "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/": "2026-09-12",
-    "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/": "2026-09-05",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
     "https://claude.com/blog/claude-code-mods": "2026-10-02",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01",
@@ -797,9 +775,7 @@
     "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html": "2026-10-18",
     "https://garymarcus.substack.com/p/breaking-two-rays-of-hope": "2026-09-12",
     "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
-    "https://garymarcus.substack.com/p/pause-openai-now": "2026-09-05",
     "https://ghuntley.com/agency/": "2026-10-16",
-    "https://github.com/anthropics/claude-code/releases/tag/v2.1.260": "2026-09-05",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.261": "2026-09-07",
     "https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads": "2026-09-18",
     "https://huggingface.co/internlm/Atria-Dawn-Preview": "2026-09-17",
@@ -807,14 +783,12 @@
     "https://mistral.ai/news/mistral-large-4/": "2026-10-07",
     "https://mistral.ai/news/mistral-x-mozilla/": "2026-09-17",
     "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/": "2026-09-12",
-    "https://multiversecomputing.com/resources/introducing-quasar-438b-europe-s-leading-ai-model": "2026-09-05",
     "https://mustafa-suleyman.ai/a-warning-about-model-welfare": "2026-09-17",
     "https://news.ycombinator.com/item?id=49653985": "2026-09-12",
     "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
     "https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers": "2026-10-27",
     "https://openai.com/index/an-alien-mind/": "2026-09-07",
     "https://openai.com/index/astra-for-law/": "2026-09-20",
-    "https://openai.com/index/daybreak-for-frontline-defenders/": "2026-09-05",
     "https://openai.com/index/devday-2026-recap/": "2026-09-30",
     "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
     "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
@@ -842,7 +816,6 @@
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
-    "https://simonwillison.net/2026/Sep/4/astra-pelicans/": "2026-09-05",
     "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/": "2026-09-06",
     "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/": "2026-09-07",
     "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/": "2026-09-09",
@@ -863,7 +836,6 @@
     "https://thehill.com/policy/technology/6022646-openai-anthropic-cybersecurity-incidents/": "2026-09-07",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
     "https://thenewstack.io/meta-muse-spark-open/": "2026-10-21",
-    "https://thezvi.substack.com/p/ai-184-post-post-mortem": "2026-09-05",
     "https://thezvi.substack.com/p/ai-185-preference-cascade": "2026-09-11",
     "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
     "https://thezvi.substack.com/p/ai-188-gemini-dot-argon": "2026-10-05",
@@ -914,7 +886,6 @@
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
     "https://www.latent.space/p/ainews-claude-haiku-55-better-than": "2026-10-11",
     "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer": "2026-10-05",
-    "https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest": "2026-09-05",
     "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc": "2026-10-04",
     "https://www.latent.space/p/airbnb": "2026-10-06",
     "https://www.latent.space/p/aiuc": "2026-09-19",
@@ -934,14 +905,12 @@
     "https://www.oneusefulthing.org/p/the-overhang": "2026-09-23",
     "https://www.pcgamer.com/software/ai/an-openai-model-was-caught-trying-to-cheat-at-starcraft-and-of-course-it-did-it-by-stealing-a-humans-work/": "2026-10-06",
     "https://www.pcworld.com/article/3232453/i-tried-the-gemini-app-for-windows-it-wasted-my-time.html": "2026-09-12",
-    "https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/": "2026-09-05",
     "https://www.rubyhack.ai/": "2026-09-12",
     "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
     "https://www.sonarsource.com/blog/stop-the-context-tax/": "2026-09-06",
     "https://www.techradar.com/ai-platforms-assistants/gemini/google-just-gave-every-windows-10-and-11-pc-a-gemini-key-i-tried-it-and-its-the-easiest-way-to-use-its-ai-yet": "2026-09-12",
     "https://www.techtimes.com/articles/328381/20261002/openai-rogue-ai-agents-hacked-hugging-face-ftc-probes-labs-safety-auditor-metr.htm": "2026-10-03",
     "https://www.unite.ai/openais-gpt-live-1-arrives-in-the-api-at-0-05-per-minute/": "2026-09-12",
-    "https://www.unite.ai/sam-altman-apologizes-as-gpt-6-astra-staged-launch-denies-paid-access/": "2026-09-05",
     "https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/googles-gemini-app-for-windows-11-uses-the-same-keyboard-shortcut-as-copilot": "2026-09-12",
     "https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2": "2026-09-19",
     "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
@@ -949,7 +918,6 @@
     "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-28",
     "https://www.youtube.com/watch?v=9hetShMMp2s": "2026-10-03",
     "https://www.youtube.com/watch?v=BvvfZKKz4Yo": "2026-10-01",
-    "https://www.youtube.com/watch?v=FFWtxjvW2ts": "2026-09-05",
     "https://www.youtube.com/watch?v=IZAlq-V19U8": "2026-09-30",
     "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17",
     "https://www.youtube.com/watch?v=LlgiOCmFG_w": "2026-10-01",
@@ -967,7 +935,6 @@
     "https://www.youtube.com/watch?v=u-giatW9mYU": "2026-09-18",
     "https://www.youtube.com/watch?v=yysILVsfLFM": "2026-09-13",
     "https://x.ai/news/grok-4-7": "2026-09-22",
-    "https://x.ai/news/grok-bot-for-enterprise": "2026-09-05",
     "https://x.ai/news/grok-build-memory": "2026-09-18",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
@@ -984,10 +951,8 @@
     "notes/articles/arike-astra-recurrent-architecture-concerns.html": "2026-09-07",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
     "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
-    "notes/articles/garymarcus-pause-openai-now.html": "2026-09-05",
     "notes/articles/goodfire-neural-networks-already-clean.html": "2026-10-21",
     "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
-    "notes/articles/latentspace-ainews-astra-biggest-launch.html": "2026-09-05",
     "notes/articles/latentspace-airbnb-inside-out-ai.html": "2026-10-06",
     "notes/articles/latentspace-anandkumar-weather-foundation-model.html": "2026-09-06",
     "notes/articles/latentspace-devday-2026-computer-use.html": "2026-10-02",
@@ -1004,7 +969,6 @@
     "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
     "notes/articles/sonar-vortex-semantic-code-navigation.html": "2026-09-06",
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
-    "notes/articles/willison-astra-pelican-grid.html": "2026-09-05",
     "notes/articles/willison-astra-running-routes.html": "2026-09-13",
     "notes/articles/willison-battle-drones-vibe-coded-rts.html": "2026-10-21",
     "notes/articles/willison-blender-coding-agents-macos.html": "2026-09-06",
@@ -1014,7 +978,6 @@
     "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
     "notes/articles/willison-research-acceleration-openai.html": "2026-09-07",
-    "notes/articles/zvi-ai-184-post-post-mortem.html": "2026-09-05",
     "notes/articles/zvi-ai-185-preference-cascade.html": "2026-09-11",
     "notes/articles/zvi-ai-188-gemini-dot-argon.html": "2026-10-05",
     "notes/articles/zvi-ai-preference-cascade-reaches-farther.html": "2026-10-06",
@@ -1026,7 +989,6 @@
     "notes/videos/nateherk-gpt6-astra-stock-trader.html": "2026-09-14",
     "notes/videos/nateherk-gpt6-astra-video-editing.html": "2026-09-13",
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
-    "notes/videos/natherk-fable-5-1-website-design.html": "2026-09-05",
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
     "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
@@ -1051,6 +1013,7 @@
     "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/": "2026-11-03",
     "https://www.anthropic.com/research/provable-inference": "2026-11-04",
     "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/": "2026-11-04",
-    "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/": "2026-11-04"
+    "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/": "2026-11-04",
+    "https://www.anthropic.com/news/investigating-vault-particles-with-claude": "2026-11-05"
   }
 }
