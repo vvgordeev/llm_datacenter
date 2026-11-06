@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T05:11:47Z",
+  "sources": [
+    {
+      "source": "anthropic blog (anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Прямой WebFetch успешен. Последний пост с контентом — «AI for Science expands to foundations and research institutions» (28 окт); на 6 ноября есть пустой слот даты без статьи под ним. 2 WebSearch-запроса по анонсам/моделям не дали ничего нового в окне 36ч."
+    },
+    {
+      "source": "openai blog (openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND (DNS-уровень egress-прокси, как и большинство остальных доменов сегодня). 3 WebSearch-запроса (включая site:openai.com/index) — только шум: спекуляции о GPT-6.2/Astra/Sol без подтверждения, упоминание несуществующего GPT Image 2.6 (проверено отдельно — не анонсирован, только утечка в API-спеке 28-31 окт). Последнее подтверждённое событие у OpenAI — GPT-6.1 Terra (26 окт, уже в state.json), вне окна."
+    },
+    {
+      "source": "google/deepmind blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. 2 WebSearch — только прогнозы по Gemini 4 (пост-тренинг, сроки «до конца года»), ничего подтверждённого в окне 36ч."
+    },
+    {
+      "source": "meta ai blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch не дал ничего новее апрельского Muse Spark; упоминания «Avocado» — неподтверждённые слухи о стратегии, не продуктовое событие."
+    },
+    {
+      "source": "xai news (x.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch (включая site:x.ai) — последнее подтверждаемое событие Grok 4.6 (авг), сайт-ссылка не разрешилась. Ничего в окне 36ч."
+    },
+    {
+      "source": "mistral news (mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch (включая site:mistral.ai, RSS-сниппет) — последний известный релиз Mistral Large 4 (29 окт), вне окна; ничего за 4-6 ноября."
+    },
+    {
+      "source": "deepseek news (api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch (включая site:github.com/deepseek-ai) — упоминания V4-Flash-0731 оказались датированы июлем 2026 (агрегатор llmgateway.io ошибочно пометил их «5 ноября»), перепроверено отдельным запросом. Ничего нового в окне."
+    },
+    {
+      "source": "aggregator: AI News (smol.ai)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND (news.smol.ai, buttondown.com). WebSearch не дал ноябрьских выпусков, индекс отстаёт."
+    },
+    {
+      "source": "aggregator: TLDR AI",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND (tldr.tech). WebSearch — архивные зеркала максимум по июль 2026."
+    },
+    {
+      "source": "aggregator: Simon Willison linkblog",
+      "status": "ok",
+      "candidates": 0,
+      "note": "simonwillison.net напрямую заблокирован (ENOTFOUND), обойдено клонированием github.com/simonw/simonwillisonblog-backup (ndjson-дамп блога, работает). Проверены все blog_blogmark за 20 окт - 3 ноя: ничего похожего на анонс новой фичи модели — только security-истории, музыка, инфраструктура PHP. Последние продуктовые анонсы в линкблоге (GPT-6.1 Terra 26 окт, Kimi K3.1 Pro 23 окт, Agent Skills donation 22 окт) уже в state.json, вне окна 36ч. ВАЖНО: пост «Qwen 3.8 27B on my laptop can interpret model weights, too» (3 ноя), найденный как топ-кандидат по дате, уже был опубликован прогоном за 2026-11-04 (expert_content[0], URL совпадает дословно) — обнаружено на этапе QA по seen_urls, конспект-черновик удалён, запись в state.json не тронута (осталась с исходной датой 2026-11-04)."
+    },
+    {
+      "source": "HN API (hn.algolia.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND — в отличие от прошлых прогонов (конфиг отмечает «работает из песочницы»), сегодня домен недоступен. WebSearch (site:news.ycombinator.com) не дал релевантных тредов за ноябрь."
+    },
+    {
+      "source": "community: r/LocalLLaMA, r/ClaudeAI, X",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch по обоим сабреддитам — только архивные сниппеты за февраль-май 2026, индекс не покрывает текущую неделю."
+    },
+    {
+      "source": "расширенный проход (LLM news <дата>, AI model release, coding agent update, техноблоги TechCrunch/Verge/ArsTechnica)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "6 дополнительных WebSearch-запросов (включая site:techcrunch.com, site:theverge.com, site:arstechnica.com, extended-режим) не нашли ни одного проверяемого события в окне 4-6 ноября 2026. Единственная конкретная наводка на 5-6 ноября — репортаж propakistani.pk о «возможном» релизе OpenAI (Astra/Sol) со ссылкой на The Information; статья недоступна (ENOTFOUND), источник пересказывает слух, не подтверждённый анонс — отклонено."
+    }
+  ],
+  "totals": {
+    "candidates": 0,
+    "published": 0,
+    "rejected": {
+      "рерайты/слухи без первоисточника (GPT Image 2.6, OpenAI Astra/Sol 'reportedly')": 2,
+      "события вне окна 36ч (GPT-6.1 Terra, Kimi K3.1 Pro, Mistral Large 4, Grok 4.6, DeepSeek V4-Flash-0731)": 5
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used: ни одного видео-кандидата не прошло отбор (youtube.com полностью недоступен на уровне DNS egress-прокси сегодня — www.youtube.com, m.youtube.com; yt-dlp и RSS-discovery по всем 5 видео-экспертам не сработали). WebSearch-фолбэк по Karpathy/AI Explained/Matt Wolfe/Nate Herk/Matt Pocock не дал проверяемых дат публикации за последнюю неделю.",
+    "frames": "skipped: без видео-кандидатов. yt-dlp и imageio-ffmpeg установлены через pip (python3 -m pip) на случай появления кандидата, ffmpeg в PATH — не потребовались."
+  },
+  "notes": "Новостей за сегодня нет — подтверждено широким проходом (7 моделей × 2+ запроса, 3 агрегатора, HN API, community, 3 техноблога, расширенный проход). Egress-прокси сегодня резолвит DNS только для небольшого числа доменов (подтверждено: anthropic.com, github.com); почти все остальные источники дают ENOTFOUND на уровне DNS, а не 403 — более жёсткая деградация сети, чем в предыдущих прогонах. Экспертный раздел собран в обход блокировки simonwillison.net через git-клон его бэкапа (ndjson-дамп); лучший найденный кандидат Уиллисона («Weight-Space Programming», 3 ноя) оказался дублем уже опубликованного 2026-11-04 материала (поймано по seen_urls на этапе QA, в итоговую сводку не включён). В сводку вошёл один материал — Karpathy/HackerTube (31 окт), подтверждённый перекрёстно через 10+ независимых источников (прямой фетч karpathy.bearblog.dev заблокирован). Видео-экспертов собрать не удалось: youtube.com полностью недоступен (DNS), WebSearch по Karpathy/AI Explained/Matt Wolfe/Nate Herk/Matt Pocock даёт только устаревшие или недатированные результаты. min_expert_total=5 не достигнут (1 материал) — решено не добирать количество за счёт неподтверждаемого контента или повторной публикации уже вышедшего материала."
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T05:11:47Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-11-06-karpathy-hackertube",
+      "type": "article",
+      "author": "Andrej Karpathy",
+      "title": {
+        "ru": "HackerTube: как Карпати собрал альтернативу YouTube из 40 тысяч рекомендаций Hacker News за один вечер",
+        "en": "HackerTube: how Karpathy assembled a YouTube alternative from 40,000 Hacker News recommendations in one evening"
+      },
+      "url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "summary": {
+        "ru": "Карпати показывает агентный пайплайн: Claude Code на Opus 5.5 и Sonnet за ~2 часа сам выгрузил архив комментариев Hacker News, отфильтровал спам и собрал сайт с 6454 рекомендованными видео по 150 темам, пока человек отвечал только за API-ключ, VPS и домен — с конкретными цифрами по токенам (504M вход / 7.6M выход).",
+        "en": "Karpathy demonstrates an agentic pipeline: Claude Code running Opus 5.5 and Sonnet pulled the Hacker News comment archive, filtered spam, and assembled a site with 6,454 recommended videos across 150 topics in ~2 hours, while the human only handled the API key, VPS and domain — with concrete token numbers (504M input / 7.6M output)."
+      },
+      "note_page": "notes/articles/karpathy-hackertube.html"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: HackerTube Карпати за два часа — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Andrej Karpathy · 2026-10-31</span>
+      <span data-lang="en">Article digest · Andrej Karpathy · 2026-10-31</span>
+    </p>
+    <h1>
+      <span data-lang="ru">HackerTube: как Карпати собрал альтернативу YouTube из 40 тысяч рекомендаций Hacker News за один вечер</span>
+      <span data-lang="en">HackerTube: how Karpathy assembled a YouTube alternative from 40,000 Hacker News recommendations in one evening</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://karpathy.bearblog.dev/hacker-tube/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Устав от алгоритмической ленты YouTube, Андрей Карпати собрал собственный каталог видео — HackerTube: сайт, показывающий только те ролики, которые реальные люди советовали друг другу в комментариях на Hacker News. Итоговая база — 6454 видео из примерно 40 тысяч комментариев HN за период с 2007 по 2026 год, разложенные примерно по 150 тематическим разделам. Идея в том, что рекомендация, которую один разработчик оставил другому в треде про конкретную техническую проблему, в среднем ценнее, чем то, что алгоритмической ленте выгодно показать для удержания внимания.</span>
+      <span data-lang="en">Tired of YouTube's algorithmic feed, Andrej Karpathy put together his own video catalog — HackerTube: a site that shows only videos that real people recommended to each other in Hacker News comments. The resulting database holds 6,454 videos drawn from roughly 40,000 HN comments spanning 2007 to 2026, sorted into about 150 topic categories. The idea is that a recommendation one developer left another in a thread about a specific technical problem is, on average, worth more than whatever an algorithmic feed finds profitable to show for engagement.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: что сделал человек, а что — модель</span><span data-lang="en">The method: what the human did, and what the model did</span></h2>
+    <p>
+      <span data-lang="ru">По собственному описанию Карпати, весь пайплайн — от выгрузки архива комментариев HN до фильтрации спама, извлечения ссылок на YouTube и распределения видео по темам — собрала Claude Code на связке моделей Opus 5.5 и Sonnet внутри одной агентной сессии, которая заняла около двух часов. Ручного участия человека потребовалось всего три шага, не связанных с написанием кода: выпустить API-ключ, поднять виртуальный сервер (VPS) и купить домен. Это разделение труда — человек отвечает за учётные данные и инфраструктуру, агент — за всю логику обработки данных и написание сайта — и есть собственно демонстрируемый приём: не «AI помогает программисту», а «программист обслуживает агента там, где у агента физически нет доступа».</span>
+      <span data-lang="en">By Karpathy's own account, the entire pipeline — from pulling the HN comment archive, to filtering out spam, extracting YouTube links, and sorting videos into topics — was built by Claude Code running Opus 5.5 and Sonnet together in a single agentic session that took about two hours. Human involvement was limited to three steps unrelated to writing code: issuing an API key, spinning up a VPS, and buying the domain. That division of labor — the human handles credentials and infrastructure, the agent handles all the data-processing logic and the site itself — is the technique actually being demonstrated here: not "AI helps the programmer" but "the programmer services the agent at the exact points where the agent has no physical access."</span>
+    </p>
+
+    <h2><span data-lang="ru">Цифры по токенам и что осталось за кадром</span><span data-lang="en">The token numbers, and what's left unsaid</span></h2>
+    <p>
+      <span data-lang="ru">В ответ на вопросы в комментариях на Hacker News Карпати привёл расход токенов на всю сессию: около 504 миллионов входных токенов (порядка 90% из них — из кеша контекста) и 7,6 миллиона выходных. Это полезный ориентир для тех, кто хочет прикинуть реальную стоимость подобной агентной сессии: высокая доля кешированных входных токенов означает, что большая часть расхода — это не оплата «с нуля» за каждое обращение, а многократное переиспользование одного и того же длинного контекста (архива комментариев и промежуточных данных) в рамках одной сессии. При этом сам Карпати не публиковал итоговую сумму в долларах и не выложил исходный код пайплайна в открытый репозиторий — вместо этого на сайте есть возможность экспортировать данные, чтобы желающие могли передать их своему агенту и собрать собственную версию.</span>
+      <span data-lang="en">Responding to questions in the Hacker News comments, Karpathy gave the token spend for the whole session: roughly 504 million input tokens (about 90% of them served from the context cache) and 7.6 million output tokens. That's a useful reference point for anyone trying to estimate the real cost of a similar agentic session: a high share of cached input tokens means most of the spend isn't paying "from scratch" for every call, but repeatedly reusing the same long context (the comment archive and intermediate data) within one session. Karpathy did not publish a final dollar figure, nor did he release the pipeline's source code as a public repository — instead, the site offers a data export so anyone interested can hand it to their own agent and build their own version.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что получилось в итоге и для кого это применимо</span><span data-lang="en">What came out of it, and who this applies to</span></h2>
+    <p>
+      <span data-lang="ru">Готовый сайт не требует регистрации, а история просмотров хранится только в браузере — персонализация рекомендаций происходит на клиенте, а не на сервере Карпати. Есть фильтры по дате загрузки, типу и длительности видео, а вместо автоматически сгенерированных превью используются кадры из середины ролика, что снимает проблему «кликбейтных» миниатюр. Важная оговорка для оценки метода: двухчасовая цифра — самоотчёт одного опытного инженера, уже умеющего формулировать задачи для агента и разбираться в инфраструктуре; это полезный пример того, насколько быстро сегодня можно собрать персональный веб-сервис с нетривиальной обработкой данных через агентное кодирование, но не обещание, что повторить, развернуть и поддерживать такой же сервис сможет кто угодно за то же время.</span>
+      <span data-lang="en">The finished site requires no sign-up, and viewing history is stored only in the browser — recommendations are personalized client-side, not on Karpathy's server. It offers filters by upload date, video type and duration, and instead of auto-generated thumbnails it uses a frame from the middle of each video, which sidesteps the "clickbait thumbnail" problem. An important caveat for judging the method: the two-hour figure is one experienced engineer's self-report, someone who already knows how to frame tasks for an agent and navigate infrastructure; it's a useful data point for how fast a personal web service with non-trivial data processing can now be assembled via agentic coding, not a promise that anyone could replicate, deploy and maintain the same service in the same time.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
