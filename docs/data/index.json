@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-07",
+      "news_count": 3,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "Anthropic запустила Personal Finance in Claude — ассистента по личным финансам с доступом к банковским счетам",
+        "en": "Anthropic launches Personal Finance in Claude, a money assistant with read-only bank access"
+      }
+    },
+    {
       "date": "2026-11-06",
       "news_count": 0,
       "expert_count": 1,

@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T05:20:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Прямой WebFetch успешен. В списке — посты по 28 окт включительно, ничего нового в окне 36ч. Основные находки дня пришли со связанного домена claude.com/blog, который не входит в sources.yaml как отдельный источник, но является текущим местом публикации продуктовых анонсов Anthropic."
+    },
+    {
+      "source": "claude.com/blog (не в конфиге, обнаружен по ссылкам с anthropic.com)",
+      "status": "ok",
+      "candidates": 4,
+      "note": "Прямой WebFetch успешен. Найдено: Personal Finance in Claude (5 ноя), Claude Enterprise security updates (5 ноя, отклонено — узкая admin-фича), New agents and products on Claude Marketplace (4 ноя), Make long-running agents faster with message threads (2 ноя, отклонено — вне окна 36ч и узкий API-кейс). ВАЖНО: вчерашний прогон (run_log 2026-11-06) проверял только anthropic.com/news и не покрыл claude.com/blog — это объясняет, почему Personal Finance и Marketplace не попали в сводку за 6 ноября."
+    },
+    {
+      "source": "openai blog (openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND на уровне egress-прокси. 2 WebSearch-запроса — ничего подтверждённого в окне 36ч, только спекуляции о будущих версиях GPT."
+    },
+    {
+      "source": "google/deepmind blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. 2 WebSearch — ничего в окне 36ч, самые свежие подтверждённые данные (Gemini 3.6 Flash, Spark на macOS) датированы июлем."
+    },
+    {
+      "source": "meta ai blog",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — последнее подтверждённое событие (Muse Glimmer) от 26 августа, ничего нового."
+    },
+    {
+      "source": "xai news (x.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — последний подтверждённый релиз Grok 4.6 (12 августа); упоминания «Grok turns three» и Grok 4.7 не подтверждены первоисточником."
+    },
+    {
+      "source": "mistral news (mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — веса Mistral Large 4 (29 окт) и инициативы по EU AI sovereignty вне окна 36ч, не включены."
+    },
+    {
+      "source": "deepseek news (api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — последний релиз DeepSeek-V4.1-Flash-1017 от 17 октября, вне окна."
+    },
+    {
+      "source": "HN API (hn.algolia.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND на уровне egress-прокси (не антибот конкретной страницы — не резолвится домен). WebSearch по site:news.ycombinator.com и обсуждениям HN не дал релевантных тредов за 5-7 ноября."
+    },
+    {
+      "source": "aggregator: AI News (smol.ai)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: ENOTFOUND. WebSearch — issue за 6 ноября не найден индексом; ближайший найденный issue от 3 ноября — чисто организационный, без технического контента."
+    },
+    {
+      "source": "aggregator: TLDR AI",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch недоступен (не в allowlist). WebSearch по site:tldr.tech не вернул выпуск за 6 ноября."
+    },
+    {
+      "source": "aggregator: Simon Willison linkblog (через backup-дамп simonwillisonblog-backup)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "git clone датасетт-дампа (обходной путь по SKILL.md) успешен, но дамп не обновлялся после 3 ноября. Обе свежие записи (Qwen weight-space programming, Census Bureau) уже опубликованы в сводках за 3-4 ноября — дублей не добавлено."
+    },
+    {
+      "source": "эксперт: Simon Willison (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Свежих неопубликованных материалов за последние 7 дней не нашлось (дамп блога не обновлялся с 3 ноября, дальше идут уже учтённые записи)."
+    },
+    {
+      "source": "эксперт: Andrej Karpathy (video, RSS)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com/feeds недоступен (ENOTFOUND). WebSearch не подтвердил новую публикацию в YouTube за ноябрь (HackerTube — блог-пост, уже в сводке за 6 ноября)."
+    },
+    {
+      "source": "эксперт: Latent Space (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "latent.space/www.latent.space недоступны напрямую (ENOTFOUND). По WebSearch единственный ноябрьский выпуск (3 ноября) — организационная заметка без технического контента."
+    },
+    {
+      "source": "эксперт: AI Explained (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube недоступен. WebSearch не нашёл публикаций новее марта 2026 — индекс сильно отстаёт для этого канала."
+    },
+    {
+      "source": "эксперт: Matt Wolfe (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube недоступен. WebSearch — самый свежий найденный выпуск от 2 октября."
+    },
+    {
+      "source": "эксперт: Ethan Mollick / One Useful Thing (article)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "oneusefulthing.org и substack-домен недоступны (ENOTFOUND). WebSearch не дал материалов новее июля 2026."
+    },
+    {
+      "source": "эксперт: Nate Herk (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube недоступен. WebSearch не нашёл публикаций за ноябрь."
+    },
+    {
+      "source": "эксперт: Matt Pocock (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube недоступен. WebSearch не нашёл публикаций за ноябрь."
+    },
+    {
+      "source": "расширенный проход: anthropic.com/engineering (вне конфига, найден через WebFetch anthropic.com)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Прямой WebFetch успешен. Найдена статья «The components of agent memory» (6 ноября) — включена как expert_content, закрывает минимум отчасти."
+    }
+  ],
+  "totals": {
+    "candidates": 7,
+    "published": 4,
+    "rejected": {
+      "вне окна 36ч / узкая admin-фича": 2,
+      "уже опубликовано ранее (дубль по seen_urls)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: за день не найдено ни одного нового видео-кандидата (все видео-эксперты заблокированы на уровне egress или не дали публикаций новее индекса на 1-3 месяца)",
+    "frames": "not attempted: см. выше"
+  },
+  "degradation_note": "Более половины источников из sources.yaml (7 из 8 блогов моделей, HN API, 2 из 3 текстовых агрегаторов, все 5 видео-экспертов) оказались недоступны напрямую (ENOTFOUND на уровне egress-прокси) в этом прогоне — WebSearch как основной канал отработал, но с заметным лагом индекса (1-4 недели для YouTube-каналов и части блогов). Это выраженный сигнал деградации окружения, а не тихий день: основные находки дня (Personal Finance, Marketplace) пришли благодаря прямому WebFetch на anthropic.com/claude.com, которые оказались в allowlist, а не благодаря остальным источникам."
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T05:20:00Z",
+  "news": [
+    {
+      "id": "2026-11-07-anthropic-personal-finance",
+      "cluster_id": "anthropic-personal-finance",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic запустила Personal Finance in Claude — ассистента по личным финансам с доступом к банковским счетам",
+        "en": "Anthropic launches Personal Finance in Claude, a money assistant with read-only bank access"
+      },
+      "summary": {
+        "ru": "Пользователи Pro/Max/Ultra в США могут подключить банковские счета и карты через Plaid и на обычном языке спрашивать Claude о тратах, лимитах и платежах; доступ строго read-only — Claude не может переводить деньги или инвестировать, — а диалоги в разделе Personal Finance не используются для обучения моделей Anthropic.",
+        "en": "US Pro/Max/Ultra users can link bank and card accounts via Plaid and ask Claude plain-language questions about spending, balances and bills; access is strictly read-only — Claude can't move money or invest — and conversations inside the Personal Finance hub aren't used to train Anthropic's models."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает новый массовый сценарий — финансового ассистента с доступом к реальным данным счетов, хотя пока ограничен read-only доступом и бетой в США.",
+        "en": "Opens a new mass-market scenario — a financial assistant with access to real account data — though still read-only and limited to a US beta."
+      },
+      "source_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Находить задвоенные списания, неожиданные комиссии и счета, которые выросли со временем, сравнивая траты по месяцам.",
+            "en": "Spotting duplicate charges, unexpected fees and bills that have crept up over time by comparing spending across months."
+          },
+          "url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
+        },
+        {
+          "text": {
+            "ru": "Строить еженедельные графики трат и календарь предстоящих платежей на основе подключённых счетов.",
+            "en": "Building weekly spending charts and a calendar of upcoming bills from the connected accounts."
+          },
+          "url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-07-anthropic-marketplace-expansion",
+      "cluster_id": "anthropic-claude-marketplace-expansion",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Marketplace пополнился 25+ партнёрскими агентами для безопасности, инфраструктуры и креатива",
+        "en": "Claude Marketplace adds 25+ partner agents and products for security, infrastructure and creative work"
+      },
+      "summary": {
+        "ru": "Anthropic добавила на Claude Marketplace готовые агенты и интеграции от Chainguard, Checkmarx, Cyera, Rubrik и Tanium (безопасность кода и инфраструктуры), Datadog и Netlify (дев-инфраструктура), Runway, Webflow и AirOps (маркетинг и креатив), а также Asana, Glean, monday.com и Zoom (продуктивность). Корпоративные клиенты смогут оплачивать эти продукты частью уже законтрактованных расходов на Anthropic.",
+        "en": "Anthropic added ready-made agents and integrations to Claude Marketplace from Chainguard, Checkmarx, Cyera, Rubrik and Tanium (code/infrastructure security), Datadog and Netlify (dev infrastructure), Runway, Webflow and AirOps (marketing/creative), plus Asana, Glean, monday.com and Zoom (productivity). Enterprise customers can apply part of their committed Anthropic spend toward these listings."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Расширяет экосистему готовых агентов вокруг Claude, но это накопительное расширение партнёрской витрины для корпоративных клиентов, а не новый подход к использованию модели.",
+        "en": "Expands the ecosystem of ready-made agents around Claude, but it's an incremental partner-storefront expansion for enterprise customers, not a new way of using the model."
+      },
+      "source_url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Rubrik Code Guardian проверяет защищённую копию репозитория на GitHub или Azure DevOps на многошаговые цепочки атак и заводит тикеты по критическим находкам.",
+            "en": "Rubrik's Code Guardian reviews a secure copy of a GitHub or Azure DevOps repository for multi-step attack paths and files tickets for critical findings."
+          },
+          "url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-07-claude-code-2-1-319",
+      "cluster_id": "anthropic-claude-code-2-1-319",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Code 2.1.319: фоновые MCP-задачи по умолчанию и новая настройка denyInsteadOfPrompting",
+        "en": "Claude Code 2.1.319: background MCP tasks by default and a new denyInsteadOfPrompting setting"
+      },
+      "summary": {
+        "ru": "В версии 2.1.319 (6 ноября) MCP-задачи в терминале по умолчанию уходят в фон (отключается переменной CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND); добавлена настройка permissions.denyInsteadOfPrompting, а auto mode теперь спрашивает подтверждение или отказывает — без отката на встроенный классификатор, — если сервер проверки разрешений недоступен.",
+        "en": "In version 2.1.319 (Nov 6), MCP tasks in the terminal move to the background by default (disable via CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND); a new permissions.denyInsteadOfPrompting setting was added, and auto mode now asks or denies — with no fallback to the built-in classifier — when the permission-check server is unavailable."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Полезное, но инкрементальное улучшение инструментов агентной разработки в рамках уже существующих подходов.",
+        "en": "A useful but incremental improvement to agentic-development tooling within existing approaches."
+      },
+      "source_url": "https://code.claude.com/docs/en/changelog",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Долгие вызовы MCP-инструментов больше не блокируют терминал по умолчанию — сессия продолжает работать, пока задача выполняется в фоне.",
+            "en": "Long MCP tool calls no longer block the terminal by default — the session keeps working while the task runs in the background."
+          },
+          "url": "https://code.claude.com/docs/en/changelog"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-07-anthropic-components-of-agent-memory",
+      "type": "article",
+      "author": "Anthropic Engineering (Lance Martin)",
+      "title": {
+        "ru": "Из чего состоит память агента: Anthropic раскладывает транскрипты, заметки, вики и «сон»",
+        "en": "The components of agent memory: Anthropic breaks down transcripts, notes, wikis and \"dreaming\""
+      },
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "summary": {
+        "ru": "Статья предлагает архитектуру памяти агента по аналогии с гиппокампом: быстрый лог событий (транскрипты), заметки о важном, структурированные вики-представления и небольшой слой контекста, который подгружается в каждую сессию, плюс фоновый процесс «сна», который задним числом исправляет ошибки и строит вики. На бенчмарках показано, когда и зачем это нужно: от исследования баз данных до навигации в игре Pokémon.",
+        "en": "The article proposes an agent-memory architecture modeled on the hippocampus: a fast event log (transcripts), notes on what matters, structured wiki representations, and a small context layer loaded into every session, plus a background \"dreaming\" process that later corrects mistakes and builds wikis. Benchmarks show when and why this helps, from database research to navigating a Pokémon game."
+      },
+      "note_page": "notes/articles/the-components-of-agent-memory.html"
+    }
+  ]
+}
