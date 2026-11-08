@@ -741,6 +741,20 @@
         "en": "Grok becomes available directly inside XChat, X's secure messaging product.",
         "ru": "Grok становится доступен прямо внутри XChat — защищённого мессенджера X."
       }
+    },
+    "openai-gpt-6-cyber-launch": {
+      "last_date": "2026-11-08",
+      "summary": {
+        "en": "OpenAI launches GPT-6 Cyber (Nov 5), a cyber-specialized variant of GPT-6 Astra rated Critical cybersecurity risk, gated to Daybreak Red customers; found 81 unknown Firefox vulns and built exploits for 948 Linux kernel vulns.",
+        "ru": "OpenAI выпускает GPT-6 Cyber (5 ноября) — специализированный вариант GPT-6 Astra с рейтингом Critical по кибербезопасности, доступ только через Daybreak Red; нашёл 81 неизвестную уязвимость Firefox и построил эксплойты для 948 уязвимостей ядра Linux."
+      }
+    },
+    "google-gemini-omni-flash": {
+      "last_date": "2026-11-08",
+      "summary": {
+        "en": "Google's Gemini Omni Flash video-generation line: 1.2 Flash (Nov 5) ships 15-second clips, multi-turn editing and a 30% price cut over 1.1.",
+        "ru": "Линейка видеогенерации Google Gemini Omni Flash: версия 1.2 (5 ноября) — клипы по 15 секунд, многошаговое редактирование и снижение цены на 30% относительно 1.1."
+      }
     }
   },
   "seen_urls": {
@@ -1005,6 +1019,10 @@
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
-    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02"
+    "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
+    "https://fortune.com/2026/11/05/openai-debuts-new-cybersecurity-focused-ai-model-amid-growing-alarm-about-ai-driven-cyber-attacks/": "2026-11-08",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": "2026-11-08",
+    "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models": "2026-11-08",
+    "https://www.anthropic.com/research/how-researchers-use-claude": "2026-11-08"
   }
 }

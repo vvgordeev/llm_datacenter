@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T05:45:00Z",
+  "news": [
+    {
+      "id": "2026-11-08-openai-gpt-6-cyber",
+      "cluster_id": "openai-gpt-6-cyber-launch",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI выпускает GPT-6 Cyber — специализированную модель для кибербезопасности с рейтингом риска «Critical»",
+        "en": "OpenAI launches GPT-6 Cyber, a cybersecurity-specialized model rated \"Critical\" risk"
+      },
+      "summary": {
+        "ru": "5 ноября OpenAI выпустила GPT-6 Cyber — узкоспециализированный вариант GPT-6 Astra для авторизованных исследований безопасности, доступный пока только одобренным клиентам программы Daybreak Red (API и Codex). Компания впервые присвоила модели своего класса рейтинг «Critical» по кибербезопасности в Preparedness Framework (выше, чем «High» у GPT-5.6 Cyber) и сообщила, что модель нашла 81 ранее неизвестную уязвимость высокой серьёзности в Firefox и построила рабочие эксплойты для 948 уязвимостей ядра Linux.",
+        "en": "On November 5, OpenAI released GPT-6 Cyber, a narrowly specialized variant of GPT-6 Astra for authorized security research, available for now only to approved customers in the Daybreak Red program (via API and Codex). The company gave the model its first-ever \"Critical\" cybersecurity rating under its Preparedness Framework (up from \"High\" for GPT-5.6 Cyber), and said the model found 81 previously unknown high-severity Firefox vulnerabilities and built working exploits for 948 Linux kernel vulnerabilities."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметно расширяет возможности офенсив-секьюрити автоматизации и порог риска, который лаборатория готова признать публично, но это продолжение уже существующей линейки gated-моделей (Daybreak/Cyber), а не новый класс сценариев для массового пользователя.",
+        "en": "Notably extends offensive-security automation capability and the risk threshold a lab is willing to publicly acknowledge, but it continues an existing line of gated models (Daybreak/Cyber) rather than opening a new class of scenarios for mainstream users."
+      },
+      "source_url": "https://fortune.com/2026/11/05/openai-debuts-new-cybersecurity-focused-ai-model-amid-growing-alarm-about-ai-driven-cyber-attacks/",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Исследователи OpenAI использовали модель для поиска уязвимостей в Firefox; Mozilla получила воспроизводимые тест-кейсы и предложенные патчи для 81 находки высокой серьёзности.",
+            "en": "OpenAI researchers used the model to hunt for Firefox vulnerabilities; Mozilla received reproducible test cases and proposed patches for 81 high-severity findings."
+          },
+          "url": "https://thenextweb.com/news/openai-gpt-6-cyber-launch-firefox-linux-daybreak-red"
+        },
+        {
+          "text": {
+            "ru": "На ядре Linux модель воспроизвела 1724 известные уязвимости и построила рабочие эксплойты для 948 из них, включая ранее неизвестные.",
+            "en": "On the Linux kernel, the model reproduced 1,724 known vulnerabilities and built working exploits for 948 of them, including previously unknown ones."
+          },
+          "url": "https://fortune.com/2026/11/05/openai-debuts-new-cybersecurity-focused-ai-model-amid-growing-alarm-about-ai-driven-cyber-attacks/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-08-google-gemini-omni-1-2-flash",
+      "cluster_id": "google-gemini-omni-flash",
+      "models": ["google"],
+      "title": {
+        "ru": "Gemini Omni 1.2 Flash: Google выкатывает видеомодель с клипами по 15 секунд и ценой на 30% ниже",
+        "en": "Gemini Omni 1.2 Flash: Google ships a video model with 15-second clips and 30% lower price"
+      },
+      "summary": {
+        "ru": "5 ноября Google сделала Gemini Omni 1.2 Flash общедоступной в Gemini API и Gemini for Business. Длина клипов выросла с 10 до 15 секунд, добавлено многошаговое диалоговое редактирование видео и более точное следование референсным изображениям, а цена за 720p упала примерно на 30% — до $0.07 за секунду. Gemini Omni 1.1 Flash остаётся доступной ещё четыре недели на переходный период; результаты сгенерированы с водяным знаком SynthID.",
+        "en": "On November 5, Google made Gemini Omni 1.2 Flash generally available in the Gemini API and Gemini for Business. Clip length grew from 10 to 15 seconds, multi-turn conversational video editing was added along with better reference-image adherence, and the 720p price dropped about 30% to $0.07 per second. Gemini Omni 1.1 Flash stays available for a four-week transition period; outputs carry a SynthID watermark."
+      },
+      "impact_score": 3,
+      "impact_reason": {
+        "ru": "Инкрементальное улучшение существующей линейки видеогенерации (длина клипа, цена, редактирование) без смены подхода к задаче.",
+        "en": "An incremental improvement to an existing video-generation line (clip length, price, editing) that doesn't change the underlying approach to the task."
+      },
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Google позиционирует модель для бизнесов, разработчиков и креаторов, выпускающих видео в больших объёмах через API, а также для доступа через Flow и Google Vids для пользователей без подписки AI Ultra.",
+            "en": "Google positions the model for businesses, developers and creators producing video at scale via the API, with limited access through Flow and Google Vids for users without an AI Ultra subscription."
+          },
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-08-anthropic-teaching-ai-scientific-models",
+      "type": "article",
+      "author": "Jakob Macke, Daniel Gedon, Stefan Wahl (guest post for Anthropic)",
+      "title": {
+        "ru": "Как учить ИИ строить научные модели, а не просто подгонять данные",
+        "en": "Teaching AI to build scientific models, not just fit data"
+      },
+      "url": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
+      "summary": {
+        "ru": "Гостевой пост исследователей из ELLIS Institute Tübingen раскладывает научное моделирование на три этапа — построение, ограничение (через simulation-based inference) и интерпретацию — и показывает, как агенты на LLM могут предлагать и пересматривать модели-кандидаты, если держать целый пул правдоподобных моделей вместо единственного «победителя».",
+        "en": "A guest post by ELLIS Institute Tübingen researchers breaks scientific modeling into three steps — building, constraining (via simulation-based inference) and interpreting — and shows how LLM agents can propose and revise candidate models when a whole pool of plausible models is kept instead of a single \"winner\"."
+      },
+      "note_page": "notes/articles/anthropic-teaching-ai-scientific-models.html"
+    },
+    {
+      "id": "2026-11-08-anthropic-how-researchers-use-claude",
+      "type": "article",
+      "author": "Anthropic (Economics team)",
+      "title": {
+        "ru": "ИИ для научных открытий: как учёные на самом деле используют Claude",
+        "en": "AI for scientific discovery: how researchers actually use Claude"
+      },
+      "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+      "summary": {
+        "ru": "Анализ 207 тысяч исследовательских сессий и опрос 528 учёных показывают: Claude непропорционально используют для анализа данных и письма, а не для генерации гипотез (которую сами учёные считают важнейшей), при этом использование сильно коррелирует с тем, насколько ИИ объективно силён в конкретной задаче — особенно в специализированном Claude Science.",
+        "en": "An analysis of 207,000 research sessions and a survey of 528 scientists shows Claude is disproportionately used for data analysis and writing rather than hypothesis generation (which researchers themselves rank as most important), and that usage correlates strongly with how objectively capable AI is at a given task — especially in the specialized Claude Science product."
+      },
+      "note_page": "notes/articles/anthropic-how-researchers-use-claude.html"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Как учить ИИ строить научные модели — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Jakob Macke, Daniel Gedon, Stefan Wahl (гостевой пост для Anthropic) · 2026-11-06</span>
+      <span data-lang="en">Article digest · Jakob Macke, Daniel Gedon, Stefan Wahl (guest post for Anthropic) · 2026-11-06</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как учить ИИ строить научные модели, а не просто подгонять данные</span>
+      <span data-lang="en">Teaching AI to build scientific models, not just fit data</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.anthropic.com/research/teaching-ai-to-build-scientific-models" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Авторы — Якоб Маке, Даниэль Гедон и Штефан Валь из ELLIS Institute Tübingen и Тюбингенского университета, исследователи нейронаук, получающие гранты Anthropic по программе AI for Science. В гостевом посте они формулируют проблему, которую не решает простая подгонка модели под данные: модель, воспроизводящая наблюдения, — это ещё не понимание системы, потому что воспроизвести одни и те же данные способны очень разные модели. Настоящая научная модель должна делать проверяемые утверждения о реальной системе, а не только совпадать с измерениями.</span>
+      <span data-lang="en">The authors — Jakob Macke, Daniel Gedon and Stefan Wahl of the ELLIS Institute Tübingen and the University of Tübingen, neuroscience researchers funded under Anthropic's AI for Science program — frame a problem that simple data-fitting doesn't solve: a model that reproduces observations isn't the same as understanding the system, because wildly different models can reproduce the same data. A genuine scientific model has to make falsifiable claims about the real system, not just match measurements.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три шага: строить, ограничивать, интерпретировать</span><span data-lang="en">Three steps: build, constrain, interpret</span></h2>
+    <p>
+      <span data-lang="ru">Авторы раскладывают научное моделирование на три этапа. «Построение» — выбор компонентов модели и вида уравнений. «Ограничение» — подгонка параметров под измерения; здесь обычный байесовский вывод часто непрактичен для сложных моделей, поэтому используется simulation-based inference (SBI): симулятор многократно прогоняется, а нейросеть учится сопоставлять его выходы с правдоподобными параметрами. Метод уже применялся для локализации столкновений нейтронных звёзд по гравитационно-волновым данным и для моделей Ходжкина–Хаксли нервной клетки — и в обоих случаях возвращает не одно число, а распределение, показывающее, какие параметры хорошо определены, а где не хватает данных. Третий этап, «интерпретация», — вопрос о том, что модель говорит о реальной системе, и, по признанию авторов, именно его труднее всего передать ИИ, поскольку «понимание» плохо формализуется как цель оптимизации.</span>
+      <span data-lang="en">The authors split scientific modeling into three steps. "Building" is choosing a model's components and the form of its equations. "Constraining" is fitting parameters to measurements; standard Bayesian inference is often impractical for complex models here, so the authors use simulation-based inference (SBI): a simulator is run many times and a neural network learns to map its outputs back to plausible parameters. The method has already been used to localize neutron-star collisions from gravitational-wave data and for Hodgkin-Huxley nerve-cell models — in both cases returning not a single number but a distribution showing which parameters are well constrained and where more data is needed. The third step, "interpreting," asks what the model says about the real system, and the authors admit it's the hardest to hand off to AI, since "understanding" doesn't translate cleanly into an optimization objective.</span>
+    </p>
+
+    <h2><span data-lang="ru">Агенты-строители моделей: зачем держать целый пул кандидатов</span><span data-lang="en">Agentic model-builders: why keep a whole pool of candidates</span></h2>
+    <p>
+      <span data-lang="ru">Для этапа построения авторы описывают агентов на основе LLM, которые предлагают структуры моделей-кандидатов, подгоняют их и пересматривают. Их ключевая рекомендация — не выбирать единственного «победителя», а держать распределение из правдоподобных моделей, взвешенных по тому, насколько хорошо они описывают данные без избыточной гибкости. Если разные модели из этого пула сходятся в каком-то свойстве — это свойство, скорее всего, реально подкреплено данными; если расходятся — это подсказка, какой эксперимент поставить следующим. Пример из истории науки, который приводят авторы: гипотеза Ходжкина–Хаксли о «четвёртой степени» (что воротный механизм канала состоит из четырёх движущихся частей) долгое время оставалась одной из многих, пока не получила независимое подтверждение через структуру белка. Для по-настоящему больших систем — например, коннектома мозга мухи дрозофилы из 124 635 клеток — единственная «правильная» модель попросту маловероятна, и полезным вопросом становится не «какая модель верна», а «какие свойства общие для всех моделей, совместимых с данными».</span>
+      <span data-lang="en">For the building step, the authors describe LLM-based agents that propose candidate model structures, fit them, and revise them. Their central recommendation is not to pick a single "winner" but to keep a distribution of plausible models, weighted by how well each fits the data without excess flexibility. Agreement among models in that pool on some feature suggests it's genuinely data-supported; disagreement points to a useful next experiment. The historical example the authors cite: the Hodgkin-Huxley "fourth power" hypothesis — that a channel's gating mechanism has four moving parts — stayed one hypothesis among several for a long time before independent confirmation came from protein-structure work. For truly large systems, such as the fruit fly brain's connectome of 124,635 cells, a single "correct" model is simply unlikely, and the useful question becomes not "which model is right" but "which properties do all data-compatible models share."</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения метода</span><span data-lang="en">Limitations of the approach</span></h2>
+    <p>
+      <span data-lang="ru">Авторы честно очерчивают границы: построение моделей с помощью ИИ пока в основном проверялось на задачах с уже известным ответом — повторном открытии известных моделей, — а свидетельств работы там, где ответ не известен заранее, «немного». SBI требует множества прогонов симулятора, что может занимать недели (хотя сам вывод по готовым прогонам — быстрый), а крупные модели становится всё труднее сделать интерпретируемыми, поскольку их нельзя свести к нескольким механистическим идеям. Итоговый тезис авторов: «научная модель может дать ответ, но именно процесс её построения даёт понимание» — то есть ценность не в готовой модели как артефакте, а в самой процедуре перебора и отбраковки альтернатив.</span>
+      <span data-lang="en">The authors are candid about the limits: AI-assisted model-building has mostly been tested on problems with a known answer — rediscovering established models — and evidence for cases with no known answer is "sparse." SBI requires many simulator runs, which can take weeks (though inference on top of finished runs is fast), and larger models become harder to make intelligible since they can't be reduced to a few mechanistic ideas. Their closing point: "a scientific model may provide an answer, but it is the process of constructing it that provides the insight" — meaning the value isn't the finished model as an artifact, but the procedure of proposing and ruling out alternatives.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

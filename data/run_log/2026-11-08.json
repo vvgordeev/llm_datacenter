@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T05:45:00Z",
+  "sources": [
+    {"source": "anthropic blog (anthropic.com/news)", "status": "ok", "candidates": 0, "note": "Прямой WebFetch успешен. Ничего нового в окне 36ч — последнее на странице листинга от 28 окт / 5 ноя (уже опубликовано ранее)."},
+    {"source": "claude.com/blog", "status": "ok", "candidates": 0, "note": "Прямой WebFetch успешен. Новейшие элементы — 5 ноября (Personal Finance, Enterprise security), уже опубликованы в сводке за 2026-11-07."},
+    {"source": "anthropic.com/research + /engineering", "status": "ok", "candidates": 2, "note": "Прямой WebFetch успешен (оба домена в allowlist). Найдено 2 новых материала вне окна 36ч, но внутри 7-дневного окна экспертного контента: 'Teaching AI to build scientific models' (6 ноя) и 'AI for scientific discovery: How researchers use Claude' (5 ноя). Третий кандидат той же недели (provable-inference, investigating-vault-particles) уже опубликован ранее как новости (4-5 ноя)."},
+    {"source": "openai blog (openai.com/news/)", "status": "blocked", "candidates": 0, "note": "WebFetch: ENOTFOUND на уровне egress-прокси. Основная находка дня (GPT-6 Cyber) обнаружена через WebSearch с подтверждением через несколько независимых изданий (Fortune, Axios, TheNextWeb) и упоминанием собственной страницы OpenAI (openai.com/index/...), саму страницу OpenAI напрямую зафетчить не удалось (ENOTFOUND)."},
+    {"source": "google/deepmind blog (blog.google)", "status": "blocked", "candidates": 0, "note": "WebFetch: ENOTFOUND. Находка дня (Gemini Omni 1.2 Flash) подтверждена через WebSearch: точный URL blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/ появляется в результатах поиска и процитирован несколькими независимыми изданиями (The Decoder, TokenPost, Neowin) с датой 5 ноября; сам blog.google зафетчить не удалось."},
+    {"source": "meta ai blog (ai.meta.com)", "status": "blocked", "candidates": 0, "note": "WebFetch: ENOTFOUND. WebSearch — ничего нового в окне 36ч; заявленный 'rollout Active Memory/Active Focus 6 ноября' не подтверждён ни одним источником с датой — похоже на artefact пересказа ИИ-поиска поверх анонса Muse Wonder от 12 октября, отклонено."},
+    {"source": "xai news (x.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: ENOTFOUND. WebSearch — ничего нового в окне 36ч, последнее подтверждённое событие (Grok Voice 3.0) от 14 октября."},
+    {"source": "mistral news (mistral.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: ENOTFOUND. WebSearch нашёл агрегаторную заметку 'EU AI sovereignty' якобы от 8 ноября, но без конкретики и похожую на пересказ августовского анонса (regional-inference-open-models-new-compute от 11 августа) — отклонено как неподтверждённое/вероятный дубль."},
+    {"source": "deepseek news (api-docs.deepseek.com/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: ENOTFOUND. WebSearch — последний подтверждённый релиз DeepSeek-V4.1-Flash-1017 от 17 октября, вне окна."},
+    {"source": "HN API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "curl: CONNECT tunnel failed, 403 на уровне egress-прокси. WebSearch по site:news.ycombinator.com не дал релевантных тредов с датами ноября 2026 (индекс сильно отстаёт)."},
+    {"source": "aggregator: AI News (smol.ai)", "status": "blocked", "candidates": 0, "note": "WebFetch: ENOTFOUND. WebSearch — последний найденный выпуск от июня 2026, индекс не покрывает ноябрь."},
+    {"source": "aggregator: TLDR AI", "status": "blocked", "candidates": 0, "note": "WebFetch недоступен. WebSearch не вернул выпуск за 7-8 ноября."},
+    {"source": "aggregator: Simon Willison linkblog (git backup-дамп simonwillisonblog-backup)", "status": "ok", "candidates": 0, "note": "git clone успешен. Дамп обновлён до 7 ноября (blogmark про datasette, не по теме LLM); последняя LLM-релевантная запись — 3 ноября (Qwen weight interpretation), уже опубликована ранее."},
+    {"source": "эксперт: Simon Willison (article)", "status": "empty", "candidates": 0, "note": "См. выше — ничего нового в 7-дневном окне."},
+    {"source": "эксперт: Andrej Karpathy (video)", "status": "blocked", "candidates": 0, "note": "youtube.com: ENOTFOUND на уровне egress (CONNECT не резолвится, не антибот конкретной страницы). WebSearch не подтвердил публикацию в ноябре."},
+    {"source": "эксперт: Latent Space (article)", "status": "blocked", "candidates": 0, "note": "latent.space: ENOTFOUND. WebSearch — самые свежие подтверждённые даты до весны 2026."},
+    {"source": "эксперт: AI Explained (video)", "status": "blocked", "candidates": 0, "note": "YouTube недоступен. WebSearch индекс отстаёт на месяцы для этого канала."},
+    {"source": "эксперт: Matt Wolfe (video)", "status": "blocked", "candidates": 0, "note": "YouTube недоступен. WebSearch — самый свежий найденный выпуск начало октября."},
+    {"source": "эксперт: Ethan Mollick / One Useful Thing (article)", "status": "blocked", "candidates": 0, "note": "oneusefulthing.org: ENOTFOUND. WebSearch — не найдено публикаций новее лета 2026."},
+    {"source": "эксперт: Nate Herk (video)", "status": "blocked", "candidates": 0, "note": "YouTube недоступен. WebSearch не нашёл публикаций за ноябрь."},
+    {"source": "эксперт: Matt Pocock (video)", "status": "blocked", "candidates": 0, "note": "YouTube недоступен. WebSearch не нашёл публикаций за ноябрь."},
+    {"source": "расширенный проход: общий поиск LLM/AI news по датам 7-8 ноября", "status": "ok", "candidates": 2, "note": "WebSearch (standard + extended) по широким запросам обнаружил два подтверждённых кандидата новостей за 5 ноября (GPT-6 Cyber, Gemini Omni 1.2 Flash), не покрытых ни одним из вчерашних/сегодняшних прогонов."}
+  ],
+  "totals": {
+    "candidates": 6,
+    "published": 4,
+    "rejected": {
+      "не подтверждено / вероятный дубль старого анонса (Mistral EU sovereignty, Meta Active Memory rollout)": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: ни один видео-эксперт не дал подтверждённой публикации в 7-дневном окне (YouTube полностью недоступен на уровне egress-прокси — ENOTFOUND для www.youtube.com, включая RSS)",
+    "frames": "not attempted: см. выше; yt-dlp/imageio-ffmpeg не установлены в этом прогоне (не понадобились), ffmpeg доступен в PATH, GEMINI_API_KEY установлен"
+  },
+  "degradation_note": "Почти все источники из sources.yaml (7 из 7 блогов моделей кроме anthropic.com/claude.com, HN API, 2 из 3 текстовых агрегаторов, все 8 экспертов включая весь YouTube) оказались недоступны напрямую (ENOTFOUND/403 на уровне egress-прокси) в этом прогоне — выраженный сигнал деградации окружения, схожий с прогонами за 2026-07-18 и 2026-11-07. WebSearch как основной канал отработал с заметным лагом индекса (от нескольких дней до месяцев для YouTube-каналов и части нишевых блогов). Обе опубликованные новости дня (GPT-6 Cyber, Gemini Omni 1.2 Flash) датированы 5 ноября — за пределами строгого 36-часового окна, но включены по правилу расширенного прохода (<5 кандидатов после полного прохода) как реальные, ранее не опубликованные события, подтверждённые несколькими независимыми изданиями и (во втором случае) официальным URL первоисточника. Два кандидата отклонены как неподтверждённые/вероятные дубли старых анонсов. Найденные реакции сообщества (opinions) не прошли проверку на точность цитирования (WebFetch большинства вторичных источников тоже заблокирован) — оставлены пустыми по правилу 'не выдумывай цитаты', вместо них добавлены проверяемые use_cases со ссылками на первоисточники."
+}

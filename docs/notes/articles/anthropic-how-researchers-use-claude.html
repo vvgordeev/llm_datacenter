@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Как учёные на самом деле используют Claude — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Anthropic (Economics team) · 2026-11-05</span>
+      <span data-lang="en">Article digest · Anthropic (Economics team) · 2026-11-05</span>
+    </p>
+    <h1>
+      <span data-lang="ru">ИИ для научных открытий: как учёные на самом деле используют Claude</span>
+      <span data-lang="en">AI for scientific discovery: how researchers actually use Claude</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.anthropic.com/research/how-researchers-use-claude" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Главный тезис отчёта Anthropic: то, насколько ИИ ускорит науку, зависит не только от того, что модель умеет, но и от того, как её реально применяют исследователи, — а это два разных вопроса, и смешивать их опасно. Чтобы ответить на второй, команда проанализировала 207 049 связанных с исследованиями сессий платных пользователей (128 914 — Claude Chat/Cowork, 78 135 — Claude Code) за период со 2 августа по 30 сентября 2026 года, плюс отдельную выборку по Claude Science. Классификация сессий по области, подобласти и типу задачи (таксономия SciNet: 7262 задачи, 34 области, 318 подобластей) делалась моделью с сохранением только агрегированных меток — ради приватности; результаты публикуются только для ячеек с достаточным числом разных аккаунтов. Дополнительно — опрос 528 учёных (в основном из наук о жизни и здоровье), набранных среди заявителей на гранты Anthropic AI for Science, то есть заведомо смещённых в сторону активных пользователей ИИ.</span>
+      <span data-lang="en">The report's central claim: how much AI accelerates science depends not just on what the model can do but on how researchers actually use it — two different questions that are risky to conflate. To answer the second, the team analyzed 207,049 research-related sessions from paid users (128,914 Claude Chat/Cowork, 78,135 Claude Code) between August 2 and September 30, 2026, plus a separate Claude Science sample. Sessions were classified by field, subfield and task type (the SciNet taxonomy: 7,262 tasks, 34 fields, 318 subfields) by a model that retained only aggregate labels for privacy, with results published only for cells with enough distinct accounts. A supplementary survey covered 528 scientists, mostly in life and health sciences, recruited from applicants to Anthropic's AI for Science grants — a sample skewed toward heavy AI adopters.</span>
+    </p>
+
+    <h2><span data-lang="ru">Кто и для чего использует Claude: данные важнее идей</span><span data-lang="en">Who uses Claude for what: data over ideas</span></h2>
+    <p>
+      <span data-lang="ru">По доле от числа исследователей в поле формальные науки (компьютерные науки, математика, статистика) используют Claude непропорционально много: информатика — это около 4,3% исследователей, но 32,7% сессий Claude Code. Здоровье и лабораторные естественные науки, наоборот, используют ИИ меньше своей доли. По типу задач анализ данных занимает около трети сессий Claude и почти половину сессий Claude Code — значительно больше, чем доля этой задачи в реальном бюджете времени исследователя (оценённом через SciNet). Написание текстов тоже перепредставлено. А вот сбор данных и генерация гипотез — недопредставлены, хотя в опросе сами учёные ставят генерацию гипотез на первое, а сбор данных на второе место по важности для получения значимых результатов. Иными словами: там, где ИИ реально нужнее всего по мнению самих учёных, его используют меньше всего — возможно, потому что именно там модели пока слабее или доверие ниже.</span>
+      <span data-lang="en">By share of researchers in a field, formal sciences (computer science, mathematics, statistics) use Claude disproportionately: computer science is about 4.3% of researchers but 32.7% of Claude Code sessions. Health and lab-based physical sciences use it less than their share, in contrast. By task type, data analysis is about a third of Claude sessions and nearly half of Claude Code sessions — far above that task's share of researcher time (estimated via SciNet). Writing is also overrepresented. Data gathering and hypothesis generation, however, are underrepresented, even though survey respondents rank ideation first and data gathering second in importance for producing significant results. In other words: where researchers themselves say AI would help most, it's used least — possibly because models are still weaker there, or trust is lower.</span>
+    </p>
+
+    <h2><span data-lang="ru">Claude Science: более узко, более автономно</span><span data-lang="en">Claude Science: narrower, more autonomous</span></h2>
+    <p>
+      <span data-lang="ru">Использование специализированного Claude Science сконцентрировано в биомедицине и биологии, а задачи там заметно более специализированы, чем в обычном Claude: например, предложение механистических моделей белковых взаимодействий встречается там в 5,6 раза чаще. При этом доля генерации гипотез в Claude Science (около 8%) близка к доле этой задачи в реальном бюджете времени учёных — то есть именно в специализированном инструменте перекос из предыдущего раздела исчезает. Сессии в Claude Science длиннее, сложнее и автономнее: более 70% сессий проходят с высокой степенью автономии ИИ. Отчёт также находит сильную корреляцию между оценкой возможностей ИИ по конкретной задаче (полученной через сравнение пар шагов исследования моделью и агрегацией по Bradley–Terry, как в рейтинге Эло) и реальным использованием: задачи из топ-20% по способностям ИИ получают в 2–4 раза больше использования Claude, чем предсказывала бы доля времени исследователей, а задачи из нижних 20% — почти не используются. При этом здравоохранение использует Claude меньше, чем позволяли бы его оценки возможностей, — возможно, из-за регуляторных ограничений.</span>
+      <span data-lang="en">Use of the specialized Claude Science product is concentrated in biomedicine and biology, and its tasks are noticeably more specialized than on general Claude: proposing mechanistic models of protein interactions, for instance, is 5.6 times more likely there. At the same time, hypothesis generation's share of Claude Science sessions (about 8%) is close to its share of researchers' actual time budget — meaning the skew from the previous section largely disappears in the specialized tool. Claude Science sessions are longer, more advanced, and more autonomous: over 70% involve a high degree of AI autonomy. The report also finds a strong correlation between a task's AI-capability score (derived from pairwise comparisons of research steps by a model, aggregated via a Bradley-Terry model — the same math behind Elo ratings) and actual use: tasks in the top 20% by capability score see 2-4x the Claude use that researcher time share would predict, while bottom-20% tasks see almost none. Health sciences use Claude less than their capability scores would suggest, possibly due to regulatory constraints.</span>
+    </p>
+
+    <h2><span data-lang="ru">Сценарии ускорения — и чего они не учитывают</span><span data-lang="en">Acceleration scenarios — and what they leave out</span></h2>
+    <p>
+      <span data-lang="ru">Отчёт приводит три иллюстративных (не прогнозных) сценария. При нынешних возможностях ИИ и их широком принятии он мог бы взять на себя 27–52% времени исследователей, ускоряя работу в 1,35 раза (искусства) — 2 раза (статистика, информатика). При автоматизации 75% нефизических шагов ускорение в информатике доходит примерно до 8х, а в лабораторных и медицинских науках — до 2–3х. При полной автоматизации всех нефизических шагов статистика и информатика приближаются к 15х, тогда как биология, химия и материаловедение остаются на уровне 3–4х, потому что физический эксперимент остаётся узким местом. Авторы прямо перечисляют, что сценарии не учитывают: инерцию внедрения технологий, физические ограничения лабораторных наук, неясность в том, способен ли ИИ сам выбирать хорошие исследовательские вопросы, риск того, что рост объёма публикаций обгонит способность сообщества их проверять, и вопрос сохранения человека в контуре принятия решений — особенно в биологии. Отдельно интересны ожидания самих учёных из опроса: более половины ждут, что ИИ сравняется с топовыми исследователями в анализе данных уже к 2027 году, около 40% — что ИИ сможет вести целые исследовательские проекты самостоятельно к 2030-му (64% — к 2035-му), и 16% считают, что этого не произойдёт никогда.</span>
+      <span data-lang="en">The report offers three illustrative (not predictive) scenarios. At current AI capability with wide adoption, AI could take on 27-52% of researcher time, accelerating work by 1.35x (arts) to 2x (statistics, computer science). With 75% of non-physical steps automated, computer-science acceleration reaches roughly 8x, while bench and medical sciences reach about 2-3x. With all non-physical steps automated, statistics and computer science approach 15x, while biology, chemistry and materials science stay around 3-4x because physical experimentation remains a bottleneck. The authors are explicit about what the scenarios leave out: adoption lag, physical bottlenecks in bench sciences, uncertainty over whether AI can pick good research questions on its own, the risk that output volume outpaces the community's capacity to verify results, and the question of keeping humans in key decisions — especially in biology. The survey's own findings on researcher expectations stand out separately: over half expect AI to match top researchers at data analysis by 2027, about 40% expect AI to run entire research projects autonomously by 2030 (64% by 2035), and 16% say it will never happen.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
