@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T05:13:24Z",
+  "news": [
+    {
+      "id": "2026-11-09-openai-hacktron-partnership",
+      "cluster_id": "openai-breach-claude-opus5-exploit",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI превращает хакеров, взломавших её же системы через Claude, в партнёров по red-team",
+        "en": "OpenAI turns the hackers who breached it with Claude into a formal red-team partner"
+      },
+      "summary": {
+        "ru": "6 ноября OpenAI объявила о партнёрстве с охранной фирмой Hacktron AI — той самой командой, что в сентябре за 72 часа и менее $3000 в токенах собрала эксплойт против собственного форума OpenAI с помощью Claude Opus 5 и дошла до внутреннего GitHub, Outlook и Slack компании. Вместо разовой выплаты по bug bounty ($6500 тогда) OpenAI и Hacktron теперь совместно выбирают приоритетные зоны для тестирования — в первую очередь места стыка систем OpenAI со сторонними сервисами, — а доступ Hacktron к «фронтир»-моделям компании расширяется через программу Daybreak Red.",
+        "en": "On November 6, OpenAI announced a partnership with security firm Hacktron AI — the same team that in September chained a heap-overflow bug with an SSO misconfiguration, using Claude Opus 5, to reach OpenAI's internal GitHub, Outlook and Slack within 72 hours for under $3,000 in tokens. Instead of a one-off bug-bounty payout ($6,500 at the time), OpenAI and Hacktron now jointly pick priority areas to test — chiefly where OpenAI's systems connect to third-party services — and Hacktron's access to OpenAI's frontier models widens through the Daybreak Red program."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Оформляет уже существующий паттерн (лаборатория даёт независимым red-team исследователям доступ к собственным мощным моделям для атаки на себя же) в постоянную программу, но это продолжение известной линии Daybreak/CVP, а не новый класс сценариев.",
+        "en": "Formalizes an already-seen pattern (a lab giving independent red-teamers access to its own powerful models to attack itself) into a standing program, but it continues the existing Daybreak/CVP line rather than opening a new class of scenario."
+      },
+      "source_url": "https://openai.com/index/partnering-with-hacktron/",
+      "opinions": [
+        {
+          "author": "Digg (обсуждение сообщества)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Многие комментаторы считают, что исходная выплата в $6500 была слишком мала для уязвимости такой критичности — и указывают на иронию в том, что команда, получившая этот bounty, теперь получает расширенный доступ к моделям вместо более крупной денежной компенсации.",
+            "en": "Many commenters argue the original $6,500 bounty was too small for a flaw this critical, and point to the irony that the team behind it is now being rewarded with expanded model access rather than a larger payout."
+          },
+          "url": "https://digg.com/tech/azbe9eza"
+        },
+        {
+          "author": "ExplainX.ai",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Ценность партнёрства зависит от баланса: расширенный доступ к кибер-способным моделям для более глубокого тестирования взаимосвязанных сервисов должен сопровождаться соразмерным контролем scope, мониторингом и человеческим надзором там, где задействованы агенты.",
+            "en": "The partnership's value depends on a balance: wider access to cyber-capable models for deeper testing of interconnected services has to be matched by proportionate scope controls, monitoring and human oversight wherever agents are involved."
+          },
+          "url": "https://explainx.ai/blog/openai-hacktron-partnership-daybreak-red-third-party-testing-2026"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "OpenAI и Hacktron совместно выбирают, какие точки интеграции со сторонними сервисами тестировать в первую очередь — вместо того чтобы ждать, пока независимые исследователи найдут их сами и свяжутся через программу bug bounty.",
+            "en": "OpenAI and Hacktron jointly choose which third-party integration points to test first, instead of waiting for independent researchers to find them on their own and report through the bug-bounty program."
+          },
+          "url": "https://openai.com/index/partnering-with-hacktron/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-09-willison-hide-slop-pr-descriptions",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Спрячь свои «слоп»-описания PR за <details><summary>",
+        "en": "Hide your slop PR descriptions behind <details><summary>"
+      },
+      "url": "https://simonwillison.net/2026/Nov/9/details-summary/",
+      "summary": {
+        "ru": "Простой приём для PR, которые открывают кодинг-агенты: короткий человеческий абзац наверху плюс полное агентское описание, свёрнутое под <details><summary> с именем модели в заголовке — решает проблему технически точных, но нечитаемых «слоп»-описаний, не требуя никакого тулинга.",
+        "en": "A simple pattern for PRs opened by coding agents: a short human paragraph on top, plus the agent's full description collapsed under <details><summary> labeled with the model name — fixes the problem of technically accurate but unreadable slop-style descriptions without any tooling."
+      },
+      "note_page": "notes/articles/willison-hide-slop-pr-descriptions.html"
+    }
+  ]
+}

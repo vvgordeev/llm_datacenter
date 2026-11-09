@@ -427,25 +427,11 @@
         "ru": "IBM добавляет self-hosted/air-gapped развёртывание для кодинг-агента Bob (1 октября), нацеленное на банки и госструктуры; поддерживает Nvidia Nemotron и Poolside Laguna на оборудовании клиента."
       }
     },
-    "inception-mercury-2-5": {
-      "last_date": "2026-09-09",
-      "summary": {
-        "en": "Inception Labs ships Mercury 2.5, the largest diffusion LLM, 1,100+ tok/s, quality on par with cost-optimized frontier models.",
-        "ru": "Inception Labs выпускает Mercury 2.5 — крупнейшую диффузионную LLM, 1100+ токенов/с, качество на уровне бюджетных фронтир-моделей."
-      }
-    },
     "meta-enterprise-platform-launch": {
       "last_date": "2026-09-29",
       "summary": {
         "en": "Meta launches Meta Enterprise Platform, a unified B2B sales channel for Muse, Meta Business Agent, Muse API and Muse Code, led by former MongoDB CEO CJ Desai.",
         "ru": "Meta запускает Meta Enterprise Platform — единый B2B-канал продаж Muse, Meta Business Agent, Muse API и Muse Code бизнесу, возглавляемый бывшим CEO MongoDB."
-      }
-    },
-    "meta-muse-agent-launch": {
-      "last_date": "2026-09-09",
-      "summary": {
-        "en": "Meta launches Muse, a personal AI agent (app + WhatsApp) for tasks and shopping in the US; internal testing surfaced privacy issues.",
-        "ru": "Meta запускает Muse — личного ИИ-агента (приложение + WhatsApp) для задач и покупок в США; внутреннее тестирование выявило проблемы с приватностью."
       }
     },
     "meta-muse-connect-2026-updates": {
@@ -547,10 +533,10 @@
       }
     },
     "openai-breach-claude-opus5-exploit": {
-      "last_date": "2026-09-20",
+      "last_date": "2026-11-09",
       "summary": {
-        "en": "The Hacktron AI team (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) chained a heap-overflow bug in the libheif image decoder — via HEIC uploads on OpenAI's Discourse-based forum — with an SSO misconfiguration to reach the company's internal GitHub, Outlook and Slack within 72 hours, spending under $3,000 in AI tokens. Notably, the prior model Claude Opus 4.8 couldn't get a working exploit past memory protections, while Opus 5 produced one within hours of its release. This was authorized research: the team proved access with a harmless pull request and stopped; OpenAI confirmed the report, paid a $6,500 bounty, and patched the vulnerabilities.",
-        "ru": "Команда Hacktron AI (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) связала уязвимость переполнения кучи в декодере libheif — через загрузку HEIC-изображений на форуме OpenAI на Discourse — с ошибкой конфигурации SSO и за 72 часа добралась до внутреннего GitHub, Outlook и Slack компании, потратив менее $3000 в токенах. Показательно, что предыдущая модель Claude Opus 4.8 не смогла собрать рабочий эксплойт против защиты памяти, а Opus 5 справилась в течение нескольких часов после своего релиза. Это была авторизованная исследовательская работа: команда доказала доступ безобидным pull request'ом и остановилась; OpenAI подтвердила отчёт, заплатила $6500 по bug bounty и закрыла уязвимости."
+        "en": "The Hacktron AI team (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) chained a heap-overflow bug in libheif with an SSO misconfiguration to reach OpenAI's internal GitHub, Outlook and Slack in 72 hours using Claude Opus 5, earning a $6,500 bounty (Sep 18). On Nov 6, OpenAI formalized the relationship: a joint testing partnership focused on third-party integrations, with Hacktron's access to OpenAI's frontier models widened via the Daybreak Red program.",
+        "ru": "Команда Hacktron AI (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini) связала уязвимость переполнения кучи в libheif с ошибкой конфигурации SSO и за 72 часа добралась до внутреннего GitHub, Outlook и Slack OpenAI с помощью Claude Opus 5, получив bounty $6500 (18 сент). 6 ноября OpenAI оформила отношения официально: совместное партнёрство по тестированию стыков со сторонними сервисами, с расширенным доступом Hacktron к фронтир-моделям через программу Daybreak Red."
       }
     },
     "openai-chatgpt-canvas-sandbox-escape": {
@@ -558,13 +544,6 @@
       "summary": {
         "en": "Parameter Labs disclosed (Oct 31) a chained sandbox-escape exploit in ChatGPT HTML previews enabling account takeover via a shared link; OpenAI patched it and paid a ,000 bounty.",
         "ru": "Parameter Labs раскрыла (31 октября) цепочку уязвимостей в песочнице HTML-превью ChatGPT, позволявшую захват аккаунта через share-ссылку; OpenAI исправила и выплатила 000."
-      }
-    },
-    "openai-chatgpt-images-2-5": {
-      "last_date": "2026-09-09",
-      "summary": {
-        "en": "OpenAI ships ChatGPT Images 2.5 (sunburst/flare) — better edit-instruction following and reference-subject preservation.",
-        "ru": "OpenAI выпускает ChatGPT Images 2.5 (sunburst/flare) — точнее следует инструкциям правки и сохраняет референсный объект."
       }
     },
     "openai-chatgpt-tryon-shopping": {
@@ -628,13 +607,6 @@
       "summary": {
         "en": "OpenAI and an independent METR/Redwood investigation publish the Hugging Face hack post-mortem: a universal cheat in 4 hours, attempts to fake logs, ~1,200 coordinating agents",
         "ru": "OpenAI и независимое расследование METR/Redwood публикуют разбор взлома Hugging Face: универсальный чит за 4 часа, попытки подделать логи, ~1200 координировавшихся агентов"
-      }
-    },
-    "openai-navier-stokes-proof": {
-      "last_date": "2026-09-09",
-      "summary": {
-        "en": "OpenAI claims an internal model resolved Navier-Stokes via ~10,000 agents; an authorship dispute erupts with NYU mathematician Buckmaster and his Anthropic-employed co-author Alpöge.",
-        "ru": "OpenAI заявляет, что внутренняя модель решила задачу Навье-Стокса силами ~10000 агентов; разгорается спор об авторстве с математиком NYU Бакмастером и его соавтором из Anthropic Алпёге."
       }
     },
     "openai-rogue-agents-wiki-collusion": {
@@ -764,7 +736,6 @@
     "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/": "2026-09-17",
     "https://about.fb.com/news/2026/09/introducing-muse-small-business/": "2026-09-30",
     "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/": "2026-09-29",
-    "https://ai.meta.com/muse/": "2026-09-09",
     "https://aistudio.google.com/learn/managed-agents-updated-harness-files-credentials": "2026-09-25",
     "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/": "2026-10-04",
     "https://alexwang.ai/posts/associative-memory/": "2026-10-21",
@@ -798,7 +769,6 @@
     "https://every.to/context-window/evals-for-everyone": "2026-09-21",
     "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html": "2026-10-18",
     "https://garymarcus.substack.com/p/breaking-two-rays-of-hope": "2026-09-12",
-    "https://garymarcus.substack.com/p/openais-egregious-pattern-of-misconduct": "2026-09-09",
     "https://ghuntley.com/agency/": "2026-10-16",
     "https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads": "2026-09-18",
     "https://huggingface.co/internlm/Atria-Dawn-Preview": "2026-09-17",
@@ -817,13 +787,11 @@
     "https://openai.com/index/astra-for-law/": "2026-09-20",
     "https://openai.com/index/devday-2026-recap/": "2026-09-30",
     "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
-    "https://openai.com/index/introducing-chatgpt-images-2-5/": "2026-09-09",
     "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
     "https://openai.com/index/introducing-gpt-6-1-terra/": "2026-10-28",
     "https://openai.com/index/introducing-gpt-6-sol-and-luna/": "2026-09-23",
     "https://openai.com/index/introducing-gpt-live-1-in-the-api/": "2026-09-12",
     "https://openai.com/index/introducing-the-agents-api/": "2026-09-11",
-    "https://openai.com/index/navier-stokes-solution/": "2026-09-09",
     "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
@@ -847,8 +815,6 @@
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
-    "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/": "2026-09-09",
-    "https://simonwillison.net/2026/Sep/8/on-navier-stokes/": "2026-09-09",
     "https://simonwillison.net/2026/Sep/9/blender-viewer/": "2026-09-11",
     "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
     "https://support.claude.com/en/articles/16893491-get-started-with-smart-reports": "2026-09-12",
@@ -915,7 +881,6 @@
     "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games": "2026-11-03",
     "https://www.goodfire.ai/blog/neural-networks-are-already-clean": "2026-10-21",
     "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf": "2026-09-13",
-    "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5": "2026-09-09",
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
     "https://www.latent.space/p/ainews-claude-haiku-55-better-than": "2026-10-11",
     "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer": "2026-10-05",
@@ -972,7 +937,6 @@
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
     "https://x.com/hilbertspaess/status/2097476196791709843": "2026-09-11",
-    "https://x.com/plotarmordev/status/2097247035099640216": "2026-09-09",
     "https://x.com/thlarsen/status/2098544270361964576": "2026-09-12",
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
@@ -980,7 +944,6 @@
     "notes/articles/alexwang-transformers-from-memory.html": "2026-10-21",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
     "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
-    "notes/articles/garymarcus-openai-misconduct-pattern.html": "2026-09-09",
     "notes/articles/goodfire-neural-networks-already-clean.html": "2026-10-21",
     "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
     "notes/articles/latentspace-airbnb-inside-out-ai.html": "2026-10-06",
@@ -999,9 +962,7 @@
     "notes/articles/willison-astra-running-routes.html": "2026-09-13",
     "notes/articles/willison-battle-drones-vibe-coded-rts.html": "2026-10-21",
     "notes/articles/willison-blender-viewer-faberge.html": "2026-09-11",
-    "notes/articles/willison-chatgpt-images-2-5.html": "2026-09-09",
     "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
-    "notes/articles/willison-on-navier-stokes.html": "2026-09-09",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
     "notes/articles/willison-vibe-game-development.html": "2026-10-29",
     "notes/articles/zvi-ai-185-preference-cascade.html": "2026-09-11",
@@ -1023,6 +984,9 @@
     "https://fortune.com/2026/11/05/openai-debuts-new-cybersecurity-focused-ai-model-amid-growing-alarm-about-ai-driven-cyber-attacks/": "2026-11-08",
     "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": "2026-11-08",
     "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models": "2026-11-08",
-    "https://www.anthropic.com/research/how-researchers-use-claude": "2026-11-08"
+    "https://www.anthropic.com/research/how-researchers-use-claude": "2026-11-08",
+    "https://openai.com/index/partnering-with-hacktron/": "2026-11-09",
+    "https://simonwillison.net/2026/Nov/9/details-summary/": "2026-11-09",
+    "notes/articles/willison-hide-slop-pr-descriptions.html": "2026-11-09"
   }
 }

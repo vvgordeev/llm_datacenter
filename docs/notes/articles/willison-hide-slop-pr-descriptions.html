@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: спрячь «слоп» в PR-описании под &lt;details&gt; — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-09</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Спрячь свои «слоп»-описания PR за &lt;details&gt;&lt;summary&gt;</span>
+      <span data-lang="en">Hide your slop PR descriptions behind &lt;details&gt;&lt;summary&gt;</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/9/details-summary/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original post ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Саймон Уиллисон описывает конкретную проблему своего повседневного рабочего процесса: почти все изменения в его проектах теперь приходят в виде pull request'ов, открытых Claude Code или Codex, а современные кодинг-агенты пишут слишком хорошие описания этих PR — подробные, точные, с разбором проблемы, решения и шагов проверки. Парадокс в том, что именно эта полнота и делает их нечитаемыми: текст объективно не «слоп» (бессмысленный ИИ-мусор), но он так выглядит, и первая реакция на вид ИИ-портянки — «я не буду это всё читать», даже когда её написал ты сам, попросив агента зафиксировать работу.</span>
+      <span data-lang="en">Simon Willison names a specific problem in his daily workflow: almost every change in his projects now arrives as a PR opened by Claude Code or Codex, and today's coding agents are too good at writing PR descriptions — accurate, comprehensive, walking through the problem, the solution and the verification steps. The paradox is that this very completeness makes them unreadable: the text isn't literally slop (meaningless AI filler), but it reads like slop, and the instant reaction to a wall of AI-written text is "I'm not reading all of that" — even when the author behind the agent is Willison himself.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: заверни полное описание в &lt;details&gt;&lt;summary&gt;, а сверху — свою строку</span><span data-lang="en">The method: wrap the full description in &lt;details&gt;&lt;summary&gt;, add your own line on top</span></h2>
+    <p>
+      <span data-lang="ru">Решение, которое он нашёл, не требует тулинга — только дисциплину и одну HTML-конструкцию. GitHub Markdown поддерживает теги <code>&lt;details&gt;&lt;summary&gt;</code>: всё, что обёрнуто в <code>&lt;details&gt;</code>, рендерится свёрнутым под заголовком из <code>&lt;summary&gt;</code>, с маленькой стрелкой для разворачивания. Уиллисон вставляет в начало PR короткий, написанный вручную абзац — минимальный текст, который введёт читателя в курс дела, иногда со скриншотом, если картинка поясняет нагляднее слов, — а под ним прячет весь агентский «эссе»-текст внутри <code>&lt;details&gt;&lt;summary&gt;</code>, где в качестве заголовка сворачиваемого блока указывает имя модели и уровень усилия («Claude Opus 5.5 Medium», например), чтобы было явно видно, что это сгенерированный текст.</span>
+      <span data-lang="en">The fix he landed on needs no tooling, just discipline and one HTML construct. GitHub Markdown supports <code>&lt;details&gt;&lt;summary&gt;</code> tags: anything wrapped in <code>&lt;details&gt;</code> renders collapsed under the <code>&lt;summary&gt;</code> heading, with a small arrow to expand it. Willison opens the PR with a short, hand-written paragraph — the minimum text that gets a reader up to speed, sometimes with a screenshot where an image explains it faster than words — and then hides the agent's full essay underneath inside <code>&lt;details&gt;&lt;summary&gt;</code>, using the model name and effort level as the collapsed block's heading ("Claude Opus 5.5 Medium", say) so it's explicit that what's hidden is generated text.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Ключевое правило метода — не редакторская полировка, а суждение: автор обязан прочитать достаточно, чтобы написать именно ту строку, которая поможет читателю понять, стоит ли PR его внимания, а не пересказывать содержимое своими словами. Иногда агент сам где-то в середине текста формулирует нужную мысль точнее, чем сделал бы сам Уиллисон, — тогда он просто выдёргивает эту фразу наверх. Обещание читателю в том, что короткий верхний абзац отражает человеческую оценку значимости PR, а не является ещё одним слоем автогенерации.</span>
+      <span data-lang="en">The method's core rule isn't editorial polish but judgment: the author has to read enough to write the one line that helps a reader decide whether the PR deserves their attention, not to paraphrase the content. Sometimes the agent itself states the right point more precisely somewhere in the middle of the text than Willison would have — in that case he just pulls that phrase to the top. The promise to the reader is that the short opening paragraph reflects a human's judgment of what matters, not another layer of auto-generation.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда применять и ограничение метода</span><span data-lang="en">When to use it, and the method's limit</span></h2>
+    <p>
+      <span data-lang="ru">Приём нацелен именно на PR, открытые кодинг-агентами с длинными авто-описаниями — для короткого ручного PR он избыточен. Уиллисон приводит несколько примеров из своих проектов (datasette, datasette-agent, llm), где верхняя строка — это одно предложение о сути изменения плюс иногда скриншот, а весь пошаговый разбор агента убран под раскрывающийся блок. Отдельно он делится мнемоникой для порядка тегов, которую сложно спутать: <code>&lt;summary&gt;</code> — это то, что сворачивается и кликается (тег для краткого резюме), а <code>&lt;details&gt;</code> оборачивает всё остальное; произносить пару вслух как один термин «details-summary» (две слога — потом три) ему помогает не путать порядок при наборе с телефона.</span>
+      <span data-lang="en">The pattern targets specifically PRs opened by coding agents with long auto-generated descriptions — for a short, hand-written PR it's overkill. Willison walks through several real examples from his own projects (datasette, datasette-agent, llm), where the top line is one sentence about what the change is for, sometimes plus a screenshot, with the agent's full step-by-step breakdown tucked under the collapsible block. He also shares a mnemonic for the tag order that's hard to get wrong: <code>&lt;summary&gt;</code> is the clickable, collapsed bit (the tag for your short summary), while <code>&lt;details&gt;</code> wraps everything else; saying the pair out loud as one term, "details-summary" (two syllables, then three), is what keeps him from mixing up the order when typing on a phone keyboard.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Явного предупреждения об этом слабом месте в самой статье нет, но оно следует из механики приёма: разметка сама по себе не проверяет, действительно ли автор прочитал и обдумал скрытый текст, прежде чем написать резюме наверху, — ничто не мешает скопировать первую строку агентского вывода как есть. Дисциплина здесь держится на честности автора, а не на автоматической проверке.</span>
+      <span data-lang="en">The post itself doesn't spell this out, but it follows from the mechanics of the pattern: the markup can't verify that the author actually read and thought about the hidden text before writing the summary on top — nothing stops someone from just copying the agent's first line verbatim. The discipline rests on the author's honesty, not on any automatic check.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

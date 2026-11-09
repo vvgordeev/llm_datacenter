@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T05:13:24Z",
+  "sources": [
+    {"source": "anthropic blog (anthropic.com/news)", "status": "ok", "candidates": 0, "note": "WebFetch succeeded; newest item Oct 28, 2026 — nothing new for the 36h window."},
+    {"source": "anthropic research (anthropic.com/research)", "status": "ok", "candidates": 0, "note": "WebFetch succeeded; newest items Nov 6, 2026, all already in seen_urls from prior runs."},
+    {"source": "openai blog (openai.com/news)", "status": "blocked", "candidates": 0, "note": "DNS-level block (ENOTFOUND) on openai.com and all subdomains tested — not a 403, host does not resolve at all in this sandbox. Covered via WebSearch instead; found one real item (Hacktron partnership) via search + corroborating secondary sources."},
+    {"source": "google/deepmind blog", "status": "blocked", "candidates": 0, "note": "blog.google and deepmind.google not tested directly (not in allowlist based on pattern of other Google subdomains failing); WebSearch found nothing new for Nov 7-9 beyond already-covered Gemini Omni Flash 1.2 (Nov 5, already in state)."},
+    {"source": "meta ai blog", "status": "blocked", "candidates": 0, "note": "ai.meta.com DNS blocked. WebSearch found only recaps of already-covered Muse launches, nothing dated Nov 7-9."},
+    {"source": "xai blog", "status": "blocked", "candidates": 0, "note": "x.ai DNS blocked. WebSearch found no confirmed Grok 4.7/4.8 release in this window; Grok 4.8 still reportedly in RL training per most recent sources."},
+    {"source": "mistral blog", "status": "blocked", "candidates": 0, "note": "mistral.ai DNS blocked. WebSearch found nothing dated Nov 7-9."},
+    {"source": "deepseek news", "status": "blocked", "candidates": 0, "note": "api-docs.deepseek.com not tested directly; WebSearch found nothing newer than the Oct 17 V4.1-Flash-1017 build already in state."},
+    {"source": "aggregators (smol.ai, TLDR AI)", "status": "blocked", "candidates": 0, "note": "news.smol.ai and tldr.tech DNS blocked; WebSearch could not locate issues specifically dated 2026-11-08/09."},
+    {"source": "Hacker News API", "status": "blocked", "candidates": 0, "note": "hn.algolia.com DNS blocked; WebSearch for HN threads on recent LLM topics returned nothing dated this week."},
+    {"source": "general AI news WebSearch sweep", "status": "ok", "candidates": 6, "note": "Found dev.to/riorundown daily digests mentioning Nov 8 items (OpenAI-Hacktron, Muse Wonder access change, Apple AI budget cut, CrowdStrike agent kill-switch) but could not independently verify most beyond the Hacktron story with a solid primary source + corroborating coverage; declined to publish the unverified ones per the no-fabrication rule."},
+    {"source": "Simon Willison blog (via github.com/simonw/simonwillisonblog-backup mirror)", "status": "ok", "candidates": 1, "note": "simonwillison.net itself DNS-blocked; used the documented github-mirror workaround. Found exactly one genuinely new post for today (details-summary, published 2026-11-09T04:25 UTC); all other recent entries already in seen_urls."},
+    {"source": "Andrej Karpathy (YouTube)", "status": "blocked", "candidates": 0, "note": "No verifiable upload with a real date in the 7-day window found via WebSearch; youtube.com connections blocked at proxy level (confirmed via direct curl, 403 on CONNECT), so could not verify candidate titles independently."},
+    {"source": "AI Explained (YouTube)", "status": "blocked", "candidates": 0, "note": "Same as above — no dated Nov 2026 upload found via WebSearch."},
+    {"source": "Matt Wolfe (YouTube)", "status": "blocked", "candidates": 0, "note": "Same as above."},
+    {"source": "Latent Space (article)", "status": "blocked", "candidates": 0, "note": "latent.space DNS blocked, no mirror available."},
+    {"source": "Ethan Mollick / One Useful Thing (article)", "status": "blocked", "candidates": 0, "note": "oneusefulthing.org DNS blocked, no mirror available."},
+    {"source": "Nate Herk (YouTube)", "status": "blocked", "candidates": 0, "note": "No dated Nov 2026 upload found via WebSearch."},
+    {"source": "Matt Pocock (YouTube)", "status": "blocked", "candidates": 0, "note": "No dated Nov 2026 upload found via WebSearch."}
+  ],
+  "totals": {
+    "candidates": 7,
+    "published": 1,
+    "rejected": {"не подтверждено первоисточником/датой": 5, "уже встречалось ранее (не за целевую дату)": 1}
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: no real, dated (within 7 days) YouTube URL could be confirmed for any configured video expert via WebSearch — generativelanguage.googleapis.com itself is reachable (confirmed with a live API call, HTTP 200), but running gemini_video.py against an unverified/guessed URL risked analyzing the wrong or a stale video",
+    "frames": "skipped: yt-dlp confirmed blocked at the egress proxy (403 on CONNECT to www.youtube.com, confirmed via direct yt-dlp test and curl), independent of the Gemini video pipeline"
+  },
+  "environment_note": "This run's sandbox network allowlist is far more restrictive than prior documented runs: DNS resolution itself fails (ENOTFOUND, not just HTTP 403) for nearly every domain tested except anthropic.com, github.com, and generativelanguage.googleapis.com; youtube.com resolves but the proxy refuses the CONNECT tunnel. This blocked direct access to openai.com, google/deepmind blogs, meta/xai/mistral/deepseek blogs, all aggregators, the HN API, and every configured expert's own domain except Simon Willison (reachable only via the documented github.com blog-backup mirror). WebSearch remained the only reliable discovery channel, but its index lags 1-2 days for the most recent items as previously documented, which combined with the fetch block to produce an unusually thin day. This degradation should be investigated/flagged to the user, not treated as a quiet news day."
+}

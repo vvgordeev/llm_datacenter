@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-09",
+      "news_count": 1,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "OpenAI превращает хакеров, взломавших её же системы через Claude, в партнёров по red-team",
+        "en": "OpenAI turns the hackers who breached it with Claude into a formal red-team partner"
+      }
+    },
+    {
       "date": "2026-11-08",
       "news_count": 2,
       "expert_count": 2,
