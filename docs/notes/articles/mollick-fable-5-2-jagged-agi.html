@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Итан Моллик — «Fable 5.2 и рваный AGI» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Ethan Mollick (One Useful Thing) · 2026-11-09</span>
+      <span data-lang="en">Article digest · Ethan Mollick (One Useful Thing) · 2026-11-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Fable 5.2 и рваный AGI</span>
+      <span data-lang="en">Fable 5.2 and Jagged AGI</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.oneusefulthing.org/p/fable-52-and-jagged-agi" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Метод: «рваная граница» как рамка для оценки новой модели</span><span data-lang="en">The method: "jagged frontier" as a lens for judging a new model</span></h2>
+    <p>
+      <span data-lang="ru">Моллик подходит к свежевышедшему Fable 5.2 через собственную рамку, которую развивает с 2023 года: у ИИ-моделей не бывает ровного уровня способностей — они сверхчеловечески сильны в одних задачах и неожиданно слабы в соседних, внешне похожих. В апреле 2025 года он ввёл для этого явления термин «рваный AGI» (Jagged AGI) — системы, достаточно мощные, чтобы реально менять то, как мы работаем и живём, но достаточно ненадёжные, чтобы для определения, где именно ИИ работает, а где нет, всё ещё требовалась человеческая экспертиза. Разбор Fable 5.2 — это применение той же рамки к новой модели: не вопрос «AGI это или нет» в абсолютном смысле, а вопрос «в каких направлениях рваность сузилась, а в каких осталась».</span>
+      <span data-lang="en">Mollick approaches the freshly released Fable 5.2 through a framework he's been developing since 2023: AI models don't have a flat level of ability — they're superhuman at some tasks and unexpectedly weak at adjacent, outwardly similar ones. In April 2025 he coined the term "Jagged AGI" for this: systems powerful enough to genuinely change how we work and live, but unreliable enough that human expertise is still needed to tell where the AI actually works and where it doesn't. The Fable 5.2 write-up applies that same lens to the new model — not "is this AGI" in some absolute sense, but "where did the jaggedness narrow, and where is it still there."</span>
+    </p>
+
+    <h2><span data-lang="ru">Эксперимент 1: учебный курс и сайт по 35 литературным произведениям</span><span data-lang="en">Experiment 1: a course and a 35-work literature site</span></h2>
+    <p>
+      <span data-lang="ru">Один из тестовых проектов — учебный сайт с материалами курса, в другом случае — образовательный сайт с анализом 35 литературных произведений. Технически и фактически материал получился точным, но, по оценке Моллика, скучным: модель хорошо решает задачу «собрать корректный учебный контент», но заметно хуже чувствует, когда результат получается формально правильным, но безрадостным и не увлекающим читателя или студента.</span>
+      <span data-lang="en">One test project was a course website with teaching materials; another was an educational site analyzing 35 literary works. Technically and factually the output was accurate, but in Mollick's judgment, dull: the model is good at solving "assemble correct course content," but noticeably worse at sensing when the result is formally correct yet joyless and fails to engage a reader or student.</span>
+    </p>
+
+    <h2><span data-lang="ru">Эксперимент 2: бизнес-проект, 28 команд агентов и бюрократия на 87 500 слов</span><span data-lang="en">Experiment 2: a business project, 28 agent teams, and an 87,500-word bureaucracy</span></h2>
+    <p>
+      <span data-lang="ru">Второй, более масштабный эксперимент — построение бизнес-проекта силами одного ведущего агента, который координировал ещё 28 команд агентов, параллельно работавших над разными частями задачи; по оценке, которую приводит Моллик, вся затея обошлась примерно в 25 000 отдельных запусков агентов. Самое заметное наблюдение: предоставленные сами себе, агентные команды самоорганизовались и написали для координации собственный свод правил на 87 500 слов, занявший 204 раздела, — Моллик формулирует это как «ИИ построил бюрократию». Чтение и разбор этого свода сам по себе занимал значительную часть рабочего контекста агентов, что иллюстрирует характерный для многоагентных систем риск: процесс координации начинает поглощать ресурсы, изначально выделенные на решение задачи. Моллик сознательно остановил эксперимент на стадии демонстрации работоспособности подхода, не доводя дело до проверки, способен ли бизнес-проект работать полностью самостоятельно.</span>
+      <span data-lang="en">The second, larger experiment was building a business project with one lead agent coordinating 28 further agent teams working in parallel on different parts of the task; by the estimate Mollick cites, the whole effort ran to roughly 25,000 individual agent launches. The most striking observation: left to themselves, the agent teams self-organized and wrote their own 87,500-word, 204-section rulebook to coordinate — Mollick frames this as "the AI had built a bureaucracy." Reading and parsing that rulebook alone consumed a meaningful share of the agents' own working context, illustrating a risk characteristic of multi-agent systems: the coordination process starts eating into the resources meant for the actual task. Mollick deliberately stopped the experiment at the stage of demonstrating the approach works, without pushing on to verify whether the business project could run fully unsupervised.</span>
+    </p>
+
+    <h2><span data-lang="ru">Диагноз: не знания и не навыки, а суждение</span><span data-lang="en">The diagnosis: not knowledge or skill, but judgment</span></h2>
+    <p>
+      <span data-lang="ru">Главный вывод статьи — слабое место Fable 5.2 не в знаниях и не в технической компетентности, а именно в суждении (judgment): модель надёжно не замечает ни скучную подачу материала, ни избыточную длину текста, ни повторы, ни бюрократию, которую сама же выстроила в многоагентном сценарии. Отсюда и итоговая оценка Моллика — «почти» AGI в его намеренно узком определении: даже внутри этого определения остаются направления, где рваность всё ещё заметно отстаёт от человеческого уровня, и там по-прежнему нужен человек, который заметит то, чего не заметила модель.</span>
+      <span data-lang="en">The article's central finding is that Fable 5.2's weak point isn't knowledge or technical competence but judgment: the model reliably fails to notice dull delivery, excessive length, repetition, or bureaucracy it built itself in a multi-agent setting. That's the basis for Mollick's verdict — "almost" AGI, under his deliberately narrow definition: even within that definition, there remain areas where the jaggedness still lags clearly behind human level, and a human is still needed to catch what the model misses.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Прямой WebFetch на oneusefulthing.org из облачной песочницы не проходит (домен не резолвится через прокси в этом прогоне, в отличие от блога Уиллисона — для него есть зеркало на GitHub, для One Useful Thing такого зеркала нет). Конспект собран из нескольких независимых WebSearch-запросов, в которых факты (сайт курса, свод правил на 87 500 слов/204 раздела, 28 команд агентов, ~25 000 запусков, диагноз про суждение, формулировка «Jagged AGI») совпадают между разными результатами поиска; прямых цитат из оригинала не приводится.</span>
+      <span data-lang="en">A direct WebFetch to oneusefulthing.org fails from this cloud sandbox (the domain doesn't resolve through the proxy in this run, and unlike Willison's blog there is no GitHub mirror for One Useful Thing). This digest was assembled from several independent WebSearch queries whose facts agreed with each other (the course site, the 87,500-word/204-section rulebook, 28 agent teams, ~25,000 launches, the judgment diagnosis, the "Jagged AGI" framing); no direct quotes from the original are given.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

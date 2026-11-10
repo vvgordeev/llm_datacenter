@@ -727,6 +727,13 @@
         "en": "Google's Gemini Omni Flash video-generation line: 1.2 Flash (Nov 5) ships 15-second clips, multi-turn editing and a 30% price cut over 1.1.",
         "ru": "Линейка видеогенерации Google Gemini Omni Flash: версия 1.2 (5 ноября) — клипы по 15 секунд, многошаговое редактирование и снижение цены на 30% относительно 1.1."
       }
+    },
+    "anthropic-fable-mythos-5-2": {
+      "last_date": "2026-11-10",
+      "summary": {
+        "en": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 on November 9, 2026 (API id claude-fable-5-2): faster, higher-scoring on Anthropic's own benchmarks than Opus 5.5, with far fewer false-positive safety-classifier blocks than 5.1; Fable 5.2 became the default Fable model in Claude Code the next day.",
+        "ru": "Anthropic выпустила Claude Fable 5.2 и Claude Mythos 5.2 9 ноября 2026 (API-id claude-fable-5-2): быстрее и выше по собственным бенчмаркам Anthropic, чем Opus 5.5, с заметно меньшим числом ложных блокировок защитных классификаторов по сравнению с 5.1; на следующий день Fable 5.2 стал моделью по умолчанию для Fable в Claude Code."
+      }
     }
   },
   "seen_urls": {
@@ -987,6 +994,12 @@
     "https://www.anthropic.com/research/how-researchers-use-claude": "2026-11-08",
     "https://openai.com/index/partnering-with-hacktron/": "2026-11-09",
     "https://simonwillison.net/2026/Nov/9/details-summary/": "2026-11-09",
-    "notes/articles/willison-hide-slop-pr-descriptions.html": "2026-11-09"
+    "notes/articles/willison-hide-slop-pr-descriptions.html": "2026-11-09",
+    "https://www.anthropic.com/claude-fable-and-mythos-5-2": "2026-11-10",
+    "https://simonwillison.net/2026/Nov/9/mysterious-beeps/": "2026-11-10",
+    "notes/articles/willison-mysterious-beep-locator.html": "2026-11-10",
+    "notes/articles/willison-qwen-weight-space-programming.html": "2026-11-04",
+    "https://www.oneusefulthing.org/p/fable-52-and-jagged-agi": "2026-11-10",
+    "notes/articles/mollick-fable-5-2-jagged-agi.html": "2026-11-10"
   }
 }

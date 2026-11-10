@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Как найти источник загадочного писка с помощью Claude» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-09</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как найти источник загадочного писка с помощью Claude</span>
+      <span data-lang="en">Locating the source of a mysterious beep with Claude</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/9/mysterious-beeps/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В кладовке у Саймона Уиллисона несколько недель подряд что-то периодически попискивало — слишком редко, чтобы найти источник на слух, и слишком глубоко в неразобранных коробках после переезда, чтобы перекапывать всё вручную. Решение он поручил Claude Code: собрать «Beep Locator» — систему, которая превращает любые устройства под рукой (два iPad, телефон, MacBook Pro, Surface) в сеть микрофонов и триангулирует источник звука по комнате. В итоге система локализовала писк с точностью до 40 см, и под нужной кучей коробок обнаружился древний датчик угарного газа с севшими батарейками.</span>
+      <span data-lang="en">Something in Simon Willison's unpacked moving boxes had been beeping intermittently for weeks — too infrequent to track by ear, buried too deep to dig through by hand. He had Claude Code build "Beep Locator," a system that turns whatever devices are lying around (two iPads, a phone, a MacBook Pro, a Surface) into a network of microphones that triangulates a sound's location in a room. The system pinned the beep down to within about 40cm, and the right pile of boxes turned out to hold an ancient carbon-monoxide detector with dying batteries.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: акустическая триангуляция по методу BeepBeep</span><span data-lang="en">The method: acoustic triangulation via BeepBeep</span></h2>
+    <p>
+      <span data-lang="ru">Исследуя задачу, Claude само нашло подходящий первоисточник — статью 2007 года «BeepBeep: A High-Accuracy Acoustic-Based System for Ranging and Localization Using COTS Devices» (Peng, Shen, Zhang, Li, Tan), описывающую чисто программный способ измерять расстояние между обычными устройствами через динамик и микрофон, без заранее размеченной инфраструктуры. На этой основе собралась архитектура: Python-сервер отдаёт главный экран с картой, а любое устройство, перешедшее по QR-коду, становится «слушателем» — просит доступ к микрофону браузера и пишет кольцевой 60-секундный буфер звука. Для измерения расстояний между самими устройствами они по очереди проигрывают друг другу короткие сигналы («в грубом режиме» можно и просто перетащить иконки устройств на карте примерно туда, где они стоят). Когда кто-то из слушателей замечает писк (через FFT и фильтр высоких частот в detector.js), сервер просит ближайшее по времени отклика устройство издать короткий чирп-сигнал, а все слушатели — прислать клип от 0,6 с до чирпа и 0,8 с после; это выравнивает записи друг с другом и позволяет посчитать положение источника по разнице времени прихода звука.</span>
+      <span data-lang="en">While researching the problem, Claude itself surfaced the right primary source — a 2007 paper, "BeepBeep: A High-Accuracy Acoustic-Based System for Ranging and Localization Using COTS Devices" (Peng, Shen, Zhang, Li, Tan), which describes a purely software-based way to measure distance between off-the-shelf devices using just a speaker and microphone, with no pre-planned infrastructure. That became the architecture: a Python server shows a main map screen, and any device that scans a QR code becomes a "listener" — it requests browser microphone access and keeps a rolling 60-second audio buffer. To measure distances between the devices themselves, they take turns playing short chirps to each other ("rough mode" also lets you just drag device icons roughly into place on the map). When a listener notices a beep (via an FFT and high-pass filter in detector.js), the server has the device with the lowest round-trip latency play a short chirp, and every listener uploads a clip spanning 0.6s before to 0.8s after it; that lines the recordings up with each other and lets the system compute the source's position from the differences in arrival time.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как это строилось: пошаговый диалог, а не одно ТЗ</span><span data-lang="en">How it was built: a running dialogue, not a single spec</span></h2>
+    <p>
+      <span data-lang="ru">Проект стартовал в Claude Code Cloud с телефона, на Opus 5.5 в режиме повышенных усилий: первым шагом Уиллисон попросил модель не писать код, а зафиксировать задачу в problem.md — и по ходу этого Claude само нашло статью BeepBeep. Затем последовала команда «попробуй собрать, и сделай так, чтобы на слушателей можно было на лету отправлять новый код, который они будут выполнять сами» — это заранее решило проблему повторного ручного разворачивания на каждом устройстве. Когда Уиллисон перенёс работу на ноутбук и перезапустил Claude Code, как раз вышел Fable 5.2 — и дальнейшая разработка шла уже на нём, в режиме почти свободного диалога: по одному короткому запросу за раз («добавь режим хлопков для тестирования, с отдельным значком на карте», «у каждого значка должна быть метка времени ЧЧ:ММ:СС», «добавь кнопку повтора звука по каждой записи», «добавь кнопку "это тот самый писк"», «предложи на карте точку, где стоило бы добавить ещё одного слушателя»). Для проверки системы без реального источника писка он использовал хлопки в ладоши в разных точках комнаты.</span>
+      <span data-lang="en">The project started in Claude Code Cloud from his phone, on Opus 5.5 in extra-thinking mode: Willison's first instruction was not to write code but to write up the problem in a problem.md file — and in the process, Claude found the BeepBeep paper on its own. Next came "try building it, and add a way to push new code to the listeners that they'll run automatically" — which pre-solved the problem of manually redeploying to every device. By the time Willison moved to his laptop and restarted Claude Code, Fable 5.2 had just shipped, and the rest of the build happened with that model, as an almost free-form back-and-forth: one short request at a time ("add a clap-testing mode with its own map symbol," "every map symbol needs an HH:MM:SS timestamp," "add a replay button for each recording," "add a 'this is the mystery beep' button," "suggest a spot on the map where adding another listener would help"). To test the system without a real mystery beep, he clapped his hands at different points around the room.</span>
+    </p>
+
+    <h2><span data-lang="ru">Главный вывод: Claude Code с «ушами»</span><span data-lang="en">The takeaway: giving Claude Code ears</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон подчёркивает: интереснее самого решения тот факт, что у Claude Code в итоге появились «уши». Модель не воспринимает звук напрямую, но может написать и запустить JS/Python-код, который слушает микрофон, анализирует звук и шлёт код обратно на устройства по WebSocket — а дальше почти самостоятельно работать с задачей, опрашивая аудио-логи и перенастраивая собственные «органы чувств». Он проводит параллель с похожим трюком, о котором услышал на GitHub Universe: разработчик Мартин Вудворд отлаживал платы конференц-бейджей, подключая их по USB-C и направляя веб-камеру на экран, чтобы кодинг-агент сам видел, срабатывают ли обновления. Общий вывод — находить способы дать агентам органы восприятия окружающего мира оказывается отдельным увлекательным направлением работы, не сводящимся к написанию кода как таковому.</span>
+      <span data-lang="en">Willison stresses that what's more interesting than the gadget itself is that Claude Code ended up with ears. The model has no native audio input, but it can write and run JS/Python code that listens to a microphone, analyzes sound, and pushes new code back to devices over WebSocket — and from there work the problem almost unsupervised, querying its own audio logs and reconfiguring its own "senses." He draws a parallel to a similar trick he heard about at GitHub Universe: Martin Woodward debugged conference-badge boards by plugging them in over USB-C and pointing a webcam at the screen, so his coding agent could see for itself whether updates were taking effect. His conclusion is that finding ways to give agents senses for perceiving the physical world around them is its own fun direction of work, separate from writing code as such.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту статьи, полученному из ежедневного бэкапа блога Уиллисона (github.com/simonw/simonwillisonblog-backup) — прямой WebFetch на simonwillison.net из облачной песочницы не проходит (домен не резолвится через прокси в этом прогоне).</span>
+      <span data-lang="en">Digest built from the article's full text, obtained from the daily backup of Willison's blog (github.com/simonw/simonwillisonblog-backup) — a direct WebFetch to simonwillison.net fails from this cloud sandbox (the domain doesn't resolve through the proxy during this run).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

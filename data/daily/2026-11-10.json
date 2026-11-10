@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T05:20:00Z",
+  "news": [
+    {
+      "id": "2026-11-10-anthropic-fable-mythos-5-2",
+      "cluster_id": "anthropic-fable-mythos-5-2",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic выпускает Claude Fable 5.2 и Mythos 5.2 — опережают Opus 5.5 почти по всем бенчмаркам компании",
+        "en": "Anthropic ships Claude Fable 5.2 and Mythos 5.2, beating Opus 5.5 on almost all of its own benchmarks"
+      },
+      "summary": {
+        "ru": "9 ноября Anthropic выпустила Claude Fable 5.2 и Claude Mythos 5.2 — обновление линейки технических моделей (API-id claude-fable-5-2). Компания заявляет об опережении Opus 5.5 почти на всех оценённых задачах, ответах примерно на 30% быстрее, вдвое меньшей стоимости за выполнение задачи на сравнимом уровне качества (FrontierCode 2.0, режим High) и на 55% меньшем числе ложных срабатываний защитных классификаторов по сравнению с версией 5.1. Mythos 5.2, доступный только через программы верификации, находит на 10,2% больше уязвимостей, чем Opus 5.5, на тесте переоткрытия CVE. Уже на следующий день Fable 5.2 стал моделью по умолчанию для Fable в Claude Code (релиз 2.1.321).",
+        "en": "On November 9, Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, an update to its technical-work model line (API id claude-fable-5-2). The company reports outscoring Opus 5.5 on almost every evaluated benchmark, responding roughly 30% faster, costing about half as much per task at comparable quality (FrontierCode 2.0, High effort), and triggering about 55% fewer false-positive safety-classifier blocks than version 5.1. Mythos 5.2, restricted to verification-program partners, finds 10.2% more vulnerabilities than Opus 5.5 on Anthropic's CVE-rediscovery evaluation. By the next day, Fable 5.2 had already become the default Fable model in Claude Code (release 2.1.321)."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Точечное обновление существующей линейки (5.1 → 5.2), а не новый подход: заметно быстрее и выше по бенчмаркам Anthropic, реже ложно блокирует легитимные запросы, расширяет научные/инженерные демонстрации (формализация части теоремы Ферма, дизайн электроники) — но для большинства задач кодинга компания по-прежнему рекомендует более дешёвый Opus 5.5. Это выбор инструмента в рамках известного класса моделей, а не смена парадигмы.",
+        "en": "A point release within an existing lineup (5.1 → 5.2), not a new approach: meaningfully faster and higher-scoring on Anthropic's own benchmarks, with far fewer false-positive safety blocks, plus broader science/engineering demos (part of Fermat's Last Theorem formalized, working electronics designed) — but Anthropic still recommends the cheaper Opus 5.5 for most coding work. A tooling choice within a known model class, not a paradigm shift."
+      },
+      "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "opinions": [
+        {
+          "author": "VentureBeat",
+          "stance": "neutral",
+          "quote": {
+            "ru": "По стандартным тарифам Fable и Mythos стоят $8 за миллион входных и $40 за миллион выходных токенов — вдвое дороже Opus 5.5 ($4/$20). На FrontierCode 2.0 в режиме High Fable 5.2 выходит на тот же результат, что и Opus 5.5 на максимальных настройках, но примерно за половину стоимости на задачу — однако картина зависит от выбранного уровня усилий, и на Max цена Fable резко растёт, а итоговый балл даже снижается относительно Xhigh.",
+            "en": "At Anthropic's standard rates, Fable and Mythos cost $8 per million input tokens and $40 per million output tokens — twice Opus 5.5's $4/$20. At High effort on FrontierCode 2.0, Fable 5.2 matches Opus 5.5's best score at roughly half the per-task cost — but the picture shifts with the chosen effort level, and at Max, Fable's cost jumps sharply while its score actually drops below what it scored at Xhigh."
+          },
+          "url": "https://venturebeat.com/technology/anthropic-releases-claude-fable-5-2-and-mythos-5-2-pairing-new-record-high-benchmarks-with-20-api-cost-reduction"
+        },
+        {
+          "author": "felloai.com",
+          "stance": "positive",
+          "quote": {
+            "ru": "По нашему обзору Fable 5.2 превосходит Opus 5.5 на десяти из одиннадцати основных бенчмарков Anthropic и набирает 65 против 59 в Artificial Analysis Intelligence Index v5.0.1.",
+            "en": "Our review finds Fable 5.2 beating Opus 5.5 on ten of eleven of Anthropic's headline benchmarks and scoring 65 versus 59 on the Artificial Analysis Intelligence Index v5.0.1."
+          },
+          "url": "https://felloai.com/claude-fable-5-2/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Саймон Уиллисон задействовал только что вышедший Fable 5.2 внутри Claude Code, чтобы доделать «Beep Locator» — систему из нескольких телефонов, планшетов и ноутбука, которая по сети микрофонов триангулирует источник загадочного пищащего звука в комнате.",
+            "en": "Simon Willison used the just-released Fable 5.2 inside Claude Code to finish \"Beep Locator,\" a system that turns several phones, tablets and a laptop into a microphone network to triangulate the source of a mystery beeping sound in a room."
+          },
+          "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/"
+        },
+        {
+          "text": {
+            "ru": "В системной карте Anthropic приводит научные результаты, полученные с Mythos 5.2: два результата по физике чёрных дыр, метод свёртки белковых капсидов и формализацию части Великой теоремы Ферма примерно за 30 часов силами около 1000 агентов.",
+            "en": "Anthropic's system card cites scientific results produced with Mythos 5.2: two black-hole physics results, a protein-capsid folding method, and a formalization of part of Fermat's Last Theorem completed in about 30 hours using roughly 1,000 agents."
+          },
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-10-willison-mysterious-beeps",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Как найти источник загадочного писка с помощью Claude",
+        "en": "Locating the source of a mysterious beep with Claude"
+      },
+      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+      "summary": {
+        "ru": "Уиллисон поручил Claude Code собрать «Beep Locator» — веб-систему, которая превращает телефоны, планшеты и ноутбуки в сеть микрофонов и по методу BeepBeep (2007) триангулирует источник надоедливого писка в комнате; по пути демонстрируется приём «дать Claude Code уши» — звуковой вход через JS/WebSocket сразу с нескольких устройств.",
+        "en": "Willison had Claude Code build \"Beep Locator,\" a web system that turns phones, tablets and laptops into a microphone network and triangulates an annoying beep's source in a room using the 2007 BeepBeep method; along the way he demonstrates \"giving Claude Code ears\" — audio input via JS/WebSocket across several devices at once."
+      },
+      "note_page": "notes/articles/willison-mysterious-beep-locator.html"
+    },
+    {
+      "id": "2026-11-10-mollick-fable-5-2-jagged-agi",
+      "type": "article",
+      "author": "Ethan Mollick",
+      "title": {
+        "ru": "Fable 5.2 и рваный AGI",
+        "en": "Fable 5.2 and Jagged AGI"
+      },
+      "url": "https://www.oneusefulthing.org/p/fable-52-and-jagged-agi",
+      "summary": {
+        "ru": "Моллик тестирует Fable 5.2 через свою рамку «рваного AGI»: на учебном сайте и сайте с разбором 35 литературных произведений модель фактически точна, но не замечает, что получилось скучно; в бизнес-проекте с 28 командами агентов и ~25 000 запусков агенты сами выстроили свод правил на 87 500 слов — «ИИ построил бюрократию». Вывод: слабое место — не знания, а суждение, из-за чего это лишь «почти» AGI в его узком определении.",
+        "en": "Mollick tests Fable 5.2 through his \"Jagged AGI\" lens: on a course site and a 35-work literature site the model is factually accurate but doesn't notice the result is dull; on a business project with 28 agent teams and roughly 25,000 runs, the agents wrote their own 87,500-word rulebook to coordinate — \"the AI had built a bureaucracy.\" His verdict: the weak point is judgment, not knowledge, which makes it only \"almost\" AGI under his narrow definition."
+      },
+      "note_page": "notes/articles/mollick-fable-5-2-jagged-agi.html"
+    }
+  ]
+}
