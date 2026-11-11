@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-11",
+      "news_count": 2,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Anthropic выводит Claude за пределы чата: Whiteboards и Sheets в бете, Data (бывший Dashboards) — в общем доступе",
+        "en": "Anthropic moves Claude beyond chat: Whiteboards and Sheets in beta, Data (formerly Dashboards) goes GA"
+      }
+    },
+    {
       "date": "2026-11-10",
       "news_count": 1,
       "expert_count": 2,

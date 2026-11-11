@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Claude проектирует электронику от ТЗ до прошивки — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Mike Cretella, Connor Jennings, Brent Yi (Anthropic), совместно с Diode Computers · 2026-11-09</span>
+      <span data-lang="en">Article digest · Mike Cretella, Connor Jennings, Brent Yi (Anthropic), with Diode Computers · 2026-11-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как Claude спроектировал три электронных устройства от ТЗ до прошивки</span>
+      <span data-lang="en">How Claude designed three electronic devices from spec to firmware</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.anthropic.com/research/claude-electronics-design" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Чуть больше года назад похожая проверка показала, что модели не умеют надёжно развести плату или спроектировать детали, которые физически сходятся друг с другом. В новой статье команда Anthropic вместе с инженерами-электронщиками Diode Computers описывает, как Claude Fable 5.2 с минимальным участием человека спроектировал три рабочих устройства: USB-C спикерфон с микрофонами, динамиком и Bluetooth, голосовой хаб-ассистент и портативную виртуальную «зверушку». Инженеры Diode собирали платы и прошивали их под руководством модели, а их собственные реплики в процессе часто ограничивались короткими «почисти схему» или «продолжай».</span>
+      <span data-lang="en">A bit over a year earlier, a similar test found that models couldn't reliably lay out a circuit board or design parts that physically fit together. In a new writeup, Anthropic's team, working with electrical engineers from Diode Computers, describes how Claude Fable 5.2 designed three working devices with minimal human involvement: a USB-C speakerphone with microphones, a speaker and Bluetooth; a voice-assistant hub; and a handheld virtual pet. Diode's engineers assembled the boards and flashed firmware under the model's direction, and their own prompts along the way were often as short as "clean up the schematic" or "continue."</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: один короткий промпт и дальше — по кругу</span><span data-lang="en">The method: one short prompt, then a loop</span></h2>
+    <p>
+      <span data-lang="ru">Весь процесс начинается с короткого описания устройства и его основных аппаратных требований — без пошагового технического задания. Дальше Claude самостоятельно проходит всю цепочку: пишет спецификацию, рисует принципиальную схему, расставляет компоненты, разводит медные дорожки, проектирует корпус под 3D-печать, пишет прошивку и готовит спецификацию комплектующих (BOM). Ключевая часть метода — цикл ревизии: модель сама обнаруживает, когда её же решение не работает, и переделывает его — например, перераспределяет выводы микроконтроллера, чтобы дорожки не пересекались, и перетрассировывает соединения заново, иногда помногу раз подряд. Там, где штатный автотрассировщик в KiCad потребовал бы пошагового контроля человека, для голосового хаба Claude написала собственный трассировщик на основе сетки — то есть не просто использовала существующий инструмент, а при необходимости создавала новый.</span>
+      <span data-lang="en">The whole process starts from a short description of the device and its main hardware requirements — not a step-by-step spec. From there Claude works through the full chain on its own: writing the specification, drawing the schematic, placing components, routing copper traces, designing a 3D-printable enclosure, writing firmware, and preparing a bill of materials. The core of the method is a revision loop: the model notices on its own when its own design isn't working and redoes it — reassigning microcontroller pins so traces stop crossing, rerouting connections again and again. Where KiCad's built-in autorouter would have needed step-by-step human guidance, for the voice hub Claude wrote its own grid-based router from scratch instead — not just using an existing tool, but building a new one when the existing one didn't fit.</span>
+    </p>
+
+    <h2><span data-lang="ru">Физические ограничения тоже на стороне модели</span><span data-lang="en">Physical constraints are the model's job too</span></h2>
+    <p>
+      <span data-lang="ru">Важная часть статьи — то, что Claude держит в голове не только электрическую схему, но и физику устройства целиком. Модель проверяла посадку платы в корпус в 3D, подбирала форму резонаторного порта корпуса под нужную частоту микрофона и добавляла в прошивку ограничение яркости светодиода, чтобы не превысить допустимый ток. На финальном этапе Claude прогоняла автоматические проверки технологичности (DFM) и доступности компонентов, устраняла слишком тонкие перемычки паяльной маски — и, по данным статьи, верно распознала и проигнорировала один ложноположительный отчёт об ошибке заземления. В результате Diode собрала все три платы по файлам Claude без единого круга доработок, а на плате спикерфона с четырьмя слоями меди модель развела высокоскоростные пары USB и Ethernet с согласованной длиной и подобранным рисунком трасс — задача, требующая одновременного учёта электрики, механики и производственных допусков.</span>
+      <span data-lang="en">An important thread in the piece is that Claude is tracking not just the electrical schematic but the device's physics as a whole. The model checked the board's fit inside the enclosure in 3D, shaped the enclosure's resonator port to tune it to the right microphone frequency, and added firmware logic to cap LED brightness so it wouldn't exceed a current limit. At the final stage, Claude ran automated design-for-manufacturing and sourcing checks, fixed solder-mask slivers that were too thin, and — according to the writeup — correctly recognized and ignored one false-positive grounding error. As a result, Diode built all three boards from Claude's files with no revision rounds, and on the speakerphone's four-copper-layer board the model routed the high-speed USB and Ethernet pairs with matched lengths and tuned trace patterns — a task that requires tracking electrical, mechanical, and manufacturing constraints at the same time.</span>
+    </p>
+
+    <h2><span data-lang="ru">Числа и честные границы метода</span><span data-lang="en">The numbers, and the method's honest limits</span></h2>
+    <p>
+      <span data-lang="ru">Авторы приводят конкретные цифры прогресса: на внутреннем бенчмарке Diode «PCB Gym» Fable 5.2 набрала 69% против 25% у предыдущей Fable 5, а на открытом бенчмарке BenchCAD 2.1 — 83,5%, почти вдвое больше результата Fable 5.1. Но статья не скрывает пределов метода: все три устройства — ранние прототипы, не прошедшие электрическую валидацию, настройку антенн, тепловые испытания или сертификацию, и не предназначенные для массового производства. Claude не была подключена напрямую ни к испытательному оборудованию, ни к станкам для производства плат — физическую сборку и проверку на всех этапах выполняли инженеры Diode. Статья также отмечает, что устройства проработали «без нареканий» несколько недель, но ничего не говорит о долгосрочной надёжности, а в планах Anthropic — проверить, способна ли модель проектировать более плотные и быстрые платы и верифицировать их в симуляции до физической сборки.</span>
+      <span data-lang="en">The authors give concrete progress numbers: on Diode's internal "PCB Gym" benchmark, Fable 5.2 scored 69% versus 25% for the earlier Fable 5, and on the public BenchCAD 2.1 benchmark it scored 83.5%, nearly double Fable 5.1's result. But the piece doesn't hide the method's limits: all three devices are early prototypes that haven't gone through electrical validation, antenna tuning, thermal testing, or certification, and weren't designed for mass production. Claude wasn't connected directly to any test equipment or board-fabrication machinery — physical assembly and testing at every stage were done by Diode's engineers. The writeup also notes the devices have held up "without issue" for weeks, but says nothing about long-term durability, and Anthropic's stated next step is to test whether the model can design denser, faster boards and verify them in simulation before physical assembly.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T14:40:00Z",
+  "news": [
+    {
+      "id": "2026-11-11-meta-muse-ember",
+      "cluster_id": "meta-muse-ember-launch",
+      "models": ["meta"],
+      "title": {
+        "ru": "Meta выпускает Muse Ember 1.0 — маленькую модель для агентных подзадач по цене Claude Haiku и GPT-6 Luna",
+        "en": "Meta ships Muse Ember 1.0, a small agent-subtask model priced like Claude Haiku and GPT-6 Luna"
+      },
+      "summary": {
+        "ru": "10 ноября Meta выпустила Muse Ember 1.0 — самую маленькую и эффективную модель линейки Muse, нацеленную на массовые подзадачи агентов: вызовы инструментов, код-сабтаски, роутинг, извлечение данных и разбор длинных документов. Модель поддерживает шесть уровней рассуждений (minimal…max). Базовая цена совпадает с Claude Haiku 5.5 и GPT-6 Luna (0,10 / 0,50 $ за млн входных/выходных токенов), но порог удорожания по длине контекста у Ember выше (200k токенов против 100k у Haiku); с учётом токенов рассуждений модель, по независимым измерениям Artificial Analysis, ложится на границу эффективности (цена/качество) между Haiku и Luna.",
+        "en": "On November 10, Meta released Muse Ember 1.0, the smallest and most efficient model in its Muse line, aimed at the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long-document parsing. It ships with six reasoning levels (minimal through max). Base pricing matches Claude Haiku 5.5 and GPT-6 Luna ($0.10/$0.50 per million input/output tokens), though Ember's context threshold before prices step up is higher (200k tokens vs. Haiku's 100k); once reasoning-token usage is factored in, independent Artificial Analysis measurements place it right on the cost-vs-intelligence efficiency frontier between Haiku and Luna."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Не меняет подход к использованию LLM, но расширяет выбор в самом массовом для агентов сегменте «дешёвая рабочая лошадка» — затрагивает любой агентный пайплайн, считающий токены.",
+        "en": "Doesn't change how LLMs get used, but widens the choice in the segment agent pipelines rely on most — the cheap workhorse tier — relevant to any token-conscious agentic workload."
+      },
+      "source_url": "https://research.meta.ai/blog/muse-ember",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Сравнивать цену за токен сейчас не очень осмысленно: из-за токенов рассуждений разные модели могут тратить совершенно разное их число на одну и ту же задачу. Мой пеликаний бенчмарк на всех шести уровнях показал кое-что неожиданное: уровень рассуждений не отображается линейно на визуальное качество ответа — режим 'high' вообще не вернул валидный SVG.",
+            "en": "Comparing price-per-token doesn't really make sense these days, when reasoning tokens mean different models might use dramatically different numbers of tokens to solve the same problem. My pelican benchmark across all six levels turned up something unexpected: the reasoning level didn't cleanly map to the visual quality of the response — the 'high' level failed to return a full SVG at all."
+          },
+          "url": "https://simonwillison.net/2026/Nov/10/muse-ember/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Вызовы инструментов, код-сабтаски, роутинг запросов и разбор длинных документов внутри агентных пайплайнов — по собственному позиционированию Meta.",
+            "en": "Tool calls, coding subtasks, request routing, and long-document parsing inside agent pipelines — per Meta's own positioning for the model."
+          },
+          "url": "https://research.meta.ai/blog/muse-ember"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-11-anthropic-claude-workspace",
+      "cluster_id": "anthropic-claude-workspace-expansion",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic выводит Claude за пределы чата: Whiteboards и Sheets в бете, Data (бывший Dashboards) — в общем доступе",
+        "en": "Anthropic moves Claude beyond chat: Whiteboards and Sheets in beta, Data (formerly Dashboards) goes GA"
+      },
+      "summary": {
+        "ru": "10 ноября Anthropic выпустила Claude Whiteboards и Claude Sheets в бете и перевела Claude Dashboards в общедоступный статус под новым именем Claude Data. Whiteboards превращает устное обсуждение команды в доску с таймлайном, ответственными и экшн-айтемами, которую можно выгрузить в документ, презентацию или в Lucid/Miro/Vani. Sheets генерирует таблицы с формулами, форматированием и выпадающими списками из запроса и ведёт список правок при совместном редактировании. Data добавляет сертифицированные определения метрик, лайв-шеринг отчётов без выдачи доступа к самим коннекторам и откат к прежним версиям. Отдельно расширены интерактивные коннекторы (на основе открытого протокола MCP Apps, которым может пользоваться любое ИИ-приложение): теперь сторонние инструменты (Adobe, Atlassian, Box, HubSpot, Notion и другие) открываются рядом с чатом или на весь экран, и Claude может редактировать их контент с подтверждением пользователя, а не только читать данные через коннектор.",
+        "en": "On November 10, Anthropic shipped Claude Whiteboards and Claude Sheets in beta and moved Claude Dashboards to general availability under a new name, Claude Data. Whiteboards turns a team's spoken discussion into a board with a timeline, owners, and action items, exportable to a doc, a deck, or Lucid/Miro/Vani. Sheets generates spreadsheets with formulas, formatting, and drop-downs from a prompt and tracks edits during collaborative work. Data adds certified metric definitions, live-shared reports that don't require viewers to hold connector access themselves, and rollback to earlier versions. Separately, interactive connectors (built on the open MCP Apps protocol, usable by any AI application) were extended: partner tools (Adobe, Atlassian, Box, HubSpot, Notion, and others) now open beside the chat or full-screen, and Claude can edit their content with user approval rather than only reading data through the connector."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметно расширяет круг задач и модальностей (доска, таблица, дашборд, чужой интерфейс внутри Claude) для всех платных пользователей, но индустрия (ChatGPT, конкурирующие дата-агенты) движется туда же — это развитие заметного тренда, а не новый подход.",
+        "en": "Meaningfully broadens the task types and modalities (whiteboard, spreadsheet, dashboard, third-party UI inside Claude) available to every paid user, but the rest of the industry (ChatGPT, competing data agents) is moving the same way — this extends a visible trend rather than opening a new one."
+      },
+      "source_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Командный брейншторм превращается в доску с задачами и ответственными лицами, с выгрузкой в документ или презентацию.",
+            "en": "Team brainstorming turns into a board with tasks and owners, exportable to a doc or a deck."
+          },
+          "url": "https://claude.com/resources/articles/sheets-whiteboards-data"
+        },
+        {
+          "text": {
+            "ru": "Редактирование и ревью живых документов в Notion, Confluence, Box и Adobe прямо из разговора с Claude, без переключения приложений.",
+            "en": "Editing and reviewing live documents in Notion, Confluence, Box, and Adobe directly from a Claude conversation, without switching apps."
+          },
+          "url": "https://claude.com/resources/articles/interactive-connectors-full-tool"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-11-willison-muse-ember-pricing",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Саймон Уиллисон: Muse Ember и граница эффективности между Haiku и Luna",
+        "en": "Simon Willison: Muse Ember and the efficiency frontier between Haiku and Luna"
+      },
+      "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+      "summary": {
+        "ru": "Разбор свежей модели Meta через собственный пеликаний SVG-бенчмарк Уиллисона на всех шести уровнях рассуждений и через сравнение цены и соотношения цена/качество с Claude Haiku 5.5 и GPT-6 Luna.",
+        "en": "A breakdown of Meta's new model using Willison's own pelican-SVG benchmark across all six reasoning levels, plus a price and cost-per-task comparison against Claude Haiku 5.5 and GPT-6 Luna."
+      },
+      "note_page": "notes/articles/willison-muse-ember-pricing.html"
+    },
+    {
+      "id": "2026-11-11-anthropic-electronics-design",
+      "type": "article",
+      "author": "Mike Cretella, Connor Jennings, Brent Yi (Anthropic), совместно с Diode Computers",
+      "title": {
+        "ru": "Как Claude спроектировал три электронных устройства от ТЗ до прошивки",
+        "en": "How Claude designed three electronic devices from spec to firmware"
+      },
+      "url": "https://www.anthropic.com/research/claude-electronics-design",
+      "summary": {
+        "ru": "Разбор метода, которым Claude Fable 5.2 самостоятельно спроектировал схему, разводку платы, корпус и прошивку для трёх устройств, с результатами на внутреннем и публичном бенчмарках проектирования электроники.",
+        "en": "A breakdown of the method Claude Fable 5.2 used to design the schematic, board layout, enclosure, and firmware for three devices end to end, with results on an internal and a public electronics-design benchmark."
+      },
+      "note_page": "notes/articles/anthropic-claude-electronics-design.html"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Muse Ember и граница эффективности — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-10</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-10</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Muse Ember и граница эффективности между Haiku и Luna</span>
+      <span data-lang="en">Muse Ember and the efficiency frontier between Haiku and Luna</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/10/muse-ember/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">В день релиза Muse Ember 1.0 — новой маленькой модели Meta для массовых агентных подзадач — Саймон Уиллисон разбирает её не через пересказ пресс-релиза, а через два собственных метода оценки: прогон через его стандартный «пеликаний» SVG-бенчмарк и сведение цены в таблицу рядом с прямыми конкурентами того же класса, Claude Haiku 5.5 и GPT-6 Luna. Сам Willison описывает Ember как «запись Meta AI в категорию Claude Haiku / GPT Luna» — третий игрок в сегменте моделей, которые существуют не для флагманских задач, а для дешёвого и быстрого выполнения рутины внутри агентных пайплайнов.</span>
+      <span data-lang="en">On the day Meta shipped Muse Ember 1.0 — a new small model aimed at the routine work agents repeat all day — Simon Willison evaluates it not by paraphrasing the press release, but through two methods of his own: running it through his standard pelican-riding-a-bicycle SVG benchmark, and laying its pricing out next to its two direct peers in the same class, Claude Haiku 5.5 and GPT-6 Luna. Willison frames Ember as "Meta AI's entry in the Claude Haiku/GPT Luna category" — a third player in the segment of models that exist not for flagship work, but for doing an agent pipeline's routine tasks cheaply and fast.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему цена за токен обманчива</span><span data-lang="en">Why price-per-token is misleading</span></h2>
+    <p>
+      <span data-lang="ru">На первый взгляд сравнение простое: базовая цена всех трёх моделей на коротких промптах совпадает — 0,10 $ за млн входных и 0,50 $ за млн выходных токенов. Разница всплывает на длинных промптах: у каждой модели есть порог, после которого цена растёт, и этот порог у всех трёх разный (100k токенов у Haiku, 200k у Ember, 272k у Luna), так что при росте длины контекста Ember оказывается по цене ровно между двумя конкурентами. Но Willison сразу указывает на более глубокую проблему метода «цена за токен»: из-за того что современные модели используют «токены рассуждений» в сильно разном количестве для одной и той же задачи, сравнение чистой цены за токен перестаёт отражать реальную стоимость решения конкретной задачи. Модель с более низкой ценой за токен может в сумме обойтись дороже, если она «думает» заметно дольше.</span>
+      <span data-lang="en">At first glance the comparison looks simple: all three models' base pricing matches on short prompts — $0.10 per million input tokens and $0.50 per million output tokens. The difference shows up on long prompts: each model has a threshold beyond which price increases, and that threshold differs across all three (100k tokens for Haiku, 200k for Ember, 272k for Luna), so as context length grows, Ember ends up priced exactly between its two rivals. But Willison immediately flags a deeper problem with the "price-per-token" method itself: because modern models use wildly different numbers of "reasoning tokens" to solve the same problem, comparing raw price-per-token stops reflecting what solving an actual task really costs. A model with a lower per-token price can end up costing more overall if it "thinks" for noticeably longer.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что показывает кривая «интеллект против цены задачи»</span><span data-lang="en">What the intelligence-vs-cost-per-task curve shows</span></h2>
+    <p>
+      <span data-lang="ru">Вместо цены за токен Willison опирается на независимые измерения Artificial Analysis — агрегатора, который считает не цену токена, а реальную стоимость решения задачи (включая все потраченные токены рассуждений) и сопоставляет её с индексом интеллекта модели. На графике «Intelligence Index vs. Cost per Task» Muse Ember в режимах xhigh и max ложится прямо на границу Парето — линию, за которой нельзя улучшить один параметр, не ухудшив другой: по заявлению самой Meta, «ни одна модель не даёт больше интеллекта на меньшую цену задачи». Для сравнения, Claude Haiku 5.5 в режиме xhigh даёт сопоставимый с Ember-max результат по качеству, но при заметно большей цене за задачу — то есть оказывается заметно правее линии Парето, а не на ней.</span>
+      <span data-lang="en">Instead of price-per-token, Willison leans on independent Artificial Analysis measurements — an aggregator that computes actual cost-to-solve-a-task (counting every reasoning token spent) rather than price-per-token, and plots that against a model's intelligence index. On the "Intelligence Index vs. Cost per Task" chart, Muse Ember's xhigh and max settings sit right on the Pareto frontier — the line past which you can't improve one dimension without giving up another — and Meta itself makes the same claim: "no model scores higher for less per task." By contrast, Claude Haiku 5.5 on xhigh reaches comparable quality to Ember-max, but at a noticeably higher cost per task — sitting well to the right of, not on, that Pareto line.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пеликаний бенчмарк: уровень рассуждений ≠ качество ответа</span><span data-lang="en">The pelican benchmark: reasoning level ≠ response quality</span></h2>
+    <p>
+      <span data-lang="ru">Параллельно с ценовым анализом Willison прогоняет Muse Ember через свой фирменный тест: попросить модель нарисовать SVG «пеликана на велосипеде» — задачу, в которой нет единственно верного ответа, но визуальный результат наглядно показывает пространственное рассуждение модели. Он повторяет запрос на всех шести уровнях рассуждений Ember (minimal, low, medium, high, xhigh, max) и получает неожиданный результат: качество рисунков не растёт монотонно вместе с уровнем усилий. Режим «high» вообще не вернул валидный SVG, а остальные уровни визуально не выстраиваются в ожидаемую лестницу от простого к сложному. Лучший результат — в режиме «max»: велосипед узнаваем, в корзине рыба, но на голове пеликана странная синяя шляпа. По итоговому качеству пеликаны Ember сопоставимы с теми, что Willison ранее получал от куда более дорогой модели Muse Wonder — топовой модели той же линейки Meta, стоящей примерно в 40 раз дороже.</span>
+      <span data-lang="en">Alongside the pricing analysis, Willison runs Muse Ember through his signature test: asking a model to draw an SVG of "a pelican riding a bicycle" — a task with no single correct answer, but one whose visual result makes a model's spatial reasoning easy to inspect. He repeats the prompt at all six of Ember's reasoning levels (minimal, low, medium, high, xhigh, max) and gets a surprising result: drawing quality doesn't increase monotonically with effort level. The "high" setting failed to return a valid SVG at all, and the other levels don't line up into the expected easy-to-hard ladder. The best result comes from "max": the bicycle is recognizable, the basket holds a fish, but the pelican wears an odd blue hat. Overall, Ember's pelicans come out comparable in quality to ones Willison previously got from Muse Wonder — the much more expensive, flagship model in the same Meta line, priced roughly 40x higher.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что это значит для выбора модели</span><span data-lang="en">What this means for picking a model</span></h2>
+    <p>
+      <span data-lang="ru">Главный практический вывод Willison не про то, какая модель «лучше» в вакууме, а про то, как вообще сравнивать модели этого класса: смотреть не на прайс-лист, а на стоимость решения конкретной задачи с учётом реального расхода токенов рассуждений, и проверять качество на конкретных, воспроизводимых тестах, а не доверять одной метрике усилий. Для команд, выбирающих модель под агентные подзадачи, из разбора следует практичный чек-лист: сверять не базовую цену за токен, а порог удорожания по длине контекста под свой типичный размер промпта; не полагаться на номинальный уровень рассуждений как на гарантию качества — тестировать разные уровни на своей задаче; и при прочих равных выбирать модель, которая на графике «цена задачи / качество» лежит ближе к границе Парето, а не просто дешевле за токен.</span>
+      <span data-lang="en">Willison's main practical takeaway isn't about which model is "better" in the abstract, but about how to compare models in this class at all: look past the price list to the actual cost of solving a specific task given real reasoning-token usage, and check quality on concrete, reproducible tests rather than trusting a single effort-level knob. For teams picking a model for agent subtasks, the piece implies a practical checklist: compare the context-length price threshold against your typical prompt size rather than the headline per-token rate; don't treat a model's reasoning-level label as a quality guarantee — test the levels on your own task; and, all else equal, prefer the model that sits closer to the Pareto frontier on a cost-per-task-vs-quality chart rather than the one that is simply cheaper per token.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

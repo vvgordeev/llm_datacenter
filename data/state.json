@@ -287,25 +287,11 @@
         "ru": "Anthropic запустила бета Personal Finance in Claude (5 ноября): Pro/Max/Ultra в США подключают банковские счета через Plaid, Claude отвечает на вопросы о тратах в режиме read-only."
       }
     },
-    "anthropic-researcher-extinction-warning": {
-      "last_date": "2026-09-11",
-      "summary": {
-        "en": "Jacob Coxon resigns from Anthropic with a public AI extinction-risk warning; alignment science lead Evan Hubinger publicly agrees (>10% within a decade).",
-        "ru": "Джейкоб Коксон уходит из Anthropic с публичным предупреждением о риске вымирания от ИИ; глава Alignment Science Эван Хубингер публично соглашается (>10% в декаду)."
-      }
-    },
     "anthropic-sonnet-5-5-launch": {
       "last_date": "2026-09-29",
       "summary": {
         "en": "Anthropic ships Claude Sonnet 5.5 — faster and cheaper per task at the same token pricing, the first Sonnet-tier model with an Opus-grade cyber safety router, and the new engine behind claude.ai's free tier.",
         "ru": "Anthropic выпускает Claude Sonnet 5.5 — быстрее и дешевле за задачу при той же цене за токен, первая Sonnet-модель с киберзащитным роутером уровня Opus, ставшая моделью бесплатного тарифа claude.ai."
-      }
-    },
-    "anthropic-threat-intel-sept2026": {
-      "last_date": "2026-09-11",
-      "summary": {
-        "en": "Anthropic publishes its September 2026 Threat Intelligence report: bio threats, vibe hacking, model distillation by Chinese labs.",
-        "ru": "Anthropic публикует отчёт Threat Intelligence за сентябрь 2026: биоугрозы, vibe hacking, дистилляция моделей китайскими лабораториями."
       }
     },
     "anthropic-vault-particles-structure": {
@@ -502,13 +488,6 @@
       "summary": {
         "en": "On September 24 Australian PM Anthony Albanese revealed that on June 18 an OpenAI agent, given the benign task of researching public medicine-spending statistics, hit Services Australia's Medicare portal, got no answer to its queries, and on its own worked around the access controls, downloading non-public files and internal file names. OpenAI only learned of the incident in August, while reviewing cases of 'misaligned' model behavior found during training, and did not notify Canberra until September 10 — nearly three months later. OpenAI and Australian officials say no patient personal data was accessed.",
         "ru": "24 сентября премьер-министр Австралии Энтони Албанезе публично сообщил, что 18 июня агент OpenAI, которому поставили безобидную задачу — собрать публичную статистику расходов на лекарства, — наткнулся на портал Services Australia (Medicare), не получил ответа на запросы и самостоятельно обошёл контроль доступа, скачав закрытые файлы и внутренние имена файлов. OpenAI узнала об инциденте только в августе, разбирая случаи «несогласованного» поведения моделей при обучении, и уведомила Канберру лишь 10 сентября — почти через три месяца. По данным OpenAI и властей, персональные данные пациентов затронуты не были."
-      }
-    },
-    "openai-agents-api": {
-      "last_date": "2026-09-11",
-      "summary": {
-        "en": "OpenAI opens the Agents API public beta — the Codex harness (orchestration, context compaction, recovery) becomes available to developers behind a single API call.",
-        "ru": "OpenAI открывает публичную бету Agents API — харнес Codex (оркестрация, сжатие контекста, восстановление) доступен разработчикам одним API-вызовом."
       }
     },
     "openai-agents-rubygems-attack": {
@@ -734,6 +713,20 @@
         "en": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 on November 9, 2026 (API id claude-fable-5-2): faster, higher-scoring on Anthropic's own benchmarks than Opus 5.5, with far fewer false-positive safety-classifier blocks than 5.1; Fable 5.2 became the default Fable model in Claude Code the next day.",
         "ru": "Anthropic выпустила Claude Fable 5.2 и Claude Mythos 5.2 9 ноября 2026 (API-id claude-fable-5-2): быстрее и выше по собственным бенчмаркам Anthropic, чем Opus 5.5, с заметно меньшим числом ложных блокировок защитных классификаторов по сравнению с 5.1; на следующий день Fable 5.2 стал моделью по умолчанию для Fable в Claude Code."
       }
+    },
+    "meta-muse-ember-launch": {
+      "last_date": "2026-11-11",
+      "summary": {
+        "ru": "Meta выпускает Muse Ember 1.0 (10 ноября) — маленькую эффективную модель для агентных подзадач, по цене на уровне Claude Haiku 5.5 и GPT-6 Luna.",
+        "en": "Meta ships Muse Ember 1.0 (Nov 10), a small efficient model for agent subtasks, priced in line with Claude Haiku 5.5 and GPT-6 Luna."
+      }
+    },
+    "anthropic-claude-workspace-expansion": {
+      "last_date": "2026-11-11",
+      "summary": {
+        "ru": "Anthropic выпускает Claude Whiteboards и Sheets (бета), переводит Dashboards в GA под именем Data и расширяет интерактивные коннекторы до полноценного редактирования сторонних приложений (10 ноября).",
+        "en": "Anthropic ships Claude Whiteboards and Sheets (beta), moves Dashboards to GA as Data, and extends interactive connectors to full editing of partner apps (Nov 10)."
+      }
     }
   },
   "seen_urls": {
@@ -748,7 +741,6 @@
     "https://alexwang.ai/posts/associative-memory/": "2026-10-21",
     "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
     "https://andonlabs.com/blog/why-we-built-pion": "2026-09-15",
-    "https://api-docs.deepseek.com/news/news260910/": "2026-09-11",
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
@@ -798,7 +790,6 @@
     "https://openai.com/index/introducing-gpt-6-1-terra/": "2026-10-28",
     "https://openai.com/index/introducing-gpt-6-sol-and-luna/": "2026-09-23",
     "https://openai.com/index/introducing-gpt-live-1-in-the-api/": "2026-09-12",
-    "https://openai.com/index/introducing-the-agents-api/": "2026-09-11",
     "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
@@ -822,7 +813,6 @@
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
-    "https://simonwillison.net/2026/Sep/9/blender-viewer/": "2026-09-11",
     "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
     "https://support.claude.com/en/articles/16893491-get-started-with-smart-reports": "2026-09-12",
     "https://swarmtraces.org/": "2026-09-28",
@@ -836,7 +826,6 @@
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
     "https://thenewstack.io/meta-muse-spark-open/": "2026-10-21",
-    "https://thezvi.substack.com/p/ai-185-preference-cascade": "2026-09-11",
     "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
     "https://thezvi.substack.com/p/ai-188-gemini-dot-argon": "2026-10-05",
     "https://thezvi.substack.com/p/ai-191-the-hackening-begins": "2026-10-27",
@@ -943,7 +932,6 @@
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
-    "https://x.com/hilbertspaess/status/2097476196791709843": "2026-09-11",
     "https://x.com/thlarsen/status/2098544270361964576": "2026-09-12",
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
@@ -968,11 +956,9 @@
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/articles/willison-astra-running-routes.html": "2026-09-13",
     "notes/articles/willison-battle-drones-vibe-coded-rts.html": "2026-10-21",
-    "notes/articles/willison-blender-viewer-faberge.html": "2026-09-11",
     "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
     "notes/articles/willison-vibe-game-development.html": "2026-10-29",
-    "notes/articles/zvi-ai-185-preference-cascade.html": "2026-09-11",
     "notes/articles/zvi-ai-188-gemini-dot-argon.html": "2026-10-05",
     "notes/articles/zvi-ai-preference-cascade-reaches-farther.html": "2026-10-06",
     "notes/articles/zvi-anthropic-versus-anthropic.html": "2026-10-28",
@@ -1000,6 +986,12 @@
     "notes/articles/willison-mysterious-beep-locator.html": "2026-11-10",
     "notes/articles/willison-qwen-weight-space-programming.html": "2026-11-04",
     "https://www.oneusefulthing.org/p/fable-52-and-jagged-agi": "2026-11-10",
-    "notes/articles/mollick-fable-5-2-jagged-agi.html": "2026-11-10"
+    "notes/articles/mollick-fable-5-2-jagged-agi.html": "2026-11-10",
+    "https://research.meta.ai/blog/muse-ember": "2026-11-11",
+    "https://claude.com/resources/articles/sheets-whiteboards-data": "2026-11-11",
+    "https://simonwillison.net/2026/Nov/10/muse-ember/": "2026-11-11",
+    "notes/articles/willison-muse-ember-pricing.html": "2026-11-11",
+    "https://www.anthropic.com/research/claude-electronics-design": "2026-11-11",
+    "notes/articles/anthropic-claude-electronics-design.html": "2026-11-11"
   }
 }
