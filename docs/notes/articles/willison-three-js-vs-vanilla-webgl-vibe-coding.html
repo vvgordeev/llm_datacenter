@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Three.js против чистого WebGL в вайб-кодинге — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект заметки · Simon Willison · 2026-11-09</span>
+      <span data-lang="en">Note digest · Simon Willison · 2026-11-09</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Нужен ли вайб-кодингу Three.js? Уиллисон портирует 3D-яйцо на чистый WebGL</span>
+      <span data-lang="en">Does vibe-coding even need Three.js? Willison ports a 3D egg to raw WebGL</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/nov/9/hn-50421091" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал заметки ↗</span><span data-lang="en">Original note ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Утром 9 ноября Саймон Уиллисон вайб-кодил небольшую 3D-сцену — яйцо Фаберже в теме «нудибранх» (морской слизень), собранное на библиотеке Three.js. Вместо того чтобы остановиться на этом, он в том же чате попросил Claude Opus 5.5 Medium (в обычном Claude Chat, без Claude Code) переписать проект на чистый JavaScript и WebGL — то есть убрать Three.js и сгенерировать весь рендеринг-код с нуля, без промежуточного слоя библиотеки сцен.</span>
+      <span data-lang="en">On the morning of November 9, Simon Willison vibe-coded a small 3D scene — a nudibranch-themed Fabergé egg, built on the Three.js library. Instead of stopping there, in the same chat thread he asked Claude Opus 5.5 Medium (plain Claude Chat, not Claude Code) to rewrite the project in vanilla JavaScript and WebGL — that is, to drop Three.js and generate all the rendering code from scratch, with no scene-graph library in between.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что проверяет этот мини-эксперимент</span><span data-lang="en">What this small experiment actually tests</span></h2>
+    <p>
+      <span data-lang="ru">За внешне несерьёзной задачей (ещё одна декоративная 3D-игрушка) стоит конкретный практический вопрос, который рано или поздно встаёт перед любым, кто вайб-кодит графику: держит ли модель в голове математику 3D-рендеринга (матрицы преобразований, нормали, шейдеры, буферы вершин) достаточно хорошо, чтобы обойтись без библиотеки, которая обычно берёт всё это на себя? Three.js существует именно потому, что писать WebGL «руками» — это много низкоуровневого, легко ломающегося кода; если LLM способна сгенерировать его надёжно с первого захода, библиотека-посредник становится необязательной хотя бы для одноразовых, не предназначенных для долгой поддержки сцен.</span>
+      <span data-lang="en">Behind the seemingly trivial task (yet another decorative 3D toy) sits a concrete practical question that eventually comes up for anyone vibe-coding graphics: does the model hold enough of 3D rendering's underlying math in its head — transform matrices, normals, shaders, vertex buffers — to do without a library that normally handles all of that? Three.js exists precisely because hand-writing WebGL means a lot of low-level, easily-broken code; if an LLM can generate that reliably on the first attempt, the intermediary library becomes optional, at least for one-off scenes nobody plans to maintain long-term.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Вывод Уиллисона по итогам эксперимента короткий, но однозначный: Claude Opus 5.5 вполне способна на 3D-моделирование в чистом JavaScript и WebGL без Three.js — порт получился рабочим. Единственная оговорка касается не функциональности, а читаемости: версию на Three.js ему самому было чуть легче читать как код, но тут же он добавляет важную деталь о собственной практике — для таких 3D-игрушек он код почти никогда не читает, он просто смотрит, работает ли сцена в браузере. То есть аргумент «библиотека даёт более читаемый код» для него лично в этом жанре задач не имеет практического веса.</span>
+      <span data-lang="en">Willison's takeaway from the experiment is short but unambiguous: Claude Opus 5.5 is perfectly capable of 3D modeling in vanilla JavaScript and WebGL without Three.js — the port worked. The one caveat is about readability, not functionality: he personally found the Three.js version a little easier to read as code, but he immediately adds an important detail about his own practice — for these 3D toys he almost never reads the code, he just checks whether the scene works in the browser. So the "a library gives you more readable code" argument carries little practical weight for him in this genre of task.</span>
+    </p>
+
+    <h2><span data-lang="ru">Чем это полезно за пределами одного яйца</span><span data-lang="en">Why this matters beyond one egg</span></h2>
+    <p>
+      <span data-lang="ru">Эксперимент — маленький и без количественных замеров (нет сравнения производительности, размера кода или числа итераций на исправление багов), но он указывает на практический вопрос выбора стека при вайб-кодинге: библиотека вроде Three.js раньше была почти обязательной страховкой от того, что человек-разработчик не удержит в голове всю низкоуровневую механику WebGL. Если модель эту механику уже держит достаточно надёжно, решение «библиотека или без неё» смещается от вопроса «что я сам способен написать и отладить» к вопросу «что мне легче верифицировать и при необходимости поправить» — а это для вайб-кодинга, где автор чаще смотрит на результат, чем на код, другой критерий выбора инструмента.</span>
+      <span data-lang="en">The experiment is small and has no quantitative measurements (no comparison of performance, code size, or bug-fixing iterations), but it points at a practical stack-choice question in vibe-coding: a library like Three.js used to be almost mandatory insurance against a human developer not holding all of WebGL's low-level mechanics in their head. If a model already holds that mechanics reliably enough, the "library or no library" decision shifts from "what can I write and debug myself" to "what's easier for me to verify and patch if needed" — a different tool-selection criterion for vibe-coding, where the author looks at the result far more often than at the code.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: llm 0.37.2 закрывает тихую утечку ключа OpenAI — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект релиза · Simon Willison · 2026-11-11</span>
+      <span data-lang="en">Release digest · Simon Willison · 2026-11-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">llm 0.37.2: две тихие дыры, через которые свой ключ OpenAI уходил на чужой эндпоинт</span>
+      <span data-lang="en">llm 0.37.2: two quiet holes that sent your real OpenAI key to someone else's endpoint</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://github.com/simonw/llm/releases/tag/0.37.2" target="_blank" rel="noopener">
+        <span data-lang="ru">Релиз на GitHub ↗</span><span data-lang="en">GitHub release ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">11 ноября Саймон Уиллисон выпустил патч-версию 0.37.2 своей консольной утилиты <code>llm</code> — инструмента, которым он сам и множество разработчиков обращаются к разным провайдерам моделей из одного CLI. Релиз закрывает две уязвимости безопасности (GHSA-v9h7-jj4g-f862 и GHSA-r639-rr7r-x72w), обе — про один и тот же класс ошибки: при настройке «псевдо-OpenAI»-эндпоинта (стороннего сервера с OpenAI-совместимым API, указанного через <code>api_base</code> в <code>extra-openai-models.yaml</code>) <code>llm</code> в определённых условиях всё равно подставлял в запрос настоящий ключ из <code>OPENAI_API_KEY</code> или сохранённый ключ провайдера <code>openai</code> — то есть секрет, выданный Anthropic… простите, OpenAI, уходил на домен, который пользователь сам вписал как «ещё один OpenAI-совместимый сервер».</span>
+      <span data-lang="en">On November 11, Simon Willison shipped 0.37.2, a patch release of <code>llm</code>, the command-line tool he and many other developers use to talk to multiple model providers from one CLI. The release closes two security advisories (GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w), both the same class of bug: when you point <code>llm</code> at a third-party, OpenAI-compatible endpoint (via <code>api_base</code> in <code>extra-openai-models.yaml</code>), under certain conditions it still attached your real <code>OPENAI_API_KEY</code> or your stored <code>openai</code> provider key to the request — meaning a secret issued by OpenAI ended up on whatever domain you'd configured as "just another OpenAI-compatible server."</span>
+    </p>
+
+    <h2><span data-lang="ru">Механика двух дыр</span><span data-lang="en">How the two holes worked</span></h2>
+    <p>
+      <span data-lang="ru">Первая (GHSA-v9h7-jj4g-f862) касалась моделей, у которых в конфиге указаны и <code>api_base</code>, и <code>api_key_name</code> — то есть автор явно просил <code>llm</code> брать для этого эндпоинта отдельный, именованный ключ. Если такой ключ не был сохранён (пользователь просто не успел его добавить), инструмент раньше не отказывал в запросе, а тихо подставлял вместо него ключ по умолчанию — ваш <code>OPENAI_API_KEY</code>. После патча при отсутствующем именованном ключе <code>llm</code> сразу падает с ошибкой «No key found», ничего никуда не отправляя.</span>
+      <span data-lang="en">The first one (GHSA-v9h7-jj4g-f862) hit models whose config sets both <code>api_base</code> and <code>api_key_name</code> — meaning the author explicitly told <code>llm</code> to use a separate, named key for that endpoint. If that named key was never stored (you just hadn't gotten around to adding it), the tool didn't refuse the request — it silently fell back to the default key, your <code>OPENAI_API_KEY</code>. After the patch, a missing named key now fails fast with a "No key found" error instead, sending nothing.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Вторая (GHSA-r639-rr7r-x72w) — более хитрая комбинация: модель с флагом <code>responses: true</code> (значит, обычно она использует новый OpenAI Responses API) и своим <code>api_base</code>, запущенная с флагом совместимости <code>-o chat_completions 1</code> (который переключает именно на старый формат chat-completions). Та же история случалась и при прямом вызове <code>llm openai endpoint URL --responses -o chat_completions 1</code> без явного <code>--key</code>. В обоих случаях комбинация флагов сбивала логику выбора ключа, и в сторонний <code>api_base</code> утекал сохранённый ключ провайдера <code>openai</code> или <code>OPENAI_API_KEY</code> — ровно тот секрет, который должен использоваться только для api.openai.com.</span>
+      <span data-lang="en">The second (GHSA-r639-rr7r-x72w) was a trickier combination: a model with <code>responses: true</code> (meaning it normally talks to OpenAI's newer Responses API) and its own <code>api_base</code>, run with the compatibility flag <code>-o chat_completions 1</code> (which switches it to the older chat-completions format). The same thing happened calling <code>llm openai endpoint URL --responses -o chat_completions 1</code> directly without an explicit <code>--key</code>. In both cases the flag combination confused the key-selection logic, and the stored <code>openai</code> provider key or <code>OPENAI_API_KEY</code> leaked to the third-party <code>api_base</code> — the exact secret meant only for api.openai.com.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это тем, кто просто пользуется LLM-тулингом</span><span data-lang="en">Why this matters even if you just use LLM tooling</span></h2>
+    <p>
+      <span data-lang="ru">Урок здесь не «обновите llm» (хотя да, стоит), а более общий: любой CLI или библиотека, которая умеет работать «с любым OpenAI-совместимым сервером» одним и тем же набором ключей, по умолчанию рискует смешать «ключ для настоящего OpenAI» и «ключ/отсутствие ключа для стороннего эндпоинта» — особенно на стыке двух разных режимов совместимости (как здесь — Responses API против chat-completions). Если вы сами настраиваете прокси, self-hosted модели или локальные inference-серверы под OpenAI-совместимым API в любом инструменте, это повод проверить, не течёт ли туда ваш настоящий ключ провайдера «по умолчанию», а не специально выданный под этот эндпоинт — и в идеале заводить для каждого стороннего <code>api_base</code> свой отдельный, скоупированный ключ, а не полагаться на то, что инструмент сам не перепутает.</span>
+      <span data-lang="en">The lesson isn't just "update llm" (though you should) — it's more general: any CLI or library that can talk to "any OpenAI-compatible server" through one shared set of keys risks blurring "the key for the real OpenAI" and "the key, or lack of one, for a third-party endpoint" — especially at the seam between two compatibility modes, as happened here with the Responses API versus chat-completions. If you configure proxies, self-hosted models, or local inference servers behind an OpenAI-compatible API in any tool, it's worth checking whether your real provider key leaks there by default instead of a key scoped specifically for that endpoint — and ideally giving every third-party <code>api_base</code> its own separate, scoped key rather than trusting the tool not to mix them up.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Отдельно в том же релизе — не связанные с безопасностью, но практичные исправления: поддержка вложений (<code>-a/--attachment</code>) через пайпы вроде bash-подстановки процессов, более понятная ошибка на пустом вложении вместо трейсбека, починка парсинга YAML в <code>extra-openai-models.yaml</code> при отступах или завершающем маркере <code>...</code>, и фикс в Python API: переоткрытие коллекции эмбеддингов с другой моделью теперь использует модель, сохранённую в самой коллекции, а не смешивает векторы от двух разных моделей в одном хранилище.</span>
+      <span data-lang="en">Separately in the same release — not security-related, but practical: attachment support (<code>-a/--attachment</code>) now works through pipes such as bash process substitution, an empty attachment now shows a clear error instead of a traceback, YAML parsing in <code>extra-openai-models.yaml</code> is fixed for indentation and a trailing <code>...</code> marker, and in the Python API, reopening an embedding collection with a different model now uses the model stored on the collection itself instead of mixing vectors from two different models in one store.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

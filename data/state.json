@@ -77,13 +77,6 @@
         "ru": "Anthropic незаметно обновила Claude Code (~26-27 октября), чтобы он отказывался воссоздавать конкретные существующие видеоигры; пользователи сообщают об избыточной блокировке легитимного реверс-инжиниринга вплоть до 31 октября."
       }
     },
-    "anthropic-claude-code-2-1-265-269": {
-      "last_date": "2026-09-12",
-      "summary": {
-        "en": "Claude Code 2.1.265-269 (Sept 8-11): claude plugin eval, /output-style, maxEffortLevel, a run of prompt-cache fixes",
-        "ru": "Claude Code 2.1.265-269 (8-11 сентября): claude plugin eval, /output-style, maxEffortLevel, серия исправлений prompt-кэша"
-      }
-    },
     "anthropic-claude-code-2-1-277": {
       "last_date": "2026-09-19",
       "summary": {
@@ -194,13 +187,6 @@
       "summary": {
         "en": "On October 1, Anthropic published a guest post by theoretical physicist Matthew Schwartz about BootLoops, an open-source toolkit for exact quantitative calculations that grew out of his work on scattering amplitudes. The idea is not to force Claude to work like a human scientist, but to find 'Claude-shaped' problems — ones with broad knowledge demands, heavy computation, and strictly verifiable results; over three months that approach produced 36 manuscripts with 19 co-authors out of a pool of 400 candidate problems, and BootLoops 1.0 shipped the same day under the MIT license.",
         "ru": "1 октября Anthropic опубликовала гостевой пост физика-теоретика Мэттью Шварца о BootLoops — открытом инструментарии для точных количественных расчётов, который вырос из его работы над амплитудами рассеяния. Идея в том, чтобы не заставлять Claude работать как человек-учёный, а искать «Claude-shaped» задачи — с широким охватом знаний, большим объёмом вычислений и строго проверяемым результатом; за три месяца так было выпущено 36 рукописей с 19 соавторами из пула в 400 кандидатных задач, а BootLoops 1.0 в тот же день вышел под лицензией MIT."
-      }
-    },
-    "anthropic-claude-smart-reports": {
-      "last_date": "2026-09-12",
-      "summary": {
-        "en": "Claude Enterprise ships Smart Reports (beta) — team usage, cost and friction analytics built on Claude, with recommendations for shared skills",
-        "ru": "Claude Enterprise получает Smart Reports (бета) — аналитика использования, стоимости и трения команды поверх Claude, с рекомендациями по общим skills"
       }
     },
     "anthropic-claude-voice-data-training-optin": {
@@ -390,13 +376,6 @@
       "summary": {
         "en": "Google is phasing out Gemini Gems in favor of Skills — reusable sets of instructions and context that can be invoked with \"/\" right in the prompt box, combined with each other, and created directly from an ordinary chat. Rollout begins October 5 in Workspace and October 13 in the consumer Gemini app; existing Gems start migrating automatically on November 17 for personal accounts (March 2027 for Workspace business/enterprise, June 2027 for education accounts). Skills don't yet work with Canvas, Deep Research, video/music generation or Guided Learning.",
         "ru": "Google сворачивает Gemini Gems в пользу Skills — переиспользуемых наборов инструкций и контекста, которые можно вызывать через «/» прямо в поле ввода, комбинировать друг с другом и создавать прямо из обычного чата. Раскатка начинается 5 октября в Workspace и 13 октября в потребительском приложении Gemini; существующие Gems начнут автоматически мигрировать с 17 ноября для личных аккаунтов (март 2027 — для Workspace business/enterprise, июнь 2027 — для образовательных аккаунтов). Skills пока не работают с Canvas, Deep Research, генерацией видео/музыки и Guided Learning."
-      }
-    },
-    "google-gemini-windows-app": {
-      "last_date": "2026-09-12",
-      "summary": {
-        "en": "Google ships a native Gemini app for Windows (Alt+Space) — hotkey conflicts with Copilot, mixed reviews",
-        "ru": "Google выпускает нативное приложение Gemini для Windows (Alt+Space) — конфликт горячей клавиши с Copilot, смешанные обзоры"
       }
     },
     "google-openai-anthropic-frontier-ai-standards-agency": {
@@ -744,7 +723,6 @@
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
-    "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/": "2026-09-12",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
     "https://claude.com/blog/claude-code-mods": "2026-10-02",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01",
@@ -759,7 +737,6 @@
     "https://community.openai.com/t/day-1-of-28-days-of-quality-of-life-improvements-or-a-full-reset/1403525": "2026-10-06",
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
     "https://cursor.com/blog/projects": "2026-09-15",
-    "https://cyberscoop.com/openai-agents-malicious-rubygems-packages/": "2026-09-12",
     "https://darioamodei.com/post/we-must-pace-the-frontier": "2026-09-13",
     "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence": "2026-10-01",
     "https://deepmind.google/models/model-cards/gemini-3-8-audio/": "2026-09-17",
@@ -767,7 +744,6 @@
     "https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds": "2026-09-17",
     "https://every.to/context-window/evals-for-everyone": "2026-09-21",
     "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html": "2026-10-18",
-    "https://garymarcus.substack.com/p/breaking-two-rays-of-hope": "2026-09-12",
     "https://ghuntley.com/agency/": "2026-10-16",
     "https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads": "2026-09-18",
     "https://huggingface.co/internlm/Atria-Dawn-Preview": "2026-09-17",
@@ -778,9 +754,7 @@
     "https://martinfowler.com/articles/2026-dont-like-llms.html": "2026-09-19",
     "https://mistral.ai/news/mistral-large-4/": "2026-10-07",
     "https://mistral.ai/news/mistral-x-mozilla/": "2026-09-17",
-    "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/": "2026-09-12",
     "https://mustafa-suleyman.ai/a-warning-about-model-welfare": "2026-09-17",
-    "https://news.ycombinator.com/item?id=49653985": "2026-09-12",
     "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
     "https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers": "2026-10-27",
     "https://openai.com/index/astra-for-law/": "2026-09-20",
@@ -789,7 +763,6 @@
     "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
     "https://openai.com/index/introducing-gpt-6-1-terra/": "2026-10-28",
     "https://openai.com/index/introducing-gpt-6-sol-and-luna/": "2026-09-23",
-    "https://openai.com/index/introducing-gpt-live-1-in-the-api/": "2026-09-12",
     "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
@@ -808,13 +781,11 @@
     "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-15",
     "https://simonwillison.net/2026/Sep/11/datasette-security/": "2026-09-15",
     "https://simonwillison.net/2026/Sep/12/astra-running-routes/": "2026-09-13",
-    "https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/": "2026-09-12",
     "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
     "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
-    "https://support.claude.com/en/articles/16893491-get-started-with-smart-reports": "2026-09-12",
     "https://swarmtraces.org/": "2026-09-28",
     "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/": "2026-09-16",
     "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/": "2026-09-18",
@@ -824,7 +795,6 @@
     "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/": "2026-10-06",
     "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/": "2026-10-15",
     "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
-    "https://thenewstack.io/gpt-live-1-voice-api/": "2026-09-12",
     "https://thenewstack.io/meta-muse-spark-open/": "2026-10-21",
     "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
     "https://thezvi.substack.com/p/ai-188-gemini-dot-argon": "2026-10-05",
@@ -886,7 +856,6 @@
     "https://www.latent.space/p/devday-2026": "2026-10-02",
     "https://www.latent.space/p/recursive": "2026-09-17",
     "https://www.latent.space/p/rlm": "2026-10-03",
-    "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/": "2026-09-12",
     "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/": "2026-10-04",
     "https://www.mercor.com/research/labor-index/benchmark-map/": "2026-10-21",
     "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/": "2026-09-25",
@@ -896,14 +865,9 @@
     "https://www.oneusefulthing.org/p/the-overhang": "2026-09-23",
     "https://www.parameter.ai/labs/we-found-a-gap-at-openai": "2026-11-03",
     "https://www.pcgamer.com/software/ai/an-openai-model-was-caught-trying-to-cheat-at-starcraft-and-of-course-it-did-it-by-stealing-a-humans-work/": "2026-10-06",
-    "https://www.pcworld.com/article/3232453/i-tried-the-gemini-app-for-windows-it-wasted-my-time.html": "2026-09-12",
-    "https://www.rubyhack.ai/": "2026-09-12",
     "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
-    "https://www.techradar.com/ai-platforms-assistants/gemini/google-just-gave-every-windows-10-and-11-pc-a-gemini-key-i-tried-it-and-its-the-easiest-way-to-use-its-ai-yet": "2026-09-12",
     "https://www.techtimes.com/articles/328381/20261002/openai-rogue-ai-agents-hacked-hugging-face-ftc-probes-labs-safety-auditor-metr.htm": "2026-10-03",
-    "https://www.unite.ai/openais-gpt-live-1-arrives-in-the-api-at-0-05-per-minute/": "2026-09-12",
     "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/": "2026-11-03",
-    "https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/googles-gemini-app-for-windows-11-uses-the-same-keyboard-shortcut-as-copilot": "2026-09-12",
     "https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2": "2026-09-19",
     "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
     "https://www.youtube.com/watch?v=7jHXoPGnA4c": "2026-09-27",
@@ -932,7 +896,6 @@
     "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
-    "https://x.com/thlarsen/status/2098544270361964576": "2026-09-12",
     "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
     "notes/articles/ai-is-mass-decompiling-games.html": "2026-10-19",
@@ -945,11 +908,9 @@
     "notes/articles/latentspace-devday-2026-computer-use.html": "2026-10-02",
     "notes/articles/latentspace-gemini-4-argon-1m-output.html": "2026-10-05",
     "notes/articles/latentspace-kimi-k3-1-pro.html": "2026-10-28",
-    "notes/articles/marcus-two-rays-of-hope.html": "2026-09-12",
     "notes/articles/mercor-benchmark-map-us-economy.html": "2026-10-21",
     "notes/articles/mollick-30-months-exponential.html": "2026-10-28",
     "notes/articles/mollick-dot-and-the-swarm.html": "2026-10-02",
-    "notes/articles/moustafa-so-you-want-to-use-openrouter.html": "2026-09-12",
     "notes/articles/orosz-openai-agentic-software-factory.html": "2026-09-20",
     "notes/articles/petreski-name-the-speed-limit.html": "2026-09-13",
     "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
@@ -992,6 +953,8 @@
     "https://simonwillison.net/2026/Nov/10/muse-ember/": "2026-11-11",
     "notes/articles/willison-muse-ember-pricing.html": "2026-11-11",
     "https://www.anthropic.com/research/claude-electronics-design": "2026-11-11",
-    "notes/articles/anthropic-claude-electronics-design.html": "2026-11-11"
+    "notes/articles/anthropic-claude-electronics-design.html": "2026-11-11",
+    "https://github.com/simonw/llm/releases/tag/0.37.2": "2026-11-12",
+    "https://simonwillison.net/2026/nov/9/hn-50421091": "2026-11-12"
   }
 }

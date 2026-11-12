@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T05:15:00Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-11-12-willison-llm-key-leak-fix",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "llm 0.37.2: две тихие дыры, через которые свой ключ OpenAI уходил на чужой эндпоинт",
+        "en": "llm 0.37.2: two quiet holes that sent your real OpenAI key to someone else's endpoint"
+      },
+      "url": "https://github.com/simonw/llm/releases/tag/0.37.2",
+      "summary": {
+        "ru": "Патч-релиз CLI-утилиты llm закрывает две уязвимости безопасности: при настройке стороннего OpenAI-совместимого эндпоинта (через api_base) инструмент при определённых условиях — отсутствующем именованном ключе или комбинации флагов responses/chat_completions — тихо подставлял в запрос настоящий ключ OPENAI_API_KEY вместо отказа или использования только явно выданного для этого эндпоинта ключа.",
+        "en": "A patch release of the llm CLI closes two security advisories: when pointed at a third-party OpenAI-compatible endpoint (via api_base), the tool would, under certain conditions — a missing named key, or a responses/chat_completions flag combination — silently attach the real OPENAI_API_KEY to the request instead of failing or using only a key explicitly issued for that endpoint."
+      },
+      "note_page": "notes/articles/willison-llm-key-leak-fix.html"
+    },
+    {
+      "id": "2026-11-12-willison-threejs-vanilla-webgl",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Нужен ли вайб-кодингу Three.js? Уиллисон портирует 3D-яйцо на чистый WebGL",
+        "en": "Does vibe-coding even need Three.js? Willison ports a 3D egg to raw WebGL"
+      },
+      "url": "https://simonwillison.net/2026/nov/9/hn-50421091",
+      "summary": {
+        "ru": "Саймон Уиллисон вайб-кодит яйцо Фаберже на Three.js, затем в том же чате просит Claude Opus 5.5 Medium переписать сцену на чистый JavaScript и WebGL без библиотеки. Вывод: модель справляется с 3D-рендерингом и без Three.js; единственная разница — чуть менее читаемый для человека код, что для вайб-кодинга, где автор обычно смотрит на результат, а не читает код, не критично.",
+        "en": "Simon Willison vibe-codes a Fabergé egg in Three.js, then in the same chat asks Claude Opus 5.5 Medium to rewrite the scene in vanilla JavaScript and WebGL, no library. Verdict: the model handles 3D rendering fine without Three.js; the only difference is slightly less human-readable code, which barely matters for vibe-coding where the author mostly checks the result rather than reading the code."
+      },
+      "note_page": "notes/articles/willison-three-js-vs-vanilla-webgl-vibe-coding.html"
+    }
+  ]
+}
