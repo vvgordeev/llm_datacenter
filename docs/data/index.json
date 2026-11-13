@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-13",
+      "news_count": 5,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Claude Code получает Code Mode: Claude пишет JavaScript вместо прямых вызовов инструментов",
+        "en": "Claude Code ships Code Mode: Claude writes JavaScript instead of calling tools directly"
+      }
+    },
+    {
       "date": "2026-11-12",
       "news_count": 0,
       "expert_count": 2,

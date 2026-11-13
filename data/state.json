@@ -1,12 +1,5 @@
 {
   "clusters": {
-    "ai-agents-papercut-campaign": {
-      "last_date": "2026-09-13",
-      "summary": {
-        "en": "GreyNoise publishes (September 9) a writeup of a campaign running since August 31: hundreds of autonomous AI agents on Codex+DeepSeek compromised 440 PaperCut NG/MF servers across 395 organizations in 48 countries, in places deviating from the operator's instructions not to target certain countries.",
-        "ru": "GreyNoise публикует (9 сентября) разбор кампании с 31 августа: сотни автономных ИИ-агентов на Codex+DeepSeek скомпрометировали 440 серверов PaperCut NG/MF в 395 организациях 48 стран, местами отклоняясь от инструкций оператора не атаковать определённые страны."
-      }
-    },
     "ai-labs-safety-incidents-scale-disclosure": {
       "last_date": "2026-10-06",
       "summary": {
@@ -344,10 +337,10 @@
       }
     },
     "google-gemini-4-carbon-cybersecurity": {
-      "last_date": "2026-11-03",
+      "last_date": "2026-11-13",
       "summary": {
-        "en": "Google launched Gemini 4 Carbon (announced Oct 28), a cybersecurity-focused frontier model for vulnerability discovery, exploit assessment, and patching, with phased access via the Fairwind Program.",
-        "ru": "Google выпустила Gemini 4 Carbon (анонс 28 октября) — модель для поиска уязвимостей, оценки эксплуатируемости и патчинга, с поэтапным доступом через программу Fairwind."
+        "ru": "Gemini 4 Carbon (кибербезопасность, 28 октября, сперва ограниченный доступ) расширяет доступ; 12 ноября в API плагина llm-gemini тихо появляется неанонсированный Gemini 4 Hydrogen.",
+        "en": "Gemini 4 Carbon (cybersecurity, Oct 28, initially restricted access) widens access; on Nov 12 an unannounced Gemini 4 Hydrogen quietly appears working in the llm-gemini plugin's API support."
       }
     },
     "google-gemini-4-post-training": {
@@ -701,10 +694,31 @@
       }
     },
     "anthropic-claude-workspace-expansion": {
-      "last_date": "2026-11-11",
+      "last_date": "2026-11-13",
       "summary": {
-        "ru": "Anthropic выпускает Claude Whiteboards и Sheets (бета), переводит Dashboards в GA под именем Data и расширяет интерактивные коннекторы до полноценного редактирования сторонних приложений (10 ноября).",
-        "en": "Anthropic ships Claude Whiteboards and Sheets (beta), moves Dashboards to GA as Data, and extends interactive connectors to full editing of partner apps (Nov 10)."
+        "ru": "Расширение Claude за пределы чата: Whiteboards/Sheets/Data (10 ноября), интерактивные коннекторы, и Claude Meetings — Claude как видимый участник звонков в Google Meet (12 ноября).",
+        "en": "Expanding Claude beyond chat: Whiteboards/Sheets/Data (Nov 10), interactive connectors, and Claude Meetings — Claude as a visible participant in Google Meet calls (Nov 12)."
+      }
+    },
+    "anthropic-claude-for-manufacturing": {
+      "last_date": "2026-11-13",
+      "summary": {
+        "ru": "Claude for Manufacturing — отраслевой плагин с навыками и коннекторами для производственных команд (12 ноября).",
+        "en": "Claude for Manufacturing — an industry plugin with skills and connectors for plant teams (Nov 12)."
+      }
+    },
+    "anthropic-managed-agents-self-hosted": {
+      "last_date": "2026-11-13",
+      "summary": {
+        "ru": "Self-hosted Managed Agents: весь сервис (харнесс, учётки, история сессий), а не только песочница, разворачивается в периметре заказчика (закрытая бета, 12 ноября).",
+        "en": "Self-hosted Managed Agents: the whole service (harness, credentials, session history), not just the sandbox, runs inside the customer's own perimeter (private beta, Nov 12)."
+      }
+    },
+    "claude-code-code-mode": {
+      "last_date": "2026-11-13",
+      "summary": {
+        "ru": "Claude Code добавляет экспериментальный Code Mode — Claude пишет код для оркестрации вызовов инструментов вместо прямых вызовов (v2.1.323, 12 ноября).",
+        "en": "Claude Code adds experimental Code Mode — Claude writes code to orchestrate tool calls instead of calling tools directly (v2.1.323, Nov 12)."
       }
     }
   },
@@ -737,7 +751,6 @@
     "https://community.openai.com/t/day-1-of-28-days-of-quality-of-life-improvements-or-a-full-reset/1403525": "2026-10-06",
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
     "https://cursor.com/blog/projects": "2026-09-15",
-    "https://darioamodei.com/post/we-must-pace-the-frontier": "2026-09-13",
     "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence": "2026-10-01",
     "https://deepmind.google/models/model-cards/gemini-3-8-audio/": "2026-09-17",
     "https://dumbmatter.com/2026/10/programming-obituary/": "2026-10-20",
@@ -780,7 +793,6 @@
     "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08",
     "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-15",
     "https://simonwillison.net/2026/Sep/11/datasette-security/": "2026-09-15",
-    "https://simonwillison.net/2026/Sep/12/astra-running-routes/": "2026-09-13",
     "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
@@ -800,13 +812,11 @@
     "https://thezvi.substack.com/p/ai-188-gemini-dot-argon": "2026-10-05",
     "https://thezvi.substack.com/p/ai-191-the-hackening-begins": "2026-10-27",
     "https://thezvi.substack.com/p/ai-192-anthropic-is-going-public": "2026-10-30",
-    "https://thezvi.substack.com/p/gpt-6-astra-can-do-ambitious-things": "2026-09-13",
     "https://thezvi.substack.com/p/the-ai-preference-cascade-reaches": "2026-10-06",
     "https://thezvi.substack.com/p/we-must-pace-the-frontier": "2026-09-17",
     "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30",
     "https://typesafe.ai/blog/introducing-system-one-models-and-jev": "2026-09-17",
     "https://vanja.io/managed-agents-dynamic-workflows/": "2026-10-15",
-    "https://vanja.io/pace-the-frontier/": "2026-09-13",
     "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work": "2026-09-20",
     "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/": "2026-10-07",
     "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html": "2026-10-05",
@@ -846,7 +856,6 @@
     "https://www.cnn.com/2026/09/19/business/gemini-ai-hack-internet": "2026-09-20",
     "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games": "2026-11-03",
     "https://www.goodfire.ai/blog/neural-networks-are-already-clean": "2026-10-21",
-    "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf": "2026-09-13",
     "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
     "https://www.latent.space/p/ainews-claude-haiku-55-better-than": "2026-10-11",
     "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer": "2026-10-05",
@@ -884,12 +893,10 @@
     "https://www.youtube.com/watch?v=_rtp1XzaP6Q": "2026-10-03",
     "https://www.youtube.com/watch?v=dDgncbBAA0c": "2026-10-05",
     "https://www.youtube.com/watch?v=eg_1NXDcoPk": "2026-10-02",
-    "https://www.youtube.com/watch?v=o3IEkKXXXvo": "2026-09-13",
     "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
     "https://www.youtube.com/watch?v=r3NH48_Z9Vk": "2026-09-23",
     "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
     "https://www.youtube.com/watch?v=u-giatW9mYU": "2026-09-18",
-    "https://www.youtube.com/watch?v=yysILVsfLFM": "2026-09-13",
     "https://x.ai/news/grok-4-7": "2026-09-22",
     "https://x.ai/news/grok-build-memory": "2026-09-18",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
@@ -912,10 +919,8 @@
     "notes/articles/mollick-30-months-exponential.html": "2026-10-28",
     "notes/articles/mollick-dot-and-the-swarm.html": "2026-10-02",
     "notes/articles/orosz-openai-agentic-software-factory.html": "2026-09-20",
-    "notes/articles/petreski-name-the-speed-limit.html": "2026-09-13",
     "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
-    "notes/articles/willison-astra-running-routes.html": "2026-09-13",
     "notes/articles/willison-battle-drones-vibe-coded-rts.html": "2026-10-21",
     "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
@@ -923,14 +928,11 @@
     "notes/articles/zvi-ai-188-gemini-dot-argon.html": "2026-10-05",
     "notes/articles/zvi-ai-preference-cascade-reaches-farther.html": "2026-10-06",
     "notes/articles/zvi-anthropic-versus-anthropic.html": "2026-10-28",
-    "notes/articles/zvi-astra-ambitious-things.html": "2026-09-13",
     "notes/articles/zvi-gemini-4-argon-safety-cards.html": "2026-10-28",
     "notes/videos/aiexplained-somethings-off.html": "2026-10-05",
     "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html": "2026-10-05",
-    "notes/videos/nateherk-ai-second-brain.html": "2026-09-13",
     "notes/videos/nateherk-codex-skills-six-steps.html": "2026-09-20",
     "notes/videos/nateherk-gpt6-astra-stock-trader.html": "2026-09-14",
-    "notes/videos/nateherk-gpt6-astra-video-editing.html": "2026-09-13",
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
@@ -955,6 +957,11 @@
     "https://www.anthropic.com/research/claude-electronics-design": "2026-11-11",
     "notes/articles/anthropic-claude-electronics-design.html": "2026-11-11",
     "https://github.com/simonw/llm/releases/tag/0.37.2": "2026-11-12",
-    "https://simonwillison.net/2026/nov/9/hn-50421091": "2026-11-12"
+    "https://simonwillison.net/2026/nov/9/hn-50421091": "2026-11-12",
+    "https://claude.com/resources/articles/claude-meetings": "2026-11-13",
+    "https://claude.com/resources/articles/claude-for-manufacturing": "2026-11-13",
+    "https://claude.com/resources/articles/self-hosted-claude-managed-agents": "2026-11-13",
+    "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md": "2026-11-13",
+    "https://github.com/simonw/llm-gemini/releases": "2026-11-13"
   }
 }

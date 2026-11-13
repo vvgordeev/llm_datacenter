@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T05:14:37Z",
+  "news": [
+    {
+      "id": "2026-11-13-claude-meetings",
+      "cluster_id": "anthropic-claude-workspace-expansion",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic запускает Claude Meetings: ИИ становится видимым участником видеозвонков",
+        "en": "Anthropic launches Claude Meetings: Claude joins video calls as a visible participant"
+      },
+      "summary": {
+        "ru": "Anthropic вывела в бету Claude Meetings: Claude подключается к звонку в Google Meet как видимый участник, ведёт заметки и список задач, отвечает на вопросы голосом или в чате и может прямо во время обсуждения строить документы, доски и другие артефакты вместе с командой. После звонка создаётся страница встречи с заметками, транскриптом и результатами работы, к которой можно вернуться позже. Доступно в бете для тарифов Team и Enterprise, пока только через Google Meet; по умолчанию Claude покидает звонок, если подключается внешний гость, если админ не разрешил иное.",
+        "en": "Anthropic rolled out Claude Meetings in beta: Claude joins a Google Meet call as a visible participant, takes notes and action items, answers questions aloud or in chat, and can build docs, whiteboards, and other artifacts live as the team talks. Each meeting gets a page with notes, a transcript, and anything Claude made, which people can revisit later. It's in beta for Team and Enterprise plans, Google Meet only for now; by default Claude leaves if an outside guest joins, unless an admin allows it."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Продолжает перенос Claude из чата в реальное время совместной работы, но рынок ИИ-ассистентов для звонков (Otter, Fireflies, Granola) уже развит — это развитие в рамках известного класса сценариев, а не новый подход.",
+        "en": "Continues moving Claude from chat into real-time teamwork, but the market for AI meeting assistants (Otter, Fireflies, Granola) is already mature — this extends a known class of use cases rather than introducing a new approach."
+      },
+      "source_url": "https://claude.com/resources/articles/claude-meetings",
+      "opinions": [
+        {
+          "author": "Axios",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Anthropic тестировала Claude Meetings внутри компании около двух месяцев — по словам руководителя продукта, теперь Claude присутствует почти на всех встречах компании.",
+            "en": "Anthropic has tested Claude Meetings internally for about two months — per its product lead, Claude now attends nearly all of the company's meetings."
+          },
+          "url": "https://www.axios.com/2026/11/10/anthropic-claude-meetings-knowledge-work"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Превращение устного обсуждения в документ, доску или план прямо во время звонка, с кратким резюме по запросу до конца встречи.",
+            "en": "Turning spoken discussion into a doc, whiteboard, or plan live during the call, with an on-demand recap before the meeting ends."
+          },
+          "url": "https://claude.com/resources/articles/claude-meetings"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-claude-for-manufacturing",
+      "cluster_id": "anthropic-claude-for-manufacturing",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic выпускает Claude for Manufacturing — плагин для производственных команд",
+        "en": "Anthropic launches Claude for Manufacturing, a plugin for plant teams"
+      },
+      "summary": {
+        "ru": "Anthropic представила Claude for Manufacturing — плагин с 17 навыками (продажи, качество, эксплуатация, снабжение, проектирование) и четырьмя коннекторами (Autodesk Fusion, Infor, Microsoft 365, Oracle NetSuite). Claude составляет коммерческие предложения, расследует брак по истории отчётов, ранжирует вероятные причины поломки оборудования по данным датчиков и ремонтным записям, сравнивает варианты конструкции в Fusion и готовит отчёты по производству — всегда с проверкой человеком перед отправкой клиенту или поставщику. Доступно на тарифах Team и Enterprise; 17 ноября пройдёт технический вебинар.",
+        "en": "Anthropic introduced Claude for Manufacturing, a plugin with 17 skills (sales, quality, operations, supply chain, design) and four connectors (Autodesk Fusion, Infor, Microsoft 365, Oracle NetSuite). Claude drafts quotes, investigates defects against past inspection reports, ranks likely causes of equipment breakdowns from sensor data and repair notes, compares design variants in Fusion, and compiles production reports — always ending with a human review before anything reaches a customer or supplier. Available on Team and Enterprise plans; a technical webinar follows on November 17."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Расширяет применимость Claude на новую отраслевую нишу через связку навыков и коннекторов, но по методу это развитие уже знакомого формата отраслевых паков (жизнь науки, финансы), а не новый подход к использованию LLM.",
+        "en": "Extends Claude's reach into a new industry niche via a skills-plus-connectors bundle, but methodologically this follows the already-familiar vertical-plugin format (life sciences, financial services) rather than a new approach to using LLMs."
+      },
+      "source_url": "https://claude.com/resources/articles/claude-for-manufacturing",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Расследование брака: документирование несоответствия, поиск похожих случаев в прошлых отчётах, ранжирование вероятных причин и черновик корректирующего отчёта.",
+            "en": "Quality investigation: documenting a failed inspection, checking past reports for the same issue, ranking likely causes, and drafting a corrective action report."
+          },
+          "url": "https://claude.com/resources/articles/claude-for-manufacturing"
+        },
+        {
+          "text": {
+            "ru": "Диагностика поломки оборудования по показаниям датчиков, ремонтным записям, фото и мануалам — ранжированный список причин для техника.",
+            "en": "Equipment breakdown diagnosis from sensor data, repair notes, photos, and manuals — a ranked list of likely causes for a technician to check."
+          },
+          "url": "https://claude.com/resources/articles/claude-for-manufacturing"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-claude-managed-agents-self-hosted",
+      "cluster_id": "anthropic-managed-agents-self-hosted",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Managed Agents целиком переезжает в периметр заказчика: Anthropic открывает закрытую бету self-hosted версии",
+        "en": "Managed Agents moves fully inside the customer's perimeter: Anthropic opens a private beta of a self-hosted version"
+      },
+      "summary": {
+        "ru": "Anthropic анонсировала self-hosted версию Claude Managed Agents (закрытая бета): теперь можно развернуть не только песочницу, где выполняется код агента (доступно с мая), а весь сервис — харнесс агента, обработку учётных данных и историю сессий — в собственном облаке или on-premise. Запросы к Claude можно направлять напрямую в Anthropic, через облачного провайдера (Bedrock, Google Agent Platform, Microsoft Foundry) или через собственный шлюз; история сессий хранится в своей БД, а для организаций с нулевым хранением данных это правило распространяется и на запросы к Claude. Каждый шаг агента протоколируется и экспортируется через OpenTelemetry.",
+        "en": "Anthropic announced a private beta of self-hosted Claude Managed Agents: beyond just the sandbox where agent code runs (available since May), organizations can now run the entire service — the agent harness, credential handling, and session history — in their own cloud or on-premise. Requests to Claude can route directly to Anthropic, through a cloud provider (Bedrock, Google's Agent Platform, Microsoft Foundry), or through your own gateway; session history stays in your own database, and zero-data-retention organizations get that guarantee for Claude requests too. Every agent step is logged and exportable via OpenTelemetry."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Открывает путь к автономным агентам для режимных и изолированных корпоративных сред, расширяя применимость, но остаётся развитием уже анонсированной в мае платформы Managed Agents, а не новым подходом к использованию LLM.",
+        "en": "Opens a path for autonomous agents into regulated and air-gapped enterprise environments, widening applicability, but remains an extension of the Managed Agents platform announced in May rather than a new approach to using LLMs."
+      },
+      "source_url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Агенты, работающие без присмотра с внутренним кодом и системами компании, которым по требованиям безопасности нельзя покидать периметр организации.",
+            "en": "Unattended agents working on internal code and systems that, for security reasons, must stay inside the organization's own perimeter."
+          },
+          "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-claude-code-code-mode",
+      "cluster_id": "claude-code-code-mode",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Claude Code получает Code Mode: Claude пишет JavaScript вместо прямых вызовов инструментов",
+        "en": "Claude Code ships Code Mode: Claude writes JavaScript instead of calling tools directly"
+      },
+      "summary": {
+        "ru": "В версии 2.1.323 (12 ноября) Claude Code добавил экспериментальный опциональный режим Code Mode: вместо того чтобы делать по одному прямому вызову на каждый инструмент, Claude пишет JavaScript-код, который сам оркестрирует нужные вызовы. Подход впервые предложила Cloudflare, и его уже приняли Vercel AI SDK, агент Docker и ряд MCP-инструментов — они показывают, что замена множества отдельных вызовов инструментов на один исполняемый код снижает расход токенов и позволяет агенту комбинировать много инструментов за один проход. Режим включается добровольно и может быть отключён для организации.",
+        "en": "In version 2.1.323 (November 12), Claude Code added an experimental, opt-in Code Mode: instead of making one direct call per tool, Claude writes JavaScript code that orchestrates the needed calls itself. The pattern was first proposed by Cloudflare and has since been adopted by the Vercel AI SDK, Docker's agent, and several MCP tools — all showing that swapping many discrete tool calls for one piece of executable code cuts token overhead and lets an agent combine many tools in a single pass. It's opt-in, and an organization can turn it off."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Переход от прямых вызовов инструментов к их оркестрации кодом — паттерн, уже принятый Cloudflare, Vercel и Docker; реализация в Claude Code делает его доступным миллионам разработчиков и меняет то, как агенты используют сразу много инструментов.",
+        "en": "Shifting from direct tool calls to orchestrating them with code is a pattern already adopted by Cloudflare, Vercel, and Docker; shipping it in Claude Code puts it in front of millions of developers and changes how agents use many tools at once."
+      },
+      "source_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "opinions": [],
+      "use_cases": []
+    },
+    {
+      "id": "2026-11-13-gemini-4-carbon-hydrogen-rollout",
+      "cluster_id": "google-gemini-4-carbon-cybersecurity",
+      "models": ["google"],
+      "title": {
+        "ru": "Доступ к Gemini 4 Carbon расширяется, а в API тихо появляется неанонсированный Gemini 4 Hydrogen",
+        "en": "Gemini 4 Carbon access widens, and an unannounced Gemini 4 Hydrogen quietly appears in the API"
+      },
+      "summary": {
+        "ru": "Google анонсировала Gemini 4 Carbon 28 октября как модель для кибербезопасности с доступом сперва только для отобранной группы защитников (программа Fairwind). Судя по релизам плагина llm-gemini Саймона Уиллисона, 10 ноября он добавил рабочую поддержку gemini-4-carbon, а 12 ноября — gemini-4-hydrogen, модели, которую Google пока нигде официально не анонсировала. Плагин регистрирует только модели, реально отвечающие через API, так что это не подтверждённый анонс, а признак того, что доступ к Carbon расширился за пределы пилотной группы и что Google уже гоняет в проде ещё один, необъявленный тир Gemini 4.",
+        "en": "Google announced Gemini 4 Carbon on October 28 as a cybersecurity-focused model, initially open only to a vetted group of defenders (the Fairwind program). Per Simon Willison's llm-gemini plugin release notes, he added working support for gemini-4-carbon on November 10, and for gemini-4-hydrogen — a model Google has not announced anywhere — on November 12. The plugin only registers models that actually respond over the API, so this isn't a confirmed announcement, but it is a sign that Carbon's access has widened beyond the pilot group, and that Google is already running another, unannounced, Gemini 4 tier in production."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Расширение доступа к Gemini 4 Carbon и появление непубличного тира Hydrogen значимо для гонки моделей, но метод работы с LLM не меняет — тот же API, просто новый тир и более широкий доступ.",
+        "en": "Widening access to Gemini 4 Carbon and the appearance of an unannounced Hydrogen tier matters for the model race, but changes nothing about how LLMs are used — same API, just a new tier and broader access."
+      },
+      "source_url": "https://github.com/simonw/llm-gemini/releases",
+      "opinions": [],
+      "use_cases": []
+    }
+  ],
+  "expert_content": []
+}
