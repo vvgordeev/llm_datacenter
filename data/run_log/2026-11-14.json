@@ -1,0 +1,188 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T05:12:25Z",
+  "sources": [
+    {
+      "source": "anthropic blog (direct fetch)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "newest item Nov 10 (IPO roadshow), already archived; no new items since"
+    },
+    {
+      "source": "anthropic websearch",
+      "status": "ok",
+      "candidates": 0,
+      "note": "no new Anthropic product news found for Nov 12-14"
+    },
+    {
+      "source": "openai blog (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS ENOTFOUND openai.com via egress proxy"
+    },
+    {
+      "source": "openai websearch",
+      "status": "ok",
+      "candidates": 1,
+      "note": "surfaced Cursor/SpaceX model-access cutoff; no new Nov 12-14 product release found"
+    },
+    {
+      "source": "google blog.google (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS ENOTFOUND blog.google via egress proxy"
+    },
+    {
+      "source": "google/deepmind websearch",
+      "status": "ok",
+      "candidates": 1,
+      "note": "surfaced Gemini Robotics 2.5 (Nov 10)"
+    },
+    {
+      "source": "meta ai.meta.com (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS ENOTFOUND ai.meta.com via egress proxy"
+    },
+    {
+      "source": "meta websearch",
+      "status": "ok",
+      "candidates": 1,
+      "note": "surfaced Nov 6 specialized-models/Active Memory rollout"
+    },
+    {
+      "source": "xai x.ai (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS ENOTFOUND x.ai via egress proxy"
+    },
+    {
+      "source": "xai websearch",
+      "status": "empty",
+      "candidates": 0,
+      "note": "only thin single-source items, rejected for lack of corroboration/significance"
+    },
+    {
+      "source": "mistral mistral.ai (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS ENOTFOUND mistral.ai via egress proxy"
+    },
+    {
+      "source": "mistral websearch",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no November 2026 release found; latest is Large 4 preview from early October"
+    },
+    {
+      "source": "deepseek api-docs.deepseek.com (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS ENOTFOUND api-docs.deepseek.com via egress proxy"
+    },
+    {
+      "source": "deepseek websearch",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no November 2026 release found; latest is V4.1-Flash-1017 from Oct 17"
+    },
+    {
+      "source": "aggregator news.smol.ai (direct fetch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS ENOTFOUND news.smol.ai via egress proxy"
+    },
+    {
+      "source": "aggregator websearch (smol.ai/TLDR/Simon Willison linkblog)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no clean date-matched digest surfaced beyond items already captured via direct model/company searches"
+    },
+    {
+      "source": "hacker news algolia api",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS ENOTFOUND hn.algolia.com via egress proxy (CONNECT-level block)"
+    },
+    {
+      "source": "hacker news websearch",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no clean November 2026 HN threads; used as opinion sources instead of discovery"
+    },
+    {
+      "source": "expanded pass (LLM news Nov 14 2026 / AI model release Nov 2026 / AI coding agent update this week)",
+      "status": "ok",
+      "candidates": 3,
+      "note": "run because initial pass found <5 candidates; surfaced the 3 published items plus rejected minutiae"
+    },
+    {
+      "source": "Simon Willison (simonwillison.net)",
+      "status": "ok",
+      "candidates": 3,
+      "note": "Direct WebFetch DNS-blocked; used github.com/simonw/simonwillisonblog-backup mirror (synced 2026-11-14T00:41 UTC). 3 new items published."
+    },
+    {
+      "source": "Andrej Karpathy (YouTube)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube RSS/WebFetch DNS-blocked; WebSearch found no confirmed-dated November 2026 upload"
+    },
+    {
+      "source": "Latent Space (latent.space)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "latent.space DNS-blocked; WebSearch only surfaced AINews aggregator digest already covered elsewhere"
+    },
+    {
+      "source": "AI Explained (YouTube)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube RSS blocked; no confirmed November upload found"
+    },
+    {
+      "source": "Matt Wolfe (YouTube/futuretools.io)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube RSS and futuretools.io both DNS-blocked; no confirmed-dated video found"
+    },
+    {
+      "source": "Ethan Mollick (oneusefulthing.org)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "latest post already published in 2026-11-10 digest; no newer post found"
+    },
+    {
+      "source": "Nate Herk (YouTube)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube RSS blocked; WebSearch returned only pre-November uploads"
+    },
+    {
+      "source": "Matt Pocock (YouTube)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "YouTube RSS blocked; WebSearch returned only pre-November uploads"
+    },
+    {
+      "source": "broad search: best/popular LLM article or video this week",
+      "status": "empty",
+      "candidates": 0,
+      "note": "no reliably-dated standout beyond Willison's feed; avoided weak/unconfirmed leads"
+    }
+  ],
+  "totals": {
+    "candidates": 12,
+    "published": 6,
+    "rejected": {
+      "уже архивировано / реприз без новизны": 3,
+      "слишком тонкий источник / не подтверждено": 2,
+      "рутинный чейнджлог, не по рубрике": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: no video candidates found this run",
+    "frames": "skipped: no video candidates found this run"
+  },
+  "note": "Severe egress-proxy DNS blocking this run (openai.com, x.ai, mistral.ai, api-docs.deepseek.com, ai.meta.com, blog.google, news.smol.ai, hn.algolia.com, youtube.com, latent.space, futuretools.io, simonwillison.net, allthingsdistributed.com all unresolvable) -- far beyond the usual subset. WebSearch and the simonwillisonblog-backup GitHub mirror were the only working discovery channels. More than 1/3 of sources were blocked/empty -- this is an environment degradation signal, not a quiet news day."
+}

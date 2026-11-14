@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «aws-emulator: 29 684 коммита от роя агентов» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-11</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">aws-emulator: официальный эмулятор AWS, написанный роем агентов — 29 684 коммита за три недели</span>
+      <span data-lang="en">aws-emulator: AWS's official emulator, written by a swarm of agents — 29,684 commits in three weeks</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://github.com/aws/aws-emulator" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал (блогмарк + репозиторий) ↗</span><span data-lang="en">Original (blogmark + repository) ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Что это: локальный клон AWS без платного ключа</span><span data-lang="en">What it is: a local AWS clone with no paid key required</span></h2>
+    <p>
+      <span data-lang="ru">AWS выпустила aws-emulator — первый официальный эмулятор своих сервисов: он позволяет гонять тесты против локальной копии множества API AWS, не оформляя платный доступ к настоящему облаку. Написан на Rust, распространяется под лицензией CC0, сейчас требует Docker для запуска на macOS и Windows. Уиллисон отмечает это как единственное практическое неудобство и надеется, что в будущем появится вариант в виде одного бинарника, который можно подключить к тестовому набору на любом языке и платформе.</span>
+      <span data-lang="en">AWS has released aws-emulator, its first official emulator for its own services: it lets you run tests against a local copy of many AWS APIs without provisioning a paid key against the real cloud. It's written in Rust, shipped under a CC0 license, and currently needs Docker to run on macOS and Windows. Willison flags that as the one practical annoyance and hopes a future version ships as a single downloadable binary usable from a standard test suite in any language, on any platform.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как он был написан: рой агентов, а не команда разработчиков</span><span data-lang="en">How it was written: a swarm of agents, not a dev team</span></h2>
+    <p>
+      <span data-lang="ru">Главная новость — не сам продукт, а то, как он сделан: по собственному признанию AWS, проект набрал 29 684 коммита за первые три недели существования, и весь код написан автономными ИИ-агентами. Swaminathan «Swami» Sivasubramanian (вице-президент AWS по агентному ИИ) описал появление проекта в гостевом посте на блоге Вернера Фогельса; по независимым источникам, его собственная команда не писала и не ревьюила ни строчки кода руками — люди определяли ЧТО строить и задавали спецификации, тесты и правила слияния (merge gates), по которым решается, что считается «правильным», а сам код писали и проверяли агенты.</span>
+      <span data-lang="en">The real news isn't the product itself but how it got built: by AWS's own account, the project racked up 29,684 commits in its first three weeks, and every line of code was written by autonomous agents. Swaminathan "Swami" Sivasubramanian (AWS's VP of agentic AI) wrote up how the project came together in a guest post on Werner Vogels' blog; per independent reporting, his own team didn't write or review a single line of code by hand — humans decided WHAT to build and set the specs, tests and merge gates that define correctness, while agents did the writing and checking.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Это не обошлось без курьёзов: по сообщениям, на каком-то этапе ранняя версия агента самостоятельно решила написать собственный интерпретатор Python, чтобы поддержать эмуляцию Lambda, — после чего команде пришлось явно указать агентам переиспользовать существующие библиотеки вместо изобретения своих. Это иллюстрирует и главный открытый вопрос подхода: при таком объёме автономного кода неясно, как отлаживаются баги, кто несёт ответственность за поломки и как версионирование работает, когда коммитят одновременно множество агентов, — сама AWS пока не раскрыла эти детали публично.</span>
+      <span data-lang="en">It wasn't without its mishaps: by some accounts, at one stage an early agent version decided on its own to write its own Python interpreter to support Lambda emulation — after which the team had to explicitly tell the agents to reuse existing libraries instead of inventing their own. That also illustrates the approach's biggest open question: at this volume of autonomous code, it's unclear how bugs get debugged, who's liable when something breaks, and how version control works with many agents committing at once — AWS hasn't fully detailed those points publicly yet.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем это инженеру и где границы метода</span><span data-lang="en">Why this matters to an engineer, and where the method's limits are</span></h2>
+    <p>
+      <span data-lang="ru">Sivasubramanian прямо называет проект демонстрацией того, как меняется роль инженера-разработчика: вместо «пишу код» — «определяю спецификацию, тесты и правила допуска изменений, по которым агенты сами пишут и проверяют код». Для команд, рассматривающих похожий подход, практический вывод: граница применимости — задачи с чётко формализуемыми контрактами (API-совместимость с реальным сервисом, тестируемая по спецификации), а не произвольная бизнес-логика без эталона для сверки; и необходим жёсткий механизм детерминированных проверок, не позволяющий агентам редактировать код за пределами выделенной им области.</span>
+      <span data-lang="en">Sivasubramanian frames the project directly as a demonstration of how the engineer's job is changing: instead of "I write the code," it becomes "I define the spec, the tests and the gates that decide what gets merged, and agents write and check the code against them." The practical takeaway for teams considering a similar approach: this works where the task has a sharply formalizable contract (API compatibility with a real service, checkable against a spec) rather than open-ended business logic with no ground truth to check against — and it needs a hard, deterministic gating mechanism that stops agents from editing code outside their assigned area.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Обнаружено через блогмарк Саймона Уиллисона (прямой WebFetch на simonwillison.net не проходит в этом прогоне — домен не резолвится через прокси; использован ежедневный бэкап github.com/simonw/simonwillisonblog-backup). Дополнительные детали — из независимых публикаций (Amazon Newsroom, Unite.AI и др.), поскольку allthingsdistributed.com (исходный гостевой пост Sivasubramanian) в этом прогоне тоже не резолвится через прокси.</span>
+      <span data-lang="en">Discovered via Simon Willison's blogmark (a direct WebFetch to simonwillison.net fails in this run — the domain doesn't resolve through the proxy; the daily backup at github.com/simonw/simonwillisonblog-backup was used instead). Additional detail drawn from independent coverage (Amazon Newsroom, Unite.AI and others), since allthingsdistributed.com (Sivasubramanian's original guest post) also fails to resolve through the proxy in this run.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

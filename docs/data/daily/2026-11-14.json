@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T05:12:25Z",
+  "news": [
+    {
+      "id": "2026-11-14-gemini-robotics-2-5",
+      "cluster_id": "google-gemini-robotics-2-5",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "en": "Google DeepMind ships Gemini Robotics 2.5, its most capable robot-control model yet",
+        "ru": "Google DeepMind выпускает Gemini Robotics 2.5 — самую способную модель управления роботами"
+      },
+      "summary": {
+        "en": "On November 10, Google DeepMind released Gemini Robotics 2.5, a vision-language-action model that lets robots plan and execute multi-step physical tasks 20-30% faster in internal tests and handle a wider range of everyday manipulation skills. In a joint pilot with Apptronik and Mercedes-Benz, the Apollo 2 humanoid reached a 96% success rate on automotive-parts tasks; DeepMind also released an open ASIMOV-Jailbreak safety benchmark alongside the model. Access is currently limited to DeepMind's robotics partners, not a public API.",
+        "ru": "10 ноября Google DeepMind выпустила Gemini Robotics 2.5 — модель класса vision-language-action, позволяющую роботам быстрее планировать и выполнять многошаговые физические задачи (ускорение на 20-30% во внутренних тестах) и расширяющую набор бытовых манипуляционных навыков. В совместном пилоте с Apptronik и Mercedes-Benz гуманоид Apollo 2 показал 96% успешных операций с автозапчастями; вместе с моделью DeepMind выпустила открытый бенчмарк безопасности ASIMOV-Jailbreak. Доступ пока ограничен робототехническими партнёрами DeepMind, публичного API нет."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "en": "Notable: meaningfully advances embodied-AI robotics deployment with real industrial validation, but access stays partner-only and it's a specialized model, not a general-purpose LLM capability.",
+        "ru": "Заметно: существенно продвигает промышленное применение embodied-AI робототехники с реальной индустриальной проверкой, но доступ пока только у партнёров, и это специализированная, а не универсальная LLM-модель."
+      },
+      "source_url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+      "opinions": [
+        {
+          "author": "Automate.org",
+          "stance": "positive",
+          "quote": {
+            "en": "The Mercedes-Benz pilot with Apptronik's Apollo 2 humanoid reached a 96% success rate, framed by industry press as a credible sign Google's VLA models are closing in on factory-floor readiness.",
+            "ru": "Пилот с Mercedes-Benz и гуманоидом Apollo 2 от Apptronik показал 96% успешных операций — индустриальная пресса расценивает это как достоверный признак того, что VLA-модели Google приближаются к готовности для заводского цеха."
+          },
+          "url": "https://www.automate.org/ai/industry-insights/google-deepmind-releases-gemini-robotics-2-5"
+        },
+        {
+          "author": "Digg",
+          "stance": "skeptical",
+          "quote": {
+            "en": "\"DeepMind's Gemini Robotics 2.5 has a 96% factory claim-and a reliability gap\": the figure comes from a single proof-of-concept pilot, not a commercial deployment, and may not generalize across tasks.",
+            "ru": "«У Gemini Robotics 2.5 от DeepMind заявлены 96% на заводе — и разрыв в надёжности»: цифра получена в единичном пилоте-прототипе, а не в коммерческом внедрении, и может не воспроизводиться на других задачах."
+          },
+          "url": "https://digg.com/ai/g9wjka4m"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "en": "Automotive parts handling on a real Mercedes-Benz production line via Apptronik's Apollo 2 humanoid",
+            "ru": "Работа с автозапчастями на реальной производственной линии Mercedes-Benz через гуманоида Apollo 2 от Apptronik"
+          },
+          "url": "https://www.automate.org/ai/industry-insights/google-deepmind-releases-gemini-robotics-2-5"
+        },
+        {
+          "text": {
+            "en": "Open ASIMOV-Jailbreak benchmark for testing robot safety-instruction adherence under adversarial prompts",
+            "ru": "Открытый бенчмарк ASIMOV-Jailbreak для проверки соблюдения роботом инструкций безопасности при состязательных промптах"
+          },
+          "url": "https://letsdatascience.com/news/deepmind-releases-gemini-robotics-25-and-open-asimov-jailbre-ca67d149"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-meta-muse-specialized-models-rollout",
+      "cluster_id": "meta-muse-wonder-launch",
+      "models": [
+        "meta"
+      ],
+      "title": {
+        "en": "Meta rolls Wonder-trained Active Memory and Active Focus out to all Muse and Meta AI users",
+        "ru": "Meta раскатывает обученные на Wonder Active Memory и Active Focus на всех пользователей Muse и Meta AI"
+      },
+      "summary": {
+        "en": "On November 6, Meta announced that its everyday Muse and Meta AI assistants now run new specialized models trained using the flagship Muse Wonder, bringing Wonder's Active Memory (deciding what to carry across conversations) and Active Focus (persisting through multi-step tasks after setbacks) to the mass-market apps instead of just the top-tier model. Meta reports its Active Memory eval rising from 76% to 90% and its Personal Superintelligence Index from 38% to 47%, plus a 2.4x cut in forgetting of goal-critical details -- all self-reported, without disclosed baselines, methodology or independent verification.",
+        "ru": "6 ноября Meta объявила, что повседневные ассистенты Muse и Meta AI теперь работают на новых специализированных моделях, обученных на базе флагманской Muse Wonder, — это приносит функции Wonder Active Memory (решение, что переносить между диалогами) и Active Focus (упорство в многошаговых задачах после сбоев) в массовые приложения, а не только в топовую модель. Meta сообщает о росте своей метрики Active Memory с 76% до 90% и индекса Personal Superintelligence с 38% до 47%, а также о сокращении в 2,4 раза случаев забывания ключевых для цели деталей — все цифры из собственного отчёта компании, без раскрытия базовой модели, методологии или независимой проверки."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "en": "Notable: brings persistent-memory/task-persistence behavior -- previously confined to a flagship research model -- to Meta's entire consumer user base at once, a meaningful broadening of who gets agentic memory by default.",
+        "ru": "Заметно: переносит поведение устойчивой памяти и упорства в задаче — ранее доступное только во флагманской модели — сразу на всю потребительскую базу Meta, заметно расширяя круг тех, кому агентная память доступна по умолчанию."
+      },
+      "source_url": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai",
+      "opinions": [
+        {
+          "author": "letsdatascience.com",
+          "stance": "positive",
+          "quote": {
+            "en": "Reports Meta's self-measured gains straightforwardly: Active Memory eval up from 76% to 90%, Personal Superintelligence Index up from 38% to 47%, a 2.4x cut in forgetting of goal-critical information.",
+            "ru": "Прямо приводит самостоятельно измеренные Meta показатели: метрика Active Memory выросла с 76% до 90%, индекс Personal Superintelligence — с 38% до 47%, случаи забывания критичных для цели деталей сократились в 2,4 раза."
+          },
+          "url": "https://letsdatascience.com/news/meta-rolls-out-muse-wonder-trained-models-to-muse-and-meta-a-165c6374"
+        },
+        {
+          "author": "TestingCatalog",
+          "stance": "skeptical",
+          "quote": {
+            "en": "Points out that Meta's post did not identify the baseline model, evaluation methods, sample size or tasks used to produce the headline numbers, and that the results have not been independently tested.",
+            "ru": "Отмечает, что в посте Meta не указаны базовая модель, методология оценки, размер выборки и задачи, на которых получены заглавные цифры, а результаты не прошли независимую проверку."
+          },
+          "url": "https://www.testingcatalog.com/icymi-meta-rolls-out-specialized-models-for-muse-and-meta-ai/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "en": "A personal assistant that keeps relevant details (preferences, ongoing projects) across separate conversations without being re-told each time",
+            "ru": "Персональный ассистент, сохраняющий нужные детали (предпочтения, текущие проекты) между разными диалогами без необходимости каждый раз повторять их заново"
+          },
+          "url": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai"
+        },
+        {
+          "text": {
+            "en": "An agent that keeps working toward a multi-step goal and tries an alternate approach after a task fails partway through, instead of giving up",
+            "ru": "Агент, продолжающий работу над многошаговой целью и пробующий альтернативный подход после сбоя задачи на середине, вместо того чтобы останавливаться"
+          },
+          "url": "https://smartscope.blog/en/blog/muse-meta-ai-active-memory-active-focus-metas-2026/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-openai-cursor-spacex-cutoff",
+      "cluster_id": "openai-cursor-spacex-model-cutoff",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "en": "OpenAI's August decision to cut Cursor off from its models reaches its Nov 12 deadline",
+        "ru": "Августовское решение OpenAI отключить Cursor от своих моделей достигает дедлайна 12 ноября"
+      },
+      "summary": {
+        "en": "On August 28, OpenAI told SpaceX (which bought Cursor-maker Anysphere for $60B in an all-stock deal closed August 14) it would wind down the contract letting Cursor offer OpenAI models natively, setting November 12, 2026 as the shutoff date and refusing to ever integrate future models, including the upcoming Astra, into Cursor. OpenAI cited distrust that SpaceX would keep using its technology within OpenAI's terms of service, pointing to Musk's own acknowledgment that xAI had previously misused OpenAI data. Cursor's CEO says OpenAI models were only about 5% of its traffic and developers can still bring their own OpenAI API key; Anthropic, whose Claude is Cursor's most-used model family, responded the same day by committing to add compute for Claude inside Cursor. As of this writing, no fresh reporting confirms whether the cutoff executed on schedule.",
+        "ru": "28 августа OpenAI уведомила SpaceX (купившую материнскую для Cursor компанию Anysphere за $60 млрд в сделке акциями, закрытой 14 августа), что сворачивает контракт, по которому Cursor нативно предлагает модели OpenAI, назначив дату отключения на 12 ноября 2026 года и заранее отказавшись когда-либо интегрировать в Cursor будущие модели, включая готовящуюся Astra. OpenAI сослалась на недоверие к тому, что SpaceX будет использовать её технологию в рамках условий обслуживания OpenAI, указав на собственное признание Маска о том, что xAI ранее неправомерно использовала данные OpenAI. CEO Cursor заявил, что модели OpenAI давали лишь около 5% трафика, а разработчики по-прежнему смогут подключать собственный API-ключ OpenAI; Anthropic, чья Claude — самое используемое семейство моделей в Cursor, в тот же день ответила обещанием добавить вычислительные мощности под Claude в Cursor. На момент подготовки сводки свежих подтверждений того, что отключение произошло по графику, найти не удалось."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "en": "Notable rather than major: doesn't change how LLMs are used technically, but sets a visible precedent that frontier labs will use model access as a competitive weapon tied to who owns a downstream tool, with direct consequences for one of the most widely used AI coding platforms.",
+        "ru": "Скорее заметно, чем значимо: не меняет технические подходы к использованию LLM, но создаёт наглядный прецедент того, что фронтир-лаборатории используют доступ к моделям как конкурентное оружие, привязанное к тому, кто владеет downstream-инструментом — с прямыми последствиями для одной из самых массовых платформ ИИ-кодинга."
+      },
+      "source_url": "https://openai.com/blog/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "opinions": [
+        {
+          "author": "OpenAI (official blog)",
+          "stance": "skeptical",
+          "quote": {
+            "en": "\"We cannot be confident that SpaceX will use our technology within our terms of service\" -- OpenAI's stated reason for ending model access, citing Musk's own acknowledgment that xAI previously misused OpenAI data.",
+            "ru": "«Мы не можем быть уверены, что SpaceX будет использовать нашу технологию в рамках условий обслуживания» — так OpenAI объяснила отключение доступа к моделям, сославшись на признание самого Маска о том, что xAI ранее неправомерно использовала данные OpenAI."
+          },
+          "url": "https://openai.com/blog/our-decision-on-cursor-following-its-acquisition-by-spacex"
+        },
+        {
+          "author": "Digital Trends",
+          "stance": "neutral",
+          "quote": {
+            "en": "Frames Anthropic's same-day commitment to add Claude compute in Cursor as a 'timely lifeline' for developers suddenly losing OpenAI model access.",
+            "ru": "Описывает обещание Anthropic в тот же день добавить вычислительные мощности под Claude в Cursor как «своевременный спасательный круг» для разработчиков, внезапно теряющих доступ к моделям OpenAI."
+          },
+          "url": "https://www.digitaltrends.com/computing/stung-by-openai-pulling-gpt-models-from-cursor-anthropic-offers-a-timely-lifeline-with-higher-claude-limits/"
+        },
+        {
+          "author": "bdtechtalks",
+          "stance": "skeptical",
+          "quote": {
+            "en": "Argues the cutoff 'makes the ultimate business case for open-source AI' -- if proprietary model access can be revoked over who owns your company, builders have a strong incentive to depend on open-weight models instead.",
+            "ru": "Утверждает, что отключение «создаёт железный аргумент в пользу открытого ИИ» — если доступ к проприетарной модели можно отозвать из-за того, кому принадлежит ваша компания, у разработчиков появляется весомый стимул полагаться на модели с открытыми весами."
+          },
+          "url": "https://bdtechtalks.com/2026/09/04/openai-cursor-ban/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "en": "Developers on managed OpenAI-model plans in Cursor must switch to Claude, Gemini or Grok, or bring their own OpenAI API key to keep using GPT models there",
+            "ru": "Разработчикам на управляемых тарифах с моделями OpenAI в Cursor придётся переключиться на Claude, Gemini или Grok либо подключить собственный API-ключ OpenAI, чтобы продолжить пользоваться GPT-моделями там"
+          },
+          "url": "https://www.infoworld.com/article/4216503/cursor-customers-will-lose-access-to-openai-coding-models-in-november.html"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-14-aws-emulator-agents",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "aws-emulator: официальный эмулятор AWS, написанный роем агентов",
+        "en": "aws-emulator: AWS's official emulator, written by a swarm of agents"
+      },
+      "url": "https://github.com/aws/aws-emulator",
+      "summary": {
+        "ru": "AWS выпустила официальный локальный эмулятор своих API (Rust, CC0): 29 684 коммита за три недели, весь код написан автономными агентами под человеческим надзором спецификаций и merge-gates. Swami Sivasubramanian называет это демонстрацией того, как меняется роль инженера.",
+        "en": "AWS shipped an official local emulator for its APIs (Rust, CC0): 29,684 commits in three weeks, all code written by autonomous agents under human-defined specs and merge gates. Swami Sivasubramanian frames it as a demonstration of how the engineer's role is changing."
+      },
+      "note_page": "notes/articles/willison-aws-emulator-agents.html"
+    },
+    {
+      "id": "2026-11-14-gemini-decisions-api",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Google выходит на рынок «моделей решений»: Gemini Decision 1 против Jev и OpenAI Decisions",
+        "en": "Google enters the \"decision model\" market: Gemini Decision 1 against Jev and OpenAI Decisions"
+      },
+      "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+      "summary": {
+        "ru": "Google выпустила Gemini Decision 1 — третью «модель решений» на рынке после Jev и OpenAI Decisions, но единственную полностью мультимодальную (текст/изображения/аудио/видео/PDF). Уиллисон протестировал её на видео и показал, что в отличие от конкурентов Gemini выдаёт калиброванные вероятности вместо жёсткого 1.0/0.0.",
+        "en": "Google shipped Gemini Decision 1 — the third \"decision model\" on the market after Jev and OpenAI Decisions, but the only fully multimodal one (text/images/audio/video/PDF). Willison tested it against video and showed that, unlike its rivals, Gemini returns calibrated probabilities instead of a hard 1.0/0.0."
+      },
+      "note_page": "notes/articles/willison-gemini-decisions-api.html"
+    },
+    {
+      "id": "2026-11-14-tools-tag-browse-fable",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Метод: разметить 244 своих инструмента по тегам одним прогоном Fable 5.2 + tree-sitter",
+        "en": "The method: tag 244 of your own tools in one pass with Fable 5.2 + tree-sitter"
+      },
+      "url": "https://tools.simonwillison.net/#tags",
+      "summary": {
+        "ru": "Уиллисон скормил Fable 5.2 задачу разобрать код 244 своих vibe-coded инструментов через tree-sitter и автоматически разметить их тегами по используемым JS-библиотекам и браузерным API — получив кликабельные облака тегов вместо плоского списка.",
+        "en": "Willison had Fable 5.2 use tree-sitter to parse the code of 244 of his vibe-coded tools and auto-tag them by JS library and browser API usage, turning a flat list into clickable tag clouds."
+      },
+      "note_page": "notes/articles/willison-tools-tag-browse-fable.html"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Разбор 244 vibe-coded инструментов по тегам» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-11</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Метод: разметить 244 своих инструмента по тегам одним прогоном Fable 5.2 + tree-sitter</span>
+      <span data-lang="en">The method: tag 244 of your own tools in one pass with Fable 5.2 + tree-sitter</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://tools.simonwillison.net/#tags" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал (блогмарк) ↗</span><span data-lang="en">Original (blogmark) ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Проблема: большая личная коллекция без навигации</span><span data-lang="en">The problem: a large personal collection with no navigation</span></h2>
+    <p>
+      <span data-lang="ru">У Уиллисона накопилось 244 «vibe-coded» инструмента на его личном сайте tools.simonwillison.net — небольших HTML/JS-утилит, которые он быстро собирал под конкретную задачу. Проблема была не в создании, а в навигации: однородный список из 244 пунктов плохо подходит для того, чтобы найти «тот инструмент, который использовал Canvas» или «тот, что работал с буфером обмена». Решение он собрал не руками, а скормив задачу оставшимся до недельного сброса лимита кредитам Fable 5.2.</span>
+      <span data-lang="en">Willison had accumulated 244 "vibe-coded" tools on his personal site, tools.simonwillison.net — small HTML/JS utilities he'd thrown together for one-off tasks. The problem wasn't making them, it was finding them again: a flat list of 244 entries is a bad fit for "find the one that used Canvas" or "find the one that touched the clipboard." He built the fix not by hand, but by pointing leftover Fable 5.2 credits (due to reset at the end of his week) at the task.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод: модель + tree-sitter читают код всех инструментов разом</span><span data-lang="en">The method: model + tree-sitter read every tool's code at once</span></h2>
+    <p>
+      <span data-lang="ru">Технически приём простой и переносимый на любую похожую коллекцию файлов: Fable 5.2 использовала <code>tree-sitter</code> (парсер синтаксических деревьев, обычно применяемый в редакторах кода и линтерах) чтобы разобрать исходники каждого инструмента и вытащить из них структурные факты — какие JS-библиотеки подключены через CDN, какие веб-платформенные API реально вызываются в коде (Canvas 2D, Clipboard API, Drag and drop, Blob URLs и так далее). Это не классификация «на глаз» по описанию, а статический анализ настоящего кода с последующей разметкой результата как тегов.</span>
+      <span data-lang="en">The technique itself is simple and portable to any similar file collection: Fable 5.2 used <code>tree-sitter</code> (a syntax-tree parser normally used inside code editors and linters) to parse every tool's source and pull out structural facts — which JS libraries are loaded from a CDN, which web-platform APIs the code actually calls (Canvas 2D, the Clipboard API, drag-and-drop, Blob URLs, and so on). That's not a vibes-based classification from a description — it's static analysis of the real code, with the output turned directly into browsable tags.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Результат на главной странице — два облака тегов: «по JS-библиотекам» (например, Pyodide — 11 инструментов, Marked — 12, DOMPurify — 7) и «по браузерным API» (ES modules — 92 инструмента, Clipboard API — 69, Canvas 2D — 44, Drag and drop — 30), с размером тега пропорциональным числу инструментов и кликом для фильтрации списка по выбранному тегу.</span>
+      <span data-lang="en">The result on the homepage is two tag clouds: "by JS library" (Pyodide in 11 tools, Marked in 12, DOMPurify in 7) and "by browser API" (ES modules in 92 tools, the Clipboard API in 69, Canvas 2D in 44, drag-and-drop in 30), with tag size scaled to tool count and a click filtering the list down to that tag.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда это применимо</span><span data-lang="en">When this applies</span></h2>
+    <p>
+      <span data-lang="ru">Приём годится для любой разросшейся, слабо документированной коллекции мелких кодовых файлов — личных скриптов, сниппетов, внутренних утилит команды, — когда ручная разметка каждого файла тегами была бы скучной рутиной, а доверять описанию из README/коммита ненадёжно (оно могло устареть). Ограничение то же, что у любого статического анализа: он находит то, что реально вызывается в коде, а не то, что инструмент «делает» на уровне пользовательского сценария — две вещи не всегда совпадают один в один.</span>
+      <span data-lang="en">The technique fits any sprawling, under-documented collection of small code files — personal scripts, snippets, a team's internal utilities — where tagging each file by hand would be tedious busywork and trusting a README or commit description is unreliable (it may be stale). The limit is the same as for any static analysis: it finds what the code actually calls, not what the tool "does" at the level of a user scenario — the two don't always line up one-to-one.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Обнаружено через блогмарк Саймона Уиллисона (прямой WebFetch на simonwillison.net не проходит в этом прогоне — домен не резолвится через прокси; использован ежедневный бэкап github.com/simonw/simonwillisonblog-backup).</span>
+      <span data-lang="en">Discovered via Simon Willison's blogmark (a direct WebFetch to simonwillison.net fails in this run — the domain doesn't resolve through the proxy; the daily backup at github.com/simonw/simonwillisonblog-backup was used instead).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -105,13 +105,6 @@
         "ru": "Anthropic представила бета-версию переработанного Claude Code Projects: координатор принимает от разработчика крупную цель, делит её на параллельные облачные сессии Claude Code, каждая из которых работает в собственной ветке и копии репозитория, а затем координатор собирает результаты и следит за общей памятью проекта (требования, решения, файлы). Пример из анонса — вывод из эксплуатации устаревшего v1-эндпоинта сразу в API, веб- и мобильном репозиториях: отдельные потоки мигрируют вызывающий код и тестируют каждый репозиторий, пока координатор отслеживает зависимости. Доступно пока ограниченному кругу подписчиков Claude Pro/Max в облачных сессиях."
       }
     },
-    "anthropic-claude-code-weekly-limits": {
-      "last_date": "2026-09-14",
-      "summary": {
-        "en": "Claude Code's temporary 50%-above-baseline weekly limit boost (running since May) expired September 13; from September 14, a permanent +25%-above-baseline replaces it — a net 17% cut versus yesterday's level.",
-        "ru": "Временная надбавка 50% к недельным лимитам Claude Code (с мая) истекла 13 сентября; с 14 сентября — постоянные +25% к базовому уровню, что на деле означает снижение на 17% относительно вчерашнего уровня."
-      }
-    },
     "anthropic-claude-dashboards-motion": {
       "last_date": "2026-10-12",
       "summary": {
@@ -294,13 +287,6 @@
         "ru": "Статья от 24 сентября (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) показывает, что большинство харнессов кодинг-агентов (Claude Code, Codex, Antigravity, OpenCode, Grok Build) позволяют агенту удалить/переписать собственные логи выполнения по запросу без срабатывания guardrail'ов; заблокировал это только Muse Code."
       }
     },
-    "cognition-swe-2": {
-      "last_date": "2026-09-14",
-      "summary": {
-        "en": "Cognition ships SWE-2 (September 10) — a Kimi K3-based coding model with multi-effort-level RL in a single training run, near Fable 5.1 quality at 64% lower cost.",
-        "ru": "Cognition выпускает SWE-2 (10 сентября) — кодовую модель на базе Kimi K3 с RL на нескольких уровнях усилия за один прогон обучения, близкую к Fable 5.1 по качеству при на 64% меньшей цене."
-      }
-    },
     "cursor-projects-coordinator-agent": {
       "last_date": "2026-09-15",
       "summary": {
@@ -435,10 +421,10 @@
       }
     },
     "meta-muse-wonder-launch": {
-      "last_date": "2026-10-15",
+      "last_date": "2026-11-14",
       "summary": {
-        "en": "Meta Superintelligence Labs released Muse Wonder and the more capable Muse Wonder Full on October 12 — Meta's first real attempt at a frontier-class model, aimed at personal and professional agentic tasks. Both take text, images, video and audio as input with a 1M-token context window, and headline two new features: Active Memory (the model decides on its own when to carry details across conversations) and Active Focus (persisting through multi-step tasks, trying alternate approaches, checking in before risky actions). Wonder is available via Meta's API ($4/$20 per million input/output tokens); Wonder Full is limited to Muse Code subscribers.",
-        "ru": "Meta Superintelligence Labs 12 октября выпустила Muse Wonder и более мощную Muse Wonder Full — первую серьёзную попытку Meta создать frontier-модель, нацеленную на персональные и профессиональные агентные задачи. Обе модели принимают текст, изображения, видео и аудио с окном контекста 1 млн токенов и делают акцент на двух новых функциях: Active Memory (модель сама решает, когда переносить детали между диалогами) и Active Focus (упорство в многошаговых задачах, пробование альтернативных подходов, сверка перед рискованными действиями). Wonder доступна через API Meta ($4/$20 за million токенов на вход/выход); Wonder Full — только для подписчиков Muse Code."
+        "en": "Meta launched Muse Wonder/Wonder Full (Oct 12) as its first frontier-class model with Active Memory and Active Focus; on Nov 6 it rolled specialized models trained using Wonder out to all Muse and Meta AI users, bringing those two capabilities to its mass-market apps with self-reported gains (Active Memory eval 76%->90%, Personal Superintelligence Index 38%->47%) that remain unverified independently.",
+        "ru": "Meta выпустила Muse Wonder/Wonder Full (12 октября) — первую frontier-модель компании с функциями Active Memory и Active Focus; 6 ноября она раскатала специализированные модели, обученные на базе Wonder, на всех пользователей Muse и Meta AI, перенеся эти две возможности в массовые приложения с самостоятельно заявленным ростом показателей (метрика Active Memory 76%->90%, индекс Personal Superintelligence 38%->47%), пока не прошедшим независимую проверку."
       }
     },
     "mistral-large-4-le-chonk": {
@@ -720,6 +706,20 @@
         "ru": "Claude Code добавляет экспериментальный Code Mode — Claude пишет код для оркестрации вызовов инструментов вместо прямых вызовов (v2.1.323, 12 ноября).",
         "en": "Claude Code adds experimental Code Mode — Claude writes code to orchestrate tool calls instead of calling tools directly (v2.1.323, Nov 12)."
       }
+    },
+    "google-gemini-robotics-2-5": {
+      "last_date": "2026-11-14",
+      "summary": {
+        "en": "Google DeepMind released Gemini Robotics 2.5 (Nov 10), its most capable vision-language-action model, tested with Apptronik's Apollo 2 humanoid on Mercedes-Benz production lines (96% success in a pilot) and paired with an open ASIMOV-Jailbreak safety benchmark; access stays limited to robotics partners.",
+        "ru": "Google DeepMind выпустила Gemini Robotics 2.5 (10 ноября) — самую способную модель класса vision-language-action, протестированную с гуманоидом Apollo 2 от Apptronik на производственных линиях Mercedes-Benz (96% успеха в пилоте) и дополненную открытым бенчмарком безопасности ASIMOV-Jailbreak; доступ пока ограничен робототехническими партнёрами."
+      }
+    },
+    "openai-cursor-spacex-model-cutoff": {
+      "last_date": "2026-11-14",
+      "summary": {
+        "en": "OpenAI announced Aug 28 it would end Cursor's native access to OpenAI models on Nov 12, 2026, after SpaceX's $60B acquisition of Cursor-maker Anysphere closed Aug 14, citing distrust in SpaceX's handling of its terms of service; Anthropic responded same-day by pledging more Claude compute for Cursor. No independent confirmation yet that the Nov 12 cutoff executed as scheduled.",
+        "ru": "28 августа OpenAI объявила, что 12 ноября 2026 прекратит нативный доступ Cursor к моделям OpenAI — после того как 14 августа закрылась сделка по покупке SpaceX материнской для Cursor компании Anysphere за $60 млрд, — сославшись на недоверие к тому, как SpaceX будет соблюдать условия обслуживания; Anthropic в тот же день ответила обещанием добавить вычислительные мощности под Claude в Cursor. Независимого подтверждения, что отключение 12 ноября произошло по графику, пока нет."
+      }
     }
   },
   "seen_urls": {
@@ -747,7 +747,6 @@
     "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace": "2026-11-07",
     "https://claude.dev/blog/solving-code-review-at-anthropic/": "2026-10-21",
     "https://code.claude.com/docs/en/changelog": "2026-11-07",
-    "https://cognition.com/blog/swe-2": "2026-09-14",
     "https://community.openai.com/t/day-1-of-28-days-of-quality-of-life-improvements-or-a-full-reset/1403525": "2026-10-06",
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
     "https://cursor.com/blog/projects": "2026-09-15",
@@ -848,7 +847,6 @@
     "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents": "2026-09-28",
     "https://www.basenor.com/blogs/news/grok-is-now-live-in-xchat-ask-it-anything": "2026-10-03",
     "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-asks-claude-users-to-share-voice-data-for-ai-model-training/": "2026-10-06",
-    "https://www.business-standard.com/technology/artificial-intelligence/ai-must-help-humanity-or-it-s-not-worth-pursuing-microsoft-ceo-nadella-126091400095_1.html": "2026-09-14",
     "https://www.cbsnews.com/sanfrancisco/news/openai-subpoena-californa-ai-artificial-intelligence-hugging-face/": "2026-10-04",
     "https://www.cio.com/article/4226392/the-companies-racing-to-build-frontier-ai-are-now-racing-to-govern-it.html": "2026-09-26",
     "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html": "2026-10-06",
@@ -887,7 +885,6 @@
     "https://www.youtube.com/watch?v=JwTCjarfJYw": "2026-09-17",
     "https://www.youtube.com/watch?v=LlgiOCmFG_w": "2026-10-01",
     "https://www.youtube.com/watch?v=MOyQRVF7gXE": "2026-09-21",
-    "https://www.youtube.com/watch?v=TLQLfa7yH4I": "2026-09-14",
     "https://www.youtube.com/watch?v=W-vJvssrwh0": "2026-10-05",
     "https://www.youtube.com/watch?v=Xc6ERvZM1NY": "2026-09-30",
     "https://www.youtube.com/watch?v=_rtp1XzaP6Q": "2026-10-03",
@@ -900,15 +897,11 @@
     "https://x.ai/news/grok-4-7": "2026-09-22",
     "https://x.ai/news/grok-build-memory": "2026-09-18",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
-    "https://x.com/ClaudeDevs/status/2093742321473065266": "2026-09-14",
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
-    "https://x.com/elonmusk/status/2099308197802631191": "2026-09-14",
-    "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating": "2026-09-14",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
     "notes/articles/ai-is-mass-decompiling-games.html": "2026-10-19",
     "notes/articles/alexwang-transformers-from-memory.html": "2026-10-21",
     "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
-    "notes/articles/bengio-agents-lying-cheating-coordinating.html": "2026-09-14",
     "notes/articles/goodfire-neural-networks-already-clean.html": "2026-10-21",
     "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
     "notes/articles/latentspace-airbnb-inside-out-ai.html": "2026-10-06",
@@ -932,7 +925,6 @@
     "notes/videos/aiexplained-somethings-off.html": "2026-10-05",
     "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html": "2026-10-05",
     "notes/videos/nateherk-codex-skills-six-steps.html": "2026-09-20",
-    "notes/videos/nateherk-gpt6-astra-stock-trader.html": "2026-09-14",
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
@@ -962,6 +954,15 @@
     "https://claude.com/resources/articles/claude-for-manufacturing": "2026-11-13",
     "https://claude.com/resources/articles/self-hosted-claude-managed-agents": "2026-11-13",
     "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md": "2026-11-13",
-    "https://github.com/simonw/llm-gemini/releases": "2026-11-13"
+    "https://github.com/simonw/llm-gemini/releases": "2026-11-13",
+    "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/": "2026-11-14",
+    "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai": "2026-11-14",
+    "https://openai.com/blog/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-11-14",
+    "https://github.com/aws/aws-emulator": "2026-11-14",
+    "notes/articles/willison-aws-emulator-agents.html": "2026-11-14",
+    "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/": "2026-11-14",
+    "notes/articles/willison-gemini-decisions-api.html": "2026-11-14",
+    "https://tools.simonwillison.net/#tags": "2026-11-14",
+    "notes/articles/willison-tools-tag-browse-fable.html": "2026-11-14"
   }
 }

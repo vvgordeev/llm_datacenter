@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Gemini Decision 1 против Jev и OpenAI Decisions» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-11</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Google выходит на рынок «моделей решений»: Gemini Decision 1 против Jev и OpenAI Decisions</span>
+      <span data-lang="en">Google enters the "decision model" market: Gemini Decision 1 against Jev and OpenAI Decisions</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/11/gemini-decisions-api/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Что такое «модель решений» и кто уже на этом рынке</span><span data-lang="en">What a "decision model" is, and who's already in the market</span></h2>
+    <p>
+      <span data-lang="ru">«Модель решений» — узкоспециализированная модель, которая отвечает не текстом, а одним из трёх строго типизированных ответов: да/нет, выбор из вариантов или оценка по рубрике (шкале). Идея в том, чтобы не гонять полноразмерную модель ради классификационной задачи внутри агентного пайплайна (роутинг, модерация, фильтрация шагов), а платить за дешёвый специализированный вызов. До анонса Google на этом поле уже были два игрока: Jev (стартап TypeSafe) и OpenAI со своим Decisions API поверх GPT-6 Luna. С 11 ноября к ним присоединился Google с моделью «Gemini Decision 1», почти один в один повторяющей набор типов вопросов Jev — вплоть до заимствования термина Jev «Noul» для вопроса да/нет.</span>
+      <span data-lang="en">A "decision model" is a narrow, specialized model that answers not with free text but with one of three strictly typed response shapes: yes/no, a choice among options, or a rubric score. The idea is to avoid spinning up a full-size model for a classification step inside an agent pipeline (routing, moderation, gating a step) and instead pay for a cheap, purpose-built call. Before Google's announcement, two players already occupied this space: Jev (from startup TypeSafe) and OpenAI's own Decisions API built on GPT-6 Luna. As of November 11, Google joins them with "Gemini Decision 1," which reuses Jev's set of question types almost one-to-one — down to borrowing Jev's own term "Noul" for a yes/no question.</span>
+    </p>
+
+    <h2><span data-lang="ru">Цена и модальность: где Gemini реально отличается</span><span data-lang="en">Price and modality: where Gemini actually differs</span></h2>
+    <p>
+      <span data-lang="ru">По цене Gemini Decision 1 повторяет GPT-6 Luna — 10 центов за миллион входных токенов, вывод бесплатный; Jev остаётся самым дешёвым вариантом на рынке — 4,2 цента за миллион. Настоящее отличие — в модальности входа. Jev принимает только текст (и JSON). OpenAI Decisions API умеет текст и изображения. Gemini Decision 1 — полностью мультимодальна: текст, изображения, аудио, видео и PDF, — то есть единственная из трёх, способная отвечать да/нет/выбор/рубрика прямо по видеопотоку или аудиозаписи, без промежуточного шага транскрибации или покадрового описания.</span>
+      <span data-lang="en">On price, Gemini Decision 1 matches GPT-6 Luna: 10 cents per million input tokens, with output free; Jev stays the cheapest option on the market at 4.2 cents per million. The real difference is input modality. Jev is text (and JSON) only. OpenAI's Decisions API handles text and images. Gemini Decision 1 is fully multimodal — text, images, audio, video and PDFs — making it the only one of the three that can answer yes/no, choice or rubric questions directly against a video stream or an audio clip, with no intermediate transcription or frame-description step.</span>
+    </p>
+
+    <h2><span data-lang="ru">Собственный тест: видео и калиброванные вероятности вместо жёсткого 1.0/0.0</span><span data-lang="en">His own test: video input, and calibrated probabilities instead of a hard 1.0/0.0</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон проверил мультимодальность не на абстрактном примере, а на собственном видеоролике («Yonkers stomping robot» — его более раннем материале) и четырёх да/нет-вопросах: есть ли в видео дракон, есть ли робот, происходит ли дело во Франции, происходит ли дело в США. Ключевое наблюдение: Jev и OpenAI на вопросы да/нет всегда возвращают жёсткие 1.0 или 0.0, а Gemini Decision 1 намеренно избегает полной уверенности и выдаёт калиброванную вероятность — например, 0.92 для верного «робот: да» и 0.05 для верного «дракон: нет», вместо круглых единицы и нуля. Для инженерной практики это значимое отличие: с вероятностью вместо бинарного флага можно задавать собственный порог отсечения под конкретную задачу (например, 0.8 для модерации против 0.5 для мягкой фильтрации), а не полагаться на то, что модель всегда «уверена».</span>
+      <span data-lang="en">Willison tested the multimodal claim not on an abstract example but on one of his own videos (the "Yonkers stomping robot" clip from an earlier post) with four yes/no questions: does this video have a dragon in it, does it have a robot, is it set in France, is it set in the USA. The key observation: Jev and OpenAI always return a hard 1.0 or 0.0 for yes/no questions, while Gemini Decision 1 deliberately avoids full confidence and returns a calibrated probability instead — for instance 0.92 for the correct "robot: yes" and 0.05 for the correct "dragon: no," rather than a flat one or zero. That's a meaningful engineering difference: a probability instead of a binary flag lets you set your own cutoff threshold per task (say, 0.8 for moderation versus 0.5 for a soft filter), instead of trusting the model to always be "sure."</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда применять и на что обратить внимание</span><span data-lang="en">When to reach for this, and what to watch for</span></h2>
+    <p>
+      <span data-lang="ru">Для задач, ограниченных текстом, Jev остаётся самым дешёвым выбором. Если нужна работа с изображениями при умеренном бюджете — OpenAI Decisions API. Если в пайплайне есть видео, аудио или PDF-документы, которые раньше приходилось предварительно превращать в текст специальным шагом, — именно это и закрывает Gemini Decision 1, и калиброванные вероятности вместо жёсткого да/нет дают больше контроля на выходе. Ограничение метода общее для всей категории: модель решений — это узкий классификатор поверх общей модели, и её корректность на своей рубрике не следует путать со способностью рассуждать о содержании сложнее простого вопроса.</span>
+      <span data-lang="en">For text-only tasks, Jev stays the cheapest pick. If you need image input on a moderate budget, OpenAI's Decisions API fits. If your pipeline has video, audio or PDF input that previously needed a separate step to turn into text first, that's exactly what Gemini Decision 1 removes — and its calibrated probabilities instead of a hard yes/no give you more control at the output end. The limit is shared across the whole category: a decision model is a narrow classifier riding on top of a general model, and its accuracy on its own rubric shouldn't be mistaken for an ability to reason about content more complex than a simple question.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту статьи из ежедневного бэкапа блога Уиллисона (github.com/simonw/simonwillisonblog-backup) — прямой WebFetch на simonwillison.net не проходит в этом прогоне (домен не резолвится через прокси); официальная страница blog.google с анонсом Gemini Decision 1 в этом прогоне тоже не резолвится.</span>
+      <span data-lang="en">Digest built from the article's full text via the daily backup of Willison's blog (github.com/simonw/simonwillisonblog-backup) — a direct WebFetch to simonwillison.net fails in this run (the domain doesn't resolve through the proxy); the official blog.google announcement page for Gemini Decision 1 also fails to resolve in this run.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-14",
+      "news_count": 3,
+      "expert_count": 3,
+      "top_title": {
+        "en": "Google DeepMind ships Gemini Robotics 2.5, its most capable robot-control model yet",
+        "ru": "Google DeepMind выпускает Gemini Robotics 2.5 — самую способную модель управления роботами"
+      }
+    },
+    {
       "date": "2026-11-13",
       "news_count": 5,
       "expert_count": 0,
