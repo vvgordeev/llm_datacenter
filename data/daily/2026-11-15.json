@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T05:09:11Z",
+  "news": [
+    {
+      "id": "2026-11-15-openai-businesses-in-chatgpt",
+      "cluster_id": "openai-chatgpt-business-agents",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI запускает Businesses in ChatGPT и верифицированных Business Agents",
+        "en": "OpenAI launches Businesses in ChatGPT and verified Business Agents"
+      },
+      "summary": {
+        "ru": "10 ноября OpenAI представила Business Hub — глобальный реестр верифицированных компаний в ChatGPT — и бета-версию Business Agents, с которыми можно напрямую переписываться для сравнения товаров и услуг (пока только избранные e-commerce/онлайн-сервисы в США). Диалоги с Business Agents визуально обособлены от обычного чата, агентов можно продвигать как спонсируемые размещения (расширение теста Sponsored Agents с сентября), а компании получают агрегированную статистику упоминаний и переходов без доступа к приватным разговорам пользователей.",
+        "en": "On November 10, OpenAI introduced Business Hub, a global registry of verified companies inside ChatGPT, plus a beta of Business Agents that users can chat with directly for comparison shopping (initially limited to select US e-commerce/online-service businesses). Business Agent chats are visually separated from regular ChatGPT conversations, agents can be sponsored as paid placements (an extension of the September Sponsored Agents test), and verified businesses get aggregated mention/visit analytics without access to users' private conversations."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — агентную коммерцию и рекламу внутри чат-бота, затрагивающий всех пользователей ChatGPT, а не только нишевых разработчиков",
+        "en": "Opens a new class of scenarios — agentic commerce and advertising inside a chatbot — touching all ChatGPT users, not just a developer niche"
+      },
+      "source_url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "opinions": [
+        {
+          "author": "aibusiness.com",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Businesses in ChatGPT нацелен на укрепление доверия предприятий к присутствию в ИИ-поиске, конкурируя напрямую с Google Business Profile",
+            "en": "Businesses in ChatGPT targets enterprise trust in AI-mediated discovery, competing directly with Google Business Profile"
+          },
+          "url": "https://aibusiness.com/generative-ai/openai-s-businesses-in-chatgpt-targets-enterprise-trust"
+        },
+        {
+          "author": "TechTarget",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Монетизация через спонсируемые размещения агентов поднимает вопрос, насколько рекомендации ChatGPT останутся независимыми от рекламных платежей",
+            "en": "Monetizing through sponsored agent placements raises the question of how independent ChatGPT's recommendations remain from advertising payments"
+          },
+          "url": "https://www.techtarget.com/news/openais-businesses-in-chatgpt-targets-enterprise-trust/874431/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пользователь сравнивает товары и услуги, переписываясь напрямую с верифицированным Business Agent компании внутри ChatGPT",
+            "en": "A user compares products and services by chatting directly with a company's verified Business Agent inside ChatGPT"
+          },
+          "url": "https://yourstory.com/ai-story/openai-business-agents-chatgpt-company-chats"
+        },
+        {
+          "text": {
+            "ru": "Продавцы Shopify подключают каталог через Business Hub, и их товары начинают отображаться в ChatGPT",
+            "en": "Shopify merchants connect their catalog through Business Hub so their products start appearing in ChatGPT"
+          },
+          "url": "https://openai.com/index/introducing-businesses-chatgpt/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-15-anthropic-claude-text-watermark",
+      "cluster_id": "anthropic-claude-text-watermark-rollout",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic завершает раскатку невидимого водяного знака в тексте Claude — без возможности отключить",
+        "en": "Anthropic completes rollout of invisible text watermarking in Claude, with no opt-out"
+      },
+      "summary": {
+        "ru": "Готовясь к требованиям EU AI Act о маркировке ИИ-контента, Anthropic с 3 ноября распространила обязательный невидимый водяной знак (без опции отключения ни на одном тарифе) на вывод более старых моделей — Mythos 5, Opus 4.7 и Sonnet 4.6, — а раскатку через Amazon Bedrock обещает завершить к 10 ноября. Знак встроен в сам выбор слов (техника в духе SynthID-Text), сохраняется при копировании и частичном редактировании, но не доказывает, что текст написан ИИ целиком — Claude мог лишь вычитать или перевести чужой текст; инструмент детекции пока доступен только в приватном превью для регуляторов, исследователей и СМИ.",
+        "en": "Preparing for EU AI Act content-labeling requirements, Anthropic began enforcing a mandatory invisible text watermark (no opt-out on any tier) on output from its older models — Mythos 5, Opus 4.7 and Sonnet 4.6 — on November 3, with Amazon Bedrock rollout for those models due to finish by November 10. The mark is embedded in Claude's word choices (a SynthID-Text-style technique), survives copy-paste and some editing, but doesn't prove a text was fully AI-written — Claude may have only proofread or translated someone else's text; a detection tool remains in private preview for regulators, researchers and media."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Меняет доверие к происхождению текста для всех пользователей Claude сразу на всех платформах, но сама механика использования LLM не меняется",
+        "en": "Changes text-provenance trust for all Claude users across every platform at once, but the mechanics of using the LLM itself don't change"
+      },
+      "source_url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "opinions": [
+        {
+          "author": "india.entrepreneur.com (редакционная колонка)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Сторонники считают прозрачность в использовании ИИ позитивным шагом",
+            "en": "Proponents believe transparency around AI usage is a positive development"
+          },
+          "url": "https://india.entrepreneur.com/technology/watermarking-ai-content-good-start-but-more-parameters-needed"
+        },
+        {
+          "author": "Cybernews",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "ИИ-пауэр-юзеры в ярости: новые водяные знаки Anthropic раскроют их секрет",
+            "en": "AI power users are furious Anthropic's new watermarks will unveil their secret"
+          },
+          "url": "https://cybernews.com/ai-news/anthropic-watermark-ai-power-users/"
+        },
+        {
+          "author": "Sean Goedecke (блог)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Водяные знаки ИИ-текста — не такая уж большая проблема",
+            "en": "AI text watermarking is not a big deal"
+          },
+          "url": "https://seangoedecke.com/ai-text-watermarking-is-not-a-big-deal/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Регуляторы, исследователи и СМИ подают заявку на доступ к приватному превью детектора водяных знаков",
+            "en": "Regulators, researchers and media request access to the private watermark-detection preview"
+          },
+          "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

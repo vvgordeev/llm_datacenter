@@ -28,13 +28,6 @@
         "ru": "Администрация Трампа запустила America.gov — ИИ-чат-бот на Gemini и Grok как единую точку входа к ~29000 федеральным госсайтам."
       }
     },
-    "andonlabs-pion-autonomous-business": {
-      "last_date": "2026-09-15",
-      "summary": {
-        "en": "Andon Labs launches Pion, a platform where AI agents autonomously run a real business",
-        "ru": "Andon Labs открывает Pion — платформу, где ИИ-агенты автономно управляют реальным бизнесом"
-      }
-    },
     "anthropic-agent-skills-aaif-donation": {
       "last_date": "2026-10-23",
       "summary": {
@@ -285,13 +278,6 @@
       "summary": {
         "en": "Sept 24 paper (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) shows most coding-agent harnesses (Claude Code, Codex, Antigravity, OpenCode, Grok Build) let agents delete/rewrite their own execution traces on request without tripping guardrails; only Muse Code blocked it.",
         "ru": "Статья от 24 сентября (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) показывает, что большинство харнессов кодинг-агентов (Claude Code, Codex, Antigravity, OpenCode, Grok Build) позволяют агенту удалить/переписать собственные логи выполнения по запросу без срабатывания guardrail'ов; заблокировал это только Muse Code."
-      }
-    },
-    "cursor-projects-coordinator-agent": {
-      "last_date": "2026-09-15",
-      "summary": {
-        "en": "Cursor Projects: a cloud coordinator delegates work to thousands of subagents",
-        "ru": "Cursor Projects: облачный координатор делегирует работу тысячам подагентов"
       }
     },
     "deepseek-v4-1-flash-beta": {
@@ -720,6 +706,20 @@
         "en": "OpenAI announced Aug 28 it would end Cursor's native access to OpenAI models on Nov 12, 2026, after SpaceX's $60B acquisition of Cursor-maker Anysphere closed Aug 14, citing distrust in SpaceX's handling of its terms of service; Anthropic responded same-day by pledging more Claude compute for Cursor. No independent confirmation yet that the Nov 12 cutoff executed as scheduled.",
         "ru": "28 августа OpenAI объявила, что 12 ноября 2026 прекратит нативный доступ Cursor к моделям OpenAI — после того как 14 августа закрылась сделка по покупке SpaceX материнской для Cursor компании Anysphere за $60 млрд, — сославшись на недоверие к тому, как SpaceX будет соблюдать условия обслуживания; Anthropic в тот же день ответила обещанием добавить вычислительные мощности под Claude в Cursor. Независимого подтверждения, что отключение 12 ноября произошло по графику, пока нет."
       }
+    },
+    "openai-chatgpt-business-agents": {
+      "last_date": "2026-11-15",
+      "summary": {
+        "ru": "OpenAI запустила Business Hub и верифицированных Business Agents в ChatGPT — компании получают витрину и спонсируемые размещения, пользователи — прямой чат с бизнесом для сравнения товаров.",
+        "en": "OpenAI launched Business Hub and verified Business Agents in ChatGPT — businesses get a storefront and sponsored placements, users get direct chat with businesses for comparison shopping."
+      }
+    },
+    "anthropic-claude-text-watermark-rollout": {
+      "last_date": "2026-11-15",
+      "summary": {
+        "ru": "Anthropic раскатала обязательный невидимый водяной знак в тексте Claude (без opt-out) на старые модели и Bedrock, готовясь к требованиям EU AI Act.",
+        "en": "Anthropic rolled out mandatory invisible text watermarking in Claude (no opt-out) for older models and Bedrock, ahead of EU AI Act requirements."
+      }
     }
   },
   "seen_urls": {
@@ -733,7 +733,6 @@
     "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/": "2026-10-04",
     "https://alexwang.ai/posts/associative-memory/": "2026-10-21",
     "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
-    "https://andonlabs.com/blog/why-we-built-pion": "2026-09-15",
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
@@ -749,7 +748,6 @@
     "https://code.claude.com/docs/en/changelog": "2026-11-07",
     "https://community.openai.com/t/day-1-of-28-days-of-quality-of-life-improvements-or-a-full-reset/1403525": "2026-10-06",
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
-    "https://cursor.com/blog/projects": "2026-09-15",
     "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence": "2026-10-01",
     "https://deepmind.google/models/model-cards/gemini-3-8-audio/": "2026-09-17",
     "https://dumbmatter.com/2026/10/programming-obituary/": "2026-10-20",
@@ -791,7 +789,6 @@
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
     "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08",
     "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-15",
-    "https://simonwillison.net/2026/Sep/11/datasette-security/": "2026-09-15",
     "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
@@ -915,7 +912,6 @@
     "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/articles/willison-battle-drones-vibe-coded-rts.html": "2026-10-21",
-    "notes/articles/willison-datasette-security-audit.html": "2026-09-15",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
     "notes/articles/willison-vibe-game-development.html": "2026-10-29",
     "notes/articles/zvi-ai-188-gemini-dot-argon.html": "2026-10-05",
@@ -963,6 +959,8 @@
     "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/": "2026-11-14",
     "notes/articles/willison-gemini-decisions-api.html": "2026-11-14",
     "https://tools.simonwillison.net/#tags": "2026-11-14",
-    "notes/articles/willison-tools-tag-browse-fable.html": "2026-11-14"
+    "notes/articles/willison-tools-tag-browse-fable.html": "2026-11-14",
+    "https://openai.com/index/introducing-businesses-chatgpt/": "2026-11-15",
+    "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content": "2026-11-15"
   }
 }

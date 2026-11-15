@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-15",
+      "news_count": 2,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "OpenAI запускает Businesses in ChatGPT и верифицированных Business Agents",
+        "en": "OpenAI launches Businesses in ChatGPT and verified Business Agents"
+      }
+    },
+    {
       "date": "2026-11-14",
       "news_count": 3,
       "expert_count": 3,
