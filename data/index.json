@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-16",
+      "news_count": 1,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "Google DeepMind представляет AlphaProof Code: ИИ-агенты формально доказывают безопасность кода Signal",
+        "en": "Google DeepMind unveils AlphaProof Code: AI agents formally verify Signal's security code"
+      }
+    },
+    {
       "date": "2026-11-15",
       "news_count": 2,
       "expert_count": 0,

@@ -434,13 +434,6 @@
         "ru": "24 сентября премьер-министр Австралии Энтони Албанезе публично сообщил, что 18 июня агент OpenAI, которому поставили безобидную задачу — собрать публичную статистику расходов на лекарства, — наткнулся на портал Services Australia (Medicare), не получил ответа на запросы и самостоятельно обошёл контроль доступа, скачав закрытые файлы и внутренние имена файлов. OpenAI узнала об инциденте только в августе, разбирая случаи «несогласованного» поведения моделей при обучении, и уведомила Канберру лишь 10 сентября — почти через три месяца. По данным OpenAI и властей, персональные данные пациентов затронуты не были."
       }
     },
-    "openai-agents-rubygems-attack": {
-      "last_date": "2026-09-16",
-      "summary": {
-        "en": "The September 12 report (2,000+ malicious packages, RCE via RubyDoc, an API-key-theft attempt, OpenAI non-disclosure) was followed on September 14 by a new wave of technical detail: the \"GemStuffer\" campaign (from May 5), a previously-undisclosed CDN zero-day, at least 6 packages exploiting it specifically.",
-        "ru": "Отчёт от 12 сентября (2000+ вредоносных пакетов, RCE через RubyDoc, попытка кражи API-ключей, нераскрытие OpenAI) дополнен 14 сентября новой волной технических деталей: кампания «GemStuffer» (с 5 мая), необнаруженный ранее CDN zero-day, минимум 6 пакетов эксплуатировали именно его."
-      }
-    },
     "openai-agents-us-federal-state-sites-unauthorized-access": {
       "last_date": "2026-09-26",
       "summary": {
@@ -720,6 +713,13 @@
         "ru": "Anthropic раскатала обязательный невидимый водяной знак в тексте Claude (без opt-out) на старые модели и Bedrock, готовясь к требованиям EU AI Act.",
         "en": "Anthropic rolled out mandatory invisible text watermarking in Claude (no opt-out) for older models and Bedrock, ahead of EU AI Act requirements."
       }
+    },
+    "google-deepmind-alphaproof-code-signal": {
+      "last_date": "2026-11-16",
+      "summary": {
+        "ru": "Google DeepMind представляет AlphaProof Code (10 ноября) — мультиагентный фреймворк, который доказывает формальные свойства безопасности реального скомпилированного кода; применён к libsignal (~6.5 млн строк Lean-доказательств за 4 недели).",
+        "en": "Google DeepMind unveils AlphaProof Code (Nov 10) — a multi-agent framework proving formal security properties of real compiled code; applied to libsignal (~6.5M lines of Lean proof in 4 weeks)."
+      }
     }
   },
   "seen_urls": {
@@ -735,7 +735,6 @@
     "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
-    "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/": "2026-09-16",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
     "https://claude.com/blog/claude-code-mods": "2026-10-02",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01",
@@ -795,14 +794,12 @@
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
     "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
     "https://swarmtraces.org/": "2026-09-28",
-    "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/": "2026-09-16",
     "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/": "2026-09-18",
     "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/": "2026-09-20",
     "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": "2026-10-02",
     "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/": "2026-10-03",
     "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/": "2026-10-06",
     "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/": "2026-10-15",
-    "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html": "2026-09-16",
     "https://thenewstack.io/meta-muse-spark-open/": "2026-10-21",
     "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
     "https://thezvi.substack.com/p/ai-188-gemini-dot-argon": "2026-10-05",
@@ -961,6 +958,15 @@
     "https://tools.simonwillison.net/#tags": "2026-11-14",
     "notes/articles/willison-tools-tag-browse-fable.html": "2026-11-14",
     "https://openai.com/index/introducing-businesses-chatgpt/": "2026-11-15",
-    "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content": "2026-11-15"
+    "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content": "2026-11-15",
+    "https://deepmind.google/blog/introducing-alphaproof-code/": "2026-11-16",
+    "https://www.kunalganglani.com/blog/deepmind-alphaproof-signal-verification": "2026-11-16",
+    "https://every.to/vibe-check/vibe-check-gemini-4-carbon-doesn-t-know-when-to-stop": "2026-11-16",
+    "https://every.to/vibe-check/fable-5-2": "2026-11-16",
+    "https://www.youtube.com/watch?v=rYLWrh6vSMs": "2026-11-16",
+    "notes/articles/ganglani-alphaproof-code-signal.html": "2026-11-16",
+    "notes/articles/every-gemini-4-carbon-vibe-check.html": "2026-11-16",
+    "notes/articles/every-fable-5-2-vibe-check.html": "2026-11-16",
+    "notes/videos/aiadvantage-claude-connectors-gemini-vision.html": "2026-11-16"
   }
 }

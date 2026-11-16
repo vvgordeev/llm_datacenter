@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Kunal Ganglani — «DeepMind AlphaProof Code: что на самом деле доказано про Signal» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Kunal Ganglani · 2026-11-11</span>
+      <span data-lang="en">Article digest · Kunal Ganglani · 2026-11-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">DeepMind AlphaProof Code: что на самом деле доказано про Signal</span>
+      <span data-lang="en">DeepMind AlphaProof Code: What It Really Proved on Signal</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.kunalganglani.com/blog/deepmind-alphaproof-signal-verification" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">10 ноября Google DeepMind объявила об AlphaProof Code — системе, которая заставила ИИ-агентов формально доказать ключевые гарантии безопасности реального кода мессенджера Signal. Заголовки в прессе быстро свернули это в «ИИ доказал, что Signal безопасен», и именно это упрощение разбирает в своей статье независимый аналитик Кунал Ганглани: по его словам, результат реален и впечатляющ, но говорит он гораздо более узкую вещь, чем кажется на первый взгляд.</span>
+      <span data-lang="en">On November 10, Google DeepMind announced AlphaProof Code, a system that got AI agents to formally prove key security guarantees about Signal's real code. Press coverage quickly compressed this into "AI proved Signal is secure," and that's the simplification independent analyst Kunal Ganglani unpacks in his piece: the result is real and impressive, he argues, but it says something much narrower than the headlines suggest.</span>
+    </p>
+
+    <h2><span data-lang="ru">Чем AlphaProof Code отличается от исходного AlphaProof</span><span data-lang="en">How AlphaProof Code differs from the original AlphaProof</span></h2>
+    <p>
+      <span data-lang="ru">Ганглани напоминает, что исходный AlphaProof был заточен под математические олимпиадные задачи — ограниченные, с заранее известным типом ответа. AlphaProof Code решает принципиально более грязную задачу: нужно сначала самому сформулировать, что вообще значит «код безопасен» для конкретной реализации протокола, а затем доказать, что этот код данной спецификации соответствует. Формализация требований — почти такая же творческая и подверженная ошибкам работа, как и само доказательство, и именно здесь, по мнению автора, легко спрятать избыточно оптимистичную трактовку результата.</span>
+      <span data-lang="en">Ganglani points out that the original AlphaProof was built for math olympiad problems — bounded, with a known answer type. AlphaProof Code tackles a much messier job: it first has to formalize, on its own, what "secure" even means for one concrete protocol implementation, and only then prove the code meets that spec. Formalizing the requirement is nearly as creative and error-prone as the proof itself, and that's where an overly optimistic reading of the result can hide, in his view.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что реально входит в скоуп доказательства</span><span data-lang="en">What the proof actually covers</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой тезис статьи — где именно проходит граница верификации. Доказательства нацелены на libsignal, эталонную библиотеку протокола, причём скомпилированную под конкретную архитектуру (64-битный ARM), а не на исходный код в абстракции. За пределами скоупа остаются мобильные и десктопные приложения Signal, весь клиентский код вокруг библиотеки и операционная система, на которой всё это работает. Побочные каналы — тайминг-атаки, анализ энергопотребления — также не рассматривались. Отдельно Ганглани отмечает: команда специально переоткрыла в изолированной копии кода два реальных, ранее уже исправленных бага — в обоих случаях AlphaProof Code корректно выдал доказательство, что такая версия небезопасна, что служит проверкой чувствительности самого метода, а не поводом для нового беспокойства за пользователей.</span>
+      <span data-lang="en">The article's central claim is about exactly where the verification boundary sits. The proofs target libsignal, the reference protocol library, and specifically a build compiled for one architecture (64-bit Arm) — not the abstract source in general. Outside the scope: Signal's mobile and desktop apps, the client code wrapped around the library, and the operating system underneath. Side channels — timing attacks, power analysis — were also out of scope. Ganglani separately notes that the team deliberately reintroduced two real, previously fixed bugs into an isolated copy of the code; in both cases AlphaProof Code correctly produced a proof that the version was insecure, which is a sensitivity check on the method itself, not a new reason to worry as a user.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему «ИИ впервые проверил математику Signal» — неверно</span><span data-lang="en">Why "first time anyone checked Signal's math" is wrong</span></h2>
+    <p>
+      <span data-lang="ru">Ганглани прямо оспаривает рамку, в которой часть публикаций подала новость: будто бы до AlphaProof Code протокол Signal никто математически не проверял. По его словам, более раннее формальное исследование уже существовало, но оно было ограничено моделью протокола «на бумаге», а не привязано к конкретному скомпилированному коду конкретной реализации. Отличие AlphaProof Code — именно в том, что доказательство идёт от спецификации прямо к бинарнику, минуя разрыв между «что должно происходить» и «что реально выполняется процессором». Это настоящий шаг вперёд в охвате, но не первое появление формальных методов в истории протокола.</span>
+      <span data-lang="en">Ganglani explicitly pushes back on the framing some coverage used — that Signal's protocol had never been mathematically checked before AlphaProof Code. He notes that earlier formal work already existed, but it was bounded to a paper model of the protocol rather than tied to the compiled code of a specific implementation. What's new about AlphaProof Code is that the proof runs straight from the specification to the binary, closing the gap between "what should happen" and "what the processor actually executes." That's a genuine step forward in coverage, not formal methods' first appearance in the protocol's history.</span>
+    </p>
+
+    <h2><span data-lang="ru">Вывод: реальный прогресс без права на преувеличение</span><span data-lang="en">The takeaway: real progress, no license to overclaim</span></h2>
+    <p>
+      <span data-lang="ru">Общий вывод статьи: доказательство достоверно в своём узком скоупе, метод валиден (что подтверждает тест с возвращёнными багами), а стоимость формальной верификации падает настолько, что её можно применять к целым реализациям, а не к отдельным фрагментам кода, как раньше. Но AlphaProof Code — исследовательский релиз без доступного API, и обобщать результат до «Signal больше нельзя взломать» или «весь мессенджер формально проверен» автор считает именно тем видом упрощения, из-за которого потом тяжело вести содержательный разговор о реальных границах возможностей ИИ-агентов в формальной верификации.</span>
+      <span data-lang="en">The article's overall verdict: the proof holds within its narrow scope, the method is valid (as the reintroduced-bug test shows), and the cost of formal verification is dropping low enough to apply to whole implementations instead of isolated code fragments, as before. But AlphaProof Code is a research release with no public API, and generalizing the result into "Signal can no longer be hacked" or "the whole messenger is formally verified" is exactly the kind of overclaiming that later makes it hard to have a grounded conversation about what AI agents can actually do in formal verification.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по синтезу поисковых выдержек из статьи (прямой WebFetch на kunalganglani.com не проходит из облачной песочницы — домен не резолвится через прокси в этом прогоне); точные формулировки сверяйте с оригиналом.</span>
+      <span data-lang="en">Digest built from search-engine excerpts of the article (a direct WebFetch to kunalganglani.com fails from this cloud sandbox — the domain doesn't resolve through the proxy during this run); verify exact wording against the original.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

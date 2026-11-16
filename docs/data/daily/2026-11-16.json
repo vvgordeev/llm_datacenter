@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T07:40:00Z",
+  "news": [
+    {
+      "id": "2026-11-16-google-deepmind-alphaproof-code-signal",
+      "cluster_id": "google-deepmind-alphaproof-code-signal",
+      "models": ["google"],
+      "title": {
+        "ru": "Google DeepMind представляет AlphaProof Code: ИИ-агенты формально доказывают безопасность кода Signal",
+        "en": "Google DeepMind unveils AlphaProof Code: AI agents formally verify Signal's security code"
+      },
+      "summary": {
+        "ru": "10 ноября Google DeepMind представила AlphaProof Code — мультиагентный фреймворк на базе LLM, который переводит реальный скомпилированный код в формальные теоремы Lean и доказывает, что он соответствует заданной спецификации безопасности. Команда применила его к libsignal (эталонной реализации протокола Signal) и за четыре недели получила около 6,5 млн строк машинно-проверенных доказательств того, что скомпилированный код сохраняет прямую секретность, аутентификацию, безопасность после компрометации и секретность рукопожатия. Метод проверили, вернув в изолированную копию кода два ранее исправленных реальных бага — в обоих случаях система выдала доказательство, что такая версия небезопасна.",
+        "en": "On November 10, Google DeepMind introduced AlphaProof Code, a multi-LLM agentic framework that turns real compiled code into formal Lean theorems and proves it matches a given security specification. The team applied it to libsignal, the reference implementation of the Signal protocol, producing roughly 6.5 million lines of machine-checked proof in four weeks that the compiled code preserves forward secrecy, authentication, post-compromise security, and handshake secrecy. As a validation check, the team reintroduced two previously fixed real bugs into an isolated copy of the code; in both cases the system produced a proof that version was insecure."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев — агентную формальную верификацию реального скомпилированного кода критически важных библиотек, но пока нишево применимо (безопасность/формальные методы), а не ко всем пользователям LLM",
+        "en": "Opens a new class of scenarios — agentic formal verification tied to the actual compiled code of critical libraries — but for now it's a niche audience (security/formal-methods engineers), not all LLM users"
+      },
+      "source_url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+      "opinions": [
+        {
+          "author": "letsdatascience.com (via WIRED, quoting Signal CTO Ehren Kret)",
+          "stance": "positive",
+          "quote": {
+            "ru": "«Пока прежняя формальная верификация охватывала лишь небольшие фрагменты кода, подход Google DeepMind позволяет значительно расширить масштаб» — по словам технического директора Signal, это даёт больше уверенности в гарантиях приватности протокола перед лицом растущих ИИ-угроз.",
+            "en": "\"While prior formal verification focused on smaller portions of the code, Google DeepMind's approach enables significant expansion\" — Signal's CTO frames it as added confidence in the protocol's privacy guarantees as AI-driven security threats grow."
+          },
+          "url": "https://letsdatascience.com/news/google-deepminds-alphaproof-code-formally-verifies-key-signa-a2c50019"
+        },
+        {
+          "author": "Kunal Ganglani (независимый анализ)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Доказательства нацелены на libsignal — библиотеку протокола, скомпилированную под одну архитектуру (64-битный ARM) — а не на мобильные/десктопные приложения Signal, клиентов или ОС под ними; результат не означает, что в Signal нет багов, только что перечисленные свойства выполняются в этом конкретном скоупе.",
+            "en": "The proofs target libsignal — the protocol library, compiled for one architecture (64-bit Arm) — not Signal's mobile or desktop apps, its clients, or the OS underneath; the result doesn't mean Signal has zero bugs, only that the listed properties hold within that specific scope."
+          },
+          "url": "https://www.kunalganglani.com/blog/deepmind-alphaproof-signal-verification"
+        },
+        {
+          "author": "eesel.ai",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Разбирает трёхэтапный метод: люди и агенты вместе пишут спецификацию → скомпилированный код загружается в Lean-модель процессора → команда агентов-«доказывателей» строит доказательство, а агент-«вратарь» отклоняет всё, что не принимает Lean; подчёркивает, что это исследовательский релиз без коммерческого API.",
+            "en": "Breaks down the three-stage method: humans and agents jointly write a specification → the compiled code is loaded into a Lean model of the processor → a team of \"prover\" agents builds the proof while a \"gatekeeper\" agent rejects anything Lean won't accept; notes this is a research release with no commercial API."
+          },
+          "url": "https://www.eesel.ai/blog/alphaproof-code"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Регрессионное тестирование самого верификатора: вместо того чтобы доверять доказательству на слово, в изолированную копию кода намеренно возвращают два исторических известных бага — если система верно доказывает их небезопасность, это подтверждает чувствительность метода к реальным уязвимостям.",
+            "en": "Regression-testing the verifier itself: instead of trusting a proof at face value, two historical known bugs are deliberately reintroduced into an isolated code copy — correctly proving that version insecure confirms the method is sensitive to real vulnerabilities, not just rubber-stamping."
+          },
+          "url": "https://letsdatascience.com/news/google-deepminds-alphaproof-code-formally-verifies-key-signa-a2c50019"
+        },
+        {
+          "text": {
+            "ru": "Мультиагентный конвейер «спецификация → Lean-модель скомпилированного кода → агенты-доказыватели → агент-вратарь» переносим на другие критически важные открытые библиотеки (криптография, протоколы), а не только на Signal.",
+            "en": "The multi-agent pipeline — \"specification → Lean model of the compiled code → prover agents → gatekeeper agent\" — is portable to other security-critical open-source libraries (cryptography, protocols), not just Signal."
+          },
+          "url": "https://www.eesel.ai/blog/alphaproof-code"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-16-ganglani-alphaproof-signal",
+      "type": "article",
+      "author": "Kunal Ganglani",
+      "title": {
+        "ru": "DeepMind AlphaProof Code: что на самом деле доказано про Signal",
+        "en": "DeepMind AlphaProof Code: What It Really Proved on Signal"
+      },
+      "url": "https://www.kunalganglani.com/blog/deepmind-alphaproof-signal-verification",
+      "summary": {
+        "ru": "Разбор границ доказательства AlphaProof Code: что входит в скоуп (libsignal), а что нет (приложения, клиенты, ОС), и почему это не значит «в Signal нет багов».",
+        "en": "A close read of what AlphaProof Code's proof actually covers (libsignal) versus what it doesn't (apps, clients, OS) — and why that's not the same as \"Signal has zero bugs.\""
+      },
+      "note_page": "notes/articles/ganglani-alphaproof-code-signal.html"
+    },
+    {
+      "id": "2026-11-16-every-gemini-4-carbon-vibe-check",
+      "type": "article",
+      "author": "Every (Dan Shipper, via Every's Vibe Check)",
+      "title": {
+        "ru": "Vibe Check: код Gemini 4 Carbon обгоняет его собственное суждение",
+        "en": "Vibe Check: Gemini 4 Carbon's Coding Outpaces Its Judgment"
+      },
+      "url": "https://every.to/vibe-check/vibe-check-gemini-4-carbon-doesn-t-know-when-to-stop",
+      "summary": {
+        "ru": "Практический тест Gemini 4 Carbon от команды Every: заметный скачок в агентном кодинге относительно Argon, но модель не умеет вовремя остановиться — может часами переделывать уже готовую работу.",
+        "en": "Every's hands-on test of Gemini 4 Carbon: a real jump in agentic coding over Argon, but the model doesn't know when to stop — it can spend hours redoing work that was already done."
+      },
+      "note_page": "notes/articles/every-gemini-4-carbon-vibe-check.html"
+    },
+    {
+      "id": "2026-11-16-every-fable-5-2-vibe-check",
+      "type": "article",
+      "author": "Every (Katie Parrott, via Every's Vibe Check)",
+      "title": {
+        "ru": "Vibe Check: Fable 5.2 — смена парадигмы, если знать, что с ней делать",
+        "en": "Vibe Check: Fable 5.2 Is a Paradigm Shift — If You Know What to Do With It"
+      },
+      "url": "https://every.to/vibe-check/fable-5-2",
+      "summary": {
+        "ru": "Кирен Клаасен из Every за три дня в одиночку собирает на Fable 5.2 полноценный видеоредактор Everycut, подтверждая тезис статьи: модель способна довести до конца не просто задачу, а целый продукт.",
+        "en": "Every's Kieran Klaassen single-handedly builds a full video editor, Everycut, with Fable 5.2 in three days — the case for the piece's claim that the model can carry a whole product to completion, not just a task."
+      },
+      "note_page": "notes/articles/every-fable-5-2-vibe-check.html"
+    },
+    {
+      "id": "2026-11-16-aiadvantage-claude-gemini-recap",
+      "type": "video",
+      "author": "The AI Advantage (Igor Pogany)",
+      "title": {
+        "ru": "Claude официально обходит ChatGPT — и другие новости ИИ, которые можно применить",
+        "en": "Claude is Officially Better Than ChatGPT & More AI News You Can Use"
+      },
+      "url": "https://www.youtube.com/watch?v=rYLWrh6vSMs",
+      "summary": {
+        "ru": "Обзорный выпуск об автономных агентах (Moltbot), новых интерактивных коннекторах Claude для рабочих инструментов, Claude в Excel и Agentic Vision в Gemini 3 Flash — с акцентом на то, что из этого реально меняет повседневную работу.",
+        "en": "A roundup video on autonomous agents (Moltbot), Claude's new interactive connectors for work tools, Claude in Excel, and Agentic Vision in Gemini 3 Flash — with an eye on what actually changes day-to-day work."
+      },
+      "note_page": "notes/videos/aiadvantage-claude-connectors-gemini-vision.html"
+    }
+  ]
+}

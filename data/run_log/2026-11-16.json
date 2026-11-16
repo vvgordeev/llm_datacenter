@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T07:40:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch)", "status": "ok", "candidates": 0, "note": "WebFetch succeeded; page showed only a bare Nov 16 heading, nothing new vs Nov 9-10 entries already archived"},
+    {"source": "openai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (openai.com); covered via WebSearch instead, nothing new beyond already-archived Business Agents (Nov 15) and Cursor cutoff (Nov 14)"},
+    {"source": "google deepmind blog (direct fetch)", "status": "blocked", "candidates": 1, "note": "DNS/proxy ENOTFOUND (blog.google, deepmind.google); WebSearch found AlphaProof Code (Nov 10) as the day's one strong, not-yet-archived candidate"},
+    {"source": "meta ai blog (direct fetch)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (ai.meta.com); WebSearch found only already-archived Muse Wonder/Ember items"},
+    {"source": "xai news (direct fetch)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (x.ai); WebSearch found nothing dated this window, only older Grok 4.6/4.7 coverage"},
+    {"source": "mistral news (direct fetch)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (mistral.ai); WebSearch found only the already-archived Large 4 preview/benchmark story"},
+    {"source": "deepseek news (direct fetch)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (api-docs.deepseek.com); WebSearch found only the already-archived V4.1-Flash-1017 patch"},
+    {"source": "hn algolia api (direct)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (hn.algolia.com); WebSearch 'site:news.ycombinator.com' substitute found the AlphaProof Code HN thread (610-650 pts), used for opinions, not a separate candidate"},
+    {"source": "aggregator: smol.ai", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (news.smol.ai); WebSearch found no Nov 14-16 issue indexed yet"},
+    {"source": "aggregator: TLDR AI", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (tldr.tech); WebSearch found no Nov 14-16 edition indexed yet"},
+    {"source": "aggregator: Simon Willison linkblog", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND (simonwillison.net); simonwillisonblog-backup git clone succeeded but datasette.simonwillison.net (the .db download) was also proxy-refused (403) this run, so full-text fetch wasn't possible; WebSearch confirmed his latest indexed post (Nov 11, already archived) and no later ones found"},
+    {"source": "community: r/LocalLLaMA", "status": "empty", "candidates": 0, "note": "WebSearch found only undated/unverifiable local-model chatter, nothing tied to this window"},
+    {"source": "community: r/ClaudeAI / r/singularity", "status": "empty", "candidates": 0, "note": "WebSearch found no Nov 14-16 hot threads indexed"},
+    {"source": "community: X (Twitter)", "status": "empty", "candidates": 0, "note": "Poorly indexed per config note; no verifiable Nov 14-16 company announcements surfaced beyond already-archived items"},
+    {"source": "extended pass: broad queries ('LLM news Nov 16', 'AI news digest Nov 15', weekly recaps)", "status": "ok", "candidates": 1, "note": "Multiple independent recap sources (The Neuron, Latent Space, aiweekly.co) converge on describing this as a quiet stretch after the Nov 9-15 wave already archived; AlphaProof Code (Nov 10, DeepMind research) was the one substantive, not-yet-covered story surfaced by widening the window"}
+  ],
+  "totals": {
+    "candidates": 10,
+    "published": 1,
+    "rejected": {
+      "уже в архиве (Nov 9-15)": 7,
+      "неподтверждено/единственный источник (Gemini 4 Hydrogen leak, Jensen Huang exit rumor)": 2
+    }
+  },
+  "expert_content": {
+    "min_required": 5,
+    "published": 4,
+    "note": "Шорт-фолл min_expert_total: config-эксперты (Karpathy, AI Explained, Matt Wolfe, Nate Herk, Matt Pocock, Ethan Mollick, Latent Space, Simon Willison) не дали новых не-архивных материалов за окно — их последние посты/видео за Nov 9-11 уже опубликованы в предыдущих прогонах (проверено по state.json). Расширенный поиск (шаг 4 скилла) нашёл 4 резонансных материала о подходах к использованию LLM от других заметных авторов (Every.to vibe-checks, независимый аналитик Kunal Ganglani) и один видео-ролик (The AI Advantage). Дальнейшее расширение поиска не дало новых проверяемых кандидатов с точными ссылками."
+  },
+  "video_pipeline": {
+    "yt_dlp_ffmpeg": "installed via pip (yt-dlp, imageio-ffmpeg); ffmpeg also present in PATH",
+    "gemini": "ok: GEMINI_API_KEY present; generativelanguage.googleapis.com reachable; gemini_video.py successfully summarized https://www.youtube.com/watch?v=rYLWrh6vSMs server-side",
+    "youtube_rss_discovery": "blocked: www.youtube.com/feeds/videos.xml gave DNS/proxy ENOTFOUND for all 5 configured channel_ids; fell back to WebSearch per SKILL.md's documented day-to-day instability",
+    "yt_dlp_direct": "blocked: yt-dlp against youtube.com gave 'Tunnel connection failed: 403 Forbidden' at the egress proxy (CONNECT level), consistent with the known failure mode documented in SKILL.md for 2026-07-18",
+    "frames": "skipped: youtube.com unreachable client-side for yt-dlp despite Gemini API itself (server-side) reaching the video fine; note page published without frames, flagged in its note-hint"
+  },
+  "maintenance": {
+    "note": "Обнаружено и исправлено: три предыдущих прогона (2026-11-13, 11-14, 11-15) оставили коммиты в detached HEAD, не слитые в main и не запушенные в origin. Перед сегодняшним сбором main был перемотан на них (fast-forward) и запушен в origin/main."
+  }
+}
