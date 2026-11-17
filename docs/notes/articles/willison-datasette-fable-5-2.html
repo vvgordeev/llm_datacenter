@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Datasette 1.0a43: милстоун 1.0, который тащит Claude Fable 5.2» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-15</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-15</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Datasette 1.0a43: милстоун 1.0 наполовину закрыт — руками Claude Fable 5.2</span>
+      <span data-lang="en">Datasette 1.0a43: the 1.0 milestone is half-closed — with Claude Fable 5.2 doing the work</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/15/datasette/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Datasette — открытый мультиинструмент Уиллисона для публикации и исследования данных — много лет живёт на альфа-версиях ветки 1.0: номера вида 1.0a42, 1.0a43 тянутся с 2023 года, потому что милстоун 1.0 на GitHub копит задачи быстрее, чем их успевают закрывать руками. 15 ноября вышла 1.0a43, и в заметке о релизе Уиллисон между делом формулирует метод, которым он теперь разгребает этот милстоун: «я налегаю на Claude Fable 5.2, чтобы выбивать пункты из милстоуна 1.0 — он сейчас закрыт на 53%». Сам релиз — не косметика: это партия изменений, которые раньше откладывались именно потому, что требовали аккуратной, но нудной переделки внутреннего API.</span>
+      <span data-lang="en">Datasette — Willison's open-source multitool for publishing and exploring data — has lived on alpha releases of its 1.0 branch for years: version numbers like 1.0a42 and 1.0a43 have been crawling along since 2023, because the 1.0 milestone on GitHub piles up issues faster than they get closed by hand. Version 1.0a43 shipped on November 15, and in the release note Willison states, almost in passing, the method he's now using to work through that milestone: "I've been leaning hard into Claude Fable 5.2 to help knock things off the 1.0 milestone, which is now 53% complete." The release itself isn't cosmetic — it's a batch of changes that had been postponed precisely because they needed careful but tedious rework of an internal API.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что именно отрабатывает модель: замена специального случая на общий механизм</span><span data-lang="en">What the model is actually grinding through: replacing a special case with a general mechanism</span></h2>
+    <p>
+      <span data-lang="ru">Техническое ядро релиза — новый метод <code>Response.stream()</code>, который даёт плагинам-рендерерам Datasette потоковую отдачу построчно вместо сборки всего ответа в памяти. До этого экспорт в CSV и TSV был жёстко вшитым особым случаем в коде ядра; теперь это два обычных встроенных рендерера, построенных на том же потоковом механизме, что доступен и сторонним плагинам через параметр <code>row_stream</code> при <code>?_stream=1</code>. Это ровно тот тип рефакторинга — убрать историческое исключение, унифицировав его с общим правилом, — который легко отложить на потом, потому что он не добавляет видимой функции, но дорого откладывать бесконечно, потому что специальный случай тянет за собой дублирование и баги на стыках.</span>
+      <span data-lang="en">The technical core of the release is a new <code>Response.stream()</code> method, which gives Datasette's renderer plugins row-by-row streaming output instead of building the whole response in memory. Until now, CSV and TSV export were a hardcoded special case baked into the core; now they're two ordinary built-in renderers built on the same streaming mechanism available to third-party plugins via a <code>row_stream</code> argument when <code>?_stream=1</code> is set. That's exactly the kind of refactor — removing a historical exception by unifying it with the general rule — that's easy to keep postponing because it adds no visible feature, but expensive to postpone forever, because the special case drags along duplication and edge-case bugs.</span>
+    </p>
+
+    <h2><span data-lang="ru">Побочный эффект: закрытые дыры в безопасности, которые нашлись по пути</span><span data-lang="en">A side effect: security holes found along the way</span></h2>
+    <p>
+      <span data-lang="ru">В тот же релиз попали две независимые проблемы безопасности, обнаруженные при разборе смежного кода. Первая: фильтр <code>?owner_id=</code> на страницах запросов отдавал чужие приватные сохранённые запросы — включая их название и SQL-код (но не давал их выполнить) — любому действующему лицу; баг жил во всех версиях от 1.0a31 до 1.0a42. Вторая: если база данных была подключена по маршруту, не совпадающему с её именем, актор, которому явно запрещено скачивание, мог обойти запрет — правило доступа <code>view-database-download</code> должно сверяться с именем базы, а не с маршрутом. Оба фикса — типичный результат систематического прохода по милстоуну, а не реакция на внешний репорт: их не искали специально, на них наткнулись, выбивая соседние пункты списка.</span>
+      <span data-lang="en">The same release carries two independent security issues found while working through adjacent code. First: the <code>?owner_id=</code> filter on the queries pages leaked other people's private stored queries — including their title and SQL (though not the ability to execute them) — to any actor; the bug had been live across every version from 1.0a31 through 1.0a42. Second: if a database was mounted at a route that didn't match its name, an actor explicitly denied download access could bypass that denial — the <code>view-database-download</code> permission check needs to key off the database's name, not its route. Both fixes are the typical yield of a systematic pass through a milestone list, not a reaction to an external report: nobody went looking for them specifically — they turned up while clearing out neighboring items.</span>
+    </p>
+
+    <h2><span data-lang="ru">Метод, а не разовый трюк</span><span data-lang="en">A method, not a one-off trick</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон давно и публично документирует свой способ работы с агентными моделями (его собственный термин — «agentic engineering patterns»), и фраза про Fable 5.2 в этом релизе — не отдельный эпизод, а продолжение той же практики: брать заранее нарезанный, явно сформулированный список задач (issues милстоуна на GitHub) и систематически прогонять его через модель, вместо того чтобы просить модель «придумать, что улучшить». Это снижает цену именно рутинного, предсказуемого по форме рефакторинга — такого как перенос CSV/TSV на общий потоковый механизм, — у которого заранее известен критерий «готово»: тесты проходят, старое поведение сохранено, пункт в милстоуне закрыт. Для задач с нечётким критерием готовности (дизайн нового API, выбор архитектуры) автор по-прежнему оставляет решение за собой — в тексте релиза об этом речи нет, но это следует из общего описания его практики на этом же блоге.</span>
+      <span data-lang="en">Willison has long and publicly documented his way of working with agentic models (his own term for it is "agentic engineering patterns"), and the Fable 5.2 line in this release note isn't a one-off aside — it's a continuation of that same practice: take a pre-cut, explicitly stated list of tasks (the milestone's GitHub issues) and systematically run it through the model, rather than asking the model to "figure out what to improve." That lowers the cost specifically of routine, predictably-shaped refactoring — like moving CSV/TSV onto the shared streaming mechanism — where the definition of "done" is known in advance: tests pass, old behavior is preserved, the milestone item is closed. For tasks with a fuzzy definition of done (designing a new API, picking an architecture), the author still keeps the call for himself — the release note doesn't say so directly, but that follows from how he's described his broader practice elsewhere on the same blog.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту заметки о релизе (GitHub Releases, github.com/simonw/datasette) и по цитате из блога Уиллисона, найденной через WebSearch; прямой WebFetch на simonwillison.net не проходит в этом прогоне (домен не резолвится через egress-прокси облачной песочницы).</span>
+      <span data-lang="en">Digest built from the full GitHub release notes (github.com/simonw/datasette) and from the blog quote found via WebSearch; a direct WebFetch to simonwillison.net fails in this run (the domain doesn't resolve through the cloud sandbox's egress proxy).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

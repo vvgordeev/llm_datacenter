@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Latent Space — «D-Day: день моделей решений» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (swyx и команда) · 2026-11-11</span>
+      <span data-lang="en">Article digest · Latent Space (swyx and team) · 2026-11-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">D-Day: день, когда «модели решений» стали отдельной категорией, а не фичей одного стартапа</span>
+      <span data-lang="en">D-Day: the day "decision models" became a category, not one startup's feature</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://latent.space/p/ainews-d-day-decision-models-day/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ежедневный разбор новостей Latent Space назвал 11 ноября «D-Day» в честь события, которое авторы считают переломным для узкого, но практичного подхода к архитектуре ИИ-агентов: Google выпустила Gemini Decision 1 и API под него, выйдя тем самым на рынок «моделей решений», где до этого были только стартап TypeSafe с моделью Jev и OpenAI со своим Decisions API. Идея моделей решений — не генерировать свободный текст, а отвечать одним из трёх строго типизированных форматов (да/нет, выбор из вариантов, оценка по рубрике), и делать это кардинально дешевле, чем гонять полноразмерную рассуждающую модель ради шага классификации внутри агентного пайплайна.</span>
+      <span data-lang="en">Latent Space's daily news roundup dubbed November 11 "D-Day," after what the authors see as a turning point for a narrow but practical approach to agent architecture: Google shipped Gemini Decision 1 and its API, entering a "decision model" market where, until then, only the startup TypeSafe (with its Jev model) and OpenAI (with its own Decisions API) had competed. The idea behind decision models is to skip free-text generation and answer in one of three strictly typed shapes instead — yes/no, a choice among options, or a rubric score — at a cost dramatically lower than running a full reasoning model for a classification step inside an agent pipeline.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это читают как смену категории, а не ещё один релиз модели</span><span data-lang="en">Why this reads as a category shift, not just another model release</span></h2>
+    <p>
+      <span data-lang="ru">Ключевой тезис разбора: когда один игрок предлагает узкоспециализированную модель — это продукт; когда три независимых лаборатории за несколько месяцев выпускают почти одинаковую по форме модель с одним и тем же набором типов ответов — это сигнал, что рынок признал саму категорию «модель решений» рабочим паттерном архитектуры агентов, а не нишевым трюком одного стартапа. Авторы проводят параллель с более широким трендом «fast model решает, slow model рассуждает»: быстрая и дешёвая модель берёт на себя рутинный выбор инструмента или маршрутизацию запроса, а тяжёлая рассуждающая модель подключается только там, где нужна глубокая диагностика или творческое решение — это снижает задержку и стоимость там, где раньше для любого шага агентного пайплайна включали одну и ту же дорогую модель.</span>
+      <span data-lang="en">The piece's core claim: when one player ships a narrow, specialized model, that's a product; when three independent labs ship a near-identical model, with the same set of answer types, within a few months of each other, that's a signal the market has recognized "decision model" itself as a working agent-architecture pattern, not one startup's niche trick. The authors draw a parallel to the broader "fast model decides, slow model reasons" trend: a fast, cheap model takes over routine tool selection or query routing, while a heavy reasoning model is only brought in where deep diagnosis or creative work is actually needed — cutting latency and cost in places that used to route every single pipeline step through the same expensive model.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что у Google отличается технически: мультимодальность и калиброванная вероятность</span><span data-lang="en">What's technically different about Google's entry: multimodality and calibrated probability</span></h2>
+    <p>
+      <span data-lang="ru">По цене Gemini Decision 1 совпадает с OpenAI Decisions API — 10 центов за миллион входных токенов при бесплатном выводе; Jev от TypeSafe остаётся самым дешёвым вариантом на рынке (4,2 цента за миллион), но принимает только текст. OpenAI Decisions API добавляет изображения. Gemini Decision 1 — единственная из трёх полностью мультимодальная: текст, изображения, аудио, видео и PDF напрямую, без промежуточного шага транскрибации или покадрового описания. Отдельно отмечается, что на вопросы да/нет Gemini Decision 1 возвращает не жёсткую единицу или ноль, а калиброванную вероятность — это даёт инженеру возможность задавать собственный порог отсечения под конкретную задачу вместо того, чтобы полагаться на бинарный ответ модели.</span>
+      <span data-lang="en">On price, Gemini Decision 1 matches OpenAI's Decisions API — 10 cents per million input tokens with free output; TypeSafe's Jev stays the cheapest option on the market (4.2 cents per million) but is text-only. OpenAI's Decisions API adds images. Gemini Decision 1 is the only one of the three that's fully multimodal: text, images, audio, video and PDFs directly, with no intermediate transcription or frame-description step. The piece separately notes that on yes/no questions, Gemini Decision 1 returns a calibrated probability rather than a hard one or zero — giving engineers the ability to set their own cutoff threshold for a specific task instead of relying on a binary answer from the model.</span>
+    </p>
+
+    <h2><span data-lang="ru">Практический вывод для тех, кто строит агентов</span><span data-lang="en">The practical takeaway for people building agents</span></h2>
+    <p>
+      <span data-lang="ru">Для инженера, проектирующего агентный пайплайн, рубеж простой: если шаг пайплайна по сути сводится к классификации (маршрутизация запроса к нужному инструменту, модерация контента, фильтрация промежуточного результата перед следующим шагом), есть смысл вынести этот шаг на специализированную дешёвую модель решений вместо того, чтобы прогонять его через ту же большую модель, что ведёт основной диалог или рассуждение. Выбор между тремя конкурентами сейчас сводится к модальности входа и бюджету: текстовые задачи с минимальным бюджетом — Jev; умеренный бюджет с изображениями — OpenAI; видео, аудио или PDF в пайплайне — то, что умеет один Gemini Decision 1.</span>
+      <span data-lang="en">For an engineer designing an agent pipeline, the line is simple: if a pipeline step is essentially a classification problem (routing a query to the right tool, moderating content, filtering an intermediate result before the next step), it's worth carving that step out to a specialized, cheap decision model instead of running it through the same large model handling the main conversation or reasoning. The choice among the three competitors right now comes down to input modality and budget: text-only tasks on a tight budget point to Jev; a moderate budget with images points to OpenAI; video, audio or PDF input in the pipeline is what only Gemini Decision 1 handles.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по содержанию статьи, восстановленному через WebSearch (заголовки, цитаты и технические детали из нескольких независимых пересказов и сравнительных обзоров); прямой WebFetch на latent.space в этом прогоне не проходит (домен не резолвится через egress-прокси облачной песочницы).</span>
+      <span data-lang="en">Digest built from the article's content as reconstructed via WebSearch (headlines, quotes and technical detail drawn from several independent summaries and comparison write-ups); a direct WebFetch to latent.space fails in this run (the domain doesn't resolve through the cloud sandbox's egress proxy).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

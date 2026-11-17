@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T05:18:10Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-11-17-willison-datasette-fable-5-2",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Datasette 1.0a43: милстоун 1.0 наполовину закрыт — руками Claude Fable 5.2",
+        "en": "Datasette 1.0a43: the 1.0 milestone is half-closed — with Claude Fable 5.2 doing the work"
+      },
+      "url": "https://simonwillison.net/2026/Nov/15/datasette/",
+      "summary": {
+        "ru": "В заметке о релизе Datasette 1.0a43 (новый потоковый механизм для рендереров, замена CSV/TSV-экспорта на общий код, два найденных попутно бага безопасности) Уиллисон между делом раскрывает метод: он систематически прогоняет пункты милстоуна 1.0 через Claude Fable 5.2, который сейчас закрыт уже на 53%.",
+        "en": "In the release note for Datasette 1.0a43 (a new streaming mechanism for renderers, CSV/TSV export unified with the general code path, two security bugs found along the way), Willison reveals his method almost in passing: he's systematically running the 1.0 milestone's issue list through Claude Fable 5.2, which is now 53% complete."
+      },
+      "note_page": "notes/articles/willison-datasette-fable-5-2.html"
+    },
+    {
+      "id": "2026-11-17-latentspace-decision-models-dday",
+      "type": "article",
+      "author": "Latent Space (swyx and team)",
+      "title": {
+        "ru": "D-Day: день, когда «модели решений» стали отдельной категорией, а не фичей одного стартапа",
+        "en": "D-Day: the day \"decision models\" became a category, not one startup's feature"
+      },
+      "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "summary": {
+        "ru": "Google выпустила Gemini Decision 1 — третью на рынке «модель решений» после Jev (TypeSafe) и OpenAI Decisions API. Latent Space читает это как подтверждение целой категории архитектуры агентов «быстрая модель решает, медленная рассуждает», а не очередной релиз модели; разбирает отличия Gemini — полную мультимодальность и калиброванные вероятности вместо жёсткого да/нет.",
+        "en": "Google shipped Gemini Decision 1, the third \"decision model\" on the market after Jev (TypeSafe) and OpenAI's Decisions API. Latent Space reads this as confirmation of a whole agent-architecture category — \"fast model decides, slow model reasons\" — rather than just another model release, and breaks down what's different about Gemini: full multimodality and calibrated probabilities instead of a hard yes/no."
+      },
+      "note_page": "notes/articles/latentspace-decision-models-dday.html"
+    },
+    {
+      "id": "2026-11-17-wolfe-peteryang-personal-ai-system",
+      "type": "video",
+      "author": "Matt Wolfe, with guest Peter Yang",
+      "title": {
+        "ru": "Он построил ИИ-систему, которая управляет всем его бизнесом",
+        "en": "He Built an AI System That Runs His Entire Business"
+      },
+      "url": "https://www.youtube.com/watch?v=pvl3z_GyU2Y",
+      "summary": {
+        "ru": "Питер Янг показывает свою личную систему ИИ-навыков для управления однолюдным бизнесом: «Начальник штаба» разбирает почту и календарь, «Советник» сверяет решения с личным документом целей и принципов. Главный методический тезис — навыки не работают с первого раза и требуют цикла обратной связи, а инвестировать стоит в переносимые между моделями навыки, а не в подстройку под конкретную модель.",
+        "en": "Peter Yang walks through his personal system of AI skills for running a one-person business: a \"Chief of Staff\" skill triages email and calendar, an \"Advisor\" skill checks decisions against a personal document of goals and principles. The core methodological point: skills don't work on the first try and need a feedback loop, and it's worth investing in skills that are portable across models rather than tuning for any one model's quirks."
+      },
+      "note_page": "notes/videos/wolfe-peteryang-personal-ai-system.html"
+    }
+  ]
+}

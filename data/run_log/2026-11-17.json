@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T05:18:10Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch, anthropic.com/news)", "status": "ok", "candidates": 0, "note": "WebFetch succeeded (this domain resolves this run); newest entries Nov 10 (IPO roadshow) and Nov 9 (Fable 5.2/Mythos 5.2) — both already archived (2026-11-09/10/16), nothing newer listed"},
+    {"source": "claude.com/blog-category/announcements (direct fetch)", "status": "ok", "candidates": 0, "note": "WebFetch succeeded; newest entry Nov 12 (Managed Agents self-hosted, Claude for Manufacturing, Claude Meetings) — all already archived in 2026-11-13.json"},
+    {"source": "openai blog (direct fetch, openai.com/news)", "status": "blocked", "candidates": 0, "note": "egress proxy connect_rejected (403 on CONNECT, confirmed via curl); WebSearch substitute found nothing newer than already-archived ChatGPT Business Agents (Nov 10/15) and Images 2.6 (Nov 4)"},
+    {"source": "google deepmind blog (direct fetch, blog.google)", "status": "blocked", "candidates": 0, "note": "egress proxy connect_rejected; WebSearch substitute found Gemini 4 Hydrogen coverage, but its facts (default in Search AI Mode, Antigravity Orchestrator, pricing) all trace to Nov 12, already noted in the google-gemini-4-carbon-cybersecurity cluster (last_date 2026-11-13) — rejected as reprint, not new content"},
+    {"source": "meta ai blog (direct fetch, ai.meta.com)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND; WebSearch found only already-archived Muse Ember/Wonder items"},
+    {"source": "xai news (direct fetch, x.ai/news)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND; WebSearch found nothing dated this window, only older Grok 4.6/4.7 coverage and unconfirmed Grok 5 timeline chatter"},
+    {"source": "mistral news (direct fetch, mistral.ai/news)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND; WebSearch found only the already-archived Large 4 open-weights story and an Nov 8 EU-sovereignty item too thin/undetailed to verify"},
+    {"source": "deepseek news (direct fetch, api-docs.deepseek.com/news)", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND; WebSearch found nothing newer than the already-archived V4.1-Flash-1017 patch"},
+    {"source": "hn algolia api (direct)", "status": "blocked", "candidates": 0, "note": "curl CONNECT tunnel failed 403; WebSearch 'site:news.ycombinator.com' substitute found no verifiable dated thread for this window"},
+    {"source": "aggregator: smol.ai / news.smol.ai", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND; WebSearch found no Nov 15-17 issue indexed"},
+    {"source": "aggregator: TLDR AI", "status": "blocked", "candidates": 0, "note": "DNS/proxy ENOTFOUND; WebSearch found only the Nov 17, 2025 issue (wrong year) and a May 2026 one; no Nov 2026 edition indexed"},
+    {"source": "aggregator: Simon Willison linkblog / simonwillisonblog-backup", "status": "ok", "candidates": 1, "note": "git clone of github.com/simonw/simonwillisonblog-backup succeeded (42MB, synced ~Nov 11); latest blog_entry was Nov 9 (already archived); latest datasette-release post (Nov 15, 1.0a43 + Fable 5.2 usage) not yet in the backup snapshot but confirmed via WebSearch + GitHub release notes — published today"},
+    {"source": "community: r/LocalLLaMA", "status": "empty", "candidates": 0, "note": "WebSearch found only undated/unverifiable local-model chatter, nothing tied to this window"},
+    {"source": "community: r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch found no Nov 2026 threads indexed, only general/older commentary"},
+    {"source": "community: X (Twitter)", "status": "empty", "candidates": 0, "note": "poorly indexed per config note; nothing verifiable surfaced beyond already-archived items"},
+    {"source": "extended pass: broad queries ('AI news Nov 15/16/17 2026', 'everything that happened in AI today', 'LLM news this week')", "status": "ok", "candidates": 2, "note": "surfaced two out-of-scope stories excluded per project rules: Nvidia CEO Jensen Huang's resignation over an affair/espionage scandal (personnel/corporate, not a product feature) and a vague, undated claim of Jeff Dean leaving Google for a new company (unverified, also personnel not product) — both rejected"},
+    {"source": "experts (config): Simon Willison, Andrej Karpathy, Latent Space, AI Explained, Matt Wolfe, Ethan Mollick, Nate Herk, Matt Pocock", "status": "ok", "candidates": 4, "note": "most recent posts/videos from Karpathy, AI Explained, Nate Herk and Matt Pocock could not be confirmed dated within the 7-day window (search indexes stale or channel pages unreachable — youtube.com fully blocked this run, see video_pipeline); Mollick's 'Fable 5.2 and Jagged AGI' (Nov 9) looked promising but was caught as an exact duplicate of 2026-11-10's already-published note (same URL/note_page) and discarded; Willison (datasette 1.0a43, Nov 15) and Latent Space (D-Day decision models, Nov 11) published as articles; Matt Wolfe (Nov 11, interview w/ Peter Yang) published as video"},
+    {"source": "expanded expert search beyond config (Nathan Lambert/Interconnects, Dwarkesh Patel, Jack Clark/Import AI)", "status": "empty", "candidates": 0, "note": "Lambert's Nov 14 post ('Open-source AI without Jensen') is fresh and not a duplicate, but is industry/funding commentary (Nvidia leadership, open-model funding politics) rather than an approach to using LLMs — out of this section's scope per SKILL.md, not published; Dwarkesh's Nov 13 episode and Import AI's latest issue couldn't be pinned to a confirmed date/content via search"}
+  ],
+  "totals": {
+    "candidates": 8,
+    "published": 0,
+    "rejected": {
+      "уже в архиве (перепечатка/продолжение без новизны)": 4,
+      "вне тематики продукта (кадровые/корпоративные новости без фичи)": 2,
+      "не по теме expert_content (индустриальная политика, не подход к использованию LLM)": 1,
+      "дубль уже опубликованного конспекта (Mollick, пойман и исправлен до коммита)": 1
+    }
+  },
+  "expert_content": {
+    "min_required": 5,
+    "published": 3,
+    "note": "Короткий добор: после вычитки архива (data/daily/*.json и state.json) почти весь заметный контент экспертов за Nov 9-16 оказался уже опубликован предыдущими прогонами. Расширенный поиск нашёл 3 настоящих, не задублированных материала (Willison, Latent Space, Matt Wolfe/Peter Yang) и один ложный кандидат (Mollick), пойманный на этапе git-диффа перед коммитом и выброшенный вместе с его случайной перезаписью существующей заметки и state.json. Дальше честных кандидатов, подходящих по теме «подходы к использованию LLM» и не дублирующих архив, найти не удалось."
+  },
+  "video_pipeline": {
+    "yt_dlp_ffmpeg": "installed via pip (yt-dlp, imageio-ffmpeg); ffmpeg also present in PATH",
+    "gemini": "ok: GEMINI_API_KEY present; generativelanguage.googleapis.com reachable; gemini_video.py successfully summarized https://www.youtube.com/watch?v=pvl3z_GyU2Y server-side (theses + timestamps used for the note page)",
+    "youtube_rss_discovery": "blocked: www.youtube.com/feeds/videos.xml gave DNS/proxy ENOTFOUND for all 5 configured channel_ids; fell back to WebSearch per SKILL.md's documented day-to-day instability",
+    "yt_dlp_direct": "blocked: yt-dlp against youtube.com gave 'Tunnel connection failed: 403 Forbidden' at the egress proxy (CONNECT level), same failure mode as documented in SKILL.md for 2026-07-18",
+    "frames": "skipped: youtube.com unreachable client-side for yt-dlp despite Gemini API itself (server-side) reaching the video fine; note page published without frames, flagged in its note-hint"
+  },
+  "maintenance": {
+    "note": "Session started with local main detached 4 commits behind origin/main (origin already had 2026-11-13..11-16 pushed by prior runs; local checkout just hadn't fetched). Ran git fetch + git checkout main + fast-forward merge before collecting; no lost work, no force operations needed. Separately caught and corrected a dedup mistake before committing: an Ethan Mollick note (oneusefulthing.org/p/fable-52-and-jagged-agi) was re-generated and almost overwrote the existing 2026-11-10 note of the same article; restored via git checkout and reverted the matching data/state.json timestamps."
+  }
+}
