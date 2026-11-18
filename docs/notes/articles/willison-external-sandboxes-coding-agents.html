@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Внешние песочницы для агентов» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (совместно с Prime Radiant) · 2026-11-17</span>
+      <span data-lang="en">Article digest · Simon Willison (with Prime Radiant) · 2026-11-17</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Внешние песочницы для агентов: код выполняется снаружи, а не внутри</span>
+      <span data-lang="en">External sandboxes for coding agents: run the code outside, not inside</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://blog.primeradiant.com/external-sandboxes-for-coding-agents/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Уиллисон давно формулирует главное правило безопасного запуска кодящих агентов: единственный надёжный способ прогнать код, который теоретически может столкнуться с враждебной атакой (например, prompt injection), — это песочница. Проблема в том, где эту песочницу разместить. Привычный вариант — «внутренняя песочница»: сам агент вместе со своим кодом живёт в контейнере или VM. Новая статья, написанная вместе с исследовательской лабораторией Prime Radiant (авторы Superpowers и других открытых инструментов), предлагает другую схему — «внешнюю песочницу»: агент работает как обычно, на обычной машине, а выполняется в изоляции только код, который он просит запустить. Разница на первый взгляд кажется формальной, но она меняет, что именно защищено и от чего.</span>
+      <span data-lang="en">Willison has long stated the core rule for running coding agents safely: the only trustworthy way to execute code that might face an adversarial attack (a prompt injection, for instance) is a sandbox. The open question is where to put that sandbox. The familiar answer is an "internal sandbox": the agent itself, together with its code, lives inside a container or VM. A new article, co-written with the research lab Prime Radiant (makers of Superpowers and other open tools), proposes a different layout — the "external sandbox": the agent keeps running on an ordinary machine as usual, and only the code it asks to execute runs in isolation. The difference sounds like a technicality at first, but it changes exactly what is protected, and from what.</span>
+    </p>
+
+    <h2><span data-lang="ru">Зачем выносить код наружу: мотивация — безопасный тест локальных моделей</span><span data-lang="en">Why move the code out: the motivating case is testing local models safely</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон пишет, что повод для эксперимента конкретный: он хотел пробовать локальные (не облачные) модели в роли кодящих агентов, не рискуя, что ошибка модели или успешная инъекция в промпт приведёт к реальному повреждающему действию на его машине. При внутренней песочнице это означало бы держать весь харнесс агента (его память разговора, инструменты, логику принятия решений) внутри изолированной среды — тяжеловесно и неудобно для быстрых экспериментов. Внешняя песочница решает это иначе: харнесс (Pi, Claude Code или Codex) остаётся снаружи, а каждый вызов «выполнить код» агент отправляет по сети в отдельный sandbox-сервер на localhost. Сам агент, таким образом, может ошибаться или быть обманут, но его ошибки конвертируются в запросы к песочнице, а не в прямые действия на хост-машине.</span>
+      <span data-lang="en">Willison says the experiment had a concrete trigger: he wanted to try local (not cloud) models as coding agents without risking that a model mistake or a successful prompt injection would translate into real damage on his own machine. With an internal sandbox, that would mean keeping the agent's whole harness — its conversation memory, tools, decision logic — inside an isolated environment, which is heavy and awkward for quick experiments. The external sandbox solves this differently: the harness (Pi, Claude Code, or Codex) stays outside, and every "run this code" call the agent makes goes over the network to a separate sandbox server on localhost. The agent itself can still be wrong or manipulated, but its mistakes turn into requests to the sandbox, not direct actions on the host machine.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три реализации одного и того же локального API</span><span data-lang="en">Three implementations of the same localhost API</span></h2>
+    <p>
+      <span data-lang="ru">Чтобы доказать, что паттерн не привязан к одной технологии изоляции, авторы выпустили три независимых сервера песочницы с одинаковым API, которые можно подставлять друг вместо друга: <code>external-sandbox-v86</code> — сервер на Node.js, который гоняет Alpine Linux внутри WebAssembly через проект v86 (то есть вся изоляция — программная, без обращения к виртуализации хоста); <code>external-sandbox-container</code> — сервер на Python, запускающий ту же Alpine Linux через Apple Containers (нативная для macOS лёгкая виртуализация); и <code>external-sandbox-quicksand</code> — тоже на Python, но использующий Quicksand от Microsoft, который упаковывает QEMU и Alpine Linux в единый pip-пакет. Любой из этих серверов настраивается как цель для исполнения кода в Pi, Claude Code или Codex — харнесс просто отправляет код по тому же локальному HTTP-адресу вне зависимости от того, какая из трёх реализаций за ним стоит.</span>
+      <span data-lang="en">To show the pattern isn't tied to one isolation technology, the authors released three independent sandbox servers sharing the same API, each a drop-in replacement for the others: <code>external-sandbox-v86</code>, a Node.js server that runs Alpine Linux inside WebAssembly via the v86 project (so the isolation is purely software-based, with no host-level virtualization involved); <code>external-sandbox-container</code>, a Python server running the same Alpine Linux through Apple Containers (macOS's native lightweight virtualization); and <code>external-sandbox-quicksand</code>, also Python, using Microsoft's Quicksand, which bundles QEMU and Alpine Linux into a single pip package. Any of the three can be configured as the code-execution target for Pi, Claude Code, or Codex — the harness just sends code to the same localhost address, regardless of which of the three implementations sits behind it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Сетевой allow-list и подмена учётных данных: изоляция не только от файловой системы</span><span data-lang="en">A network allow-list and credential substitution: isolating more than just the filesystem</span></h2>
+    <p>
+      <span data-lang="ru">Помимо изоляции исполнения, в каждую песочницу встроен опциональный HTTP/HTTPS-прокси с allow-list: можно явно ограничить список хостов, с которыми разрешено общаться коду агента, и наблюдать за недавней активностью через веб-интерфейс (скриншот в статье показывает страницу с разрешёнными адресами, редактором политики в JSON и журналом последних запросов прокси). Второй механизм — подмена учётных данных: прокси может подставлять реальный секрет (API-ключ, токен) в исходящий запрос уже после того, как он покинул песочницу, так что сам секрет никогда не передаётся коду, который выполняет агент. Это закрывает конкретный класс риска: даже если агент убедить выполнить произвольный код, этот код физически не может прочитать или слить ключ, которым не владеет.</span>
+      <span data-lang="en">Beyond execution isolation, each sandbox ships with an optional HTTP/HTTPS allow-list proxy: you can explicitly restrict which hosts the agent's code is allowed to talk to, and watch recent activity through a web UI (the article's screenshot shows a page with allowed destinations, a JSON policy editor, and a log of recent proxy requests). The second mechanism is credential substitution: the proxy can inject the real secret (an API key, a token) into an outbound request only after it has left the sandbox, so the secret itself is never handed to the code the agent is running. That closes a specific risk: even if an agent is tricked into executing arbitrary code, that code has no way to read or leak a key it was never given.</span>
+    </p>
+
+    <h2><span data-lang="ru">Когда применять этот паттерн и чего он не решает</span><span data-lang="en">When to use this pattern, and what it doesn't solve</span></h2>
+    <p>
+      <span data-lang="ru">Паттерн рассчитан на случай, когда нужно разделить «насколько я доверяю харнессу/модели» и «насколько я доверяю конкретному куску кода, который сейчас выполняется» — то есть именно сценарий тестирования менее проверенных (например, локальных) моделей без переделки всей инфраструктуры агента под изолированную среду. Он не отменяет необходимость доверять самому харнессу: если скомпрометирован не исполняемый код, а логика принятия решений агента (например, через injection в контекст), внешняя песочница такую атаку не поймает — она защищает именно границу «код выполняется где-то ещё», а не весь цикл работы агента. Уиллисон прямо формулирует общий вывод: его продолжает занимать задача безопасного запуска недоверенного кода, и внешняя песочница — удобный способ experimentировать с разными подходами к ней, а не окончательное решение.</span>
+      <span data-lang="en">The pattern fits the case where you need to separate "how much do I trust the harness or model" from "how much do I trust this specific piece of code running right now" — in other words, exactly the scenario of trying out less-vetted (say, local) models without rebuilding your whole agent infrastructure around an isolated environment. It doesn't remove the need to trust the harness itself: if what's compromised isn't the executed code but the agent's decision-making (via a context injection, say), an external sandbox won't catch that — it protects the boundary where "code runs somewhere else," not the agent's whole operating loop. Willison states the general takeaway directly: he remains fascinated by the challenge of safely running untrusted code, and the external sandbox is a convenient way to experiment with different approaches to it, not a final answer.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту комментария Уиллисона в его linkblog (найден через клон github.com/simonw/simonwillisonblog-backup) и по описанию трёх репозиториев sandbox-серверов на github.com/prime-radiant-inc; прямой WebFetch на blog.primeradiant.com и simonwillison.net не проходит в этом прогоне (домены не резолвятся через egress-прокси облачной песочницы).</span>
+      <span data-lang="en">Digest built from the full text of Willison's linkblog commentary (found via a clone of github.com/simonw/simonwillisonblog-backup) and from the descriptions of the three sandbox-server repos on github.com/prime-radiant-inc; a direct WebFetch to blog.primeradiant.com and simonwillison.net fails in this run (the domains don't resolve through the cloud sandbox's egress proxy).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

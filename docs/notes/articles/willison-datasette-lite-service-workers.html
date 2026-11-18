@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Саймон Уиллисон — «Datasette Lite теперь почти неотличим от сервера» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-17</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-17</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Полноценный серверный Datasette в браузере: service worker, Pyodide и Claude в роли соавтора</span>
+      <span data-lang="en">Running the full server-side Datasette app in the browser: a service worker, Pyodide, and Claude as co-author</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/17/datasette-lite/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Datasette Lite — версия инструмента Уиллисона для исследования данных, которая работает целиком в браузере, без какого-либо сервера: Python-рантайм Pyodide (CPython, скомпилированный в WebAssembly) выполняет настоящий код Datasette прямо на странице. Первая версия, появившаяся ещё в 2022 году, была устроена через Web Worker: браузер гонял Python в фоновом потоке, а когда код генерировал HTML-страницу, воркер забирал готовую разметку и подставлял её в DOM. Подход работал, но с заметным швом — например, тегами <code>&lt;script&gt;</code> внутри такой HTML-страницы Web Worker выполнить не мог, и часть поведения настоящего сервера приходилось эмулировать отдельно.</span>
+      <span data-lang="en">Datasette Lite is the version of Willison's data-exploration tool that runs entirely in the browser, with no server at all: Pyodide (CPython compiled to WebAssembly) executes the real Datasette codebase right on the page. The original 2022 version was built around a Web Worker: the browser ran Python on a background thread, and once the code generated an HTML page, the worker grabbed the finished markup and dropped it into the DOM. That worked, but with a visible seam — a Web Worker, for instance, couldn't execute <code>&lt;script&gt;</code> tags inside that generated HTML, so part of a real server's behavior had to be emulated separately.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что меняет service worker: страница ведёт себя как настоящий HTTP-ответ</span><span data-lang="en">What the service worker changes: the page behaves like a real HTTP response</span></h2>
+    <p>
+      <span data-lang="ru">Новая версия, вышедшая 17 ноября, — полная переделка на основе service worker, зарегистрированного на весь домен lite.datasette.io. Service worker умеет перехватывать сетевые запросы браузера и отвечать на них напрямую, минуя реальную сеть, — то есть страница, которую Pyodide отдаёт изнутри, становится настоящим HTTP-ответом со своими заголовками, а не кусочком HTML, вставленным постфактум. По словам Уиллисона, результат теперь «почти неотличим от настоящего серверного приложения». Технический нюанс, который и оправдывает сохранение прежнего Web Worker рядом с новым service worker: Pyodide внутри service worker не может надёжно держать состояние дольше примерно 30 секунд (точный порог зависит от браузера) — поэтому долгоживущее состояние Python-процесса по-прежнему ведёт Web Worker, а service worker отвечает на короткие запрос-ответ по мере необходимости.</span>
+      <span data-lang="en">The new version, shipped November 17, is a full rewrite built around a service worker registered for the whole lite.datasette.io domain. A service worker can intercept the browser's network requests and answer them directly, bypassing the real network — so the page Pyodide serves from the inside becomes a genuine HTTP response with its own headers, rather than a chunk of HTML dropped in after the fact. Willison says the result is now "almost indistinguishable from the real server-side application." The technical wrinkle that justifies keeping the old Web Worker alongside the new service worker: Pyodide inside a service worker can't reliably hold state for much longer than about 30 seconds (the exact limit varies by browser) — so the Web Worker still carries the Python process's long-lived state, while the service worker handles short request/response cycles as needed.</span>
+    </p>
+
+    <h2><span data-lang="ru">Роль Claude: не просто ассистент, а соавтор демо и диаграмм</span><span data-lang="en">Claude's role: not just an assistant, but a co-author of the demo and diagrams</span></h2>
+    <p>
+      <span data-lang="ru">Эта версия — развитие майского эксперимента, когда Уиллисон поставил Claude Opus 4.8 (в Claude Code for web) задачу разобраться, как вообще запускать Python ASGI-приложения в Pyodide через service worker: тогда это было исследование на уровне «работает ли в принципе». Теперь, доведя идею до релиза, он прямо описывает две роли модели в самом тексте: Claude Fable 5.2 сгенерировал несколько SVG-диаграмм для статьи, поясняющих архитектуру, и отдельно собрал полноценное демо, показывающее новый Datasette Lite в деле. Иными словами, модель задействована не только для объяснения уже готового решения читателю, но и для продакшена самого демонстрационного материала — рутинная, но трудоёмкая работа, которую раньше пришлось бы делать вручную.</span>
+      <span data-lang="en">This release builds on a May experiment, when Willison set Claude Opus 4.8 (in Claude Code for web) the task of figuring out how to run Python ASGI apps in Pyodide via a service worker at all — at that point it was "does this even work" level research. Having now carried the idea through to a shipped release, he spells out two distinct roles for the model directly in the post: Claude Fable 5.2 generated several SVG diagrams for the write-up that explain the architecture, and separately built a complete demo showing the new Datasette Lite in action. In other words, the model is doing more than explaining an already-finished solution to the reader — it produced the demonstration material itself, routine but time-consuming work that previously had to be done by hand.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это пример, а не разовый трюк</span><span data-lang="en">Why this is a pattern, not a one-off trick</span></h2>
+    <p>
+      <span data-lang="ru">Связка «сначала исследовательский прототип руками модели, потом доведение до продакшена с её же помощью для диаграмм и демо» — продолжение той же практики, которую Уиллисон применял и в других недавних релизах: модель хорошо справляется с чётко очерченной, проверяемой задачей (нарисовать диаграмму по описанию архитектуры, собрать рабочий демо-пример), оставляя архитектурные решения — например, выбор между Web Worker и service worker для разных типов состояния — за автором. Релиз важен прежде всего инженерно (открывает дорогу для полноценных серверных Python-приложений в браузере без бэкенда вообще), но то, как именно он был сделан, — ещё один задокументированный пример того, как опытный разработчик распределяет работу между собой и моделью в реальном, доведённом до публикации проекте.</span>
+      <span data-lang="en">The pairing of "a research prototype worked out by the model first, then carried through to production with the model's help for diagrams and demos" continues a pattern Willison has used in other recent releases: the model handles a sharply scoped, checkable task well (draw a diagram from an architecture description, build a working demo), while the author keeps architectural decisions — such as choosing between a Web Worker and a service worker for different kinds of state — for himself. The release matters mainly as engineering (it opens the door to full server-side Python apps running in the browser with no backend at all), but how it was actually built is another documented example of how an experienced developer splits work between himself and the model on a real, shipped project.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту поста Уиллисона (найден через WebSearch и через связанный майский пост simonwillison.net/2026/May/30/pyodide-asgi-browser/); прямой WebFetch на simonwillison.net не проходит в этом прогоне (домен не резолвится через egress-прокси облачной песочницы).</span>
+      <span data-lang="en">Digest built from the full text of Willison's post (found via WebSearch and the related May post at simonwillison.net/2026/May/30/pyodide-asgi-browser/); a direct WebFetch to simonwillison.net fails in this run (the domain doesn't resolve through the cloud sandbox's egress proxy).</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Latent Space — «Манифест против AI slop» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (swyx и команда) · 2026-11-13</span>
+      <span data-lang="en">Article digest · Latent Space (swyx and team) · 2026-11-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Манифест против AI slop: не модель виновата, а то, что вы отправили, не проверив</span>
+      <span data-lang="en">The No AI Slop Manifesto: it's not the model's fault — it's shipping without checking</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://latent.space/p/ainews-the-no-ai-slop-manifesto/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Документ родился не в блоге и не в твиттере, а на конференции: на закрытии AIE CODE Summit 2026 Декс Хорти (Dex Horthy) представил текст, который по ходу обсуждений на конференции подписали многие выступавшие, — «No AI Slop Manifesto». В тот же день он поднялся на первую страницу Hacker News, а Latent Space разобрал его как материал дня, проведя прямую параллель с Agile-манифестом 2001 года: тот документ тоже появился как реакция на утяжелённые, оторванные от реальной работы процессы (тогда — избыточная документация, сейчас — вал кода и текста, который никто толком не проверил перед тем, как отправить дальше).</span>
+      <span data-lang="en">The document didn't start as a blog post or a tweet — it came out of a conference. At the closing keynote of the AIE CODE Summit 2026, Dex Horthy introduced a text that, over the course of the conference's discussions, many speakers ended up co-signing: the "No AI Slop Manifesto." It hit the Hacker News front page the same day, and Latent Space covered it as the story of the day, drawing a direct parallel to the 2001 Agile Manifesto: that document was also a reaction to a heavyweight process disconnected from real work — back then, excessive documentation; now, a flood of code and text nobody actually checked before passing it along.</span>
+    </p>
+
+    <h2><span data-lang="ru">Центральный ход: slop — это не про инструмент, а про перенесённую ответственность</span><span data-lang="en">The central move: slop is not about the tool, it's about shifted effort</span></h2>
+    <p>
+      <span data-lang="ru">Манифест намеренно не осуждает использование ИИ как таковое — его тезис тоньше: «использование ИИ не делает работу слопом». Слопом её делает то, что в работу вложено меньше усилий, чем придётся потратить тому, кто будет её читать или проверять. То есть критерий — не происхождение текста или кода (человек написал или модель), а честность передачи: если автор переложил на читателя то усилие, которое должен был приложить сам (прочитать, перепроверить, понять, что он отправляет), — это slop, независимо от того, помогала ли ему модель. Этот сдвиг рамки — с «кто автор» на «кто теперь должен разгребать» — и есть содержательное ядро документа, а не просто лозунг против низкокачественного контента.</span>
+      <span data-lang="en">The manifesto deliberately doesn't condemn using AI as such — its claim is more precise: "using AI doesn't make work slop." What makes it slop is that less effort went into producing it than the reader or reviewer will now have to spend making sense of it. The test, then, isn't where the text or code came from (a person wrote it, or a model did) — it's whether the handoff was honest: if the author pushed onto the reader the effort they should have spent themselves (reading it back, double-checking it, actually understanding what they're sending), that's slop, regardless of whether a model helped write it. That reframing — from "who's the author" to "who now has to clean this up" — is the document's real substance, not just a slogan against low-quality content.</span>
+    </p>
+
+    <h2><span data-lang="ru">Обязательства, а не запреты: что именно подписавшиеся обещают делать</span><span data-lang="en">Commitments, not bans: what signatories actually promise to do</span></h2>
+    <p>
+      <span data-lang="ru">Манифест сформулирован как набор личных обязательств, а не правил для модели. Ключевые пункты, которые цитируют независимые пересказы текста: подписавшийся берёт на себя владение намерением, вкусом и последствиями того, что он отправляет, какой бы ни была доля участия модели; раскрывает, где именно писал агент, если это существенно для того, как читатель оценит материал; и соразмеряет глубину проверки риску — код, касающийся авторизации, платежей или экспорта данных, получает полную проверку, а не беглый взгляд. Отдельно оговорён тон: если кто-то прислал slop, правильная реакция — мягко сказать об этом и попросить перепроверить перед повторной отправкой, а не публично устыдить. Манифест также явно отказывается мерить результат числом строк кода, количеством PR или потраченными токенами — именно эти метрики, по мысли авторов, и толкают к слопу, поощряя объём вместо вложенного внимания.</span>
+      <span data-lang="en">The manifesto is written as a set of personal commitments, not rules for a model to follow. The key points cited in independent summaries: a signatory owns the intent, taste, and consequences of what they ship, however much the model contributed; discloses where an agent actually wrote something, when that matters for how the reader judges the material; and scales review depth to risk — code touching authorization, billing, or data export gets a full review, not a glance. Tone gets its own clause: if someone sends you slop, the right response is to say so gently and ask them to review it before resending, not to call it out publicly. The manifesto also explicitly refuses to measure success by lines of code, PR counts, or tokens spent — those are exactly the metrics its authors think push people toward slop in the first place, by rewarding volume over attention actually paid.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это не разовый мем, а рабочий документ</span><span data-lang="en">Why this isn't a one-off meme but a working document</span></h2>
+    <p>
+      <span data-lang="ru">Параллель с Agile-манифестом работает не только как красивая аналогия: тот документ стал рабочим именно потому, что переводил расплывчатое недовольство («слишком много бюрократии») в конкретные, проверяемые на практике обязательства команды. «No AI Slop Manifesto» пытается повторить этот ход для текущего момента — расплывчатое раздражение «вокруг слишком много мусора, сгенерированного моделями» превращается в конкретные правила: что раскрывать, как соразмерять проверку риску, как реагировать, когда slop всё же прислали. Открытый текст выложен на slopmanifesto.com и как публичный GitHub Gist, куда можно добавить подпись, — то есть документ задуман как живой, растущий список подписавшихся, а не как разовое заявление конференции.</span>
+      <span data-lang="en">The Agile Manifesto parallel isn't just a flattering analogy: that document became a working tool precisely because it turned vague dissatisfaction ("too much process") into concrete, practically checkable team commitments. The "No AI Slop Manifesto" tries to repeat that move for the current moment — vague irritation at "too much model-generated junk everywhere" turns into specific rules: what to disclose, how to scale review to risk, how to respond when slop does land in your inbox. The full text is hosted at slopmanifesto.com and as a public GitHub Gist open for signatures, so the document is meant to be a living, growing list of signatories rather than a one-off conference statement.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по изложению Latent Space (ainews-the-no-ai-slop-manifesto) и по независимым пересказам полного текста манифеста (slopmanifesto.com, публичный GitHub Gist), найденным через WebSearch; прямой WebFetch на latent.space и slopmanifesto.com не проходит в этом прогоне (домены не резолвятся через egress-прокси облачной песочницы), поэтому дословные формулировки пунктов манифеста не проверены против первоисточника.</span>
+      <span data-lang="en">Digest built from Latent Space's write-up (ainews-the-no-ai-slop-manifesto) and from independent paraphrases of the manifesto's full text (slopmanifesto.com, the public GitHub Gist) found via WebSearch; a direct WebFetch to latent.space and slopmanifesto.com fails in this run (the domains don't resolve through the cloud sandbox's egress proxy), so the manifesto's exact wording hasn't been checked against the primary source.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

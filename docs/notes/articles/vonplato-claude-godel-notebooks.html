@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Claude расшифровал блокноты Гёделя» (The Guardian) — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Jan von Plato, по изложению The Guardian · 2026-11-13</span>
+      <span data-lang="en">Article digest · Jan von Plato, as reported by The Guardian · 2026-11-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Claude нашёл 663 теоремы в блокнотах Гёделя — и почти собрал доказательство, которое тот не довёл до конца</span>
+      <span data-lang="en">Claude surfaced 663 theorems in Gödel's notebooks — and nearly reconstructed a proof he never finished</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://aiweekly.co/alerts/von-plato-uses-claude-to-extract-663-theorems-from-gdel-notes" target="_blank" rel="noopener">
+        <span data-lang="ru">Источник (пересказ статьи The Guardian) ↗</span><span data-lang="en">Source (write-up of The Guardian's article) ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Ян фон Плато, логик из Хельсинкского университета, с 2017 года разбирает рабочие блокноты Курта Гёделя — 1009 страниц математических заметок начала 1940-х годов, записанных системой Габельсбергера, уже тогда устаревшей немецкой стенографией. До появления моделей вроде Claude работа шла со скоростью примерно страница в неделю: расшифровка стенографии — это одно узкое место, а понимание, что именно Гёдель имел в виду математически, — совсем другое, и оба требовали ручного, медленного труда специалиста. В сентябре фон Плато передал Claude свои собственные транскрипции (не исходные стенографические страницы — их модель не читала) вместе с шестью своими книгами о Гёделе и другой научной литературой по теме.</span>
+      <span data-lang="en">Jan von Plato, a logician at the University of Helsinki, has been working through Kurt Gödel's notebooks since 2017 — 1,009 pages of mathematical notes from the early 1940s, written in Gabelsberger, a German shorthand system that was already obsolete at the time. Before models like Claude, progress crawled at roughly one page a week: deciphering the shorthand was one bottleneck, and figuring out what Gödel actually meant mathematically was another, and both required slow, manual expert labor. In September, von Plato handed Claude his own transcriptions (not the original shorthand pages — the model never read those) along with six of his own books on Gödel and other relevant scholarly literature.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что вернула модель: каталог теорем за несколько дней вместо многолетней расшифровки</span><span data-lang="en">What the model returned: a catalogue of theorems in days, not years of transcription</span></h2>
+    <p>
+      <span data-lang="ru">В течение нескольких дней Claude подготовил анализ объёмом около 650 страниц, каталогизировав 663 теоремы, которые Гёдель доказал, набросал или к которым у него была явная идея — то есть не просто список утверждений, а структурированную классификацию по степени завершённости мысли. Фон Плато описывает свою роль на этом этапе не как доверие результату, а как построчную перепроверку: весь материал пришлось контролировать страница за страницей, сверяя выводы модели с собственным многолетним пониманием контекста Гёделя. Для независимой проверки математической корректности теоремы прогнали через Coq — систему формальной верификации доказательств; по оценке фон Плато, около 400 теорем подтвердились в заявленном виде, около 200 потребовали исправления формулировки или дополнительных предпосылок, и около 50 оказались ложными (часть из них, возможно, сам Гёдель отмечал как неверные попытки).</span>
+      <span data-lang="en">Within days, Claude produced about a 650-page analysis, cataloguing 663 theorems that Gödel had proved, sketched, or clearly had an idea for — not just a list of statements, but a structured classification by how far the thought had been carried. Von Plato describes his own role at this stage not as trusting the output but as checking it line by line: the whole thing had to be controlled page by page, cross-checking the model's conclusions against his own years of context on Gödel. To independently verify mathematical correctness, the theorems were run through Coq, a formal proof-verification system; by von Plato's estimate, about 400 theorems held up as stated, around 200 needed a repaired statement or extra assumptions, and roughly 50 turned out false (some of those possibly notes Gödel himself had already flagged as failed attempts).</span>
+    </p>
+
+    <h2><span data-lang="ru">Главная находка: доказательство, до которого Гёделю не хватило одного шага за два года до того</span><span data-lang="en">The headline finding: a proof Gödel was one step away from, two years earlier than he thought</span></h2>
+    <p>
+      <span data-lang="ru">Самый заметный результат — реконструкция доказательства независимости аксиомы выбора, которое Гёдель, по сведениям из блокнотов, заявлял как близкое к готовому, но так и не довёл до публикации. По версии фон Плато, у Гёделя было верное определение нужного понятия — но написано оно было на два года раньше того места в блокнотах, где он пытался собрать само доказательство, и там он по какой-то причине использовал не то, более раннее и неверное определение. Когда реконструированное доказательство с правильным определением прогнали через Coq, оно прошло проверку. Открытым остаётся вопрос атрибуции: сколько из финальной связной конструкции — мысль Гёделя, а сколько — вычислительная реконструкция модели, восстановившая связь между разрозненными фрагментами через два года заметок. Джоэл Дэвид Хамкинс из Нотр-Дам прямо формулирует это как задачу на будущее: разделить, что именно написал Гёдель, а что реконструировал и доделал современный ИИ, — работа для историков науки, а не для разового читателя статьи.</span>
+      <span data-lang="en">The most notable result is a reconstruction of a proof of the independence of the axiom of choice — something the notebooks suggest Gödel himself believed he was close to, but never carried through to publication. By von Plato's reading, Gödel had the correct definition of the concept he needed, but had written it down two years before the point in the notebooks where he tried to assemble the actual proof, and for some reason used an earlier, incorrect definition there instead. When the reconstructed proof, using the correct definition, was run through Coq, it checked out. What remains open is attribution: how much of the final, connected construction is Gödel's own thinking, and how much is the model's computational reconstruction, bridging scattered fragments across two years of notes. Joel David Hamkins of Notre Dame frames this directly as work for the future: disentangling exactly what Gödel wrote from what a modern AI reconstructed and completed is a job for historians of science, not something settled by a single article.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это показательный кейс применения LLM, а не просто курьёз</span><span data-lang="en">Why this is a telling use case for LLMs, not just a curiosity</span></h2>
+    <p>
+      <span data-lang="ru">Кейс интересен именно разделением труда между человеком и моделью: Claude не читал почерк и не заменял историко-математическую экспертизу фон Плато — он работал поверх готовых транскрипций, беря на себя объединение разрозненных, разбросанных по 1009 страницам фрагментов в связную картину и предложение недостающих шагов там, где автор заметок явно двигался в верном направлении, но не зафиксировал финал. Формальная верификация через Coq здесь не опциональный штрих, а необходимое условие, без которого результату вообще нельзя было бы доверять: именно сочетание «модель находит структуру — человек-эксперт контролирует контекст — независимый формальный верификатор проверяет итог» делает возможным доверять каталогу из нескольких сотен теорем, а не просто громкому заголовку о находке.</span>
+      <span data-lang="en">What makes the case instructive is specifically the division of labor between person and model: Claude didn't read the handwriting and didn't substitute for von Plato's historical-mathematical expertise — it worked on top of finished transcriptions, taking on the job of pulling fragments scattered across 1,009 pages into a coherent picture and proposing the missing steps where the notebooks' author had clearly been heading the right way but never wrote down the ending. Formal verification through Coq isn't an optional flourish here but a necessary condition, without which the result couldn't be trusted at all: it's the combination — model finds structure, human expert controls for context, independent formal verifier checks the outcome — that makes it possible to trust a catalogue of several hundred theorems, rather than just a splashy headline about a discovery.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по пересказам статьи The Guardian (13 ноября 2026), найденным через WebSearch в нескольких независимых источниках (aiweekly.co, mlq.ai, fourweekmba.com и др.); прямую ссылку на theguardian.com найти не удалось, прямой WebFetch на вторичные источники также не проходит в этом прогоне (домены не резолвятся через egress-прокси облачной песочницы) — цифры и детали сверены между несколькими независимыми пересказами.</span>
+      <span data-lang="en">Digest built from write-ups of The Guardian's article (November 13, 2026) found via WebSearch across several independent outlets (aiweekly.co, mlq.ai, fourweekmba.com and others); a direct theguardian.com link could not be found, and a direct WebFetch to the secondary sources also fails in this run (the domains don't resolve through the cloud sandbox's egress proxy) — figures and details were cross-checked across multiple independent write-ups.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

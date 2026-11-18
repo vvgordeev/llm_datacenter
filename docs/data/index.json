@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-18",
+      "news_count": 1,
+      "expert_count": 4,
+      "top_title": {
+        "ru": "OpenAI выпускает GPT-6.2 Astra и Sol: та же формула, что у Fable 5.2 — цены вниз, бенчмарки почти без изменений",
+        "en": "OpenAI ships GPT-6.2 Astra and Sol: same playbook as Fable 5.2 — lower prices, benchmarks barely move"
+      }
+    },
+    {
       "date": "2026-11-17",
       "news_count": 0,
       "expert_count": 3,

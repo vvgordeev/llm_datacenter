@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T05:15:01Z",
+  "news": [
+    {
+      "id": "2026-11-18-openai-gpt-6-2-astra-sol",
+      "cluster_id": "openai-gpt-6-2-astra-sol",
+      "models": ["openai"],
+      "title": {
+        "ru": "OpenAI выпускает GPT-6.2 Astra и Sol: та же формула, что у Fable 5.2 — цены вниз, бенчмарки почти без изменений",
+        "en": "OpenAI ships GPT-6.2 Astra and Sol: same playbook as Fable 5.2 — lower prices, benchmarks barely move"
+      },
+      "summary": {
+        "ru": "OpenAI выпустила GPT-6.2 Astra (топовая модель для сложных задач) и GPT-6.2 Sol (дешёвая модель для повседневной многошаговой работы) 17 ноября. Astra подешевела на 20% ($8/$40 за млн токенов против $10/$50, кешированный ввод — $0.40 против $1), Sol сохранила цену предшественника ($2/$10). По независимому индексу Artificial Analysis обе модели уступают Claude Fable 5.2; собственные бенчмарки OpenAI показывают точечный прирост (ExploitBench, FrontierCode), но не качественный скачок.",
+        "en": "OpenAI released GPT-6.2 Astra (its flagship for demanding work) and GPT-6.2 Sol (a cheaper model for everyday multi-step tasks) on November 17. Astra's price dropped 20% ($8/$40 per million tokens vs $10/$50, cached input $0.40 vs $1), while Sol kept its predecessor's pricing ($2/$10). On the independent Artificial Analysis index both models trail Claude Fable 5.2; OpenAI's own benchmarks show incremental gains (ExploitBench, FrontierCode) rather than a qualitative jump."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Повторяет паттерн точечных .1→.2 обновлений (как недавний Fable 5.2): заметное снижение цены расширяет практичность долгих агентных сессий, но независимые бенчмарки и первые отзывы говорят об инкрементальном, не парадигмальном улучшении.",
+        "en": "Follows the same incremental .1→.2 pattern as the recent Fable 5.2: the price cut meaningfully helps long agentic sessions, but independent benchmarks and early feedback point to an incremental gain, not a paradigm shift."
+      },
+      "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "neutral",
+          "quote": {
+            "ru": "По собственным тестам Уиллисона (сравнение по эффорт-уровням на одной и той же задаче), Astra 6.2 заметно дешевле предшественника, но по качеству уступает Claude Fable 5.2 и Gemini 4 Carbon на тех же задачах; независимый индекс Artificial Analysis ставит обе новые модели OpenAI позади Fable 5.2.",
+            "en": "In Willison's own tests (an effort-level comparison on the same task), Astra 6.2 is notably cheaper than its predecessor but falls short of Claude Fable 5.2 and Gemini 4 Carbon on the same tasks; the independent Artificial Analysis index ranks both new OpenAI models behind Fable 5.2."
+          },
+          "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/"
+        },
+        {
+          "author": "Theo Browne (в письме-отзыве для OpenAI перед релизом, опубликовано в X)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Модель хорошо управляет большим числом подагентов на долгих задачах, но может застрять, задав разработчику мелкий технический вопрос, в котором тот физически не может разобраться — в его примере модель «заблокировалась» через два часа работы, спрашивая, в какой из двух video-файлов пишет свои клипы внутренний ревьюер.",
+            "en": "The model manages many subagents well on long tasks but can get stuck asking the developer an obscure implementation question they have no way of answering — in his example it got \"blocked\" two hours into a task, asking which of two video files an internal reviewer writes its clips to."
+          },
+          "url": "https://twitter.com/theo/status/2122760447103484410"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Сниженная цена кешированного ввода (в 2.5 раза) делает выгоднее длинные агентные сессии с большим переиспользуемым контекстом.",
+            "en": "The 2.5x cheaper cached input makes long agentic sessions with large reused context more cost-effective."
+          },
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+        },
+        {
+          "text": {
+            "ru": "Sol как модель по умолчанию для рутинных многошаговых задач (документы, таблицы, код) при цене в разы ниже Astra.",
+            "en": "Sol as the default model for routine multi-step work (documents, spreadsheets, code) at a fraction of Astra's price."
+          },
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-18-willison-external-sandboxes",
+      "type": "article",
+      "author": "Simon Willison (с Prime Radiant)",
+      "title": {
+        "ru": "Внешние песочницы для агентов: код выполняется снаружи, а не внутри",
+        "en": "External sandboxes for coding agents: run the code outside, not inside"
+      },
+      "url": "https://blog.primeradiant.com/external-sandboxes-for-coding-agents/",
+      "summary": {
+        "ru": "Уиллисон вместе с лабораторией Prime Radiant описывает паттерн «внешняя песочница»: агент работает на обычной машине, а изолируется только код, который он выполняет. Выпущены три сменных реализации одного API (WebAssembly/v86, Apple Containers, Microsoft Quicksand) с сетевым allow-list и подменой учётных данных — мотивация в том, чтобы безопасно пробовать менее проверенные (локальные) модели.",
+        "en": "Willison, with the Prime Radiant lab, describes the \"external sandbox\" pattern: the agent runs on an ordinary machine while only the code it executes gets isolated. Three interchangeable implementations of one API ship (WebAssembly/v86, Apple Containers, Microsoft Quicksand) with a network allow-list and credential substitution — motivated by safely trying out less-vetted (local) models."
+      },
+      "note_page": "notes/articles/willison-external-sandboxes-coding-agents.html"
+    },
+    {
+      "id": "2026-11-18-willison-datasette-lite-service-workers",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Полноценный серверный Datasette в браузере: service worker, Pyodide и Claude в роли соавтора",
+        "en": "Running the full server-side Datasette app in the browser: a service worker, Pyodide, and Claude as co-author"
+      },
+      "url": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+      "summary": {
+        "ru": "Полная переделка Datasette Lite на service worker вместо Web Worker: страница, которую отдаёт Pyodide, теперь ведёт себя как настоящий HTTP-ответ. Claude Fable 5.2 сгенерировал SVG-диаграммы для статьи и собрал демо — развитие майского эксперимента, где Claude Opus 4.8 выяснял принципиальную реализуемость подхода.",
+        "en": "A full rewrite of Datasette Lite around a service worker instead of a Web Worker: the page Pyodide serves now behaves like a real HTTP response. Claude Fable 5.2 generated the post's SVG diagrams and built the demo — building on a May experiment where Claude Opus 4.8 worked out whether the approach was feasible at all."
+      },
+      "note_page": "notes/articles/willison-datasette-lite-service-workers.html"
+    },
+    {
+      "id": "2026-11-18-latentspace-no-ai-slop-manifesto",
+      "type": "article",
+      "author": "Latent Space (swyx и команда)",
+      "title": {
+        "ru": "Манифест против AI slop: не модель виновата, а то, что вы отправили, не проверив",
+        "en": "The No AI Slop Manifesto: it's not the model's fault — it's shipping without checking"
+      },
+      "url": "https://latent.space/p/ainews-the-no-ai-slop-manifesto/",
+      "summary": {
+        "ru": "Декс Хорти представил на AIE CODE Summit 2026 манифест, который в тот же день подписали многие участники и который вышел на первую страницу HN: использование ИИ не делает работу слопом — слопом её делает меньшее усилие автора, чем придётся потратить читателю. Latent Space проводит параллель с Agile-манифестом 2001 года.",
+        "en": "Dex Horthy introduced a manifesto at the AIE CODE Summit 2026 that many attendees co-signed the same day and that hit the HN front page: using AI doesn't make work slop — less author effort than the reader will have to spend does. Latent Space draws a direct parallel to the 2001 Agile Manifesto."
+      },
+      "note_page": "notes/articles/latentspace-no-ai-slop-manifesto.html"
+    },
+    {
+      "id": "2026-11-18-vonplato-claude-godel-notebooks",
+      "type": "article",
+      "author": "Jan von Plato, по изложению The Guardian",
+      "title": {
+        "ru": "Claude нашёл 663 теоремы в блокнотах Гёделя — и почти собрал доказательство, которое тот не довёл до конца",
+        "en": "Claude surfaced 663 theorems in Gödel's notebooks — and nearly reconstructed a proof he never finished"
+      },
+      "url": "https://aiweekly.co/alerts/von-plato-uses-claude-to-extract-663-theorems-from-gdel-notes",
+      "summary": {
+        "ru": "Логик Ян фон Плато передал Claude свои транскрипции блокнотов Гёделя; модель за несколько дней каталогизировала 663 теоремы, из которых около 400 подтвердились формальным верификатором Coq. Среди находок — реконструкция доказательства независимости аксиомы выбора, которое Гёдель, по всей видимости, так и не довёл до публикации.",
+        "en": "Logician Jan von Plato gave Claude his transcriptions of Gödel's notebooks; within days the model catalogued 663 theorems, about 400 of which held up under the Coq formal verifier. Among the findings: a reconstructed proof of the independence of the axiom of choice that Gödel apparently never carried through to publication."
+      },
+      "note_page": "notes/articles/vonplato-claude-godel-notebooks.html"
+    }
+  ]
+}

@@ -224,13 +224,6 @@
         "ru": "Anthropic перенесла динамические workflow — ранее доступные только как research preview в Claude Code, где сценарий выполнялся на машине пользователя, — в API Managed Agents в виде публичной беты (9 октября). Теперь агент сам пишет многоэтапную программу, которая распределяет работу между другими агентами (до 1000 за всё время запуска, 64 одновременно), объединяет их результаты и продолжает разговор с пользователем, пока сервер выполняет сценарий в фоне. В собственном тесте Anthropic на кодовой базе с 70 намеренно внесёнными багами один агент находил 14-27 из них за три прогона, а workflow-запуск — 66 каждый раз."
       }
     },
-    "anthropic-pacing-the-frontier": {
-      "last_date": "2026-09-18",
-      "summary": {
-        "en": "Amodei (Sept 12 essay) → Altman/Musk agree → Microsoft joins as a fourth backer with a Code of Conduct (Sept 13-14) → OpenAI confirms weeks of talks and backs the FRONTIER Act (Sept 15) → Anthropic publishes the first quantitative R&D Automation Index: Claude leads 26% of the company's AI R&D (Sept 17).",
-        "ru": "Amodei (12 сент, эссе) → Altman/Musk согласны → Microsoft четвёртым присоединяется с Code of Conduct (13-14 сент) → OpenAI подтверждает недели переговоров и поддержку FRONTIER Act (15 сент) → Anthropic публикует первый количественный R&D Automation Index: Claude ведёт 26% AI R&D компании (17 сент)."
-      }
-    },
     "anthropic-personal-finance": {
       "last_date": "2026-11-07",
       "summary": {
@@ -271,13 +264,6 @@
       "summary": {
         "en": "Google shipped a new antigravity-preview-09-2026 harness in the Gemini API and AI Studio — the same harness behind the Antigravity coding agent, running on Gemini 3.8 Flash, with roughly a 22% cache-hit improvement on long, multi-step tasks. Alongside it come two new APIs: a Files API for moving data in and out of an agent's persistent Linux sandbox, and a Credentials API where secrets (a Slack token, a Jira key) are registered once and never touch the sandbox's memory, the model's context, or logs — if the agent tries to send a secret to a host outside the trusted list, the proxy returns a 403. Migrating off the previous antigravity-preview-05-2026 harness is mandatory: it shuts down on October 5, 2026.",
         "ru": "Google выкатил в Gemini API и AI Studio новый харнес antigravity-preview-09-2026 — тот же харнес, что стоит за кодовым агентом Antigravity, работает на Gemini 3.8 Flash и добавляет ~22% попаданий в кэш на длинных многошаговых задачах. Вместе с ним запущены два новых API: Files API — для загрузки/выгрузки файлов в постоянную Linux-песочницу агента, и Credentials API — секреты (например, токен Slack или ключ Jira) регистрируются один раз и никогда не попадают ни в память среды, ни в контекст модели, ни в логи; если агент попытается отправить секрет на недоверенный хост, прокси вернёт 403. Переход с прежнего харнеса antigravity-preview-05-2026 обязателен: его отключат 5 октября 2026."
-      }
-    },
-    "google-deepmind-institute-agi": {
-      "last_date": "2026-09-18",
-      "summary": {
-        "en": "Google DeepMind launches the DeepMind Institute — a public essay platform on societal AGI readiness (Hassabis, Legg, Manyika), coinciding with reports that US government AI-oversight plans had stalled (Sept 16).",
-        "ru": "Google DeepMind запускает DeepMind Institute — публичную площадку эссе о подготовке общества к AGI (Хассабис, Легг, Манyика), совпало с сообщениями о застопорившихся планах госнадзора за ИИ в США (16 сент)."
       }
     },
     "google-gemini-4-carbon-cybersecurity": {
@@ -497,13 +483,6 @@
         "ru": "OpenAI сидела на взломе через публичные вики месяцами → 29 конгрессменов во главе с Касаром и Мацуи требуют объяснений (10 августа, эскалация 3 сентября); в ответ OpenAI не раскрывает лог инцидента, но сообщает о разработке «автоматического отключения» ИИ-систем; внесён законопроект AI Kill Switch Act."
       }
     },
-    "openai-sponsored-agents-ads": {
-      "last_date": "2026-09-18",
-      "summary": {
-        "en": "OpenAI launches Sponsored Agents — brand-paid AI agents inside ChatGPT conversations (US pilot, partners Wayfair and Angi), plus Shopify/HubSpot integrations (Sept 16).",
-        "ru": "OpenAI запускает Sponsored Agents — оплаченных брендами ИИ-агентов внутри диалогов ChatGPT (пилот США, партнёры Wayfair и Angi), плюс интеграции Shopify/HubSpot (16 сент)."
-      }
-    },
     "openai-training-pause-dns-sandbox-escape": {
       "last_date": "2026-09-27",
       "summary": {
@@ -558,13 +537,6 @@
       "summary": {
         "en": "Grok Bot keeps expanding: email/calendar connectors shipped September 5, and on September 22 Tesla built Grok Bot with Connectors directly into vehicles — hands-free email, calendar and ordering tasks (SuperGrok Heavy).",
         "ru": "Grok Bot расширяется: коннекторы к почте/календарю появились 5 сентября, а 22 сентября Tesla встроила Grok Bot с коннекторами прямо в автомобили — хендс-фри работа с почтой, календарём и заказами (SuperGrok Heavy)."
-      }
-    },
-    "xai-grok-build-memory": {
-      "last_date": "2026-09-18",
-      "summary": {
-        "en": "xAI adds long-term, cross-session project memory to Grok Build with a /memory command (Sept 16).",
-        "ru": "xAI добавляет в Grok Build долговременную кросс-сессионную память проекта с командой /memory (16 сент)."
       }
     },
     "xai-grok-voice-transcribe-2": {
@@ -671,6 +643,13 @@
         "ru": "Google DeepMind представляет AlphaProof Code (10 ноября) — мультиагентный фреймворк, который доказывает формальные свойства безопасности реального скомпилированного кода; применён к libsignal (~6.5 млн строк Lean-доказательств за 4 недели).",
         "en": "Google DeepMind unveils AlphaProof Code (Nov 10) — a multi-agent framework proving formal security properties of real compiled code; applied to libsignal (~6.5M lines of Lean proof in 4 weeks)."
       }
+    },
+    "openai-gpt-6-2-astra-sol": {
+      "last_date": "2026-11-18",
+      "summary": {
+        "ru": "OpenAI выпустила GPT-6.2 Astra и Sol (17 ноября): Astra дешевле на 20%, Sol — по цене предшественника; независимый индекс Artificial Analysis ставит обе модели позади Claude Fable 5.2.",
+        "en": "OpenAI released GPT-6.2 Astra and Sol (Nov 17): Astra 20% cheaper, Sol at predecessor pricing; the independent Artificial Analysis index ranks both behind Claude Fable 5.2."
+      }
     }
   },
   "seen_urls": {
@@ -701,7 +680,6 @@
     "https://every.to/context-window/evals-for-everyone": "2026-09-21",
     "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html": "2026-10-18",
     "https://ghuntley.com/agency/": "2026-10-16",
-    "https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads": "2026-09-18",
     "https://karpathy.bearblog.dev/hacker-tube/": "2026-11-06",
     "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure": "2026-10-30",
     "https://latent.space/p/elorian/": "2026-10-30",
@@ -732,20 +710,17 @@
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
     "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08",
     "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-15",
-    "https://simonwillison.net/2026/Sep/17/compaction-summaries/": "2026-09-18",
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
     "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
     "https://swarmtraces.org/": "2026-09-28",
-    "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/": "2026-09-18",
     "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/": "2026-09-20",
     "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": "2026-10-02",
     "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/": "2026-10-03",
     "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/": "2026-10-06",
     "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/": "2026-10-15",
     "https://thenewstack.io/meta-muse-spark-open/": "2026-10-21",
-    "https://thezvi.substack.com/p/ai-186-the-world-takes-notice": "2026-09-18",
     "https://thezvi.substack.com/p/ai-188-gemini-dot-argon": "2026-10-05",
     "https://thezvi.substack.com/p/ai-191-the-hackening-begins": "2026-10-27",
     "https://thezvi.substack.com/p/ai-192-anthropic-is-going-public": "2026-10-30",
@@ -764,7 +739,6 @@
     "https://www.anthropic.com/claude-sonnet-5-5": "2026-09-29",
     "https://www.anthropic.com/engineering/redesigning-source-control": "2026-10-14",
     "https://www.anthropic.com/features/ebola-response": "2026-09-25",
-    "https://www.anthropic.com/institute/measuring-pace-of-ai-development": "2026-09-18",
     "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions": "2026-10-29",
     "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09",
     "https://www.anthropic.com/news/barclays-scales-claude": "2026-10-02",
@@ -827,9 +801,7 @@
     "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
     "https://www.youtube.com/watch?v=r3NH48_Z9Vk": "2026-09-23",
     "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
-    "https://www.youtube.com/watch?v=u-giatW9mYU": "2026-09-18",
     "https://x.ai/news/grok-4-7": "2026-09-22",
-    "https://x.ai/news/grok-build-memory": "2026-09-18",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
@@ -913,6 +885,15 @@
     "https://www.youtube.com/watch?v=pvl3z_GyU2Y": "2026-11-17",
     "notes/articles/willison-datasette-fable-5-2.html": "2026-11-17",
     "notes/articles/latentspace-decision-models-dday.html": "2026-11-17",
-    "notes/videos/wolfe-peteryang-personal-ai-system.html": "2026-11-17"
+    "notes/videos/wolfe-peteryang-personal-ai-system.html": "2026-11-17",
+    "https://openai.com/index/introducing-gpt-6-2-astra-sol/": "2026-11-18",
+    "https://blog.primeradiant.com/external-sandboxes-for-coding-agents/": "2026-11-18",
+    "https://simonwillison.net/2026/Nov/17/datasette-lite/": "2026-11-18",
+    "https://latent.space/p/ainews-the-no-ai-slop-manifesto/": "2026-11-18",
+    "https://aiweekly.co/alerts/von-plato-uses-claude-to-extract-663-theorems-from-gdel-notes": "2026-11-18",
+    "notes/articles/willison-external-sandboxes-coding-agents.html": "2026-11-18",
+    "notes/articles/willison-datasette-lite-service-workers.html": "2026-11-18",
+    "notes/articles/latentspace-no-ai-slop-manifesto.html": "2026-11-18",
+    "notes/articles/vonplato-claude-godel-notebooks.html": "2026-11-18"
   }
 }
