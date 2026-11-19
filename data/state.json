@@ -63,13 +63,6 @@
         "ru": "Anthropic незаметно обновила Claude Code (~26-27 октября), чтобы он отказывался воссоздавать конкретные существующие видеоигры; пользователи сообщают об избыточной блокировке легитимного реверс-инжиниринга вплоть до 31 октября."
       }
     },
-    "anthropic-claude-code-2-1-277": {
-      "last_date": "2026-09-19",
-      "summary": {
-        "en": "Claude Code 2.1.277 (September 18): AGENTS.md fallback support, a variable for gateway proxies with a single egress boundary, a headers map, a UI note for a finished background task, a fix for claude -p hanging.",
-        "ru": "Claude Code 2.1.277 (18 сентября): поддержка AGENTS.md как fallback, переменная для прокси-шлюзов с единой границей egress, карта headers, UI-пометка готовой фоновой задачи, фикс зависания claude -p."
-      }
-    },
     "anthropic-claude-code-2-1-319": {
       "last_date": "2026-11-07",
       "summary": {
@@ -650,6 +643,13 @@
         "ru": "OpenAI выпустила GPT-6.2 Astra и Sol (17 ноября): Astra дешевле на 20%, Sol — по цене предшественника; независимый индекс Artificial Analysis ставит обе модели позади Claude Fable 5.2.",
         "en": "OpenAI released GPT-6.2 Astra and Sol (Nov 17): Astra 20% cheaper, Sol at predecessor pricing; the independent Artificial Analysis index ranks both behind Claude Fable 5.2."
       }
+    },
+    "curl-ai-agent-rust-rewrite": {
+      "last_date": "2026-11-19",
+      "summary": {
+        "ru": "AI-агенты переписали весь curl (185 тыс. строк C) в Rust (340 тыс. строк); мейнтейнер Дэниел Стенберг указывает, что оригинальный проект за то же время внёс больше реальных правок и багфиксов, чем есть в любом из Rust-клонов.",
+        "en": "AI agents rewrote the entire curl codebase (185K lines of C) into Rust (340K lines); maintainer Daniel Stenberg notes the original project made more real fixes and bugfixes in the same period than any of the Rust clones have."
+      }
     }
   },
   "seen_urls": {
@@ -684,7 +684,6 @@
     "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure": "2026-10-30",
     "https://latent.space/p/elorian/": "2026-10-30",
     "https://latent.space/p/offline-coding/": "2026-10-30",
-    "https://martinfowler.com/articles/2026-dont-like-llms.html": "2026-09-19",
     "https://mistral.ai/news/mistral-large-4/": "2026-10-07",
     "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
     "https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers": "2026-10-27",
@@ -713,7 +712,6 @@
     "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
-    "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/": "2026-09-19",
     "https://swarmtraces.org/": "2026-09-28",
     "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/": "2026-09-20",
     "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": "2026-10-02",
@@ -769,7 +767,6 @@
     "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer": "2026-10-05",
     "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc": "2026-10-04",
     "https://www.latent.space/p/airbnb": "2026-10-06",
-    "https://www.latent.space/p/aiuc": "2026-09-19",
     "https://www.latent.space/p/devday-2026": "2026-10-02",
     "https://www.latent.space/p/rlm": "2026-10-03",
     "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/": "2026-10-04",
@@ -784,7 +781,6 @@
     "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
     "https://www.techtimes.com/articles/328381/20261002/openai-rogue-ai-agents-hacked-hugging-face-ftc-probes-labs-safety-auditor-metr.htm": "2026-10-03",
     "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/": "2026-11-03",
-    "https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2": "2026-09-19",
     "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
     "https://www.youtube.com/watch?v=7jHXoPGnA4c": "2026-09-27",
     "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-28",
@@ -894,6 +890,9 @@
     "notes/articles/willison-external-sandboxes-coding-agents.html": "2026-11-18",
     "notes/articles/willison-datasette-lite-service-workers.html": "2026-11-18",
     "notes/articles/latentspace-no-ai-slop-manifesto.html": "2026-11-18",
-    "notes/articles/vonplato-claude-godel-notebooks.html": "2026-11-18"
+    "notes/articles/vonplato-claude-godel-notebooks.html": "2026-11-18",
+    "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/": "2026-11-19",
+    "https://aihero.dev/the-home-repo-pattern": "2026-11-19",
+    "https://claude.com/blog/building-always-on-agents": "2026-11-19"
   }
 }

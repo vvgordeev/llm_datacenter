@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Anthropic — «Как устроены всегда включённые агенты» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Anthropic (William Hu) · 2026-11-13</span>
+      <span data-lang="en">Article digest · Anthropic (William Hu) · 2026-11-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как устроены «всегда включённые» агенты: пять строительных блоков</span>
+      <span data-lang="en">How always-on agents are built: five building blocks</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://claude.com/blog/building-always-on-agents" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Почему «всегда включённые» агенты снова актуальны</span><span data-lang="en">Why always-on agents are back</span></h2>
+    <p>
+      <span data-lang="ru">Статья фиксирует возврат интереса к агентам, которые не ждут сообщения пользователя, а работают постоянно фоном. Anthropic связывает это в первую очередь не с ростом «мощности» моделей как таковой, а с тем, что новые модели лучше судят о намерении пользователя и о том, когда стоит вмешаться, а когда — продолжать работать молча. Обычный чат-агент реагирует только на сообщение; «всегда включённый» агент вместо этого может запускаться по множеству других событий — вебхуку, срабатыванию таймера, фоновому job — и действовать без того, чтобы пользователь каждый раз инициировал разговор.</span>
+      <span data-lang="en">The piece frames this as a resurgence rather than a first attempt, and attributes it less to raw model power and more to newer models being better judges of user intent — of when to check in with a person and when to keep working quietly. A regular chat agent only reacts to a message; an always-on agent can instead be triggered by many other kinds of events — a webhook, a scheduled timer, a background job — and act without the user starting a conversation each time.</span>
+    </p>
+
+    <h2><span data-lang="ru">Пять компонентов архитектуры</span><span data-lang="en">Five architectural building blocks</span></h2>
+    <p>
+      <span data-lang="ru">По пересказам статьи, Anthropic раскладывает такого агента на пять частей. «Входящий ящик» (event inbox) собирает события из разных источников в единую очередь, которую агент разбирает. Таймеры позволяют агенту назначать себе будущие срабатывания — не только реагировать на внешние события, но и планировать собственные проверки. Память хранит контекст между отдельными запусками, которые иначе были бы независимы друг от друга. Права доступа определяют, что агенту разрешено делать от имени пользователя в каждом конкретном запуске. «Исходящий ящик» (outbox) — механизм, которым агент сообщает наружу о результатах своей работы, не блокируя при этом основной цикл.</span>
+      <span data-lang="en">Secondary summaries of the post describe five components. An event inbox collects events from different sources into one queue the agent works through. Timers let the agent schedule its own future wake-ups, not just react to outside events but plan its own check-ins. Memory carries context across runs that would otherwise be independent of each other. Permissions define exactly what the agent may do on the user's behalf during any one run. An outbox is the mechanism the agent uses to report results back out without blocking its main loop.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Всегда включён» — это то, что видит пользователь, а не то, что происходит с токенами</span><span data-lang="en">"Always on" describes what the user sees, not what happens to tokens</span></h2>
+    <p>
+      <span data-lang="ru">Ключевое уточнение статьи: ощущение непрерывности — это то, что видит пользователь, а не буквальное описание происходящего внутри. Большую часть времени агент фактически «спит» и не тратит токены между запусками; оживает он только тогда, когда в его входящем ящике появляется событие или срабатывает один из его собственных таймеров. Это прямо отличает такую архитектуру от держания модели «на связи» постоянно — стоимость определяется не временем жизни агента, а числом и сложностью реальных срабатываний.</span>
+      <span data-lang="en">The post's key clarification: the sense of continuity is what the user experiences, not a literal description of what's happening underneath. Most of the time the agent is effectively asleep and burns no tokens between runs; it only wakes up when something lands in its event inbox or one of its own timers fires. That directly distinguishes the architecture from keeping a model "on the line" continuously — cost tracks the number and complexity of actual wake-ups, not how long the agent has notionally existed.</span>
+    </p>
+
+    <h2><span data-lang="ru">Самый рискованный блок — права доступа</span><span data-lang="en">The riskiest block is permissions</span></h2>
+    <p>
+      <span data-lang="ru">Пересказы статьи выделяют права доступа как зону наибольшего риска во всей схеме: каждый отдельный запуск агента действует с правами пользователя, а наблюдать за этим запуском в моменте, как правило, некому — в отличие от чат-сессии, где человек рядом и может сразу остановить нежелательное действие. Из этого вытекает практическая рекомендация, которую приводят вторичные источники: заводить один входящий ящик на пользователя и держать не больше одного активного воркера на ящик одновременно, а оценивать агента не по стоимости токена, а по стоимости решённой задачи — иначе дешёвый по токенам, но часто ошибающийся агент выглядит эффективным, не являясь таковым на практике.</span>
+      <span data-lang="en">Secondary write-ups single out permissions as the riskiest part of the whole scheme: each individual run acts with the user's own access, and there is typically no one watching that specific run as it happens — unlike a chat session, where a person is right there and can stop an unwanted action immediately. The practical recommendation that follows, per those write-ups: keep one event inbox per user and no more than one active worker per inbox at a time, and judge the agent by cost per solved task rather than cost per token — otherwise an agent that's cheap per token but frequently wrong can look efficient without actually being so.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">claude.com не резолвится напрямую через egress-прокси облачной песочницы в этом прогоне; конспект собран по развёрнутым цитатам и пересказам статьи в независимых разборах (penchan.co, beri.net, smartscope.blog), найденным через WebSearch, и мог не передать все формулировки оригинала дословно.</span>
+      <span data-lang="en">claude.com doesn't resolve directly through the cloud sandbox's egress proxy in this run; this digest was built from extended quotes and paraphrases of the post found in independent write-ups (penchan.co, beri.net, smartscope.blog) via WebSearch, and may not reproduce every phrase of the original verbatim.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

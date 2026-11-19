@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-19",
+      "news_count": 1,
+      "expert_count": 2,
+      "top_title": {
+        "ru": "Агенты переписали curl на Rust (185 тыс. строк C → 340 тыс. строк Rust) — мейнтейнер посчитал, что сам обогнал их по реальным правкам",
+        "en": "AI agents rewrote curl in Rust (185K lines of C → 340K lines of Rust) — the maintainer says he outpaced them on real fixes anyway"
+      }
+    },
+    {
       "date": "2026-11-18",
       "news_count": 1,
       "expert_count": 4,

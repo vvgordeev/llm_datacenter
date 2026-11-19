@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T05:20:00Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch, anthropic.com/news)", "status": "ok", "candidates": 0, "note": "WebFetch succeeded; only dated item Nov 17-19 is 'Anthropic prices initial public offering' (Nov 18) — financial news without a product/approach angle, rejected per filter rules. 'November 19, 2026' heading present but empty."},
+    {"source": "openai blog (openai.com/news/)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy refusal (ENOTFOUND). Covered via WebSearch instead (2 queries)."},
+    {"source": "openai (WebSearch)", "status": "ok", "candidates": 0, "note": "2+ queries; newest confirmed items are from early Nov (ChatGPT Images 2.6 Nov 4, dots admin-preview-to-default Nov 18 billing note) — not a new feature announcement for Nov 17-19, too thin/ambiguous to publish as news."},
+    {"source": "google/deepmind blog (blog.google)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy refusal. Covered via WebSearch (2 queries) — no Nov 17-19 item found, only Pixel Drop (Nov 10) and recycled Gemini 3 (Nov 2025) results."},
+    {"source": "meta ai blog (ai.meta.com/blog)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy refusal. WebSearch (2 queries) surfaced only early-Nov Muse Wonder rollout items, already stale/likely archived earlier."},
+    {"source": "xai news (x.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy refusal. WebSearch (2 queries): newest is Grok Bot 1.0 (confirmed Nov 2, 2026 on xAI's own page) — too old for today's lookback window."},
+    {"source": "mistral news (mistral.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy refusal. WebSearch (2 queries): newest confirmed item is EU AI sovereignty announcement (~Nov 8) — too old."},
+    {"source": "deepseek news (api-docs.deepseek.com/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy refusal. WebSearch (2 queries): newest confirmed release is V4.1-Flash-1017 (Oct 17) — too old, nothing for Nov."},
+    {"source": "qwen/alibaba", "status": "skipped", "candidates": 0, "note": "enabled: false in config/sources.yaml — not collected per config."},
+    {"source": "aggregator: AI News (smol.ai)", "status": "blocked", "candidates": 0, "note": "WebFetch DNS refusal; WebSearch found no Nov 17-19 issue indexed yet (newest found: June 2026)."},
+    {"source": "aggregator: TLDR AI (tldr.tech/ai)", "status": "blocked", "candidates": 0, "note": "WebFetch DNS refusal; not independently recoverable via WebSearch this run."},
+    {"source": "aggregator: Simon Willison linkblog", "status": "ok", "candidates": 1, "note": "Used git clone of github.com/simonw/simonwillisonblog-backup (ndjson dump) instead of blocked simonwillison.net/datasette.simonwillison.net. Confirmed newest real content is Nov 17-18 (already archived) EXCEPT one Nov 18 blog_quotation linking to Daniel Stenberg's curl/Rust post — used as today's main news item."},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "curl CONNECT returned 403 from egress proxy (confirmed via curl -v). Switched to WebSearch for HN coverage; found nothing new/dated for Nov 19 beyond the curl/urlx story already used."},
+    {"source": "community: r/LocalLLaMA, r/ClaudeAI, X", "status": "ok", "candidates": 0, "note": "WebSearch only (per config note on X); nothing dated Nov 17-19 surfaced beyond already-archived items."},
+    {"source": "extended pass (broad queries: 'LLM news Nov 18/19', 'AI model release Nov 19', 'AI coding agent update this week', HN front page)", "status": "ok", "candidates": 0, "note": "Multiple broad WebSearch queries run because initial per-model pass yielded <5 candidates; confirmed genuinely thin news day — search indices for Nov 18-19 editions of aiweekly.co/aiweekly daily, latent.space AINews not yet indexed at run time (early AM Nov 19 GMT+3)."},
+    {"source": "expert: Simon Willison (simonwillisonblog-backup clone)", "status": "ok", "candidates": 0, "note": "Authoritative ndjson dump confirms no new blog_entry/blog_blogmark since Nov 17 (already archived 2026-11-18); one Nov 18 blog_quotation used as news source instead."},
+    {"source": "expert: Andrej Karpathy", "status": "empty", "candidates": 0, "note": "WebSearch (2 queries): newest confirmed post is HackerTube (Oct 31) — outside 7-day freshness window."},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "WebSearch (3 queries): newest AINews issue found is 'The No AI Slop Manifesto' (already archived Nov 18); no Nov 17-19 issue indexed yet. Podcast episodes found are Nov 3-8, outside freshness window."},
+    {"source": "expert: AI Explained (video)", "status": "empty", "candidates": 0, "note": "WebSearch (2 queries): no dated Nov 2026 upload found; aggregators stale since ~May 2026."},
+    {"source": "expert: Matt Wolfe (video)", "status": "empty", "candidates": 0, "note": "WebSearch (3 queries): found titles for Nov 6/7/12/13 roundups via third-party summarizers, but could not obtain a verifiable primary youtube.com/watch URL for any of them — excluded per no-fabrication rule rather than publish with an unconfirmed link."},
+    {"source": "expert: Ethan Mollick (oneusefulthing.org)", "status": "empty", "candidates": 0, "note": "WebSearch: newest confirmed archive post is Oct 20; nothing in Nov 2026 found."},
+    {"source": "expert: Nate Herk (video)", "status": "empty", "candidates": 0, "note": "WebSearch (2 queries) + vidIQ tracker: newest confirmed upload Nov 11 (8 days before run date) — outside 7-day freshness window."},
+    {"source": "expert: Matt Pocock (video/article)", "status": "ok", "candidates": 1, "note": "'The Home Repo Pattern' (aihero.dev), ~Nov 12, corroborated across aihero.dev, GitHub (mattpocock/dictionary-of-ai-coding), author's own X post, and independent write-ups (daily.dev, the-agent-daily.org). Used as expert_content."},
+    {"source": "extended expert search: Every (every.to), Anthropic engineering/product blog, AI newsletters", "status": "ok", "candidates": 1, "note": "Every's Gemini 4 Argon Vibe Check dated too old (Oct 13) — excluded. Anthropic's own 'Building always-on agents' guide (claude.com/blog, Nov 13, by William Hu) confirmed via WebSearch and used as second expert_content item — a methods/architecture piece, not a product-release announcement, so treated as expert content rather than vendor news."}
+  ],
+  "totals": {
+    "candidates": 6,
+    "published": 3,
+    "rejected": {
+      "уже архивировано / не новое": 2,
+      "финансовая новость без продуктового угла (Anthropic IPO pricing)": 1,
+      "не удалось подтвердить первоисточник/URL (Matt Wolfe видео)": 1,
+      "слишком старое для окна свежести (Karpathy HackerTube, Every Gemini 4 Argon, Nate Herk, Grok Bot 1.0, Qwen4-Max — последний к тому же выключен в конфиге)": 5
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used this run — no video expert content found within freshness window with a verifiable primary YouTube URL; GEMINI_API_KEY is present and yt-dlp/imageio-ffmpeg were installed via pip but no video candidate survived verification",
+    "frames": "not applicable — no video items published this run"
+  },
+  "note": "Более 1/3 прямых источников (блоги моделей, агрегаторы, HN API) вернули blocked (DNS/egress-proxy отказ или 403) в этом прогоне — ожидаемая деградация окружения облачной песочницы (см. SKILL.md), не 'тихий день' сам по себе. Открытие через WebSearch и git-клон simonwillisonblog-backup подтвердило независимо, что реальных новых новостных событий за 17-19 ноября почти нет: опубликован один действительно новый и хорошо подтверждённый сюжет (curl/Rust агентный rewrite) плюс два экспертных материала."
+}

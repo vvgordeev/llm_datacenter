@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Мэтт Покок — «Паттерн Home Repo» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Matt Pocock (AI Hero) · 2026-11-12</span>
+      <span data-lang="en">Article digest · Matt Pocock (AI Hero) · 2026-11-12</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Паттерн Home Repo: один репозиторий, который держит навыки агента и указывает на все остальные</span>
+      <span data-lang="en">The Home Repo Pattern: one repo to hold your agent's skills and point at all the others</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://aihero.dev/the-home-repo-pattern" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <h2><span data-lang="ru">Проблема: агент работает с десятками репозиториев, а инструкции для него — только с одним</span><span data-lang="en">The problem: the agent touches dozens of repos, but its instructions live in just one</span></h2>
+    <p>
+      <span data-lang="ru">Поковок формулирует вопрос, который ему регулярно задают: как работать с AI-агентами, когда задача затрагивает сразу несколько репозиториев? Обычный ответ — скопировать <code>AGENTS.md</code>, набор skills и общие доки в каждый репозиторий отдельно. На практике копии быстро расходятся: инструкция поправлена в одном месте и забыта в десяти остальных, а агент в разных репозиториях начинает вести себя по-разному без видимой причины. Паттерн Home Repo — это попытка убрать само копирование, а не бороться с его последствиями.</span>
+      <span data-lang="en">Pocock starts from a question he says he's asked constantly: how do you work with AI agents when a task spans several repositories at once? The usual answer is to copy <code>AGENTS.md</code>, a set of skills, and shared docs into every repo separately. In practice the copies drift fast: an instruction gets fixed in one place and forgotten in ten others, and the agent starts behaving differently across repos for no visible reason. The Home Repo pattern tries to remove the copying itself, rather than manage its fallout.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что лежит в home-репозитории — и что в нём принципиально не лежит</span><span data-lang="en">What lives in the home repo — and what deliberately doesn't</span></h2>
+    <p>
+      <span data-lang="ru">Home Repo — это один репозиторий, который держит всё, что общее для работы агента сразу в нескольких проектах: skills, которые применимы не к одному репозиторию, сам файл <code>AGENTS.md</code> с инструкциями верхнего уровня, стиринг-файлы и общие доки — стандарты кода, глоссарий терминов, архитектурные решения, которые затрагивают систему в целом. Всё, что специфично для конкретного репозитория, сознательно остаётся в нём самом, а не переезжает в home repo — иначе общий файл быстро раздувается от исключений и перестаёт быть общим.</span>
+      <span data-lang="en">A Home Repo is a single repository that holds everything shared across the agent's work on multiple projects: skills that apply beyond one repo, the top-level <code>AGENTS.md</code> file itself, steering files, and shared docs — coding standards, a glossary of terms, architectural decisions that affect the system as a whole. Anything specific to one repository deliberately stays in that repository rather than moving into the home repo — otherwise the shared file fills up with exceptions and stops being shared in any meaningful sense.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как это работает на практике: указатели вместо копий</span><span data-lang="en">How it works in practice: pointers instead of copies</span></h2>
+    <p>
+      <span data-lang="ru">Агент запускается не в целевом репозитории, а в home repo, и внутри <code>AGENTS.md</code> перечислены указатели на остальные репозитории — по одному на каждый: имя репозитория, локальный путь, куда его клонировать, если он отсутствует, и команда клонирования. Когда задача требует работы с конкретным проектом, агент либо находит его уже склонированным по фиксированному пути, либо клонирует по инструкции из указателя. По словам Поковка, такая схема без проблем держит около 20 репозиториев; при росте до нескольких сотен он предлагает не хранить плоский список, а завести по отдельному индекс-файлу на каждое направление бизнеса, и в каждом индексе перечислять только репозитории этого направления.</span>
+      <span data-lang="en">The agent doesn't run inside the target repository — it runs inside the home repo, and <code>AGENTS.md</code> there lists one pointer per other repository: its name, the local path to clone it to, and the clone command to use if it's missing. When a task needs a specific project, the agent either finds it already cloned at that fixed path or clones it following the pointer. Pocock says this holds up fine for around 20 repositories; past a few hundred, he suggests replacing a single flat list with one index file per business area, each index listing only the repos that belong to that area.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Для самих общих skills Поковок показывает на примере своего открытого репозитория <code>mattpocock/skills</code>, как держать документацию читаемой людьми рядом с машинно-ориентированными инструкциями: каждый skill в папках вроде <code>engineering/</code> и <code>productivity/</code> получает человеко-читаемую страницу по пути <code>docs/&lt;bucket&gt;/&lt;skill-name&gt;.md</code>, и структура папки <code>docs/</code> зеркально повторяет структуру самих skills.</span>
+      <span data-lang="en">For the shared skills themselves, Pocock points to his own open <code>mattpocock/skills</code> repo as an example of keeping human-readable docs next to the machine-facing instructions: each skill under folders like <code>engineering/</code> and <code>productivity/</code> gets a human-facing page at <code>docs/&lt;bucket&gt;/&lt;skill-name&gt;.md</code>, and the <code>docs/</code> tree mirrors the skills folder structure itself.</span>
+    </p>
+
+    <h2><span data-lang="ru">Где паттерн ломается: версии, дрейф и общая реакция сообщества</span><span data-lang="en">Where the pattern breaks down: versioning, drift, and the community's reaction</span></h2>
+    <p>
+      <span data-lang="ru">Публикация разошлась широко — один из разборов назвал её «скучной, очевидной, и именно поэтому все её хотят»: ничего революционного в идее нет, она просто формализует то, что многие уже делали стихийно. В обсуждениях сразу поднялись слабые места, которые сама статья не закрывает до конца: версионирование общих skills при одновременной работе с несколькими машинами и worktree, риск дрейфа между общими инструкциями в home repo и неизбежными исключениями на местах, и открытый вопрос, где вообще физически должны жить skills — в home repo, в каждом целевом репозитории или в отдельном пакете. Один из комментаторов предложил компромисс: держать в каждом репозитории свой маленький <code>AGENTS.md</code> только для правил, специфичных этому репозиторию, — чтобы общий файл в home repo не заполнялся исключениями.</span>
+      <span data-lang="en">The post spread widely — one write-up called it "boring, obvious, and exactly why everyone wants it": there's nothing revolutionary in the idea itself, it just formalizes what many people were already doing ad hoc. Discussion quickly surfaced the gaps the article doesn't fully close: versioning shared skills when working from several machines and worktrees at once, the risk of drift between the home repo's shared instructions and the exceptions that inevitably accumulate locally, and the open question of where skills should physically live at all — in the home repo, in each target repo, or in a separate package. One commenter suggested a compromise: keep a small repo-specific <code>AGENTS.md</code> in each repo for rules that apply only there, so the shared file in the home repo doesn't fill up with exceptions.</span>
+    </p>
+    <p>
+      <span data-lang="ru">Там же, где обсуждается сам паттерн, AI Hero формулирует и его границы применимости: Home Repo — это замена монорепозиторию именно для случаев, когда настоящий монорепозиторий невозможен — например, когда вперемешку нужно работать с публичными и приватными репозиториями. Если же монорепозиторий технически реален, паттерн не нужен — это решение узкой проблемы множественных репозиториев, а не общий рецепт организации работы с агентами.</span>
+      <span data-lang="en">In the same discussion, AI Hero frames the pattern's limits directly: a Home Repo stands in for a monorepo specifically when a real monorepo isn't possible — for instance, when you need to mix public and private repositories. Where a monorepo is technically feasible, the pattern isn't needed — it solves the narrow problem of working across multiple repos, not a general recipe for organizing agent work.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">aihero.dev не резолвится напрямую через egress-прокси облачной песочницы в этом прогоне; конспект собран по развёрнутым цитатам и описаниям статьи и глоссарной статьи AI Hero, посту автора в X и независимым разборам (daily.dev, the-agent-daily.org), найденным через WebSearch.</span>
+      <span data-lang="en">aihero.dev doesn't resolve directly through the cloud sandbox's egress proxy in this run; this digest was built from extended quotes and descriptions of the article and the AI Hero glossary entry, the author's own post on X, and independent write-ups (daily.dev, the-agent-daily.org) found via WebSearch.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T05:20:00Z",
+  "news": [
+    {
+      "id": "2026-11-19-curl-ai-agent-rust-rewrite",
+      "cluster_id": "curl-ai-agent-rust-rewrite",
+      "models": [],
+      "title": {
+        "ru": "Агенты переписали curl на Rust (185 тыс. строк C → 340 тыс. строк Rust) — мейнтейнер посчитал, что сам обогнал их по реальным правкам",
+        "en": "AI agents rewrote curl in Rust (185K lines of C → 340K lines of Rust) — the maintainer says he outpaced them on real fixes anyway"
+      },
+      "summary": {
+        "ru": "Мейнтейнер curl Дэниел Стенберг описал в блоге (17 ноября) эксперимент, где AI-агенты переписали весь curl — 185 тысяч строк C — в 340 тысяч строк Rust. За то же время, чуть больше трёх недель, в оригинальном проекте было слито свыше 300 коммитов и исправлено более 200 багов, которых нет ни в одном из Rust-клонов. Похожий пример того же подхода — опубликованный ранее на Hacker News проект urlx, Rust-реализация curl/libcurl, сделанная агентом и проходящая свыше 1300 тестов из тест-сьюта curl.",
+        "en": "curl maintainer Daniel Stenberg described in a November 17 blog post an experiment where AI agents rewrote the entire curl codebase — 185,000 lines of C — into 340,000 lines of Rust. Over the same roughly three-week stretch, the original project merged 300+ commits and fixed 200+ bugs that none of the Rust clones have. A similar example of the same approach, posted earlier to Hacker News, is urlx — an agent-built Rust reimplementation of curl/libcurl that passes 1,300+ of curl's own tests."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Наглядный количественный кейс пределов «агентного» переписывания легаси-кода на новый язык: сама по себе перегенерация кода — больше не узкое место, но поддержание и доверие к результату по-прежнему держатся на человеке. Актуально для всех, кто рассматривает agentic rewrite/migration как технику, а не только для curl.",
+        "en": "A concrete, numbers-based case study on the limits of agentic rewrites of legacy code into a new language: generating the code is no longer the bottleneck, but maintaining it and trusting the result still rest on a human. Relevant to anyone weighing agentic rewrite/migration as a technique, not just to curl."
+      },
+      "source_url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/",
+      "opinions": [
+        {
+          "author": "Daniel Stenberg (мейнтейнер curl)",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Пока эти агенты переводили 185 000 строк C-кода в 340 000 строк Rust-кода (я посчитал), в самом проекте curl слили более 300 коммитов. Мы реально улучшили curl за эти чуть больше трёх недель — свыше 200 реальных исправлений багов, которых нет ни в одном из Rust-клонов. Угонятся ли эти клоны за нами?",
+            "en": "During the time these agents converted 185,000 lines of C code into 340,000 lines of Rust code (I counted), we merged over 300 commits in the actual curl project. We actually improved curl during these a little more than three weeks. A little over 200 bugfixes actually. 200 bugfixes that none of those rust rewrites have. Will these clones keep up?"
+          },
+          "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/"
+        },
+        {
+          "author": "jawiggins (автор проекта urlx, Show HN)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Я не ожидаю, что кто-то станет заменять curl на это — при том, что сама Rust-реализация проходит свыше 1300 тестов из тест-сьюта curl.",
+            "en": "I don't expect anyone to replace curl with this — even though the Rust reimplementation itself passes 1,300+ of curl's own tests."
+          },
+          "url": "https://news.ycombinator.com/item?id=47490735"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "urlx — открытая агентная Rust-реализация curl/libcurl, проходящая свыше 1300 тестов из тест-сьюта curl; автор собрал её, направив агента на тест-сьют, и ранее тем же способом (с Claude Code) сделал замену для libxml2.",
+            "en": "urlx — an open-source, agent-built Rust reimplementation of curl/libcurl that passes 1,300+ of curl's own tests; its author built it by pointing an agent at the test suite, after using the same approach (with Claude Code) to build a libxml2 replacement earlier."
+          },
+          "url": "https://news.ycombinator.com/item?id=47490735"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-19-pocock-home-repo-pattern",
+      "type": "article",
+      "author": "Matt Pocock (AI Hero)",
+      "title": {
+        "ru": "Паттерн Home Repo: один репозиторий, который держит навыки агента и указывает на все остальные",
+        "en": "The Home Repo Pattern: one repo to hold your agent's skills and point at all the others"
+      },
+      "url": "https://aihero.dev/the-home-repo-pattern",
+      "summary": {
+        "ru": "Покок описывает паттерн для работы агентов сразу с десятками репозиториев: один «home repo» держит общие skills, AGENTS.md и доки, а точечные указатели в нём ведут к остальным репозиториям без дублирования инструкций в каждом. Схема держит около 20 репозиториев напрямую, при росте — через индекс-файлы по направлениям; сообщество указывает на нерешённые вопросы версионирования и дрейфа инструкций.",
+        "en": "Pocock describes a pattern for agents working across dozens of repositories at once: one 'home repo' holds shared skills, AGENTS.md, and docs, with pointers to the other repos instead of duplicating instructions into each one. The scheme holds up directly for about 20 repos, and scales further via per-area index files; the community flags open questions around versioning and instruction drift."
+      },
+      "note_page": "notes/articles/pocock-home-repo-pattern.html"
+    },
+    {
+      "id": "2026-11-19-anthropic-building-always-on-agents",
+      "type": "article",
+      "author": "Anthropic (William Hu)",
+      "title": {
+        "ru": "Как устроены «всегда включённые» агенты: пять строительных блоков",
+        "en": "How always-on agents are built: five building blocks"
+      },
+      "url": "https://claude.com/blog/building-always-on-agents",
+      "summary": {
+        "ru": "Anthropic раскладывает архитектуру «всегда включённого» агента на пять частей: входящий ящик событий, таймеры, память, права доступа и исходящий ящик. «Всегда включён» описывает только ощущение пользователя — между запусками агент фактически спит и не тратит токены; самый рискованный блок — права доступа, поскольку за отдельным запуском обычно некому следить в моменте.",
+        "en": "Anthropic breaks an always-on agent's architecture into five parts: an event inbox, timers, memory, permissions, and an outbox. 'Always on' describes only the user's experience — between runs the agent is effectively asleep and burns no tokens; permissions are flagged as the riskiest part, since no one is typically watching any single run as it happens."
+      },
+      "note_page": "notes/articles/anthropic-building-always-on-agents.html"
+    }
+  ]
+}
