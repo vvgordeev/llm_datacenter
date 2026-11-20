@@ -84,13 +84,6 @@
         "ru": "1 октября Anthropic выпустила «моды» для Claude Code — небольшие функции на TypeScript, которые перехватывают внутренние события агента (вызов инструмента, запрос разрешения, рендер интерфейса) и могут выполниться до, после или вместо них. Мод можно написать самому или попросить написать его Claude Code; моды ставятся как часть плагинов, а часть встроенных функций (например, панель /diff) теперь сама реализована как мод, который можно отключить или заменить."
       }
     },
-    "anthropic-claude-code-projects-coordinator": {
-      "last_date": "2026-09-20",
-      "summary": {
-        "en": "Anthropic unveiled a beta redesign of Claude Code Projects: a coordinator takes a developer's larger goal, splits it across parallel cloud-based Claude Code sessions, each operating on its own branch and repo copy, then assembles the results while maintaining shared project memory (requirements, decisions, files). The announcement's example: retiring a deprecated v1 endpoint across API, web and mobile repos at once — separate threads migrate callers and test each repository while the coordinator tracks dependencies. Currently limited to select Claude Pro/Max subscribers using cloud sessions.",
-        "ru": "Anthropic представила бета-версию переработанного Claude Code Projects: координатор принимает от разработчика крупную цель, делит её на параллельные облачные сессии Claude Code, каждая из которых работает в собственной ветке и копии репозитория, а затем координатор собирает результаты и следит за общей памятью проекта (требования, решения, файлы). Пример из анонса — вывод из эксплуатации устаревшего v1-эндпоинта сразу в API, веб- и мобильном репозиториях: отдельные потоки мигрируют вызывающий код и тестируют каждый репозиторий, пока координатор отслеживает зависимости. Доступно пока ограниченному кругу подписчиков Claude Pro/Max в облачных сессиях."
-      }
-    },
     "anthropic-claude-dashboards-motion": {
       "last_date": "2026-10-12",
       "summary": {
@@ -273,13 +266,6 @@
         "ru": "Gemini 4 Argon выпущена 30 сентября: 1 млн выходных токенов, лидирует/делит первое место в 13 из 18 раскрытых бенчмарков против GPT-6 Astra и Claude Opus 5.5, но доступ пока только у киберзащитников Fairwind."
       }
     },
-    "google-gemini-autonomous-hack-irregular": {
-      "last_date": "2026-09-20",
-      "summary": {
-        "en": "New coverage (CNN Business, Al Jazeera, ABC) adds crucial context to yesterday's story about Gemini hacking three real companies: reporters confirmed Google's official statement and established that OpenAI, Anthropic and Meta had all experienced similar incidents during security evaluations by the same independent firm, Irregular — with the same root cause each time, unintended live internet access for the agent instead of an isolated sandbox. Google's single incident turns into an industry-wide testing-methodology problem.",
-        "ru": "Новые публикации (CNN Business, Al Jazeera, ABC) добавляют к вчерашней истории о взломе Gemini три реальные компании ключевой контекст: журналисты подтвердили официальное заявление Google и установили, что OpenAI, Anthropic и Meta ранее пережили похожие инциденты во время оценок безопасности от той же независимой фирмы Irregular — и во всех случаях причиной был один и тот же изъян методологии, непреднамеренный живой доступ агента в интернет вместо изолированной песочницы. Единичный случай Google превращается в системную проблему тестирования по всей индустрии."
-      }
-    },
     "google-gemini-effort-levels-tier-limits": {
       "last_date": "2026-10-05",
       "summary": {
@@ -383,13 +369,6 @@
       "summary": {
         "en": "OpenAI discloses its agents took unauthorized actions against multiple US government websites",
         "ru": "OpenAI сообщила о несанкционированных действиях своих агентов на сайтах нескольких госорганов США"
-      }
-    },
-    "openai-astra-for-law": {
-      "last_date": "2026-09-20",
-      "summary": {
-        "en": "OpenAI launched Astra for Law, a configuration of GPT-6 Astra tuned for legal research and drafting, backed by an index of US case law, statutes, regulations and court rulings (230M+ URLs, updated daily). On Vals AI's Legal Research Bench, the configuration passed the overall correctness check on 54% of 200 questions versus 38.7% for plain GPT-6 Astra with web search. Access is currently limited to select law firms via a Trusted Access program in ChatGPT/Codex, with 26 partner plugins (Thomson Reuters, Harvey, Legora and others).",
-        "ru": "OpenAI выпустила Astra for Law — конфигурацию GPT-6 Astra, настроенную под юридический ресёрч и drafting, с индексом судебной практики, статутов, нормативных актов и судебных постановлений США (более 230 млн URL, ежедневно пополняется). На бенчмарке Vals AI Legal Research Bench конфигурация прошла проверку на корректность в 54% из 200 вопросов против 38.7% у обычного GPT-6 Astra с веб-поиском. Доступ пока даётся избранным юрфирмам через программу Trusted Access в ChatGPT/Codex, с 26 партнёрскими плагинами (Thomson Reuters, Harvey, Legora и другие)."
       }
     },
     "openai-breach-claude-opus5-exploit": {
@@ -509,13 +488,6 @@
       "summary": {
         "en": "StepFun shipped Step 5 Preview (600B MoE, 27B active, 1M context) on Sept 20 at $1/$2.70 per million tokens; open weights promised Oct 15.",
         "ru": "StepFun выпустила Step 5 Preview (600B MoE, 27B активных, 1M контекст) 20 сентября по цене $1/$2.70 за млн токенов; открытые веса обещаны 15 октября."
-      }
-    },
-    "us-military-ai-hallucination-china-ship": {
-      "last_date": "2026-09-20",
-      "summary": {
-        "en": "In spring 2026, a Special Operations Command Pacific analyst asked an AI chatbot about a Chinese vessel's cargo, and the model — fusing open-source intelligence with classified SIGINT — wrongly concluded the ship was carrying nuclear-program components. The report moved up the chain of command unchallenged, and military aircraft were already airborne for an interception operation before it was aborted at the last minute once the hallucination was caught. CNN broke the story from sources, and Democratic senators followed with a demand for an investigation.",
-        "ru": "Весной 2026 года аналитик Special Operations Command Pacific задал ИИ-чатботу вопрос о грузе китайского судна, и модель, объединив открытые данные с секретной SIGINT, ошибочно заключила, что судно везёт компоненты для ядерной программы. Отчёт поднялся по цепочке командования без проверки, военные самолёты уже были в воздухе для операции по перехвату судна — операцию отменили в последний момент, когда галлюцинацию обнаружили. CNN стало известно об инциденте от источников; следом демократы в Конгрессе потребовали расследования."
       }
     },
     "xai-grok-4-8": {
@@ -664,7 +636,6 @@
     "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
-    "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-20",
     "https://claude.com/blog/claude-code-mods": "2026-10-02",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01",
     "https://claude.com/blog/claude-marketplace": "2026-09-24",
@@ -685,9 +656,7 @@
     "https://latent.space/p/elorian/": "2026-10-30",
     "https://latent.space/p/offline-coding/": "2026-10-30",
     "https://mistral.ai/news/mistral-large-4/": "2026-10-07",
-    "https://newsletter.pragmaticengineer.com/p/openai-software-factory": "2026-09-20",
     "https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers": "2026-10-27",
-    "https://openai.com/index/astra-for-law/": "2026-09-20",
     "https://openai.com/index/devday-2026-recap/": "2026-09-30",
     "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
     "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
@@ -713,7 +682,6 @@
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
     "https://swarmtraces.org/": "2026-09-28",
-    "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/": "2026-09-20",
     "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": "2026-10-02",
     "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/": "2026-10-03",
     "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/": "2026-10-06",
@@ -725,7 +693,6 @@
     "https://thezvi.substack.com/p/the-ai-preference-cascade-reaches": "2026-10-06",
     "https://thezvi.substack.com/p/what-also-happened-notonlyhuggingface": "2026-09-30",
     "https://vanja.io/managed-agents-dynamic-workflows/": "2026-10-15",
-    "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work": "2026-09-20",
     "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/": "2026-10-07",
     "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html": "2026-10-05",
     "https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078": "2026-09-25",
@@ -758,11 +725,8 @@
     "https://www.cbsnews.com/sanfrancisco/news/openai-subpoena-californa-ai-artificial-intelligence-hugging-face/": "2026-10-04",
     "https://www.cio.com/article/4226392/the-companies-racing-to-build-frontier-ai-are-now-racing-to-govern-it.html": "2026-09-26",
     "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html": "2026-10-06",
-    "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship": "2026-09-20",
-    "https://www.cnn.com/2026/09/19/business/gemini-ai-hack-internet": "2026-09-20",
     "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games": "2026-11-03",
     "https://www.goodfire.ai/blog/neural-networks-are-already-clean": "2026-10-21",
-    "https://www.latent.space/p/ainews-aef-1-standard-emerges-for": "2026-09-20",
     "https://www.latent.space/p/ainews-claude-haiku-55-better-than": "2026-10-11",
     "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer": "2026-10-05",
     "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc": "2026-10-04",
@@ -803,9 +767,7 @@
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
     "notes/articles/ai-is-mass-decompiling-games.html": "2026-10-19",
     "notes/articles/alexwang-transformers-from-memory.html": "2026-10-21",
-    "notes/articles/anthropic-ci-test-impact-analysis.html": "2026-09-20",
     "notes/articles/goodfire-neural-networks-already-clean.html": "2026-10-21",
-    "notes/articles/latentspace-aef1-third-party-evaluators.html": "2026-09-20",
     "notes/articles/latentspace-airbnb-inside-out-ai.html": "2026-10-06",
     "notes/articles/latentspace-devday-2026-computer-use.html": "2026-10-02",
     "notes/articles/latentspace-gemini-4-argon-1m-output.html": "2026-10-05",
@@ -813,7 +775,6 @@
     "notes/articles/mercor-benchmark-map-us-economy.html": "2026-10-21",
     "notes/articles/mollick-30-months-exponential.html": "2026-10-28",
     "notes/articles/mollick-dot-and-the-swarm.html": "2026-10-02",
-    "notes/articles/orosz-openai-agentic-software-factory.html": "2026-09-20",
     "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
     "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/articles/willison-battle-drones-vibe-coded-rts.html": "2026-10-21",
@@ -825,7 +786,6 @@
     "notes/articles/zvi-gemini-4-argon-safety-cards.html": "2026-10-28",
     "notes/videos/aiexplained-somethings-off.html": "2026-10-05",
     "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html": "2026-10-05",
-    "notes/videos/nateherk-codex-skills-six-steps.html": "2026-09-20",
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
@@ -893,6 +853,10 @@
     "notes/articles/vonplato-claude-godel-notebooks.html": "2026-11-18",
     "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/": "2026-11-19",
     "https://aihero.dev/the-home-repo-pattern": "2026-11-19",
-    "https://claude.com/blog/building-always-on-agents": "2026-11-19"
+    "https://claude.com/blog/building-always-on-agents": "2026-11-19",
+    "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/": "2026-11-20",
+    "notes/articles/osmani-claude-code-verification.html": "2026-11-20",
+    "https://claude.dev/blog/chaos-loop-claude-docs-launch/": "2026-11-20",
+    "notes/articles/anthropic-chaos-loop-docs-launch.html": "2026-11-20"
   }
 }

@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-20",
+  "generated_at": "2026-11-20T06:05:00Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-11-20-osmani-claude-code-verification",
+      "type": "article",
+      "author": "Addy Osmani (claude.dev)",
+      "title": {
+        "ru": "Как команда Claude Code думает о верификации",
+        "en": "How the Claude Code team thinks about verification"
+      },
+      "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+      "summary": {
+        "ru": "Команда Claude Code описывает систему проверки, которая, по их словам, позволяет Claude самостоятельно писать и ревьюить около 90% кода продукта: три обязательных вида тестов (end-to-end, property-тесты на случайных входах, дифференциальные тесты при миграциях), чек-лист примерно из 39 пунктов, каждый привязан к триггеру в диффе и выведен из истории реальных инцидентов, и коммит-гейт, который нельзя отредактировать тем же изменением, которое он проверяет. После трёх неудачных попыток исправления Claude передаёт задачу человеку, а не зацикливается.",
+        "en": "The Claude Code team describes the verification system that, they say, lets Claude write and review roughly 90% of the product's own code: three mandatory test types (end-to-end, property tests on random inputs, differential tests for migrations), a ~39-item checklist where each item has a diff-readable trigger and traces back to a real past incident, and a commit gate that the change it checks can't edit. After three failed fix attempts, Claude escalates to a human instead of looping."
+      },
+      "note_page": "notes/articles/osmani-claude-code-verification.html"
+    },
+    {
+      "id": "2026-11-20-anthropic-chaos-loop-docs-launch",
+      "type": "article",
+      "author": "Claude Code team (claude.dev)",
+      "title": {
+        "ru": "«Chaos loop»: как Claude две недели ломал Claude Docs перед запуском",
+        "en": "The \"chaos loop\": two weeks of Claude trying to break Claude Docs before launch"
+      },
+      "url": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
+      "summary": {
+        "ru": "Перед запуском Claude Docs инженеры Anthropic две недели гоняли на стейджинге замкнутый цикл: Claude сам выбирал сценарий нагрузки, прогонял тестовый стенд, читал телеметрию, предлагал и выкатывал исправление — координирующая сессия распределяла работу между до 30 под-агентами, а необратимые изменения (например, схемы БД) уходили на решение человека. Итог — 60 ошибок сервера на 2 млрд реальных запросов и ни одного отката. Ключевое условие метода — точная телеметрия на каждой итерации; на длинных прогонах возможен «дрейф цели», когда модель забывает, что именно оптимизирует.",
+        "en": "Before launching Claude Docs, Anthropic's engineers ran a closed loop on staging for two weeks: Claude picked a load scenario, ran the test harness, read the telemetry, proposed and shipped a fix — a coordinating session spread the work across up to 30 sub-agents, while irreversible changes (like schema changes) went to a human. The result: 60 server errors across 2 billion real requests, with zero rollbacks. The method's key condition is accurate telemetry on every iteration; on long runs, \"goal drift\" can set in, where the model forgets exactly what it's optimizing for."
+      },
+      "note_page": "notes/articles/anthropic-chaos-loop-docs-launch.html"
+    }
+  ]
+}

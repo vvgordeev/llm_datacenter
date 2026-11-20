@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Как команда Claude Code думает о верификации» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Addy Osmani, claude.dev (блог Anthropic для разработчиков) · 2026-11-16</span>
+      <span data-lang="en">Article digest · Addy Osmani, claude.dev (Anthropic's developer blog) · 2026-11-16</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Как команда Claude Code думает о верификации: три вида тестов, чек-лист на 39 пунктов и три попытки до передачи человеку</span>
+      <span data-lang="en">How the Claude Code team thinks about verification: three kinds of tests, a 39-item checklist and three tries before handing off to a human</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/" target="_blank" rel="noopener">
+        <span data-lang="ru">Источник ↗</span><span data-lang="en">Source ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Команда Claude Code утверждает, что около 90% кода в их собственном продукте сейчас пишет и проверяет сам Claude — и статья объясняет не это число само по себе, а то, что оно опирается не на доверие к модели, а на систему верификации, которая делает самостоятельную проверку результата дешевле и надёжнее ручного код-ревью. Идея отправной точки простая: по мере того как агент берёт на себя всё больше рутинных проверок — линтеры, тайп-чекеры, падающие тесты, — человеку остаётся формализовать именно те проверки, которые раньше держались в голове и выполнялись «по памяти», превратив их в скиллы, которые Claude применяет автоматически, а не каждый раз полагаясь на то, что о них вспомнят.</span>
+      <span data-lang="en">The Claude Code team says roughly 90% of the code in their own product is now written and reviewed by Claude — and the article is really about what backs that number, not the number itself: not trust in the model, but a verification system that makes checking the model's own output cheaper and more reliable than manual code review. The starting idea is simple: as the agent absorbs more of the routine checks — linters, type checkers, failing tests — what's left for a human is to formalize exactly the checks that used to live in someone's head and run "from memory," turning them into skills Claude applies automatically instead of relying on someone remembering to run them.</span>
+    </p>
+
+    <h2><span data-lang="ru">Три вида тестов вместо одного</span><span data-lang="en">Three kinds of tests instead of one</span></h2>
+    <p>
+      <span data-lang="ru">Статья выделяет три инструмента проверки, которые команда считает обязательным минимумом, а не выбором по вкусу. Сквозные (end-to-end) тесты реальных пользовательских сценариев идут первыми — они ловят то, что любые юнит-тесты пропускают по конструкции. Property-тесты (на инструментах вроде fast-check, Hypothesis или proptest) генерируют тысячи случайных входных данных и проверяют не конкретный пример, а инвариант — то, что должно оставаться верным при любых входных значениях. Дифференциальные тесты применяются отдельно — при миграциях они сравнивают поведение старой и новой системы напрямую, вместо того чтобы заново описывать ожидаемый результат руками.</span>
+      <span data-lang="en">The article names three verification tools the team treats as a mandatory baseline, not a matter of taste. End-to-end tests of real user flows come first — they catch what unit tests miss by construction. Property tests (using tools like fast-check, Hypothesis or proptest) generate thousands of random inputs and check not a specific example but an invariant — something that should hold true for any input. Differential tests are kept separate — for migrations, they compare the old system's behavior against the new one directly, instead of re-describing the expected result by hand.</span>
+    </p>
+
+    <h2><span data-lang="ru">Чек-лист на 39 пунктов и три попытки до эскалации</span><span data-lang="en">A 39-item checklist and three tries before escalation</span></h2>
+    <p>
+      <span data-lang="ru">Помимо тестов команда ведёт чек-лист примерно из 39 пунктов, каждый из которых привязан к условию, считываемому прямо из диффа, — то есть Claude не прогоняет все 39 проверок на каждое изменение, а применяет только те, чьё условие сработало (обычно от 3 до 10 пунктов на один диф). Авторы говорят, что пункты чек-листа появились не абстрактно, а напрямую из истории инцидентов и пул-реквестов — каждый пункт существует потому, что когда-то его отсутствие привело к реальному сбою. Скилл верификации (verify-skill) хранится в `.claude/skills/`, запускает и наблюдает приложение в действии, а если фикс не проходит проверку три раза подряд, Claude прекращает попытки и передаёт задачу человеку, а не зацикливается на подборе решения. Коммит-гейт требует прохождения `/code-review` или `/verify` на каждое изменение, а не только там, где автор сам решил их запустить, и при этом сами проверяющие правила читаются из основной ветки, а не из PR, — так что изменение не может отредактировать тот самый чек-лист, который его же и судит.</span>
+      <span data-lang="en">Beyond tests, the team keeps a checklist of roughly 39 items, each tied to a trigger readable straight from the diff — so Claude doesn't run all 39 checks on every change, only the ones whose trigger fires (typically 3 to 10 per diff). The authors say the checklist items weren't drafted in the abstract; they came directly from the history of outages and pull requests — each item exists because its absence once caused a real failure. The verify skill lives in `.claude/skills/`, runs and observes the app in action, and if a fix fails the check three times in a row, Claude stops trying and hands the task to a human instead of looping on the same fix. A commit gate requires `/code-review` or `/verify` to pass on every change, not only where the author chose to run them, and the rules those checks apply are read from the base branch rather than the pull request itself — so a change can't edit the very checklist that judges it.</span>
+    </p>
+
+    <h2><span data-lang="ru">Почему это важно не только для Claude Code</span><span data-lang="en">Why this matters beyond Claude Code itself</span></h2>
+    <p>
+      <span data-lang="ru">Главный практический вывод статьи переносится на любую команду, которая передаёт агенту больше автономии: чем шире агент действует самостоятельно, тем важнее не «больше доверия», а система проверки, которая умеет сама остановиться и спросить человека, когда повторный фикс не работает. Привязка чек-листа к реальным инцидентам, а не к абстрактным best practices, и запрет на саморедактирование правил проверки — это конкретные, переносимые приёмы, а не просто внутренняя практика одной команды.</span>
+      <span data-lang="en">The article's central practical takeaway transfers to any team handing an agent more autonomy: the wider an agent's autonomy, the more what matters isn't "more trust" but a verification system that can stop itself and ask a human when a repeated fix isn't working. Tying the checklist to real incidents rather than abstract best practices, and barring the checked change from editing its own checking rules, are concrete, transferable techniques rather than just one team's internal habit.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Прямой доступ к claude.dev в этом прогоне недоступен (домен не резолвится через egress-прокси облачной песочницы); конспект собран по нескольким независимым пересказам статьи, найденным через WebSearch (включая публикации, ссылающиеся на точные цифры — 39 пунктов, три попытки, ~90% кода), цифры и формулировки сверены между источниками. URL источника указан на сам оригинальный пост claude.dev — он подтверждён как реальный через листинг claude.com/blog.</span>
+      <span data-lang="en">Direct access to claude.dev was unavailable this run (the domain doesn't resolve through the cloud sandbox's egress proxy); this digest is built from several independent write-ups of the article found via WebSearch (including pieces citing exact figures — 39 items, three tries, ~90% of code), with numbers and wording cross-checked across sources. The source URL points to the original claude.dev post itself — confirmed real via the claude.com/blog listing.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

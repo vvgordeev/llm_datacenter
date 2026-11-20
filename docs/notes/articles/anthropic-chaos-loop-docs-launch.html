@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «Chaos loop» для запуска Claude Docs — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · claude.dev (блог Anthropic для разработчиков) · 2026-11-17</span>
+      <span data-lang="en">Article digest · claude.dev (Anthropic's developer blog) · 2026-11-17</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«Chaos loop»: две недели Claude ломал Claude Docs сам, чтобы найти слабые места до запуска</span>
+      <span data-lang="en">The "chaos loop": two weeks of Claude trying to break Claude Docs itself, before launch</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://claude.dev/blog/chaos-loop-claude-docs-launch/" target="_blank" rel="noopener">
+        <span data-lang="ru">Источник ↗</span><span data-lang="en">Source ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Перед запуском Claude Docs инженеры Anthropic две недели держали на стейджинге непрерывный цикл: Claude самостоятельно пытался сломать сервис, а не просто прогонял заранее написанный набор тестов. Итог, который статья выносит в заголовок, — на 2 миллиарда реальных запросов после запуска пришлось всего 60 ошибок сервера, и ни разу не потребовался откат. Это не история про «ИИ нашёл баги» в общем смысле, а конкретный, воспроизводимый процесс: управляющая сессия Claude Code выбирает сценарий нагрузки, прогоняет тестовый стенд, читает телеметрию, предлагает исправление и выкатывает его на стейджинг — и повторяет цикл заново, без паузы на человека на каждой итерации.</span>
+      <span data-lang="en">Before launching Claude Docs, Anthropic's engineers ran a continuous loop on staging for two weeks: Claude tried to break the service on its own, rather than just running a pre-written test suite. The headline result the article leads with is that across 2 billion real requests after launch, there were only 60 server errors, and the team never had to roll back. This isn't a generic "AI found bugs" story but a specific, repeatable process: a long-running Claude Code session picks a load scenario, runs the test harness, reads the telemetry, proposes a fix, and ships it to staging — then repeats the cycle without pausing for a human at every iteration.</span>
+    </p>
+
+    <h2><span data-lang="ru">Как устроен сам цикл: координатор и до тридцати агентов</span><span data-lang="en">How the loop itself is structured: a coordinator and up to thirty agents</span></h2>
+    <p>
+      <span data-lang="ru">По пересказам статьи, цикл управлялся координирующей сессией, которая могла распределять работу между до тридцатью под-агентами одновременно — каждый отрабатывал свой сценарий нагрузки или класс ошибок параллельно с остальными. Важное ограничение, которое команда закладывала намеренно: всё, что сложно откатить — например, изменения схемы данных, — уходило на решение человека, а не автоматизировалось в общем цикле. То есть масштаб автономии был не «агент делает всё подряд», а «агент делает всё обратимое, а необратимое — эскалирует».</span>
+      <span data-lang="en">According to write-ups of the article, the loop was run by a coordinating session that could spread work across up to thirty sub-agents at once — each working its own load scenario or error class in parallel with the others. One constraint the team built in deliberately: anything hard to undo, such as schema changes, went to a human decision rather than being automated inside the loop. So the scope of autonomy wasn't "the agent does everything" but "the agent does everything reversible, and escalates everything that isn't."</span>
+    </p>
+
+    <h2><span data-lang="ru">Главный урок: система должна быть читаемой для модели</span><span data-lang="en">The main lesson: the system has to be legible to the model</span></h2>
+    <p>
+      <span data-lang="ru">Статья формулирует ключевое условие, при котором такой цикл вообще работает: он замыкается на исправления только тогда, когда система на каждой итерации выдаёт точную телеметрию — если модели не на что опереться при оценке результата своей же правки, цикл не сходится к улучшению. Отдельно упоминается эффект «дрейфа цели» (goal drift): на длинных прогонах, через десять-двадцать итераций, модель начинает забывать, какую именно метрику она изначально оптимизировала, и начинает чинить не то. Это не абстрактная оговорка, а практическое ограничение метода — то, ради чего нужен внешний контроль цикла, а не просто доверие к тому, что «агент сам разберётся», если прогон длинный.</span>
+      <span data-lang="en">The article states the key condition that makes a loop like this work at all: it only closes the loop on fixes when the system produces accurate telemetry on every iteration — if the model has nothing solid to evaluate its own change against, the loop doesn't converge toward improvement. It separately names a "goal drift" effect: on long runs, after ten to twenty iterations, the model starts forgetting exactly which metric it was optimizing for in the first place, and starts fixing the wrong thing. That's not an abstract caveat but a practical limitation of the method — the reason the loop needs outside oversight rather than just trusting that "the agent will sort it out" on a long run.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Прямой доступ к claude.dev в этом прогоне недоступен (домен не резолвится через egress-прокси облачной песочницы); конспект собран по нескольким независимым пересказам статьи, найденным через WebSearch, с цифрами (2 млрд запросов, 60 ошибок, до 30 под-агентов), сверенными между источниками. Детали авторства статьи не удалось независимо подтвердить и поэтому не указаны в карточке. URL источника указан на сам оригинальный пост claude.dev — он подтверждён как реальный через листинг claude.com/blog.</span>
+      <span data-lang="en">Direct access to claude.dev was unavailable this run (the domain doesn't resolve through the cloud sandbox's egress proxy); this digest is built from several independent write-ups of the article found via WebSearch, with the figures (2 billion requests, 60 errors, up to 30 sub-agents) cross-checked across sources. The article's authorship could not be independently confirmed and is therefore left off the card. The source URL points to the original claude.dev post itself — confirmed real via the claude.com/blog listing.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>
