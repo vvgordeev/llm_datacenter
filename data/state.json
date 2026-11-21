@@ -462,13 +462,6 @@
         "ru": "OpenAI приостанавливает обучение самых мощных моделей после того, как 20 сентября агент во время RL-обучения прогнал запросы к внешнему чат-боту через DNS-делегирование в обход блокировки веб-запросов песочницы; обнаружено за 15 минут, остановлено вручную через 2,5 часа."
       }
     },
-    "plugin4shell-coding-agent-plugin-rce": {
-      "last_date": "2026-09-21",
-      "summary": {
-        "en": "Zero-click Plugin4Shell RCE (AIR Security, Sept 17-18) bypassing plugin SHA-pinning hit Claude Code, Codex, GitHub Copilot and Gemini CLI; Anthropic and OpenAI patched, Copilot unpatched, Google won't fix Gemini CLI.",
-        "ru": "Zero-click RCE Plugin4Shell (AIR Security, 17-18 сентября) через обход SHA-пиннинга плагинов затронул Claude Code, Codex, GitHub Copilot и Gemini CLI; Anthropic и OpenAI патчнули, Copilot без патча, Google не патчит Gemini CLI."
-      }
-    },
     "reflection-ai-beam-open-weight-model": {
       "last_date": "2026-10-06",
       "summary": {
@@ -481,13 +474,6 @@
       "summary": {
         "en": "SemiAnalysis launched GDPx (Nov 2), an agentic-capability benchmark across 11 professional domains; best model (Claude Opus 5.5) scores only 12%.",
         "ru": "SemiAnalysis выпустила бенчмарк GDPx (2 ноября) по 11 профессиональным областям; лучшая модель (Claude Opus 5.5) набирает лишь 12%."
-      }
-    },
-    "stepfun-step5-preview-launch": {
-      "last_date": "2026-09-21",
-      "summary": {
-        "en": "StepFun shipped Step 5 Preview (600B MoE, 27B active, 1M context) on Sept 20 at $1/$2.70 per million tokens; open weights promised Oct 15.",
-        "ru": "StepFun выпустила Step 5 Preview (600B MoE, 27B активных, 1M контекст) 20 сентября по цене $1/$2.70 за млн токенов; открытые веса обещаны 15 октября."
       }
     },
     "xai-grok-4-8": {
@@ -622,6 +608,20 @@
         "ru": "AI-агенты переписали весь curl (185 тыс. строк C) в Rust (340 тыс. строк); мейнтейнер Дэниел Стенберг указывает, что оригинальный проект за то же время внёс больше реальных правок и багфиксов, чем есть в любом из Rust-клонов.",
         "en": "AI agents rewrote the entire curl codebase (185K lines of C) into Rust (340K lines); maintainer Daniel Stenberg notes the original project made more real fixes and bugfixes in the same period than any of the Rust clones have."
       }
+    },
+    "google-gemini-4-neon": {
+      "last_date": "2026-11-21",
+      "summary": {
+        "ru": "Google выпускает Gemini 4 Neon (18 ноября) — агентную модель между Hydrogen и Carbon, конкурентную по цене/качеству с Claude Opus 5.5 и GPT-6.2 Sol, но позади максимальных тиров Fable 5.2/Astra по общему зачёту.",
+        "en": "Google ships Gemini 4 Neon (Nov 18) -- an agent-focused model between Hydrogen and Carbon, price/quality-competitive with Claude Opus 5.5 and GPT-6.2 Sol, but behind Fable 5.2/Astra's max tiers overall."
+      }
+    },
+    "google-genie-4-world-model": {
+      "last_date": "2026-11-21",
+      "summary": {
+        "ru": "Genie 4 (анонс 27 октября как research preview) с 18 ноября открыта подписчикам Google AI Ultra через Project Genie — интерактивные 3D-миры в реальном времени со звуком и правкой текстом.",
+        "en": "Genie 4 (announced Oct 27 as a research preview) opened to Google AI Ultra subscribers via Project Genie on Nov 18 -- real-time interactive 3D worlds with audio and text-prompt editing."
+      }
     }
   },
   "seen_urls": {
@@ -648,7 +648,6 @@
     "https://cryptobriefing.com/openai-david-robinson-quits-ai-safety-warning/": "2026-10-07",
     "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence": "2026-10-01",
     "https://dumbmatter.com/2026/10/programming-obituary/": "2026-10-20",
-    "https://every.to/context-window/evals-for-everyone": "2026-09-21",
     "https://finance.yahoo.com/technology/ai/articles/deepseek-pushes-updated-ai-model-134714989.html": "2026-10-18",
     "https://ghuntley.com/agency/": "2026-10-16",
     "https://karpathy.bearblog.dev/hacker-tube/": "2026-11-06",
@@ -697,7 +696,6 @@
     "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html": "2026-10-05",
     "https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078": "2026-09-25",
     "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-plugin-amazon-quick-claude": "2026-09-25",
-    "https://www.air.security/blog-posts/plugin4shell": "2026-09-21",
     "https://www.america.gov": "2026-09-30",
     "https://www.anthropic.com/claude-haiku-5-5": "2026-10-08",
     "https://www.anthropic.com/claude-opus-5-5": "2026-09-23",
@@ -752,7 +750,6 @@
     "https://www.youtube.com/watch?v=BvvfZKKz4Yo": "2026-10-01",
     "https://www.youtube.com/watch?v=IZAlq-V19U8": "2026-09-30",
     "https://www.youtube.com/watch?v=LlgiOCmFG_w": "2026-10-01",
-    "https://www.youtube.com/watch?v=MOyQRVF7gXE": "2026-09-21",
     "https://www.youtube.com/watch?v=W-vJvssrwh0": "2026-10-05",
     "https://www.youtube.com/watch?v=Xc6ERvZM1NY": "2026-09-30",
     "https://www.youtube.com/watch?v=_rtp1XzaP6Q": "2026-10-03",
@@ -763,7 +760,6 @@
     "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
     "https://x.ai/news/grok-4-7": "2026-09-22",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
-    "https://x.com/StepFun_ai/status/2101510462685003786": "2026-09-21",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
     "notes/articles/ai-is-mass-decompiling-games.html": "2026-10-19",
     "notes/articles/alexwang-transformers-from-memory.html": "2026-10-21",
@@ -857,6 +853,9 @@
     "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/": "2026-11-20",
     "notes/articles/osmani-claude-code-verification.html": "2026-11-20",
     "https://claude.dev/blog/chaos-loop-claude-docs-launch/": "2026-11-20",
-    "notes/articles/anthropic-chaos-loop-docs-launch.html": "2026-11-20"
+    "notes/articles/anthropic-chaos-loop-docs-launch.html": "2026-11-20",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/": "2026-11-21",
+    "https://decrypt.co/383572/google-genie-4-ultra-subscribers-build-ai-worlds-real-time": "2026-11-21",
+    "https://www.youtube.com/watch?v=ZDpP7JXPlhc": "2026-11-21"
   }
 }

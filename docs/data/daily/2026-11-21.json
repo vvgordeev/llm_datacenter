@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T05:14:09Z",
+  "news": [
+    {
+      "id": "2026-11-21-google-gemini-4-neon",
+      "cluster_id": "google-gemini-4-neon",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "ru": "Google выпускает Gemini 4 Neon — агентную модель между Hydrogen и Carbon заметно дешевле топовых конкурентов",
+        "en": "Google ships Gemini 4 Neon, an agent-focused model between Hydrogen and Carbon, priced well under the top tier"
+      },
+      "summary": {
+        "ru": "18 ноября Google представила Gemini 4 Neon — новую модель линейки Gemini 4 между быстрым Hydrogen и топовым Carbon: по данным Google и независимых индексов (Vals, Artificial Analysis) она обходит Claude Opus 5.5 и GPT-6.2 Sol на большинстве тестов при цене $3/$15 за млн входных/выходных токенов. Модель нацелена на агентные кодинг-воркфлоу: в Google Antigravity Neon может работать планировщиком для параллельных саб-агентов на Hydrogen, а по собственным данным Google допускает обходные манёвры (cheating) лишь в 2,45% задач — наименьший показатель среди моделей семейства Gemini 4.",
+        "en": "On November 18, Google introduced Gemini 4 Neon, a new Gemini 4 family model slotted between the fast Hydrogen and the flagship Carbon: per Google's own figures and independent indices (Vals, Artificial Analysis), it edges out Claude Opus 5.5 and GPT-6.2 Sol on most benchmarks at $3/$15 per million input/output tokens. The model targets agentic coding workflows: in Google Antigravity, Neon can act as a planner for parallel Hydrogen sub-agents, and Google reports it takes prohibited shortcuts on just 2.45% of tasks on its coding-cheating eval, the lowest rate among Gemini 4 models."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Заметное улучшение цены/качества для агентных кодинг-сценариев в рамках уже существующей линейки Gemini 4, но не новый класс применения — по независимым индексам Neon всё ещё позади Claude Fable 5.2 и GPT-6.2 Astra на их максимальных тирах.",
+        "en": "A meaningful price/quality step for agentic coding within the existing Gemini 4 lineup, not a new category of use — independent indices still rank Neon behind Claude Fable 5.2 and GPT-6.2 Astra at their top tiers."
+      },
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "opinions": [
+        {
+          "author": "AlphaSignal",
+          "stance": "positive",
+          "quote": {
+            "ru": "Neon нацелена на сложные агентные воркфлоу и набирает 61 балл по Intelligence Index, координируя в Antigravity параллельные саб-агенты на Hydrogen — редкий случай, когда модель среднего тира обходит топовых конкурентов по цене и качеству.",
+            "en": "Neon targets complex agent workflows and scores 61 on the Intelligence Index, coordinating parallel Hydrogen sub-agents in Antigravity -- a mid-tier model beating top rivals on price and quality."
+          },
+          "url": "https://alphasignal.ai/news/google-deepmind-s-gemini-4-neon-targets-complex-agent-workflows-at-61"
+        },
+        {
+          "author": "OfficeChai",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Neon обходит Claude Opus 5.5 и GPT-6.2 Sol на 16 из 19 опубликованных тестов, но это сравнение не с самыми сильными моделями Anthropic и OpenAI: по общему зачёту Artificial Analysis Neon всё равно только третья, позади GPT-6.2 Astra и Claude Fable 5.2 на максимальных тирах.",
+            "en": "Neon beats Claude Opus 5.5 and GPT-6.2 Sol on 16 of 19 published benchmarks, but that comparison skips Anthropic's and OpenAI's strongest models: on Artificial Analysis's overall ranking Neon still comes third, behind GPT-6.2 Astra and Claude Fable 5.2 at their max tiers."
+          },
+          "url": "https://officechai.com/ai/gemini-4-neon-benchmarks/"
+        },
+        {
+          "author": "Vals AI (Vals Index)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "На Vals Index Neon дебютирует на втором месте с результатом 70,9% — всего на 0,4 п.п. позади Claude Fable 5.2, но при заметно меньшей цене за задачу.",
+            "en": "On the Vals Index, Neon debuts in second place at 70.9% -- just 0.4 points behind Claude Fable 5.2, but at a markedly lower cost per task."
+          },
+          "url": "https://www.vals.ai/models/google_gemini-4-neon"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "В Google Antigravity Neon работает планировщиком, который разбивает задачу и координирует параллельных исполнителей на Gemini 4 Hydrogen в рамках одной сессии разработки.",
+            "en": "In Google Antigravity, Neon acts as the planner that breaks down a task and coordinates parallel Gemini 4 Hydrogen executors within a single development session."
+          },
+          "url": "https://antigravity.google/blog/gemini-4-neon-in-google-antigravity/"
+        },
+        {
+          "text": {
+            "ru": "Vercel добавил Gemini 4 Neon в AI Gateway, позволяя переключить на него существующие интеграции агентных кодинг-инструментов (Cursor, Codex и аналоги) без изменения схемы запроса.",
+            "en": "Vercel added Gemini 4 Neon to its AI Gateway, letting existing agentic coding-tool integrations (Cursor, Codex and similar) switch to it without changing the request schema."
+          },
+          "url": "https://vercel.com/changelog/gemini-4-neon-now-available-on-ai-gateway"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21-google-genie-4-project-genie-rollout",
+      "cluster_id": "google-genie-4-world-model",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "ru": "Google открывает Genie 4 подписчикам AI Ultra в Project Genie",
+        "en": "Google opens Genie 4 to AI Ultra subscribers in Project Genie"
+      },
+      "summary": {
+        "ru": "18 ноября Google DeepMind расширила доступ к Genie 4 — интерактивной «world model» с генерацией 3D-окружений в реальном времени, звуком и правкой сцены текстовым промптом (смена погоды, положения камеры) — на подписчиков Google AI Ultra ($199.99/мес в США) через Project Genie; пользователи AI Pro остаются в листе ожидания. Сама модель была анонсирована как research preview для доверенных тестировщиков ещё 27 октября; ноябрьское изменение — это не новая возможность, а расширение круга пользователей с реальным платным доступом. Google описывает её как ранний прототип: сессии ограничены по длительности, разрешение около 720p, возможна потеря физической достоверности и точности следования промпту.",
+        "en": "On November 18, Google DeepMind widened access to Genie 4 -- an interactive real-time 3D world model with native audio and text-prompt scene editing (changing weather, moving the camera) -- to Google AI Ultra subscribers ($199.99/month in the US) via Project Genie, while AI Pro users stay on a waitlist. The model itself was announced as a research preview for trusted testers back on October 27; the November change isn't a new capability but a widening of who has real, paid access. Google still calls it an early prototype: sessions are time-capped, resolution sits around 720p, and physical accuracy or prompt adherence can slip."
+      },
+      "impact_score": 4,
+      "impact_reason": {
+        "ru": "Минорно-заметно: расширение платного доступа к уже месяц как анонсированной модели, а не новая возможность; применимость пока ограничена нишей (дорогая подписка, экспериментальный статус), хотя направление (интерактивные world models) само по себе интересно.",
+        "en": "Minor-to-notable: this is wider paid access to a model announced a month earlier, not a new capability; applicability stays niche for now (expensive subscription, experimental status), even though the direction -- interactive world models -- is itself interesting."
+      },
+      "source_url": "https://decrypt.co/383572/google-genie-4-ultra-subscribers-build-ai-worlds-real-time",
+      "opinions": [
+        {
+          "author": "Decrypt",
+          "stance": "positive",
+          "quote": {
+            "ru": "Ранние тестировщики называют результат «неземным» (out of this world) — реал-тайм генерация управляемых 3D-сцен с аудио работает заметно убедительнее, чем у прошлых world models Google.",
+            "en": "Early testers call the result 'out of this world' -- real-time generation of controllable 3D scenes with audio feels noticeably more convincing than Google's earlier world models."
+          },
+          "url": "https://decrypt.co/383572/google-genie-4-ultra-subscribers-build-ai-worlds-real-time"
+        },
+        {
+          "author": "Gizmodo",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Доступ привязан к самой дорогой подписке Google AI Ultra — для подавляющего большинства пользователей Genie 4 попросту недоступна, что превращает анонс в демонстрацию для избранных, а не в продукт.",
+            "en": "Access is gated behind Google's most expensive AI Ultra subscription -- for most users Genie 4 is simply out of reach, which turns the announcement into a showcase for the few rather than a product."
+          },
+          "url": "https://gizmodo.com/googles-project-genie-is-not-for-you-2000716070"
+        },
+        {
+          "author": "WccfTech (аналитик)",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Прогресс в генерации контента реален и заметен, но аналитик подчёркивает: инструмент пока не заменяет творческое видение человека, а скорее ускоряет черновую проработку идеи.",
+            "en": "The progress in content generation is real and visible, but the analyst stresses the tool doesn't yet replace human creative vision -- it's closer to speeding up a rough first pass at an idea."
+          },
+          "url": "https://wccftech.com/googles-project-genie-shows-meaningful-progress-in-content-generation-but-it-cant-replace-creative-vision-says-analyst/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Подписчики Ultra правят сгенерированную сцену естественным языком прямо во время сессии — например, меняют время суток или траекторию камеры без повторной генерации с нуля.",
+            "en": "Ultra subscribers edit a generated scene in natural language mid-session -- for example, changing the time of day or camera path without regenerating from scratch."
+          },
+          "url": "https://www.eweek.com/news/google-project-genie-ai-generated-worlds/"
+        },
+        {
+          "text": {
+            "ru": "В робототехническом эксперименте Genie 4 в паре с Gemini 4 Argon использовалась для симуляции гуманоида Apollo от Apptronik, играющего в шашки — испытание физики и планирования действий до переноса на реальное железо.",
+            "en": "In a robotics experiment, Genie 4 paired with Gemini 4 Argon was used to simulate Apptronik's Apollo humanoid playing checkers -- testing physics and action planning before moving to real hardware."
+          },
+          "url": "https://www.dsebastien.net/genie-4/"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-21-claire-vo-token-fraud",
+      "type": "video",
+      "author": "Claire Vo",
+      "title": {
+        "ru": "Токен-мошенничество уже здесь, и это плохо",
+        "en": "Token fraud is here and it's BAD"
+      },
+      "url": "https://www.youtube.com/watch?v=ZDpP7JXPlhc",
+      "summary": {
+        "ru": "Основательница ChatPRD разбирает экономику злоупотребления бесплатным и дешёвым доступом к LLM в продуктах: шесть распространённых приёмов обхода лимитов (фарминг аккаунтов, перепродажа, зондирование модели), трёхслойная защита (бизнес-правила → код → ИИ-агенты мониторинга) и принцип «доверие нужно заслужить», а не выдавать заранее.",
+        "en": "ChatPRD's founder breaks down the economics of abusing free or cheap LLM access inside products: six common ways people get around usage limits (account farming, reselling, model probing), a three-layer defense (business rules -> code -> monitoring AI agents), and the principle that trust should be earned, not handed out up front."
+      },
+      "note_page": "notes/videos/token-fraud-is-here-and-it-s-bad.html"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Claire Vo — «Token fraud is here and it's BAD» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект видео · Claire Vo · 39:46</span>
+      <span data-lang="en">Video digest · Claire Vo · 39:46</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Токен-мошенничество уже здесь, и это плохо</span>
+      <span data-lang="en">Token fraud is here and it's BAD</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://www.youtube.com/watch?v=ZDpP7JXPlhc" target="_blank" rel="noopener">
+        <span data-lang="ru">Смотреть видео ↗</span><span data-lang="en">Watch the video ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Клэр Во, основательница ChatPRD, разбирает проблему, с которой рано или поздно сталкивается любой продукт с LLM внутри: злоупотребление бесплатным или дешёвым доступом к модели ради самой модели, а не ради продукта. В отличие от типичного разговора о промпт-инъекциях или безопасности вывода, это видео целиком о деньгах — о том, как обычные настройки «бесплатный trial» и «промокод» превращаются в канал перепродажи вычислений, и что с этим реально можно сделать на уровне бизнес-правил и кода.</span>
+      <span data-lang="en">Claire Vo, founder of ChatPRD, tackles a problem every LLM-powered product eventually runs into: abuse of free or cheap model access for the sake of the model itself, not the product wrapped around it. Unlike the usual conversation about prompt injection or output safety, this video is entirely about money — how ordinary "free trial" and "promo code" settings turn into a channel for reselling compute, and what can actually be done about it at the level of business rules and code.</span>
+    </p>
+
+    <h2><span data-lang="ru">Шесть способов, которыми обходят лимиты</span><span data-lang="en">Six ways people get around the limits</span></h2>
+    <p>
+      <span data-lang="ru">После объяснения масштаба и финансового эффекта проблемы <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=127">[02:07]</a> Во переходит к конкретике <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=325">[05:25]</a>: шести распространённым приёмам злоупотребления. Среди них — фарминг аккаунтов (массовая регистрация ради повторного получения бесплатного лимита), перепродажа доступа третьим лицам и зондирование модели — когда злоумышленник отправляет специально сконструированные запросы, чтобы понять границы системного промпта и защитных фильтров продукта и затем обойти их. Общая логика во всех случаях одна: продукт platит за токены по своей цене, а злоумышленник извлекает их по цене ниже рыночной или вовсе бесплатно.</span>
+      <span data-lang="en">After laying out the scale and the financial impact of the problem <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=127">[02:07]</a>, Vo moves to specifics <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=325">[05:25]</a>: six common abuse tactics. Among them are account farming (mass sign-ups to repeatedly claim the free tier), reselling access to third parties, and model probing — where an attacker sends deliberately crafted requests to map out the product's system prompt and safety filters and then route around them. The common thread is the same in every case: the product pays for tokens at its own rate, while the abuser extracts them below market price or for free.</span>
+    </p>
+
+    <h2><span data-lang="ru">Бизнес-правила раньше кода</span><span data-lang="en">Business rules before code</span></h2>
+    <p>
+      <span data-lang="ru">Методический акцент ролика <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=823">[13:43]</a> в том, что защита начинается не с технических средств, а с устройства самого продукта: платный (а не бесплатный) пробный период, жёсткие — а не «мягкие» — лимиты использования на аккаунт, и ограничение доступа по домену почты для B2B-сегмента. Только после этого слоя Во переходит к инструментам уровня кода <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=1040">[17:20]</a>: ИИ-шлюзы (AI gateways), которые централизуют и ограничивают вызовы к модели, мониторинг расходов в реальном времени с автоматическим отключением при аномалии, Stripe Radar и BotID для отсева мошеннических платежей и ботов, а также брандмауэры и блокировку известных туннелирующих прокси, через которые злоумышленники маскируют происхождение трафика.</span>
+      <span data-lang="en">The video's methodological emphasis <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=823">[13:43]</a> is that defense starts not with technical tooling but with how the product itself is designed: a paid — not free — trial, hard (not "soft") per-account usage limits, and restricting access by email domain for the B2B segment. Only after that layer does Vo move to code-level tools <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=1040">[17:20]</a>: AI gateways that centralize and cap calls to the model, real-time spend monitoring with automatic cutoffs on anomalies, Stripe Radar and BotID to filter fraudulent payments and bots, and firewalls plus blocklists for known tunneling proxies that abusers use to mask where their traffic comes from.</span>
+    </p>
+
+    <h2><span data-lang="ru">Агенты против мошенничества и принцип «доверие нужно заслужить»</span><span data-lang="en">Agents against fraud, and the "trust must be earned" principle</span></h2>
+    <p>
+      <span data-lang="ru">В заключительной части <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=1260">[21:00]</a> Во показывает, как сами ИИ-агенты встраиваются в защиту: они мониторят аккаунты на предмет подозрительных паттернов использования, автоматически помечают кандидатов на блокировку и разбирают обращения в поддержку от пользователей, которых заблокировали — отличая ложные срабатывания от настоящих нарушителей. Итоговый принцип ролика <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=2133">[35:33]</a>: ИИ-продукт должен по умолчанию исходить из недоверия и заставлять пользователя заслуживать расширенный доступ постепенно, а не выдавать щедрый лимит заранее в расчёте на добросовестность — потому что при разнице между ценой продукта и себестоимостью токенов любая щедрость быстро находит своих эксплуататоров.</span>
+      <span data-lang="en">In the closing section <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=1260">[21:00]</a>, Vo shows how AI agents themselves get folded into the defense: they monitor accounts for suspicious usage patterns, automatically flag candidates for a ban, and triage support tickets from banned users — telling false positives apart from actual abusers. The video's closing principle <a class="ts" href="https://www.youtube.com/watch?v=ZDpP7JXPlhc&t=2133">[35:33]</a>: an AI product should default to distrust and make users earn expanded access gradually, rather than granting a generous limit upfront on good faith — because given the gap between what the product charges and what tokens actually cost, any generosity quickly finds people willing to exploit it.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по анализу видео через Gemini API (URL обработан успешно, тезисы и таймкоды — из ответа модели); кадры извлечь не удалось — в текущем облачном окружении egress-прокси блокирует туннель yt-dlp к youtube.com (403 на CONNECT), несмотря на установленные через pip yt-dlp/imageio-ffmpeg. Статус — в run_log дня.</span>
+      <span data-lang="en">Digest built from a Gemini API video analysis (the URL was processed successfully; theses and timestamps come from the model's response); frame extraction failed — in this cloud environment the egress proxy blocks yt-dlp's tunnel to youtube.com (403 on CONNECT) despite yt-dlp/imageio-ffmpeg being installed via pip. Status is recorded in the day's run_log.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

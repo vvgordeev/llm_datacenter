@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T05:14:09Z",
+  "sources": [
+    {"source": "anthropic blog (direct fetch, anthropic.com/news)", "status": "ok", "candidates": 0, "note": "WebFetch succeeded; newest listed items are from Oct 22-27 (Agent Skills -> Agentic AI Foundation, Long-Term Benefit Trust appointment) and the already-published IPO filing/close. WebSearch (2 queries) confirmed no Anthropic product announcement for Nov 19-21."},
+    {"source": "openai blog (direct fetch, openai.com/news/)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch (2+ queries): newest confirmed is GPT-6.2 Astra/Sol (Nov 17, already published 2026-11-18); nothing for Nov 19-21."},
+    {"source": "google/deepmind blog (direct fetch, blog.google + deepmind.google)", "status": "blocked", "candidates": 2, "note": "WebFetch: DNS/egress-proxy ENOTFOUND on both domains. WebSearch recovered two real, previously-missed items dated Nov 18 (just outside the 36h lookback but never published by the 2026-11-18/19 runs): Gemini 4 Neon (new Gemini 4 family model) and the Project Genie rollout of Genie 4 to AI Ultra subscribers. Both verified against multiple independent sources (9to5google, AlphaSignal, OfficeChai, Vals AI, Decrypt, Gizmodo, WccfTech) since blog.google itself could not be fetched directly."},
+    {"source": "meta ai blog (direct fetch, ai.meta.com/blog)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch (2 queries): newest is Muse Wonder/Ember rollout (Nov 6-14), already published. Nothing new for Nov 19-21."},
+    {"source": "xai news (direct fetch, x.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch (2 queries): Grok 4.8 finishing pre-training (Musk statement, Nov 10) is an unconfirmed future soft-launch, not a release -- excluded per no-rumor rule. A reported text-watermark policy reversal (opt-in, ~Nov 14) is 7 days old and marked 'still developing' by its only source -- not picked up."},
+    {"source": "mistral news (direct fetch, mistral.ai/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch (2 queries): newest is Mistral Large 4 GA (~Nov 5), already published. Nothing for Nov 19-21."},
+    {"source": "deepseek news (direct fetch, api-docs.deepseek.com/news)", "status": "blocked", "candidates": 0, "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch (2 queries): newest confirmed is V4.1-Flash (Sep 10); a V5/Huawei-Ascend report is forward-looking speculation, not a release."},
+    {"source": "qwen/alibaba", "status": "skipped", "candidates": 0, "note": "enabled: false in config/sources.yaml -- not collected per config."},
+    {"source": "aggregator: AI News (smol.ai)", "status": "blocked", "candidates": 0, "note": "WebFetch DNS ENOTFOUND; WebSearch surfaced nothing dated past mid-November specific to smol.ai's own coverage."},
+    {"source": "aggregator: TLDR AI (tldr.tech/ai)", "status": "blocked", "candidates": 0, "note": "WebFetch DNS ENOTFOUND; WebSearch found no recoverable Nov 19-21 edition."},
+    {"source": "aggregator: Simon Willison linkblog", "status": "ok", "candidates": 1, "note": "Cloned github.com/simonw/simonwillisonblog-backup directly (not proxy-blocked) and read blog_entry/blog_blogmark ndjson tables sorted by `created`. Own essays: nothing new on LLM topics since Nov 17 (Datasette-lite, off-topic). Blogmarks since Nov 17: GPT-6.2 Astra/Sol and 'External sandboxes for coding agents' (both already published), PostgreSQL 19 and PSF fundraiser (off-topic), and a Nov 20 link to Claire Vo's 'Token fraud is here and it's BAD' (YouTube) -- used as this run's expert video."},
+    {"source": "Hacker News API (hn.algolia.com)", "status": "blocked", "candidates": 0, "note": "WebFetch/API call: DNS/egress-proxy ENOTFOUND. WebSearch (site:news.ycombinator.com + generic) found no Nov 19-21 thread with a confirmable URL."},
+    {"source": "community: r/LocalLLaMA, r/ClaudeAI, X", "status": "empty", "candidates": 0, "note": "WebSearch only; no Nov 19-21-dated community threads surfaced beyond generic ranking/leaderboard roundups already covered via the model searches above."},
+    {"source": "extended pass (broad queries: 'LLM news Nov 20/21', 'AI model release this week', 'AI coding agent update November 2026', date-literal searches for Nov 20/21, theneuron.ai/aiweekly.co editions)", "status": "ok", "candidates": 0, "note": "Confirmed no additional Nov 19-21 product news beyond the two Google items already found; theneuron.ai/aiweekly.co editions not indexed past Nov 18."}
+  ],
+  "totals": {
+    "candidates": 10,
+    "published": 2,
+    "rejected": {
+      "уже опубликовано в предыдущих сводках (GPT-6.2 Astra/Sol, Mistral Large 4, Muse Wonder/Ember, Claude Managed Agents)": 4,
+      "слух/неподтверждённое будущее событие (Grok 4.8 soft-launch, DeepSeek V5/Huawei)": 2,
+      "финансовая новость без продуктового угла (не рассматривалась отдельно в этом окне)": 0,
+      "вне окна/устарело или неконфирмируемо (Grok watermark policy reversal -- 'still developing', единственный источник)": 1,
+      "не найдено первоисточника/вне зоны отслеживания": 1
+    }
+  },
+  "expert_content_sources": [
+    {"source": "expert: Simon Willison (via simonwillisonblog-backup clone)", "status": "ok", "candidates": 1, "note": "0 new essays by Willison himself this week; 1 candidate surfaced via his linkblog (Claire Vo video, see aggregator row above) -- published."},
+    {"source": "expert: Latent Space", "status": "empty", "candidates": 0, "note": "WebSearch: newest AINews issue reliably dated is Nov 13 ('No AI Slop Manifesto', already published 2026-11-18); nothing newer indexed."},
+    {"source": "expert: Ethan Mollick / One Useful Thing", "status": "empty", "candidates": 0, "note": "WebSearch: archive appears to stop at Oct 1 in the index; nothing for November found."},
+    {"source": "expert: Andrej Karpathy (video)", "status": "blocked", "candidates": 0, "note": "youtube.com RSS/WebFetch: DNS/egress-proxy ENOTFOUND at the CONNECT level (not just a 403 on the page) -- confirmed network-wide block of youtube.com this run. WebSearch fallback found no November 2026 upload."},
+    {"source": "expert: AI Explained (video)", "status": "blocked", "candidates": 0, "note": "youtube.com blocked (see above); WebSearch found no confirmable November upload."},
+    {"source": "expert: Matt Wolfe (video)", "status": "blocked", "candidates": 0, "note": "youtube.com blocked; WebSearch results unconfirmed/undated."},
+    {"source": "expert: Nate Herk (video)", "status": "blocked", "candidates": 0, "note": "youtube.com blocked; newest WebSearch-confirmed upload (Nov 11) sits outside the 7-day freshness window anyway."},
+    {"source": "expert: Matt Pocock (video/article)", "status": "blocked", "candidates": 0, "note": "youtube.com blocked for video; the one article-form candidate found (Home Repo Pattern) was already published 2026-11-19."},
+    {"source": "extended expert search (Every Vibe Check, theneuron.ai, Interconnects/Nathan Lambert, Zvi Mowshowitz, 'viral AI essay this week')", "status": "empty", "candidates": 0, "note": "No Nov 14-21-dated, LLM-usage-approach piece found beyond the Claire Vo video; Every's newest Vibe Check with a confirmable date predates the window, Interconnects/Zvi results were undated or older."}
+  ],
+  "video_pipeline": {
+    "gemini": "ok -- scripts/gemini_video.py successfully analyzed https://www.youtube.com/watch?v=ZDpP7JXPlhc via the Gemini API (generativelanguage.googleapis.com), which is NOT behind the youtube.com block since Gemini fetches the video server-side; theses/timestamps used verbatim in the note page",
+    "frames": "skipped: youtube.com is blocked at the egress-proxy CONNECT level this run (confirmed via yt-dlp error '403 Forbidden ... no rule or network setting allows this host'), so scripts/extract_frames.py could not download the stream despite yt-dlp/imageio-ffmpeg being installed via pip. Note page published without frames, with the gap disclosed in its note-hint."
+  },
+  "note": "min_expert_total=5 not reached this run (1 published) -- a dedicated research pass found youtube.com fully blocked at the network/DNS level (not just 403 on individual pages, confirmed independently for Karpathy/AI Explained/Wolfe/Nate Herk/Pocock RSS and yt-dlp), and every configured text expert either had nothing new in the 7-day window or had their latest already published in prior runs; an extended search across several non-configured outlets (Every, Interconnects, theneuron.ai, Latent Space) found nothing additional that was both dated in-window and about LLM usage approaches rather than pure news. On the news side, the required-breadth pass again hit DNS ENOTFOUND on 6 of 7 model blogs plus most aggregators and the HN API (over 1/3 of sources blocked -- same pattern as recent runs), but this time a widened WebSearch pass recovered two genuine, verifiable Nov 18 Google announcements (Gemini 4 Neon, Genie 4/Project Genie rollout) that fell just outside the strict 36h lookback window and were never published by the 2026-11-18 or 2026-11-19 runs -- a real archive gap, not news fabricated for today. Both were cross-checked against 3+ independent secondary sources since blog.google itself is DNS-blocked from this session."
+}

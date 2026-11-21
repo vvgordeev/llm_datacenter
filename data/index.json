@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-21",
+      "news_count": 2,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "Google выпускает Gemini 4 Neon — агентную модель между Hydrogen и Carbon заметно дешевле топовых конкурентов",
+        "en": "Google ships Gemini 4 Neon, an agent-focused model between Hydrogen and Carbon, priced well under the top tier"
+      }
+    },
+    {
       "date": "2026-11-20",
       "news_count": 0,
       "expert_count": 2,
