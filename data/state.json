@@ -476,13 +476,6 @@
         "ru": "SemiAnalysis выпустила бенчмарк GDPx (2 ноября) по 11 профессиональным областям; лучшая модель (Claude Opus 5.5) набирает лишь 12%."
       }
     },
-    "xai-grok-4-8": {
-      "last_date": "2026-09-22",
-      "summary": {
-        "en": "Grok 4.7 (2.1T), teased since mid-September and twice delayed, finally shipped on Sep 21 as a coding/agentic-work update at unchanged Grok 4.6 pricing; Grok 4.8 (2.5T, new C++ stack) remains unreleased.",
-        "ru": "Grok 4.7 (2.1 трлн), анонсированный ещё в середине сентября и дважды перенесённый, наконец вышел 21 сентября как обновление для кодинга и агентных задач по прежней цене Grok 4.6; Grok 4.8 (2.5 трлн, новый стек на C++) пока не выпущен."
-      }
-    },
     "xai-grok-bot": {
       "last_date": "2026-09-23",
       "summary": {
@@ -622,6 +615,20 @@
         "ru": "Genie 4 (анонс 27 октября как research preview) с 18 ноября открыта подписчикам Google AI Ultra через Project Genie — интерактивные 3D-миры в реальном времени со звуком и правкой текстом.",
         "en": "Genie 4 (announced Oct 27 as a research preview) opened to Google AI Ultra subscribers via Project Genie on Nov 18 -- real-time interactive 3D worlds with audio and text-prompt editing."
       }
+    },
+    "google-gemini-tasks-free-rollout": {
+      "last_date": "2026-11-22",
+      "summary": {
+        "ru": "Google сделала агентный режим Tasks (бывший Spark) в приложении Gemini бесплатным в США, Японии, Южной Корее, Канаде, Австралии и Индии; для пользователей из США Tasks также умеет звонить в бизнесы от имени пользователя (с лимитом звонков и запретом экстренных вызовов) и платить через Google Pay. Работает на не анонсированной отдельно модели Gemini 4 Hydrogen.",
+        "en": "Google made the agentic Tasks mode (formerly Spark) in the Gemini app free in the US, Japan, South Korea, Canada, Australia and India; for US users Tasks can also call businesses on the user's behalf (capped, no emergency calls) and pay via Google Pay. Runs on a not-separately-announced Gemini 4 Hydrogen model."
+      }
+    },
+    "microsoft-mai-code-2": {
+      "last_date": "2026-11-22",
+      "summary": {
+        "ru": "Microsoft выпустила на Ignite 2026 собственные кодинг-модели MAI Code 2 и MAI Code 2 Flash, сразу доступные в GitHub Copilot на всех платных и части бесплатных тарифов; по заявлению компании, MAI Code 2 даёт ~98% качества GPT-6.1 Sol за ~40% цены (данные производителя, независимо не проверены).",
+        "en": "Microsoft shipped its own MAI Code 2 and MAI Code 2 Flash coding models at Ignite 2026, immediately available in GitHub Copilot across paid tiers and some free ones; the company claims MAI Code 2 delivers ~98% of GPT-6.1 Sol's quality at ~40% of the cost (vendor-reported, not independently verified)."
+      }
     }
   },
   "seen_urls": {
@@ -677,7 +684,6 @@
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
     "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08",
     "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-15",
-    "https://simonwillison.net/2026/Sep/21/jev/": "2026-09-22",
     "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
     "https://swarmtraces.org/": "2026-09-28",
@@ -758,7 +764,6 @@
     "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
     "https://www.youtube.com/watch?v=r3NH48_Z9Vk": "2026-09-23",
     "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
-    "https://x.ai/news/grok-4-7": "2026-09-22",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
     "notes/articles/ai-is-mass-decompiling-games.html": "2026-10-19",
@@ -856,6 +861,9 @@
     "notes/articles/anthropic-chaos-loop-docs-launch.html": "2026-11-20",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/": "2026-11-21",
     "https://decrypt.co/383572/google-genie-4-ultra-subscribers-build-ai-worlds-real-time": "2026-11-21",
-    "https://www.youtube.com/watch?v=ZDpP7JXPlhc": "2026-11-21"
+    "https://www.youtube.com/watch?v=ZDpP7JXPlhc": "2026-11-21",
+    "https://support.google.com/gemini/answer/18336420": "2026-11-22",
+    "https://www.infoworld.com/article/4250152/microsoft-launches-mai-code-2-models-to-challenge-openai-and-anthropic-in-ai-coding.html": "2026-11-22",
+    "https://grahamdumpleton.me/posts/2026/11/ai-as-a-lifestyle-choice/": "2026-11-22"
   }
 }

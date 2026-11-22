@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Graham Dumpleton — «ИИ как образ жизни» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Graham Dumpleton (подсветил Simon Willison) · 2026-11-11</span>
+      <span data-lang="en">Article digest · Graham Dumpleton (spotlighted by Simon Willison) · 2026-11-11</span>
+    </p>
+    <h1>
+      <span data-lang="ru">ИИ как образ жизни: дневник разработки Muru</span>
+      <span data-lang="en">AI as a lifestyle choice: the Muru devlog</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://grahamdumpleton.me/posts/2026/11/ai-as-a-lifestyle-choice/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+
+    <p>
+      <span data-lang="ru">Грэм Дамплтон двадцать лет назад создал mod_wsgi и с тех пор не переставал думать над тем, как правильно подавать Python-веб-приложения в продакшене. В ноябре 2026 года он начал новый проект — Muru, ИИ-ассистированный сервер на Rust для запуска WSGI- и ASGI-приложений — и, как и в прошлый раз с проектом wrapture, параллельно ведёт необычно подробный публичный дневник разработки: за три недели (с 4 по 21 ноября) вышло 18 постов. Эту серию заметил и собрал в один список в своём linkblog Саймон Уиллисон, отдельно выделив пост «ИИ как образ жизни» как особенно стоящий прочтения — именно в нём Дамплтон формулирует не техническую, а методическую мысль о месте человека в процессе, где код в основном пишет ИИ.</span>
+      <span data-lang="en">Graham Dumpleton created mod_wsgi twenty years ago and has kept thinking about how to serve Python web apps in production ever since. In November 2026 he started a new project, Muru -- an AI-assisted Rust server for running WSGI and ASGI apps -- and, as he did before with his wrapture project, is keeping an unusually detailed public devlog alongside it: 18 posts over three weeks, from November 4 to 21. Simon Willison noticed the series and rounded it up on his linkblog, singling out the post "AI as a lifestyle choice" as particularly worth reading -- it's where Dumpleton makes a methodological point rather than a technical one, about the human's place in a process where AI writes most of the code.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что такое Muru: один и тот же сервер для разработки и продакшена</span><span data-lang="en">What Muru is: the same server for development and production</span></h2>
+    <p>
+      <span data-lang="ru">По описанию самого проекта на GitHub, Muru — это «граница маршрутизации, control plane и Python-рантайм» в одном: Rust-ядро принимает соединения клиентов и терминирует TLS, раздаёт статику и файлы, а код приложения выполняется в отдельных Python-воркерах, с которыми ядро общается по внутреннему каналу. Каждый релиз — неизменяемый и может работать бок о бок со старым (в том числе на другой версии Python), а переключение трафика между ними (blue/green, взвешенный канарейка-релиз, A/B-тесты, мгновенный откат) реализовано как смена политики маршрутизации, а не перезапуск процессов. У Muru есть встроенный MCP-сервер, через который ИИ-агенты, пишущие код для приложения, могут сами разворачивать новую версию, тестировать её и откатывать — то есть сам инструмент разработки заранее спроектирован под то, что кодом в нём будет управлять не только человек, но и агент.</span>
+      <span data-lang="en">Per the project's own GitHub description, Muru is a "routing edge, control plane and Python runtime" rolled into one: a Rust core accepts client connections and terminates TLS, serves static files and uploads, while the application code runs in separate Python worker processes the core talks to over an internal channel. Each release is immutable and can run side by side with the old one (even on a different Python version), and shifting traffic between them -- blue/green, weighted canaries, A/B tests, instant rollback -- is implemented as a change to routing policy rather than a process restart. Muru ships with a built-in MCP server that lets the AI agents writing the application's code deploy a new release themselves, test it, and roll it back -- so the tool itself is designed up front around the assumption that more than just a human will be driving deployments.</span>
+    </p>
+
+    <h2><span data-lang="ru">«Решать, что ещё недостаточно хорошо, — моя работа»</span><span data-lang="en">"Deciding what isn't good enough yet is still down to me"</span></h2>
+    <p>
+      <span data-lang="ru">Центральная мысль поста — прямая цитата Дамплтона, которую приводит Уиллисон: «ИИ может делать на поверхности большую часть работы, но решение о том, что ещё недостаточно хорошо, по-прежнему остаётся за мной, и двадцать лет ошибок с mod_wsgi здесь оказываются полезны. Я готов вкладывать тяжёлый труд, чтобы продолжать полировать Muru, пока он не станет инструментом, которому я бы доверял сам — и которому доверяли бы вы». Это формулировка conkретного разделения труда: ИИ отвечает за объём и скорость написания кода, а узко-специализированная экспертиза человека (у Дамплтона — два десятилетия практики именно с обслуживанием Python-приложений) отвечает за критерий «достаточно ли это хорошо», который сам по себе ИИ не формулирует.</span>
+      <span data-lang="en">The post's central point is a direct quote from Dumpleton that Willison reproduces: "The AI may be doing a lot of the work on the surface, but deciding what isn't good enough yet is still down to me, and twenty years of getting things wrong with mod_wsgi turns out to be useful for that. I am prepared to put in the hard work to keep polishing Muru until it is something I would trust, and something you would too." That's a concrete division of labor: the AI handles the volume and speed of writing code, while the human's narrow, specific expertise -- in Dumpleton's case, two decades spent specifically on serving Python applications -- supplies the "is this good enough" judgment that the AI itself doesn't generate.</span>
+    </p>
+
+    <h2><span data-lang="ru">Дневник как часть процесса разработки, а не отчёт постфактум</span><span data-lang="en">The devlog as part of the process, not an after-the-fact report</span></h2>
+    <p>
+      <span data-lang="ru">Уиллисон отмечает методическую преемственность: так же, как и с проектом wrapture в сентябре 2026-го, Дамплтон публикует отчёт почти после каждого рабочего дня — «Muru: что внутри воркеров», «Muru: как это всё связано», «Muru: релизы, а не перезапуски», «Muru: канарейки без service mesh» и так далее, вплоть до поста о трассировке в тулбаре 21 ноября. Такая плотность публикаций — это не маркетинг и не ретроспектива, а часть самого рабочего процесса: фиксация решения и его обоснования в момент принятия, пока контекст ещё свеж, становится побочным эффектом обычной работы, а не отдельной задачей, которую легко отложить.</span>
+      <span data-lang="en">Willison notes the methodological continuity: just as with the wrapture project in September 2026, Dumpleton publishes a write-up after nearly every working day -- "Muru: looking inside the workers," "Muru: how it fits together," "Muru: releases, not restarts," "Muru: canaries without a service mesh," and so on, through a November 21 post about tracing in the toolbar. That publishing cadence isn't marketing or a retrospective -- it's part of the work itself: recording a decision and its reasoning at the moment it's made, while the context is still fresh, becomes a side effect of ordinary work rather than a separate task that's easy to defer.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ограничения: это пока альфа и личный опыт одного разработчика</span><span data-lang="en">Limits: this is still alpha, and one developer's own experience</span></h2>
+    <p>
+      <span data-lang="ru">Сам Muru пока в статусе альфы: на PyPI лежат пре-релизы 0.1.0, и, по словам проекта, команды и конфигурация ещё могут поменяться. Это важная оговорка и для методического вывода поста: Дамплтон прямо связывает свою способность судить о качестве работы ИИ с очень специфическим многолетним опытом именно в своей узкой области — обслуживании Python-приложений. Он не формулирует это как универсальный рецепт для всех, кто использует ИИ в разработке; скорее, это честное описание того, откуда у него лично берётся основание доверять или не доверять результату, и намёк на то, что без сопоставимой глубины экспертизы в конкретной области та же проверка может оказаться сложнее или менее надёжной.</span>
+      <span data-lang="en">Muru itself is still alpha: PyPI carries 0.1.0 pre-releases, and the project says commands and configuration may still change. That caveat matters for the post's methodological point too: Dumpleton explicitly ties his ability to judge the AI's output to a very specific, years-long depth of experience in his own narrow area -- serving Python applications. He doesn't present this as a universal recipe for everyone using AI in development; it reads more as an honest account of where his own grounds for trusting or distrusting the result come from, and a hint that without comparable depth of expertise in a specific area, that same check could be harder to pull off or less reliable.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по README проекта github.com/muruhq/muru (получен напрямую) и по тексту блогмарка Саймона Уиллисона о сериях постов Дамплтона, прочитанному через клон github.com/simonw/simonwillisonblog-backup; прямой доступ к grahamdumpleton.me и simonwillison.net в этом прогоне недоступен (DNS/egress-прокси облачной песочницы блокирует оба домена), поэтому полный текст самого поста «AI as a lifestyle choice» не читался — цитата приведена по тому фрагменту, который сохранил в своей заметке Уиллисон.</span>
+      <span data-lang="en">Digest built from the Muru project's README at github.com/muruhq/muru (fetched directly) and from the text of Simon Willison's linkblog entry about Dumpleton's post series, read via a clone of github.com/simonw/simonwillisonblog-backup; direct access to grahamdumpleton.me and simonwillison.net was unavailable in this run (the cloud sandbox's DNS/egress proxy blocks both domains), so the full text of "AI as a lifestyle choice" itself wasn't read -- the quote is reproduced from the excerpt Willison preserved in his own note.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

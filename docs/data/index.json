@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-22",
+      "news_count": 2,
+      "expert_count": 1,
+      "top_title": {
+        "ru": "Google открывает Gemini Tasks бесплатно в шести странах и расширяет звонки в бизнесы от лица пользователя",
+        "en": "Google makes Gemini Tasks free in six countries and expands AI-placed calls to businesses"
+      }
+    },
+    {
       "date": "2026-11-21",
       "news_count": 2,
       "expert_count": 1,

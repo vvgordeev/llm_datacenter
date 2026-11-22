@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T05:13:28Z",
+  "sources": [
+    {
+      "source": "anthropic blog (direct fetch, anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "WebFetch succeeded and listed all items through Nov 20 (IPO closing, financial, not product). Nothing dated Nov 21 or 22. 2+ WebSearch queries confirmed no product announcement in the window."
+    },
+    {
+      "source": "openai blog (direct fetch, openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch (3+ queries): newest confirmed item remains GPT-6.2 Astra/Sol (Nov 17, already published 2026-11-18); nothing new for Nov 20-22."
+    },
+    {
+      "source": "google/deepmind blog (direct fetch, blog.google)",
+      "status": "blocked",
+      "candidates": 2,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch recovered two real Nov 17 items never published in prior runs: Gemini Tasks made free in 6 countries + US business-calling expansion (published today), and the Gems->Skills migration completing (minor, not published -- judged below digest bar on its own)."
+    },
+    {
+      "source": "meta ai blog (direct fetch, ai.meta.com/blog)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch: no Meta/Muse item newer than the already-published Muse Ember (Nov 9-11)."
+    },
+    {
+      "source": "xai blog (direct fetch, x.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch: newest dated items (Grok Voice 3.0, Oct 14; Grok Bot 1.0, early Nov) are already stale/covered or predate the window; nothing for Nov 20-22."
+    },
+    {
+      "source": "mistral blog (direct fetch, mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch (3+ queries incl. site: search): no confirmed November 2026 Mistral release found at all; most recent identifiable item (Mistral Large 4) has no reliable date."
+    },
+    {
+      "source": "deepseek blog (direct fetch, api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. WebSearch: no DeepSeek release newer than V4.1-Flash-1017 (Oct 17); nothing in November found despite widened search."
+    },
+    {
+      "source": "aggregators (news.smol.ai, tldr.tech/ai, Simon Willison linkblog)",
+      "status": "blocked/ok (mixed)",
+      "candidates": 1,
+      "note": "news.smol.ai and tldr.tech/ai: DNS ENOTFOUND, WebSearch only returned stale/wrong-year pages. Simon Willison linkblog: ok via git clone of simonw/simonwillisonblog-backup (simonwillison.net itself DNS-blocked) -- surfaced the Muru/Dumpleton post (published today) as the only genuinely new, not-yet-covered item."
+    },
+    {
+      "source": "Hacker News (hn.algolia.com API + news.ycombinator.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "Both WebFetch targets: DNS/egress-proxy ENOTFOUND. WebSearch found one relevant thread URL (MAI Code 2 launch, item?id=50535885, 332pts/148 comments) via a secondary aggregator snapshot, but could not retrieve actual comment text -- used only to note the thread exists, no quotes fabricated from it."
+    },
+    {
+      "source": "community (r/LocalLLaMA, r/ClaudeAI, X/Twitter)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch only: all results stale (wrong months/years) or generic; no dated Nov 20-22 community discussion surfaced beyond what's already captured in the two published news items' opinions (Reddit/press reactions to Gemini Call-for-Me, HN thread existence for MAI Code 2)."
+    },
+    {
+      "source": "widened pass (Microsoft MAI Code 2, Thinking Machines Inkling, other non-configured vendors)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Microsoft (not in config models, added as ad-hoc 'microsoft' tag per existing project precedent, e.g. 2026-09-14) shipped MAI Code 2 / Code 2 Flash on Nov 17 at Ignite -- genuinely new, not yet published, well-sourced via InfoWorld/Digit.in/The New Stack/Kilo. Thinking Machines' Inkling 2 Small (Nov 5) is too old and likely already covered elsewhere; not used."
+    },
+    {
+      "source": "expert: Simon Willison (article)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Via git clone of simonw/simonwillisonblog-backup (reliable exact dates). Latest two blogmarks (external-sandboxes Nov 17, token-fraud video Nov 20) already published in prior runs. Only the Nov 21 'Muru' blogmark (spotlighting Graham Dumpleton's devlog) was new -- used as today's sole expert_content item."
+    },
+    {
+      "source": "expert: Andrej Karpathy (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com and its RSS feed: DNS/egress-proxy ENOTFOUND (CONNECT-level, confirmed directly, not just page-level). WebSearch found no confirmed November 2026 video."
+    },
+    {
+      "source": "expert: Latent Space (article)",
+      "status": "blocked/empty",
+      "candidates": 0,
+      "note": "latent.space: DNS ENOTFOUND. WebSearch found only the 'No AI Slop Manifesto' piece (~Nov 13), already published 2026-11-18; nothing newer in-window confirmed."
+    },
+    {
+      "source": "expert: AI Explained (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS-blocked; WebSearch found nothing dated November 2026."
+    },
+    {
+      "source": "expert: Matt Wolfe (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS-blocked; the only mirror site found (aitoolsreview.co.uk) also DNS-blocked. WebSearch titles found (e.g. 'When you give a humanoid roller skates', ~Nov 10) could not be tied to a verifiable youtube.com URL -- not used per no-fabrication rule."
+    },
+    {
+      "source": "expert: Ethan Mollick / One Useful Thing (article)",
+      "status": "blocked/empty",
+      "candidates": 0,
+      "note": "oneusefulthing.org: DNS ENOTFOUND. WebSearch found only third-party coverage of his new book, no verified newsletter post URL in-window."
+    },
+    {
+      "source": "expert: Nate Herk (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS-blocked; WebSearch titles found had no verifiable exact URL or in-window date."
+    },
+    {
+      "source": "expert: Matt Pocock (video)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS-blocked; a vidIQ-listed Short ('Home Repo Pattern', Nov 12) was already published 2026-11-19."
+    },
+    {
+      "source": "expert: extended search (Zvi Mowshowitz, anthropic.com/engineering, addyosmani.com, HN item text, every.to, lesswrong.com)",
+      "status": "blocked/inconclusive",
+      "candidates": 0,
+      "note": "thezvi.substack.com, lesswrong.com, news.ycombinator.com, addyosmani.com, every.to, grahamdumpleton.me (direct): all DNS/egress-proxy ENOTFOUND. One Zvi post ('GPT-6 Astra Can Do Ambitious Things') was found via WebSearch but appears to concern an earlier GPT-6 Astra (not Nov's GPT-6.2 Astra/Sol) and its date could not be pinned down -- excluded rather than guessed."
+    }
+  ],
+  "totals": {
+    "candidates": 7,
+    "published": 3,
+    "rejected": {
+      "уже опубликовано в прошлых прогонах": 6,
+      "не подтверждена дата/первоисточник": 2,
+      "ниже порога значимости для дайджеста": 1
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not used -- no video candidate cleared the bar this run (all configured video experts blocked at youtube.com DNS/egress level; see per-source notes above)",
+    "frames": "not applicable, no video published"
+  },
+  "note": "Severe network degradation this run: of the ~20 distinct sources attempted, roughly 14 (well over 1/3) returned DNS/egress-proxy ENOTFOUND on direct WebFetch -- all 6 non-Anthropic model blogs, both main aggregators, the HN API, and every one of the 8 configured expert sources' own domains (youtube.com entirely, plus latent.space, oneusefulthing.org, simonwillison.net, grahamdumpleton.me, addyosmani.com, thezvi.substack.com, lesswrong.com, news.ycombinator.com, every.to, microsoft.ai, aitoolsreview.co.uk). Only anthropic.com, github.com and WebSearch itself stayed reachable. Two workarounds kept this run from being empty: (1) a git clone of simonw/simonwillisonblog-backup gave exact-dated access to Simon Willison's linkblog, which is how the Muru/Dumpleton piece was found and verified; (2) direct WebFetch of github.com/muruhq/muru supplied real README detail for that same note page. The news side cleared only 2 items and expert_content only 1 (vs. the configured minimum of 5) despite a genuinely widened pass (extra vendors, extra outlets, 7-day expert window) -- this reflects verified scarcity plus the blocking above, not a shortened search. No invented URLs, quotes, or dates were used to pad either count."
+}

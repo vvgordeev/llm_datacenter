@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T05:13:28Z",
+  "news": [
+    {
+      "id": "2026-11-22-google-gemini-tasks-free-call-for-me",
+      "cluster_id": "google-gemini-tasks-free-rollout",
+      "models": [
+        "google"
+      ],
+      "title": {
+        "ru": "Google открывает Gemini Tasks бесплатно в шести странах и расширяет звонки в бизнесы от лица пользователя",
+        "en": "Google makes Gemini Tasks free in six countries and expands AI-placed calls to businesses"
+      },
+      "summary": {
+        "ru": "17 ноября Google убрала платную стену с режима Tasks (бывший Spark) в приложении Gemini: агентный помощник, который сам доводит до конца многошаговые поручения, стал бесплатным для пользователей в США, Японии, Южной Корее, Канаде, Австралии и Индии — ранее требовалась подписка AI Pro или AI Ultra. Для пользователей из США Tasks также получил функции, которые требуют реальных действий во внешнем мире: Gemini может самостоятельно позвонить в бизнес (сверяясь с номером и данными, которые покажет в сводке заранее), пройти автоответчик или дождаться оператора на линии, а также оплатить покупку через Google Pay — с дневным лимитом на число звонков и запретом на экстренные вызовы.",
+        "en": "On November 17, Google removed the paywall from Tasks (formerly Spark) in the Gemini app: the agentic assistant mode that carries out multi-step errands on its own is now free for users in the US, Japan, South Korea, Canada, Australia and India, where it previously required an AI Pro or AI Ultra subscription. US users also got features that mean Gemini taking real action in the outside world: it can call a business on your behalf (after showing you the number and details it will share), navigate a phone menu or wait on hold, and pay for a purchase via Google Pay -- subject to a daily cap on calls and a hard block on emergency numbers."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Полезное расширение уже существующего (с сентябрьского превью) агентного режима на бесплатный тариф и новые страны — это заметно по охвату (все пользователи Gemini, а не только платящие), но не новый класс применения: звонки в бизнесы остаются ограничены США, а сама функция была анонсирована как превью два месяца назад.",
+        "en": "A useful widening of an already-existing (since a September preview) agentic mode to the free tier and new countries -- notable for reach (all Gemini users, not just paying ones) -- but not a new category of use: business calling stays US-only, and the capability itself was announced as a preview two months earlier."
+      },
+      "source_url": "https://support.google.com/gemini/answer/18336420",
+      "opinions": [
+        {
+          "author": "Inc. (Aaron Mok)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Теперь любой пользователь Gemini, а не только платящие подписчики, может поручить приложению обзвонить рестораны для бронирования или пройти через меню службы поддержки — рутинные телефонные дела, которые раньше отнимали время именно у человека.",
+            "en": "Now any Gemini user, not just paying subscribers, can hand the app the job of calling restaurants for a reservation or working through a support line's phone menu -- routine phone chores that used to eat up a person's own time."
+          },
+          "url": "https://www.inc.com/aaron-mok/google-just-made-geminis-personal-assistant-free-use-it-to-handle-these-everyday-tasks/91438908"
+        },
+        {
+          "author": "Tech Advisor",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Google сама предупреждает, что Gemini «может ошибаться» во время звонка от вашего имени — и этого предупреждения достаточно, чтобы держаться подальше от «Call for Me», пока не появится больше уверенности, что модель не наобещает лишнего собеседнику на другом конце линии.",
+            "en": "Google's own disclaimer that Gemini \"can make mistakes\" while calling on your behalf is reason enough to stay well clear of \"Call for Me\" until there's more confidence the model won't over-promise to whoever picks up on the other end."
+          },
+          "url": "https://www.techadvisor.com/article/3245344/pixel-11-call-for-me-sounds-amazing-until-you-get-blocked.html"
+        },
+        {
+          "author": "TechRepublic",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Бесплатным стал именно режим Tasks; звонки в бизнесы и оплата через Google Pay остаются доступны только в США и не работают в Индиане, Луизиане, Миннесоте, Монтане и Небраске — то есть «бесплатно в шести странах» и «умеет звонить» — это два разных по охвату изменения, которые в освещении часто сливают в одно.",
+            "en": "It's specifically Tasks that went free; calling businesses and paying via Google Pay stay US-only and don't work in Indiana, Louisiana, Minnesota, Montana or Nebraska -- so \"free in six countries\" and \"can place calls\" are two changes with different reach that coverage often blurs together."
+          },
+          "url": "https://www.techrepublic.com/article/news-google-gemini-tasks-free-six-countries/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Пользователь просит Gemini забронировать столик или уточнить время работы магазина: приложение показывает, какой номер наберёт и что сообщит, звонит, при необходимости ждёт на линии или проходит автоответчик, а результат можно отслеживать по текстовой расшифровке в реальном времени.",
+            "en": "A user asks Gemini to book a table or confirm a store's hours: the app shows which number it will dial and what it will say, places the call, waits on hold or navigates a phone menu if needed, and the result can be followed through a live text transcript."
+          },
+          "url": "https://support.google.com/gemini/answer/18336420"
+        },
+        {
+          "text": {
+            "ru": "Для бесплатных пользователей за пределами США Tasks берёт на себя многошаговые поручения без звонков — например, сопоставить варианты и подготовить черновик письма или план — используя новую модель Gemini 4 Hydrogen, которая раньше в анонсах Google не называлась.",
+            "en": "For free users outside the US, Tasks takes on multi-step errands without any calling -- comparing options or drafting an email or plan, for instance -- running on Gemini 4 Hydrogen, a model Google hadn't previously named in any announcement."
+          },
+          "url": "https://www.techrepublic.com/article/news-google-gemini-tasks-free-six-countries/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-22-microsoft-mai-code-2",
+      "cluster_id": "microsoft-mai-code-2",
+      "models": [
+        "microsoft"
+      ],
+      "title": {
+        "ru": "Microsoft выпускает MAI Code 2 и Code 2 Flash — собственные кодинг-модели против OpenAI и Anthropic",
+        "en": "Microsoft ships MAI Code 2 and Code 2 Flash, its own coding models aimed at OpenAI and Anthropic"
+      },
+      "summary": {
+        "ru": "17 ноября на конференции Ignite 2026 Microsoft представила MAI Code 2 и облегчённую MAI Code 2 Flash — первые модели собственной разработки компании (MAI), нацеленные именно на кодинг, а не на чат. Обе доступны в GitHub Copilot в тот же день: старшая модель — подписчикам Pro/Pro+/Max/Business/Enterprise для сложных задач (правки сразу в нескольких файлах, отладка, рассуждение в масштабе репозитория), облегчённая Flash — даже бесплатным и студенческим аккаунтам для быстрых массовых правок. По собственным тестам Microsoft (промо-цена, четыре бенчмарка), MAI Code 2 даёт около 98% качества GPT-6.1 Sol примерно за 40% его цены.",
+        "en": "On November 17 at Ignite 2026, Microsoft introduced MAI Code 2 and a lighter MAI Code 2 Flash -- the company's first in-house (MAI) models built specifically for coding rather than chat. Both shipped the same day in GitHub Copilot: the larger model for Pro/Pro+/Max/Business/Enterprise subscribers tackling harder work (multi-file edits, debugging, repository-wide reasoning), the lighter Flash reaching even free and student accounts for fast, high-volume edits. By Microsoft's own benchmarks (at a promotional price, across four tests), MAI Code 2 delivers roughly 98% of GPT-6.1 Sol's quality at about 40% of its cost."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Заметный новый игрок на сцене агентного кодинга с реальным ценовым давлением на лидеров (мгновенная доступность всем уровням GitHub Copilot, включая бесплатный) — это влияет на выбор инструментов, но подход к использованию LLM не меняет, а заявленные цифры пока целиком со стороны поставщика и без независимой проверки.",
+        "en": "A notable new entrant in agentic coding with real price pressure on the leaders (instant availability across every GitHub Copilot tier, including free) -- it affects tool choice, but doesn't change the approach to using LLMs, and the cited numbers are so far entirely vendor-reported and unverified independently."
+      },
+      "source_url": "https://www.infoworld.com/article/4250152/microsoft-launches-mai-code-2-models-to-challenge-openai-and-anthropic-in-ai-coding.html",
+      "opinions": [
+        {
+          "author": "Digit.in",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Правильнее сравнивать MAI Code 2 не с Claude Code или Codex целиком, а именно с моделями под капотом у этих агентов — сам по себе он не заменяет оболочку и рабочий процесс агента, которые Anthropic и OpenAI строили вокруг своих моделей.",
+            "en": "The fairer comparison for MAI Code 2 isn't to Claude Code or Codex as whole products, but specifically to the models sitting under the hood of those agents -- by itself it doesn't replace the agent harness and workflow Anthropic and OpenAI have built around theirs."
+          },
+          "url": "https://www.digit.in/features/general/microsoft-mai-code-2-explained-does-it-stack-up-against-claude-code-and-codex.html"
+        },
+        {
+          "author": "The New Stack",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Независимых бенчмарков MAI Code 2 пока не существует, а приведённые Microsoft цифры по цене получены на промо-тарифе, который не будет действовать вечно — выводы о реальном соотношении цены и качества стоит делать позже.",
+            "en": "Independent benchmarks for MAI Code 2 don't exist yet, and the cost figures Microsoft cites come from a promotional rate that won't last forever -- conclusions about the real price-to-quality ratio are worth waiting on."
+          },
+          "url": "https://thenewstack.io/microsoft-mai-code-2/"
+        },
+        {
+          "author": "Kilo (launch partner)",
+          "stance": "positive",
+          "quote": {
+            "ru": "Как один из партнёров раннего доступа, команда Kilo уже тестирует обе модели вместе с Microsoft перед более широким релизом — для них это сигнал, что модели готовы к реальной нагрузке, а не только к демонстрационным задачам.",
+            "en": "As one of the early-access partners, Kilo's team is already testing both models together with Microsoft ahead of wider release -- to them that's a sign the models are ready for real workloads, not just demo tasks."
+          },
+          "url": "https://blog.kilo.ai/p/microsofts-new-mai-coding-models"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "В GitHub Copilot подписчики платных тарифов используют MAI Code 2 для задач, требующих правок сразу в нескольких файлах и понимания структуры всего репозитория, а не одной функции.",
+            "en": "In GitHub Copilot, paid-tier subscribers use MAI Code 2 for tasks that need edits across multiple files at once and an understanding of the whole repository's structure, not just a single function."
+          },
+          "url": "https://www.infoworld.com/article/4250152/microsoft-launches-mai-code-2-models-to-challenge-openai-and-anthropic-in-ai-coding.html"
+        },
+        {
+          "text": {
+            "ru": "MAI Code 2 Flash, доступный и на бесплатном тарифе Copilot, нацелен на быстрые массовые правки с более низкой задержкой — там, где важнее скорость ответа, чем глубина рассуждения.",
+            "en": "MAI Code 2 Flash, available even on Copilot's free tier, targets fast, high-volume edits with lower latency -- cases where response speed matters more than depth of reasoning."
+          },
+          "url": "https://digitaltrends.com/computing/microsofts-new-ai-coder-is-gunning-for-claude-and-chatgpt-its-coming-with-a-price-advantage"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-22-dumpleton-muru-ai-lifestyle-choice",
+      "type": "article",
+      "author": "Graham Dumpleton (spotlighted by Simon Willison)",
+      "title": {
+        "ru": "ИИ как образ жизни: дневник разработки Muru",
+        "en": "AI as a lifestyle choice: the Muru devlog"
+      },
+      "url": "https://grahamdumpleton.me/posts/2026/11/ai-as-a-lifestyle-choice/",
+      "summary": {
+        "ru": "Создатель mod_wsgi почти три недели вёл подробный дневник разработки Muru — нового ИИ-ассистированного Rust-сервера для запуска Python-приложений — и в одном из постов разбирает, что остаётся за человеком, когда видимую часть работы делает ИИ: решение о том, что ещё «недостаточно хорошо».",
+        "en": "The creator of mod_wsgi kept a detailed, near-daily devlog for three weeks while building Muru -- a new AI-assisted Rust server for running Python web apps -- and in one post examines what's still the human's job when AI does the visible work: deciding what still isn't good enough."
+      },
+      "note_page": "notes/articles/dumpleton-ai-lifestyle-choice.html"
+    }
+  ]
+}
