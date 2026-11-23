@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T05:08:05Z",
+  "sources": [
+    {
+      "source": "anthropic blog (direct fetch, anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "WebFetch succeeded (only domain reachable today besides WebSearch). Newest listed items through Nov 20 (IPO closing, not product) and Nov 9 (Claude Fable/Mythos 5.2, already published 2026-11-09/12). Nothing dated Nov 21-23."
+    },
+    {
+      "source": "openai blog (direct fetch, openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: newest confirmed items are CSAM classifier (Nov 16) and Dots GA admin preview deadline (Nov 18), both already stale/out of window; nothing for Nov 21-23."
+    },
+    {
+      "source": "google/deepmind blog (direct fetch, blog.google)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch found nothing newer than Gemini Tasks free rollout (Nov 17, already published 2026-11-22). No Nov 21-23 items; search index itself lags to ~Nov 18-20 for Google coverage."
+    },
+    {
+      "source": "meta ai blog (direct fetch, ai.meta.com/blog)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: newest items are Active Memory/Focus rollout (Nov 6) and Muse voice mode (Nov 5), both stale. Nothing new in window."
+    },
+    {
+      "source": "xai blog (direct fetch, x.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: newest dated items are Grok Build release-notes entries through Nov 14 and a speech-to-text default change (Nov 2); nothing confirmed for Nov 21-23."
+    },
+    {
+      "source": "mistral blog (direct fetch, mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: newest items (Mistral Large 4 + Studio features) date to Nov 2-6, already stale; nothing new found."
+    },
+    {
+      "source": "deepseek blog (direct fetch, api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: newest release is DeepSeek-V4.1-Flash-1017 (Oct 17), well outside the lookback window. Nothing for November."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "curl CONNECT tunnel failed, 403 (egress proxy), as expected per prior runs. WebSearch fallback (site:news.ycombinator.com, 'HN discussion') returned no dated Nov 2026 LLM threads -- mostly user-profile pages and older threads."
+    },
+    {
+      "source": "aggregators (smol.ai / news.smol.ai, now folded into Latent Space)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch blocked (DNS/egress ENOTFOUND). WebSearch found no issue newer than Nov 13 ('No AI Slop Manifesto', already published 2026-11-18); search index appears to lag ~5-10 days for this source today."
+    },
+    {
+      "source": "aggregators (TLDR AI / tldr.tech)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch blocked (DNS/egress ENOTFOUND, tried tldr.tech/ai/2026-11-21 and /2026-11-23 directly). WebSearch returned only 2025-dated issues and an unrelated ai-tldr.dev tracker; nothing usable for the target date."
+    },
+    {
+      "source": "Simon Willison linkblog (aggregator + expert)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch to simonwillison.net and datasette.simonwillison.net both DNS/egress ENOTFOUND; the documented simonwillisonblog-backup GitHub repo workaround no longer carries a flat ndjson dump (repo now only holds the GitHub Actions config for an external Datasette deploy, which is itself unreachable). WebSearch surfaced only posts already published (Nov 15/17) or older than the 7-day expert window (Nov 2, 9, 10, 11, 12)."
+    },
+    {
+      "source": "reddit (r/LocalLLaMA, r/ClaudeAI)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebSearch site-restricted query returned no Nov 22-23 posts, only older newsletter digests summarizing the subreddits from prior weeks."
+    },
+    {
+      "source": "X / Twitter",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Per config note this source barely indexes; no targeted search attempted beyond what surfaced incidentally in other queries (nothing relevant)."
+    },
+    {
+      "source": "expanded catch-all WebSearch ('AI news Nov 23 2026', 'AI model release this week', 'coding agent update week', date-quoted search)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "Surfaced 'Gemini 4 Hydrogen' (already covered 2026-11-13 as unconfirmed sighting, cluster google-gemini-4-carbon-cybersecurity -- no new confirmed facts beyond what's archived) and 'Thinking Machines Inkling 2 Mini' (Artificial Analysis teaser, no reachable primary source, no confirmed date/URL/specs beyond a one-line benchmark mention) -- both rejected, see totals.rejected."
+    },
+    {
+      "source": "experts: Karpathy / AI Explained / Mollick / Nate Herk / Matt Pocock / Addy Osmani / every.to / aihero.dev (direct + WebSearch)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch to every.to, aihero.dev, addyosmani.com-adjacent domains, techcrunch.com, huggingface.co all DNS/egress ENOTFOUND (only anthropic.com resolved today). WebSearch found only content outside the 7-day expert window (Oct-early Nov) or undated snippets I could not confirm; nothing fresh enough, and with WebFetch blocked everywhere I could not pull full text to write a compliant narrative conspect even for the borderline candidates."
+    },
+    {
+      "source": "YouTube RSS discovery (Karpathy/AI Explained/Wolfe/Nate Herk/Pocock channel_id feeds)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "www.youtube.com DNS/egress ENOTFOUND for all channel_id feeds -- same domain-wide block pattern as 2026-07-18 run. WebSearch fallback for each channel found only uploads dated Nov 11 or earlier (outside 7-day window) or undated/unconfirmed items."
+    }
+  ],
+  "totals": {
+    "candidates": 20,
+    "published": 0,
+    "rejected": {
+      "уже опубликовано ранее (archive)": 6,
+      "старше окна сбора (lookback/7-дневное окно эксперт-контента)": 10,
+      "не подтверждено / недостаточно деталей, нет доступа к первоисточнику": 4
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: no video candidate cleared the discovery bar (RSS blocked domain-wide, WebSearch found no video within the 7-day window)",
+    "frames": "not attempted: no video candidate"
+  }
+}

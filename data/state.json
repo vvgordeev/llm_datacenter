@@ -140,13 +140,6 @@
         "ru": "Claude Marketplace (4 ноября) пополнился 25+ партнёрскими агентами: Chainguard, Checkmarx, Cyera, Rubrik, Tanium, Datadog, Netlify, Runway, Webflow, AirOps, Asana, Glean, monday.com, Zoom."
       }
     },
-    "anthropic-claude-opus-5-5": {
-      "last_date": "2026-09-23",
-      "summary": {
-        "en": "Anthropic ships Claude Opus 5.5 (Sep 22) — Fable 5.1-level intelligence, 20% cheaper than Opus 5 ($4/$20), ~40% total savings from token efficiency; METR calls the advance over Fable 5.1 incremental.",
-        "ru": "Anthropic выпускает Claude Opus 5.5 (22 сент.) — интеллект уровня Fable 5.1, цена на 20% ниже Opus 5 ($4/$20), совокупная экономия ~40% за счёт эффективности по токенам; METR называет прогресс инкрементальным относительно Fable 5.1."
-      }
-    },
     "anthropic-claude-shaped-science-bootloops": {
       "last_date": "2026-10-02",
       "summary": {
@@ -476,13 +469,6 @@
         "ru": "SemiAnalysis выпустила бенчмарк GDPx (2 ноября) по 11 профессиональным областям; лучшая модель (Claude Opus 5.5) набирает лишь 12%."
       }
     },
-    "xai-grok-bot": {
-      "last_date": "2026-09-23",
-      "summary": {
-        "en": "Grok Bot keeps expanding: email/calendar connectors shipped September 5, and on September 22 Tesla built Grok Bot with Connectors directly into vehicles — hands-free email, calendar and ordering tasks (SuperGrok Heavy).",
-        "ru": "Grok Bot расширяется: коннекторы к почте/календарю появились 5 сентября, а 22 сентября Tesla встроила Grok Bot с коннекторами прямо в автомобили — хендс-фри работа с почтой, календарём и заказами (SuperGrok Heavy)."
-      }
-    },
     "xai-grok-voice-transcribe-2": {
       "last_date": "2026-09-27",
       "summary": {
@@ -667,7 +653,6 @@
     "https://openai.com/index/gpt-6-for-everyone/": "2026-10-11",
     "https://openai.com/index/introducing-gpt-6-1-sol/": "2026-09-30",
     "https://openai.com/index/introducing-gpt-6-1-terra/": "2026-10-28",
-    "https://openai.com/index/introducing-gpt-6-sol-and-luna/": "2026-09-23",
     "https://platform.claude.com/docs/en/managed-agents/workflow-runs": "2026-10-15",
     "https://research.meta.ai/blog/muse-wonder": "2026-10-13",
     "https://research.meta.ai/blog/solving-open-research-problems-together": "2026-10-05",
@@ -684,7 +669,6 @@
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
     "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08",
     "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-15",
-    "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/": "2026-09-23",
     "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
     "https://swarmtraces.org/": "2026-09-28",
     "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": "2026-10-02",
@@ -704,7 +688,6 @@
     "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-plugin-amazon-quick-claude": "2026-09-25",
     "https://www.america.gov": "2026-09-30",
     "https://www.anthropic.com/claude-haiku-5-5": "2026-10-08",
-    "https://www.anthropic.com/claude-opus-5-5": "2026-09-23",
     "https://www.anthropic.com/claude-sonnet-5-5": "2026-09-29",
     "https://www.anthropic.com/engineering/redesigning-source-control": "2026-10-14",
     "https://www.anthropic.com/features/ebola-response": "2026-09-25",
@@ -741,9 +724,7 @@
     "https://www.mercor.com/research/labor-index/benchmark-map/": "2026-10-21",
     "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/": "2026-09-25",
     "https://www.metacurity.com/openai-fires-three-safety-researchers-over-alleged-information-leaks/": "2026-10-04",
-    "https://www.notateslaapp.com/news/4724/tesla-adds-grok-bot-to-vehicles-for-hands-free-errands-and-tasks": "2026-09-23",
     "https://www.oneusefulthing.org/p/the-dot-and-the-swarm": "2026-10-15",
-    "https://www.oneusefulthing.org/p/the-overhang": "2026-09-23",
     "https://www.parameter.ai/labs/we-found-a-gap-at-openai": "2026-11-03",
     "https://www.pcgamer.com/software/ai/an-openai-model-was-caught-trying-to-cheat-at-starcraft-and-of-course-it-did-it-by-stealing-a-humans-work/": "2026-10-06",
     "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
@@ -762,7 +743,6 @@
     "https://www.youtube.com/watch?v=dDgncbBAA0c": "2026-10-05",
     "https://www.youtube.com/watch?v=eg_1NXDcoPk": "2026-10-02",
     "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
-    "https://www.youtube.com/watch?v=r3NH48_Z9Vk": "2026-09-23",
     "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
     "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
