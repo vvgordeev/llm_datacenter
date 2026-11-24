@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T05:08:07Z",
+  "sources": [
+    {
+      "source": "anthropic blog (direct fetch, anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "WebFetch succeeded (only domain reachable today besides WebSearch, same as 2026-11-22/23). Newest listed items through Nov 20 (IPO closing, financial) and Nov 9 (Claude Fable/Mythos 5.2, already published). Nothing dated Nov 21-24. 2x WebSearch confirmed no product announcement in window beyond already-published Claude Desktop release-channel item (Nov 17)."
+    },
+    {
+      "source": "openai blog (direct fetch, openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: newest confirmed items are GPT-6.2 Astra/Sol (Nov 17, already published 2026-11-18) and Dots GA (Nov 4/18); nothing for Nov 21-24."
+    },
+    {
+      "source": "google/deepmind blog (direct fetch, blog.google)",
+      "status": "blocked",
+      "candidates": 1,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch found Gemini Robotics 2.5 (Nov 10, already published 2026-11-14) and AlphaGenome 2 (Nov 11, new but 13 days stale, no cluster continuation -- rejected as outside collection window). Widened WebSearch recovered a genuinely new, not-yet-published item: Gemini app computer-use rollout on Mac (Google's own blog.google post, Nov 19, corroborated by 9to5Google/MacRumors/TechCrunch/Macworld/SiliconANGLE) -- published despite being outside the 36h lookback, per the <5-candidates widening rule."
+    },
+    {
+      "source": "meta ai blog (direct fetch, ai.meta.com/blog)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: no Meta/Muse item newer than already-published items; nothing in window."
+    },
+    {
+      "source": "xai blog (direct fetch, x.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: Grok Bot 1.0 (dated Nov 11, conflicting Nov 2 date in one outlet) is 13 days stale, not a cluster continuation -- rejected as outside collection window. Nothing for Nov 21-24."
+    },
+    {
+      "source": "mistral blog (direct fetch, mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: no confirmed November item newer than already-published Medium 3.5/Vibe coverage; nothing dated for the window."
+    },
+    {
+      "source": "deepseek blog (direct fetch, api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch: DNS/egress-proxy ENOTFOUND. 2x WebSearch: newest release remains V4.1-Flash-1017 (Oct 17, already published 2026-10-18); nothing for November."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "curl CONNECT tunnel: 403 (agent proxy, no rule allows host), same as prior runs. WebSearch fallback (site:news.ycombinator.com, 'HN discussion') returned only old threads and user-profile pages, nothing dated Nov 2026."
+    },
+    {
+      "source": "aggregators (news.smol.ai, tldr.tech/ai)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch blocked (DNS/egress ENOTFOUND for both). WebSearch found only older/undated smol.ai issues (archive mirrors with relative timestamps, no Nov 24 issue identifiable)."
+    },
+    {
+      "source": "aggregators (theneuron.ai, aiimpacthub.com digests for 2026-11-23/24)",
+      "status": "ok (WebSearch only)",
+      "candidates": 7,
+      "note": "A targeted date-quoted WebSearch surfaced real third-party AI-news digests naming: Ant LingSante (medical, niche), Thinking Machines 'Inkling 2 Mini' (no reachable primary source, same as yesterday's rejection), MemOS MemT-1.0-Pro, Reson8 Rumble-2-Flash (niche speech model), Z.ai GLM-5.4 'Loop Transformer' (follow-up search found this architecture claim unconfirmed/likely fabricated by an aggregator -- GLM-5.4 itself is an unannounced community name per DataLearner), Qoder HungerG (no primary source). All rejected: no first-party confirmation, niche scope, or contradicted on fact-check."
+    },
+    {
+      "source": "Simon Willison linkblog (aggregator + expert)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch to simonwillison.net DNS/egress ENOTFOUND. git clone of simonw/simonwillisonblog-backup confirmed (again) to no longer carry the ndjson dump -- repo now holds only Datasette deploy scripts/config. WebSearch found real November posts (Nov 2, 9, 10, 11, 12) via archive-page snippets, but all are >7 days stale relative to target date and none could be read in full (domain blocked), so none qualify as a compliant narrative conspect."
+    },
+    {
+      "source": "community (r/LocalLLaMA, r/ClaudeAI, X/Twitter)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch found no Nov 2026 posts for either subreddit beyond months-old aggregator summaries. X per config note barely indexes; nothing surfaced incidentally."
+    },
+    {
+      "source": "expanded catch-all WebSearch ('AI news Nov 24 2026', 'AI model release week', 'coding agent update this week', 'November 23/24 2026 AI model announcement')",
+      "status": "ok",
+      "candidates": 2,
+      "note": "Surfaced the theneuron.ai/aiimpacthub.com digest items (see aggregator row above, all rejected) and confirmed the Gemini Mac computer-use story (published, see google row)."
+    },
+    {
+      "source": "experts: Simon Willison / Karpathy / Latent Space / AI Explained / Matt Wolfe / Ethan Mollick / Nate Herk / Matt Pocock (WebSearch, direct fetch blocked for all)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "WebFetch to every expert domain (simonwillison.net, oneusefulthing.org, latent.space, dev.to, aitoolsreview.co.uk, gdtai.com) returned DNS/egress ENOTFOUND -- only anthropic.com resolved today. WebSearch found real-looking recent items (Mollick's 'Co-Existence' book, Oct 20; Karpathy's HackerTube project, Oct 31; Latent Space Nov 2 episode; Matt Wolfe Nov 12/13/16 roundups per third-party mirrors; a possible AI Explained Nov 19 video per a third-party aggregator listing) but every one is either >7 days stale or has no WebFetch-reachable primary text, so none could be turned into a compliant full-text narrative conspect without risking fabrication. No candidate cleared the bar."
+    },
+    {
+      "source": "YouTube RSS discovery (channel_id feeds for all 4 video experts)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "www.youtube.com DNS/egress ENOTFOUND for all RSS feeds, same domain-wide block pattern as prior runs. WebSearch fallback could not surface a single youtube.com/watch URL for an in-window (Nov 17-24) upload from any of the 4 tracked channels despite several targeted queries; third-party mirrors (aitoolsreview.co.uk, gdtai.com, vidiq.com) gave titles/dates but were themselves unreachable via WebFetch, so no video URL could be confirmed well enough to feed to gemini_video.py."
+    }
+  ],
+  "totals": {
+    "candidates": 10,
+    "published": 1,
+    "rejected": {
+      "старше окна сбора, не продолжение кластера": 2,
+      "не подтверждено первоисточником / вероятно выдумано агрегатором": 5,
+      "нишевое, не про LLM-подходы": 2
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: no video URL cleared discovery (youtube.com domain-wide blocked, WebSearch found no confirmed in-window watch URL for any tracked channel); generativelanguage.googleapis.com itself verified reachable (curl 200) for when a URL is available",
+    "frames": "not attempted: no video candidate"
+  },
+  "degradation_note": "Severe network degradation: only anthropic.com resolved for direct WebFetch today (all other ~15 distinct domains tried returned DNS/egress-proxy ENOTFOUND), consistent with 2026-11-22/23 runs. This is well over 1/3 of sources blocked/error -- flagged in the final session report."
+}

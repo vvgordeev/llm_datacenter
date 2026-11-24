@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T05:08:07Z",
+  "news": [
+    {
+      "id": "2026-11-24-gemini-mac-computer-use",
+      "cluster_id": "google-gemini-mac-computer-use",
+      "models": ["google"],
+      "title": {
+        "ru": "Google добавляет Computer Use в приложение Gemini для Mac",
+        "en": "Google brings Computer Use to the Gemini app on Mac"
+      },
+      "summary": {
+        "ru": "С 19 ноября Google раскатывает в приложении Gemini для Mac функцию computer use: ассистент кликает, печатает и перемещается по локальным приложениям и сайтам в изолированном фоновом окне, выполняя многошаговые задачи вроде заполнения форм или наведения порядка в файлах. Доступно пока только на английском в США, только на Mac с Apple Silicon и только по платной подписке Google AI Plus/Pro/Ultra; есть поэкранный контроль доступа к приложениям и подтверждение чувствительных действий.",
+        "en": "Starting November 19, Google is rolling out a computer-use capability in the Gemini app for Mac: the assistant clicks, types and navigates local desktop apps and websites inside an isolated background window to complete multi-step tasks such as filling out forms or organizing files. It's limited to English-language US users on Apple Silicon Macs with a paid Google AI Plus/Pro/Ultra subscription, with per-app access controls and confirmation prompts before sensitive actions."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Расширяет уже существующий агентный паттерн (computer use) на новую потребительскую платформу (десктоп Mac), не меняя сам подход; сокращает отставание Gemini от Claude Cowork/computer use.",
+        "en": "Extends an already-established agentic pattern (computer use) to a new consumer platform (Mac desktop) rather than introducing a new approach; narrows Gemini's gap with Claude Cowork/computer use."
+      },
+      "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Автоматизация повторяющихся многошаговых действий на рабочем столе — навигация по меню приложений и заполнение форм — без необходимости переключать окна самому",
+            "en": "Automating repetitive multi-step desktop chores — navigating app menus and filling out forms — without having to switch windows yourself"
+          },
+          "url": "https://www.macworld.com/article/3291400/gemini-can-now-tap-into-your-mac-for-app-automation.html"
+        },
+        {
+          "text": {
+            "ru": "Фоновая организация файлов и приложений на Mac, пока пользователь занят другими задачами",
+            "en": "Background organization of files and apps on the Mac while the user keeps working on something else"
+          },
+          "url": "https://www.techradar.com/pro/google-is-bringing-gemini-to-mac-in-a-bid-to-help-organize-your-files-and-much-more"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

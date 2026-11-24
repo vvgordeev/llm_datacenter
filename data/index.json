@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-24",
+      "news_count": 1,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Google добавляет Computer Use в приложение Gemini для Mac",
+        "en": "Google brings Computer Use to the Gemini app on Mac"
+      }
+    },
+    {
       "date": "2026-11-23",
       "news_count": 0,
       "expert_count": 0,

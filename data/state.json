@@ -49,13 +49,6 @@
         "ru": "1 октября Anthropic и Barclays объявили о расширении стратегического партнёрства: банк нацелен на то, чтобы Claude Code использовали 50% его разработчиков к концу 2026 года, а в 2027-м — большинство инженеров. Помимо кодинга, Claude встраивается в поиск по внутренним знаниям сотрудников, триаж почты Global Markets и модернизацию устаревших систем — в рамках более широкой программы эффективности с целевой экономией около £2 млрд."
       }
     },
-    "anthropic-claude-biolab-enzyme-discovery": {
-      "last_date": "2026-09-24",
-      "summary": {
-        "en": "Anthropic opened a biology lab; 950 Claude agents autonomously found an uncharacterized enzyme system (ART) with a CRISPR-like repeat array in bacteriophage DNA, function still unknown.",
-        "ru": "Anthropic открыла биолабораторию; 950 агентов Claude автономно нашли неописанную ферментную систему (ART) с CRISPR-подобным массивом повторов в ДНК бактериофагов, функция пока не известна."
-      }
-    },
     "anthropic-claude-blocks-game-recreation": {
       "last_date": "2026-11-03",
       "summary": {
@@ -124,13 +117,6 @@
       "summary": {
         "en": "Anthropic shipped Claude Haiku 5.5 — about 75% cheaper and markedly smarter than Haiku 4.5, with an adjustable reasoning-effort dial.",
         "ru": "Anthropic выпустила Claude Haiku 5.5 — на 75% дешевле и заметно умнее Haiku 4.5, с регулируемым уровнем усилия рассуждения."
-      }
-    },
-    "anthropic-claude-marketplace": {
-      "last_date": "2026-09-24",
-      "summary": {
-        "en": "Anthropic relaunched Claude Marketplace as a single hub for connectors/plugins, Claude-powered partner products and service partners, letting customers pay for partner software out of committed spend.",
-        "ru": "Anthropic перезапустила Claude Marketplace: единый хаб коннекторов/плагинов, партнёрских продуктов на Claude и сервисных партнёров, с возможностью платить committed spend за партнёрский софт."
       }
     },
     "anthropic-claude-marketplace-expansion": {
@@ -615,6 +601,10 @@
         "ru": "Microsoft выпустила на Ignite 2026 собственные кодинг-модели MAI Code 2 и MAI Code 2 Flash, сразу доступные в GitHub Copilot на всех платных и части бесплатных тарифов; по заявлению компании, MAI Code 2 даёт ~98% качества GPT-6.1 Sol за ~40% цены (данные производителя, независимо не проверены).",
         "en": "Microsoft shipped its own MAI Code 2 and MAI Code 2 Flash coding models at Ignite 2026, immediately available in GitHub Copilot across paid tiers and some free ones; the company claims MAI Code 2 delivers ~98% of GPT-6.1 Sol's quality at ~40% of the cost (vendor-reported, not independently verified)."
       }
+    },
+    "google-gemini-mac-computer-use": {
+      "last_date": "2026-11-24",
+      "summary": "Google computer use rolled out in Gemini app for Mac"
     }
   },
   "seen_urls": {
@@ -631,7 +621,6 @@
     "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://claude.com/blog/claude-code-mods": "2026-10-02",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01",
-    "https://claude.com/blog/claude-marketplace": "2026-09-24",
     "https://claude.com/resources/articles/dashboards-and-motion": "2026-10-12",
     "https://claude.com/resources/articles/introducing-personal-finance-in-claude": "2026-11-07",
     "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace": "2026-11-07",
@@ -694,7 +683,6 @@
     "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions": "2026-10-29",
     "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09",
     "https://www.anthropic.com/news/barclays-scales-claude": "2026-10-02",
-    "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-24",
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07",
     "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation": "2026-10-23",
@@ -844,6 +832,7 @@
     "https://www.youtube.com/watch?v=ZDpP7JXPlhc": "2026-11-21",
     "https://support.google.com/gemini/answer/18336420": "2026-11-22",
     "https://www.infoworld.com/article/4250152/microsoft-launches-mai-code-2-models-to-challenge-openai-and-anthropic-in-ai-coding.html": "2026-11-22",
-    "https://grahamdumpleton.me/posts/2026/11/ai-as-a-lifestyle-choice/": "2026-11-22"
+    "https://grahamdumpleton.me/posts/2026/11/ai-as-a-lifestyle-choice/": "2026-11-22",
+    "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/": "2026-11-24"
   }
 }
