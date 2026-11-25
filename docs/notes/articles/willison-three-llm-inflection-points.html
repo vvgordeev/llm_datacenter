@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Simon Willison — «Три точки перегиба LLM за год» — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison · 2026-11-24</span>
+      <span data-lang="en">Article digest · Simon Willison · 2026-11-24</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Три точки перегиба в возможностях LLM за двенадцать месяцев</span>
+      <span data-lang="en">Three LLM inflection points in twelve months</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/24/llm-inflection-points/" target="_blank" rel="noopener">
+        <span data-lang="ru">Оригинал статьи ↗</span><span data-lang="en">Original article ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект построен по полному тексту поста, полученному через клон репозитория-бэкапа блога github.com/simonw/simonwillisonblog-backup (ndjson-дамп, таблица blog_entry) — прямой WebFetch на simonwillison.net в этом прогоне недоступен (домен не резолвится на уровне сетевой политики облачной песочницы).</span>
+      <span data-lang="en">Digest built from the post's full text, obtained via a clone of the blog's backup repository github.com/simonw/simonwillisonblog-backup (ndjson dump, blog_entry table) — a direct WebFetch of simonwillison.net isn't reachable in this run (the domain fails to resolve under the cloud sandbox's network policy).</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Пост написан по следам кийноута Саймона Уиллисона на AI Engineer Code Summit и разворачивает его центральную идею: за последние двенадцать месяцев в возможностях LLM и агентов для кода произошло три отдельных «скачка», каждый из которых заметно сдвинул то, чего вообще можно ожидать от модели. Уиллисон рассматривает их не как маркетинговые вехи вендоров, а как моменты из собственной повседневной практики, когда привычный способ работы с ИИ перестал работать и его пришлось пересматривать.</span>
+      <span data-lang="en">The post follows up on Simon Willison's keynote at the AI Engineer Code Summit and expands its central idea: over the past twelve months, LLMs and coding agents went through three distinct "jumps," each one visibly shifting what you can reasonably expect from a model. Willison frames these not as vendor marketing milestones but as moments from his own day-to-day practice where his usual way of working with AI stopped working and had to be rethought.</span>
+    </p>
+
+    <h2><span data-lang="ru">Ноябрь 2025: агенты для кода начинают «просто работать»</span><span data-lang="en">November 2025: coding agents start "just working"</span></h2>
+    <p>
+      <span data-lang="ru">Первая точка перегиба — релиз Claude Opus 4.5 (24 ноября 2025-го, ровно за год до публикации поста) и, в том же месяце, линейки GPT-5.1 (Instant, Thinking, Codex, Codex-Max) от OpenAI. До этого момента Уиллисон не использовал Claude Code как основной инструмент: результат приходилось слишком часто поправлять, чтобы это ощущалось как реальное ускорение работы. С Opus 4.5 — модели, которая, по словам самой Anthropic, «рассуждает о компромиссах без необходимости вести её за руку» и справляется с фиксом, который ещё недавно был «почти невозможен» для Sonnet 4.5, — результат по умолчанию стал в основном верным. GPT-5.1-Codex дал тот же эффект для Codex: агент стал надёжно полезен в повседневных задачах. Совпадение с декабрьскими праздниками дало всем время обкатать новые инструменты на несложных задачах, а к январю — перейти на них и в рабочих проектах.</span>
+      <span data-lang="en">The first inflection point is the release of Claude Opus 4.5 (November 24, 2025 — exactly one year before this post) and, the same month, OpenAI's GPT-5.1 lineup (Instant, Thinking, Codex, Codex-Max). Before that, Willison hadn't been using Claude Code as a daily driver: he had to correct it often enough that it didn't feel like a genuine accelerant. With Opus 4.5 — a model Anthropic itself said "handles ambiguity and reasons about tradeoffs without hand-holding" and could fix bugs that had been "near-impossible" for Sonnet 4.5 just weeks earlier — the default result became, for the most part, the right one. GPT-5.1-Codex had the same effect on Codex: the agent became reliably useful for everyday work. The timing lined up with the December holidays, giving everyone time to tinker with the new tools on low-stakes problems before putting them to work on real projects by January.</span>
+    </p>
+
+    <h2><span data-lang="ru">Июнь-июль 2026: модели «класса Fable» — цель плюс инструменты вместо пошаговых инструкций</span><span data-lang="en">June-July 2026: "Fable-class" models — a goal plus tools instead of step-by-step instructions</span></h2>
+    <p>
+      <span data-lang="ru">Вторую точку перегиба Уиллисон связывает с семейством моделей, которое он называет «классом Fable». Первым намёком был апрельский Claude Mythos, который Anthropic сочла слишком опасной для релиза моделью из-за её возможностей в кибербезопасности — она умела не просто находить уязвимости, но и соображать, как их эксплуатировать. В июне вышла «обезвреженная» версия — Claude Fable 5, которая решает большинство задач, но активно блокирует использование для настоящей атаки; впрочем, через три дня после релиза модель попала под экспортные ограничения США и вернулась только 1 июля. Определение, которое даёт Уиллисон моделям этого класса: если задать цель и дать нужные инструменты, модель решит задачу «грубой силой» — сама, без пошагового руководства. Пример из июня: Fable, пытаясь исправить визуальный баг в Safari, сама подняла свой собственный механизм скриншотов через <code>pyobjc-framework-Quartz</code> и локальный CORS-сервер для логирования — ради починки одного частного бага. Более свежий пример (начало ноября) — «охота за таинственным писком»: получив доступ к пяти микрофонам WebAudio в комнате, заставленной коробками, Opus 5.5, а затем Fable 5.2 триангулировали источник надоедливого писка с точностью до 40 см. К классу Fable Уиллисон относит Fable 5/5.1/5.2, Opus 5.5 («дешёвый Fable»), а также, по ощущениям, GPT-6 Astra и, вероятно, новый Gemini 4 Neon — и именно такое поведение он теперь считает базовым ожиданием от топовой модели.</span>
+      <span data-lang="en">Willison ties the second inflection point to a family of models he calls "Fable-class." The first hint came with the April release of Claude Mythos, which Anthropic judged too dangerous to ship because of its cybersecurity abilities — it could not only find vulnerabilities but also work out how to exploit them. June brought a defanged version, Claude Fable 5, which solves most problems but actively blocks real attack work — though three days after release the model was placed under US export controls and didn't come back until July 1st. Willison's definition of this model class: given a goal and the right tools, the model solves the problem by brute force, on its own, without step-by-step instructions. A June example: asked to fix a display glitch in Safari, Fable spun up its own screenshot mechanism via <code>pyobjc-framework-Quartz</code> and a CORS-enabled localhost logging server, just to chase down one narrow bug. A more recent example, from early November, is the "mysterious beep finder": given access to five WebAudio microphones in a room full of boxes, Opus 5.5 and then Fable 5.2 triangulated the source of an infuriating beep to within about 40cm. Willison puts Fable 5/5.1/5.2 and Opus 5.5 ("cheap Fable") in this class, and reckons GPT-6 Astra — and probably the new Gemini 4 Neon — belong there too; this is now his baseline expectation for a frontier model.</span>
+    </p>
+
+    <h2><span data-lang="ru">Сентябрь-октябрь 2026: модели учатся понимать, «весело» ли играть</span><span data-lang="en">September-October 2026: models learn whether a game is actually fun</span></h2>
+    <p>
+      <span data-lang="ru">Третья точка перегиба — резкий скачок способности фронтир-моделей к 3D-моделированию: если подключить им Blender или попросить написать Three.js-код, они выдают правдоподобные модели почти чего угодно. Уиллисон впервые заметил это у Fable 5, но по-настоящему разогналось с Opus 5.5, GPT-5.6 Sol, GPT-6 Astra и, в последнюю очередь, семейством Gemini 4 — вплоть до демонстрации Gemini 4 Neon, собравшей трёхмерную анимацию огромного меха, шагающего по Манхэттену, Квинсу и Бруклину, по данным OpenStreetMap. Но куда интереснее методический поворот: в августе Уиллисон экспериментировал с игрой про ограбление, которую построил Fable 5 — графика была, выглядело как игра, но играть было скучно; GPT-5.6 Sol Ultra справился заметно лучше, но тоже ненадолго удерживал интерес. Тогда Уиллисон решил, что «веселье» в играх остаётся уникально человеческой territory, — и даже использовал это в сентябрьском выступлении как аргумент в пользу незаменимости человека. А затем он просто сказал Opus 5.5: «Эта игра пока недостаточно весёлая. Сделай её НАМНОГО веселее» — и это сработало: его RTS в духе Command &amp; Conquer за ночь превратилась из скучной в по-настоящему увлекательную, после того как Opus потратил 12 часов на плейтестинг и перебалансировку геймплея. Opus 5.5 стал первой моделью, которая, на взгляд Уиллисона, по-настоящему «понимает» веселье; с тех пор он делал несколько игровых прототипов, где подсказка вроде «подумай хорошенько, как сделать и весело, и красиво» давала результат, удерживающий внимание надолго. Автор отмечает и обратную сторону: игровая индустрия охвачена «культурной войной» вокруг ИИ-ассистированной разработки, а GTA VI многие уже называют «последним доген-ИИ-блокбастером».</span>
+      <span data-lang="en">The third inflection point is a sudden jump in frontier models' 3D-modeling ability: hook one up to Blender, or ask it to write Three.js code, and it will produce a credible model of almost anything. Willison first noticed this with Fable 5, but it really took off with Opus 5.5, GPT-5.6 Sol, GPT-6 Astra and, most recently, the Gemini 4 family — up to a demo where Gemini 4 Neon built a three.js animation of a giant mech standing up and stomping through Manhattan, Queens and Brooklyn using real OpenStreetMap data. But the more interesting turn is methodological: back in August, Willison experimented with a heist game built by Fable 5 — it had 3D graphics and looked like a game, but played poorly; GPT-5.6 Sol Ultra did noticeably better but still grew dull fast. At that point Willison concluded that designing something actually <em>fun</em> remained uniquely human territory — he even used that in a September talk to reassure people that humans still had a role to play. Then he simply told Opus 5.5, "This game isn't fun enough yet. Make it a LOT more fun" — and it worked: his Command &amp; Conquer-style RTS went from boring to genuinely entertaining overnight, after Opus spent 12 hours playtesting and rebalancing the gameplay. Opus 5.5 became the first model that, in his view, actually understands fun; since then he's built several small game prototypes where a prompt like "think hard about how to make it both fun and beautiful" produced results that held his attention for real stretches of time. He also flags the other side of this: the indie games scene has fallen into a full-blown culture war over AI-assisted development, and many are already calling GTA VI "the last pre-generative-AI blockbuster."</span>
+    </p>
+
+    <h2><span data-lang="ru">Остаётся вопрос: а Fable 5.2 — это тоже перегиб?</span><span data-lang="en">The open question: is Fable 5.2 itself an inflection point?</span></h2>
+    <p>
+      <span data-lang="ru">В конце поста Уиллисон честно признаётся, что пока не решил, считать ли Fable 5.2 четвёртой точкой перегиба или просто очередным инкрементальным улучшением. Аргумент в пользу «перегиба»: модель как будто почти точно совпадает по вкусу с самим автором и позволяет ему быстро закрывать давно отложенные технические долги — за три недели вышло сразу пять релизов его собственных проектов Datasette (1.0a42–1.0a44) и LLM (0.37–0.38), что он описывает как «поток фиксов, фич и улучшений». Если это действительно перегиб, его суть не в конкретной задаче, а в формулировке общего вида: если вы можете представить и чётко описать программу, Fable способен её построить. Сам Уиллисон называет это диким по звучанию утверждением — но говорит, что оно соответствует его опыту последних недель, и заключает: разработка ПО изменилась до неузнаваемости за год, и он не думает, что когда-нибудь вернётся к ручному набору большей части кода.</span>
+      <span data-lang="en">Near the end, Willison is upfront that he hasn't decided whether Fable 5.2 counts as a fourth inflection point or is just another incremental improvement. The case for "inflection point": the model seems to match his own taste almost exactly, letting him burn through gnarly problems he's been putting off for years — three weeks produced five separate releases of his own Datasette (1.0a42-1.0a44) and LLM (0.37-0.38) projects, which he calls "a flood of fixes, features and improvements." If this is genuinely an inflection point, its substance isn't any one task but a general-purpose claim: if you can imagine and clearly describe a piece of software, Fable can build it. Willison calls that a wild thing to say, but adds that it matches his experience over the past few weeks, and closes by concluding that software development has transformed beyond recognition in a year, and he doesn't expect to ever go back to typing most of his code by hand.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Пост в основном описывает личный опыт и оценки самого автора, а не формальный бенчмарк, — это стоит учитывать как ограничение при переносе выводов на другие задачи и рабочие процессы.</span>
+      <span data-lang="en">The post is mostly a record of the author's own experience and judgment calls rather than a formal benchmark — worth keeping in mind as a limit on how far these conclusions generalize to other tasks and workflows.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

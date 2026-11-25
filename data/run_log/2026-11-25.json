@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T05:11:41Z",
+  "sources": [
+    {
+      "source": "anthropic blog (direct fetch anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "WebFetch succeeded. Newest items are financial/IPO (Nov 20) and the already-published Fable/Mythos 5.2 (Nov 9); no new product post in the lookback window on the blog itself."
+    },
+    {
+      "source": "anthropic release notes (support.claude.com)",
+      "status": "ok",
+      "candidates": 3,
+      "note": "Direct fetch succeeded. 3 Nov 24 entries found: install-artifact-as-app (beta), send/save files with connected apps (beta), monthly recap exits beta. All published today."
+    },
+    {
+      "source": "openai blog (openai.com/news/, help.openai.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND on both hosts. 2x WebSearch: newest is GPT-6.2 Astra/Sol (Nov 17, already archived); nothing new for Nov 21-25 beyond the Astra historical-research use case (found via Simon Willison's linkblog, see below)."
+    },
+    {
+      "source": "google/deepmind blog (blog.google, gemini.google)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND on both hosts. 2x WebSearch: nothing newer than Gemini 4 Neon (Nov 21, already archived)."
+    },
+    {
+      "source": "meta ai blog (ai.meta.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: no new Muse/Llama item in window."
+    },
+    {
+      "source": "xai blog (x.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: nothing new in window (Grok items found are >1 week stale, not cluster continuations)."
+    },
+    {
+      "source": "mistral blog (mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: nothing newer than already-archived Medium 3.5/Vibe coverage."
+    },
+    {
+      "source": "deepseek blog (api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: no new release in window."
+    },
+    {
+      "source": "aggregators (news.smol.ai, tldr.tech/ai)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch for both: no identifiable issue dated Nov 23-25; nothing usable in window."
+    },
+    {
+      "source": "Simon Willison linkblog (via simonwillisonblog-backup clone, simonwillison.net direct fetch blocked)",
+      "status": "ok",
+      "candidates": 2,
+      "note": "simonwillison.net/datasette.simonwillison.net direct fetch: DNS ENOTFOUND. Worked around via `git clone --depth 1 github.com/simonw/simonwillisonblog-backup` (ndjson dump), sorted blog_blogmark/blog_entry by `created`. Found: GLM-5.4 looped-transformer blogmark (Nov 23) and GPT-6.2 Astra historical-mystery blogmark (Nov 24) -- both verified as real against the backup's raw body text, both published as news today. Also found the full-text article used for expert_content (llm-inflection-points, Nov 24)."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com) + site-search",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND on hn.algolia.com. WebSearch site:news.ycombinator.com: nothing dated in window."
+    },
+    {
+      "source": "reddit r/LocalLLaMA, r/ClaudeAI",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch: no posts identifiable as dated within the lookback window."
+    },
+    {
+      "source": "expert: Simon Willison (article)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Published: 'Three LLM inflection points in twelve months' (Nov 24), full text read via the backup clone."
+    },
+    {
+      "source": "expert: Andrej Karpathy (video, RSS channel_id UCXUPKJO5MZQN11PqgIvyuvQ)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND this run (full resolution failure, not just an anti-bot 403). WebSearch fallback: no confirmed new video in window."
+    },
+    {
+      "source": "expert: AI Explained (video, RSS channel_id UCNJ1Ymd5yFuUPtn21xtRbbw)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND. WebSearch found one unverified secondary mention (no first-party confirmation of date/content) -- not used, too weak to publish without risking invented facts."
+    },
+    {
+      "source": "expert: Matt Wolfe (video, RSS channel_id UChpleBmo18P08aKCIgti38g)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND. WebSearch: only unverified mirror mentions, dates not confirmed -- not used."
+    },
+    {
+      "source": "expert: Latent Space (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Last identifiable post (Nov 13, AI slop manifesto) is outside the 7-day window from Nov 25."
+    },
+    {
+      "source": "expert: Ethan Mollick / One Useful Thing (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Last identifiable post is from October; nothing in the 7-day window."
+    },
+    {
+      "source": "expert: Nate Herk (video, RSS channel_id UC2ojq-nuP8ceeHqiroeKhBA)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND. WebSearch: only unverified aggregator mentions (vidIQ itself also unreachable) -- not used."
+    },
+    {
+      "source": "expert: Matt Pocock (video, RSS channel_id UCswG6FSbgZjbWtdf_hMLaow)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND. WebSearch: only an unverified short-form mention -- not used."
+    },
+    {
+      "source": "broad fallback searches (\"LLM news Nov 24 2026\", \"AI model release Nov 2026\", \"best article/video this week\", other notable bloggers Zvi/Nathan Lambert)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Widened pass per <5-candidates rule and for expert min_total shortfall: no additional in-window, verifiable items found beyond what's listed above."
+    }
+  ],
+  "totals": {
+    "candidates": 8,
+    "published": 5,
+    "rejected": {
+      "уже в архиве/не в окне": 3,
+      "не подтверждено первоисточником (видео-эксперты)": 5
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: no verified video candidate this run",
+    "frames": "not attempted: no verified video candidate this run"
+  },
+  "degradation_note": "9 of 20 listed sources blocked at DNS/egress-proxy level this run (anthropic.com/news aside, all 6 other model blogs + HN API + all 5 video-expert YouTube RSS/pages, incl. a fresh youtube.com DNS ENOTFOUND distinct from prior runs' 403-only blocks). That's well over 1/3 of sources -- a clear environment-degradation signal, not a quiet news day by itself. WebSearch plus the simonwillisonblog-backup clone workaround remained the viable discovery channels and were used extensively; min_expert_total (5) was not met (1 published) because all 5 configured video experts were unreachable and no independently verifiable substitute article was found despite a widened search."
+}

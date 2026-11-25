@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T05:11:41Z",
+  "news": [
+    {
+      "id": "2026-11-25-install-artifact-as-app",
+      "cluster_id": "anthropic-artifacts-install-as-app",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Claude: артефакт можно установить как настольное приложение (бета)",
+        "en": "Claude: install an artifact as a desktop app (beta)"
+      },
+      "summary": {
+        "ru": "Anthropic выкатывает бету, которая превращает артефакт, созданный Claude, в отдельное настольное приложение для Mac и Windows — со своей иконкой и окном. С разрешения пользователя такое приложение может взаимодействовать с ОС: запускать программы, читать и менять файлы, слать уведомления, жить в трее/менюбаре. Права запрашиваются по каждой возможности отдельно и сбрасываются при любом обновлении артефакта (включая правки самого пользователя); «полный доступ» Claude по умолчанию блокирует для приложений с недоверенным/внешним автором.",
+        "en": "Anthropic is rolling out a beta that turns a Claude-built artifact into a standalone Mac or Windows desktop app with its own icon and window. With permission, such an app can touch the OS: run programs, read and change files, post notifications, sit in the system tray or menu bar. Each capability is requested separately and the grant resets on every artifact update (including the user's own edits); by default Claude blocks \"full access\" for apps with an untrusted or external author."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Открывает новый класс сценариев: артефакт перестаёт быть разовым веб-виджетом в чате и становится персистентным установленным приложением с доступом к ОС — качественно иной уровень, чем прежние «закрепить на рабочий стол» ярлыки браузера.",
+        "en": "Opens a new class of scenarios: an artifact stops being a one-off in-chat web widget and becomes a persistent installed app with OS access — a qualitatively different tier than a browser's old \"add to desktop\" shortcut."
+      },
+      "source_url": "https://support.claude.com/en/articles/18516354-install-an-artifact-as-an-app",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Таймер Pomodoro в менюбаре Mac, собранный и установленный как приложение",
+            "en": "A menu-bar Pomodoro timer on Mac, built and installed as an app"
+          },
+          "url": "https://support.claude.com/en/articles/18516354-install-an-artifact-as-an-app"
+        },
+        {
+          "text": {
+            "ru": "Windows-приложение, которое переименовывает фотографии в папке по дате съёмки",
+            "en": "A Windows app that renames photos in a folder by their capture date"
+          },
+          "url": "https://support.claude.com/en/articles/18516354-install-an-artifact-as-an-app"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-send-files-connected-apps",
+      "cluster_id": "anthropic-connectors-file-transfer",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Claude: двусторонняя передача файлов в подключённые приложения (бета)",
+        "en": "Claude: two-way file transfer with connected apps (beta)"
+      },
+      "summary": {
+        "ru": "В бете Claude может отправлять файлы в подключённые через коннекторы приложения (например, выгрузить готовую презентацию в облачное хранилище) и забирать файлы из них (например, подтянуть контракт для совместного ревью). Работает в чате на вебе, десктопе и мобильных, а также в Claude Code (терминал, VS Code, веб); не работает в инкогнито-чатах и в сессиях с Remote Control. На первую отправку в каждое приложение Claude запрашивает подтверждение; для Claude Code действуют отдельные проверки — файлы вроде .env/.pem по умолчанию блокируются.",
+        "en": "In beta, Claude can send files to connector-linked apps (say, upload a finished presentation to cloud storage) and pull files back from them (say, fetch a contract to review together). It works in web, desktop and mobile chats and in Claude Code (terminal, VS Code, web); it doesn't work in incognito chats or Remote Control sessions. Claude asks for approval the first time it sends to each app; Claude Code adds its own checks, blocking files like .env/.pem by default."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Полезное развитие существующего подхода (коннекторы/MCP-приложения): добавляет файлы как полноценный канал обмена, но не меняет саму модель взаимодействия с внешними сервisами.",
+        "en": "A useful extension of the existing approach (connectors/MCP apps): it adds files as a first-class exchange channel, but doesn't change the underlying model of interacting with outside services."
+      },
+      "source_url": "https://support.claude.com/en/articles/18534325",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Выгрузить сгенерированную презентацию в облачное хранилище",
+            "en": "Upload a generated presentation to cloud storage"
+          },
+          "url": "https://support.claude.com/en/articles/18534325"
+        },
+        {
+          "text": {
+            "ru": "Подтянуть контракт из подключённого хранилища, чтобы разобрать его вместе с Claude",
+            "en": "Pull a contract from connected storage to review it together with Claude"
+          },
+          "url": "https://support.claude.com/en/articles/18534325"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-monthly-recap-exits-beta",
+      "cluster_id": "anthropic-monthly-recap-ga",
+      "models": [
+        "anthropic"
+      ],
+      "title": {
+        "ru": "Claude: месячный конспект активности вышел из беты",
+        "en": "Claude: Monthly Recap graduates from beta"
+      },
+      "summary": {
+        "ru": "Функция «месячный конспект» (сводка активности пользователя за месяц) стала доступна без бета-пометки на тарифах Free/Pro/Max/Ultra — на вебе, в десктопном приложении и в iOS/Android. Теперь в конспект попадают и сессии Claude Code, и задачи Cowork; сохранённые конспекты можно удалять.",
+        "en": "The \"monthly recap\" feature (a summary of a user's activity over the month) has left beta on the Free/Pro/Max/Ultra plans, across web, desktop and iOS/Android. It now folds in Claude Code sessions and Cowork tasks, and saved recaps can be deleted."
+      },
+      "impact_score": 2,
+      "impact_reason": {
+        "ru": "Чисто инкрементальное UX-обновление существующей функции, подходы к использованию LLM не меняет.",
+        "en": "A purely incremental UX update to an existing feature; it doesn't change approaches to using an LLM."
+      },
+      "source_url": "https://support.claude.com/en/articles/15672559-see-your-monthly-recap",
+      "opinions": [],
+      "use_cases": []
+    },
+    {
+      "id": "2026-11-25-glm-5-4-looped-transformer",
+      "cluster_id": "zhipu-glm-5-4-looped-transformer",
+      "models": [
+        "zhipu"
+      ],
+      "title": {
+        "ru": "GLM-5.4 от Z.ai — первая модель компании на looped-transformer архитектуре",
+        "en": "GLM-5.4 from Z.ai — the company's first looped-transformer model"
+      },
+      "summary": {
+        "ru": "Китайская Z.ai выпустила GLM-5.4 — первую свою модель на архитектуре looped transformer: группа слоёв с общими весами прогоняется несколько раз за один forward pass, уточняя скрытые состояния, что даёт более «глубокую» сеть без роста числа параметров. Это уже второе упоминание looped-архитектуры за неделю — первой была Inkling 2 Mini от Thinking Machines Lab (20 ноября), где средние слои гоняются трижды на каждый токен ради более качественного рассуждения в агентном кодинге. Веса GLM-5.4 пока закрыты — Z.ai обещает открыть их позже, «после необходимого харденинга безопасности»; доступ — через API и Coding Plan подписку.",
+        "en": "China's Z.ai has shipped GLM-5.4, its first model built on a looped-transformer architecture: a group of weight-shared layers runs for multiple iterations in a single forward pass, refining hidden states to produce a deeper network without more parameters. It's the second sighting of a looped architecture in a single week — the first was Thinking Machines Lab's Inkling 2 Mini (November 20), which runs its middle layers three times per token for better reasoning on agentic coding. GLM-5.4's weights aren't open yet — Z.ai says it plans to open-source them later \"after completing necessary safety hardening\"; access for now is via the API and a Coding Plan subscription."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Архитектурный сигнал: две независимые лаборатории на одной неделе сходятся на looped-transformer как способе нарастить «глубину» рассуждений без роста параметров — заметно для того, как строят модели, хотя на практике (ручной тест автора на бенчмарке с пеликаном) качество сопоставимо с предыдущим поколением, а не явно выше.",
+        "en": "An architectural signal: two independent labs converge on looped transformers in the same week as a way to add reasoning \"depth\" without more parameters — notable for how models get built, even though a hands-on spot-check (the author's pelican-drawing benchmark) showed quality roughly on par with, not clearly ahead of, the prior generation."
+      },
+      "source_url": "https://z.ai/blog/glm-5.4",
+      "opinions": [
+        {
+          "author": "Simon Willison",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "«Если честно, не очень — пеликан узнаваем, но у рамы велосипеда забавное крепление переднего руля, и непохоже, что им можно было бы рулить» (о тесте GLM-5.4 на максимальном уровне рассуждений с помощью стандартного бенчмарка «нарисуй пеликана на велосипеде»)",
+            "en": "\"It's not great to be honest - the pelican is recognizable, but the bicycle frame has a funny front bar connection post and doesn't look like it would steer\" (on GLM-5.4's result at the max reasoning level on his usual \"pelican riding a bicycle\" SVG benchmark)"
+          },
+          "url": "https://simonwillison.net/2026/Nov/23/glm-54/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Саймон Уиллисон написал и выложил плагин llm-glm для своей CLI-утилиты llm, чтобы обращаться к GLM-5.4 через OpenAI-совместимый Responses API Z.ai",
+            "en": "Simon Willison wrote and published an llm-glm plugin for his llm CLI tool to call GLM-5.4 through Z.ai's OpenAI-compatible Responses API"
+          },
+          "url": "https://github.com/simonw/llm-glm"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-gpt-6-2-astra-historical-mystery",
+      "cluster_id": "openai-gpt-6-2-astra-historical-research",
+      "models": [
+        "openai"
+      ],
+      "title": {
+        "ru": "GPT-6.2 Astra самостоятельно раскрыла автора альбома зарисовок 1808 года",
+        "en": "GPT-6.2 Astra autonomously identified the creator of an 1808 sketchbook"
+      },
+      "summary": {
+        "ru": "Профессор истории Марк Хамфрис описал кейс: при минимальных подсказках GPT-6.2 Astra за 22 минуты самостоятельно установила автора анонимного альбома зарисовок 1808 года из библиотеки Бейнеке Йельского университета, используя только общедоступные первичные и вторичные источники. Модель нашла малоизвестный источник в бумажном архиве, выдвинула гипотезу о том, что он подтвердит авторство, и при проверке оказалась права — попутно обнаружив материал, самостоятельно значимый для историков Канады и пушной торговли. Хамфрис допускает, что историков ждёт не такой резкий «момент Deep Blue», как в математике, поскольку их работа — это постоянная переинтерпретация прошлого, а не поиск единственной истины.",
+        "en": "History professor Mark Humphries described a case study: with only minimal prompting, GPT-6.2 Astra autonomously identified the creator of an anonymous 1808 sketchbook held at Yale's Beinecke Library in just 22 minutes, using only publicly available primary and secondary sources. The model found an obscure source in a paper archive, hypothesized it would confirm authorship if examined, and turned out to be right — turning up a source that's independently significant to Canadian and fur-trade historians. Humphries expects historians face a milder version of mathematics' \"Deep Blue moment,\" since their field is about continually reinterpreting the past rather than chasing one universal truth."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Демонстрирует новый подход к использованию LLM — автономное многошаговое архивное исследование с выдвижением и проверкой гипотез — но пока это единичный кейс в узкой нише (гуманитарные науки), а не выпущенный продукт или систематическое свидетельство.",
+        "en": "Demonstrates a new approach to using an LLM — autonomous, multi-step archival research with hypothesis generation and verification — but so far it's a single case study in a narrow field (humanities research), not a shipped product or systematic evidence."
+      },
+      "source_url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+      "opinions": [
+        {
+          "author": "Mark Humphries, history professor",
+          "stance": "neutral",
+          "quote": {
+            "ru": "«Если опыт математики что-то подсказывает, нас тоже ждёт нечто вроде кризиса уверенности... Но, честно говоря, для нас этот кризис почти наверняка будет не таким глубоким, как для математики. ...Историки же постоянно переосмысливают прошлое в свете меняющегося настоящего; мы не гонимся за единой универсальной истиной»",
+            "en": "\"If the experience of mathematics is any guide, we can also anticipate ... a sort of crisis of confidence ... To be fair, that crisis will almost certainly be less profound for us than it is for math ... Historians, on the other hand, constantly reinterpret the past in light of an evolving present; we don't chase a single universal truth\""
+          },
+          "url": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Автономная атрибуция анонимного исторического документа: модель сама нашла архивный источник-подсказку, предсказала, что он подтвердит гипотезу, и проверка это подтвердила",
+            "en": "Autonomous attribution of an anonymous historical document: the model found an archival clue itself, predicted it would confirm its hypothesis, and the check bore that out"
+          },
+          "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical"
+        }
+      ]
+    }
+  ],
+  "expert_content": [
+    {
+      "id": "2026-11-25-willison-three-inflection-points",
+      "type": "article",
+      "author": "Simon Willison",
+      "title": {
+        "ru": "Три точки перегиба в возможностях LLM за двенадцать месяцев",
+        "en": "Three LLM inflection points in twelve months"
+      },
+      "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+      "summary": {
+        "ru": "По мотивам кийноута на AI Engineer Code Summit Саймон Уиллисон раскладывает прошедший год на три точки перегиба в возможностях LLM и агентов для кода: (1) ноябрь 2025 — Claude Opus 4.5 и GPT-5.1-Codex, когда агенты впервые стали выдавать верный результат «по умолчанию»; (2) июнь-июль 2026 — модели «класса Fable» (Fable 5/5.1/5.2, Opus 5.5, GPT-6 Astra, вероятно Gemini 4 Neon), которым достаточно цели и инструментов, чтобы решить задачу «грубой силой»; (3) сентябрь-октябрь 2026 — резкий скачок в 3D-моделировании и геймдеве, когда модели научились оценивать не только работоспособность, но и «увлекательность» игры.",
+        "en": "Building on a keynote at the AI Engineer Code Summit, Simon Willison breaks the past year into three inflection points for LLMs and coding agents: (1) November 2025 — Claude Opus 4.5 and GPT-5.1-Codex, when agents first started getting it right by default; (2) June-July 2026 — \"Fable-class\" models (Fable 5/5.1/5.2, Opus 5.5, GPT-6 Astra, arguably Gemini 4 Neon) that, given a goal and tools, brute-force their way to a solution; (3) September-October 2026 — a sudden jump in 3D modeling and game development, where models learned to judge not just whether something works but whether a game is actually fun."
+      },
+      "note_page": "notes/articles/willison-three-llm-inflection-points.html"
+    }
+  ]
+}
