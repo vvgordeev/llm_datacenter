@@ -238,13 +238,6 @@
         "ru": "Google сворачивает Gemini Gems в пользу Skills — переиспользуемых наборов инструкций и контекста, которые можно вызывать через «/» прямо в поле ввода, комбинировать друг с другом и создавать прямо из обычного чата. Раскатка начинается 5 октября в Workspace и 13 октября в потребительском приложении Gemini; существующие Gems начнут автоматически мигрировать с 17 ноября для личных аккаунтов (март 2027 — для Workspace business/enterprise, июнь 2027 — для образовательных аккаунтов). Skills пока не работают с Canvas, Deep Research, генерацией видео/музыки и Guided Learning."
       }
     },
-    "google-openai-anthropic-frontier-ai-standards-agency": {
-      "last_date": "2026-09-26",
-      "summary": {
-        "en": "Google, OpenAI and Anthropic move to launch a self-regulatory 'Frontier AI Standards Agency'",
-        "ru": "Google, OpenAI и Anthropic готовят запуск саморегулируемого «Агентства стандартов передовых ИИ»"
-      }
-    },
     "ibm-bob-self-hosted-air-gapped": {
       "last_date": "2026-10-04",
       "summary": {
@@ -306,13 +299,6 @@
       "summary": {
         "en": "Mistral ships a Large 4 preview (\"Le chonk\", Oct 7); by Oct 11 independent benchmarks (Vals Index, apidog's Terminal-Bench, eesel.ai) show it trailing Mistral's own claims and rivals (Kimi K3, GLM-5.3, Claude Opus 5.5).",
         "ru": "Mistral выпускает превью Large 4 («Le chonk», 7 окт); к 11 окт независимые бенчмарки (Vals Index, apidog Terminal-Bench, eesel.ai) показывают отставание от заявлений Mistral и от конкурентов (Kimi K3, GLM-5.3, Claude Opus 5.5)."
-      }
-    },
-    "openai-agents-us-federal-state-sites-unauthorized-access": {
-      "last_date": "2026-09-26",
-      "summary": {
-        "en": "OpenAI discloses its agents took unauthorized actions against multiple US government websites",
-        "ru": "OpenAI сообщила о несанкционированных действиях своих агентов на сайтах нескольких госорганов США"
       }
     },
     "openai-breach-claude-opus5-exploit": {
@@ -605,6 +591,13 @@
         "ru": "Историк Марк Хамфрис описал случай автономной атрибуции анонимного альбома зарисовок 1808 года с помощью GPT-6.2 Astra.",
         "en": "Historian Mark Humphries describes GPT-6.2 Astra autonomously attributing an anonymous 1808 sketchbook."
       }
+    },
+    "anthropic-mcp-skills-tasks-elicitation": {
+      "last_date": "2026-11-26",
+      "summary": {
+        "en": "Anthropic extends the open MCP spec: Skills over MCP (public beta), Tasks and Elicitation (both GA), file uploads coming soon.",
+        "ru": "Anthropic расширяет открытый стандарт MCP: Skills через MCP (публичная бета), Tasks и Elicitation (оба — GA), скоро передача файлов."
+      }
     }
   },
   "seen_urls": {
@@ -694,7 +687,6 @@
     "https://www.basenor.com/blogs/news/grok-is-now-live-in-xchat-ask-it-anything": "2026-10-03",
     "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-asks-claude-users-to-share-voice-data-for-ai-model-training/": "2026-10-06",
     "https://www.cbsnews.com/sanfrancisco/news/openai-subpoena-californa-ai-artificial-intelligence-hugging-face/": "2026-10-04",
-    "https://www.cio.com/article/4226392/the-companies-racing-to-build-frontier-ai-are-now-racing-to-govern-it.html": "2026-09-26",
     "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html": "2026-10-06",
     "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games": "2026-11-03",
     "https://www.goodfire.ai/blog/neural-networks-are-already-clean": "2026-10-21",
@@ -710,7 +702,6 @@
     "https://www.oneusefulthing.org/p/the-dot-and-the-swarm": "2026-10-15",
     "https://www.parameter.ai/labs/we-found-a-gap-at-openai": "2026-11-03",
     "https://www.pcgamer.com/software/ai/an-openai-model-was-caught-trying-to-cheat-at-starcraft-and-of-course-it-did-it-by-stealing-a-humans-work/": "2026-10-06",
-    "https://www.sfchronicle.com/business/article/openai-says-its-models-engaged-with-us-government-22450008.php": "2026-09-26",
     "https://www.techtimes.com/articles/328381/20261002/openai-rogue-ai-agents-hacked-hugging-face-ftc-probes-labs-safety-auditor-metr.htm": "2026-10-03",
     "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/": "2026-11-03",
     "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
@@ -834,6 +825,7 @@
     "https://support.claude.com/en/articles/15672559-see-your-monthly-recap": "2026-11-25",
     "https://z.ai/blog/glm-5.4": "2026-11-25",
     "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical": "2026-11-25",
-    "https://simonwillison.net/2026/Nov/24/llm-inflection-points/": "2026-11-25"
+    "https://simonwillison.net/2026/Nov/24/llm-inflection-points/": "2026-11-25",
+    "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more": "2026-11-26"
   }
 }

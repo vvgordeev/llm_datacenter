@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T05:09:00Z",
+  "news": [
+    {
+      "id": "2026-11-26-anthropic-mcp-skills-tasks-elicitation",
+      "cluster_id": "anthropic-mcp-skills-tasks-elicitation",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic добавляет в Claude Skills через MCP, задачи (Tasks) и элиситацию (Elicitation)",
+        "en": "Anthropic ships Skills over MCP, Tasks, and Elicitation for Claude"
+      },
+      "summary": {
+        "ru": "MCP-серверы теперь могут поставлять собственные Agent Skills (публичная бета), передавать длительные задачи через Tasks (доступно всем) и приостанавливать вызов, чтобы запросить у пользователя подтверждение через Elicitation (доступно всем); скоро появится и передача файлов в MCP-серверы. Это расширения открытого стандарта MCP, поэтому ими может пользоваться любой совместимый клиент, не только Claude — уже используют Shopify, HubSpot, Atlassian, ZoomInfo, Supabase, Railway и GitHub.",
+        "en": "MCP servers can now ship their own Agent Skills (public beta), hand off long-running jobs via Tasks (generally available), and pause mid-call to ask the user for input via Elicitation (generally available) — file uploads to MCP servers are coming soon. These are extensions to the open MCP spec, so any compatible client, not just Claude, can use them; partners such as Shopify, HubSpot, Atlassian, ZoomInfo, Supabase, Railway and GitHub are already using the new capabilities."
+      },
+      "impact_score": 6,
+      "impact_reason": {
+        "ru": "Расширяет сам открытый стандарт MCP (а не только Claude) загрузкой skills по требованию, асинхронными длительными задачами и запросом ввода пользователя посреди вызова — заметное, но эволюционное развитие существующих паттернов агентных инструментов.",
+        "en": "Extends the open MCP standard itself (not just Claude) with on-demand skill loading, async long-running tasks, and mid-call user input — a notable but evolutionary step for existing agent-tooling patterns, not a new paradigm."
+      },
+      "source_url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "opinions": [],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Shopify, HubSpot и Atlassian публикуют Agent Skills прямо из своих MCP-серверов — Claude подгружает нужные серверу инструкции по требованию, и пользователю не нужно устанавливать их отдельно.",
+            "en": "Shopify, HubSpot, and Atlassian publish Agent Skills directly from their MCP servers so Claude loads server-specific instructions on demand instead of users installing them separately."
+          },
+          "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
+        },
+        {
+          "text": {
+            "ru": "ZoomInfo использует расширение Tasks для более глубокого исследования аккаунтов и контактов — задача выполняется в фоне, пока Claude продолжает диалог.",
+            "en": "ZoomInfo uses the Tasks extension to run deeper account and contact research as a long job that keeps going while Claude continues the conversation."
+          },
+          "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
+        },
+        {
+          "text": {
+            "ru": "Supabase, Railway и GitHub используют Elicitation, чтобы остановиться посреди вызова и запросить у пользователя подтверждение стоимости или одобрение потенциально разрушительного действия перед продолжением.",
+            "en": "Supabase, Railway, and GitHub use Elicitation to pause mid-call and ask the user to confirm costs or approve a destructive action before continuing."
+          },
+          "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T05:09:00Z",
+  "sources": [
+    {
+      "source": "anthropic blog (direct fetch anthropic.com/news)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "WebFetch succeeded (only non-blocked model blog this run). Newest items are IPO/financial (Nov 18-20) and already-archived Fable/Mythos 5.2 (Nov 9); no new product post on the blog itself in window."
+    },
+    {
+      "source": "anthropic release notes (support.claude.com)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "Direct fetch succeeded. Newest entries dated Nov 24 (monthly recap GA, install-artifact-as-app, send/save files with connected apps) are already published in yesterday's digest. Nothing newer."
+    },
+    {
+      "source": "claude.com/blog (product updates page)",
+      "status": "ok",
+      "candidates": 1,
+      "note": "Direct fetch succeeded (claude.com resolves). Found 'MCP servers can now ship skills, run tasks, and more with Claude' (Skills over MCP public beta, Tasks GA, Elicitation GA, file uploads coming soon), published Nov 24, 2026, not previously published. Verified via full article fetch at claude.com/resources/articles/skills-over-mcp-tasks-and-more. Published as today's sole news item."
+    },
+    {
+      "source": "openai blog (openai.com/news/)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. 2x WebSearch + widened searches: nothing new found for Nov 24-26 beyond already-archived GPT-6.2 Astra/Sol (Nov 17) and old items (GPT-Rosalind life-sciences GA in Sept, Google Cloud Model Garden deal in Oct)."
+    },
+    {
+      "source": "google/deepmind blog (blog.google)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: nothing newer than Gemini 4 Hydrogen (Nov 12, already stale/out of window) and already-archived Gemini 4 Neon (Nov 21)."
+    },
+    {
+      "source": "meta ai blog (ai.meta.com)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: no new Muse/Llama item in window; most recent confirmed is Muse Ember (Nov 10, stale)."
+    },
+    {
+      "source": "xai blog (x.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: Grok Bot 1.0 / Grok Build on Grok 4.7 found but dated ~Nov 11 or earlier, outside the 36h window and not a continuation with new facts."
+    },
+    {
+      "source": "mistral blog (mistral.ai/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: newest lead (Mistral Large 4 / Studio) dated ~Nov 2-6, outside window."
+    },
+    {
+      "source": "deepseek blog (api-docs.deepseek.com/news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "DNS/egress-proxy ENOTFOUND. WebSearch: no release found newer than V4.1-Flash-1017 (Oct 17)."
+    },
+    {
+      "source": "aggregators (news.smol.ai, tldr.tech/ai, releases.sh, nocode.mba, thursdai.news)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "All hosts DNS/egress-proxy ENOTFOUND. WebSearch fallback over several queries: no dated Nov 24-26 item surfaced beyond what was already found/verified via claude.com and the Simon Willison backup clone."
+    },
+    {
+      "source": "Hacker News API (hn.algolia.com) + hnrss.org + site-search",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "hn.algolia.com and hnrss.org both DNS/egress-proxy ENOTFOUND; news.ycombinator.com direct fetch also ENOTFOUND. WebSearch site:news.ycombinator.com: no dated in-window thread surfaced."
+    },
+    {
+      "source": "reddit r/LocalLLaMA, r/ClaudeAI, r/OpenAI",
+      "status": "empty",
+      "candidates": 0,
+      "note": "WebSearch: no posts identifiable as dated within the lookback window; results were stale (March-April 2026) or secondhand aggregator summaries with no date."
+    },
+    {
+      "source": "Simon Willison linkblog/blog (via simonwillisonblog-backup clone; simonwillison.net direct fetch blocked)",
+      "status": "ok",
+      "candidates": 0,
+      "note": "simonwillison.net DNS ENOTFOUND. Worked around via git clone of github.com/simonw/simonwillisonblog-backup (ndjson dump, resolves fine). Latest entries (Nov 24: 'Three LLM inflection points', GPT-6.2 Astra blogmark; Nov 23: GLM-5.4 blogmark) are all already published in yesterday's (2026-11-25) digest. No new post since Nov 24 in the clone."
+    },
+    {
+      "source": "expert: Simon Willison (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Most recent post (Nov 24, 'Three LLM inflection points in twelve months') already published yesterday. No newer post found via the backup clone."
+    },
+    {
+      "source": "expert: Andrej Karpathy (video, RSS channel_id UCXUPKJO5MZQN11PqgIvyuvQ)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND (RSS and WebFetch both). WebSearch: no confirmed November 2026 upload found; most recent material is a July 2026 Dwarkesh podcast appearance."
+    },
+    {
+      "source": "expert: AI Explained (video, RSS channel_id UCNJ1Ymd5yFuUPtn21xtRbbw)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND. WebSearch: no confirmed video dated after spring 2026; podcast mirrors are undated."
+    },
+    {
+      "source": "expert: Matt Wolfe (video, RSS channel_id UChpleBmo18P08aKCIgti38g)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND. WebSearch: only third-party mirror pages claim Nov 5-10 uploads, none independently confirmed or inside the 7-day expert window from Nov 26 (cutoff Nov 19) with verifiable content -- not used."
+    },
+    {
+      "source": "expert: Latent Space (article)",
+      "status": "empty",
+      "candidates": 0,
+      "note": "Most recent confirmed AINews issue is Nov 13 ('The No AI Slop Manifesto'), outside the 7-day window (cutoff Nov 19)."
+    },
+    {
+      "source": "expert: Ethan Mollick / One Useful Thing (article)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "oneusefulthing.org DNS ENOTFOUND. WebSearch: most recent confirmed post is Oct 20, outside the 7-day window."
+    },
+    {
+      "source": "expert: Nate Herk (video, RSS channel_id UC2ojq-nuP8ceeHqiroeKhBA)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND. WebSearch: most recent confirmed upload (vidIQ snapshot) is Nov 11, outside the 7-day window."
+    },
+    {
+      "source": "expert: Matt Pocock (video, RSS channel_id UCswG6FSbgZjbWtdf_hMLaow)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "youtube.com DNS ENOTFOUND. WebSearch: most recent confirmed upload (vidIQ snapshot) is Nov 12, outside the 7-day window."
+    },
+    {
+      "source": "broad fallback searches (best/popular LLM article or video this week, Zvi/thezvi.substack, Nathan Lambert/Interconnects, releases.sh coding-agent digests)",
+      "status": "blocked",
+      "candidates": 0,
+      "note": "interconnects.ai and thezvi.substack.com both DNS ENOTFOUND. WebSearch: no confirmed post from either inside the 7-day window (Nathan Lambert's newest confirmed episode is Nov 14; Zvi's latest numbered issue is undated in search results). No substitute found that is both verifiable and in-window."
+    }
+  ],
+  "totals": {
+    "candidates": 1,
+    "published": 1,
+    "rejected": {
+      "уже в архиве (опубликовано вчера или ранее)": 6,
+      "вне окна сбора (старше lookback_hours/7 дней) или не подтверждено первоисточником": 14
+    }
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: no verified video candidate this run",
+    "frames": "not attempted: no verified video candidate this run"
+  },
+  "degradation_note": "Severe environment degradation this run: of all sources contacted directly, only anthropic.com and claude.com resolved (plus github.com, used to clone the simonwillisonblog-backup dump). Every other host attempted by direct fetch -- openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, news.ycombinator.com, hn.algolia.com, hnrss.org, news.smol.ai, releases.sh, thursdai.news, nocode.mba, www.youtube.com, www.latent.space, www.oneusefulthing.org, www.interconnects.ai, thezvi.substack.com, forkast.news, aiweekly.co -- returned DNS/egress-proxy ENOTFOUND. That is far more than 1/3 of sources blocked; WebSearch was the only reliable discovery channel, and its index lags 1-2 days for the freshest items (consistent with prior runs' notes). The single published news item was found via WebSearch and verified in full by directly fetching the primary claude.com article (one of the few reachable hosts). An unverified lead ('Anthropic disclosed Siren, a pre-release honeypot...') surfaced in one aggregator search summary but could not be confirmed against claude.com/blog's Nov 20-26 post list or any other primary source, so it was deliberately left out rather than risk an invented fact. Expert-content minimum (5) was not met (0 published): all 5 configured video experts are YouTube-hosted and unreachable, and the 3 configured/substitute article experts (Simon Willison, Latent Space, Ethan Mollick) had no post inside their respective freshness windows that wasn't already archived."
+}
