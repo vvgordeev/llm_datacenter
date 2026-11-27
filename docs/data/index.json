@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-11-27",
+      "news_count": 2,
+      "expert_count": 0,
+      "top_title": {
+        "ru": "Anthropic выпускает Claude Ship: агенты ревьюят, чинят и одобряют pull request'ы",
+        "en": "Anthropic launches Claude Ship: agents review, fix, and approve pull requests"
+      }
+    },
+    {
       "date": "2026-11-26",
       "news_count": 1,
       "expert_count": 0,

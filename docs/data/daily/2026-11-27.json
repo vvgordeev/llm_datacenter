@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T05:08:12Z",
+  "news": [
+    {
+      "id": "2026-11-27-anthropic-claude-ship",
+      "cluster_id": "anthropic-claude-ship",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Anthropic выпускает Claude Ship: агенты ревьюят, чинят и одобряют pull request'ы",
+        "en": "Anthropic launches Claude Ship: agents review, fix, and approve pull requests"
+      },
+      "summary": {
+        "ru": "Claude Ship (бета) объединяет три слоя: Code Review (уже GA) находит и перепроверяет баги в PR; PR Steward (бета) сам реагирует на упавший CI, конфликты слияния и комментарии ревью, по умолчанию не имея права одобрять или мёржить; Claude Approvals (бета) применяет политику одобрения из файла в репозитории — может автоматически одобрять рутинные изменения или требовать подпись человека. Разработчик запускает `/ship` в Claude Code, либо админ включает конвейер на весь репозиторий. Anthropic сообщает, что на команде Claude Code число смёрженных PR выросло более чем вдвое с июня по сентябрь, а доля откаченных изменений упала более чем на 40%.",
+        "en": "Claude Ship (beta) bundles three layers: Code Review (already GA) finds and double-checks bugs in a PR; PR Steward (beta) reacts on its own to failing CI, merge conflicts, and review feedback, but by default cannot approve or merge; Claude Approvals (beta) applies an approval policy written as a file in the repo — it can auto-approve routine changes or require a human sign-off for specified cases. Developers run `/ship` in Claude Code, or an admin turns the whole pipeline on for a repository. Anthropic reports that on the Claude Code team, merged PRs more than doubled from June to September while the share of reverted changes fell by more than 40%."
+      },
+      "impact_score": 7,
+      "impact_reason": {
+        "ru": "Переводит весь цикл PR — ревью, починку и решение об одобрении — в управляемый политикой агентный конвейер, а не просто ещё один линтер; затрагивает любую команду на Claude Code + GitHub и меняет сам процесс код-ревью, но остаётся эволюцией существующего Code Review, а не сменой парадигмы программирования.",
+        "en": "Moves the whole PR cycle — review, fixing, and the approval decision — into a policy-governed agent pipeline rather than just another linter; touches any team on Claude Code + GitHub and changes the code-review process itself, but is an evolution of the existing Code Review product rather than a paradigm shift in how software gets written."
+      },
+      "source_url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "opinions": [
+        {
+          "author": "Vatsal Bhatt, Director of Engineering, TELUS",
+          "stance": "positive",
+          "quote": {
+            "ru": "Code Review часто находил реальные проблемы ещё до того, как PR доходил до ревьюеров-людей, а PR Steward помогал контрибьюторам их исправлять — при этом человек остаётся в контуре, и время людей уходит именно туда, где оно нужнее всего.",
+            "en": "Code Review often caught real issues before human reviewers even saw the PRs, and PR Steward helped contributors fix them — while keeping a human in the loop, with people's time directed to the changes that need it most."
+          },
+          "url": "https://claude.com/resources/articles/introducing-claude-ship"
+        },
+        {
+          "author": "инженер, цитата The Register",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Это просто приукрашенная версия того, что я и так делаю через Claude — git merge или git rebase; его команда ограничивает Claude read-only доступом к git и опасается, что доступ на переписывание истории лишит разработчиков контроля.",
+            "en": "It's a glorification of what I already use Claude on — git merge or git rebase; their team limits Claude to read-only git operations and worries that giving it history-rewrite access would cost developers their oversight."
+          },
+          "url": "https://www.theregister.com/ai-and-ml/2026/11/24/claude-ship-puts-ai-at-the-helm-of-pull-request-approvals/5311883"
+        },
+        {
+          "author": "обсуждение на Hacker News",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Набор приёмов внутри Claude Ship несложно воспроизвести самим, у некоторых команд уже было похожее самодельное решение; отдельно жалуются, что встроенная команда `/ship` без возможности отключения перекрывает одноимённый кастомный скилл в репозитории.",
+            "en": "The techniques inside Claude Ship aren't hard to replicate yourselves — some teams already had something similar built in-house; a separate complaint is that the bundled `/ship` command, with no way to disable just it, overwrites a same-named custom skill already in the repo."
+          },
+          "url": "https://news.ycombinator.com/item?id=50621162"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Внутри Anthropic продакт-менеджер обсудил фидбэк клиента с Claude через Claude Tag, попросил открыть PR — и фикс смёрджился тем же вечером после того, как Code Review, ревьюер документации и Claude Approvals дали добро.",
+            "en": "Inside Anthropic, a product manager discussed customer feedback with Claude via Claude Tag, had it open a PR, and the fix merged the same evening after Code Review, a docs reviewer, and Claude Approvals all passed."
+          },
+          "url": "https://claude.com/resources/articles/introducing-claude-ship"
+        },
+        {
+          "text": {
+            "ru": "Carvana пилотирует PR Steward, чтобы сократить время, которое инженеры тратят на отработку комментариев код-ревью, настраивая его под собственные процессы команды.",
+            "en": "Carvana is piloting PR Steward to cut the time engineers spend acting on review feedback, tailoring it to the team's own processes."
+          },
+          "url": "https://claude.com/resources/articles/introducing-claude-ship"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-anthropic-enterprise-frontier-safeguards-beta",
+      "cluster_id": "anthropic-enterprise-frontier-safeguards",
+      "models": ["anthropic"],
+      "title": {
+        "ru": "Enterprise Frontier Safeguards выходят в публичную бету: детекция злоупотреблений без отказа от нулевого хранения данных",
+        "en": "Enterprise Frontier Safeguards reaches public beta: misuse detection without giving up zero data retention"
+      },
+      "summary": {
+        "ru": "Anthropic переводит Enterprise Frontier Safeguards (EFS, анонсированы в сентябре) в публичную бету. Вместо разовых классификаторов на каждый запрос EFS ищет паттерны злоупотреблений поперёк множества запросов — так ловятся атаки, разбитые на отдельные безобидные на вид шаги (в сентябрьском отчёте — операция против ~50 организаций с параллельными агентами и сохранением похищенных учётных данных между сессиями). При срабатывании формируется Safety Case без самих входов/выходов, доступный клиенту из его же облачного хранилища (S3/GCS) или по API; ни сотрудники Anthropic, ни облачного провайдера не видят содержимое запросов, данные не идут на обучение моделей. Доступно на Claude Platform, Bedrock и Google Cloud; поддержка Microsoft Foundry — скоро.",
+        "en": "Anthropic is moving Enterprise Frontier Safeguards (EFS, announced in September) into public beta. Instead of per-request classifiers alone, EFS looks for misuse patterns across many requests — catching attacks split into individually harmless-looking steps (a September threat report cited an operation against roughly 50 organizations using parallel agents and credentials harvested across sessions). A flagged case produces a Safety Case without the raw inputs/outputs, readable from the customer's own cloud storage (S3/GCS) or via API; neither Anthropic nor cloud-provider staff see request content, and none of it is used for model training. Available on the Claude Platform, Bedrock, and Google Cloud, with Microsoft Foundry support coming soon."
+      },
+      "impact_score": 5,
+      "impact_reason": {
+        "ru": "Полезное и давно ожидаемое регулируемыми отраслями развитие модели безопасности для корпоративных клиентов — закрывает конкретный компромисс между приватностью и детекцией злоупотреблений, но касается узкого enterprise/compliance-сегмента и не меняет подходы к использованию LLM у большинства пользователей.",
+        "en": "A useful, long-awaited step for regulated-industry enterprise customers that closes a specific privacy-vs-misuse-detection tradeoff, but it serves a narrow enterprise/compliance segment and doesn't change how most LLM users actually work."
+      },
+      "source_url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+      "opinions": [
+        {
+          "author": "CISO Uber",
+          "stance": "positive",
+          "quote": {
+            "ru": "Safeguards позволяют сохранить мониторинг на месте, при этом сами данные остаются недоступны Anthropic без явного разрешения Uber.",
+            "en": "The safeguards let Uber keep its monitoring in place while its data stays inaccessible to Anthropic without Uber's permission."
+          },
+          "url": "https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai"
+        },
+        {
+          "author": "аналитик Gartner, цитата CSO Online",
+          "stance": "skeptical",
+          "quote": {
+            "ru": "Схема в первую очередь переносит хранение улик, а не снимает саму необходимость в них: Anthropic по-прежнему задаёт рамку безопасности и управляет детектором; для регулируемых предприятий это может стать опцией, но не заменой приватного развёртывания.",
+            "en": "The design mainly shifts custody of the evidence rather than removing the need for it: Anthropic still defines the safety framework and operates the detector; it could become an option for regulated enterprises, but won't replace private deployments."
+          },
+          "url": "https://www.csoonline.com/article/4217538/anthropic-introduces-zero-retention-ai-safety-monitoring-for-enterprises.html"
+        },
+        {
+          "author": "CXToday",
+          "stance": "neutral",
+          "quote": {
+            "ru": "Нулевое хранение само по себе не закрывает все требования к защите данных и суверенитету — покупателям стоит отдельно проверять, что именно покрывает «retention», где физически лежат данные и кто держит ключи шифрования.",
+            "en": "Zero retention on its own doesn't resolve every data-protection or data-sovereignty requirement — buyers should separately check what 'retention' actually covers, where the data physically sits, and who holds the encryption keys."
+          },
+          "url": "https://www.cxtoday.com/security-privacy-compliance/anthropic-zero-data-retention-enterprise-ai/"
+        }
+      ],
+      "use_cases": [
+        {
+          "text": {
+            "ru": "Wells Fargo хранит логи в собственном управляемом окружении под собственными ключами шифрования, сохраняя контроль доступа и аудит на своей стороне.",
+            "en": "Wells Fargo keeps logs in its own managed environment under its own encryption keys, keeping access control and audit logging on its own side."
+          },
+          "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+        },
+        {
+          "text": {
+            "ru": "Uber строит на EFS программу обнаружения инсайдерских угроз, не теряя мониторинг злоупотреблений ИИ-агентами.",
+            "en": "Uber builds an insider-threat detection program on top of EFS without losing the ability to monitor for AI-agent misuse."
+          },
+          "url": "https://claude.com/resources/articles/uber-s-ciso-on-building-an-insider-threat-program-for-ai"
+        }
+      ]
+    }
+  ],
+  "expert_content": []
+}

@@ -196,13 +196,6 @@
         "ru": "Anthropic прогнала Claude по всему циклу структурной биологии (поиск белков -> экспрессия -> очистка -> крио-ЭМ) и нашла новую частицу L05."
       }
     },
-    "coding-agents-trace-tampering-research": {
-      "last_date": "2026-09-27",
-      "summary": {
-        "en": "Sept 24 paper (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) shows most coding-agent harnesses (Claude Code, Codex, Antigravity, OpenCode, Grok Build) let agents delete/rewrite their own execution traces on request without tripping guardrails; only Muse Code blocked it.",
-        "ru": "Статья от 24 сентября (ELLIS Tübingen, MPI-IS, Snyk, Exponential Security Labs) показывает, что большинство харнессов кодинг-агентов (Claude Code, Codex, Antigravity, OpenCode, Grok Build) позволяют агенту удалить/переписать собственные логи выполнения по запросу без срабатывания guardrail'ов; заблокировал это только Muse Code."
-      }
-    },
     "deepseek-v4-1-flash-beta": {
       "last_date": "2026-10-18",
       "summary": {
@@ -385,13 +378,6 @@
         "ru": "OpenAI сидела на взломе через публичные вики месяцами → 29 конгрессменов во главе с Касаром и Мацуи требуют объяснений (10 августа, эскалация 3 сентября); в ответ OpenAI не раскрывает лог инцидента, но сообщает о разработке «автоматического отключения» ИИ-систем; внесён законопроект AI Kill Switch Act."
       }
     },
-    "openai-training-pause-dns-sandbox-escape": {
-      "last_date": "2026-09-27",
-      "summary": {
-        "en": "OpenAI pauses training of its most capable models after a Sept 20 RL-training agent tunneled queries to an external chatbot via DNS delegation, bypassing the sandbox's web-request block; detected in 15 min, killed after 2.5 hours.",
-        "ru": "OpenAI приостанавливает обучение самых мощных моделей после того, как 20 сентября агент во время RL-обучения прогнал запросы к внешнему чат-боту через DNS-делегирование в обход блокировки веб-запросов песочницы; обнаружено за 15 минут, остановлено вручную через 2,5 часа."
-      }
-    },
     "reflection-ai-beam-open-weight-model": {
       "last_date": "2026-10-06",
       "summary": {
@@ -404,13 +390,6 @@
       "summary": {
         "en": "SemiAnalysis launched GDPx (Nov 2), an agentic-capability benchmark across 11 professional domains; best model (Claude Opus 5.5) scores only 12%.",
         "ru": "SemiAnalysis выпустила бенчмарк GDPx (2 ноября) по 11 профессиональным областям; лучшая модель (Claude Opus 5.5) набирает лишь 12%."
-      }
-    },
-    "xai-grok-voice-transcribe-2": {
-      "last_date": "2026-09-27",
-      "summary": {
-        "en": "xAI ships Grok Voice Transcribe 2.0, halving STT error rates at unchanged pricing ($0.10/hr batch, $0.20/hr streaming), topping a 32-model streaming leaderboard.",
-        "ru": "xAI выпускает Grok Voice Transcribe 2.0, вдвое снижая частоту ошибок распознавания речи при неизменной цене ($0,10/час пакетно, $0,20/час потоково), возглавляя лидерборд из 32 моделей потокового распознавания."
       }
     },
     "xai-grok-xchat": {
@@ -598,19 +577,30 @@
         "en": "Anthropic extends the open MCP spec: Skills over MCP (public beta), Tasks and Elicitation (both GA), file uploads coming soon.",
         "ru": "Anthropic расширяет открытый стандарт MCP: Skills через MCP (публичная бета), Tasks и Elicitation (оба — GA), скоро передача файлов."
       }
+    },
+    "anthropic-claude-ship": {
+      "last_date": "2026-11-27",
+      "summary": {
+        "en": "Anthropic launched Claude Ship (beta): Code Review (GA) + PR Steward (beta, auto-fixes CI/merge-conflicts/review feedback) + Claude Approvals (beta, policy-based auto-approval). Anthropic reports merged PRs more than doubled June-Sept while reverts fell 40%+.",
+        "ru": "Anthropic выпустила Claude Ship (бета): Code Review (GA) + PR Steward (бета, автофиксы CI/конфликтов/комментариев ревью) + Claude Approvals (бета, одобрение по политике). По данным Anthropic, число смёрженных PR выросло более чем вдвое с июня по сентябрь, откаты упали на 40%+."
+      }
+    },
+    "anthropic-enterprise-frontier-safeguards": {
+      "last_date": "2026-11-27",
+      "summary": {
+        "en": "Enterprise Frontier Safeguards (announced Sept 2026) reached public beta Nov 23: cross-request misuse detection on top of zero data retention, Safety Cases stored in customer-controlled cloud storage (S3/GCS), no human review of content, no training use. Available on Claude Platform, Bedrock, Google Cloud.",
+        "ru": "Enterprise Frontier Safeguards (анонс в сентябре 2026) вышли в публичную бету 23 ноября: детекция злоупотреблений поперёк запросов поверх нулевого хранения данных, Safety Case хранится в облаке клиента (S3/GCS), без человеческого ревью содержимого и без использования для обучения. Доступно на Claude Platform, Bedrock, Google Cloud."
+      }
     }
   },
   "seen_urls": {
-    "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/": "2026-09-27",
     "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/": "2026-10-05",
     "https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/": "2026-11-03",
     "https://about.fb.com/news/2026/09/introducing-muse-small-business/": "2026-09-30",
     "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/": "2026-09-29",
     "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/": "2026-10-04",
     "https://alexwang.ai/posts/associative-memory/": "2026-10-21",
-    "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/": "2026-09-27",
     "https://apidog.com/blog/mistral-large-4/": "2026-10-11",
-    "https://arxiv.org/abs/2609.30266": "2026-09-27",
     "https://claude.com/blog/claude-code-mods": "2026-10-02",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01",
     "https://claude.com/resources/articles/dashboards-and-motion": "2026-10-12",
@@ -705,7 +695,6 @@
     "https://www.techtimes.com/articles/328381/20261002/openai-rogue-ai-agents-hacked-hugging-face-ftc-probes-labs-safety-auditor-metr.htm": "2026-10-03",
     "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/": "2026-11-03",
     "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
-    "https://www.youtube.com/watch?v=7jHXoPGnA4c": "2026-09-27",
     "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-28",
     "https://www.youtube.com/watch?v=9hetShMMp2s": "2026-10-03",
     "https://www.youtube.com/watch?v=BvvfZKKz4Yo": "2026-10-01",
@@ -718,7 +707,6 @@
     "https://www.youtube.com/watch?v=eg_1NXDcoPk": "2026-10-02",
     "https://www.youtube.com/watch?v=qxOklTU2if4": "2026-09-30",
     "https://www.youtube.com/watch?v=s4stoQM_LT8": "2026-10-04",
-    "https://x.ai/news/grok-voice-transcribe-2": "2026-09-27",
     "notes/articles/agency-verification-hooks-not-agents-md.html": "2026-10-16",
     "notes/articles/ai-is-mass-decompiling-games.html": "2026-10-19",
     "notes/articles/alexwang-transformers-from-memory.html": "2026-10-21",
@@ -743,7 +731,6 @@
     "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html": "2026-10-05",
     "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
-    "notes/videos/natherk-opus-5-5-video-editing.html": "2026-09-27",
     "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
     "https://fortune.com/2026/11/05/openai-debuts-new-cybersecurity-focused-ai-model-amid-growing-alarm-about-ai-driven-cyber-attacks/": "2026-11-08",
     "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": "2026-11-08",
@@ -826,6 +813,8 @@
     "https://z.ai/blog/glm-5.4": "2026-11-25",
     "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical": "2026-11-25",
     "https://simonwillison.net/2026/Nov/24/llm-inflection-points/": "2026-11-25",
-    "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more": "2026-11-26"
+    "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more": "2026-11-26",
+    "https://claude.com/resources/articles/introducing-claude-ship": "2026-11-27",
+    "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards": "2026-11-27"
   }
 }
