@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: «No AI Slop Manifesto» — манифест о цене непроверенного ИИ-кода — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Latent Space (AI News) · 2026-11-13</span>
+      <span data-lang="en">Article digest · Latent Space (AI News) · 2026-11-13</span>
+    </p>
+    <h1>
+      <span data-lang="ru">«No AI Slop Manifesto»: инженеры договариваются, кто отвечает за то, что выпускает агент</span>
+      <span data-lang="en">The No AI Slop Manifesto: engineers agree on who owns what their agents ship</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://latent.space/p/ainews-the-no-ai-slop-manifesto/" target="_blank" rel="noopener">
+        <span data-lang="ru">Выпуск Latent Space AI News ↗</span><span data-lang="en">Latent Space AI News issue ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Прямой WebFetch на latent.space, slopmanifesto.com и связанные источники в этом прогоне недоступен (домены не резолвятся на уровне сетевой политики облачной песочницы). Конспект собран по согласующимся пересказам нескольких независимых источников (включая освещение на Hacker News); полный текст манифеста и список всех его пяти пунктов этим способом подтвердить не удалось, поэтому они не приводятся дословно.</span>
+      <span data-lang="en">Direct WebFetch of latent.space, slopmanifesto.com and related sources isn't reachable in this run (the domains fail to resolve under the cloud sandbox's network policy). This digest is assembled from consistent accounts across several independent sources (including Hacker News coverage); the manifesto's full text and all five of its listed values couldn't be confirmed this way, so they aren't quoted verbatim here.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">13 ноября 2026 года рассылка Latent Space AI News вынесла в заголовок «No AI Slop Manifesto» — короткий программный документ, родившийся из докладов на конференции AI Engineer Code Summit и собравший подписи множества её спикеров (по данным стороннего освещения — несколько сотен подписей на момент публикации). Инициатором выступил Декс Хорти (Dex Horthy), закрывавший конференцию кийноутом на эту тему; материал в тот же день вышел на первую страницу Hacker News.</span>
+      <span data-lang="en">On November 13, 2026, the Latent Space AI News newsletter led with "No AI Slop Manifesto" — a short position document that grew out of talks at the AI Engineer Code Summit and gathered signatures from many of its speakers (per secondary coverage, several hundred signatures by the time it was published). It was initiated by Dex Horthy, who closed the conference with a keynote on the topic; the piece reached the Hacker News front page the same day.</span>
+    </p>
+
+    <h2><span data-lang="ru">Что манифест называет «слопом» — и что им не является</span><span data-lang="en">What the manifesto calls "slop" — and what it isn't</span></h2>
+    <p>
+      <span data-lang="ru">Центральное определение, которое повторяется во всех пересказах согласованно: ИИ-слоп — это не любой текст или код, сгенерированный моделью, а именно тот результат, на проверку и понимание которого читателю приходится потратить больше усилий, чем автор потратил на его производство. Иными словами, использование ИИ само по себе слопом не делает; слопом оно становится, когда результат работы модели передают дальше, не беря на себя ответственность за его качество. Манифест явно построен по образцу Agile-манифеста 2001 года — короткий документ из нескольких пунктов в формате «цените A больше, чем B», а не развёрнутый свод правил.</span>
+      <span data-lang="en">The definition that recurs consistently across every account: AI slop isn't any model-generated text or code as such — it's specifically output where the reader has to spend more effort checking and understanding it than the author spent producing it. In other words, using AI doesn't by itself make work slop; it becomes slop when the model's output gets passed along without anyone taking responsibility for its quality. The manifesto is explicitly modeled on the 2001 Agile Manifesto — a short, several-point document in an "we value A over B" format, rather than a detailed rulebook.</span>
+    </p>
+
+    <h2><span data-lang="ru">Практический вывод: повторяющиеся ошибки становятся линтерами</span><span data-lang="en">The practical upshot: recurring mistakes become linters</span></h2>
+    <p>
+      <span data-lang="ru">Один из практических принципов, который приводится в нескольких независимых пересказах согласованно: если один и тот же класс ошибок ИИ-агента повторяется, это сигнал не «проверять внимательнее руками», а зашивать проверку в автоматический guardrail — линтер, тест или другую автоматизированную проверку, которая ловит именно этот класс проблем до того, как результат попадёт к читателю или ревьюеру. Это смещает ответственность с «ещё раз перечитать весь вывод модели» на «сделать так, чтобы конкретная повторяющаяся ошибка больше не могла пройти незамеченной» — и именно это превращает разовую проверку в воспроизводимый процесс.</span>
+      <span data-lang="en">One practical principle that shows up consistently across several independent accounts: if the same class of agent mistake keeps recurring, that's a signal not to "review more carefully by hand" but to encode the check as an automated guardrail — a linter, a test, or some other automated check that catches that specific class of problem before the output reaches a reader or reviewer. That shifts the burden from "re-read the model's entire output one more time" to "make sure this particular recurring mistake can no longer slip through unnoticed" — and that's what turns a one-off review into a repeatable process.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Ограничение: полный текст манифеста и все пять его пунктов не подтверждены по первоисточнику (slopmanifesto.com недоступен в этом прогоне) — приведены только определения и принципы, согласованно повторяющиеся в нескольких независимых пересказах. Точная дата выступления Хорти в разных источниках указана по-разному (12 или 13 ноября) — здесь используется дата публикации разбираемого выпуска Latent Space.</span>
+      <span data-lang="en">Limitation: the manifesto's full text and all five of its points aren't confirmed against the primary source (slopmanifesto.com isn't reachable in this run) — only the definitions and principles that recur consistently across several independent accounts are included. Secondary sources disagree on the exact date of Horthy's talk (November 12 or 13) — the date used here is the publication date of the Latent Space issue this digest covers.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

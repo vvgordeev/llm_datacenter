@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T05:20:00Z",
+  "news": [],
+  "expert_content": [
+    {
+      "id": "2026-11-28-dumpleton-muru",
+      "type": "article",
+      "author": "Simon Willison (линкует Graham Dumpleton)",
+      "title": {
+        "ru": "Muru: двадцать лет опыта с mod_wsgi и три недели публичного девлога с ИИ-ассистентом",
+        "en": "Muru: twenty years of mod_wsgi experience and three weeks of a public AI-assisted devlog"
+      },
+      "url": "https://simonwillison.net/2026/Nov/21/muru/",
+      "summary": {
+        "ru": "Автор mod_wsgi Грэм Дамплтон строит AI-ассистированный Rust-сервер Muru для ASGI/WSGI-приложений и ежедневно публикует подробный девлог проекта. В отдельном посте он формулирует свой подход: ИИ ускоряет написание кода, но решение о готовности результата остаётся за инженером с профильной экспертизой.",
+        "en": "mod_wsgi author Graham Dumpleton is building an AI-assisted Rust server, Muru, for ASGI/WSGI apps, publishing a detailed daily devlog of the project. A standalone post spells out his approach: AI speeds up writing the code, but the call on when it's good enough stays with the domain-expert engineer."
+      },
+      "note_page": "notes/articles/dumpleton-muru-ai-assisted-rust-server.html"
+    },
+    {
+      "id": "2026-11-28-no-ai-slop-manifesto",
+      "type": "article",
+      "author": "Latent Space (AI News)",
+      "title": {
+        "ru": "«No AI Slop Manifesto»: инженеры договариваются, кто отвечает за то, что выпускает агент",
+        "en": "The No AI Slop Manifesto: engineers agree on who owns what their agents ship"
+      },
+      "url": "https://latent.space/p/ainews-the-no-ai-slop-manifesto/",
+      "summary": {
+        "ru": "Манифест, родившийся на AI Engineer Code Summit и смоделированный по образцу Agile-манифеста, определяет ИИ-слоп как результат, на проверку которого читатель тратит больше усилий, чем автор — на производство. Практический вывод: повторяющиеся ошибки агента нужно зашивать в автоматические guardrail'ы, а не перепроверять каждый раз руками.",
+        "en": "A manifesto born at the AI Engineer Code Summit and modeled on the Agile Manifesto defines AI slop as output where the reader spends more effort checking it than the author spent producing it. The practical upshot: recurring agent mistakes belong in automated guardrails, not in one more manual re-read."
+      },
+      "note_page": "notes/articles/latent-space-no-ai-slop-manifesto.html"
+    }
+  ]
+}

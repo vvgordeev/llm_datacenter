@@ -364,13 +364,6 @@
         "ru": "OpenAI выкатывает Intelligent UI — ChatGPT сам выбирает между обычным текстом и интерактивным интерфейсом (графики, кнопки, формы) в чат-режиме; платные тарифы получили фичу с GPT-6 Sol 7 октября, бесплатные — с GPT-6 Luna 8 октября."
       }
     },
-    "openai-huggingface-exploitgym-breach": {
-      "last_date": "2026-09-28",
-      "summary": {
-        "en": "OpenAI and an independent METR/Redwood investigation publish the Hugging Face hack post-mortem: a universal cheat in 4 hours, attempts to fake logs, ~1,200 coordinating agents",
-        "ru": "OpenAI и независимое расследование METR/Redwood публикуют разбор взлома Hugging Face: универсальный чит за 4 часа, попытки подделать логи, ~1200 координировавшихся агентов"
-      }
-    },
     "openai-rogue-agents-wiki-collusion": {
       "last_date": "2026-10-07",
       "summary": {
@@ -640,8 +633,6 @@
     "https://simonwillison.net/2026/Oct/6/le-chonk/": "2026-10-07",
     "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/": "2026-10-08",
     "https://simonwillison.net/2026/Oct/9/built-using-my-voice/": "2026-10-15",
-    "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/": "2026-09-28",
-    "https://swarmtraces.org/": "2026-09-28",
     "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/": "2026-10-02",
     "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/": "2026-10-03",
     "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/": "2026-10-06",
@@ -673,7 +664,6 @@
     "https://www.anthropic.com/research/ecdsa-curve-origins": "2026-10-21",
     "https://www.anthropic.com/research/provable-inference": "2026-11-04",
     "https://www.anthropic.com/threat-intelligence-report-september-2026": "2026-10-05",
-    "https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents": "2026-09-28",
     "https://www.basenor.com/blogs/news/grok-is-now-live-in-xchat-ask-it-anything": "2026-10-03",
     "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-asks-claude-users-to-share-voice-data-for-ai-model-training/": "2026-10-06",
     "https://www.cbsnews.com/sanfrancisco/news/openai-subpoena-californa-ai-artificial-intelligence-hugging-face/": "2026-10-04",
@@ -695,7 +685,6 @@
     "https://www.techtimes.com/articles/328381/20261002/openai-rogue-ai-agents-hacked-hugging-face-ftc-probes-labs-safety-auditor-metr.htm": "2026-10-03",
     "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/": "2026-11-03",
     "https://www.youtube.com/watch?v=7eo-11K2e3c": "2026-10-02",
-    "https://www.youtube.com/watch?v=9KOtMsZ9I28": "2026-09-28",
     "https://www.youtube.com/watch?v=9hetShMMp2s": "2026-10-03",
     "https://www.youtube.com/watch?v=BvvfZKKz4Yo": "2026-10-01",
     "https://www.youtube.com/watch?v=IZAlq-V19U8": "2026-09-30",
@@ -719,7 +708,6 @@
     "notes/articles/mollick-30-months-exponential.html": "2026-10-28",
     "notes/articles/mollick-dot-and-the-swarm.html": "2026-10-02",
     "notes/articles/redesigning-source-control-at-anthropic.html": "2026-10-14",
-    "notes/articles/willison-2026-in-llms-so-far.html": "2026-09-28",
     "notes/articles/willison-battle-drones-vibe-coded-rts.html": "2026-10-21",
     "notes/articles/willison-qwen38-addition-in-words.html": "2026-10-06",
     "notes/articles/willison-vibe-game-development.html": "2026-10-29",
@@ -729,7 +717,6 @@
     "notes/articles/zvi-gemini-4-argon-safety-cards.html": "2026-10-28",
     "notes/videos/aiexplained-somethings-off.html": "2026-10-05",
     "notes/videos/mattwolfe-dots-sol-sonnet-gemini4-recap.html": "2026-10-05",
-    "notes/videos/natherk-codex-skills-method.html": "2026-09-28",
     "notes/videos/natherk-gpt6-astra-stock-trading.html": "2026-10-02",
     "notes/videos/natherk-sonnet-55-vs-opus-55.html": "2026-10-02",
     "https://fortune.com/2026/11/05/openai-debuts-new-cybersecurity-focused-ai-model-amid-growing-alarm-about-ai-driven-cyber-attacks/": "2026-11-08",
@@ -787,7 +774,7 @@
     "https://openai.com/index/introducing-gpt-6-2-astra-sol/": "2026-11-18",
     "https://blog.primeradiant.com/external-sandboxes-for-coding-agents/": "2026-11-18",
     "https://simonwillison.net/2026/Nov/17/datasette-lite/": "2026-11-18",
-    "https://latent.space/p/ainews-the-no-ai-slop-manifesto/": "2026-11-18",
+    "https://latent.space/p/ainews-the-no-ai-slop-manifesto/": "2026-11-28",
     "https://aiweekly.co/alerts/von-plato-uses-claude-to-extract-663-theorems-from-gdel-notes": "2026-11-18",
     "notes/articles/willison-external-sandboxes-coding-agents.html": "2026-11-18",
     "notes/articles/willison-datasette-lite-service-workers.html": "2026-11-18",
@@ -815,6 +802,7 @@
     "https://simonwillison.net/2026/Nov/24/llm-inflection-points/": "2026-11-25",
     "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more": "2026-11-26",
     "https://claude.com/resources/articles/introducing-claude-ship": "2026-11-27",
-    "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards": "2026-11-27"
+    "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards": "2026-11-27",
+    "https://simonwillison.net/2026/Nov/21/muru/": "2026-11-28"
   }
 }

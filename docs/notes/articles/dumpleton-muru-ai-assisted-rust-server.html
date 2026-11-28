@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конспект: Грэм Дамплтон — «Muru», AI-ассистированный сервер для Python — LLM Radar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../note.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="back-link" href="../../index.html">← LLM Radar</a></div>
+    <div class="controls">
+      <button id="lang-toggle" class="chip-btn">RU</button>
+      <button id="theme-toggle" class="chip-btn">◐</button>
+    </div>
+  </header>
+
+  <main class="note note-body">
+    <p class="note-kicker">
+      <span data-lang="ru">Конспект статьи · Simon Willison (ссылка на блог Грэма Дамплтона) · 2026-11-21</span>
+      <span data-lang="en">Article digest · Simon Willison (linking to Graham Dumpleton's blog) · 2026-11-21</span>
+    </p>
+    <h1>
+      <span data-lang="ru">Muru: двадцать лет опыта с mod_wsgi и три недели публичного девлога с ИИ-ассистентом</span>
+      <span data-lang="en">Muru: twenty years of mod_wsgi experience and three weeks of a public AI-assisted devlog</span>
+    </h1>
+    <p class="note-source">
+      <a href="https://simonwillison.net/2026/Nov/21/muru/" target="_blank" rel="noopener">
+        <span data-lang="ru">Пост Саймона Уиллисона со ссылками на оригиналы ↗</span><span data-lang="en">Simon Willison's linkblog post with links to the originals ↗</span>
+      </a>
+    </p>
+    <p class="note-hint">
+      <span data-lang="ru">Конспект опирается на полный текст комментария Уиллисона (получен через клон бэкап-репозитория github.com/simonw/simonwillisonblog-backup, таблица blog_blogmark) и на цитату из поста Дамплтона, приведённую там же. Прямой WebFetch на simonwillison.net и grahamdumpleton.me в этом прогоне недоступен (домены не резолвятся на уровне сетевой политики облачной песочницы) — поэтому содержание отдельных постов серии передано по их заголовкам и общей теме, без утверждений о деталях реализации, которые нельзя проверить напрямую.</span>
+      <span data-lang="en">This digest is built from the full text of Willison's commentary (obtained via a clone of the backup repository github.com/simonw/simonwillisonblog-backup, blog_blogmark table) and the quote from Dumpleton's post included there. Direct WebFetch of simonwillison.net and grahamdumpleton.me isn't reachable in this run (the domains fail to resolve under the cloud sandbox's network policy) — so the content of individual posts in the series is described only from their titles and overall arc, without claims about implementation details that can't be verified directly.</span>
+    </p>
+
+    <p>
+      <span data-lang="ru">Грэм Дамплтон — автор mod_wsgi, модуля для запуска Python-приложений под Apache, которому в этом году исполнилось двадцать лет. Двадцать лет размышлений о том, как правильно обслуживать ASGI/WSGI-приложения в продакшене, привели его к новому проекту: Muru — Rust-сервер, который он строит с помощью ИИ-ассистента и полностью документирует вслух, день за днём, как часть самого процесса разработки. Саймон Уиллисон, подборками которого живёт экспертный раздел этой сводки, называет это «исключительно подробным описанием проекта по ходу работы» — и это не разовый пост, а уже вторая такая серия у Дамплтона (до этого было аналогичное подробное описание проекта wrapture).</span>
+      <span data-lang="en">Graham Dumpleton is the author of mod_wsgi, the module for running Python applications under Apache, which turned twenty this year. Two decades of thinking about the right way to serve ASGI/WSGI apps in production led him to a new project: Muru, a Rust server he is building with an AI assistant and documenting out loud, day by day, as part of the development process itself. Simon Willison — whose linkblog is one of this digest's recurring expert sources — calls it "an extraordinarily detailed account of the project as he works on it," and it isn't a one-off post: Dumpleton ran a similarly detailed series before, for an earlier project called wrapture.</span>
+    </p>
+
+    <h2><span data-lang="ru">Девлог как метод: не итог, а процесс</span><span data-lang="en">The devlog as a method: process, not a result</span></h2>
+    <p>
+      <span data-lang="ru">Это не единая статья, а серия: с 4 по 22 ноября 2026 года вышло почти двадцать постов, каждый — следующий шаг в разработке Muru. Заголовки сами показывают дугу проекта: от «первого взгляда» и внутреннего устройства воркеров — к HTTPS в разработке, совместной работе WSGI и ASGI, релизам «без рестартов», канареечным выкладкам без service mesh, поведению в контейнерах и Kubernetes, автомасштабированию по сигналам от воркеров, масштабированию до нуля, оверлеям по расписанию, и наконец — к панели инструментов и трассировке прямо в браузере. Сам формат — ежедневный, подробный, с конкретными техническими решениями в каждом посте — это и есть демонстрируемый подход: не просить ИИ «написать сервер», а вести с ним многонедельную совместную работу над системой с полным набором требований прод-окружения (TLS, оркестрация, наблюдаемость), документируя каждый шаг достаточно подробно, чтобы его мог повторить и оценить любой читатель.</span>
+      <span data-lang="en">This isn't a single article but a series: between November 4 and 22, 2026, Dumpleton published close to twenty posts, each one the next step in building Muru. The titles alone trace the project's arc: from a "first look" and a look inside the worker model, to HTTPS in development, WSGI and ASGI working together, "releases, not restarts," canary rollouts without a service mesh, container and Kubernetes behavior, autoscaling driven by signals from the workers themselves, scaling to zero, scheduled overlays, and finally a toolbar and tracing built right into the browser. The format itself — daily, detailed, with concrete technical decisions in every post — is the approach being demonstrated: not asking an AI to "write a server," but running a multi-week collaboration with it on a system that has to meet the full checklist of production requirements (TLS, orchestration, observability), documenting each step in enough detail that any reader could reproduce and judge it.</span>
+    </p>
+
+    <h2><span data-lang="ru">«ИИ как образ жизни»: кто в итоге решает, что готово</span><span data-lang="en">"AI as a lifestyle choice": who actually decides when it's good enough</span></h2>
+    <p>
+      <span data-lang="ru">Отдельный пост в середине серии, «AI as a lifestyle choice», прямо формулирует позицию автора по поводу роли ИИ в этой работе. Дамплтон пишет: «ИИ может делать на поверхности значительную часть работы, но решение о том, что ещё не достаточно хорошо, по-прежнему остаётся за мной, — и двадцать лет ошибок с mod_wsgi здесь оказываются полезны. Я готов вкладывать силы в то, чтобы полировать Muru, пока это не станет чем-то, чему я бы доверял сам — и чему доверяли бы вы». Это и есть суть подхода: ИИ-ассистент ускоряет написание кода, но критерий качества и ответственность за итоговое решение остаются у человека с профильной экспертизой — причём именно эта экспертиза (знание типичных отказов production-серверов) и определяет, где именно нужно не соглашаться с первым предложенным ИИ решением.</span>
+      <span data-lang="en">A standalone post partway through the series, "AI as a lifestyle choice," spells out the author's view of AI's role in this work directly. Dumpleton writes: "The AI may be doing a lot of the work on the surface, but deciding what isn't good enough yet is still down to me, and twenty years of getting things wrong with mod_wsgi turns out to be useful for that. I am prepared to put in the hard work to keep polishing Muru until it is something I would trust, and something you would too." That's the core of the approach: an AI assistant speeds up writing the code, but the quality bar and the responsibility for the final call stay with the human domain expert — and it's exactly that expertise (knowing how production servers typically fail) that determines where the model's first answer isn't good enough to accept as-is.</span>
+    </p>
+
+    <p class="note-hint">
+      <span data-lang="ru">Ограничение: конспект описывает общую структуру и декларируемый метод серии по заголовкам постов и одной прямой цитате; конкретные технические решения внутри каждого поста (например, точный механизм автомасштабирования или трассировки) не проверялись напрямую и здесь не пересказываются.</span>
+      <span data-lang="en">Limitation: this digest covers the series' overall structure and its stated method from post titles and one direct quote; the specific technical decisions inside each post (e.g. the exact autoscaling or tracing mechanism) weren't verified directly and aren't retold here.</span>
+    </p>
+  </main>
+
+  <script src="../note.js"></script>
+</body>
+</html>

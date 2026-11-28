@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T05:20:00Z",
+  "environment_note": "В этом прогоне сетевая политика облачной песочницы блокировала на уровне DNS (getaddrinfo ENOTFOUND) почти все прямые WebFetch, кроме www.anthropic.com и github.com: openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, hn.algolia.com, news.smol.ai, youtube.com, www.latent.space, www.oneusefulthing.org, simonwillison.net, grahamdumpleton.me, slopmanifesto.com, explainx.ai, ai-tldr.dev. Это существенно шире обычного набора 403 с агрегаторов/блогов, описанного в SKILL.md — похоже на более строгую сетевую политику именно этого прогона. Основной канал — WebSearch; для Simon Willison дополнительно использован клон github.com/simonw/simonwillisonblog-backup (не заблокирован).",
+  "sources": [
+    {"source": "anthropic blog (WebFetch)", "status": "ok", "candidates": 0, "note": "последний пункт — 20 ноября (IPO close); ничего за 26-28 ноября"},
+    {"source": "openai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "DNS ENOTFOUND openai.com"},
+    {"source": "google deepmind blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "DNS ENOTFOUND blog.google"},
+    {"source": "meta ai blog (WebFetch)", "status": "blocked", "candidates": 0, "note": "DNS ENOTFOUND ai.meta.com"},
+    {"source": "xai news (WebFetch)", "status": "blocked", "candidates": 0, "note": "DNS ENOTFOUND x.ai"},
+    {"source": "mistral news (WebFetch)", "status": "blocked", "candidates": 0, "note": "DNS ENOTFOUND mistral.ai"},
+    {"source": "deepseek news (WebFetch)", "status": "blocked", "candidates": 0, "note": "DNS ENOTFOUND api-docs.deepseek.com"},
+    {"source": "anthropic (WebSearch x2)", "status": "ok", "candidates": 0, "note": "последние находки — Nov 17-20 (linked billing, Claude Meetings); ничего новее"},
+    {"source": "openai (WebSearch x2)", "status": "ok", "candidates": 0, "note": "последние находки — GPT-6.2 Astra/Sol (Nov 17-18), уже использованы ранее"},
+    {"source": "google/gemini (WebSearch x2)", "status": "ok", "candidates": 0, "note": "Gemini 4 Carbon/Hydrogen Nov 10-12, уже использованы ранее"},
+    {"source": "meta (WebSearch x2)", "status": "ok", "candidates": 0, "note": "Active Memory/Active Focus Nov 5-6, вне окна lookback_hours"},
+    {"source": "xai/grok (WebSearch x2)", "status": "ok", "candidates": 0, "note": "Grok Build релизы до Nov 16, ничего новее"},
+    {"source": "mistral (WebSearch x2)", "status": "ok", "candidates": 0, "note": "Mistral Large 4 ~Nov 2, ничего новее"},
+    {"source": "deepseek (WebSearch x2)", "status": "ok", "candidates": 0, "note": "V4.1-Flash-1017 от 17 октября — последнее найденное"},
+    {"source": "HN Algolia API", "status": "blocked", "candidates": 0, "note": "DNS ENOTFOUND hn.algolia.com; фолбэк WebSearch site:news.ycombinator.com тоже не дал результатов за 27-28 ноября"},
+    {"source": "aggregators: smol.ai / tldr.tech / Simon Willison linkblog", "status": "empty", "candidates": 0, "note": "WebFetch заблокирован; WebSearch не нашёл выпусков новее ~13-18 ноября. Косвенное подтверждение: AiNews.com объявил паузу на День благодарения (26-28 ноября) — тихий период объясним праздничной неделей в США"},
+    {"source": "reddit r/LocalLLaMA, r/ClaudeAI", "status": "empty", "candidates": 0, "note": "WebSearch не индексирует Reddit напрямую за эти даты"},
+    {"source": "расширенный проход (LLM news/AI model release/coding agent <дата>)", "status": "empty", "candidates": 0, "note": "3 дополнительных широких запроса — ничего за 26-28 ноября"},
+    {"source": "simonwillisonblog-backup (git clone, не заблокирован)", "status": "ok", "candidates": 1, "note": "последняя запись в blog_entry — 24 ноября (уже использована 2026-11-25); в blog_blogmark новый невикористанный пункт в окне экспертного контента — 'muru' (21 ноября)"},
+    {"source": "эксперты: Karpathy, AI Explained, Matt Wolfe, Matt Pocock, Nate Herk (видео)", "status": "blocked", "candidates": 0, "note": "youtube.com не резолвится (DNS), yt-dlp не установлен в этом окружении; точный video_id для свежих видео не подтверждён WebSearch с достаточной надёжностью для конспекта с таймкодами — решено не публиковать видео-конспект в этом прогоне, чтобы не выдумывать таймкоды"},
+    {"source": "эксперты: Latent Space (статья)", "status": "ok", "candidates": 1, "note": "'No AI Slop Manifesto' (13 ноября) — вне 7-дневного окна свежести, но единственный качественно подтверждённый материал; использован с явной оговоркой о неполной верификации (WebFetch на latent.space заблокирован)"},
+    {"source": "эксперты: Ethan Mollick / oneusefulthing.org", "status": "blocked", "candidates": 0, "note": "DNS ENOTFOUND; WebSearch нашёл только стороннее освещение книги (18 ноября), не собственный пост — не использовано"}
+  ],
+  "totals": {
+    "candidates": 2,
+    "published": 0,
+    "rejected": {"нет кандидатов в окне lookback_hours после широкого прохода": 0, "эксперты вне 7-дневного окна или без надёжной верификации": 3}
+  },
+  "video_pipeline": {
+    "gemini": "not attempted: no verified video URL within reach (youtube.com blocked, WebSearch couldn't confirm an exact video id with confidence)",
+    "frames": "skipped: no video processed"
+  },
+  "degradation_flag": "Да: существенно больше 1/3 источников дали blocked/error на уровне прямого WebFetch (DNS ENOTFOUND для openai.com, blog.google, ai.meta.com, x.ai, mistral.ai, api-docs.deepseek.com, hn.algolia.com, news.smol.ai, youtube.com, simonwillison.net, latent.space, grahamdumpleton.me, oneusefulthing.org, slopmanifesto.com, explainx.ai, ai-tldr.dev). WebSearch оставался рабочим на всё время прогона."
+}
